@@ -58,6 +58,7 @@ const securityHeaders = () => {
 const config = {
   // .env.local doesn't load itself
   env: {
+    STAGING_SECRET: process.env.STAGING_SECRET,
     CONTENTFUL_SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
     CONTENTFUL_ENVIRONMENT_ID: process.env.CONTENTFUL_ENVIRONMENT_ID,
     CONTENTFUL_ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN,
@@ -68,7 +69,8 @@ const config = {
       process.env.CAMPAIGN_MONITOR_LIST_SESSION_ID,
     CAMPAIGN_MONITOR_LIST_MARKET_RESEARCH_ID:
       process.env.CAMPAIGN_MONITOR_LIST_MARKET_RESEARCH_ID,
-    STAGING_SECRET: process.env.STAGING_SECRET,
+    MAILERLITE_API_KEY: process.env.MAILERLITE_API_KEY,
+    MAILERLITE_GROUP_ID: process.env.MAILERLITE_GROUP_ID,
   },
   async headers() {
     return [

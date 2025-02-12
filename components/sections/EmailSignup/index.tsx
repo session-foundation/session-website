@@ -8,6 +8,8 @@ import { useScreen } from '@/contexts/screen';
 
 export default function EmailSignup(): ReactElement {
   const { isSmall } = useScreen();
+
+  const [submitted, setSubmitted] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const setButtonText = (value: string) => {
     if (null !== buttonRef.current) {
@@ -31,8 +33,9 @@ export default function EmailSignup(): ReactElement {
         case 201:
           setEmail('');
           setButtonText('Signed up ✓');
+          setSubmitted(true);
           break;
-        case 400:
+        case 405:
         default:
           setButtonText('Signup failed ✗');
           console.error(
@@ -40,10 +43,12 @@ export default function EmailSignup(): ReactElement {
             response.status,
             await response.json()
           );
+          setSubmitted(false);
           break;
       }
     } catch (error) {
       response = error;
+      setSubmitted(false);
     }
   };
   return (
@@ -89,6 +94,17 @@ export default function EmailSignup(): ReactElement {
           >
             Sign up
           </Button>
+          {submitted && (
+            <span
+              className={classNames(
+                'block mt-6',
+                'md:inline md:mt-0 md:ml-2',
+                'lg:ml-4'
+              )}
+            >
+              Thanks! Check your inbox to confirm your subscription.
+            </span>
+          )}
         </form>
       </Container>
     </section>

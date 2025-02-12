@@ -46,7 +46,7 @@ export default function MarketResearchSignup(): ReactElement {
           setButtonText('Signed up ✓');
           setSubmitted(true);
           break;
-        case 400:
+        case 405:
         default:
           setButtonText('Signup failed ✗');
           console.error(
