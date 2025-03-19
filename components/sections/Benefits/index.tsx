@@ -47,8 +47,8 @@ export default function Benefits(): ReactElement {
           <BenefitsCard
             title="No Phone Numbers"
             description={[
-              'Session accounts are completely anonymous.',
-              'No phone number or email required.',
+              "Protect your identity with Session's Account IDs.",
+              'No phone number or email required to sign up.',
             ]}
             images={[
               '/assets/svgs/no-phone.svg',
@@ -75,10 +75,10 @@ export default function Benefits(): ReactElement {
             classes={classNames(cardClasses, 'lg:mb-32')}
           />
           <BenefitsCard
-            title="No Footprints"
+            title="Safe Paths"
             description={[
-              'Send messages through our onion',
-              ' routing network and leave no trace.',
+              'Onion-routed paths protect your conversations ',
+              'from hackers and eavesdroppers.',
             ]}
             images={[
               '/assets/svgs/no-footprint.svg',
@@ -105,10 +105,10 @@ export default function Benefits(): ReactElement {
             classes={classNames(cardClasses, 'lg:mb-24')}
           />
           <BenefitsCard
-            title="Censorship Resistant"
+            title="People Powered"
             description={[
-              'With no central point of failure,',
-              'it’s harder to shut Session down.',
+              'Thousands of nodes run by a global community.',
+              'Session is by the people, for the people.',
             ]}
             images={[
               '/assets/svgs/censorship-resistant.svg',

@@ -8,6 +8,7 @@
     "build:staging": "NEXT_PUBLIC_SITE_ENV=development NODE_ENV=production next build",
     "start": "NEXT_PUBLIC_SITE_ENV=production NODE_ENV=production next start --hostname 127.0.0.1",
     "start:staging": "NEXT_PUBLIC_SITE_ENV=development NODE_ENV=production next start --hostname 127.0.0.1",
+    "format": "prettier -lw .",
     "lint": "next lint"
   },
   "dependencies": {
