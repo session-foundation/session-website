@@ -64,10 +64,10 @@ export default function EmailSignup(): ReactElement {
             'lg:text-3xl lg:mb-0'
           )}
         >
-          Friends don’t let friends use compromised messengers.
+          Every project update, delivered straight to your inbox.
         </h3>
-        <p className={classNames('leading-none mb-4', 'md:mb-8', 'lg:text-xl')}>
-          Sign up to the mailing list and start taking action!
+        <p className={classNames('leading-snug mt-1 mb-6', 'lg:text-xl')}>
+          Expect an email about once a month.
         </p>
         <form onSubmit={handleSubscription}>
           <input
@@ -76,7 +76,7 @@ export default function EmailSignup(): ReactElement {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className={classNames(
-              'block w-5/6 mb-4 text-sm border border-black rounded-sm bg-primary',
+              'block w-5/6 mb-6 text-sm border border-black rounded-sm bg-primary',
               'md:w-1/2',
               'lg:w-2/5',
               'placeholder-black placeholder-opacity-60'
@@ -87,7 +87,7 @@ export default function EmailSignup(): ReactElement {
             bgColor="black"
             textColor="primary"
             fontWeight="semibold"
-            size="small"
+            size="medium"
             hoverEffect={false}
             type={'submit'}
             reference={buttonRef}

@@ -15,7 +15,7 @@ export default function Features(): ReactElement {
     'md:mb-12'
   );
   return (
-    <section className={classNames(' text-gray-dark')}>
+    <section className={classNames('text-gray-dark')}>
       <Headline
         color="gray-dark"
         classes={classNames('text-lg font-bold pt-16', 'lg:pt-20')}
@@ -42,9 +42,9 @@ export default function Features(): ReactElement {
       >
         <div
           className={classNames(
-            'lg:mx-auto lg:flex lg:justify-between lg:items-center lg:mt-36',
-            '2xl:mt-0 2xl:w-full',
-            '3xl:-mt-24'
+            'lg:mx-auto lg:flex lg:justify-between lg:items-center lg:mt-24',
+            '2xl:mt-12 2xl:w-full',
+            '3xl:-mt-16'
           )}
         >
           {(isSmall || isMedium) && (
@@ -70,23 +70,26 @@ export default function Features(): ReactElement {
               '2xl:mt-0'
             )}
           >
-            <h3 className={headingClasses}>Group chats</h3>
+            <h3 className={classNames(headingClasses, 'pb-8')}>
+              Enjoy the features you love and the security you need.
+            </h3>
+            <h3 className={headingClasses}>Speak freely</h3>
             <p className={paragraphClasses}>
-              Talk to your friends or talk to the world. You decide. 
-              Groups let you talk to up to 100 friends at once, with the same
-              encrypted protections as one-on-one chats. Got a bigger crowd? Use
-              a community to connect with as many people as you want.
+              Only you and the person you are speaking to can ever see your
+              messages. Enjoy the feeling of freedom with end-to-end encryption
+              and disappearing messages.
             </p>
-            <h3 className={headingClasses}>Voice messages</h3>
+            <h3 className={headingClasses}>Stay in control</h3>
             <p className={paragraphClasses}>
-              Sometimes, a text just isn’t enough. Voice messages let you send
-              something a little more personal, so nothing gets lost in
-              translation.
+              You are in control of your messages from start to finish. Whether
+              it&rsquo;s managing your own encryption keys or choosing a custom
+              theme—Session puts you in charge.
             </p>
-            <h3 className={headingClasses}>Attachments</h3>
+            <h3 className={headingClasses}>Keep up with your crowd</h3>
             <p className={paragraphClasses}>
-              Don’t leak those docs. Send all your files, images, and
-              attachments through a network that takes your privacy seriously.
+              Whether you&rsquo;re catching up with close friends or organizing
+              a major event, it&rsquo;s effortless with secure Group and
+              Community (100+ members) chats.
             </p>
           </div>
           {(isLarge || isHuge || isEnormous) && (

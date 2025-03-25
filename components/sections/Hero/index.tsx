@@ -13,8 +13,12 @@ import { ReactComponent as FDroidSVG } from '@/assets/svgs/fdroid-logo.svg';
 export default function Hero(): ReactElement {
   const { isSmall, isMedium, isLarge, isHuge, isEnormous } = useScreen();
   const headingClasses = classNames(
-    'text-5xl font-semibold text-gray-dark',
+    'text-5xl font-semibold text-gray-dark mb-4',
     'lg:text-6xl'
+  );
+  const subHeadingClasses = classNames(
+    'text-2xl font-semibold text-gray-dark',
+    'lg:text-2xl'
   );
   const downloadLinkClasses = 'text-3xl font-bold text-primary mb-7';
   const downloadSVGClasses = 'inline-block mx-3 -mt-2 fill-current';
@@ -34,7 +38,7 @@ export default function Hero(): ReactElement {
             '3xl:-mt-64'
           )}
         >
-          <div className={classNames('lg:-mt-16 lg:mr-8', 'xl:-mr-1')}>
+          <div className={classNames('lg:-mt-8 lg:mr-8', 'xl:-mr-1')}>
             <h1 className={classNames(headingClasses)}>
               <span className="block">Send</span>
               <span className={'block glitch'} data-glitch-text={'Encrypted'}>
@@ -42,6 +46,9 @@ export default function Hero(): ReactElement {
               </span>
               <span className="block">Not Metadata.</span>
             </h1>
+            <p className={classNames(subHeadingClasses)}>
+              Find your freedom with Session
+            </p>
             <div
               className={classNames(
                 'flex flex-col mt-7 mb-4',
@@ -91,7 +98,7 @@ export default function Hero(): ReactElement {
               </Link>
             </div>
             <Link href="/download">
-              <a className="hidden lg:block">
+              <a className="hidden lg:block mt-2">
                 <Button fontWeight="bold" size="large" classes="mt-4 px-12">
                   Download
                 </Button>

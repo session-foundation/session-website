@@ -69,10 +69,7 @@ export default function BenefitsCard(props: Props): ReactElement {
   const renderDescription = (() => {
     return description?.map((line, index) => {
       return (
-        <p
-          key={index}
-          className={classNames('text-sm leading-loose -mx-3 mb-1')}
-        >
+        <p key={index} className={classNames('text-sm leading-relaxed -mx-3')}>
           <span className={classNames(redactedClasses)}>{line}</span>
         </p>
       );

@@ -16,23 +16,22 @@ export default function GroupNotice(props: Props): ReactElement {
         classes
       )}
     >
-      <h4 className={classNames('text-xl font-bold leading-none mb-2')}>
-        Join the movement to keep the internet private!
-      </h4>
-      <p className={classNames('leading-none')}>
-        Chat with like-minded individuals in the{' '}
+      <h4 className={classNames('text-xl break-words')}>
+        Join the{' '}
         <Link href="/community">
           <a
             className={classNames(
-              'text-primary-dark',
+              'text-primary-dark font-bold',
               'transition-colors duration-300',
               'hover:text-white'
             )}
           >
-            Session Community.
+            Session Community
           </a>
-        </Link>
-      </p>
+        </Link>{' '}
+        and meet the vibrant group of people building, running, and using
+        Session.
+      </h4>
     </div>
   );
 }
