@@ -71,7 +71,11 @@ export default function BenefitsCard(props: Props): ReactElement {
       return (
         <p
           key={index}
-          className={classNames('text-sm leading-loose -mx-3 mb-1')}
+          className={classNames(
+            'text-sm leading-relaxed -mx-3',
+            'xl:text-base',
+            'lg:-mx-8'
+          )}
         >
           <span className={classNames(redactedClasses)}>{line}</span>
         </p>
@@ -88,10 +92,18 @@ export default function BenefitsCard(props: Props): ReactElement {
         classes
       )}
     >
-      <div className={classNames('mb-5', 'md:px-16', 'lg:px-20')}>
+      <div
+        className={classNames(
+          'mb-5',
+          'md:px-16',
+          'lg:px-12',
+          'xl:px-32',
+          '2xl:px-20'
+        )}
+      >
         {renderImages}
       </div>
-      <p className={classNames('md:mb-5')}>{title}</p>
+      <p className={classNames('md:whitespace-nowrap md:mb-5')}>{title}</p>
       <div className={classNames('hidden', 'md:block')}>
         {renderDescription}
       </div>

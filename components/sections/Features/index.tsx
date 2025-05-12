@@ -6,16 +6,16 @@ import classNames from 'classnames';
 import { useScreen } from '@/contexts/screen';
 
 export default function Features(): ReactElement {
-  const { isSmall, isMedium, isLarge, isHuge, isEnormous } = useScreen();
   const headingClasses = classNames(
-    'font-helvetica text-4xl font-bold text-gray-dark mb-1'
+    'font-helvetica text-3xl font-bold text-gray-dark mb-1',
+    'md:text-4xl'
   );
   const paragraphClasses = classNames(
     'text-gray-lighter leading-6 mb-8',
     'md:mb-12'
   );
   return (
-    <section className={classNames(' text-gray-dark')}>
+    <section className={classNames('text-gray-dark')}>
       <Headline
         color="gray-dark"
         classes={classNames('text-lg font-bold pt-16', 'lg:pt-20')}
@@ -32,81 +32,75 @@ export default function Features(): ReactElement {
         heights={{
           small: '100%',
           medium: '100%',
-          large: '100vh - 12rem',
-          huge: '100vh - 84px',
-          enormous: '100vh - 84px',
+          large: '100%',
+          huge: '100%',
+          enormous: '100%',
         }}
-        classes={classNames(
-          '2xl:flex 2xl:flex-col 2xl:justify-center 2xl:items-center'
-        )}
       >
         <div
           className={classNames(
-            'lg:mx-auto lg:flex lg:justify-between lg:items-center lg:mt-36',
-            '2xl:mt-0 2xl:w-full',
-            '3xl:-mt-24'
+            'flex flex-col-reverse mx-auto',
+            'lg:flex-row lg:justify-between lg:items-center lg:mt-24',
+            'xl:mt-16',
+            '2xl:mt-32',
+            '3xl:mt-64'
           )}
         >
-          {(isSmall || isMedium) && (
-            <div
-              className={classNames('-mt-4 -ml-1 mb-12', 'md:mb-16 md:px-20')}
-            >
-              <Image
-                src="/assets/images/ui-direct-message.png"
-                alt="mobile app direct message screenshot"
-                width="1148px"
-                height="2000px"
-                layout="responsive"
-                priority={true}
-                loading="eager"
-              />
-            </div>
-          )}
           <div
             className={classNames(
-              'px-3',
-              'md:max-w-xl',
-              'lg:max-w-sm lg:px-0 lg:-mt-8 lg:mr-8',
-              '2xl:mt-0'
+              'px-3 pt-8',
+              'md:max-w-xl md:pt-16',
+              'lg:max-w-sm lg:px-0 lg:pt-8',
+              'xl:pt-0 xl:max-w-md'
             )}
           >
-            <h3 className={headingClasses}>Group chats</h3>
-            <p className={paragraphClasses}>
-              Talk to your friends or talk to the world. You decide. 
-              Groups let you talk to up to 100 friends at once, with the same
-              encrypted protections as one-on-one chats. Got a bigger crowd? Use
-              a community to connect with as many people as you want.
-            </p>
-            <h3 className={headingClasses}>Voice messages</h3>
-            <p className={paragraphClasses}>
-              Sometimes, a text just isn’t enough. Voice messages let you send
-              something a little more personal, so nothing gets lost in
-              translation.
-            </p>
-            <h3 className={headingClasses}>Attachments</h3>
-            <p className={paragraphClasses}>
-              Don’t leak those docs. Send all your files, images, and
-              attachments through a network that takes your privacy seriously.
-            </p>
-          </div>
-          {(isLarge || isHuge || isEnormous) && (
-            <div
+            <h3
               className={classNames(
-                'w-full -mt-12',
-                'xl:ml-8 xl:-mr-8',
-                '3xl:-mr-16'
+                headingClasses,
+                'pb-8',
+                'lg:-mr-24',
+                'xl:pb-12'
               )}
             >
-              <Image
-                src="/assets/images/mockup-desktop.png"
-                alt="desktop app screenshot"
-                width="2477px"
-                height="3000px"
-                layout="responsive"
-                loading="eager"
-              />
-            </div>
-          )}
+              Enjoy the features you love and the security you need.
+            </h3>
+            <h3 className={headingClasses}>Speak freely</h3>
+            <p className={paragraphClasses}>
+              Only you and the person you are speaking to can ever see your
+              messages. Enjoy the feeling of freedom with end-to-end encryption
+              and disappearing messages.
+            </p>
+            <h3 className={headingClasses}>Stay in control</h3>
+            <p className={paragraphClasses}>
+              You are in control of your messages from start to finish. Whether
+              it&rsquo;s managing your own encryption keys or choosing a custom
+              theme—Session puts you in charge.
+            </p>
+            <h3 className={headingClasses}>Keep up with your crowd</h3>
+            <p className={paragraphClasses}>
+              Whether you&rsquo;re catching up with close friends or organizing
+              a major event, it&rsquo;s effortless with secure Group and
+              Community (100+ members) chats.
+            </p>
+          </div>
+          <div
+            className={classNames(
+              'w-full my-4',
+              'md:max-w-lg',
+              'xl:max-w-xl xl:-mr-8',
+              '2xl:max-w-2xl 2xl:-mr-48 2xl:-mt-16'
+            )}
+          >
+            <Image
+              src="/assets/images/mockup-desktop.png"
+              alt="session desktop running on a macbook pro"
+              width="1130px"
+              height="1000px"
+              layout="responsive"
+              loading="eager"
+              priority={true}
+            />
+          </div>
         </div>
       </Container>
     </section>

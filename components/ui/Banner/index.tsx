@@ -9,12 +9,18 @@ export default function Banner(): ReactElement {
   return (
     <div
       className={classNames(
-        'bg-gray-dark text-white py-4 px-8 flex flex-col justify-center items-center leading-relaxed align-middle gap-2',
+        'bg-gray-dark text-white py-4 px-8 flex flex-col justify-center items-center leading-relaxed align-middle gap-4',
         'lg:flex-row',
         '2xl:items-center'
       )}
     >
-      <span className={classNames('text-center', 'lg:text-left')}>
+      <span
+        className={classNames(
+          'text-center text-sm',
+          'md:text-base',
+          'lg:text-left'
+        )}
+      >
         {isSmall ? BANNER.TEXT.MOBILE : BANNER.TEXT.DESKTOP}
       </span>
       <span
@@ -27,7 +33,7 @@ export default function Banner(): ReactElement {
         >
           <Button
             fontWeight="bold"
-            size="medium"
+            size={isSmall ? 'small' : 'medium'}
             classes="whitespace-nowrap mx-2"
           >
             Learn more

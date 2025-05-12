@@ -35,14 +35,13 @@ const host = new URL(METADATA.HOST_URL).host;
 export function parseUrl(urlStr: string) {
   try {
     // new URL will throw if the url is invalid eg: no protocol
-    return new URL(urlStr)
+    return new URL(urlStr);
   } catch {
     if (urlStr.startsWith(host) || urlStr.startsWith(`www.${host}`)) {
       // We can fix the url if it's the same as the host url
       try {
-        return new URL(`https://${urlStr}`)
-      }
-      catch {
+        return new URL(`https://${urlStr}`);
+      } catch {
         return urlStr;
       }
     } else {

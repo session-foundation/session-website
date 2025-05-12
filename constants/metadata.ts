@@ -118,7 +118,7 @@ const METADATA = {
   },
   COMMUNITY_PAGE: {
     DESCRIPTION:
-      'Join the movement to keep the internet private! Chat with like-minded individuals in the Session Community. Join Now',
+      'Join the Session Community and meet the vibrant group of people building, running, and using Session.',
     OG_IMAGE: {
       URL: '/assets/images/faq.png',
       WIDTH: 1024,

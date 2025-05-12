@@ -5,7 +5,7 @@ import { ReactElement } from 'react';
 import classNames from 'classnames';
 
 export default function Benefits(): ReactElement {
-  const cardClasses = classNames('w-1/2 mb-5', 'lg:w-full lg:max-w-sm lg:px-8');
+  const cardClasses = classNames('w-full mb-5');
   const imageWidth = '500px';
   const imageHeight = '500px';
   return (
@@ -28,27 +28,26 @@ export default function Benefits(): ReactElement {
           medium: '100%',
           large: '100%',
           huge: '100%',
-          enormous: '100vh - 84px',
+          enormous: '100%',
         }}
-        classes={classNames(
-          'px-4 lg:max-w-none',
-          '2xl:flex 2xl:flex-col 2xl:justify-center 2xl:items-center'
-        )}
+        // NOTE max-w-6xl is the global container's max width
+        classes={classNames('px-4 lg:max-w-none', '2xl:max-w-6xl')}
       >
         <div
           className={classNames(
-            'flex flex-wrap justify-center items-center -mx-3 max-w-screen-md',
-            'md:mx-auto',
-            'lg:max-w-screen-xl lg:pt-16',
-            '2xl:mt-12',
-            '3xl:-mt-16'
+            'grid grid-cols-2 mx-auto gap-4 mt-4',
+            'md:gap-x-8',
+            'lg:grid-cols-3 lg:mt-16',
+            'xl:mt-20',
+            '2xl:mt-24',
+            '3xl:mt-32'
           )}
         >
           <BenefitsCard
             title="No Phone Numbers"
             description={[
-              'Session accounts are completely anonymous.',
-              'No phone number or email required.',
+              "Protect your identity with Session's Account IDs.",
+              'No phone number or email required to sign up.',
             ]}
             images={[
               '/assets/svgs/no-phone.svg',
@@ -75,16 +74,16 @@ export default function Benefits(): ReactElement {
             classes={classNames(cardClasses, 'lg:mb-32')}
           />
           <BenefitsCard
-            title="No Footprints"
+            title="Safe Paths"
             description={[
-              'Send messages through our onion',
-              ' routing network and leave no trace.',
+              'Onion-routed paths protect your conversations ',
+              'from hackers and eavesdroppers.',
             ]}
             images={[
-              '/assets/svgs/no-footprint.svg',
-              '/assets/svgs/no-footprint-redacted.svg',
+              '/assets/svgs/safe-paths.svg',
+              '/assets/svgs/safe-paths-grey.svg',
             ]}
-            imageAlt="footprint stop sign"
+            imageAlt="a node based path"
             imageWidth={imageWidth}
             imageHeight={imageHeight}
             classes={classNames(cardClasses, 'lg:mb-32')}
@@ -105,14 +104,29 @@ export default function Benefits(): ReactElement {
             classes={classNames(cardClasses, 'lg:mb-24')}
           />
           <BenefitsCard
-            title="Censorship Resistant"
+            title="People Powered"
             description={[
-              'With no central point of failure,',
-              'it’s harder to shut Session down.',
+              'Thousands of nodes run by a global community.',
+              'Session is by the people, for the people.',
             ]}
             images={[
-              '/assets/svgs/censorship-resistant.svg',
-              '/assets/svgs/censorship-resistant-redacted.svg',
+              '/assets/svgs/people-powered.svg',
+              '/assets/svgs/people-powered-grey.svg',
+            ]}
+            imageAlt="silenced person"
+            imageWidth={imageWidth}
+            imageHeight={imageHeight}
+            classes={classNames(cardClasses, 'lg:mb-24')}
+          />
+          <BenefitsCard
+            title="No Trackers"
+            description={[
+              'Your data is never collected, never tracked, and',
+              'never sold to third parties.',
+            ]}
+            images={[
+              '/assets/svgs/no-trackers.svg',
+              '/assets/svgs/no-trackers-grey.svg',
             ]}
             imageAlt="silenced person"
             imageWidth={imageWidth}

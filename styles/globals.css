@@ -280,7 +280,7 @@ button {
 }
 
 .glitch:after {
-  @apply text-5xl font-semibold bg-white text-gray-dark lg:text-6xl;
+  @apply text-4xl font-semibold bg-white text-gray-dark md:text-5xl lg:text-6xl;
   @apply absolute top-0 left-0 right-0 overflow-hidden;
   content: attr(data-glitch-text);
   clip: rect(0, 900px, 0, 0);
