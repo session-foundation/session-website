@@ -1,10 +1,9 @@
 const BANNER = {
   TEXT: {
-    MOBILE:
-      'Groups have been upgraded! Update now to recreate your groups and stay connected.',
-    DESKTOP:
-      'Groups have been upgraded! Update now to recreate your groups and stay connected.',
+    MOBILE: 'Session has migrated to the new Session Network.',
+    DESKTOP: 'Session has migrated to the new Session Network.',
   },
+  URL: 'https://getsession.org/blog/migrating-from-the-oxen-network-to-session-network',
 };
 
 export default BANNER;

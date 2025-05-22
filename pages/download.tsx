@@ -49,7 +49,12 @@ export default function Download(): ReactElement {
   );
   return (
     <Layout title="Download" metadata={METADATA.DOWNLOAD_PAGE}>
-      <section>
+      <section
+        className={classNames(
+          'bg-gray-dark pb-16 border-b border-primary border-dashed',
+          'lg:bg-unset lg:pb-0 lg:border-b-0'
+        )}
+      >
         <Container
           hasMinHeight={true}
           heights={{
@@ -73,7 +78,7 @@ export default function Download(): ReactElement {
           >
             <div
               className={classNames(
-                'lg:w-3/4 lg:mr-8 lg:flex lg:flex-col lg:justify-between',
+                'lg:w-3/4 lg:mr-8 lg:flex lg:flex-col lg:justify-end',
                 'xl:w-7/12',
                 '2xl:w-1/2 2xl:mr-24'
               )}
@@ -186,7 +191,9 @@ export default function Download(): ReactElement {
                   </Link>
                 </div>
               </div>
-              <div className={classNames(noteContainerClasses, 'pb-12')}>
+              <div
+                className={classNames(noteContainerClasses, 'pb-12', 'lg:pb-0')}
+              >
                 <p className={classNames(notesClasses)}>
                   Verify Signatures:
                   <a
@@ -249,7 +256,7 @@ export default function Download(): ReactElement {
           >
             <div
               className={classNames(
-                'lg:w-3/4 lg:ml-10 lg:h-full lg:flex lg:flex-col lg:justify-between',
+                'lg:w-3/4 lg:ml-10 lg:h-full lg:flex lg:flex-col lg:justify-end',
                 'xl:w-7/12',
                 '2xl:w-1/2 2xl:ml-24'
               )}
@@ -270,17 +277,17 @@ export default function Download(): ReactElement {
               </h2>
               <div
                 className={classNames(
-                  'px-3 -ml-1 z-0',
-                  'md:px-16',
-                  'lg:px-0 lg:-mt-2 lg:ml-0 lg:-mr-6 lg:mb-auto',
-                  'xl:-mr-8'
+                  'px-3 -ml-1 mt-8 mb-12 z-0',
+                  'md:px-16 md:-ml-4 md:mb-20',
+                  'lg:px-0 lg:-mt-4 lg:ml-0 lg:-mr-6 lg:mb-auto',
+                  'xl:-mt-8 xl:-mr-8'
                 )}
               >
                 <Image
                   src="/assets/images/mockup-desktop.png"
                   alt="desktop app screenshot"
-                  width="2477px"
-                  height="3000px"
+                  width="1130px"
+                  height="1000px"
                   layout="responsive"
                   priority={true}
                   loading="eager"
@@ -290,8 +297,7 @@ export default function Download(): ReactElement {
                 className={classNames(
                   linkContainerClasses,
                   'md:-mt-8',
-                  'lg:pb-0 lg:-mt-6',
-                  '3xl:-mt-8'
+                  'lg:mt-0'
                 )}
               >
                 <div className={classNames(downloadContainerClasses)}>
@@ -377,7 +383,13 @@ export default function Download(): ReactElement {
                   </a>
                 </div>
               </div>
-              <div className={classNames(noteContainerClasses, 'md:pb-16')}>
+              <div
+                className={classNames(
+                  noteContainerClasses,
+                  'md:pb-16',
+                  'lg:pb-0'
+                )}
+              >
                 <p className={classNames(notesClasses)}>
                   Verify Signatures:
                   <a

@@ -26,11 +26,7 @@ export default function Banner(): ReactElement {
       <span
         className={classNames('flex justify-center items-center', '2xl:ml-4')}
       >
-        <a
-          href="https://getsession.org/groups"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
+        <a href={BANNER.URL} rel="noopener noreferrer" target="_blank">
           <Button
             fontWeight="bold"
             size={isSmall ? 'small' : 'medium'}
