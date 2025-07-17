@@ -104,8 +104,8 @@ export default function Download(): ReactElement {
                 )}
               >
                 <Image
-                  src="/assets/images/ui-create-account.png"
-                  alt="mobile app create account screenshot"
+                  src="/assets/images/encrypted-messaging-app-phone.png"
+                  alt="encrypted messaging app phone"
                   width="1148px"
                   height="2000px"
                   layout="responsive"
@@ -284,8 +284,8 @@ export default function Download(): ReactElement {
                 )}
               >
                 <Image
-                  src="/assets/images/mockup-desktop.png"
-                  alt="desktop app screenshot"
+                  src="/assets/images/encrypted-messaging-app-desktop.png"
+                  alt="encrypted messaging app phone"
                   width="1130px"
                   height="1000px"
                   layout="responsive"

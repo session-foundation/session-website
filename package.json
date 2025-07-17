@@ -20,6 +20,7 @@
     "base-64": "^1.0.0",
     "classnames": "^2.3.1",
     "contentful": "^8.4.2",
+    "critters": "^0.0.25",
     "date-fns": "^2.23.0",
     "direction": "^2.0.1",
     "feed": "^4.2.2",
@@ -53,5 +54,13 @@
     "tailwindcss": "^2.2.15",
     "tailwindcss-selection-variant": "^0.1.0",
     "typescript": "^4.3.5"
-  }
+  },
+  "browserslist": [
+    "> 0.2%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11",
+    "not op_mini all",
+    "Firefox ESR"
+  ]
 }

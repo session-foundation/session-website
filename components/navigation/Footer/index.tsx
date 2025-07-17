@@ -3,13 +3,128 @@ import Image from 'next/image';
 import { ReactComponent as InstagramSVG } from '@/assets/svgs/instagram.svg';
 import { ReactComponent as MastodonSVG } from '@/assets/svgs/mastodon.svg';
 import Link from 'next/link';
-import { ReactElement } from 'react';
+import { FunctionComponent, ReactElement, SVGProps } from 'react';
 import { ReactComponent as RssSVG } from '@/assets/svgs/rss.svg';
 import { ReactComponent as TwitterSVG } from '@/assets/svgs/twitter.svg';
 import { ReactComponent as YouTubeSVG } from '@/assets/svgs/youtube.svg';
 import classNames from 'classnames';
 import redact from '@/utils/redact';
 import { useScreen } from '@/contexts/screen';
+// Type definitions
+interface SocialLink {
+  href: string;
+  label: string;
+  icon: FunctionComponent<SVGProps<SVGSVGElement>>;
+  external: boolean;
+  platform: string;
+  customIconClasses?: string;
+}
+
+const headingClasses = classNames(
+  'text-white uppercase text-xl font-bold mb-2'
+);
+const linkClasses = classNames(
+  'text-sm py-2 mr-2 font-semibold',
+  'lg:py-0 lg:my-0',
+  'transition-colors duration-300',
+  'hover:text-white'
+);
+const socialLinkClasses = classNames(
+  'text-primary',
+  'transition duration-300',
+  'hover:text-white'
+);
+const svgClasses = classNames(
+  'fill-current w-7 h-7 m-1',
+  'lg:my-0 lg:ml-0',
+  'hover:animate-push'
+);
+
+// Social media data with accessibility labels
+const socialLinks: SocialLink[] = [
+  {
+    href: 'https://twitter.com/session_app',
+    label: 'Follow Session on Twitter',
+    icon: TwitterSVG,
+    external: true,
+    platform: 'Twitter',
+  },
+  {
+    href: 'https://mastodon.social/@session',
+    label: 'Follow Session on Mastodon',
+    icon: MastodonSVG,
+    external: true,
+    platform: 'Mastodon',
+    customIconClasses:
+      'border-primary border-2.5 rounded-full py-1 hover:border-white duration-300',
+  },
+  {
+    href: 'https://www.instagram.com/getsession',
+    label: 'Follow Session on Instagram',
+    icon: InstagramSVG,
+    external: true,
+    platform: 'Instagram',
+  },
+  {
+    href: 'https://www.youtube.com/@SessionTV',
+    label: 'Subscribe to Session on YouTube',
+    icon: YouTubeSVG,
+    external: true,
+    platform: 'YouTube',
+  },
+  {
+    href: 'https://github.com/session-foundation',
+    label: 'View Session on GitHub',
+    icon: GithubSVG,
+    external: true,
+    platform: 'GitHub',
+  },
+  {
+    href: '/feed',
+    label: 'Subscribe to Session RSS feed',
+    icon: RssSVG,
+    external: false,
+    platform: 'RSS',
+  },
+];
+
+function SocialLinks() {
+  return (
+    <div
+      className={classNames(
+        'flex flex-wrap -ml-1',
+        'md:pr-1',
+        'lg:pr-0 lg:gap-2'
+      )}
+      role="list"
+      aria-label="Social media links"
+    >
+      {socialLinks.map((social: SocialLink) => {
+        const IconComponent = social.icon;
+
+        return (
+          <div key={social.platform} role="listitem">
+            <Link href={social.href}>
+              <a
+                className={socialLinkClasses}
+                target={social.external ? '_blank' : '_self'}
+                rel={social.external ? 'noopener noreferrer' : undefined}
+                aria-label={social.label}
+                title={social.label}
+              >
+                <IconComponent
+                  className={classNames(svgClasses, social.customIconClasses)}
+                  aria-hidden={true}
+                />
+                <span className="sr-only">{social.label}</span>
+              </a>
+            </Link>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
 
 export default function Footer(): ReactElement {
   const { isSmall } = useScreen();
@@ -19,25 +134,7 @@ export default function Footer(): ReactElement {
     animate: true,
     classes: 'py-0.5 py-1',
   });
-  const headingClasses = classNames(
-    'text-white uppercase text-xl font-bold mb-2'
-  );
-  const linkClasses = classNames(
-    'text-sm py-2 mr-2 font-semibold',
-    'lg:py-0 lg:my-0',
-    'transition-colors duration-300',
-    'hover:text-white'
-  );
-  const socialLinkClasses = classNames(
-    'text-primary',
-    'transition duration-300',
-    'hover:text-white'
-  );
-  const svgClasses = classNames(
-    'fill-current w-7 h-7 m-1',
-    'lg:my-0 lg:ml-0',
-    'hover:animate-push'
-  );
+
   return (
     <div className={classNames('bg-gray-dark')}>
       <footer
@@ -55,7 +152,7 @@ export default function Footer(): ReactElement {
         >
           <div
             className={classNames(
-              'flex flex-col w-1/2 mb-4',
+              'flex flex-col gap-1 w-1/2 mb-4',
               'md:w-1/4',
               'lg:w-1/3'
             )}
@@ -85,7 +182,7 @@ export default function Footer(): ReactElement {
           </div>
           <div
             className={classNames(
-              'flex flex-col w-1/2 mb-4',
+              'flex flex-col gap-1 w-1/2 mb-4',
               'md:w-1/4',
               'lg:w-1/3'
             )}
@@ -140,70 +237,7 @@ export default function Footer(): ReactElement {
           >
             <div className={classNames('w-1/2 mb-4', 'lg:w-full')}>
               <h3 className={headingClasses}>Socials</h3>
-              <div
-                className={classNames(
-                  'flex flex-wrap -ml-1',
-                  'md:pr-1',
-                  'lg:pr-0 lg:gap-2'
-                )}
-              >
-                <Link href="https://twitter.com/session_app">
-                  <a
-                    className={socialLinkClasses}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <TwitterSVG className={svgClasses} />
-                  </a>
-                </Link>
-                <Link href="https://mastodon.social/@session">
-                  <a
-                    className={classNames(socialLinkClasses, '')}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <MastodonSVG
-                      className={classNames(
-                        svgClasses,
-                        'border-primary border-2.5 rounded-full py-1',
-                        'hover:border-white duration-300'
-                      )}
-                    />
-                  </a>
-                </Link>
-                <Link href="https://www.instagram.com/getsession">
-                  <a
-                    className={socialLinkClasses}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <InstagramSVG className={svgClasses} />
-                  </a>
-                </Link>
-                <Link href="https://www.youtube.com/@SessionTV">
-                  <a
-                    className={socialLinkClasses}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <YouTubeSVG className={svgClasses} />
-                  </a>
-                </Link>
-                <Link href="https://github.com/session-foundation">
-                  <a
-                    className={socialLinkClasses}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <GithubSVG className={svgClasses} />
-                  </a>
-                </Link>
-                <Link href="/feed">
-                  <a className={socialLinkClasses} target="_self">
-                    <RssSVG className={svgClasses} />
-                  </a>
-                </Link>
-              </div>
+              <SocialLinks />
             </div>
             <div
               className={classNames('flex flex-col w-1/2 mb-4', 'lg:w-full')}

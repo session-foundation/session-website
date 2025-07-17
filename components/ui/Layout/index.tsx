@@ -1,5 +1,5 @@
 import { Footer, Nav } from '@/components/navigation';
-import { ReactElement, ReactNode, useEffect, useState } from 'react';
+import { ReactElement, ReactNode, useEffect, useMemo, useState } from 'react';
 
 import { Banner } from '@/components/ui';
 import CustomHead from '@/components/CustomHead';
@@ -13,34 +13,40 @@ interface Props {
   metadata?: IMetadata;
   children: ReactNode;
   showBanner?: boolean;
+  structuredData?: Array<string>;
 }
 
 export default function Layout({
   title,
   metadata,
   children,
+  structuredData,
   showBanner = false,
 }: Props): ReactElement {
   const router = useRouter();
-  const [locked, setLocked] = useState(false);
 
-  useEffect(() => {
-    // deny access to the staging environment unless you login with the correct token
-    if (
+  const locked = useMemo(
+    () =>
       process.env.NODE_ENV === 'production' &&
       process.env.NEXT_PUBLIC_SITE_ENV === 'development' &&
-      !router.isPreview
-    ) {
-      setLocked(true);
-    }
-  }, [router.isPreview]);
+      !router.isPreview,
+    [router.isPreview]
+  );
 
   return (
     <>
-      <CustomHead title={title} metadata={metadata} />
-      {showBanner && <Banner />}
+      <CustomHead
+        title={title}
+        metadata={metadata}
+        structuredData={structuredData}
+      />
+      {showBanner ? <Banner /> : null}
       <Nav />
-      {locked ? <LockedPage /> : <main>{children}</main>}
+      {locked ? (
+        <LockedPage />
+      ) : (
+        <main className="min-h-screen">{children}</main>
+      )}
       <EmailSignup />
       <Footer />
     </>

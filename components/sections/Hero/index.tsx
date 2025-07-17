@@ -23,12 +23,11 @@ export default function Hero(): ReactElement {
   const downloadLinkClasses = 'text-3xl font-bold text-primary mb-7';
   const downloadSVGClasses = 'inline-block mx-3 -mt-2 fill-current';
   return (
-    <section>
+    <section className="min-h-screen">
       <Container
-        hasMinHeight={true}
-        heights={{ small: '100%', medium: '100%', large: '100vh - 112px' }}
+        hasMinHeight={false}
         classes={classNames(
-          'lg:mt-16 lg:flex lg:flex-col lg:justify-center lg:items-center'
+          'lg:mt-16 lg:flex lg:flex-col lg:justify-center lg:items-center min-h-screen lg:min-h-[calc(100vh-112px)]'
         )}
       >
         <div
@@ -57,24 +56,20 @@ export default function Hero(): ReactElement {
               </a>
             </Link>
           </div>
-
           <div
-            className={classNames(
-              'ml-auto mr-auto',
-              'md:max-w-xl',
-              'lg:-mr-8',
-              'xl:-ml-8 xl:max-w-3xl',
-              '2xl:max-w-2xl',
-              '3xl:max-w-4xl'
-            )}
+            className={classNames('w-full', 'ml-auto mr-auto', 'max-w-full')}
+            style={{ aspectRatio: '2499/2176' }}
           >
             <Image
-              src="/assets/images/hero.png"
-              alt="mobile app ui showcase"
-              width="2499px"
-              height="2176px"
+              src="/assets/images/encrypted-messaging-app.png"
+              alt="mobile encrypted messaging app ui showcase"
+              width={2499}
+              height={2176}
               priority={true}
-              loading="eager"
+              sizes="(max-width: 1023px) 100vw, 750px"
+              quality={90}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAAqUlEQVQIW2NkgABGIGYFYh4gZgLir0D8A4j/gyT4xcREP/z9+4+BmZmJAUTDwNu3b0VACgSFhYXfgQRLy0oYurt6GJQOlzOwyQoxHOVNEQcp4KvKC/6oKczGMG3HfYZbt24z/Pv3l4GJiZkBaIIESAEH0ITvMEEQDQI6D6YyHOaPBpvALigoAHIQAyPQDSDwH+qO9+8/CIEUgAAfEP8BYmEo/wuQ/gBSCwDmCDZv8cjfFwAAAABJRU5ErkJggg=="
             />
           </div>
 

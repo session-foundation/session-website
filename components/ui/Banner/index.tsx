@@ -3,6 +3,7 @@ import Button from '../Button';
 import { ReactElement } from 'react';
 import classNames from 'classnames';
 import { useScreen } from '@/contexts/screen';
+import Link from 'next/link';
 
 export default function Banner(): ReactElement {
   const { isSmall } = useScreen();
@@ -23,19 +24,22 @@ export default function Banner(): ReactElement {
       >
         {isSmall ? BANNER.TEXT.MOBILE : BANNER.TEXT.DESKTOP}
       </span>
-      <span
-        className={classNames('flex justify-center items-center', '2xl:ml-4')}
-      >
-        <a href={BANNER.URL} rel="noopener noreferrer" target="_blank">
+      <Link href={BANNER.URL}>
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          title={BANNER.ARIA}
+          aria-label={BANNER.ARIA}
+        >
           <Button
             fontWeight="bold"
             size={isSmall ? 'small' : 'medium'}
-            classes="whitespace-nowrap mx-2"
+            classes="whitespace-nowrap"
           >
             Learn more
           </Button>
         </a>
-      </span>
+      </Link>
     </div>
   );
 }

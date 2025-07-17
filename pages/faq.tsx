@@ -18,6 +18,47 @@ interface Props {
   total: number;
 }
 
+function parseContent(content: IFAQItem['answer']['content']) {
+  let str = '';
+
+  for (let i = 0; i < content.length; i++) {
+    const block = content[i].content;
+    for (let j = 0; j < block.length; j++) {
+      const item = block[j];
+      if (item.nodeType === 'text') {
+        str += item.value;
+      } else if (item.nodeType === 'hyperlink') {
+        str += item.data.uri + ' ';
+      }
+    }
+  }
+
+  return str;
+}
+
+const generateFAQStructuredData = (faqItems: IFAQList) => {
+  const mainEntity = [];
+
+  for (const category of Object.keys(faqItems)) {
+    for (const faqItem of faqItems[category]) {
+      mainEntity.push({
+        '@type': 'Question',
+        name: faqItem.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: parseContent(faqItem.answer.content),
+        },
+      });
+    }
+  }
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: mainEntity,
+  };
+};
+
 export default function FAQ(props: Props): ReactElement {
   const { entries: faqItems, total: totalFaqs } = props;
   const router = useRouter();
@@ -47,8 +88,15 @@ export default function FAQ(props: Props): ReactElement {
     }
     return content;
   })();
+
+  const faqStructuredData = generateFAQStructuredData(faqItems);
+
   return (
-    <Layout title="Frequently Asked Questions" metadata={METADATA.FAQ_PAGE}>
+    <Layout
+      title="Frequently Asked Questions"
+      metadata={METADATA.FAQ_PAGE}
+      structuredData={[JSON.stringify(faqStructuredData)]}
+    >
       <section>
         <Headline
           color="gray-dark"

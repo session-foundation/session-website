@@ -30,31 +30,48 @@ export default function Nav(): ReactElement {
         )}
       >
         <Link href="/">
-          <a>
+          <a style={{ width: '196px', height: '40px' }}>
             <Image
-              src="/assets/images/logo.png"
+              src="/assets/svgs/logo.svg"
               alt="session logo"
-              width="196px"
-              height="40px"
+              width={196}
+              height={40}
+              priority={true}
+              quality={100}
+              placeholder="empty"
+              sizes="196px"
             />
           </a>
         </Link>
         <div className={classNames('block ml-4', 'lg:hidden')}>
           <button
-            className="z-10 flex items-center py-2 text-gray"
+            className="z-10 flex items-center py-2 text-gray focus:outline-none focus:ring-2 focus:ring-primary"
             onClick={toggleNav}
+            aria-label={
+              isExpanded ? 'Close navigation menu' : 'Open navigation menu'
+            }
+            aria-expanded={isExpanded}
+            aria-controls="mobile-navigation"
+            type="button"
           >
+            <span className="sr-only">
+              {isExpanded ? 'Close' : 'Open'} navigation menu
+            </span>
             <MenuSVG
               className={classNames(
                 mobileNavButtonClasses,
                 isExpanded ? 'hidden' : 'block'
               )}
+              aria-hidden="true"
+              focusable="false"
             />
             <CloseSVG
               className={classNames(
                 mobileNavButtonClasses,
                 isExpanded ? 'block' : 'hidden'
               )}
+              aria-hidden="true"
+              focusable="false"
             />
           </button>
         </div>

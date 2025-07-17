@@ -8,17 +8,17 @@ import { useRouter } from 'next/router';
 interface Props {
   title?: string;
   metadata?: IMetadata;
+  structuredData?: Array<string>;
 }
 
 export default function CustomHead(props: Props): ReactElement {
   const router = useRouter();
-  const { title, metadata } = props;
+  const { title, metadata, structuredData } = props;
   const pageTitle =
     title && title.length > 0
       ? `${title} - Session Private Messenger`
       : METADATA.TITLE;
   const pageUrl = `${METADATA.HOST_URL}${router.asPath}`;
-  const canonicalUrl = metadata?.CANONICAL_URL ?? pageUrl;
   const imageALT = metadata?.OG_IMAGE?.ALT ?? METADATA.OG_IMAGE.ALT;
   let imageWidth = metadata?.OG_IMAGE?.WIDTH ?? METADATA.OG_IMAGE.WIDTH;
   let imageHeight = metadata?.OG_IMAGE?.HEIGHT ?? METADATA.OG_IMAGE.HEIGHT;
@@ -210,7 +210,11 @@ export default function CustomHead(props: Props): ReactElement {
         content={METADATA.THEME_COLOR}
       />
       {renderTags}
-      <link key="canonical" rel="canonical" href={canonicalUrl} />
+      <link
+        key="canonical"
+        rel="canonical"
+        href={`${METADATA.HOST_URL}${router.asPath}`}
+      />
       <link
         key="image/png32x32"
         rel="icon"
@@ -257,7 +261,30 @@ export default function CustomHead(props: Props): ReactElement {
         type="application/feed+json"
         href="/feed/json"
       />
+      <link
+        rel="preload"
+        href="/assets/fonts/PublicSans/PublicSans-VariableFont_wght.ttf"
+        as="font"
+        type="font/ttf"
+        crossOrigin="anonymous"
+      />
+      <link
+        rel="preload"
+        href="/assets/fonts/SpaceMono/SpaceMono-Regular.ttf"
+        as="font"
+        type="font/ttf"
+        crossOrigin="anonymous"
+      />
       {metadata?.TYPE === 'article' && renderLdJSON}
+      {structuredData?.map((data, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: data,
+          }}
+        />
+      ))}
     </Head>
   );
 }

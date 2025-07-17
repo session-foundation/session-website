@@ -56,7 +56,18 @@ const securityHeaders = () => {
 };
 
 const config = {
-  // .env.local doesn't load itself
+  optimizeFonts: true,
+  reactStrictMode: true,
+  compress: true,
+  generateEtags: true,
+  trailingSlash: false,
+  productionBrowserSourceMaps: false,
+  experimental: {
+    modernMode: true,
+    granularChunks: true,
+    optimizeImages: true,
+  },
+
   env: {
     STAGING_SECRET: process.env.STAGING_SECRET,
     CONTENTFUL_SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
@@ -72,19 +83,53 @@ const config = {
     MAILERLITE_API_KEY: process.env.MAILERLITE_API_KEY,
     MAILERLITE_GROUP_ID: process.env.MAILERLITE_GROUP_ID,
   },
+
   async headers() {
     return [
       {
         source: '/(.*)',
         headers: securityHeaders(),
       },
+      {
+        source: '/assets/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/images/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/fonts/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
     ];
   },
+
   images: {
     domains: ['downloads.ctfassets.net', 'images.ctfassets.net'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    formats: ['image/webp'],
+    minimumCacheTTL: 86400,
   },
-  serverRuntimeConfig: {
-    redirects: [
+
+  async redirects() {
+    return [
       {
         source: '/android',
         destination:
@@ -113,50 +158,9 @@ const config = {
         destination: 'https://arxiv.org/pdf/2002.04609.pdf',
         permanent: true,
       },
-      {
-        source: '/session-open-group',
-        destination: '/community',
-        permanent: true,
-      },
-      {
-        source: '/translate',
-        destination:
-          'https://crowdin.com/project/session-crossplatform-strings',
-        permanent: false,
-      },
-      {
-        source: '/blog/session-translation-help',
-        destination:
-          'https://docs.getsession.org/session-messenger/localisations',
-        permanent: false,
-      },
-      {
-        source: '/lightpaper',
-        destination: '/litepaper',
-        permanent: false,
-      },
-      {
-        source: '/lightpaper/pdf',
-        destination: '/litepaper/pdf',
-        permanent: false,
-      },
-      {
-        source: '/groups',
-        destination:
-          'https://sessionapp.zendesk.com/hc/en-us/articles/42848534131097-How-do-I-upgrade-my-Session-group-chats-to-Groups-v2',
-        permanent: false,
-      },
-      {
-        source: '/account-ids',
-        destination:
-          'https://sessionapp.zendesk.com/hc/en-us/articles/4439132747033-How-do-Account-ID-usernames-work',
-        permanent: false,
-      },
-    ],
+    ];
   },
-  async redirects() {
-    return this.serverRuntimeConfig.redirects;
-  },
+
   async rewrites() {
     return [
       {
@@ -208,6 +212,32 @@ const config = {
         destination: '/:slug',
       },
     ];
+  },
+
+  // Webpack optimizations for better bundle splitting
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    // Optimize bundle size in production
+    if (!dev && !isServer) {
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+            priority: 10,
+          },
+          common: {
+            name: 'common',
+            chunks: 'all',
+            priority: 5,
+            reuseExistingChunk: true,
+          },
+        },
+      };
+    }
+
+    return config;
   },
 };
 

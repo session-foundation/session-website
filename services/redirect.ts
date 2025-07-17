@@ -13,8 +13,6 @@ let fallbackVersion = '1.16.0';
 // NOTE begin checking from when server is started
 let lastChecked = Date.now();
 
-const redirects: IRedirection[] = getConfig().serverRuntimeConfig.redirects;
-
 async function fetchLatestVersion(repo: string) {
   const now = Date.now();
   // Only update once per revalidation
@@ -99,18 +97,4 @@ export async function getDynamicRedirection(url: string) {
     }
   });
   return redirection;
-}
-
-export async function hasRedirection(url: string) {
-  let response = null;
-  redirects.forEach((redirection) => {
-    if (redirection.source === url) {
-      response = {
-        source: redirection.source,
-        destination: redirection.destination,
-        permanent: redirection.permanent,
-      };
-    }
-  });
-  return response;
 }

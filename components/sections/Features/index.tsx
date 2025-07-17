@@ -92,13 +92,13 @@ export default function Features(): ReactElement {
             )}
           >
             <Image
-              src="/assets/images/mockup-desktop.png"
+              src="/assets/images/encrypted-messaging-app-desktop.png"
               alt="session desktop running on a macbook pro"
-              width="1130px"
-              height="1000px"
+              width={1130}
+              height={1000}
+              quality={100}
               layout="responsive"
-              loading="eager"
-              priority={true}
+              sizes="(max-width: 1023px) 100vw, 500px"
             />
           </div>
         </div>
