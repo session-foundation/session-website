@@ -1,5 +1,5 @@
 import { IPost } from '@/types/cms';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 import { ReactElement } from 'react';
 import classNames from 'classnames';
@@ -38,7 +38,7 @@ export default function PostCard(props: Props): ReactElement {
       )}
     >
       {featureImage?.imageUrl && (
-        <Link href={route} passHref>
+        <Link legacyBehavior href={route} passHref>
           <div
             className={classNames(
               'relative overflow-hidden w-full mb-4',
@@ -69,7 +69,7 @@ export default function PostCard(props: Props): ReactElement {
       <div
         className={classNames(featured && 'md:w-1/2 md:ml-4 lg:ml-3 lg:w-2/5')}
       >
-        <Link href={route} passHref>
+        <Link legacyBehavior href={route} passHref>
           <a>
             {featured ? (
               <h1
@@ -100,7 +100,7 @@ export default function PostCard(props: Props): ReactElement {
           </p>
         )}
         {featured && (
-          <Link href={route}>
+          <Link legacyBehavior href={route}>
             <a className={classNames('block text-primary-dark text-xs mt-4')}>
               Read More »
             </a>

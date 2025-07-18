@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import classNames from 'classnames';
 import redact from '@/utils/redact';
 import { useScreen } from '@/contexts/screen';
@@ -9,8 +9,8 @@ interface Props {
   description?: string[];
   images: string[]; // toggle images on hover [original, redacted]
   imageAlt: string;
-  imageWidth: string;
-  imageHeight: string;
+  imageWidth: number;
+  imageHeight: number;
   classes?: string;
 }
 

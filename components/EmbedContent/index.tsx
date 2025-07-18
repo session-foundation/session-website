@@ -2,7 +2,7 @@ import { IEmbed, INoembed, isNoembed } from '@/services/embed';
 import { ReactElement, useEffect, useRef, useState } from 'react';
 
 import { Button } from '../ui';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 import { TOS } from '@/constants';
 import classNames from 'classnames';
@@ -94,7 +94,7 @@ export default function EmbedContent(props: Props): ReactElement {
     }
   } else {
     return (
-      <Link href={content.url}>
+      <Link legacyBehavior href={content.url}>
         <a dir={textDirection} target="_blank">
           <div
             className={classNames(

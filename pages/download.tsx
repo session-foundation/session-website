@@ -3,7 +3,7 @@ import { ReactComponent as AndroidSVG } from '@/assets/svgs/android_robot_head.s
 import { ReactComponent as AppleSVG } from '@/assets/svgs/apple.svg';
 import Container from '@/components/Container';
 import { ReactComponent as FDroidSVG } from '@/assets/svgs/fdroid-logo.svg';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { Layout } from '@/components/ui';
 import Link from 'next/link';
 import { ReactComponent as LinuxSVG } from '@/assets/svgs/linux.svg';
@@ -106,8 +106,8 @@ export default function Download(): ReactElement {
                 <Image
                   src="/assets/images/encrypted-messaging-app-phone.png"
                   alt="encrypted messaging app phone"
-                  width="1148px"
-                  height="2000px"
+                  width={1148}
+                  height={2000}
                   layout="responsive"
                   priority={true}
                   loading="eager"
@@ -115,7 +115,7 @@ export default function Download(): ReactElement {
               </div>
               <div className={classNames(linkContainerClasses)}>
                 <div className={classNames(downloadContainerClasses)}>
-                  <Link href="/android">
+                  <Link legacyBehavior href="/android">
                     <a
                       className={classNames(
                         downloadLinkClasses,
@@ -134,7 +134,7 @@ export default function Download(): ReactElement {
                   </Link>
                 </div>
                 <div className={classNames(downloadContainerClasses)}>
-                  <Link href="/apk">
+                  <Link legacyBehavior href="/apk">
                     <a
                       className={classNames(
                         downloadLinkClasses,
@@ -153,7 +153,7 @@ export default function Download(): ReactElement {
                   </Link>
                 </div>
                 <div className={classNames(downloadContainerClasses)}>
-                  <Link href="/f-droid">
+                  <Link legacyBehavior href="/f-droid">
                     <a
                       className={classNames(
                         downloadLinkClasses,
@@ -172,7 +172,7 @@ export default function Download(): ReactElement {
                   </Link>
                 </div>
                 <div className={classNames(downloadContainerClasses)}>
-                  <Link href="/iphone">
+                  <Link legacyBehavior href="/iphone">
                     <a
                       className={classNames(
                         downloadLinkClasses,
@@ -286,8 +286,8 @@ export default function Download(): ReactElement {
                 <Image
                   src="/assets/images/encrypted-messaging-app-desktop.png"
                   alt="encrypted messaging app phone"
-                  width="1130px"
-                  height="1000px"
+                  width={1130}
+                  height={1000}
                   layout="responsive"
                   priority={true}
                   loading="eager"

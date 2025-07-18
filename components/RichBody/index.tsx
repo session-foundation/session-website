@@ -87,7 +87,7 @@ export default function RichBody(props: Props): ReactElement {
         const url = parseUrl(node.data.uri);
         return (
           <span dir={getDirection(children)}>
-            <Link href={url} scroll={!isLocal(node.data.uri)}>
+            <Link legacyBehavior href={url} scroll={!isLocal(node.data.uri)}>
               <a
                 dir={getDirection(children)}
                 aria-label={'Read more about this link'}

@@ -6,8 +6,8 @@ import classNames from 'classnames';
 
 export default function Benefits(): ReactElement {
   const cardClasses = classNames('w-full mb-5');
-  const imageWidth = '500px';
-  const imageHeight = '500px';
+  const imageWidth = 500;
+  const imageHeight = 500;
   return (
     <section className={'text-gray-dark bg-primary'}>
       <Headline

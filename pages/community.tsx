@@ -2,7 +2,7 @@ import { Button, Headline, Layout } from '@/components/ui';
 import { ReactElement, useState } from 'react';
 
 import Container from '@/components/Container';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { LINKS } from '@/constants';
 import METADATA from '@/constants/metadata';
 import classNames from 'classnames';
@@ -61,8 +61,8 @@ export default function Community(): ReactElement {
                 src="/assets/images/session-ui-add.png"
                 alt="session add chat button"
                 title="session add chat button"
-                width="121px"
-                height="121px"
+                width={121}
+                height={121}
               />
             </span>
             <span> icon, then tap on the </span>
@@ -73,8 +73,8 @@ export default function Community(): ReactElement {
                 src="/assets/images/session-ui-community.png"
                 alt="session community button"
                 title="session community button"
-                width="121px"
-                height="121px"
+                width={121}
+                height={121}
               />
             </span>
             <span> option.</span>

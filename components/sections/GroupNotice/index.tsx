@@ -18,7 +18,7 @@ export default function GroupNotice(props: Props): ReactElement {
     >
       <h4 className={classNames('text-xl break-words')}>
         Join the{' '}
-        <Link href="/community">
+        <Link legacyBehavior href="/community">
           <a
             className={classNames(
               'text-primary-dark font-bold',

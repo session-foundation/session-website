@@ -24,7 +24,7 @@ export default function Banner(): ReactElement {
       >
         {isSmall ? BANNER.TEXT.MOBILE : BANNER.TEXT.DESKTOP}
       </span>
-      <Link href={BANNER.URL}>
+      <Link legacyBehavior href={BANNER.URL}>
         <a
           rel="noopener noreferrer"
           target="_blank"

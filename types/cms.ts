@@ -4,8 +4,8 @@ export type IFigureImage = {
   title: string | null;
   description: string | null;
   imageUrl: string;
-  width: string | number;
-  height: string | number;
+  width: number;
+  height: number;
 };
 
 export type IAuthor = {

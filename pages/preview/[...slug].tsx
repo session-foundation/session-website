@@ -28,7 +28,7 @@ export default function Preview(props: Props): ReactElement {
         }
       >
         <span>Preview Mode</span>
-        <Link href={`/${slug}`}>
+        <Link legacyBehavior href={`/${slug}`}>
           <a>Exit</a>
         </Link>
       </div>

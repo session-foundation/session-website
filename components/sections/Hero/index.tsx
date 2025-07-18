@@ -3,7 +3,7 @@ import { ReactComponent as AppleSVG } from '@/assets/svgs/apple.svg';
 import { Button } from '@/components/ui';
 import Container from '@/components/Container';
 import { ReactComponent as DesktopSVG } from '@/assets/svgs/desktop.svg';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 import { ReactElement } from 'react';
 import classNames from 'classnames';
@@ -48,7 +48,7 @@ export default function Hero(): ReactElement {
               Find your freedom with Session
             </p>
 
-            <Link href="/download">
+            <Link legacyBehavior href="/download">
               <a className="hidden lg:block mt-2">
                 <Button fontWeight="bold" size="large" classes="mt-4 px-12">
                   Download
@@ -79,7 +79,7 @@ export default function Hero(): ReactElement {
               'lg:hidden'
             )}
           >
-            <Link href="/android">
+            <Link legacyBehavior href="/android">
               <a className={downloadLinkClasses}>
                 <AndroidSVG
                   className={classNames(downloadSVGClasses, 'w-8 h-8')}
@@ -87,7 +87,7 @@ export default function Hero(): ReactElement {
                 <span>Android</span>
               </a>
             </Link>
-            <Link href="/apk">
+            <Link legacyBehavior href="/apk">
               <a className={downloadLinkClasses}>
                 <AndroidSVG
                   className={classNames(downloadSVGClasses, 'w-8 h-8')}
@@ -95,7 +95,7 @@ export default function Hero(): ReactElement {
                 <span>APK</span>
               </a>
             </Link>
-            <Link href="/f-droid">
+            <Link legacyBehavior href="/f-droid">
               <a className={downloadLinkClasses}>
                 <FDroidSVG
                   className={classNames(downloadSVGClasses, 'w-8 h-8')}
@@ -103,7 +103,7 @@ export default function Hero(): ReactElement {
                 <span>F-Droid</span>
               </a>
             </Link>
-            <Link href="/iphone">
+            <Link legacyBehavior href="/iphone">
               <a className={downloadLinkClasses}>
                 <AppleSVG
                   className={classNames(downloadSVGClasses, 'w-6 h-6')}
@@ -111,7 +111,7 @@ export default function Hero(): ReactElement {
                 <span>iPhone</span>
               </a>
             </Link>
-            <Link href="/download">
+            <Link legacyBehavior href="/download">
               <a className={downloadLinkClasses}>
                 <DesktopSVG
                   className={classNames(downloadSVGClasses, 'w-7 h-7')}

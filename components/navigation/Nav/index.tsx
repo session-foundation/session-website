@@ -2,7 +2,7 @@ import { ReactElement, useState } from 'react';
 
 import { Button } from '@/components/ui';
 import { ReactComponent as CloseSVG } from '@/assets/svgs/close.svg';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 import { ReactComponent as MenuSVG } from '@/assets/svgs/hamburger.svg';
 import { NAVIGATION } from '@/constants';
@@ -29,7 +29,7 @@ export default function Nav(): ReactElement {
           'lg:w-1/3 lg:p-0'
         )}
       >
-        <Link href="/">
+        <Link legacyBehavior href="/">
           <a style={{ width: '196px', height: '40px' }}>
             <Image
               src="/assets/svgs/logo.svg"
@@ -103,7 +103,7 @@ export default function Nav(): ReactElement {
               />
             );
           })}
-          <Link href="/download">
+          <Link legacyBehavior href="/download">
             <a className="hidden lg:inline">
               <Button fontWeight="bold" classes="ml-6">
                 Download

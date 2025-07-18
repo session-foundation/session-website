@@ -1,5 +1,5 @@
 import { ReactComponent as GithubSVG } from '@/assets/svgs/github.svg';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { ReactComponent as InstagramSVG } from '@/assets/svgs/instagram.svg';
 import { ReactComponent as MastodonSVG } from '@/assets/svgs/mastodon.svg';
 import Link from 'next/link';
@@ -104,7 +104,7 @@ function SocialLinks() {
 
         return (
           <div key={social.platform} role="listitem">
-            <Link href={social.href}>
+            <Link legacyBehavior href={social.href}>
               <a
                 className={socialLinkClasses}
                 target={social.external ? '_blank' : '_self'}
@@ -158,7 +158,7 @@ export default function Footer(): ReactElement {
             )}
           >
             <h3 className={headingClasses}>About</h3>
-            <Link href="/whitepaper">
+            <Link legacyBehavior href="/whitepaper">
               <a
                 className={linkClasses}
                 target="_blank"
@@ -167,16 +167,16 @@ export default function Footer(): ReactElement {
                 Whitepaper
               </a>
             </Link>
-            <Link href="/privacy-policy">
+            <Link legacyBehavior href="/privacy-policy">
               <a className={linkClasses}>Privacy Policy</a>
             </Link>
-            <Link href="/terms-of-service">
+            <Link legacyBehavior href="/terms-of-service">
               <a className={linkClasses}>Terms of Service</a>
             </Link>
-            <Link href="/blog">
+            <Link legacyBehavior href="/blog">
               <a className={linkClasses}>Blog</a>
             </Link>
-            <Link href="/faq">
+            <Link legacyBehavior href="/faq">
               <a className={linkClasses}>FAQ</a>
             </Link>
           </div>
@@ -188,7 +188,7 @@ export default function Footer(): ReactElement {
             )}
           >
             <h3 className={headingClasses}>Other</h3>
-            <Link href="https://token.getsession.org">
+            <Link legacyBehavior href="https://token.getsession.org">
               <a
                 className={linkClasses}
                 target="_blank"
@@ -197,7 +197,7 @@ export default function Footer(): ReactElement {
                 Session Token
               </a>
             </Link>
-            <Link href="https://lokinet.org/">
+            <Link legacyBehavior href="https://lokinet.org/">
               <a
                 className={linkClasses}
                 target="_blank"
@@ -206,10 +206,10 @@ export default function Footer(): ReactElement {
                 Lokinet
               </a>
             </Link>
-            <Link href="/assets/downloads/Session-Brandmarks.zip">
+            <Link legacyBehavior href="/assets/downloads/Session-Brandmarks.zip">
               <a className={linkClasses}>Media Kit</a>
             </Link>
-            <Link href="https://session.foundation/transparency-reports">
+            <Link legacyBehavior href="https://session.foundation/transparency-reports">
               <a
                 className={linkClasses}
                 target="_blank"
@@ -218,7 +218,7 @@ export default function Footer(): ReactElement {
                 Transparency Report
               </a>
             </Link>
-            <Link href="https://session.foundation">
+            <Link legacyBehavior href="https://session.foundation">
               <a
                 className={linkClasses}
                 target="_blank"
@@ -272,8 +272,8 @@ export default function Footer(): ReactElement {
             <Image
               src="/assets/images/logo-white.png"
               alt="session logo"
-              width="120px"
-              height="26px"
+              width={120}
+              height={26}
               layout="responsive"
             />
           </div>

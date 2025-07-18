@@ -115,7 +115,7 @@ export default function Accordion(props: Props): ReactElement {
           </>
         )}
         {question}
-        <Link href={`#${id}`}>
+        <Link legacyBehavior href={`#${id}`}>
           <a
             title={`Direct link to "${question}"`}
             className="focus:outline-none"

@@ -35,7 +35,7 @@ function NavDropdown(props: DropdownProps): ReactElement {
   );
 
   return (
-    <Link href={navItem.href}>
+    <Link legacyBehavior href={navItem.href}>
       <a
         aria-label={navItem.alt}
         target={navItem.target}
@@ -85,7 +85,7 @@ export default function NavItem(props: NavItemProps): ReactElement {
   return (
     <>
       {!navItem.items ? (
-        <Link href={navItem.href}>
+        <Link legacyBehavior href={navItem.href}>
           <a
             aria-label={navItem.alt}
             target={navItem.target}
