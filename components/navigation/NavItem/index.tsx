@@ -39,7 +39,7 @@ function NavDropdown(props: DropdownProps): ReactElement {
       href={navItem.href}
       aria-label={navItem.alt}
       target={navItem.target}
-      ref={navItem.rel ?? undefined}
+      rel={navItem.rel ?? undefined}
       className={classNames(navItemClasses, navItemHoverClasses)}
     >
       {title}

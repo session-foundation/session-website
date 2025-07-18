@@ -54,18 +54,15 @@ const securityHeaders = () => {
   return headers;
 };
 
-const config = {
+// @ts-check
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   optimizeFonts: true,
   reactStrictMode: true,
   compress: true,
   generateEtags: true,
   trailingSlash: false,
   productionBrowserSourceMaps: false,
-  experimental: {
-    modernMode: true,
-    granularChunks: true,
-    optimizeImages: true,
-  },
 
   env: {
     STAGING_SECRET: process.env.STAGING_SECRET,
@@ -120,7 +117,11 @@ const config = {
   },
 
   images: {
-    domains: ['downloads.ctfassets.net', 'images.ctfassets.net'],
+    remotePatterns: [{
+      hostname: 'downloads.ctfassets.net'
+    }, {
+      hostname: 'images.ctfassets.net'
+    }],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     formats: ['image/webp'],
@@ -240,4 +241,4 @@ const config = {
   },
 };
 
-module.exports = withSvgr(config);
+module.exports = withSvgr(nextConfig);
