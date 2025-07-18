@@ -1,4 +1,3 @@
-const withPlugins = require('next-compose-plugins');
 const withSvgr = require('@newhighsco/next-plugin-svgr');
 
 const ContentSecurityPolicy = `
@@ -241,4 +240,4 @@ const config = {
   },
 };
 
-module.exports = withPlugins([withSvgr], config);
+module.exports = withSvgr(config)
