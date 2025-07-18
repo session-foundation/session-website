@@ -128,20 +128,20 @@ export default function NavItem(props: NavItemProps): ReactElement {
             }}
           >
             {title}
-              <span className='block lg:hidden'>
-                <MenuSVG
-                  className={classNames(
-                    'inline w-3 h-3 -mt-1 ml-3 fill-current transform duration-300',
-                    IsDropdownExpanded ? 'hidden' : 'block'
-                  )}
-                />
-                <CloseSVG
-                  className={classNames(
-                    'inline w-3 h-3 -mt-1 ml-3 fill-current transform duration-300',
-                    IsDropdownExpanded ? 'block' : 'hidden'
-                  )}
-                />
-              </span>
+            <span className="block lg:hidden">
+              <MenuSVG
+                className={classNames(
+                  'inline w-3 h-3 -mt-1 ml-3 fill-current transform duration-300',
+                  IsDropdownExpanded ? 'hidden' : 'block'
+                )}
+              />
+              <CloseSVG
+                className={classNames(
+                  'inline w-3 h-3 -mt-1 ml-3 fill-current transform duration-300',
+                  IsDropdownExpanded ? 'block' : 'hidden'
+                )}
+              />
+            </span>
           </span>
           <div
             className={classNames(
