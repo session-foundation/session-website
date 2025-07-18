@@ -61,15 +61,14 @@ export default function Hero(): ReactElement {
             style={{ aspectRatio: '2499/2176' }}
           >
             <Image
-              src="/assets/images/encrypted-messaging-app.png"
+              src="/assets/images/encrypted-messaging-app.webp"
               alt="mobile encrypted messaging app ui showcase"
-              width={2499}
-              height={2176}
+              width={1080}
+              height={940}
               priority={true}
-              sizes="(max-width: 1023px) 100vw, 750px"
-              quality={90}
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAHCAYAAAA1WQxeAAAAqUlEQVQIW2NkgABGIGYFYh4gZgLir0D8A4j/gyT4xcREP/z9+4+BmZmJAUTDwNu3b0VACgSFhYXfgQRLy0oYurt6GJQOlzOwyQoxHOVNEQcp4KvKC/6oKczGMG3HfYZbt24z/Pv3l4GJiZkBaIIESAEH0ITvMEEQDQI6D6YyHOaPBpvALigoAHIQAyPQDSDwH+qO9+8/CIEUgAAfEP8BYmEo/wuQ/gBSCwDmCDZv8cjfFwAAAABJRU5ErkJggg=="
+              sizes="(max-width: 1023px) 100vw, 1080px"
+              quality={95}
+              placeholder="empty"
             />
           </div>
 
