@@ -109,7 +109,7 @@ export default function NavItem(props: NavItemProps): ReactElement {
           <span
             aria-label={navItem.alt}
             className={classNames(
-              'relative',
+              'relative flex flex-row',
               !isSVG && navLinkClasses,
               'lg:border-transparent lg:border-b-3',
               'lg:transform lg:transition-colors duration-500',
@@ -128,8 +128,7 @@ export default function NavItem(props: NavItemProps): ReactElement {
             }}
           >
             {title}
-            {(isSmall || isMedium) && (
-              <span>
+              <span className='block lg:hidden'>
                 <MenuSVG
                   className={classNames(
                     'inline w-3 h-3 -mt-1 ml-3 fill-current transform duration-300',
@@ -143,7 +142,6 @@ export default function NavItem(props: NavItemProps): ReactElement {
                   )}
                 />
               </span>
-            )}
           </span>
           <div
             className={classNames(
@@ -155,7 +153,7 @@ export default function NavItem(props: NavItemProps): ReactElement {
               (isSmall || isMedium) && IsDropdownExpanded
                 ? Object.keys(navItem.items).length > 2
                   ? 'h-32 -mb-3'
-                  : 'h-20 -mb-1'
+                  : '-mb-1'
                 : 'h-0 translate-y-auto lg:translate-y-0'
             )}
             style={{ zIndex: zIndex ? zIndex : undefined }}
