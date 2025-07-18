@@ -3,7 +3,7 @@ import { ReactComponent as AndroidSVG } from '@/assets/svgs/android_robot_head.s
 import { ReactComponent as AppleSVG } from '@/assets/svgs/apple.svg';
 import Container from '@/components/Container';
 import { ReactComponent as FDroidSVG } from '@/assets/svgs/fdroid-logo.svg';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import { Layout } from '@/components/ui';
 import Link from 'next/link';
 import { ReactComponent as LinuxSVG } from '@/assets/svgs/linux.svg';
@@ -115,79 +115,75 @@ export default function Download(): ReactElement {
               </div>
               <div className={classNames(linkContainerClasses)}>
                 <div className={classNames(downloadContainerClasses)}>
-                  <Link legacyBehavior href="/android">
-                    <a
+                  <Link
+                    href="/android"
+                    className={classNames(
+                      downloadLinkClasses,
+                      'lg:hover:bg-gray-dark lg:hover:text-primary'
+                    )}
+                  >
+                    <AndroidSVG
                       className={classNames(
-                        downloadLinkClasses,
-                        'lg:hover:bg-gray-dark lg:hover:text-primary'
+                        downloadSVGClasses,
+                        'w-6 h-6',
+                        'md:w-8 md:h-8'
                       )}
-                    >
-                      <AndroidSVG
-                        className={classNames(
-                          downloadSVGClasses,
-                          'w-6 h-6',
-                          'md:w-8 md:h-8'
-                        )}
-                      />
-                      <span>Android</span>
-                    </a>
+                    />
+                    <span>Android</span>
                   </Link>
                 </div>
                 <div className={classNames(downloadContainerClasses)}>
-                  <Link legacyBehavior href="/apk">
-                    <a
+                  <Link
+                    href="/apk"
+                    className={classNames(
+                      downloadLinkClasses,
+                      'lg:hover:bg-gray-dark lg:hover:text-primary'
+                    )}
+                  >
+                    <AndroidSVG
                       className={classNames(
-                        downloadLinkClasses,
-                        'lg:hover:bg-gray-dark lg:hover:text-primary'
+                        downloadSVGClasses,
+                        'w-6 h-6',
+                        'md:w-8 md:h-8'
                       )}
-                    >
-                      <AndroidSVG
-                        className={classNames(
-                          downloadSVGClasses,
-                          'w-6 h-6',
-                          'md:w-8 md:h-8'
-                        )}
-                      />
-                      <span>APK</span>
-                    </a>
+                    />
+                    <span>APK</span>
                   </Link>
                 </div>
                 <div className={classNames(downloadContainerClasses)}>
-                  <Link legacyBehavior href="/f-droid">
-                    <a
+                  <Link
+                    href="/f-droid"
+                    className={classNames(
+                      downloadLinkClasses,
+                      'lg:hover:bg-gray-dark lg:hover:text-primary'
+                    )}
+                  >
+                    <FDroidSVG
                       className={classNames(
-                        downloadLinkClasses,
-                        'lg:hover:bg-gray-dark lg:hover:text-primary'
+                        downloadSVGClasses,
+                        'w-5 h-5',
+                        'md:w-7 md:h-7'
                       )}
-                    >
-                      <FDroidSVG
-                        className={classNames(
-                          downloadSVGClasses,
-                          'w-5 h-5',
-                          'md:w-7 md:h-7'
-                        )}
-                      />
-                      <span>F-Droid</span>
-                    </a>
+                    />
+                    <span>F-Droid</span>
                   </Link>
                 </div>
                 <div className={classNames(downloadContainerClasses)}>
-                  <Link legacyBehavior href="/iphone">
-                    <a
+                  <Link
+                    href="/iphone"
+                    className={classNames(
+                      downloadLinkClasses,
+                      'lg:hover:bg-gray-dark lg:hover:text-primary'
+                    )}
+                  >
+                    <AppleSVG
                       className={classNames(
-                        downloadLinkClasses,
-                        'lg:hover:bg-gray-dark lg:hover:text-primary'
+                        downloadSVGClasses,
+                        'w-4 h-4',
+                        'md:w-6 md:h-6'
                       )}
-                    >
-                      <AppleSVG
-                        className={classNames(
-                          downloadSVGClasses,
-                          'w-4 h-4',
-                          'md:w-6 md:h-6'
-                        )}
-                      />
-                      <span>iPhone</span>
-                    </a>
+                    />
+                    <span>iPhone</span>
                   </Link>
                 </div>
               </div>

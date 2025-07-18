@@ -1,5 +1,5 @@
 import { IPost } from '@/types/cms';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { ReactElement } from 'react';
 import classNames from 'classnames';
@@ -38,7 +38,7 @@ export default function PostCard(props: Props): ReactElement {
       )}
     >
       {featureImage?.imageUrl && (
-        <Link legacyBehavior href={route} passHref>
+        <Link href={route} passHref legacyBehavior>
           <div
             className={classNames(
               'relative overflow-hidden w-full mb-4',
@@ -69,21 +69,19 @@ export default function PostCard(props: Props): ReactElement {
       <div
         className={classNames(featured && 'md:w-1/2 md:ml-4 lg:ml-3 lg:w-2/5')}
       >
-        <Link legacyBehavior href={route} passHref>
-          <a>
-            {featured ? (
-              <h1
-                className={classNames(
-                  headingClasses,
-                  'font-bold text-3xl mt-8 md:text-4xl md:-mt-1 lg:leading-tight'
-                )}
-              >
-                {title}
-              </h1>
-            ) : (
-              <h2 className={classNames(headingClasses)}>{title}</h2>
-            )}
-          </a>
+        <Link href={route} passHref>
+          {featured ? (
+            <h1
+              className={classNames(
+                headingClasses,
+                'font-bold text-3xl mt-8 md:text-4xl md:-mt-1 lg:leading-tight'
+              )}
+            >
+              {title}
+            </h1>
+          ) : (
+            <h2 className={classNames(headingClasses)}>{title}</h2>
+          )}
         </Link>
         <p className={classNames('text-gray-lightest text-xs font-helvetica')}>
           {publishedDate}
@@ -100,10 +98,11 @@ export default function PostCard(props: Props): ReactElement {
           </p>
         )}
         {featured && (
-          <Link legacyBehavior href={route}>
-            <a className={classNames('block text-primary-dark text-xs mt-4')}>
-              Read More »
-            </a>
+          <Link
+            href={route}
+            className={classNames('block text-primary-dark text-xs mt-4')}
+          >
+            Read More »
           </Link>
         )}
       </div>

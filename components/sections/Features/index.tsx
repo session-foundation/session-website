@@ -1,6 +1,6 @@
 import Container from '@/components/Container';
 import { Headline } from '@/components/ui';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import { ReactElement } from 'react';
 import classNames from 'classnames';
 import { useScreen } from '@/contexts/screen';

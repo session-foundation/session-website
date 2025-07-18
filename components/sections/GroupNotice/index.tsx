@@ -18,16 +18,15 @@ export default function GroupNotice(props: Props): ReactElement {
     >
       <h4 className={classNames('text-xl break-words')}>
         Join the{' '}
-        <Link legacyBehavior href="/community">
-          <a
-            className={classNames(
-              'text-primary-dark font-bold',
-              'transition-colors duration-300',
-              'hover:text-white'
-            )}
-          >
-            Session Community
-          </a>
+        <Link
+          href="/community"
+          className={classNames(
+            'text-primary-dark font-bold',
+            'transition-colors duration-300',
+            'hover:text-white'
+          )}
+        >
+          Session Community
         </Link>{' '}
         and meet the vibrant group of people building, running, and using
         Session.

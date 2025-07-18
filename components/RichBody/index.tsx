@@ -87,20 +87,20 @@ export default function RichBody(props: Props): ReactElement {
         const url = parseUrl(node.data.uri);
         return (
           <span dir={getDirection(children)}>
-            <Link legacyBehavior href={url} scroll={!isLocal(node.data.uri)}>
-              <a
-                dir={getDirection(children)}
-                aria-label={'Read more about this link'}
-                className={classNames('text-primary-dark')}
-                target={
-                  isLocal(node.data.uri) || url !== node.data.uri
-                    ? '_self'
-                    : '_blank'
-                }
-                rel="noreferrer"
-              >
-                {children}
-              </a>
+            <Link
+              href={url}
+              scroll={!isLocal(node.data.uri)}
+              dir={getDirection(children)}
+              aria-label={'Read more about this link'}
+              className={classNames('text-primary-dark')}
+              target={
+                isLocal(node.data.uri) || url !== node.data.uri
+                  ? '_self'
+                  : '_blank'
+              }
+              rel="noreferrer"
+            >
+              {children}
             </Link>
           </span>
         );

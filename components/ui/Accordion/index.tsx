@@ -115,20 +115,19 @@ export default function Accordion(props: Props): ReactElement {
           </>
         )}
         {question}
-        <Link legacyBehavior href={`#${id}`}>
-          <a
-            title={`Direct link to "${question}"`}
-            className="focus:outline-none"
-          >
-            <LinkSVG
-              className={classNames(
-                'inline w-4 h-4 fill-current mb-1 mr-2 mt-0.5 ml-2',
-                'transition-opacity duration-500',
-                'hover:opacity-100',
-                loaded && isExpanded ? 'opacity-100' : 'opacity-20'
-              )}
-            />
-          </a>
+        <Link
+          href={`#${id}`}
+          title={`Direct link to "${question}"`}
+          className="focus:outline-none"
+        >
+          <LinkSVG
+            className={classNames(
+              'inline w-4 h-4 fill-current mb-1 mr-2 mt-0.5 ml-2',
+              'transition-opacity duration-500',
+              'hover:opacity-100',
+              loaded && isExpanded ? 'opacity-100' : 'opacity-20'
+            )}
+          />
         </Link>
       </div>
       <div

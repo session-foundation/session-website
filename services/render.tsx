@@ -2,7 +2,7 @@ import { Block, Inline } from '@contentful/rich-text-types';
 import { CSSProperties, ReactElement } from 'react';
 
 import EmbedContent from '@/components/EmbedContent';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import classNames from 'classnames';
 import sanitize from '@/utils/sanitize';
@@ -115,17 +115,16 @@ function EmbeddedMedia(
               <figcaption className={classNames(captionClasses)}>
                 <em>
                   {node.sourceUrl ? (
-                    <Link legacyBehavior href={node.sourceUrl}>
-                      <a
-                        aria-label={node.caption}
-                        className={classNames(
-                          'text-primary-dark font-extralight'
-                        )}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {node.caption}
-                      </a>
+                    <Link
+                      href={node.sourceUrl}
+                      aria-label={node.caption}
+                      className={classNames(
+                        'text-primary-dark font-extralight'
+                      )}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {node.caption}
                     </Link>
                   ) : (
                     <>{node.caption}</>

@@ -2,7 +2,7 @@ import { Button, Headline, Layout } from '@/components/ui';
 import { ReactElement, useState } from 'react';
 
 import Container from '@/components/Container';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import { LINKS } from '@/constants';
 import METADATA from '@/constants/metadata';
 import classNames from 'classnames';

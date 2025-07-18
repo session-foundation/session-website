@@ -2,7 +2,7 @@ import { ReactElement, useState } from 'react';
 
 import { Button } from '@/components/ui';
 import { ReactComponent as CloseSVG } from '@/assets/svgs/close.svg';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { ReactComponent as MenuSVG } from '@/assets/svgs/hamburger.svg';
 import { NAVIGATION } from '@/constants';
@@ -29,19 +29,17 @@ export default function Nav(): ReactElement {
           'lg:w-1/3 lg:p-0'
         )}
       >
-        <Link legacyBehavior href="/">
-          <a style={{ width: '196px', height: '40px' }}>
-            <Image
-              src="/assets/svgs/logo.svg"
-              alt="session logo"
-              width={196}
-              height={40}
-              priority={true}
-              quality={100}
-              placeholder="empty"
-              sizes="196px"
-            />
-          </a>
+        <Link href="/" style={{ width: '196px', height: '40px' }}>
+          <Image
+            src="/assets/svgs/logo.svg"
+            alt="session logo"
+            width={196}
+            height={40}
+            priority={true}
+            quality={100}
+            placeholder="empty"
+            sizes="196px"
+          />
         </Link>
         <div className={classNames('block ml-4', 'lg:hidden')}>
           <button
@@ -103,12 +101,10 @@ export default function Nav(): ReactElement {
               />
             );
           })}
-          <Link legacyBehavior href="/download">
-            <a className="hidden lg:inline">
-              <Button fontWeight="bold" classes="ml-6">
-                Download
-              </Button>
-            </a>
+          <Link href="/download" className="hidden lg:inline">
+            <Button fontWeight="bold" classes="ml-6">
+              Download
+            </Button>
           </Link>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import classNames from 'classnames';
 
@@ -32,10 +32,11 @@ export default function Post(props: Props): ReactElement {
     return tags.map((tag, index) => {
       return (
         <span key={index}>
-          <Link legacyBehavior href={`/tag/${tag}`}>
-            <a className="transition-colors duration-300 hover:text-primary">
-              {tag}
-            </a>
+          <Link
+            href={`/tag/${tag}`}
+            className="transition-colors duration-300 hover:text-primary"
+          >
+            {tag}
           </Link>
           {index < tags.length - 1 && ', '}
         </span>

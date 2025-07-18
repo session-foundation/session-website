@@ -1,5 +1,5 @@
 import { ReactComponent as GithubSVG } from '@/assets/svgs/github.svg';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import { ReactComponent as InstagramSVG } from '@/assets/svgs/instagram.svg';
 import { ReactComponent as MastodonSVG } from '@/assets/svgs/mastodon.svg';
 import Link from 'next/link';
@@ -104,20 +104,19 @@ function SocialLinks() {
 
         return (
           <div key={social.platform} role="listitem">
-            <Link legacyBehavior href={social.href}>
-              <a
-                className={socialLinkClasses}
-                target={social.external ? '_blank' : '_self'}
-                rel={social.external ? 'noopener noreferrer' : undefined}
-                aria-label={social.label}
-                title={social.label}
-              >
-                <IconComponent
-                  className={classNames(svgClasses, social.customIconClasses)}
-                  aria-hidden={true}
-                />
-                <span className="sr-only">{social.label}</span>
-              </a>
+            <Link
+              href={social.href}
+              className={socialLinkClasses}
+              target={social.external ? '_blank' : '_self'}
+              rel={social.external ? 'noopener noreferrer' : undefined}
+              aria-label={social.label}
+              title={social.label}
+            >
+              <IconComponent
+                className={classNames(svgClasses, social.customIconClasses)}
+                aria-hidden={true}
+              />
+              <span className="sr-only">{social.label}</span>
             </Link>
           </div>
         );
@@ -158,26 +157,25 @@ export default function Footer(): ReactElement {
             )}
           >
             <h3 className={headingClasses}>About</h3>
-            <Link legacyBehavior href="/whitepaper">
-              <a
-                className={linkClasses}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Whitepaper
-              </a>
+            <Link
+              href="/whitepaper"
+              className={linkClasses}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Whitepaper
             </Link>
-            <Link legacyBehavior href="/privacy-policy">
-              <a className={linkClasses}>Privacy Policy</a>
+            <Link href="/privacy-policy" className={linkClasses}>
+              Privacy Policy
             </Link>
-            <Link legacyBehavior href="/terms-of-service">
-              <a className={linkClasses}>Terms of Service</a>
+            <Link href="/terms-of-service" className={linkClasses}>
+              Terms of Service
             </Link>
-            <Link legacyBehavior href="/blog">
-              <a className={linkClasses}>Blog</a>
+            <Link href="/blog" className={linkClasses}>
+              Blog
             </Link>
-            <Link legacyBehavior href="/faq">
-              <a className={linkClasses}>FAQ</a>
+            <Link href="/faq" className={linkClasses}>
+              FAQ
             </Link>
           </div>
           <div
@@ -188,44 +186,43 @@ export default function Footer(): ReactElement {
             )}
           >
             <h3 className={headingClasses}>Other</h3>
-            <Link legacyBehavior href="https://token.getsession.org">
-              <a
-                className={linkClasses}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Session Token
-              </a>
+            <Link
+              href="https://token.getsession.org"
+              className={linkClasses}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Session Token
             </Link>
-            <Link legacyBehavior href="https://lokinet.org/">
-              <a
-                className={linkClasses}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Lokinet
-              </a>
+            <Link
+              href="https://lokinet.org/"
+              className={linkClasses}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Lokinet
             </Link>
-            <Link legacyBehavior href="/assets/downloads/Session-Brandmarks.zip">
-              <a className={linkClasses}>Media Kit</a>
+            <Link
+              href="/assets/downloads/Session-Brandmarks.zip"
+              className={linkClasses}
+            >
+              Media Kit
             </Link>
-            <Link legacyBehavior href="https://session.foundation/transparency-reports">
-              <a
-                className={linkClasses}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Transparency Report
-              </a>
+            <Link
+              href="https://session.foundation/transparency-reports"
+              className={linkClasses}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Transparency Report
             </Link>
-            <Link legacyBehavior href="https://session.foundation">
-              <a
-                className={linkClasses}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Foundation
-              </a>
+            <Link
+              href="https://session.foundation"
+              className={linkClasses}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Foundation
             </Link>
           </div>
           <div

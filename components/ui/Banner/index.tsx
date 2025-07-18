@@ -24,21 +24,20 @@ export default function Banner(): ReactElement {
       >
         {isSmall ? BANNER.TEXT.MOBILE : BANNER.TEXT.DESKTOP}
       </span>
-      <Link legacyBehavior href={BANNER.URL}>
-        <a
-          rel="noopener noreferrer"
-          target="_blank"
-          title={BANNER.ARIA}
-          aria-label={BANNER.ARIA}
+      <Link
+        href={BANNER.URL}
+        rel="noopener noreferrer"
+        target="_blank"
+        title={BANNER.ARIA}
+        aria-label={BANNER.ARIA}
+      >
+        <Button
+          fontWeight="bold"
+          size={isSmall ? 'small' : 'medium'}
+          classes="whitespace-nowrap"
         >
-          <Button
-            fontWeight="bold"
-            size={isSmall ? 'small' : 'medium'}
-            classes="whitespace-nowrap"
-          >
-            Learn more
-          </Button>
-        </a>
+          Learn more
+        </Button>
       </Link>
     </div>
   );

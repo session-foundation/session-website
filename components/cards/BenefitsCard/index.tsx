@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import classNames from 'classnames';
 import redact from '@/utils/redact';
 import { useScreen } from '@/contexts/screen';

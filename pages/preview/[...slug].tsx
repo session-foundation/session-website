@@ -28,9 +28,7 @@ export default function Preview(props: Props): ReactElement {
         }
       >
         <span>Preview Mode</span>
-        <Link legacyBehavior href={`/${slug}`}>
-          <a>Exit</a>
-        </Link>
+        <Link href={`/${slug}`}>Exit</Link>
       </div>
       {isPost(content) ? (
         <BlogPost post={content} otherPosts={props.otherPosts} />

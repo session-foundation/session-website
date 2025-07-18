@@ -240,4 +240,4 @@ const config = {
   },
 };
 
-module.exports = withSvgr(config)
+module.exports = withSvgr(config);

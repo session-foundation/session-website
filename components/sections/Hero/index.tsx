@@ -3,7 +3,7 @@ import { ReactComponent as AppleSVG } from '@/assets/svgs/apple.svg';
 import { Button } from '@/components/ui';
 import Container from '@/components/Container';
 import { ReactComponent as DesktopSVG } from '@/assets/svgs/desktop.svg';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { ReactElement } from 'react';
 import classNames from 'classnames';
@@ -48,12 +48,10 @@ export default function Hero(): ReactElement {
               Find your freedom with Session
             </p>
 
-            <Link legacyBehavior href="/download">
-              <a className="hidden lg:block mt-2">
-                <Button fontWeight="bold" size="large" classes="mt-4 px-12">
-                  Download
-                </Button>
-              </a>
+            <Link href="/download" className="hidden lg:block mt-2">
+              <Button fontWeight="bold" size="large" classes="mt-4 px-12">
+                Download
+              </Button>
             </Link>
           </div>
           <div
@@ -79,45 +77,33 @@ export default function Hero(): ReactElement {
               'lg:hidden'
             )}
           >
-            <Link legacyBehavior href="/android">
-              <a className={downloadLinkClasses}>
-                <AndroidSVG
-                  className={classNames(downloadSVGClasses, 'w-8 h-8')}
-                />
-                <span>Android</span>
-              </a>
+            <Link href="/android" className={downloadLinkClasses}>
+              <AndroidSVG
+                className={classNames(downloadSVGClasses, 'w-8 h-8')}
+              />
+              <span>Android</span>
             </Link>
-            <Link legacyBehavior href="/apk">
-              <a className={downloadLinkClasses}>
-                <AndroidSVG
-                  className={classNames(downloadSVGClasses, 'w-8 h-8')}
-                />
-                <span>APK</span>
-              </a>
+            <Link href="/apk" className={downloadLinkClasses}>
+              <AndroidSVG
+                className={classNames(downloadSVGClasses, 'w-8 h-8')}
+              />
+              <span>APK</span>
             </Link>
-            <Link legacyBehavior href="/f-droid">
-              <a className={downloadLinkClasses}>
-                <FDroidSVG
-                  className={classNames(downloadSVGClasses, 'w-8 h-8')}
-                />
-                <span>F-Droid</span>
-              </a>
+            <Link href="/f-droid" className={downloadLinkClasses}>
+              <FDroidSVG
+                className={classNames(downloadSVGClasses, 'w-8 h-8')}
+              />
+              <span>F-Droid</span>
             </Link>
-            <Link legacyBehavior href="/iphone">
-              <a className={downloadLinkClasses}>
-                <AppleSVG
-                  className={classNames(downloadSVGClasses, 'w-6 h-6')}
-                />
-                <span>iPhone</span>
-              </a>
+            <Link href="/iphone" className={downloadLinkClasses}>
+              <AppleSVG className={classNames(downloadSVGClasses, 'w-6 h-6')} />
+              <span>iPhone</span>
             </Link>
-            <Link legacyBehavior href="/download">
-              <a className={downloadLinkClasses}>
-                <DesktopSVG
-                  className={classNames(downloadSVGClasses, 'w-7 h-7')}
-                />
-                <span>Desktop</span>
-              </a>
+            <Link href="/download" className={downloadLinkClasses}>
+              <DesktopSVG
+                className={classNames(downloadSVGClasses, 'w-7 h-7')}
+              />
+              <span>Desktop</span>
             </Link>
           </div>
         </div>

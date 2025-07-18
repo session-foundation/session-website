@@ -2,7 +2,7 @@ import { IEmbed, INoembed, isNoembed } from '@/services/embed';
 import { ReactElement, useEffect, useRef, useState } from 'react';
 
 import { Button } from '../ui';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { TOS } from '@/constants';
 import classNames from 'classnames';
@@ -94,43 +94,41 @@ export default function EmbedContent(props: Props): ReactElement {
     }
   } else {
     return (
-      <Link legacyBehavior href={content.url}>
-        <a dir={textDirection} target="_blank">
-          <div
-            className={classNames(
-              'embed-content',
-              'bg-white border border-gray-300 my-6 mx-auto max-w-sm',
-              classes
-            )}
-          >
-            {content.image && (
-              <div className={classNames('relative w-full h-36', 'md:h-48')}>
-                <Image
-                  src={content.image}
-                  alt="link thumbnail image"
-                  layout="fill"
-                  priority={true}
-                  className={classNames('object-cover')}
-                />
-              </div>
-            )}
-            <div className={classNames('p-3 text-black text-sm')}>
-              <p
-                className={classNames('font-bold')}
-                dangerouslySetInnerHTML={{ __html: content.title }}
+      <Link href={content.url} dir={textDirection} target="_blank">
+        <div
+          className={classNames(
+            'embed-content',
+            'bg-white border border-gray-300 my-6 mx-auto max-w-sm',
+            classes
+          )}
+        >
+          {content.image && (
+            <div className={classNames('relative w-full h-36', 'md:h-48')}>
+              <Image
+                src={content.image}
+                alt="link thumbnail image"
+                layout="fill"
+                priority={true}
+                className={classNames('object-cover')}
               />
-              {content.description && (
-                <p dangerouslySetInnerHTML={{ __html: content.description }} />
-              )}
-              {content.site_name && (
-                <p
-                  className={classNames('text-gray-500 font-normal')}
-                  dangerouslySetInnerHTML={{ __html: content.site_name }}
-                />
-              )}
             </div>
+          )}
+          <div className={classNames('p-3 text-black text-sm')}>
+            <p
+              className={classNames('font-bold')}
+              dangerouslySetInnerHTML={{ __html: content.title }}
+            />
+            {content.description && (
+              <p dangerouslySetInnerHTML={{ __html: content.description }} />
+            )}
+            {content.site_name && (
+              <p
+                className={classNames('text-gray-500 font-normal')}
+                dangerouslySetInnerHTML={{ __html: content.site_name }}
+              />
+            )}
           </div>
-        </a>
+        </div>
       </Link>
     );
   }

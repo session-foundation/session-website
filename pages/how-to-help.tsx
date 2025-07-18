@@ -1,5 +1,5 @@
 import CustomHead from '@/components/CustomHead';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import { METADATA } from '@/constants';
 import { ReactElement } from 'react';
 

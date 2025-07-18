@@ -35,15 +35,14 @@ function NavDropdown(props: DropdownProps): ReactElement {
   );
 
   return (
-    <Link legacyBehavior href={navItem.href}>
-      <a
-        aria-label={navItem.alt}
-        target={navItem.target}
-        ref={navItem.rel ?? undefined}
-        className={classNames(navItemClasses, navItemHoverClasses)}
-      >
-        {title}
-      </a>
+    <Link
+      href={navItem.href}
+      aria-label={navItem.alt}
+      target={navItem.target}
+      ref={navItem.rel ?? undefined}
+      className={classNames(navItemClasses, navItemHoverClasses)}
+    >
+      {title}
     </Link>
   );
 }
@@ -85,19 +84,18 @@ export default function NavItem(props: NavItemProps): ReactElement {
   return (
     <>
       {!navItem.items ? (
-        <Link legacyBehavior href={navItem.href}>
-          <a
-            aria-label={navItem.alt}
-            target={navItem.target}
-            rel={navItem.rel ?? undefined}
-            className={classNames(
-              !isSVG && navLinkClasses,
-              isActiveNavLink(navItem.href),
-              hoverEffect && navLinkHoverClasses
-            )}
-          >
-            {title}
-          </a>
+        <Link
+          href={navItem.href}
+          aria-label={navItem.alt}
+          target={navItem.target}
+          rel={navItem.rel ?? undefined}
+          className={classNames(
+            !isSVG && navLinkClasses,
+            isActiveNavLink(navItem.href),
+            hoverEffect && navLinkHoverClasses
+          )}
+        >
+          {title}
         </Link>
       ) : (
         <span
