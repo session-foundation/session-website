@@ -1,5 +1,5 @@
 import { CMS } from '@/constants';
-import getConfig from 'next/config';
+import config from 'next.config';
 
 // https://nextjs.org/docs/api-reference/next.config.js/redirects
 export interface IRedirection {
@@ -97,4 +97,10 @@ export async function getDynamicRedirection(url: string) {
     }
   });
   return redirection;
+}
+
+const redirects: IRedirection[] = await config.redirects();
+
+export async function hasRedirection(url: string) {
+  return redirects.find((redirect) => redirect.source === url);
 }

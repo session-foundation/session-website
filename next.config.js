@@ -54,6 +54,37 @@ const securityHeaders = () => {
   return headers;
 };
 
+const redirects = [
+  {
+    source: '/android',
+    destination:
+      'https://play.google.com/store/apps/details?id=network.loki.messenger',
+    permanent: true,
+  },
+  {
+    source: '/apk',
+    destination:
+      'https://github.com/session-foundation/session-android/releases',
+    permanent: true,
+  },
+  {
+    source: '/iphone',
+    destination:
+      'https://apps.apple.com/app/session-private-messenger/id1470168868?ls=1',
+    permanent: true,
+  },
+  {
+    source: '/f-droid',
+    destination: 'https://fdroid.getsession.org/',
+    permanent: true,
+  },
+  {
+    source: '/whitepaper',
+    destination: 'https://arxiv.org/pdf/2002.04609.pdf',
+    permanent: true,
+  },
+]
+
 // @ts-check
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -129,36 +160,7 @@ const nextConfig = {
   },
 
   async redirects() {
-    return [
-      {
-        source: '/android',
-        destination:
-          'https://play.google.com/store/apps/details?id=network.loki.messenger',
-        permanent: true,
-      },
-      {
-        source: '/apk',
-        destination:
-          'https://github.com/session-foundation/session-android/releases',
-        permanent: true,
-      },
-      {
-        source: '/iphone',
-        destination:
-          'https://apps.apple.com/app/session-private-messenger/id1470168868?ls=1',
-        permanent: true,
-      },
-      {
-        source: '/f-droid',
-        destination: 'https://fdroid.getsession.org/',
-        permanent: true,
-      },
-      {
-        source: '/whitepaper',
-        destination: 'https://arxiv.org/pdf/2002.04609.pdf',
-        permanent: true,
-      },
-    ];
+    return redirects;
   },
 
   async rewrites() {

@@ -11,6 +11,7 @@ import BlogPost from '@/components/BlogPost';
 import { CMS } from '@/constants';
 import { ReactElement } from 'react';
 import RichPage from '@/components/RichPage';
+import { hasRedirection } from '@/services/redirect';
 
 interface Props {
   content: IPage | IPost;
@@ -34,6 +35,13 @@ export async function getStaticProps(context: GetStaticPropsContext) {
     'color: purple;'
   );
   const slug = String(context.params?.slug);
+  const redirect = await hasRedirection(`/${slug}`);
+  if (redirect) {
+    return {
+      redirect: redirect,
+      revalidate: CMS.CONTENT_REVALIDATE_RATE,
+    };
+  }
 
   try {
     const content: IPage | IPost = await fetchEntryBySlug(slug);

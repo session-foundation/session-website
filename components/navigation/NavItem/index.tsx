@@ -8,13 +8,13 @@ import classNames from 'classnames';
 import { useRouter } from 'next/router';
 import { useScreen } from '@/contexts/screen';
 
-export interface DropdownProps {
+interface DropdownProps {
   title: string | ReactNode; // social icons can be nav items
   navItem: INavItem;
   classes?: string;
 }
 
-export interface NavItemProps extends DropdownProps {
+interface NavItemProps extends DropdownProps {
   isExpanded?: boolean;
   isIcon?: boolean;
   hoverEffect?: boolean;
@@ -47,7 +47,7 @@ function NavDropdown(props: DropdownProps): ReactElement {
   );
 }
 
-export const navLinkClasses = classNames(
+const navLinkClasses = classNames(
   'bg-gray block w-full px-5 py-2 uppercase border-transparent border-b-3 cursor-pointer',
   'lg:px-2 lg:w-auto lg:bg-transparent'
 );

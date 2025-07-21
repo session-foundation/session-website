@@ -4,7 +4,7 @@
     "paths": {
       "@/*": ["./*"]
     },
-    "target": "es5",
+    "target": "ESNext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true /* allows javaScript files to be compiled */,
     "skipLibCheck": true /* skip type checking of all declaration files */,

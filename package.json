@@ -15,7 +15,6 @@
     "@contentful/rich-text-html-renderer": "^15.3.5",
     "@contentful/rich-text-plain-text-renderer": "^15.3.5",
     "@contentful/rich-text-react-renderer": "^15.3.5",
-    "@silvermine/videojs-quality-selector": "^1.2.5",
     "base-64": "^1.0.0",
     "classnames": "^2.3.1",
     "contentful": "^8.4.2",
@@ -29,9 +28,7 @@
     "react-dom": "18",
     "react-qrcode-logo": "^3.0.0",
     "react-use": "^17.2.4",
-    "rimraf": "^3.0.2",
-    "sharp": "^0.28.3",
-    "video.js": "^7.14.3",
+    "sharp": "^0.34.3",
     "xss": "^1.0.9"
   },
   "devDependencies": {
@@ -43,7 +40,6 @@
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@types/rimraf": "^3.0.2",
-    "@types/video.js": "^7.3.26",
     "autoprefixer": "^10.2.5",
     "contentful-cli": "^1.8.17",
     "cssnano": "^4.1.11",

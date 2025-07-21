@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import { MouseEvent, useEffect, useRef, useState } from 'react';
 import { QRCode } from 'react-qrcode-logo';
 
-export type SessionQRCodeProps = {
+type SessionQRCodeProps = {
   id: string;
   value: string;
   size: number;
