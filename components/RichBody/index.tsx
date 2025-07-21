@@ -1,4 +1,10 @@
-import { BLOCKS, Document, INLINES, MARKS } from '@contentful/rich-text-types';
+import {
+  BLOCKS,
+  Document,
+  type Inline,
+  INLINES,
+  MARKS,
+} from '@contentful/rich-text-types';
 /* eslint-disable react/display-name */
 import { Children, ReactElement, cloneElement } from 'react';
 import {
@@ -107,7 +113,7 @@ export default function RichBody(props: Props): ReactElement {
       },
       [INLINES.EMBEDDED_ENTRY]: (node, children) => {
         return renderEmbeddedEntry(
-          { node, isInline: true },
+          { node: node as Inline, isInline: true },
           getDirection(node.data.target.fields.caption)
         );
       },
@@ -130,7 +136,7 @@ export default function RichBody(props: Props): ReactElement {
             </span>
           );
         }
-        const plaintext = documentToPlainTextString(node);
+        const plaintext = documentToPlainTextString(node as Inline);
         const isShortcode = SHORTCODES.REGEX.test(plaintext);
         if (isShortcode) {
           return renderShortcode(plaintext);
@@ -148,7 +154,7 @@ export default function RichBody(props: Props): ReactElement {
       [BLOCKS.HEADING_1]: (node, children: any) => (
         <h1
           dir={getDirection(children)}
-          id={hasLocalID(node)}
+          id={hasLocalID(node as Inline)}
           className={classNames(
             'text-3xl leading-snug mb-5',
             'lg:text-5xl',
@@ -161,7 +167,7 @@ export default function RichBody(props: Props): ReactElement {
       [BLOCKS.HEADING_2]: (node, children: any) => (
         <h2
           dir={getDirection(children)}
-          id={hasLocalID(node)}
+          id={hasLocalID(node as Inline)}
           className={classNames(
             'text-2xl leading-snug mb-5',
             'lg:text-3xl',
@@ -174,7 +180,7 @@ export default function RichBody(props: Props): ReactElement {
       [BLOCKS.HEADING_3]: (node, children: any) => (
         <h3
           dir={getDirection(children)}
-          id={hasLocalID(node)}
+          id={hasLocalID(node as Inline)}
           className={classNames(
             'text-xl leading-snug mb-2',
             'lg:text-2xl',
@@ -187,7 +193,7 @@ export default function RichBody(props: Props): ReactElement {
       [BLOCKS.HEADING_4]: (node, children: any) => (
         <h4
           dir={getDirection(children)}
-          id={hasLocalID(node)}
+          id={hasLocalID(node as Inline)}
           className={classNames(
             'text-md leading-snug mb-2',
             'lg:text-xl',
@@ -271,13 +277,13 @@ export default function RichBody(props: Props): ReactElement {
       ),
       [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
         return renderEmbeddedEntry(
-          { node },
+          { node: node as Inline },
           getDirection(node.data.target.fields.caption)
         );
       },
       [BLOCKS.EMBEDDED_ENTRY]: (node, children) => {
         return renderEmbeddedEntry(
-          { node },
+          { node: node as Inline },
           getDirection(node.data.target.fields.caption)
         );
       },

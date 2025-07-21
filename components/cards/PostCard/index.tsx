@@ -38,7 +38,7 @@ export default function PostCard(props: Props): ReactElement {
       )}
     >
       {featureImage?.imageUrl && (
-        <Link href={route} passHref legacyBehavior>
+        <Link href={route} legacyBehavior>
           <div
             className={classNames(
               'relative overflow-hidden w-full mb-4',

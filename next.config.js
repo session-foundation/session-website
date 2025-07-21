@@ -83,12 +83,11 @@ const redirects = [
     destination: 'https://arxiv.org/pdf/2002.04609.pdf',
     permanent: true,
   },
-]
+];
 
 // @ts-check
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  optimizeFonts: true,
   reactStrictMode: true,
   compress: true,
   generateEtags: true,
@@ -148,11 +147,14 @@ const nextConfig = {
   },
 
   images: {
-    remotePatterns: [{
-      hostname: 'downloads.ctfassets.net'
-    }, {
-      hostname: 'images.ctfassets.net'
-    }],
+    remotePatterns: [
+      {
+        hostname: 'downloads.ctfassets.net',
+      },
+      {
+        hostname: 'images.ctfassets.net',
+      },
+    ],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     formats: ['image/webp'],
