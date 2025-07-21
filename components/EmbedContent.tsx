@@ -1,11 +1,11 @@
 import { IEmbed, INoembed, isNoembed } from '@/services/embed';
 import { ReactElement, useEffect, useRef, useState } from 'react';
 
-import { Button } from '../ui';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { TOS } from '@/constants';
 import classNames from 'classnames';
+import Button from '@/components/ui/Button';
 
 interface Props {
   content: IEmbed | INoembed; // is sanitized in embed service

@@ -3,7 +3,8 @@ import classNames from 'classnames';
 
 import { IPage } from '@/types/cms';
 import Container from '@/components/Container';
-import { Headline, Layout } from '@/components/ui';
+import Layout from '@/components/ui/Layout';
+import Headline from '@/components/ui/Headline';
 import RichBody from '@/components/RichBody';
 
 interface Props {

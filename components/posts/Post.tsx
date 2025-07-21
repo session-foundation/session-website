@@ -4,7 +4,7 @@ import Link from 'next/link';
 import classNames from 'classnames';
 
 import { IPost } from '@/types/cms';
-import { PostList } from '@/components/posts';
+import PostList from '@/components/posts/PostList';
 import RichBody from '@/components/RichBody';
 import { useScreen } from '@/contexts/screen';
 import Container from '@/components/Container';

@@ -4,9 +4,8 @@ import classNames from 'classnames';
 import { IPost } from '@/types/cms';
 import { generateRoute } from '@/services/cms';
 import Container from '@/components/Container';
-import { Headline } from '@/components/ui';
-import { PostCard } from '@/components/cards';
-import { UI } from '@/constants';
+import Headline from '@/components/ui/Headline';
+import PostCard from '@/components/cards/PostCard';
 
 interface Props {
   posts: IPost[];

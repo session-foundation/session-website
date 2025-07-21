@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 
-import { Layout } from '@/components/ui';
+import Layout from '@/components/ui/Layout';
 import Container from '@/components/Container';
 import METADATA from '@/constants/metadata';
 

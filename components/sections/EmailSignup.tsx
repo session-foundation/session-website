@@ -1,8 +1,8 @@
 import { FormEventHandler, ReactElement, useRef, useState } from 'react';
 
-import { Button } from '@/components/ui';
+import Button from '@/components/ui/Button';
 import Container from '@/components/Container';
-import { GroupNotice } from '@/components/sections';
+import GroupNotice from '@/components/sections/GroupNotice';
 import classNames from 'classnames';
 import { useScreen } from '@/contexts/screen';
 

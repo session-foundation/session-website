@@ -2,7 +2,7 @@
 import { ReactElement, useEffect, useRef, useState } from 'react';
 
 import Container from '@/components/Container';
-import { Headline } from '@/components/ui';
+import Headline from '@/components/ui/Headline';
 import classNames from 'classnames';
 // import dynamic from 'next/dynamic';
 import redact from '@/utils/redact';

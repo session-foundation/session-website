@@ -1,9 +1,12 @@
-import { About, Benefits, Features, Hero } from '@/components/sections';
+import About from '@/components/sections/About';
+import Benefits from '@/components/sections/Benefits';
+import Features from '@/components/sections/Features';
+import Hero from '@/components/sections/Hero';
 import { GetStaticProps, GetStaticPropsContext } from 'next';
 
 import { CMS } from '@/constants';
 import { IPost } from '@/types/cms';
-import { Layout } from '@/components/ui';
+import Layout from '@/components/ui/Layout';
 import { fetchBlogEntries } from '@/services/cms';
 import generateRSSFeed from '@/utils/rss';
 

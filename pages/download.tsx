@@ -4,7 +4,7 @@ import { ReactComponent as AppleSVG } from '@/assets/svgs/apple.svg';
 import Container from '@/components/Container';
 import { ReactComponent as FDroidSVG } from '@/assets/svgs/fdroid-logo.svg';
 import Image from 'next/legacy/image';
-import { Layout } from '@/components/ui';
+import Layout from '@/components/ui/Layout';
 import Link from 'next/link';
 import { ReactComponent as LinuxSVG } from '@/assets/svgs/linux.svg';
 import METADATA from '@/constants/metadata';

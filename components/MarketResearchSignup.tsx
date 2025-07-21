@@ -6,7 +6,7 @@ import {
   useState,
 } from 'react';
 
-import { Button } from '@/components/ui';
+import Button from '@/components/ui/Button';
 import Container from '@/components/Container';
 import { IQuestion } from '@/constants/signups';
 import { SIGNUPS } from '@/constants';

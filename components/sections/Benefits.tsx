@@ -1,6 +1,6 @@
-import { BenefitsCard } from '@/components/cards';
+import BenefitsCard from '@/components/cards/BenefitsCard';
 import Container from '@/components/Container';
-import { Headline } from '@/components/ui';
+import Headline from '@/components/ui/Headline';
 import { ReactElement } from 'react';
 import classNames from 'classnames';
 

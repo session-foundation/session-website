@@ -1,9 +1,8 @@
 import Container from '@/components/Container';
-import { Headline } from '@/components/ui';
+import Headline from '@/components/ui/Headline';
 import Image from 'next/legacy/image';
 import { ReactElement } from 'react';
 import classNames from 'classnames';
-import { useScreen } from '@/contexts/screen';
 
 export default function Features(): ReactElement {
   const headingClasses = classNames(

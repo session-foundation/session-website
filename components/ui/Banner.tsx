@@ -1,9 +1,9 @@
 import { BANNER } from '@/constants';
-import Button from '../Button';
 import { ReactElement } from 'react';
 import classNames from 'classnames';
 import { useScreen } from '@/contexts/screen';
 import Link from 'next/link';
+import Button from '@/components/ui/Button';
 
 export default function Banner(): ReactElement {
   const { isSmall } = useScreen();

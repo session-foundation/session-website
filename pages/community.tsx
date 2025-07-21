@@ -1,4 +1,6 @@
-import { Button, Headline, Layout } from '@/components/ui';
+import Button from '@/components/ui/Button';
+import Headline from '@/components/ui/Headline';
+import Layout from '@/components/ui/Layout';
 import { ReactElement, useState } from 'react';
 
 import Container from '@/components/Container';

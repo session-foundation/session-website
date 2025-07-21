@@ -1,9 +1,10 @@
-import { Footer, Nav } from '@/components/navigation';
+import Nav from '@/components/navigation/Nav';
+import Footer from '@/components/navigation/Footer';
 import { ReactElement, ReactNode, useEffect, useMemo, useState } from 'react';
 
-import { Banner } from '@/components/ui';
+import Banner from '@/components/ui/Banner';
 import CustomHead from '@/components/CustomHead';
-import { EmailSignup } from '@/components/sections';
+import EmailSignup from '@/components/sections/EmailSignup';
 import { IMetadata } from '@/constants/metadata';
 import LockedPage from '@/components/LockedPage';
 import { useRouter } from 'next/router';

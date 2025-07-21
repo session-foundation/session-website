@@ -7,10 +7,10 @@ import { IPost } from '@/types/cms';
 import { fetchBlogEntries, generateRoute } from '@/services/cms';
 import METADATA from '@/constants/metadata';
 
-import { Layout } from '@/components/ui';
+import Layout from '@/components/ui/Layout';
 import Container from '@/components/Container';
-import { PostCard } from '@/components/cards';
-import { PostList } from '@/components/posts';
+import PostCard from '@/components/cards/PostCard';
+import PostList from '@/components/posts/PostList';
 
 interface Props {
   posts: IPost[];

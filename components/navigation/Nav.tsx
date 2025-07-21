@@ -1,12 +1,12 @@
 import { ReactElement, useState } from 'react';
 
-import { Button } from '@/components/ui';
+import Button from '@/components/ui/Button';
 import { ReactComponent as CloseSVG } from '@/assets/svgs/close.svg';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { ReactComponent as MenuSVG } from '@/assets/svgs/hamburger.svg';
 import { NAVIGATION } from '@/constants';
-import { NavItem } from '@/components/navigation';
+import NavItem from '@/components/navigation/NavItem';
 import classNames from 'classnames';
 
 export default function Nav(): ReactElement {

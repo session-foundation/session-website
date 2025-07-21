@@ -1,7 +1,7 @@
 import { IPost } from '@/types/cms';
-import { Layout } from '@/components/ui';
+import Layout from '@/components/ui/Layout';
 import METADATA from '@/constants/metadata';
-import { Post } from '@/components/posts';
+import Post from '@/components/posts/Post';
 import { ReactElement } from 'react';
 
 interface Props {

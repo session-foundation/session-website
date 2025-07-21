@@ -1,6 +1,6 @@
 import { ReactComponent as AndroidSVG } from '@/assets/svgs/android_robot_head.svg';
 import { ReactComponent as AppleSVG } from '@/assets/svgs/apple.svg';
-import { Button } from '@/components/ui';
+import Button from '@/components/ui/Button';
 import Container from '@/components/Container';
 import { ReactComponent as DesktopSVG } from '@/assets/svgs/desktop.svg';
 import Image from 'next/legacy/image';

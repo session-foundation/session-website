@@ -4,8 +4,8 @@ import { IPost, ITagList } from '@/types/cms';
 import { fetchBlogEntriesByTag, fetchTagList } from '@/services/cms';
 
 import Container from '@/components/Container';
-import { Layout } from '@/components/ui';
-import { PostList } from '@/components/posts';
+import Layout from '@/components/ui/Layout';
+import PostList from '@/components/posts/PostList';
 import { ReactElement } from 'react';
 import classNames from 'classnames';
 

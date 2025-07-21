@@ -1,6 +1,6 @@
 import { ReactElement, useEffect } from 'react';
 
-import { Layout } from '@/components/ui';
+import Layout from '@/components/ui/Layout';
 import { METADATA } from '@/constants';
 import RedirectPage from '@/components/RedirectPage';
 import { useRouter } from 'next/router';
