@@ -1,8 +1,8 @@
-import { IPost } from '@/types/cms';
+import classNames from 'classnames';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
-import { ReactElement } from 'react';
-import classNames from 'classnames';
+import type { ReactElement } from 'react';
+import type { IPost } from '@/types/cms';
 
 interface Props extends IPost {
   route: string;
@@ -16,11 +16,9 @@ export default function PostCard(props: Props): ReactElement {
   const {
     title,
     description,
-    subtitle,
     featureImage,
     publishedDate,
     author,
-    slug,
     route,
     featured,
     hoverEffect = !featured,
@@ -30,22 +28,16 @@ export default function PostCard(props: Props): ReactElement {
   const headingClasses = 'cursor-pointer text-2xl font-bold mb-3';
   // parent container must have 'flex' class
   return (
-    <div
-      className={classNames(
-        'text-gray-dark leading-none p-3',
-        'lg:text-3xl',
-        classes
-      )}
-    >
+    <div className={classNames('p-3 text-gray-dark leading-none', 'lg:text-3xl', classes)}>
       {featureImage?.imageUrl && (
         <Link href={route} legacyBehavior>
           <div
             className={classNames(
-              'relative overflow-hidden w-full mb-4',
+              'relative mb-4 w-full overflow-hidden',
               'md:px-16',
               'lg:px-20',
               compact ? 'h-48 md:h-60 lg:h-44' : 'h-60 lg:h-56',
-              featured && 'md:w-1/2 md:mr-4 lg:mr-3 lg:w-3/5 lg:h-96',
+              featured && 'md:mr-4 md:w-1/2 lg:mr-3 lg:h-96 lg:w-3/5',
               hoverEffect && 'rounded-lg'
             )}
           >
@@ -56,25 +48,23 @@ export default function PostCard(props: Props): ReactElement {
               priority={featured}
               loading={featured ? 'eager' : 'lazy'}
               className={classNames(
-                'object-cover cursor-pointer rounded-lg',
+                'cursor-pointer rounded-lg object-cover',
                 hoverEffect &&
                   // no animation transition
                   // https://stackoverflow.com/questions/29330381/rounded-corners-in-safari-chrome-are-not-rounded-on-hover-for-first-second
-                  'transform scale-105 hover:filter hover:blur-xs'
+                  'scale-105 transform hover:blur-xs hover:filter'
               )}
             />
           </div>
         </Link>
       )}
-      <div
-        className={classNames(featured && 'md:w-1/2 md:ml-4 lg:ml-3 lg:w-2/5')}
-      >
+      <div className={classNames(featured && 'md:ml-4 md:w-1/2 lg:ml-3 lg:w-2/5')}>
         <Link href={route} passHref>
           {featured ? (
             <h1
               className={classNames(
                 headingClasses,
-                'font-bold text-3xl mt-8 md:text-4xl md:-mt-1 lg:leading-tight'
+                'md:-mt-1 mt-8 font-bold text-3xl md:text-4xl lg:leading-tight'
               )}
             >
               {title}
@@ -83,25 +73,17 @@ export default function PostCard(props: Props): ReactElement {
             <h2 className={classNames(headingClasses)}>{title}</h2>
           )}
         </Link>
-        <p className={classNames('text-gray-lightest text-xs font-helvetica')}>
+        <p className={classNames('font-helvetica text-gray-lightest text-xs')}>
           {publishedDate}
-          {author && author.name && <span> / {author.name}</span>}
+          {author?.name && <span> / {author.name}</span>}
         </p>
         {!compact && (
-          <p
-            className={classNames(
-              'text-sm',
-              featured && 'md:text-base md:leading-normal'
-            )}
-          >
+          <p className={classNames('text-sm', featured && 'md:text-base md:leading-normal')}>
             {description}
           </p>
         )}
         {featured && (
-          <Link
-            href={route}
-            className={classNames('block text-primary-dark text-xs mt-4')}
-          >
+          <Link href={route} className={classNames('mt-4 block text-primary-dark text-xs')}>
             Read More »
           </Link>
         )}

@@ -1,5 +1,5 @@
-import { ReactElement, ReactNode } from 'react';
 import classNames from 'classnames';
+import type { ReactElement, ReactNode } from 'react';
 import { useScreen } from '@/contexts/screen';
 
 export interface IContainerSizes {
@@ -20,14 +20,7 @@ interface Props {
 }
 
 export default function Container(props: Props): ReactElement {
-  const {
-    id,
-    hasMinHeight = false,
-    heights,
-    fullWidth = false,
-    classes,
-    children,
-  } = props;
+  const { id, hasMinHeight = false, heights, fullWidth = false, classes, children } = props;
   const minHeights: IContainerSizes = {
     small: '568px',
     medium: '1024px',
@@ -50,11 +43,7 @@ export default function Container(props: Props): ReactElement {
       id={id}
       className={classNames(
         'mx-auto',
-        !fullWidth && [
-          'container max-w-6xl p-6',
-          'md:p-12',
-          'lg:py-0 lg:px-10',
-        ],
+        !fullWidth && ['container max-w-6xl p-6', 'md:p-12', 'lg:px-10 lg:py-0'],
         classes
       )}
       // mobile safari needs style props to be explicitly undefined if not used

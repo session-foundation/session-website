@@ -1,9 +1,8 @@
-import { ReactElement, useEffect } from 'react';
-
+import { useRouter } from 'next/router';
+import { type ReactElement, useEffect } from 'react';
+import RedirectPage from '@/components/RedirectPage';
 import Layout from '@/components/ui/Layout';
 import { METADATA } from '@/constants';
-import RedirectPage from '@/components/RedirectPage';
-import { useRouter } from 'next/router';
 
 export default function Litepaper(): ReactElement {
   const router = useRouter();

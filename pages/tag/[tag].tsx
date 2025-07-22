@@ -1,13 +1,12 @@
-import { CMS, METADATA } from '@/constants';
-import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
-import { IPost, ITagList } from '@/types/cms';
-import { fetchBlogEntriesByTag, fetchTagList } from '@/services/cms';
-
-import Container from '@/components/Container';
-import Layout from '@/components/ui/Layout';
-import PostList from '@/components/posts/PostList';
-import { ReactElement } from 'react';
 import classNames from 'classnames';
+import type { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
+import type { ReactElement } from 'react';
+import Container from '@/components/Container';
+import PostList from '@/components/posts/PostList';
+import Layout from '@/components/ui/Layout';
+import { CMS, METADATA } from '@/constants';
+import { fetchBlogEntriesByTag, fetchTagList } from '@/services/cms';
+import type { IPost, ITagList } from '@/types/cms';
 
 interface Props {
   tag: string;
@@ -28,7 +27,7 @@ export default function Tag(props: Props): ReactElement {
         >
           <h1
             className={classNames(
-              'text-primary-dark text-4xl font-bold bg-gray-50 border border-gray-200 py-3 px-2',
+              'border border-gray-200 bg-gray-50 px-2 py-3 font-bold text-4xl text-primary-dark',
               'lg:mx-3',
               'xl:max-w-4xl'
             )}
@@ -42,19 +41,12 @@ export default function Tag(props: Props): ReactElement {
   );
 }
 
-export const getStaticProps: GetStaticProps = async (
-  context: GetStaticPropsContext
-) => {
-  console.log(
-    `Building: Results for tag "%c${context.params?.tag}"`,
-    'color: purple;'
-  );
+export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext) => {
+  console.log(`Building: Results for tag "%c${context.params?.tag}"`, 'color: purple;');
   const tag = String(context.params?.tag);
 
   try {
-    const { entries: posts, total: totalPosts } = await fetchBlogEntriesByTag(
-      tag
-    );
+    const { entries: posts } = await fetchBlogEntriesByTag(tag);
 
     return {
       props: { tag, posts },

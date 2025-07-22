@@ -1,4 +1,4 @@
-import { Block, Inline } from '@contentful/rich-text-types';
+import type { Block, Inline } from '@contentful/rich-text-types';
 import METADATA from '../constants/metadata';
 
 // utils for checking if hyperlinks are for the current site

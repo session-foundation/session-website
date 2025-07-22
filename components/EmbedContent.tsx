@@ -1,11 +1,11 @@
-import { IEmbed, INoembed, isNoembed } from '@/services/embed';
-import { ReactElement, useEffect, useRef, useState } from 'react';
-
+/** biome-ignore-all lint/security/noDangerouslySetInnerHtml: Used as intended */
+import classNames from 'classnames';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
-import { TOS } from '@/constants';
-import classNames from 'classnames';
+import { type ReactElement, useEffect, useRef, useState } from 'react';
 import Button from '@/components/ui/Button';
+import { TOS } from '@/constants';
+import { type IEmbed, type INoembed, isNoembed } from '@/services/embed';
 
 interface Props {
   content: IEmbed | INoembed; // is sanitized in embed service
@@ -32,26 +32,17 @@ export default function EmbedContent(props: Props): ReactElement {
   if (isNoembed(content)) {
     if (content.isExternalVideo) {
       return allowExternalContent ? (
-        <div
-          className={classNames('embed-content', classes)}
-          ref={htmlRef}
-        ></div>
+        <div className={classNames('embed-content', classes)} ref={htmlRef}></div>
       ) : (
         <div
           className={classNames(
-            'embed-content bg-white w-full border border-gray-300 my-6 mx-auto max-w-sm p-6'
+            'embed-content mx-auto my-6 w-full max-w-sm border border-gray-300 bg-white p-6'
           )}
         >
-          <p
-            className={classNames('text-black font-bold mb-2 leading-relaxed')}
-          >
+          <p className={classNames('mb-2 font-bold text-black leading-relaxed')}>
             This content is hosted by {content.site_name}.
           </p>
-          <p
-            className={classNames(
-              'text-sm text-gray-500 font-normal leading-relaxed mb-4'
-            )}
-          >
+          <p className={classNames('mb-4 font-normal text-gray-500 text-sm leading-relaxed')}>
             By showing the external content you accept their{' '}
             {TOS[content.site_name] && TOS[content.site_name].length > 0 ? (
               <a
@@ -67,10 +58,7 @@ export default function EmbedContent(props: Props): ReactElement {
             )}
             .
           </p>
-          <div
-            data-video-site={content.site_name}
-            className="showExternalVideoButton"
-          >
+          <div data-video-site={content.site_name} className="showExternalVideoButton">
             <Button
               fontWeight="bold"
               size="large"
@@ -85,12 +73,7 @@ export default function EmbedContent(props: Props): ReactElement {
         </div>
       );
     } else {
-      return (
-        <div
-          className={classNames('embed-content', classes)}
-          ref={htmlRef}
-        ></div>
-      );
+      return <div className={classNames('embed-content', classes)} ref={htmlRef}></div>;
     }
   } else {
     return (
@@ -98,12 +81,12 @@ export default function EmbedContent(props: Props): ReactElement {
         <div
           className={classNames(
             'embed-content',
-            'bg-white border border-gray-300 my-6 mx-auto max-w-sm',
+            'mx-auto my-6 max-w-sm border border-gray-300 bg-white',
             classes
           )}
         >
           {content.image && (
-            <div className={classNames('relative w-full h-36', 'md:h-48')}>
+            <div className={classNames('relative h-36 w-full', 'md:h-48')}>
               <Image
                 src={content.image}
                 alt="link thumbnail image"
@@ -118,12 +101,10 @@ export default function EmbedContent(props: Props): ReactElement {
               className={classNames('font-bold')}
               dangerouslySetInnerHTML={{ __html: content.title }}
             />
-            {content.description && (
-              <p dangerouslySetInnerHTML={{ __html: content.description }} />
-            )}
+            {content.description && <p dangerouslySetInnerHTML={{ __html: content.description }} />}
             {content.site_name && (
               <p
-                className={classNames('text-gray-500 font-normal')}
+                className={classNames('font-normal text-gray-500')}
                 dangerouslySetInnerHTML={{ __html: content.site_name }}
               />
             )}

@@ -1,15 +1,15 @@
-import { ReactComponent as GithubSVG } from '@/assets/svgs/github.svg';
+import classNames from 'classnames';
 import Image from 'next/legacy/image';
+import Link from 'next/link';
+import type { FunctionComponent, ReactElement, SVGProps } from 'react';
+import { ReactComponent as GithubSVG } from '@/assets/svgs/github.svg';
 import { ReactComponent as InstagramSVG } from '@/assets/svgs/instagram.svg';
 import { ReactComponent as MastodonSVG } from '@/assets/svgs/mastodon.svg';
-import Link from 'next/link';
-import { FunctionComponent, ReactElement, SVGProps } from 'react';
 import { ReactComponent as RssSVG } from '@/assets/svgs/rss.svg';
 import { ReactComponent as TwitterSVG } from '@/assets/svgs/twitter.svg';
 import { ReactComponent as YouTubeSVG } from '@/assets/svgs/youtube.svg';
-import classNames from 'classnames';
 import redact from '@/utils/redact';
-import { useScreen } from '@/contexts/screen';
+
 // Type definitions
 interface SocialLink {
   href: string;
@@ -20,25 +20,15 @@ interface SocialLink {
   customIconClasses?: string;
 }
 
-const headingClasses = classNames(
-  'text-white uppercase text-xl font-bold mb-2'
-);
+const headingClasses = classNames('text-white uppercase text-xl font-bold mb-2');
 const linkClasses = classNames(
   'text-sm py-2 mr-2 font-semibold',
   'lg:py-0 lg:my-0',
   'transition-colors duration-300',
   'hover:text-white'
 );
-const socialLinkClasses = classNames(
-  'text-primary',
-  'transition duration-300',
-  'hover:text-white'
-);
-const svgClasses = classNames(
-  'fill-current w-7 h-7 m-1',
-  'lg:my-0 lg:ml-0',
-  'hover:animate-push'
-);
+const socialLinkClasses = classNames('text-primary', 'transition duration-300', 'hover:text-white');
+const svgClasses = classNames('fill-current w-7 h-7 m-1', 'lg:my-0 lg:ml-0', 'hover:animate-push');
 
 // Social media data with accessibility labels
 const socialLinks: SocialLink[] = [
@@ -90,20 +80,15 @@ const socialLinks: SocialLink[] = [
 
 function SocialLinks() {
   return (
-    <div
-      className={classNames(
-        'flex flex-wrap -ml-1',
-        'md:pr-1',
-        'lg:pr-0 lg:gap-2'
-      )}
-      role="list"
+    <ul
+      className={classNames('-ml-1 flex flex-wrap', 'md:pr-1', 'lg:gap-2 lg:pr-0')}
       aria-label="Social media links"
     >
       {socialLinks.map((social: SocialLink) => {
         const IconComponent = social.icon;
 
         return (
-          <div key={social.platform} role="listitem">
+          <li key={social.platform}>
             <Link
               href={social.href}
               className={socialLinkClasses}
@@ -118,15 +103,14 @@ function SocialLinks() {
               />
               <span className="sr-only">{social.label}</span>
             </Link>
-          </div>
+          </li>
         );
       })}
-    </div>
+    </ul>
   );
 }
 
 export default function Footer(): ReactElement {
-  const { isSmall } = useScreen();
   const redactedClasses = redact({
     redactColor: 'primary',
     textColor: 'white',
@@ -139,23 +123,17 @@ export default function Footer(): ReactElement {
       <footer
         className={classNames(
           'text-primary-dark',
-          'lg:flex lg:flex-row-reverse lg:justify-between lg:max-w-screen-xl lg:mx-auto'
+          'lg:mx-auto lg:flex lg:max-w-screen-xl lg:flex-row-reverse lg:justify-between'
         )}
       >
         <div
           className={classNames(
-            'flex flex-wrap pt-6 pb-4 px-8 border-b border-primary border-dashed',
+            'flex flex-wrap border-primary border-b border-dashed px-8 pt-6 pb-4',
             'md:pb-8',
-            'lg:pt-12 lg:pr-4 lg:border-l lg:border-b-0 lg:w-1/2'
+            'lg:w-1/2 lg:border-b-0 lg:border-l lg:pt-12 lg:pr-4'
           )}
         >
-          <div
-            className={classNames(
-              'flex flex-col gap-1 w-1/2 mb-4',
-              'md:w-1/4',
-              'lg:w-1/3'
-            )}
-          >
+          <div className={classNames('mb-4 flex w-1/2 flex-col gap-1', 'md:w-1/4', 'lg:w-1/3')}>
             <h3 className={headingClasses}>About</h3>
             <Link
               href="/whitepaper"
@@ -178,13 +156,7 @@ export default function Footer(): ReactElement {
               FAQ
             </Link>
           </div>
-          <div
-            className={classNames(
-              'flex flex-col gap-1 w-1/2 mb-4',
-              'md:w-1/4',
-              'lg:w-1/3'
-            )}
-          >
+          <div className={classNames('mb-4 flex w-1/2 flex-col gap-1', 'md:w-1/4', 'lg:w-1/3')}>
             <h3 className={headingClasses}>Other</h3>
             <Link
               href="https://token.getsession.org"
@@ -202,10 +174,7 @@ export default function Footer(): ReactElement {
             >
               Lokinet
             </Link>
-            <Link
-              href="/assets/downloads/Session-Brandmarks.zip"
-              className={linkClasses}
-            >
+            <Link href="/assets/downloads/Session-Brandmarks.zip" className={linkClasses}>
               Media Kit
             </Link>
             <Link
@@ -225,20 +194,12 @@ export default function Footer(): ReactElement {
               Foundation
             </Link>
           </div>
-          <div
-            className={classNames(
-              'flex w-full',
-              'md:w-1/2',
-              'lg:block lg:w-1/3'
-            )}
-          >
-            <div className={classNames('w-1/2 mb-4', 'lg:w-full')}>
+          <div className={classNames('flex w-full', 'md:w-1/2', 'lg:block lg:w-1/3')}>
+            <div className={classNames('mb-4 w-1/2', 'lg:w-full')}>
               <h3 className={headingClasses}>Socials</h3>
               <SocialLinks />
             </div>
-            <div
-              className={classNames('flex flex-col w-1/2 mb-4', 'lg:w-full')}
-            >
+            <div className={classNames('mb-4 flex w-1/2 flex-col', 'lg:w-full')}>
               <h3 className={headingClasses}>Support</h3>
               <a
                 href="https://sessionapp.zendesk.com/hc/en-us"
@@ -253,19 +214,12 @@ export default function Footer(): ReactElement {
         </div>
         <div
           className={classNames(
-            'py-6 px-8',
-            'md:p-10 md:w-full md:max-w-3xl',
-            'lg:pt-12 lg:pb-7 lg:px-7 lg:mb-2 lg:w-1/2'
+            'px-8 py-6',
+            'md:w-full md:max-w-3xl md:p-10',
+            'lg:mb-2 lg:w-1/2 lg:px-7 lg:pt-12 lg:pb-7'
           )}
         >
-          <div
-            className={classNames(
-              'relative w-32',
-              'md:w-36',
-              'lg:w-32',
-              'xl:w-40'
-            )}
-          >
+          <div className={classNames('relative w-32', 'md:w-36', 'lg:w-32', 'xl:w-40')}>
             <Image
               src="/assets/images/logo-white.png"
               alt="session logo"
@@ -276,15 +230,14 @@ export default function Footer(): ReactElement {
           </div>
           <p
             className={classNames(
-              'group text-white text-sm leading-6 tracking-wide pt-3',
+              'group pt-3 text-sm text-white leading-6 tracking-wide',
               'md:pt-4',
               'xl:text-base xl:leading-relaxed',
               '2xl:leading-loose'
             )}
           >
-            Session is an <span className={redactedClasses}>end-to-end</span>{' '}
-            encrypted messenger that protects your{' '}
-            <span className={redactedClasses}>personal</span> data. Take back
+            Session is an <span className={redactedClasses}>end-to-end</span> encrypted messenger
+            that protects your <span className={redactedClasses}>personal</span> data. Take back
             control with a messaging app designed, built, and operated by a{' '}
             <span className={redactedClasses}>global</span> community of{' '}
             <span className={redactedClasses}>privacy</span> experts.

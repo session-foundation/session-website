@@ -1,6 +1,6 @@
-import { ReactElement } from 'react';
 import classNames from 'classnames';
-import { IContainerSizes } from '@/components/Container';
+import type { ReactElement } from 'react';
+import type { IContainerSizes } from '@/components/Container';
 import { useScreen } from '@/contexts/screen';
 
 interface Props {
@@ -17,8 +17,7 @@ export default function Headline(props: Props): ReactElement {
     if (isSmall) return containerWidths?.small;
     if (isMedium) return containerWidths?.medium;
     if (isLarge) return containerWidths?.large;
-    if (isHuge || isEnormous)
-      return containerWidths?.huge ?? containerWidths?.large;
+    if (isHuge || isEnormous) return containerWidths?.huge ?? containerWidths?.large;
   })();
   const colorClasses = [
     color === 'primary' && 'text-primary',
@@ -31,7 +30,7 @@ export default function Headline(props: Props): ReactElement {
   return (
     <div className={classNames('flex items-start', classes)}>
       <div
-        className={classNames(`border-t mt-2 ml-3`, borderClasses)}
+        className={classNames(`mt-2 ml-3 border-t`, borderClasses)}
         style={{
           minWidth: isLarge || isHuge || isEnormous ? '72px' : '',
           width: isSmall
@@ -48,7 +47,7 @@ export default function Headline(props: Props): ReactElement {
         </div>
       </div>
       <div
-        className={classNames(`hidden mt-2 mr-3`, 'md:block')}
+        className={classNames(`mt-2 mr-3 hidden`, 'md:block')}
         style={{ width: `calc((100vw - ${containerWidth}) / 2)` }}
       ></div>
     </div>

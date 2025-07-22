@@ -1,13 +1,12 @@
-import { ReactElement, useState } from 'react';
-
-import Button from '@/components/ui/Button';
-import { ReactComponent as CloseSVG } from '@/assets/svgs/close.svg';
+import classNames from 'classnames';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
+import { type ReactElement, useState } from 'react';
+import { ReactComponent as CloseSVG } from '@/assets/svgs/close.svg';
 import { ReactComponent as MenuSVG } from '@/assets/svgs/hamburger.svg';
-import { NAVIGATION } from '@/constants';
 import NavItem from '@/components/navigation/NavItem';
-import classNames from 'classnames';
+import Button from '@/components/ui/Button';
+import { NAVIGATION } from '@/constants';
 
 export default function Nav(): ReactElement {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -17,15 +16,14 @@ export default function Nav(): ReactElement {
   const mobileNavButtonClasses = 'w-5 h-5 fill-current';
   return (
     <nav
-      role="navigation"
       className={classNames(
-        'container relative flex flex-wrap items-center justify-between max-w-6xl px-4 pb-2 mx-auto z-10',
-        'lg:pb-0 lg:h-24 lg:px-10'
+        'container relative z-10 mx-auto flex max-w-6xl flex-wrap items-center justify-between px-4 pb-2',
+        'lg:h-24 lg:px-10 lg:pb-0'
       )}
     >
       <div
         className={classNames(
-          'flex items-center justify-between w-full px-5 pt-7',
+          'flex w-full items-center justify-between px-5 pt-7',
           'lg:w-1/3 lg:p-0'
         )}
       >
@@ -41,33 +39,23 @@ export default function Nav(): ReactElement {
             sizes="196px"
           />
         </Link>
-        <div className={classNames('block ml-4', 'lg:hidden')}>
+        <div className={classNames('ml-4 block', 'lg:hidden')}>
           <button
             className="z-10 flex items-center py-2 text-gray focus:outline-none focus:ring-2 focus:ring-primary"
             onClick={toggleNav}
-            aria-label={
-              isExpanded ? 'Close navigation menu' : 'Open navigation menu'
-            }
+            aria-label={isExpanded ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={isExpanded}
             aria-controls="mobile-navigation"
             type="button"
           >
-            <span className="sr-only">
-              {isExpanded ? 'Close' : 'Open'} navigation menu
-            </span>
+            <span className="sr-only">{isExpanded ? 'Close' : 'Open'} navigation menu</span>
             <MenuSVG
-              className={classNames(
-                mobileNavButtonClasses,
-                isExpanded ? 'hidden' : 'block'
-              )}
+              className={classNames(mobileNavButtonClasses, isExpanded ? 'hidden' : 'block')}
               aria-hidden="true"
               focusable="false"
             />
             <CloseSVG
-              className={classNames(
-                mobileNavButtonClasses,
-                isExpanded ? 'block' : 'hidden'
-              )}
+              className={classNames(mobileNavButtonClasses, isExpanded ? 'block' : 'hidden')}
               aria-hidden="true"
               focusable="false"
             />
@@ -76,24 +64,22 @@ export default function Nav(): ReactElement {
       </div>
       <div
         className={classNames(
-          'absolute left-0 right-0 w-screen overflow-hidden top-20',
-          'lg:relative lg:overflow-visible lg:w-2/3 lg:top-0'
+          'absolute top-20 right-0 left-0 w-screen overflow-hidden',
+          'lg:relative lg:top-0 lg:w-2/3 lg:overflow-visible'
         )}
       >
         <div
           className={classNames(
-            'flex flex-col items-start justify-center text-sm text-primary',
-            'lg:text-base lg:flex-row lg:items-center lg:justify-end lg:font-bold lg:text-gray',
+            'flex flex-col items-start justify-center text-primary text-sm',
+            'lg:flex-row lg:items-center lg:justify-end lg:font-bold lg:text-base lg:text-gray',
             'transform transition-all duration-300',
-            isExpanded
-              ? 'h-full translate-y-0'
-              : 'h-0 -translate-y-full lg:translate-y-0'
+            isExpanded ? 'h-full translate-y-0' : '-translate-y-full h-0 lg:translate-y-0'
           )}
         >
           {Object.entries(NAVIGATION.NAV_ITEMS).map(([key, value], index) => {
             return (
               <NavItem
-                key={`${key}${index}`}
+                key={`${key}${value.href}`}
                 navItem={value}
                 title={key}
                 isExpanded={isExpanded}

@@ -1,4 +1,4 @@
-import { filterXSS, IFilterXSSOptions } from 'xss';
+import { filterXSS, type IFilterXSSOptions } from 'xss';
 
 // https://github.com/leizongmin/js-xss
 const options: IFilterXSSOptions = {
@@ -10,15 +10,7 @@ const options: IFilterXSSOptions = {
     area: ['shape', 'coords', 'href', 'alt'],
     article: [],
     aside: [],
-    audio: [
-      'autoplay',
-      'controls',
-      'crossorigin',
-      'loop',
-      'muted',
-      'preload',
-      'src',
-    ],
+    audio: ['autoplay', 'controls', 'crossorigin', 'loop', 'muted', 'preload', 'src'],
     b: [],
     bdi: ['dir'],
     bdo: ['dir'],

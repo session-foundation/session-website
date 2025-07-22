@@ -1,28 +1,23 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
+
+import classNames from 'classnames';
+import Image from 'next/legacy/image';
+import Link from 'next/link';
+import type { ReactElement } from 'react';
 import { ReactComponent as AndroidSVG } from '@/assets/svgs/android_robot_head.svg';
 import { ReactComponent as AppleSVG } from '@/assets/svgs/apple.svg';
-import Container from '@/components/Container';
 import { ReactComponent as FDroidSVG } from '@/assets/svgs/fdroid-logo.svg';
-import Image from 'next/legacy/image';
-import Layout from '@/components/ui/Layout';
-import Link from 'next/link';
 import { ReactComponent as LinuxSVG } from '@/assets/svgs/linux.svg';
-import METADATA from '@/constants/metadata';
-import { ReactElement } from 'react';
 import { ReactComponent as WindowsSVG } from '@/assets/svgs/windows.svg';
-import classNames from 'classnames';
+import Container from '@/components/Container';
+import Layout from '@/components/ui/Layout';
+import METADATA from '@/constants/metadata';
 
 export default function Download(): ReactElement {
-  const panelClasses = classNames(
-    'mx-auto text-center',
-    'lg:w-1/2 lg:flex lg:flex-col lg:pb-16'
-  );
+  const panelClasses = classNames('mx-auto text-center', 'lg:w-1/2 lg:flex lg:flex-col lg:pb-16');
   const headingClasses = 'text-5xl font-semibold';
   const subtitleClasses = classNames('text-2xl', 'lg:text-3xl');
-  const linkContainerClasses = classNames(
-    'grid grid-cols-2 gap-2 mb-4 mx-auto',
-    'lg:w-max'
-  );
+  const linkContainerClasses = classNames('grid grid-cols-2 gap-2 mb-4 mx-auto', 'lg:w-max');
   const downloadContainerClasses = classNames('pb-2 lg:py-3 z-10');
   const downloadLinkClasses = classNames(
     'text-lg font-bold rounded-3xl py-2',
@@ -51,8 +46,8 @@ export default function Download(): ReactElement {
     <Layout title="Download" metadata={METADATA.DOWNLOAD_PAGE}>
       <section
         className={classNames(
-          'bg-gray-dark pb-16 border-b border-primary border-dashed',
-          'lg:bg-unset lg:pb-0 lg:border-b-0'
+          'border-primary border-b border-dashed bg-gray-dark pb-16',
+          'lg:border-b-0 lg:bg-unset lg:pb-0'
         )}
       >
         <Container
@@ -72,15 +67,15 @@ export default function Download(): ReactElement {
           <div
             className={classNames(
               panelClasses,
-              'bg-primary text-gray-dark min-h-screen',
-              'lg:mr-2 lg:justify-between lg:items-end lg:min-h-full'
+              'min-h-screen bg-primary text-gray-dark',
+              'lg:mr-2 lg:min-h-full lg:items-end lg:justify-between'
             )}
           >
             <div
               className={classNames(
-                'lg:w-3/4 lg:mr-8 lg:flex lg:flex-col lg:justify-end',
+                'lg:mr-8 lg:flex lg:w-3/4 lg:flex-col lg:justify-end',
                 'xl:w-7/12',
-                '2xl:w-1/2 2xl:mr-24'
+                '2xl:mr-24 2xl:w-1/2'
               )}
             >
               <p
@@ -98,9 +93,9 @@ export default function Download(): ReactElement {
               <h2 className={classNames(headingClasses, 'my-4')}>Mobile</h2>
               <div
                 className={classNames(
-                  '-mt-2 -ml-1 px-16 mb-3',
+                  '-mt-2 -ml-1 mb-3 px-16',
                   'md:-mt-5 md:px-48',
-                  'lg:mt-0 lg:px-0 lg:w-2/3 lg:mx-auto'
+                  'lg:mx-auto lg:mt-0 lg:w-2/3 lg:px-0'
                 )}
               >
                 <Image
@@ -123,11 +118,7 @@ export default function Download(): ReactElement {
                     )}
                   >
                     <AndroidSVG
-                      className={classNames(
-                        downloadSVGClasses,
-                        'w-6 h-6',
-                        'md:w-8 md:h-8'
-                      )}
+                      className={classNames(downloadSVGClasses, 'h-6 w-6', 'md:h-8 md:w-8')}
                     />
                     <span>Android</span>
                   </Link>
@@ -141,11 +132,7 @@ export default function Download(): ReactElement {
                     )}
                   >
                     <AndroidSVG
-                      className={classNames(
-                        downloadSVGClasses,
-                        'w-6 h-6',
-                        'md:w-8 md:h-8'
-                      )}
+                      className={classNames(downloadSVGClasses, 'h-6 w-6', 'md:h-8 md:w-8')}
                     />
                     <span>APK</span>
                   </Link>
@@ -159,11 +146,7 @@ export default function Download(): ReactElement {
                     )}
                   >
                     <FDroidSVG
-                      className={classNames(
-                        downloadSVGClasses,
-                        'w-5 h-5',
-                        'md:w-7 md:h-7'
-                      )}
+                      className={classNames(downloadSVGClasses, 'h-5 w-5', 'md:h-7 md:w-7')}
                     />
                     <span>F-Droid</span>
                   </Link>
@@ -177,19 +160,13 @@ export default function Download(): ReactElement {
                     )}
                   >
                     <AppleSVG
-                      className={classNames(
-                        downloadSVGClasses,
-                        'w-4 h-4',
-                        'md:w-6 md:h-6'
-                      )}
+                      className={classNames(downloadSVGClasses, 'h-4 w-4', 'md:h-6 md:w-6')}
                     />
                     <span>iPhone</span>
                   </Link>
                 </div>
               </div>
-              <div
-                className={classNames(noteContainerClasses, 'pb-12', 'lg:pb-0')}
-              >
+              <div className={classNames(noteContainerClasses, 'pb-12', 'lg:pb-0')}>
                 <p className={classNames(notesClasses)}>
                   Verify Signatures:
                   <a
@@ -247,35 +224,27 @@ export default function Download(): ReactElement {
             className={classNames(
               panelClasses,
               'bg-gray-dark text-white',
-              'lg:ml-2 lg:justify-between lg:items-start'
+              'lg:ml-2 lg:items-start lg:justify-between'
             )}
           >
             <div
               className={classNames(
-                'lg:w-3/4 lg:ml-10 lg:h-full lg:flex lg:flex-col lg:justify-end',
+                'lg:ml-10 lg:flex lg:h-full lg:w-3/4 lg:flex-col lg:justify-end',
                 'xl:w-7/12',
-                '2xl:w-1/2 2xl:ml-24'
+                '2xl:ml-24 2xl:w-1/2'
               )}
             >
               <p
-                className={classNames(
-                  subtitleClasses,
-                  'pt-12',
-                  'lg:pt-20',
-                  'xl:pt-8',
-                  '2xl:pt-12'
-                )}
+                className={classNames(subtitleClasses, 'pt-12', 'lg:pt-20', 'xl:pt-8', '2xl:pt-12')}
               >
                 Download Session for
               </p>
-              <h2 className={classNames(headingClasses, 'mt-4', 'lg:mb-auto')}>
-                Desktop
-              </h2>
+              <h2 className={classNames(headingClasses, 'mt-4', 'lg:mb-auto')}>Desktop</h2>
               <div
                 className={classNames(
-                  'px-3 -ml-1 mt-8 mb-12 z-0',
-                  'md:px-16 md:-ml-4 md:mb-20',
-                  'lg:px-0 lg:-mt-4 lg:ml-0 lg:-mr-6 lg:mb-auto',
+                  '-ml-1 z-0 mt-8 mb-12 px-3',
+                  'md:-ml-4 md:mb-20 md:px-16',
+                  'lg:-mt-4 lg:-mr-6 lg:mb-auto lg:ml-0 lg:px-0',
                   'xl:-mt-8 xl:-mr-8'
                 )}
               >
@@ -289,13 +258,7 @@ export default function Download(): ReactElement {
                   loading="eager"
                 />
               </div>
-              <div
-                className={classNames(
-                  linkContainerClasses,
-                  'md:-mt-8',
-                  'lg:mt-0'
-                )}
-              >
+              <div className={classNames(linkContainerClasses, 'md:-mt-8', 'lg:mt-0')}>
                 <div className={classNames(downloadContainerClasses)}>
                   <a
                     className={classNames(
@@ -305,17 +268,11 @@ export default function Download(): ReactElement {
                     href="/mac"
                   >
                     <AppleSVG
-                      className={classNames(
-                        downloadSVGClasses,
-                        'w-4 h-4',
-                        'md:w-6 md:h-6'
-                      )}
+                      className={classNames(downloadSVGClasses, 'h-4 w-4', 'md:h-6 md:w-6')}
                     />
                     <span>
                       Mac{' '}
-                      <span className={classNames('sm:text-xs md:text-base')}>
-                        (Apple Silicon)
-                      </span>
+                      <span className={classNames('sm:text-xs md:text-base')}>(Apple Silicon)</span>
                     </span>
                   </a>
                 </div>
@@ -328,17 +285,10 @@ export default function Download(): ReactElement {
                     href="/mac-x64"
                   >
                     <AppleSVG
-                      className={classNames(
-                        downloadSVGClasses,
-                        'w-4 h-4',
-                        'md:w-6 md:h-6'
-                      )}
+                      className={classNames(downloadSVGClasses, 'h-4 w-4', 'md:h-6 md:w-6')}
                     />
                     <span>
-                      Mac{' '}
-                      <span className={classNames('sm:text-xs md:text-base')}>
-                        (Intel)
-                      </span>
+                      Mac <span className={classNames('sm:text-xs md:text-base')}>(Intel)</span>
                     </span>
                   </a>
                 </div>
@@ -351,11 +301,7 @@ export default function Download(): ReactElement {
                     href="/windows"
                   >
                     <WindowsSVG
-                      className={classNames(
-                        downloadSVGClasses,
-                        'w-4 h-4',
-                        'md:w-6 md:h-6'
-                      )}
+                      className={classNames(downloadSVGClasses, 'h-4 w-4', 'md:h-6 md:w-6')}
                     />
                     <span>Windows</span>
                   </a>
@@ -369,23 +315,13 @@ export default function Download(): ReactElement {
                     href="/linux"
                   >
                     <LinuxSVG
-                      className={classNames(
-                        downloadSVGClasses,
-                        'w-5 h-5',
-                        'md:w-7 md:h-7'
-                      )}
+                      className={classNames(downloadSVGClasses, 'h-5 w-5', 'md:h-7 md:w-7')}
                     />
                     <span>Linux</span>
                   </a>
                 </div>
               </div>
-              <div
-                className={classNames(
-                  noteContainerClasses,
-                  'md:pb-16',
-                  'lg:pb-0'
-                )}
-              >
+              <div className={classNames(noteContainerClasses, 'md:pb-16', 'lg:pb-0')}>
                 <p className={classNames(notesClasses)}>
                   Verify Signatures:
                   <a

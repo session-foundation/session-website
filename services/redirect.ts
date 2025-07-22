@@ -1,5 +1,5 @@
-import { CMS } from '@/constants';
 import config from 'next.config';
+import { CMS } from '@/constants';
 
 // https://nextjs.org/docs/api-reference/next.config.js/redirects
 export interface IRedirection {
@@ -36,7 +36,7 @@ async function fetchLatestVersion(repo: string) {
       return fallbackVersion;
     }
 
-    const foundVersion = data['tag_name'].split('v')[1];
+    const foundVersion = data.tag_name.split('v')[1];
 
     if (foundVersion && foundVersion !== fallbackVersion) {
       fallbackVersion = foundVersion;

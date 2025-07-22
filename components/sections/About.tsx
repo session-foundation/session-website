@@ -1,15 +1,9 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import { ReactElement, useEffect, useRef, useState } from 'react';
-
+import classNames from 'classnames';
+import { type ReactElement, useEffect, useRef, useState } from 'react';
 import Container from '@/components/Container';
 import Headline from '@/components/ui/Headline';
-import classNames from 'classnames';
-// import dynamic from 'next/dynamic';
-import redact from '@/utils/redact';
 import { useScreen } from '@/contexts/screen';
-
-// optimise build sizes by loading dynamically
-// const DynamicVideoPlayer = dynamic(() => import('@/components/VideoPlayer'));
+import redact from '@/utils/redact';
 
 export default function About(): ReactElement {
   const textRef = useRef<HTMLDivElement>(null);
@@ -20,65 +14,19 @@ export default function About(): ReactElement {
     animate: true,
     classes: 'p-1',
   };
-  const [redactedClasses, setRedactedClasses] = useState(
-    redact(redactedOptions)
-  );
-  // const videoProps: VideoPlayerProps = {
-  //   hasQualityLevels: true,
-  //   shape: 'square',
-  //   poster: '/assets/videos/this-is-session/thumbnail.webp',
-  //   sources: [
-  //     {
-  //       src: '/assets/videos/this-is-session/1080p.mp4',
-  //       type: 'video/mp4',
-  //       label: '1080p',
-  //     },
-  //     {
-  //       src: '/assets/videos/this-is-session/720p.mp4',
-  //       type: 'video/mp4',
-  //       label: '720p',
-  //       selected: true,
-  //     },
-  //     {
-  //       src: '/assets/videos/this-is-session/480p.mp4',
-  //       type: 'video/mp4',
-  //       label: '480p',
-  //     },
-  //     {
-  //       src: '/assets/videos/this-is-session/360p.mp4',
-  //       type: 'video/mp4',
-  //       label: '360p',
-  //     },
-  //     {
-  //       src: '/assets/videos/this-is-session/240p.mp4',
-  //       type: 'video/mp4',
-  //       label: '240p',
-  //     },
-  //     {
-  //       src: '/assets/videos/this-is-session/144p.mp4',
-  //       type: 'video/mp4',
-  //       label: '144p',
-  //     },
-  //   ],
-  // };
+  const [redactedClasses, setRedactedClasses] = useState(redact(redactedOptions));
 
   useEffect(() => {
     if (isSmall || isMedium) {
       const onScroll = () => {
         const scrollEffectStart =
-          textRef.current?.offsetTop! - textRef.current?.scrollHeight! - 28;
-        const scrollEffectStop = textRef.current?.offsetTop! - 28;
+          (textRef.current?.offsetTop ?? 0) - (textRef.current?.scrollHeight ?? 0) - 28;
+        const scrollEffectStop = (textRef.current?.offsetTop ?? 0) - 28;
 
-        if (
-          window.scrollY >= scrollEffectStart &&
-          window.scrollY < scrollEffectStop
-        ) {
+        if (window.scrollY >= scrollEffectStart && window.scrollY < scrollEffectStop) {
           setRedactedClasses(redact({ ...redactedOptions, disabled: true }));
         }
-        if (
-          window.scrollY < scrollEffectStart ||
-          window.scrollY >= scrollEffectStop
-        ) {
+        if (window.scrollY < scrollEffectStart || window.scrollY >= scrollEffectStop) {
           setRedactedClasses(redact(redactedOptions));
         }
       };
@@ -89,7 +37,7 @@ export default function About(): ReactElement {
     }
   }, [isSmall, isMedium]);
   return (
-    <section className="text-white bg-gray-dark">
+    <section className="bg-gray-dark text-white">
       <Headline
         classes={classNames('text-lg font-bold pt-16', 'lg:pt-20')}
         containerWidths={{
@@ -116,23 +64,21 @@ export default function About(): ReactElement {
       >
         <p
           className={classNames(
-            'group text-white text-lg font-light leading-10 mt-8 mb-20',
-            'md:text-3xl md:leading-relaxed md:mt-0 md:mb-20 md:max-w-xl',
-            'lg:text-4xl lg:max-w-3xl lg:leading-relaxed',
+            'group mt-8 mb-20 font-light text-lg text-white leading-10',
+            'md:mt-0 md:mb-20 md:max-w-xl md:text-3xl md:leading-relaxed',
+            'lg:max-w-3xl lg:text-4xl lg:leading-relaxed',
             'xl:mb-8',
-            '2xl:mb-20 2xl:max-w-3xl 2xl:mt-24',
-            '3xl:mb-16 3xl:max-w-3xl 3xl:mt-40'
+            '2xl:mt-24 2xl:mb-20 2xl:max-w-3xl',
+            '3xl:mt-40 3xl:mb-16 3xl:max-w-3xl'
           )}
           ref={textRef}
         >
-          Session is an <span className={redactedClasses}>end-to-end</span>{' '}
-          encrypted messenger that protects your{' '}
-          <span className={redactedClasses}>personal</span> data. Take back
-          control with a messaging app designed, built, and operated by a{' '}
+          Session is an <span className={redactedClasses}>end-to-end</span> encrypted messenger that
+          protects your <span className={redactedClasses}>personal</span> data. Take back control
+          with a messaging app designed, built, and operated by a{' '}
           <span className={redactedClasses}>global</span> community of{' '}
           <span className={redactedClasses}>privacy</span> experts.
         </p>
-        {/* <DynamicVideoPlayer {...videoProps} /> */}
       </Container>
     </section>
   );

@@ -1,9 +1,9 @@
-import METADATA, { IMetadata } from '@/constants/metadata';
-
+/** biome-ignore-all lint/security/noDangerouslySetInnerHtml: Used as expected */
 import Head from 'next/head';
-import { ReactElement } from 'react';
-import { isLocal } from '@/utils/links';
 import { useRouter } from 'next/router';
+import type { ReactElement } from 'react';
+import METADATA, { type IMetadata } from '@/constants/metadata';
+import { isLocal } from '@/utils/links';
 
 interface Props {
   title?: string;
@@ -15,16 +15,13 @@ export default function CustomHead(props: Props): ReactElement {
   const router = useRouter();
   const { title, metadata, structuredData } = props;
   const pageTitle =
-    title && title.length > 0
-      ? `${title} - Session Private Messenger`
-      : METADATA.TITLE;
+    title && title.length > 0 ? `${title} - Session Private Messenger` : METADATA.TITLE;
   const pageUrl = `${METADATA.HOST_URL}${router.asPath}`;
   const imageALT = metadata?.OG_IMAGE?.ALT ?? METADATA.OG_IMAGE.ALT;
   let imageWidth = metadata?.OG_IMAGE?.WIDTH ?? METADATA.OG_IMAGE.WIDTH;
   let imageHeight = metadata?.OG_IMAGE?.HEIGHT ?? METADATA.OG_IMAGE.HEIGHT;
   let imageUrl = (() => {
-    if (!metadata?.OG_IMAGE?.URL)
-      return `${METADATA.HOST_URL}${METADATA.OG_IMAGE.URL}`;
+    if (!metadata?.OG_IMAGE?.URL) return `${METADATA.HOST_URL}${METADATA.OG_IMAGE.URL}`;
     if (metadata?.OG_IMAGE?.URL && isLocal(metadata.OG_IMAGE.URL)) {
       return `${METADATA.HOST_URL}${metadata.OG_IMAGE.URL}`;
     } else {
@@ -41,19 +38,13 @@ export default function CustomHead(props: Props): ReactElement {
 
   const tags = metadata?.TAGS ? metadata?.TAGS : METADATA.TAGS;
   const renderTags = (() => {
-    const keywords = (
-      <meta key="keywords" name="keywords" content={tags.join(' ')} />
-    );
+    const keywords = <meta key="keywords" name="keywords" content={tags.join(' ')} />;
     if (metadata?.TYPE !== 'article') return keywords;
     return (
       <>
-        {tags.map((tag, index) => {
+        {tags.map((tag) => {
           return (
-            <meta
-              key={`article:tag-${pageUrl}-${index}`}
-              property="article:tag"
-              content={tag}
-            />
+            <meta key={`article:tag-${pageUrl}-${tag}`} property="article:tag" content={tag} />
           );
         })}
         <meta
@@ -139,44 +130,20 @@ export default function CustomHead(props: Props): ReactElement {
       />
       <meta key="og:url" property="og:url" content={pageUrl} />
       <meta key="og:title" property="og:title" content={pageTitle} />
-      <meta
-        key="og:type"
-        property="og:type"
-        content={metadata?.TYPE ?? METADATA.OG_TYPE}
-      />
+      <meta key="og:type" property="og:type" content={metadata?.TYPE ?? METADATA.OG_TYPE} />
       <meta
         key="og:description"
         property="og:description"
         content={metadata?.DESCRIPTION ?? METADATA.DESCRIPTION}
       />
       <meta key="og:image" property="og:image" content={imageUrl} />
-      <meta
-        key="og:image:secure_url"
-        property="og:image:secure_url"
-        content={imageUrl}
-      ></meta>
+      <meta key="og:image:secure_url" property="og:image:secure_url" content={imageUrl}></meta>
       <meta key="og:image:alt" property="og:image:alt" content={imageALT} />
-      <meta
-        key="og:image:width"
-        property="og:image:width"
-        content={String(imageWidth)}
-      />
-      <meta
-        key="og:image:height"
-        property="og:image:height"
-        content={String(imageHeight)}
-      />
+      <meta key="og:image:width" property="og:image:width" content={String(imageWidth)} />
+      <meta key="og:image:height" property="og:image:height" content={String(imageHeight)} />
       <meta key="og:locale" property="og:locale" content={METADATA.LOCALE} />
-      <meta
-        key="og:site_name"
-        property="og:site_name"
-        content={METADATA.SITE_NAME}
-      />
-      <meta
-        key="twitter:card"
-        name="twitter:card"
-        content="summary_large_image"
-      />
+      <meta key="og:site_name" property="og:site_name" content={METADATA.SITE_NAME} />
+      <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
       <meta key="twitter:title" name="twitter:title" content={pageTitle} />
       <meta
         key="twitter:description"
@@ -184,37 +151,17 @@ export default function CustomHead(props: Props): ReactElement {
         content={metadata?.DESCRIPTION ?? METADATA.DESCRIPTION}
       />
       <meta key="twitter:image" name="twitter:image" content={imageUrl} />
-      <meta
-        key="twitter:site"
-        name="twitter:site"
-        content={METADATA.HOST_URL}
-      />
-      <meta
-        key="twitter:creator"
-        name="twitter:creator"
-        content={METADATA.TWITTER_CREATOR}
-      />
-      <meta
-        key="apple-itunes-app"
-        name="apple-itunes-app"
-        content={METADATA.ITUNES_ID}
-      />
+      <meta key="twitter:site" name="twitter:site" content={METADATA.HOST_URL} />
+      <meta key="twitter:creator" name="twitter:creator" content={METADATA.TWITTER_CREATOR} />
+      <meta key="apple-itunes-app" name="apple-itunes-app" content={METADATA.ITUNES_ID} />
       <meta
         key="msapplication-TileColor"
         name="msapplication-TileColor"
         content={METADATA.MSAPPLICATION_TILECOLOR}
       />
-      <meta
-        key="theme-color"
-        name="theme-color"
-        content={METADATA.THEME_COLOR}
-      />
+      <meta key="theme-color" name="theme-color" content={METADATA.THEME_COLOR} />
       {renderTags}
-      <link
-        key="canonical"
-        rel="canonical"
-        href={`${METADATA.HOST_URL}${router.asPath}`}
-      />
+      <link key="canonical" rel="canonical" href={`${METADATA.HOST_URL}${router.asPath}`} />
       <link
         key="image/png32x32"
         rel="icon"
@@ -243,24 +190,9 @@ export default function CustomHead(props: Props): ReactElement {
         color={METADATA.MASK_ICON.COLOR}
       />
       <link key="shortlink" rel="shortlink" href={METADATA.HOST_URL} />
-      <link
-        key="/feed"
-        rel="alternative"
-        type="application/rss+xml"
-        href="/feed"
-      />
-      <link
-        key="/feed/atom"
-        rel="alternative"
-        type="application/atom+xml"
-        href="/feed/atom"
-      />
-      <link
-        key="/feed/json"
-        rel="alternative"
-        type="application/feed+json"
-        href="/feed/json"
-      />
+      <link key="/feed" rel="alternative" type="application/rss+xml" href="/feed" />
+      <link key="/feed/atom" rel="alternative" type="application/atom+xml" href="/feed/atom" />
+      <link key="/feed/json" rel="alternative" type="application/feed+json" href="/feed/json" />
       <link
         rel="preload"
         href="/assets/fonts/PublicSans/PublicSans-VariableFont_wght.ttf"
@@ -278,6 +210,7 @@ export default function CustomHead(props: Props): ReactElement {
       {metadata?.TYPE === 'article' && renderLdJSON}
       {structuredData?.map((data, i) => (
         <script
+          // biome-ignore lint/suspicious/noArrayIndexKey: No consistent key
           key={i}
           type="application/ld+json"
           dangerouslySetInnerHTML={{

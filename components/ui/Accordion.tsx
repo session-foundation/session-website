@@ -1,13 +1,14 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import { ReactElement, useEffect, useRef, useState } from 'react';
+/** biome-ignore-all lint/a11y/useKeyWithClickEvents: TODO: refactor this to be more accessible */
+/** biome-ignore-all lint/a11y/noStaticElementInteractions: TODO: refactor this to be more accessible */
 
-import { ReactComponent as LinkSVG } from '@/assets/svgs/link.svg';
-import { Document } from '@contentful/rich-text-types';
+import type { Document } from '@contentful/rich-text-types';
+import classNames from 'classnames';
 import Link from 'next/link';
+import { type ReactElement, useCallback, useEffect, useRef, useState } from 'react';
+import { ReactComponent as LinkSVG } from '@/assets/svgs/link.svg';
 import { ReactComponent as MinusSVG } from '@/assets/svgs/minus.svg';
 import { ReactComponent as PlusSVG } from '@/assets/svgs/plus.svg';
 import RichBody from '@/components/RichBody';
-import classNames from 'classnames';
 
 interface Props {
   id: string;
@@ -19,9 +20,7 @@ interface Props {
 
 const handleNewHeight = (e: Event, container: HTMLElement, id: string) => {
   const oldHeight = Number(container?.style.height.slice(0, -2));
-  if (
-    document.querySelector(`#${id}container .showExternalVideoButton`) !== null
-  ) {
+  if (document.querySelector(`#${id}container .showExternalVideoButton`) !== null) {
     const target = e.currentTarget as HTMLButtonElement;
     // adding the height of the video (500|240) - the height of the disappearing button's component (185.5) = 314.5|54.5
     const isYoutube = target.getAttribute('data-video-site') === 'YouTube';
@@ -36,32 +35,30 @@ export default function Accordion(props: Props): ReactElement {
   const [height, setHeight] = useState(`${content?.current?.scrollHeight}px`);
   const [loaded, setLoaded] = useState(false);
 
-  const handleExpand = () => {
+  const handleExpand = useCallback(() => {
     setIsExpanded(!isExpanded);
     setHeight(isExpanded ? '0px' : `${content?.current?.scrollHeight}px`);
-  };
+  }, [isExpanded]);
   const svgClasses = classNames('w-3 h-3 fill-current mb-1 mr-2');
 
   useEffect(() => {
-    const buttons = window?.document.querySelectorAll(
-      '.showExternalVideoButton'
-    );
-    const container = window?.document.getElementById(id + 'container')!;
+    const buttons = window?.document.querySelectorAll('.showExternalVideoButton');
+    const container = window?.document.getElementById(`${id}container`);
+
+    if (!container) {
+      return;
+    }
 
     buttons.forEach((button) => {
-      button?.addEventListener('click', (e: Event) =>
-        handleNewHeight(e, container, id)
-      );
+      button?.addEventListener('click', (e: Event) => handleNewHeight(e, container, id));
     });
 
     return () => {
       buttons.forEach((button) => {
-        button?.removeEventListener('click', (e: Event) =>
-          handleNewHeight(e, container, id)
-        );
+        button?.removeEventListener('click', (e: Event) => handleNewHeight(e, container, id));
       });
     };
-  }, []);
+  }, [id]);
 
   useEffect(() => {
     if (!expand) {
@@ -70,59 +67,39 @@ export default function Accordion(props: Props): ReactElement {
       setHeight(`${content?.current?.scrollHeight}px`);
     }
     setLoaded(true);
-  }, []);
+  }, [expand, handleExpand]);
 
   useEffect(() => {
     if (loaded && expand) {
       handleExpand();
     }
-  }, [expand]);
+  }, [expand, handleExpand, loaded]);
 
   return (
     <div
       id={id}
-      className={classNames(
-        'border-l border-r border-gray-300 text-sm',
-        'first:border-t',
-        classes
-      )}
+      className={classNames('border-gray-300 border-r border-l text-sm', 'first:border-t', classes)}
     >
       <div
         className={classNames(
-          'py-2 px-4 font-bold border-gray-300 border-b',
+          'border-gray-300 border-b px-4 py-2 font-bold',
           'lg:text-base',
           'transition-colors duration-700 ease-in-out',
-          loaded && isExpanded
-            ? 'bg-gray-dark text-primary'
-            : 'bg-gray-100 text-gray-dark'
+          loaded && isExpanded ? 'bg-gray-dark text-primary' : 'bg-gray-100 text-gray-dark'
         )}
         onClick={handleExpand}
       >
         {loaded && (
           <>
-            <MinusSVG
-              className={classNames(
-                svgClasses,
-                isExpanded ? 'inline' : 'hidden'
-              )}
-            />
-            <PlusSVG
-              className={classNames(
-                svgClasses,
-                isExpanded ? 'hidden' : 'inline'
-              )}
-            />
+            <MinusSVG className={classNames(svgClasses, isExpanded ? 'inline' : 'hidden')} />
+            <PlusSVG className={classNames(svgClasses, isExpanded ? 'hidden' : 'inline')} />
           </>
         )}
         {question}
-        <Link
-          href={`#${id}`}
-          title={`Direct link to "${question}"`}
-          className="focus:outline-none"
-        >
+        <Link href={`#${id}`} title={`Direct link to "${question}"`} className="focus:outline-none">
           <LinkSVG
             className={classNames(
-              'inline w-4 h-4 fill-current mb-1 mr-2 mt-0.5 ml-2',
+              'mt-0.5 mr-2 mb-1 ml-2 inline h-4 w-4 fill-current',
               'transition-opacity duration-500',
               'hover:opacity-100',
               loaded && isExpanded ? 'opacity-100' : 'opacity-20'
@@ -132,18 +109,15 @@ export default function Accordion(props: Props): ReactElement {
       </div>
       <div
         className={classNames(
-          'leading-loose px-4 overflow-hidden',
-          'transition-all ease-in-out duration-500',
+          'overflow-hidden px-4 leading-loose',
+          'transition-all duration-500 ease-in-out',
           isExpanded && 'border-gray-300 border-b'
         )}
         ref={content}
         style={{ height: height }}
-        id={id + 'container'}
+        id={`${id}container`}
       >
-        <RichBody
-          body={answer}
-          classes={classNames('text-sm text-black py-2', 'lg:text-base')}
-        />
+        <RichBody body={answer} classes={classNames('text-sm text-black py-2', 'lg:text-base')} />
       </div>
     </div>
   );

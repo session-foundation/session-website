@@ -1,11 +1,10 @@
-import { ReactElement } from 'react';
 import classNames from 'classnames';
-
-import { IPage } from '@/types/cms';
+import type { ReactElement } from 'react';
 import Container from '@/components/Container';
-import Layout from '@/components/ui/Layout';
-import Headline from '@/components/ui/Headline';
 import RichBody from '@/components/RichBody';
+import Headline from '@/components/ui/Headline';
+import Layout from '@/components/ui/Layout';
+import type { IPage } from '@/types/cms';
 
 interface Props {
   page: IPage;
@@ -20,10 +19,7 @@ export default function RichPage(props: Props): ReactElement {
         {page?.headline && (
           <Headline
             color="gray-dark"
-            classes={classNames(
-              'font-mono font-medium pt-16',
-              'lg:pt-4 lg:pb-10'
-            )}
+            classes={classNames('font-mono font-medium pt-16', 'lg:pt-4 lg:pb-10')}
             containerWidths={{
               small: '10rem',
               medium: '34rem',
@@ -34,7 +30,7 @@ export default function RichPage(props: Props): ReactElement {
           </Headline>
         )}
         <Container classes={classNames('pt-0 px-4 pb-24', 'lg:pb-32')}>
-          <div className={'lg:max-w-screen-md lg:mx-auto'}>
+          <div className={'lg:mx-auto lg:max-w-screen-md'}>
             <RichBody
               body={page?.body}
               headingClasses={'text-gray font-medium mt-6'}

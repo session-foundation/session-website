@@ -1,11 +1,6 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { CMS } from '@/constants';
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.query.secret !== process.env.STAGING_SECRET) {
     res.status(404).json({ message: 'Invalid secret' });
   }

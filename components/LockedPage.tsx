@@ -1,5 +1,5 @@
-import Container from '@/components/Container';
 import classNames from 'classnames';
+import Container from '@/components/Container';
 
 export default function LockedPage() {
   return (
@@ -17,7 +17,7 @@ export default function LockedPage() {
           'md:flex md:flex-col md:justify-center md:items-center'
         )}
       >
-        <h1 className={classNames('text-primary-dark text-5xl font-bold mb-8')}>
+        <h1 className={classNames('mb-8 font-bold text-5xl text-primary-dark')}>
           You don&apos;t have access to this page.
         </h1>
       </Container>

@@ -1,27 +1,21 @@
-import { BANNER } from '@/constants';
-import { ReactElement } from 'react';
 import classNames from 'classnames';
-import { useScreen } from '@/contexts/screen';
 import Link from 'next/link';
+import type { ReactElement } from 'react';
 import Button from '@/components/ui/Button';
+import { BANNER } from '@/constants';
+import { useScreen } from '@/contexts/screen';
 
 export default function Banner(): ReactElement {
   const { isSmall } = useScreen();
   return (
     <div
       className={classNames(
-        'bg-gray-dark text-white py-4 px-8 flex flex-col justify-center items-center leading-relaxed align-middle gap-4',
+        'flex flex-col items-center justify-center gap-4 bg-gray-dark px-8 py-4 align-middle text-white leading-relaxed',
         'lg:flex-row',
         '2xl:items-center'
       )}
     >
-      <span
-        className={classNames(
-          'text-center text-sm',
-          'md:text-base',
-          'lg:text-left'
-        )}
-      >
+      <span className={classNames('text-center text-sm', 'md:text-base', 'lg:text-left')}>
         {isSmall ? BANNER.TEXT.MOBILE : BANNER.TEXT.DESKTOP}
       </span>
       <Link
@@ -31,11 +25,7 @@ export default function Banner(): ReactElement {
         title={BANNER.ARIA}
         aria-label={BANNER.ARIA}
       >
-        <Button
-          fontWeight="bold"
-          size={isSmall ? 'small' : 'medium'}
-          classes="whitespace-nowrap"
-        >
+        <Button fontWeight="bold" size={isSmall ? 'small' : 'medium'} classes="whitespace-nowrap">
           Learn more
         </Button>
       </Link>

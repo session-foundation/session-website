@@ -1,23 +1,14 @@
-import {
-  BLOCKS,
-  Document,
-  type Inline,
-  INLINES,
-  MARKS,
-} from '@contentful/rich-text-types';
-/* eslint-disable react/display-name */
-import { Children, ReactElement, cloneElement } from 'react';
-import {
-  Options,
-  documentToReactComponents,
-} from '@contentful/rich-text-react-renderer';
-import { hasLocalID, isLocal, parseUrl } from '@/utils/links';
+import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer';
+import { documentToReactComponents, type Options } from '@contentful/rich-text-react-renderer';
+import { BLOCKS, type Document, INLINES, type Inline, MARKS } from '@contentful/rich-text-types';
+import classNames from 'classnames';
 import { direction } from 'direction';
 import Link from 'next/link';
+/* eslint-disable react/display-name */
+import { Children, cloneElement, type ReactElement } from 'react';
 import SHORTCODES from '@/constants/shortcodes';
-import classNames from 'classnames';
-import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer';
 import { renderEmbeddedEntry } from '@/services/render';
+import { hasLocalID, isLocal, parseUrl } from '@/utils/links';
 import { renderShortcode } from '@/utils/shortcodes';
 
 interface Props {
@@ -37,8 +28,8 @@ const getTextDirectionFromNode = (children: NodeWithTextDirection[]) => {
   return typeof children[0] === 'object'
     ? recursiveTextDirectionFromNode(children[0])
     : children[0] === '' && typeof children[1] === 'object'
-    ? recursiveTextDirectionFromNode(children[1])
-    : getDirection(children[0]);
+      ? recursiveTextDirectionFromNode(children[1])
+      : getDirection(children[0]);
 };
 
 const recursiveTextDirectionFromNode = (obj: NodeWithTextDirection) => {
@@ -80,10 +71,7 @@ export default function RichBody(props: Props): ReactElement {
         </span>
       ),
       [MARKS.CODE]: (text: any) => (
-        <code
-          dir={getDirection(text)}
-          className={classNames('font-mono tracking-wide')}
-        >
+        <code dir={getDirection(text)} className={classNames('font-mono tracking-wide')}>
           {text}
         </code>
       ),
@@ -99,11 +87,7 @@ export default function RichBody(props: Props): ReactElement {
               dir={getDirection(children)}
               aria-label={'Read more about this link'}
               className={classNames('text-primary-dark')}
-              target={
-                isLocal(node.data.uri) || url !== node.data.uri
-                  ? '_self'
-                  : '_blank'
-              }
+              target={isLocal(node.data.uri) || url !== node.data.uri ? '_self' : '_blank'}
               rel="noreferrer"
             >
               {children}
@@ -111,7 +95,7 @@ export default function RichBody(props: Props): ReactElement {
           </span>
         );
       },
-      [INLINES.EMBEDDED_ENTRY]: (node, children) => {
+      [INLINES.EMBEDDED_ENTRY]: (node, _children) => {
         return renderEmbeddedEntry(
           { node: node as Inline, isInline: true },
           getDirection(node.data.target.fields.caption)
@@ -130,7 +114,7 @@ export default function RichBody(props: Props): ReactElement {
             <span
               style={{ display: 'block' }}
               dir={getDirection(children)}
-              className={classNames('leading-relaxed pb-6')}
+              className={classNames('pb-6 leading-relaxed')}
             >
               {children}
             </span>
@@ -144,7 +128,7 @@ export default function RichBody(props: Props): ReactElement {
           return (
             <p
               dir={getTextDirectionFromNode(children)}
-              className={classNames('leading-relaxed pb-6')}
+              className={classNames('pb-6 leading-relaxed')}
             >
               {children}
             </p>
@@ -155,11 +139,7 @@ export default function RichBody(props: Props): ReactElement {
         <h1
           dir={getDirection(children)}
           id={hasLocalID(node as Inline)}
-          className={classNames(
-            'text-3xl leading-snug mb-5',
-            'lg:text-5xl',
-            headingClasses
-          )}
+          className={classNames('mb-5 text-3xl leading-snug', 'lg:text-5xl', headingClasses)}
         >
           {children}
         </h1>
@@ -168,11 +148,7 @@ export default function RichBody(props: Props): ReactElement {
         <h2
           dir={getDirection(children)}
           id={hasLocalID(node as Inline)}
-          className={classNames(
-            'text-2xl leading-snug mb-5',
-            'lg:text-3xl',
-            headingClasses
-          )}
+          className={classNames('mb-5 text-2xl leading-snug', 'lg:text-3xl', headingClasses)}
         >
           {children}
         </h2>
@@ -181,11 +157,7 @@ export default function RichBody(props: Props): ReactElement {
         <h3
           dir={getDirection(children)}
           id={hasLocalID(node as Inline)}
-          className={classNames(
-            'text-xl leading-snug mb-2',
-            'lg:text-2xl',
-            headingClasses
-          )}
+          className={classNames('mb-2 text-xl leading-snug', 'lg:text-2xl', headingClasses)}
         >
           {children}
         </h3>
@@ -194,19 +166,15 @@ export default function RichBody(props: Props): ReactElement {
         <h4
           dir={getDirection(children)}
           id={hasLocalID(node as Inline)}
-          className={classNames(
-            'text-md leading-snug mb-2',
-            'lg:text-xl',
-            headingClasses
-          )}
+          className={classNames('mb-2 text-md leading-snug', 'lg:text-xl', headingClasses)}
         >
           {children}
         </h4>
       ),
-      [BLOCKS.HR]: (node, children) => (
-        <hr className={classNames('border-gray-300 w-24 mx-auto pb-6')} />
+      [BLOCKS.HR]: (_node, _children) => (
+        <hr className={classNames('mx-auto w-24 border-gray-300 pb-6')} />
       ),
-      [BLOCKS.OL_LIST]: (node, children: any) => {
+      [BLOCKS.OL_LIST]: (_node, children: any) => {
         const textDirection =
           typeof children[0] === 'object'
             ? recursiveTextDirectionFromNode(children[0])
@@ -215,16 +183,13 @@ export default function RichBody(props: Props): ReactElement {
         return (
           <ol
             dir={textDirection}
-            className={classNames(
-              'pb-5 list-decimal',
-              textDirection === 'rtl' ? 'mr-10' : 'ml-10'
-            )}
+            className={classNames('list-decimal pb-5', textDirection === 'rtl' ? 'mr-10' : 'ml-10')}
           >
             {children}
           </ol>
         );
       },
-      [BLOCKS.UL_LIST]: (node, children: any) => {
+      [BLOCKS.UL_LIST]: (_node, children: any) => {
         const textDirection =
           typeof children[0] === 'object'
             ? recursiveTextDirectionFromNode(children[0])
@@ -232,16 +197,13 @@ export default function RichBody(props: Props): ReactElement {
         return (
           <ul
             dir={textDirection}
-            className={classNames(
-              'pb-5 list-disc',
-              textDirection === 'rtl' ? 'mr-10' : 'ml-10'
-            )}
+            className={classNames('list-disc pb-5', textDirection === 'rtl' ? 'mr-10' : 'ml-10')}
           >
             {children}
           </ul>
         );
       },
-      [BLOCKS.LIST_ITEM]: (node, children: any) => {
+      [BLOCKS.LIST_ITEM]: (_node, children: any) => {
         const renderChildren = Children.map(children, (child: any) => {
           if (child.type === 'p') {
             const newProps = {
@@ -253,35 +215,28 @@ export default function RichBody(props: Props): ReactElement {
           }
         });
 
-        return (
-          <li dir={getTextDirectionFromNode(children)}>{renderChildren}</li>
-        );
+        return <li dir={getTextDirectionFromNode(children)}>{renderChildren}</li>;
       },
-      [BLOCKS.QUOTE]: (node, children: any) => (
+      [BLOCKS.QUOTE]: (_node, children: any) => (
         <div
           dir={getDirection(children)}
-          className={classNames(
-            'border-gray-100 border-l-6 py-6 px-4 mb-6 ml-10 mr-4'
-          )}
+          className={classNames('mr-4 mb-6 ml-10 border-gray-100 border-l-6 px-4 py-6')}
         >
           <blockquote
             dir={getDirection(children)}
-            className={classNames(
-              'text-base text-black italic -mb-6',
-              'lg:text-lg'
-            )}
+            className={classNames('-mb-6 text-base text-black italic', 'lg:text-lg')}
           >
             {children}
           </blockquote>
         </div>
       ),
-      [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
+      [BLOCKS.EMBEDDED_ASSET]: (node, _children) => {
         return renderEmbeddedEntry(
           { node: node as Inline },
           getDirection(node.data.target.fields.caption)
         );
       },
-      [BLOCKS.EMBEDDED_ENTRY]: (node, children) => {
+      [BLOCKS.EMBEDDED_ENTRY]: (node, _children) => {
         return renderEmbeddedEntry(
           { node: node as Inline },
           getDirection(node.data.target.fields.caption)

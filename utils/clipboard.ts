@@ -1,7 +1,4 @@
-export function copyToClipboard(
-  text: string,
-  callback: (value: boolean) => void
-) {
+export function copyToClipboard(text: string, callback: (value: boolean) => void) {
   if (typeof window !== 'undefined') {
     // https://stackoverflow.com/questions/51805395/navigator-clipboard-is-undefined
     if (navigator.clipboard && window.isSecureContext) {
@@ -10,7 +7,7 @@ export function copyToClipboard(
         .then(() => callback(true))
         .catch((e) => alert(e.message));
     } else {
-      let textArea = document.createElement('textarea');
+      const textArea = document.createElement('textarea');
       textArea.value = text;
       textArea.style.position = 'fixed';
       document.body.appendChild(textArea);

@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { MouseEvent, useEffect, useRef, useState } from 'react';
+import { type KeyboardEvent, type MouseEvent, useEffect, useRef, useState } from 'react';
 import { QRCode } from 'react-qrcode-logo';
 
 type SessionQRCodeProps = {
@@ -28,9 +28,7 @@ export function CustomQRCode(props: SessionQRCodeProps) {
 
   const qrRef = useRef<QRCode>(null);
   const qrCanvasSize = 1000;
-  const canvasLogoSize = logoSize
-    ? (qrCanvasSize * 0.3 * logoSize) / logoSize
-    : 250;
+  const canvasLogoSize = logoSize ? (qrCanvasSize * 0.3 * logoSize) / logoSize : 250;
 
   const handleOnClick = () => {
     qrRef.current?.download('png', 'session-community-qr-code.png');
@@ -55,12 +53,17 @@ export function CustomQRCode(props: SessionQRCodeProps) {
   return (
     <div
       id={id}
+      role="img"
       aria-label="Session Community QR Code"
       title="Click to download"
       className={classNames(
-        'flex justify-center items-center cursor-pointer rounded-sm overflow-hidden'
+        'flex cursor-pointer items-center justify-center overflow-hidden rounded-sm'
       )}
       onClick={(event: MouseEvent<HTMLDivElement>) => {
+        event.preventDefault();
+        void handleOnClick();
+      }}
+      onKeyDown={(event: KeyboardEvent<HTMLDivElement>) => {
         event.preventDefault();
         void handleOnClick();
       }}

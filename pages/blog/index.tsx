@@ -1,24 +1,20 @@
-import { ReactElement } from 'react';
-import { GetStaticProps, GetStaticPropsContext } from 'next';
 import classNames from 'classnames';
-
-import { CMS } from '@/constants';
-import { IPost } from '@/types/cms';
-import { fetchBlogEntries, generateRoute } from '@/services/cms';
-import METADATA from '@/constants/metadata';
-
-import Layout from '@/components/ui/Layout';
+import type { GetStaticProps, GetStaticPropsContext } from 'next';
+import type { ReactElement } from 'react';
 import Container from '@/components/Container';
 import PostCard from '@/components/cards/PostCard';
 import PostList from '@/components/posts/PostList';
+import Layout from '@/components/ui/Layout';
+import { CMS } from '@/constants';
+import METADATA from '@/constants/metadata';
+import { fetchBlogEntries, generateRoute } from '@/services/cms';
+import type { IPost } from '@/types/cms';
 
 interface Props {
   posts: IPost[];
 }
 
-export const getStaticProps: GetStaticProps = async (
-  context: GetStaticPropsContext
-) => {
+export const getStaticProps: GetStaticProps = async (_context: GetStaticPropsContext) => {
   const posts: IPost[] = [];
   let currentPage = 1;
   let foundAllPosts = false;

@@ -1,11 +1,9 @@
-import { Block, Document, Inline } from '@contentful/rich-text-types';
-import {
-  ContentfulClientApi,
-  EntryCollection,
-  Tag,
-  createClient,
-} from 'contentful';
-import {
+import type { Block, Document, Inline } from '@contentful/rich-text-types';
+import { type ContentfulClientApi, createClient, type EntryCollection, type Tag } from 'contentful';
+import { format, parseISO } from 'date-fns';
+import { METADATA } from '@/constants';
+import { fetchContent } from '@/services/embed';
+import type {
   IAuthor,
   IFAQItem,
   IFetchBlogEntriesReturn,
@@ -17,10 +15,6 @@ import {
   IPost,
   ITagList,
 } from '@/types/cms';
-import { format, parseISO } from 'date-fns';
-
-import { METADATA } from '@/constants';
-import { fetchContent } from '@/services/embed';
 
 const client: ContentfulClientApi = createClient({
   space: process.env.CONTENTFUL_SPACE_ID!,
@@ -38,10 +32,7 @@ export async function fetchTagList(): Promise<ITagList> {
   return tags;
 }
 
-export async function fetchBlogEntries(
-  quantity = 100,
-  page = 1
-): Promise<IFetchBlogEntriesReturn> {
+export async function fetchBlogEntries(quantity = 100, page = 1): Promise<IFetchBlogEntriesReturn> {
   const _entries = await client.getEntries({
     content_type: 'post', // only fetch blog post entry
     order: '-fields.date',
@@ -105,7 +96,7 @@ export async function fetchEntryPreview(slug: string): Promise<IPage | IPost> {
   const taglist = await fetchTagList();
 
   if (_entries.length > 0) {
-    let entry = _entries[0];
+    const entry = _entries[0];
     if (entry.sys.contentType.sys.id === 'post') {
       return convertPost(entry, taglist);
     }
@@ -131,7 +122,7 @@ export async function fetchEntryBySlug(slug: string): Promise<IPage | IPost> {
   const taglist = await fetchTagList();
 
   if (_entries.length > 0) {
-    let entry = _entries[0];
+    const entry = _entries[0];
     if (entry.sys.contentType.sys.id === 'post') {
       return convertPost(entry, taglist);
     }
@@ -145,9 +136,7 @@ export async function fetchEntryBySlug(slug: string): Promise<IPage | IPost> {
 
 function convertPost(rawData: any, taglist: ITagList): IPost {
   const rawPost = rawData.fields;
-  const rawFeatureImage = rawPost?.featureImage
-    ? rawPost?.featureImage.fields
-    : null;
+  const rawFeatureImage = rawPost?.featureImage ? rawPost?.featureImage.fields : null;
   const rawAuthor = rawPost.author ? rawPost.author.fields : null;
 
   return {
@@ -190,10 +179,9 @@ function convertAuthor(rawAuthor: any): IAuthor {
 }
 
 function convertTags(rawTags: any, taglist: ITagList): string[] {
-  const tags = rawTags.map((tag: Tag) => {
+  return rawTags.map((tag: Tag) => {
     return taglist[tag.sys.id];
   });
-  return tags;
 }
 
 async function generateEntries(
@@ -201,12 +189,13 @@ async function generateEntries(
   entryType: 'post' | 'faq' | 'page'
 ): Promise<IFetchEntriesReturn> {
   let _entries: any = [];
-  if (entries && entries.items && entries.items.length > 0) {
+  if (entries?.items && entries.items.length > 0) {
     switch (entryType) {
-      case 'post':
+      case 'post': {
         const taglist = await fetchTagList();
         _entries = entries.items.map((entry) => convertPost(entry, taglist));
         break;
+      }
       case 'faq':
         _entries = entries.items.map((entry) => convertFAQ(entry));
         break;
@@ -223,9 +212,7 @@ async function generateEntries(
 }
 
 export function generateRoute(slug: string): string {
-  const route =
-    slug.indexOf('/blog/') > 0 ? slug.split('/blog/')[0] : '/blog/' + slug;
-  return route;
+  return slug.indexOf('/blog/') > 0 ? slug.split('/blog/')[0] : `/blog/${slug}`;
 }
 
 async function loadMetaData(node: Block | Inline) {
@@ -234,9 +221,7 @@ async function loadMetaData(node: Block | Inline) {
     if (node.data.target.sys.contentType.sys.id === 'post') {
       node.data.target.fields.url = `${METADATA.HOST_URL}/blog/${node.data.target.fields.slug}`;
     }
-    node.data.target.fields.meta = await fetchContent(
-      node.data.target.fields.url
-    );
+    node.data.target.fields.meta = await fetchContent(node.data.target.fields.url);
   }
   return node;
 }

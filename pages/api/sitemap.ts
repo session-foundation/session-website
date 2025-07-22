@@ -1,16 +1,12 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import { fetchBlogEntries, fetchPages } from '@/services/cms';
-
-import { IRedirection } from '@/services/redirect';
-import { METADATA } from '@/constants';
+import { readdirSync } from 'node:fs';
+import type { NextApiRequest, NextApiResponse } from 'next';
 import getConfig from 'next/config';
-import { readdirSync } from 'fs';
-import { IPost } from '@/types/cms';
+import { METADATA } from '@/constants';
+import { fetchBlogEntries, fetchPages } from '@/services/cms';
+import type { IRedirection } from '@/services/redirect';
+import type { IPost } from '@/types/cms';
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
   const baseUrl = {
     development: 'http://localhost:3000',
     test: 'http://localhost:3000',
@@ -41,17 +37,15 @@ export default async function handler(
       return `${baseUrl}/${pagePath}`;
     });
 
-  const redirectPages = getConfig().serverRuntimeConfig.redirects.map(
-    (redirect: IRedirection) => {
-      if (redirect.source.includes(':slug')) {
-        return '';
-      } else {
-        return `${baseUrl}${redirect.source}`;
-      }
+  const redirectPages = getConfig().serverRuntimeConfig.redirects.map((redirect: IRedirection) => {
+    if (redirect.source.includes(':slug')) {
+      return '';
+    } else {
+      return `${baseUrl}${redirect.source}`;
     }
-  );
+  });
 
-  const { entries: _dynamicPages, total: totalPages } = await fetchPages();
+  const { entries: _dynamicPages } = await fetchPages();
   const dynamicPages = _dynamicPages.map((page) => {
     return `${baseUrl}/${page.slug}`;
   });

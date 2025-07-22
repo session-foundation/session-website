@@ -1,15 +1,15 @@
-import BenefitsCard from '@/components/cards/BenefitsCard';
-import Container from '@/components/Container';
-import Headline from '@/components/ui/Headline';
-import { ReactElement } from 'react';
 import classNames from 'classnames';
+import type { ReactElement } from 'react';
+import Container from '@/components/Container';
+import BenefitsCard from '@/components/cards/BenefitsCard';
+import Headline from '@/components/ui/Headline';
 
 export default function Benefits(): ReactElement {
   const cardClasses = classNames('w-full mb-5');
   const imageWidth = 500;
   const imageHeight = 500;
   return (
-    <section className={'text-gray-dark bg-primary'}>
+    <section className={'bg-primary text-gray-dark'}>
       <Headline
         color="gray-dark"
         classes={classNames('text-lg font-bold pt-16', 'lg:pt-20')}
@@ -35,9 +35,9 @@ export default function Benefits(): ReactElement {
       >
         <div
           className={classNames(
-            'grid grid-cols-2 mx-auto gap-4 mt-4',
+            'mx-auto mt-4 grid grid-cols-2 gap-4',
             'md:gap-x-8',
-            'lg:grid-cols-3 lg:mt-16',
+            'lg:mt-16 lg:grid-cols-3',
             'xl:mt-20',
             '2xl:mt-24',
             '3xl:mt-32'
@@ -49,10 +49,7 @@ export default function Benefits(): ReactElement {
               "Protect your identity with Session's Account IDs.",
               'No phone number or email required to sign up.',
             ]}
-            images={[
-              '/assets/svgs/no-phone.svg',
-              '/assets/svgs/no-phone-redacted.svg',
-            ]}
+            images={['/assets/svgs/no-phone.svg', '/assets/svgs/no-phone-redacted.svg']}
             imageAlt="crossed out telephone"
             imageWidth={imageWidth}
             imageHeight={imageHeight}
@@ -60,14 +57,8 @@ export default function Benefits(): ReactElement {
           />
           <BenefitsCard
             title="No Data Breaches"
-            description={[
-              'Session doesn’t collect data,',
-              'so there’s nothing to leak.',
-            ]}
-            images={[
-              '/assets/svgs/no-data.svg',
-              '/assets/svgs/no-data-redacted.svg',
-            ]}
+            description={['Session doesn’t collect data,', 'so there’s nothing to leak.']}
+            images={['/assets/svgs/no-data.svg', '/assets/svgs/no-data-redacted.svg']}
             imageAlt="restricted lock"
             imageWidth={imageWidth}
             imageHeight={imageHeight}
@@ -79,10 +70,7 @@ export default function Benefits(): ReactElement {
               'Onion-routed paths protect your conversations ',
               'from hackers and eavesdroppers.',
             ]}
-            images={[
-              '/assets/svgs/safe-paths.svg',
-              '/assets/svgs/safe-paths-grey.svg',
-            ]}
+            images={['/assets/svgs/safe-paths.svg', '/assets/svgs/safe-paths-grey.svg']}
             imageAlt="a node based path"
             imageWidth={imageWidth}
             imageHeight={imageHeight}
@@ -94,10 +82,7 @@ export default function Benefits(): ReactElement {
               'Session’s code has nothing to hide. Anyone can',
               'view, audit, and contribute.',
             ]}
-            images={[
-              '/assets/svgs/open-source.svg',
-              '/assets/svgs/open-source-redacted.svg',
-            ]}
+            images={['/assets/svgs/open-source.svg', '/assets/svgs/open-source-redacted.svg']}
             imageAlt="open source logo"
             imageWidth={imageWidth}
             imageHeight={imageHeight}
@@ -109,10 +94,7 @@ export default function Benefits(): ReactElement {
               'Thousands of nodes run by a global community.',
               'Session is by the people, for the people.',
             ]}
-            images={[
-              '/assets/svgs/people-powered.svg',
-              '/assets/svgs/people-powered-grey.svg',
-            ]}
+            images={['/assets/svgs/people-powered.svg', '/assets/svgs/people-powered-grey.svg']}
             imageAlt="silenced person"
             imageWidth={imageWidth}
             imageHeight={imageHeight}
@@ -124,10 +106,7 @@ export default function Benefits(): ReactElement {
               'Your data is never collected, never tracked, and',
               'never sold to third parties.',
             ]}
-            images={[
-              '/assets/svgs/no-trackers.svg',
-              '/assets/svgs/no-trackers-grey.svg',
-            ]}
+            images={['/assets/svgs/no-trackers.svg', '/assets/svgs/no-trackers-grey.svg']}
             imageAlt="silenced person"
             imageWidth={imageWidth}
             imageHeight={imageHeight}

@@ -1,6 +1,6 @@
 import '@/styles/globals.css';
 
-import { AppProps } from 'next/app';
+import type { AppProps } from 'next/app';
 import { ScreenProvider } from '@/contexts/screen';
 
 if (process.env.NODE_ENV === 'development' && typeof window !== 'undefined') {

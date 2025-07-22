@@ -1,9 +1,8 @@
-import { mkdirSync, writeFileSync } from 'fs';
-
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { Feed } from 'feed';
-import { IPost } from '../types/cms';
-import METADATA from '@/constants/metadata';
 import rimraf from 'rimraf';
+import METADATA from '@/constants/metadata';
+import type { IPost } from '../types/cms';
 
 const baseUrl = METADATA.HOST_URL;
 

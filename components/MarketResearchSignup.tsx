@@ -1,16 +1,9 @@
-import {
-  FormEventHandler,
-  ReactElement,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
-
-import Button from '@/components/ui/Button';
-import Container from '@/components/Container';
-import { IQuestion } from '@/constants/signups';
-import { SIGNUPS } from '@/constants';
 import classNames from 'classnames';
+import { type FormEventHandler, type ReactElement, useEffect, useRef, useState } from 'react';
+import Container from '@/components/Container';
+import Button from '@/components/ui/Button';
+import { SIGNUPS } from '@/constants';
+import type { IQuestion } from '@/constants/signups';
 
 export default function MarketResearchSignup(): ReactElement {
   const [name, setName] = useState('');
@@ -31,9 +24,8 @@ export default function MarketResearchSignup(): ReactElement {
   const handleSubscription: FormEventHandler = async (event) => {
     event.preventDefault();
     setButtonText('Subscribing...');
-    let response;
     try {
-      response = await fetch('/api/email/market-research', {
+      const response = await fetch('/api/email/market-research', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -46,19 +38,13 @@ export default function MarketResearchSignup(): ReactElement {
           setButtonText('Signed up ✓');
           setSubmitted(true);
           break;
-        case 405:
         default:
           setButtonText('Signup failed ✗');
-          console.error(
-            'Email API Code',
-            response.status,
-            await response.json()
-          );
+          console.error('Email API Code', response.status, await response.json());
           setSubmitted(false);
           break;
       }
-    } catch (error) {
-      response = error;
+    } catch (_) {
       setSubmitted(false);
     }
   };
@@ -66,8 +52,7 @@ export default function MarketResearchSignup(): ReactElement {
   const handleInputUpdate = (input: HTMLInputElement, field: string) => {
     let newState: string[] = [];
     if (input.checked) {
-      newState =
-        field === 'Tags' ? [...tags, input.value] : [...roles, input.value];
+      newState = field === 'Tags' ? [...tags, input.value] : [...roles, input.value];
     } else {
       newState =
         field === 'Tags'
@@ -85,14 +70,10 @@ export default function MarketResearchSignup(): ReactElement {
     const styleClasses = classNames('text-sm w-5/6', 'md:w-1/2', 'lg:w-2/5');
     return questions.map((question) => {
       return (
-        <fieldset
-          key={question.fieldName}
-          name={question.fieldName}
-          className={classNames('my-3')}
-        >
+        <fieldset key={question.fieldName} name={question.fieldName} className={classNames('my-3')}>
           <legend className={classNames('mb-2')}>{question.question}</legend>
           {question.type === 'checkbox' ? (
-            <div className={classNames('flex flex-wrap mt-1')}>
+            <div className={classNames('mt-1 flex flex-wrap')}>
               {question.answer.map((item) => {
                 return (
                   <span key={item} className={classNames(styleClasses, 'mb-3')}>
@@ -114,7 +95,7 @@ export default function MarketResearchSignup(): ReactElement {
             <select
               id={question.fieldName}
               name={question.fieldName}
-              onChange={(event) => {
+              onChange={(_event) => {
                 // No questions with dropdowns yet
               }}
               className={classNames(styleClasses)}
@@ -143,41 +124,36 @@ export default function MarketResearchSignup(): ReactElement {
       setSubmitted(false);
 
       const inputs = form.querySelectorAll('input');
+      // biome-ignore lint/suspicious/noAssignInExpressions: This is the intended behaviour, resets the state
       inputs.forEach((input) => (input.checked = false));
 
       const selects = form.querySelectorAll('select');
+      // biome-ignore lint/suspicious/noAssignInExpressions: This is the intended behaviour, resets the state
       selects.forEach((select) => (select.value = ''));
     }
   }, []);
 
   return (
-    <section className="mb-6 border text-gray-dark border-gray-dark">
-      <Container
-        id="research-signup"
-        classes={classNames('px-4', 'md:px-10', 'lg:py-12')}
-      >
+    <section className="mb-6 border border-gray-dark text-gray-dark">
+      <Container id="research-signup" classes={classNames('px-4', 'md:px-10', 'lg:py-12')}>
         <h3
           className={classNames(
-            'text-xl font-bold leading-tight mb-2',
+            'mb-2 font-bold text-xl leading-tight',
             'md:text-3xl',
-            'lg:text-4xl lg:mb-4'
+            'lg:mb-4 lg:text-4xl'
           )}
         >
           Join our new research group!
         </h3>
         <p className={classNames('mb-6', 'lg:text-xl')}>
-          <span>
-            You can help us make Session the best messenger in the world.{' '}
-          </span>
+          <span>You can help us make Session the best messenger in the world. </span>
           <span className={classNames('md:block')}>
             Sign up to Session&apos;s market research group now!
           </span>
         </p>
         <form onSubmit={handleSubscription}>
-          <div
-            className={classNames('flex flex-col justify-center text-md mb-6')}
-          >
-            <h3 className={classNames('text-xl font-bold mb-3')}>Questions</h3>
+          <div className={classNames('mb-6 flex flex-col justify-center text-md')}>
+            <h3 className={classNames('mb-3 font-bold text-xl')}>Questions</h3>
             <label htmlFor="name" className={classNames('mb-2')}>
               Name (or alias)
             </label>
@@ -188,7 +164,7 @@ export default function MarketResearchSignup(): ReactElement {
               value={name}
               onChange={(e) => setName(e.target.value)}
               className={classNames(
-                'block w-5/6 mb-3 text-sm border border-black rounded-sm',
+                'mb-3 block w-5/6 rounded-sm border border-black text-sm',
                 'md:w-1/2',
                 'lg:w-2/5',
                 'placeholder-black placeholder-opacity-60'
@@ -205,7 +181,7 @@ export default function MarketResearchSignup(): ReactElement {
               value={country}
               onChange={(e) => setCountry(e.target.value)}
               className={classNames(
-                'block w-5/6 mb-3 text-sm border border-black rounded-sm',
+                'mb-3 block w-5/6 rounded-sm border border-black text-sm',
                 'md:w-1/2',
                 'lg:w-2/5',
                 'placeholder-black placeholder-opacity-60'
@@ -224,7 +200,7 @@ export default function MarketResearchSignup(): ReactElement {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className={classNames(
-                'block w-5/6 text-sm border border-black rounded-sm',
+                'block w-5/6 rounded-sm border border-black text-sm',
                 'md:w-1/2',
                 'lg:w-2/5',
                 'placeholder-black placeholder-opacity-60'
@@ -244,13 +220,7 @@ export default function MarketResearchSignup(): ReactElement {
             Sign up
           </Button>
           {submitted && (
-            <span
-              className={classNames(
-                'block mt-6',
-                'md:inline md:mt-0 md:ml-2',
-                'lg:ml-4'
-              )}
-            >
+            <span className={classNames('mt-6 block', 'md:mt-0 md:ml-2 md:inline', 'lg:ml-4')}>
               Thanks! Check your inbox to confirm your subscription.
             </span>
           )}

@@ -1,13 +1,12 @@
-import Nav from '@/components/navigation/Nav';
-import Footer from '@/components/navigation/Footer';
-import { ReactElement, ReactNode, useEffect, useMemo, useState } from 'react';
-
-import Banner from '@/components/ui/Banner';
-import CustomHead from '@/components/CustomHead';
-import EmailSignup from '@/components/sections/EmailSignup';
-import { IMetadata } from '@/constants/metadata';
-import LockedPage from '@/components/LockedPage';
 import { useRouter } from 'next/router';
+import { type ReactElement, type ReactNode, useMemo } from 'react';
+import CustomHead from '@/components/CustomHead';
+import LockedPage from '@/components/LockedPage';
+import Footer from '@/components/navigation/Footer';
+import Nav from '@/components/navigation/Nav';
+import EmailSignup from '@/components/sections/EmailSignup';
+import Banner from '@/components/ui/Banner';
+import type { IMetadata } from '@/constants/metadata';
 
 interface Props {
   title?: string;
@@ -36,18 +35,10 @@ export default function Layout({
 
   return (
     <>
-      <CustomHead
-        title={title}
-        metadata={metadata}
-        structuredData={structuredData}
-      />
+      <CustomHead title={title} metadata={metadata} structuredData={structuredData} />
       {showBanner ? <Banner /> : null}
       <Nav />
-      {locked ? (
-        <LockedPage />
-      ) : (
-        <main className="min-h-screen">{children}</main>
-      )}
+      {locked ? <LockedPage /> : <main className="min-h-screen">{children}</main>}
       <EmailSignup />
       <Footer />
     </>

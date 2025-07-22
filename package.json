@@ -8,8 +8,11 @@
     "build:staging": "NEXT_PUBLIC_SITE_ENV=development NODE_ENV=production next build",
     "start": "NEXT_PUBLIC_SITE_ENV=production NODE_ENV=production next start --hostname 127.0.0.1",
     "start:staging": "NEXT_PUBLIC_SITE_ENV=development NODE_ENV=production next start --hostname 127.0.0.1",
-    "format": "prettier -lw .",
-    "lint": "next lint"
+    "lint": "biome lint",
+    "lint:fix": "biome lint --write",
+    "format": "biome format --write",
+    "check": "biome check",
+    "check:fix": "biome check --write"
   },
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^15.3.5",
@@ -33,6 +36,7 @@
   },
   "devDependencies": {
     "@axe-core/react": "^4.2.2",
+    "@biomejs/biome": "2.1.2",
     "@contentful/rich-text-types": "^15.3.5",
     "@newhighsco/next-plugin-svgr": "^3.0.157",
     "@tailwindcss/forms": "^0.3.3",
@@ -44,10 +48,7 @@
     "autoprefixer": "^10.2.5",
     "contentful-cli": "^1.8.17",
     "cssnano": "^4.1.11",
-    "eslint": "7.32.0",
-    "eslint-config-next": "15.4.2",
     "postcss": "^8.2.13",
-    "prettier": "^2.3.2",
     "tailwindcss": "^2.2.15",
     "tailwindcss-selection-variant": "^0.1.0",
     "typescript": "5.8.3"

@@ -1,17 +1,16 @@
-import { GetStaticProps, GetStaticPropsContext } from 'next';
-import { IFAQItem, IFAQList } from '@/types/cms';
-import { generateLinkMeta } from '@/services/cms';
-import Accordion from '@/components/ui/Accordion';
-import { CMS } from '@/constants';
+import classNames from 'classnames';
+import type { GetStaticProps, GetStaticPropsContext } from 'next';
+import { useRouter } from 'next/router';
+import type { ReactElement } from 'react';
 import Container from '@/components/Container';
+import Accordion from '@/components/ui/Accordion';
 import Headline from '@/components/ui/Headline';
 import Layout from '@/components/ui/Layout';
+import { CMS } from '@/constants';
 import METADATA from '@/constants/metadata';
-import { ReactElement } from 'react';
+import { fetchFAQItems, generateLinkMeta } from '@/services/cms';
+import type { IFAQItem, IFAQList } from '@/types/cms';
 import capitalize from '@/utils/capitalize';
-import classNames from 'classnames';
-import { fetchFAQItems } from '@/services/cms';
-import { useRouter } from 'next/router';
 
 interface Props {
   entries: IFAQList;
@@ -28,7 +27,7 @@ function parseContent(content: IFAQItem['answer']['content']) {
       if (item.nodeType === 'text') {
         str += item.value;
       } else if (item.nodeType === 'hyperlink') {
-        str += item.data.uri + ' ';
+        str += `${item.data.uri} `;
       }
     }
   }
@@ -60,13 +59,13 @@ const generateFAQStructuredData = (faqItems: IFAQList) => {
 };
 
 export default function FAQ(props: Props): ReactElement {
-  const { entries: faqItems, total: totalFaqs } = props;
+  const { entries: faqItems } = props;
   const router = useRouter();
   const slug = router.asPath.indexOf('#') >= 0 && router.asPath.split('#')[1];
   const headingClasses = classNames('text-3xl font-semibold mb-5');
   const renderFAQList = (() => {
     const content = [];
-    for (let key of Object.keys(faqItems)) {
+    for (const key of Object.keys(faqItems)) {
       content.push(
         <div key={key} className="mb-10">
           <h2 className={headingClasses}>{capitalize(key, '/')}</h2>
@@ -113,17 +112,13 @@ export default function FAQ(props: Props): ReactElement {
         >
           <h1>Frequently Asked Questions</h1>
         </Headline>
-        <Container classes={classNames('pt-0 px-4 pb-8', 'lg:pb-12')}>
-          {renderFAQList}
-        </Container>
+        <Container classes={classNames('pt-0 px-4 pb-8', 'lg:pb-12')}>{renderFAQList}</Container>
       </section>
     </Layout>
   );
 }
 
-export const getStaticProps: GetStaticProps = async (
-  context: GetStaticPropsContext
-) => {
+export const getStaticProps: GetStaticProps = async (_context: GetStaticPropsContext) => {
   const { entries: _entries, total } = await fetchFAQItems();
 
   // divide up faqs by tags

@@ -1,9 +1,8 @@
-import { FormEventHandler, ReactElement, useRef, useState } from 'react';
-
-import Button from '@/components/ui/Button';
+import classNames from 'classnames';
+import { type FormEventHandler, type ReactElement, useRef, useState } from 'react';
 import Container from '@/components/Container';
 import GroupNotice from '@/components/sections/GroupNotice';
-import classNames from 'classnames';
+import Button from '@/components/ui/Button';
 import { useScreen } from '@/contexts/screen';
 
 export default function EmailSignup(): ReactElement {
@@ -20,9 +19,8 @@ export default function EmailSignup(): ReactElement {
   const handleSubscription: FormEventHandler = async (event) => {
     event.preventDefault();
     setButtonText('Subscribing...');
-    let response;
     try {
-      response = await fetch('/api/email/session', {
+      const response = await fetch('/api/email/session', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -35,38 +33,25 @@ export default function EmailSignup(): ReactElement {
           setButtonText('Signed up ✓');
           setSubmitted(true);
           break;
-        case 405:
         default:
           setButtonText('Signup failed ✗');
-          console.error(
-            'Email API Code',
-            response.status,
-            await response.json()
-          );
+          console.error('Email API Code', response.status, await response.json());
           setSubmitted(false);
           break;
       }
     } catch (error) {
-      response = error;
+      console.error(error);
       setSubmitted(false);
     }
   };
   return (
     <section className="bg-primary text-gray-dark">
       {isSmall && <GroupNotice />}
-      <Container
-        id="signup"
-        classes={classNames('px-8', 'md:px-10', 'lg:py-24')}
-      >
-        <h3
-          className={classNames(
-            'text-xl font-bold leading-none mb-2',
-            'lg:text-3xl lg:mb-0'
-          )}
-        >
+      <Container id="signup" classes={classNames('px-8', 'md:px-10', 'lg:py-24')}>
+        <h3 className={classNames('mb-2 font-bold text-xl leading-none', 'lg:mb-0 lg:text-3xl')}>
           Every project update, delivered straight to your inbox.
         </h3>
-        <p className={classNames('leading-snug mt-1 mb-6', 'lg:text-xl')}>
+        <p className={classNames('mt-1 mb-6 leading-snug', 'lg:text-xl')}>
           Expect an email about once a month.
         </p>
         <form onSubmit={handleSubscription}>
@@ -76,7 +61,7 @@ export default function EmailSignup(): ReactElement {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className={classNames(
-              'block w-5/6 mb-6 text-sm border border-black rounded-sm bg-primary',
+              'mb-6 block w-5/6 rounded-sm border border-black bg-primary text-sm',
               'md:w-1/2',
               'lg:w-2/5',
               'placeholder-black placeholder-opacity-60'
@@ -95,13 +80,7 @@ export default function EmailSignup(): ReactElement {
             Sign up
           </Button>
           {submitted && (
-            <span
-              className={classNames(
-                'block mt-6',
-                'md:inline md:mt-0 md:ml-2',
-                'lg:ml-4'
-              )}
-            >
+            <span className={classNames('mt-6 block', 'md:mt-0 md:ml-2 md:inline', 'lg:ml-4')}>
               Thanks! Check your inbox to confirm your subscription.
             </span>
           )}

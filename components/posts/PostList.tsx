@@ -1,11 +1,10 @@
-import { ReactElement } from 'react';
 import classNames from 'classnames';
-
-import { IPost } from '@/types/cms';
-import { generateRoute } from '@/services/cms';
+import type { ReactElement } from 'react';
 import Container from '@/components/Container';
-import Headline from '@/components/ui/Headline';
 import PostCard from '@/components/cards/PostCard';
+import Headline from '@/components/ui/Headline';
+import { generateRoute } from '@/services/cms';
+import type { IPost } from '@/types/cms';
 
 interface Props {
   posts: IPost[];
@@ -17,18 +16,8 @@ interface Props {
 }
 
 export default function PostList(props: Props): ReactElement {
-  const {
-    posts,
-    gridStyle = 'normal',
-    showHeading = true,
-    hoverEffect,
-    compact,
-    classes,
-  } = props;
-  const cardClasses = classNames(
-    'md:w-1/2 mb-5',
-    'lg:w-1/3 lg:max-w-sm lg:px-3'
-  );
+  const { posts, gridStyle = 'normal', showHeading = true, hoverEffect, compact, classes } = props;
+  const cardClasses = classNames('md:w-1/2 mb-5', 'lg:w-1/3 lg:max-w-sm lg:px-3');
   const gridClasses = [
     gridStyle === 'normal' && 'lg:max-w-screen-xl',
     gridStyle === 'blog' && 'lg:max-w-screen-lg',

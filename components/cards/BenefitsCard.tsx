@@ -1,8 +1,8 @@
-import { ReactElement } from 'react';
-import Image from 'next/legacy/image';
 import classNames from 'classnames';
-import redact from '@/utils/redact';
+import Image from 'next/legacy/image';
+import type { ReactElement } from 'react';
 import { useScreen } from '@/contexts/screen';
+import redact from '@/utils/redact';
 
 interface Props {
   title: string;
@@ -16,15 +16,7 @@ interface Props {
 
 export default function BenefitsCard(props: Props): ReactElement {
   const { isSmall } = useScreen();
-  const {
-    title,
-    description,
-    images,
-    imageAlt,
-    imageWidth,
-    imageHeight,
-    classes,
-  } = props;
+  const { title, description, images, imageAlt, imageWidth, imageHeight, classes } = props;
   const redactedClasses = redact({
     redactColor: 'gray-dark',
     textColor: 'gray-dark',
@@ -46,9 +38,7 @@ export default function BenefitsCard(props: Props): ReactElement {
           <div
             key={img}
             className={classNames(
-              index === 0
-                ? 'block group-hover:hidden'
-                : 'hidden group-hover:block'
+              index === 0 ? 'block group-hover:hidden' : 'hidden group-hover:block'
             )}
           >
             <Image
@@ -65,15 +55,11 @@ export default function BenefitsCard(props: Props): ReactElement {
   })();
 
   const renderDescription = (() => {
-    return description?.map((line, index) => {
+    return description?.map((line) => {
       return (
         <p
-          key={index}
-          className={classNames(
-            'text-sm leading-relaxed -mx-3',
-            'xl:text-base',
-            'lg:-mx-8'
-          )}
+          key={line}
+          className={classNames('-mx-3 text-sm leading-relaxed', 'xl:text-base', 'lg:-mx-8')}
         >
           <span className={classNames(redactedClasses)}>{line}</span>
         </p>
@@ -85,26 +71,16 @@ export default function BenefitsCard(props: Props): ReactElement {
   return (
     <div
       className={classNames(
-        'group text-center text-2xl font-bold leading-none p-3',
+        'group p-3 text-center font-bold text-2xl leading-none',
         'lg:text-3xl',
         classes
       )}
     >
-      <div
-        className={classNames(
-          'mb-5',
-          'md:px-16',
-          'lg:px-12',
-          'xl:px-32',
-          '2xl:px-20'
-        )}
-      >
+      <div className={classNames('mb-5', 'md:px-16', 'lg:px-12', 'xl:px-32', '2xl:px-20')}>
         {renderImages}
       </div>
-      <p className={classNames('md:whitespace-nowrap md:mb-5')}>{title}</p>
-      <div className={classNames('hidden', 'md:block')}>
-        {renderDescription}
-      </div>
+      <p className={classNames('md:mb-5 md:whitespace-nowrap')}>{title}</p>
+      <div className={classNames('hidden', 'md:block')}>{renderDescription}</div>
     </div>
   );
 }

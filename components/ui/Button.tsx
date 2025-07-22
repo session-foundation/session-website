@@ -1,5 +1,5 @@
-import { LegacyRef, ReactElement } from 'react';
 import classNames from 'classnames';
+import type { LegacyRef, MouseEventHandler, ReactElement } from 'react';
 
 interface Props {
   bgColor?: 'primary' | 'black' | 'none';
@@ -13,7 +13,7 @@ interface Props {
   reference?: LegacyRef<HTMLButtonElement>;
   classes?: string;
   children?: string;
-  onClick?(): any;
+  onClick: MouseEventHandler<HTMLButtonElement>;
 }
 
 export default function Button(props: Props): ReactElement {

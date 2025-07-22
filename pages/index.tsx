@@ -1,13 +1,12 @@
+import type { GetStaticProps, GetStaticPropsContext } from 'next';
 import About from '@/components/sections/About';
 import Benefits from '@/components/sections/Benefits';
 import Features from '@/components/sections/Features';
 import Hero from '@/components/sections/Hero';
-import { GetStaticProps, GetStaticPropsContext } from 'next';
-
-import { CMS } from '@/constants';
-import { IPost } from '@/types/cms';
 import Layout from '@/components/ui/Layout';
+import { CMS } from '@/constants';
 import { fetchBlogEntries } from '@/services/cms';
+import type { IPost } from '@/types/cms';
 import generateRSSFeed from '@/utils/rss';
 
 export default function Home() {
@@ -21,9 +20,7 @@ export default function Home() {
   );
 }
 
-export const getStaticProps: GetStaticProps = async (
-  context: GetStaticPropsContext
-) => {
+export const getStaticProps: GetStaticProps = async (_context: GetStaticPropsContext) => {
   if (process.env.NEXT_PUBLIC_SITE_ENV !== 'development') {
     const posts: IPost[] = [];
     let page = 1;

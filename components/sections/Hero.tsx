@@ -1,13 +1,13 @@
-import { ReactComponent as AndroidSVG } from '@/assets/svgs/android_robot_head.svg';
-import { ReactComponent as AppleSVG } from '@/assets/svgs/apple.svg';
-import Button from '@/components/ui/Button';
-import Container from '@/components/Container';
-import { ReactComponent as DesktopSVG } from '@/assets/svgs/desktop.svg';
+import classNames from 'classnames';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
-import { ReactElement } from 'react';
-import classNames from 'classnames';
+import type { ReactElement } from 'react';
+import { ReactComponent as AndroidSVG } from '@/assets/svgs/android_robot_head.svg';
+import { ReactComponent as AppleSVG } from '@/assets/svgs/apple.svg';
+import { ReactComponent as DesktopSVG } from '@/assets/svgs/desktop.svg';
 import { ReactComponent as FDroidSVG } from '@/assets/svgs/fdroid-logo.svg';
+import Container from '@/components/Container';
+import Button from '@/components/ui/Button';
 
 export default function Hero(): ReactElement {
   const headingClasses = classNames(
@@ -32,30 +32,28 @@ export default function Hero(): ReactElement {
       >
         <div
           className={classNames(
-            'lg:-mt-16 lg:w-full lg:flex lg:justify-between lg:items-center',
+            'lg:-mt-16 lg:flex lg:w-full lg:items-center lg:justify-between',
             '3xl:-mt-64'
           )}
         >
           <div>
             <h1 className={classNames(headingClasses)}>
               <span className="block">Send</span>
-              <span className={'block glitch'} data-glitch-text={'Encrypted'}>
+              <span className={'glitch block'} data-glitch-text={'Encrypted'}>
                 Messages,
               </span>
               <span className="block whitespace-nowrap">Not Metadata.</span>
             </h1>
-            <p className={classNames(subHeadingClasses)}>
-              Find your freedom with Session
-            </p>
+            <p className={classNames(subHeadingClasses)}>Find your freedom with Session</p>
 
-            <Link href="/download" className="hidden lg:block mt-2">
+            <Link href="/download" className="mt-2 hidden lg:block">
               <Button fontWeight="bold" size="large" classes="mt-4 px-12">
                 Download
               </Button>
             </Link>
           </div>
           <div
-            className={classNames('w-full', 'ml-auto mr-auto', 'max-w-full')}
+            className={classNames('w-full', 'mr-auto ml-auto', 'max-w-full')}
             style={{ aspectRatio: '2499/2176' }}
           >
             <Image
@@ -72,37 +70,29 @@ export default function Hero(): ReactElement {
 
           <div
             className={classNames(
-              'flex justify-around flex-wrap mt-4 pt-8 gap-4 text-xs border-dashed border-t-2 -mx-6',
-              'md:border-none md:pt-0 md:mx-0',
+              '-mx-6 mt-4 flex flex-wrap justify-around gap-4 border-t-2 border-dashed pt-8 text-xs',
+              'md:mx-0 md:border-none md:pt-0',
               'lg:hidden'
             )}
           >
             <Link href="/android" className={downloadLinkClasses}>
-              <AndroidSVG
-                className={classNames(downloadSVGClasses, 'w-8 h-8')}
-              />
+              <AndroidSVG className={classNames(downloadSVGClasses, 'h-8 w-8')} />
               <span>Android</span>
             </Link>
             <Link href="/apk" className={downloadLinkClasses}>
-              <AndroidSVG
-                className={classNames(downloadSVGClasses, 'w-8 h-8')}
-              />
+              <AndroidSVG className={classNames(downloadSVGClasses, 'h-8 w-8')} />
               <span>APK</span>
             </Link>
             <Link href="/f-droid" className={downloadLinkClasses}>
-              <FDroidSVG
-                className={classNames(downloadSVGClasses, 'w-8 h-8')}
-              />
+              <FDroidSVG className={classNames(downloadSVGClasses, 'h-8 w-8')} />
               <span>F-Droid</span>
             </Link>
             <Link href="/iphone" className={downloadLinkClasses}>
-              <AppleSVG className={classNames(downloadSVGClasses, 'w-6 h-6')} />
+              <AppleSVG className={classNames(downloadSVGClasses, 'h-6 w-6')} />
               <span>iPhone</span>
             </Link>
             <Link href="/download" className={downloadLinkClasses}>
-              <DesktopSVG
-                className={classNames(downloadSVGClasses, 'w-7 h-7')}
-              />
+              <DesktopSVG className={classNames(downloadSVGClasses, 'h-7 w-7')} />
               <span>Desktop</span>
             </Link>
           </div>
