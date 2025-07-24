@@ -80,29 +80,36 @@ const redirects = [
   },
 ];
 
+const locales = [
+  'en',    // English
+  'zh-CN', // Chinese Simplified
+  'zh-TW', // Chinese Traditional
+  'cs',    // Czech
+  'nl',    // Dutch
+  'fr',    // French
+  'de',    // German
+  'hi',    // Hindi
+  'hu',    // Hungarian
+  'it',    // Italian
+  'ja',    // Japanese
+  'pl',    // Polish
+  'pt',    // Portuguese
+  'ro',    // Romanian
+  'es',    // Spanish
+  'sv',    // Swedish
+]
+
+console.log(process.env.NEXT_PUBLIC_TRANSLATION_MODE)
+
+if (process.env.NEXT_PUBLIC_TRANSLATION_MODE === 'true') {
+  locales.push('ach');
+}
+
 // @ts-check
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   i18n: {
-    locales: [
-      'en',    // English
-      'zh-CN', // Chinese Simplified
-      'zh-TW', // Chinese Traditional
-      'cs',    // Czech
-      'nl',    // Dutch
-      'fr',    // French
-      'de',    // German
-      'hi',    // Hindi
-      'hu',    // Hungarian
-      'it',    // Italian
-      'ja',    // Japanese
-      'pl',    // Polish
-      'pt',    // Portuguese
-      'ro',    // Romanian
-      'es',    // Spanish
-      'sv',    // Swedish
-      'ach'
-    ],
+    locales,
     defaultLocale: 'en',
     localeDetection: false,
   },

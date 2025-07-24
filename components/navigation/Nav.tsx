@@ -1,19 +1,19 @@
 import classNames from 'classnames';
+import { GlobeIcon } from 'lucide-react';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useTranslations } from 'next-intl';
 import { type ReactElement, useState } from 'react';
 import { ReactComponent as CloseSVG } from '@/assets/svgs/close.svg';
 import { ReactComponent as MenuSVG } from '@/assets/svgs/hamburger.svg';
+import { LocaleDialogContent } from '@/components/navigation/Locale';
 import NavItem, { navLinkClasses, navLinkHoverClasses } from '@/components/navigation/NavItem';
 import Button from '@/components/ui/Button';
+import { Dialog, DialogTrigger } from '@/components/ui/Dialog';
 import { NAVIGATION } from '@/constants';
 import { NON_LOCALIZED_STRING } from '@/constants/localization';
 import type { NavItemKey } from '@/constants/navigation';
-import { Dialog, DialogTrigger } from '@/components/ui/Dialog';
-import { GlobeIcon } from 'lucide-react';
-import { LocaleDialogContent } from '@/components/navigation/Locale';
-import { useRouter } from 'next/router';
 
 export default function Nav(): ReactElement {
   const t = useTranslations('navigation');
@@ -112,7 +112,7 @@ export default function Nav(): ReactElement {
               <GlobeIcon />
               {router.locale}
             </DialogTrigger>
-            <LocaleDialogContent/>
+            <LocaleDialogContent />
           </Dialog>
           <Link href="/download" className="hidden lg:inline">
             <Button
