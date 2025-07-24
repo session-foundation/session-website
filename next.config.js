@@ -80,7 +80,8 @@ const redirects = [
   },
 ];
 
-const locales = [
+const isTranslateMode =process.env.NEXT_PUBLIC_TRANSLATION_MODE === 'true';
+const locales = !isTranslateMode ? [
   'en',    // English
   'zh-CN', // Chinese Simplified
   'zh-TW', // Chinese Traditional
@@ -97,20 +98,14 @@ const locales = [
   'ro',    // Romanian
   'es',    // Spanish
   'sv',    // Swedish
-]
-
-console.log(process.env.NEXT_PUBLIC_TRANSLATION_MODE)
-
-if (process.env.NEXT_PUBLIC_TRANSLATION_MODE === 'true') {
-  locales.push('ach');
-}
+] : ['ach'];
 
 // @ts-check
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   i18n: {
     locales,
-    defaultLocale: 'en',
+    defaultLocale: isTranslateMode ? 'ach' : 'en',
     localeDetection: false,
   },
   trailingSlash: false,
