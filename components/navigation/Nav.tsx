@@ -5,15 +5,20 @@ import { useTranslations } from 'next-intl';
 import { type ReactElement, useState } from 'react';
 import { ReactComponent as CloseSVG } from '@/assets/svgs/close.svg';
 import { ReactComponent as MenuSVG } from '@/assets/svgs/hamburger.svg';
-import NavItem from '@/components/navigation/NavItem';
+import NavItem, { navLinkClasses, navLinkHoverClasses } from '@/components/navigation/NavItem';
 import Button from '@/components/ui/Button';
 import { NAVIGATION } from '@/constants';
 import { NON_LOCALIZED_STRING } from '@/constants/localization';
 import type { NavItemKey } from '@/constants/navigation';
+import { Dialog, DialogTrigger } from '@/components/ui/Dialog';
+import { GlobeIcon } from 'lucide-react';
+import { LocaleDialogContent } from '@/components/navigation/Locale';
+import { useRouter } from 'next/router';
 
 export default function Nav(): ReactElement {
   const t = useTranslations('navigation');
   const tGeneral = useTranslations('general');
+  const router = useRouter();
   const [isExpanded, setIsExpanded] = useState(false);
   const toggleNav = () => {
     setIsExpanded(!isExpanded);
@@ -96,6 +101,19 @@ export default function Nav(): ReactElement {
               />
             );
           })}
+          <Dialog>
+            <DialogTrigger
+              className={classNames(
+                navLinkClasses,
+                navLinkHoverClasses,
+                'flex flex-row gap-1.5 font-bold'
+              )}
+            >
+              <GlobeIcon />
+              {router.locale}
+            </DialogTrigger>
+            <LocaleDialogContent/>
+          </Dialog>
           <Link href="/download" className="hidden lg:inline">
             <Button
               fontWeight="bold"

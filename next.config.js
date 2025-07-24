@@ -84,7 +84,25 @@ const redirects = [
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   i18n: {
-    locales: ['en', 'fr', 'zh-TW'],
+    locales: [
+      'en',    // English
+      'zh-CN', // Chinese Simplified
+      'zh-TW', // Chinese Traditional
+      'cs',    // Czech
+      'nl',    // Dutch
+      'fr',    // French
+      'de',    // German
+      'hi',    // Hindi
+      'hu',    // Hungarian
+      'it',    // Italian
+      'ja',    // Japanese
+      'pl',    // Polish
+      'pt',    // Portuguese
+      'ro',    // Romanian
+      'es',    // Spanish
+      'sv',    // Swedish
+      'ach'
+    ],
     defaultLocale: 'en',
     localeDetection: false,
   },

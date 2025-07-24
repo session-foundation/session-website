@@ -45,6 +45,15 @@
       "rssLink": "Link to RSS feed"
     }
   },
+  "languageSelection": {
+    "title": "Select your language",
+    "description": "Select your preferred language from the list below",
+    "aria": {
+      "currentLanguage": "{language} (current language)",
+      "switchToLanguage": "Switch to {language}",
+      "currentLanguageIndicator": "(current)"
+    }
+  },
   "notFound": {
     "pageNotFound": "This page doesn't seem to exist.",
     "description": "It looks like the link pointing here was faulty."

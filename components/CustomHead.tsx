@@ -274,6 +274,11 @@ export default function CustomHead(props: Props): ReactElement {
           }}
         />
       ))}
+      <script type="text/javascript">
+        {`var _jipt = [];
+        _jipt.push(['project', 'getsession-website']);`}
+      </script>
+      <script type="text/javascript" src="//cdn.crowdin.com/jipt/jipt.js"></script>
     </Head>
   );
 }

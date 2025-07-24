@@ -26,21 +26,22 @@ interface NavItemProps extends DropdownProps {
   zIndex?: number;
 }
 
+export const navItemClasses = classNames(
+  'bg-gray-dark block w-full px-5 py-2 uppercase border-transparent border-b-3',
+  'lg:px-2 lg:py-1 lg:mx-auto lg:bg-white lg:last:rounded-b-md'
+);
+
+export const navItemHoverClasses = classNames(
+  'transition-colors duration-300',
+  'hover:bg-gray-light lg:hover:text-primary lg:hover:bg-white'
+);
+
 function NavDropdown(props: DropdownProps): ReactElement {
   const { title, navItem } = props;
   const t = useTranslations('navigation');
   const ariaKey = `aria.${title}` as NavItemKey;
+
   const aria = t.has(ariaKey) ? t(ariaKey, { appName: NON_LOCALIZED_STRING.appName }) : undefined;
-
-  const navItemClasses = classNames(
-    'bg-gray-dark block w-full px-5 py-2 uppercase border-transparent border-b-3',
-    'lg:px-2 lg:py-1 lg:mx-auto lg:bg-white lg:last:rounded-b-md'
-  );
-
-  const navItemHoverClasses = classNames(
-    'transition-colors duration-300',
-    'hover:bg-gray-light lg:hover:text-primary lg:hover:bg-white'
-  );
 
   return (
     <Link
@@ -55,12 +56,12 @@ function NavDropdown(props: DropdownProps): ReactElement {
   );
 }
 
-const navLinkClasses = classNames(
+export const navLinkClasses = classNames(
   'bg-gray block w-full px-5 py-2 uppercase border-transparent border-b-3 cursor-pointer',
   'lg:px-2 lg:w-auto lg:bg-transparent'
 );
 
-const navLinkHoverClasses = classNames(
+export const navLinkHoverClasses = classNames(
   'transition-colors duration-300',
   'hover:bg-gray-light lg:hover:border-primary lg:hover:text-primary lg:hover:bg-transparent'
 );
