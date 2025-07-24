@@ -5,10 +5,12 @@
 import classNames from 'classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useTranslations } from 'next-intl';
 import { type ReactElement, type ReactNode, useEffect, useState } from 'react';
 import { ReactComponent as CloseSVG } from '@/assets/svgs/close.svg';
 import { ReactComponent as MenuSVG } from '@/assets/svgs/hamburger.svg';
-import type { INavItem } from '@/constants/navigation';
+import { NON_LOCALIZED_STRING } from '@/constants/localization';
+import type { INavItem, NavItemKey } from '@/constants/navigation';
 import { useScreen } from '@/contexts/screen';
 
 interface DropdownProps {
@@ -26,6 +28,9 @@ interface NavItemProps extends DropdownProps {
 
 function NavDropdown(props: DropdownProps): ReactElement {
   const { title, navItem } = props;
+  const t = useTranslations('navigation');
+  const ariaKey = `aria.${title}` as NavItemKey;
+  const aria = t.has(ariaKey) ? t(ariaKey, { appName: NON_LOCALIZED_STRING.appName }) : undefined;
 
   const navItemClasses = classNames(
     'bg-gray-dark block w-full px-5 py-2 uppercase border-transparent border-b-3',
@@ -40,7 +45,7 @@ function NavDropdown(props: DropdownProps): ReactElement {
   return (
     <Link
       href={navItem.href}
-      aria-label={navItem.alt}
+      aria-label={aria}
       target={navItem.target}
       rel={navItem.rel ?? undefined}
       className={classNames(navItemClasses, navItemHoverClasses)}
@@ -62,6 +67,7 @@ const navLinkHoverClasses = classNames(
 
 export default function NavItem(props: NavItemProps): ReactElement {
   const { title, navItem, isIcon: isSVG = false, hoverEffect = true, zIndex } = props;
+  const t = useTranslations('navigation');
   const router = useRouter();
   const { isSmall, isMedium, isLarge, isHuge, isEnormous } = useScreen();
   const [IsDropdownExpanded, setIsDropdownExpanded] = useState(false);
@@ -69,6 +75,9 @@ export default function NavItem(props: NavItemProps): ReactElement {
   const isActiveNavLink = (url: string) => {
     return router.asPath.includes(url) && 'lg:border-primary lg:text-primary';
   };
+
+  const ariaKey = `aria.${title}` as NavItemKey;
+  const aria = t.has(ariaKey) ? t(ariaKey, { appName: NON_LOCALIZED_STRING.appName }) : undefined;
 
   useEffect(() => {
     setIsDropdownExpanded(false);
@@ -79,7 +88,7 @@ export default function NavItem(props: NavItemProps): ReactElement {
       {!navItem.items ? (
         <Link
           href={navItem.href}
-          aria-label={navItem.alt}
+          aria-label={aria}
           target={navItem.target}
           rel={navItem.rel ?? undefined}
           className={classNames(
@@ -98,7 +107,7 @@ export default function NavItem(props: NavItemProps): ReactElement {
           )}
         >
           <span
-            aria-label={navItem.alt}
+            aria-label={aria}
             className={classNames(
               'relative flex flex-row',
               !isSVG && navLinkClasses,

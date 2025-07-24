@@ -3,11 +3,11 @@ import type { ReactElement } from 'react';
 import RedirectPage from '@/components/RedirectPage';
 import { METADATA } from '@/constants';
 
-export default function Litepaper(): ReactElement {
+export default function Whitepaper(): ReactElement {
   return (
     <RedirectPage
-      localeKey="litepaper"
-      metadata={METADATA.LITEPAPER_PAGE}
+      localeKey="whitepaper"
+      metadata={METADATA.WHITEPAPER_PAGE}
       redirectUrl="https://arxiv.org/pdf/2002.04609.pdf"
     />
   );

@@ -1,0 +1,166 @@
+{
+  "feature": {
+    "accountIds": "帳號 ID",
+    "nodes": "節點",
+    "group": "群組",
+    "community": "社群"
+  },
+  "general": {
+    "download": "下載",
+    "whitepaper": "白皮書",
+    "litepaper": "精簡版白皮書",
+    "messages": "訊息",
+    "metadata": "元數據",
+    "privacyPolicy": "隱私政策",
+    "termsOfService": "服務條款",
+    "other": "其他"
+  },
+  "navigation": {
+    "blog": "部落格",
+    "resources": "資源",
+    "docs": "文件",
+    "network": "網路",
+    "help": "幫助",
+    "faq": "常見問題",
+    "support": "支援",
+    "aria": {
+      "whitepaper": "連結至 {appName} 白皮書",
+      "litepaper": "連結至 {appName} 精簡版白皮書",
+      "sessionToken": "連結至 {appName} 代幣網站",
+      "support": "透過 Zendesk 連結至 {appName} 支援",
+      "iconButtonOpen": "開啟導覽選單",
+      "iconButtonClose": "關閉導覽選單",
+      "downloadButton": "連結至 {appName} 下載"
+    }
+  },
+  "footer": {
+    "about": "關於",
+    "mediaKit": "媒體資源包",
+    "transparencyReport": "透明度報告",
+    "foundation": "基金會",
+    "appSupport": "{appName} 支援",
+    "socials": "社群媒體",
+    "aria": {
+      "socialLink": "連結至 {platform} 上的 {appName}",
+      "rssLink": "連結至 RSS 訂閱"
+    }
+  },
+  "notFound": {
+    "pageNotFound": "此頁面似乎不存在。",
+    "description": "看起來指向這裡的連結有問題。"
+  },
+  "email": {
+    "heading": "每個專案更新，直接送到您的收件匣。",
+    "subheading": "預計每月收到一封電子郵件。",
+    "placeholder": "您的電子郵件",
+    "submitSuccessConfirm": "感謝！請檢查您的收件匣以確認訂閱。",
+    "button": {
+      "text": "註冊"
+    },
+    "joinCommunity": "加入 <button>{appName} {featureCommunity}</button>，認識正在建構、運行和使用 Session 的活躍群體。"
+  },
+  "landing": {
+    "hero": {
+      "format": "發送{glitchText}，而非元數據。",
+      "tag": "使用 {appName} 找到您的自由",
+      "glitchTextPrimary": "訊息",
+      "glitchTextGlitch": "加密的"
+    },
+    "about": {
+      "title": "{appName} 是什麼？",
+      "content": "{appName} 是一個<span>端對端</span>加密的通訊軟體，保護您的<span>個人</span>資料。使用由<span>全球</span><span>隱私</span>專家社群設計、建構和營運的通訊應用程式，重新掌控您的資料。"
+    },
+    "benefits": {
+      "title": "優勢",
+      "1": {
+        "heading": "無需電話號碼",
+        "content": "使用 {appNamePossessive} 的 {featureAccountIds} 保護您的身份。<br></br>註冊無需電話號碼或電子郵件。"
+      },
+      "2": {
+        "heading": "無資料外洩",
+        "content": "{appName} 不收集資料，<br></br>因此沒有東西可被洩露。"
+      },
+      "3": {
+        "heading": "安全路徑",
+        "content": "洋蔥路由路徑保護您的對話<br></br>免受駭客和竊聽者侵害。"
+      },
+      "4": {
+        "heading": "開放原始碼",
+        "content": "{appNamePossessive} 的程式碼沒有任何隱藏。任何人都可以<br></br>查看、審核和貢獻。"
+      },
+      "5": {
+        "heading": "由人民驅動",
+        "content": "由全球社群運行的數千個{featureNodes}。<br></br>{appName} 由人民創造，為人民服務。"
+      },
+      "6": {
+        "heading": "無追蹤器",
+        "content": "您的資料永遠不會被收集、追蹤，<br></br>也永遠不會被出售給第三方。"
+      }
+    },
+    "features": {
+      "title": "功能",
+      "heading": "享受您喜愛的功能和您需要的安全性。",
+      "1": {
+        "heading": "自由發言",
+        "content": "只有您和您的對話對象能夠看到您的訊息。享受端對端加密和訊息自動銷毀帶來的自由感。"
+      },
+      "2": {
+        "heading": "保持掌控",
+        "content": "您從頭到尾掌控著您的訊息。無論是管理您自己的加密金鑰還是選擇自訂主題——Session 讓您做主。"
+      },
+      "3": {
+        "heading": "與您的群體保持聯繫",
+        "content": "無論您是與親密朋友聊天還是組織重大活動，使用安全的{featureGroup}和{featureCommunity}（100+ 成員）聊天都輕而易舉。"
+      }
+    }
+  },
+  "redirect": {
+    "heading": "正在重新導向...",
+    "content": "點擊<button>這裡</button>返回上一頁。"
+  },
+  "blog": {
+    "readMore": "閱讀更多",
+    "morePosts": "更多文章"
+  },
+  "download": {
+    "heading": "下載 {appName} 適用於",
+    "mobile": "行動裝置",
+    "desktop": "桌面",
+    "verifySignatures": "驗證簽名：{platforms}",
+    "releaseNotes": "版本說明：{platforms}"
+  },
+  "imageAlt": {
+    "hero": "行動加密私密通訊應用程式介面展示",
+    "appLaptop": "在 macbook pro 上運行的加密私密通訊應用程式",
+    "appMobile": "在 iphone 上運行的加密私密通訊應用程式"
+  },
+  "metadata": {
+    "default": {
+      "titleLayout": "{title} - {appName} 私密通訊軟體",
+      "title": "{appName} | 發送訊息，而非元數據。| 私密通訊軟體",
+      "description": "{appName} 是一款私密通訊軟體，旨在透過洋蔥路由網路路由所有訊息，消除任何元數據收集的可能性。"
+    },
+    "download": {
+      "title": "下載",
+      "description": "立即下載 {appName} | {appName} 是一款端對端加密的通訊軟體，為所有作業系統消除敏感元數據收集。"
+    },
+    "faq": {
+      "title": "常見問題",
+      "description": "{appNamePossessive} 常見問題。尋找關於 {appName} 最常見問題的答案——關於團隊、技術和技術細節的資訊。"
+    },
+    "litepaper": {
+      "description": "{appName} 是一款去中心化的通訊軟體，支援完全私密、安全和匿名的通訊。"
+    },
+    "whitepaper": {
+      "description": "{appName} 是一款去中心化的通訊軟體，支援完全私密、安全和匿名的通訊。"
+    },
+    "community": {
+      "title": "{appName} {featureCommunity}",
+      "description": "加入 {appName} {featureCommunity}，認識正在建構、運行和使用 {appName} 的活躍群體。"
+    },
+    "blog": {
+      "title": "部落格",
+      "description": "查看 {appName} 部落格。| {appName} 是一款端對端加密的通訊軟體，消除敏感元數據收集。"
+    }
+  }
+}

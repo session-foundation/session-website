@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import type { ReactElement } from 'react';
 import { ReactComponent as AndroidSVG } from '@/assets/svgs/android_robot_head.svg';
 import { ReactComponent as AppleSVG } from '@/assets/svgs/apple.svg';
@@ -8,8 +9,12 @@ import { ReactComponent as DesktopSVG } from '@/assets/svgs/desktop.svg';
 import { ReactComponent as FDroidSVG } from '@/assets/svgs/fdroid-logo.svg';
 import Container from '@/components/Container';
 import Button from '@/components/ui/Button';
+import { NON_LOCALIZED_STRING } from '@/constants/localization';
 
 export default function Hero(): ReactElement {
+  const t = useTranslations('landing.hero');
+  const tGeneral = useTranslations('general');
+  const tImage = useTranslations('imageAlt');
   const headingClasses = classNames(
     'text-4xl font-semibold text-gray-dark mb-4',
     'md:text-5xl',
@@ -22,12 +27,17 @@ export default function Hero(): ReactElement {
   );
   const downloadLinkClasses = 'text-3xl font-bold text-primary mb-7';
   const downloadSVGClasses = 'inline-block mx-3 -mt-2 fill-current';
+
+  const heroText = t('format', {
+    glitchText: '﻿',
+  }).split('﻿');
+
   return (
-    <section className="min-h-screen">
+    <section className="md:min-h-screen">
       <Container
         hasMinHeight={false}
         classes={classNames(
-          'lg:mt-16 lg:flex lg:flex-col lg:justify-center lg:items-center min-h-screen lg:min-h-[calc(100vh-112px)]'
+          'lg:mt-16 lg:flex lg:flex-col lg:justify-center lg:items-center md:min-h-screen lg:min-h-[calc(100vh-112px)]'
         )}
       >
         <div
@@ -38,17 +48,19 @@ export default function Hero(): ReactElement {
         >
           <div>
             <h1 className={classNames(headingClasses)}>
-              <span className="block">Send</span>
-              <span className={'glitch block'} data-glitch-text={'Encrypted'}>
-                Messages,
+              <span className="block">{heroText[0] ?? ''}</span>
+              <span className={'glitch block'} data-glitch-text={t('glitchTextGlitch')}>
+                {t('glitchTextPrimary')}
               </span>
-              <span className="block whitespace-nowrap">Not Metadata.</span>
+              <span className="block whitespace-nowrap">{heroText[1] ?? ''}</span>
             </h1>
-            <p className={classNames(subHeadingClasses)}>Find your freedom with Session</p>
+            <p className={classNames(subHeadingClasses)}>
+              {t('tag', { appName: NON_LOCALIZED_STRING.appName })}
+            </p>
 
             <Link href="/download" className="mt-2 hidden lg:block">
               <Button fontWeight="bold" size="large" classes="mt-4 px-12">
-                Download
+                {tGeneral('download')}
               </Button>
             </Link>
           </div>
@@ -58,13 +70,14 @@ export default function Hero(): ReactElement {
           >
             <Image
               src="/assets/images/encrypted-messaging-app.webp"
-              alt="mobile encrypted messaging app ui showcase"
+              alt={tImage('hero')}
               width={1080}
               height={940}
               priority={true}
               sizes="(max-width: 1023px) 100vw, 1080px"
               quality={95}
               placeholder="empty"
+              fetchPriority="high"
             />
           </div>
 

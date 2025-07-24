@@ -33,7 +33,7 @@ export const getStaticProps: GetStaticProps = async (_context: GetStaticPropsCon
   }
 
   return {
-    props: { posts },
+    props: { posts, messages: (await import(`../../locales/${_context.locale}.json`)).default },
     revalidate: CMS.CONTENT_REVALIDATE_RATE,
   };
 };
@@ -42,7 +42,7 @@ export default function Blog(props: Props): ReactElement {
   const { posts } = props;
   const [featuredPost, ...otherPosts] = posts;
   return (
-    <Layout title={'Blog'} metadata={METADATA.BLOG_PAGE}>
+    <Layout localeKey="blog" metadata={METADATA.BLOG_PAGE}>
       <section>
         <Container
           classes={classNames(

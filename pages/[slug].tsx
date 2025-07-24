@@ -10,6 +10,7 @@ import { type IPage, type IPost, isPost } from '@/types/cms';
 interface Props {
   content: IPage | IPost;
   otherPosts?: IPost[];
+  messages?: any;
 }
 
 export default function Page(props: Props): ReactElement {
@@ -40,7 +41,9 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 
     // embedded links in content body need metadata for preview
     content.body = await generateLinkMeta(content.body);
-    const props: Props = { content };
+
+    const messages = (await import(`../locales/${context.locale}.json`)).default;
+    const props: Props = { content, messages };
 
     if (isPost(content)) {
       // we want 6 posts excluding the current one if it's found

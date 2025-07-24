@@ -1,8 +1,10 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 
 import classNames from 'classnames';
+import type { GetStaticProps, GetStaticPropsContext } from 'next';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import type { ReactElement } from 'react';
 import { ReactComponent as AndroidSVG } from '@/assets/svgs/android_robot_head.svg';
 import { ReactComponent as AppleSVG } from '@/assets/svgs/apple.svg';
@@ -11,9 +13,14 @@ import { ReactComponent as LinuxSVG } from '@/assets/svgs/linux.svg';
 import { ReactComponent as WindowsSVG } from '@/assets/svgs/windows.svg';
 import Container from '@/components/Container';
 import Layout from '@/components/ui/Layout';
+import { NON_LOCALIZED_STRING } from '@/constants/localization';
 import METADATA from '@/constants/metadata';
 
 export default function Download(): ReactElement {
+  const t = useTranslations('download');
+  const _tGeneral = useTranslations('general');
+  const tImage = useTranslations('imageAlt');
+
   const panelClasses = classNames('mx-auto text-center', 'lg:w-1/2 lg:flex lg:flex-col lg:pb-16');
   const headingClasses = 'text-5xl font-semibold';
   const subtitleClasses = classNames('text-2xl', 'lg:text-3xl');
@@ -43,7 +50,7 @@ export default function Download(): ReactElement {
     'transition-colors duration-300'
   );
   return (
-    <Layout title="Download" metadata={METADATA.DOWNLOAD_PAGE}>
+    <Layout localeKey="download" metadata={METADATA.DOWNLOAD_PAGE}>
       <section
         className={classNames(
           'border-primary border-b border-dashed bg-gray-dark pb-16',
@@ -88,9 +95,9 @@ export default function Download(): ReactElement {
                   '2xl:pt-12'
                 )}
               >
-                Download Session for
+                {t('heading', { appName: NON_LOCALIZED_STRING.appName })}
               </p>
-              <h2 className={classNames(headingClasses, 'my-4')}>Mobile</h2>
+              <h2 className={classNames(headingClasses, 'my-4')}>{t('mobile')}</h2>
               <div
                 className={classNames(
                   '-mt-2 -ml-1 mb-3 px-16',
@@ -100,7 +107,7 @@ export default function Download(): ReactElement {
               >
                 <Image
                   src="/assets/images/encrypted-messaging-app-phone.png"
-                  alt="encrypted messaging app phone"
+                  alt={tImage('appMobile')}
                   width={1148}
                   height={2000}
                   layout="responsive"
@@ -168,7 +175,7 @@ export default function Download(): ReactElement {
               </div>
               <div className={classNames(noteContainerClasses, 'pb-12', 'lg:pb-0')}>
                 <p className={classNames(notesClasses)}>
-                  Verify Signatures:
+                  {t('verifySignatures', { platforms: '' })}
                   <a
                     href="https://github.com/session-foundation/session-android/tree/master#verifying-signatures"
                     target="_blank"
@@ -193,7 +200,7 @@ export default function Download(): ReactElement {
                   </a>
                 </p>
                 <p className={classNames(notesClasses)}>
-                  Release Notes:
+                  {t('releaseNotes', { platforms: '' })}
                   <a
                     href="https://github.com/session-foundation/session-android/releases/latest"
                     target="_blank"
@@ -237,9 +244,9 @@ export default function Download(): ReactElement {
               <p
                 className={classNames(subtitleClasses, 'pt-12', 'lg:pt-20', 'xl:pt-8', '2xl:pt-12')}
               >
-                Download Session for
+                {t('heading', { appName: NON_LOCALIZED_STRING.appName })}
               </p>
-              <h2 className={classNames(headingClasses, 'mt-4', 'lg:mb-auto')}>Desktop</h2>
+              <h2 className={classNames(headingClasses, 'mt-4', 'lg:mb-auto')}>{t('desktop')}</h2>
               <div
                 className={classNames(
                   '-ml-1 z-0 mt-8 mb-12 px-3',
@@ -250,7 +257,7 @@ export default function Download(): ReactElement {
               >
                 <Image
                   src="/assets/images/encrypted-messaging-app-desktop.png"
-                  alt="encrypted messaging app phone"
+                  alt={tImage('appLaptop')}
                   width={1130}
                   height={1000}
                   layout="responsive"
@@ -323,7 +330,7 @@ export default function Download(): ReactElement {
               </div>
               <div className={classNames(noteContainerClasses, 'md:pb-16', 'lg:pb-0')}>
                 <p className={classNames(notesClasses)}>
-                  Verify Signatures:
+                  {t('verifySignatures', { platforms: '' })}
                   <a
                     href="https://github.com/session-foundation/session-desktop/tree/master#verifying-signatures"
                     target="_blank"
@@ -337,7 +344,7 @@ export default function Download(): ReactElement {
                   </a>
                 </p>
                 <p className={classNames(notesClasses)}>
-                  Release Notes:
+                  {t('releaseNotes', { platforms: '' })}
                   <a
                     href="https://github.com/session-foundation/session-desktop/releases/latest"
                     target="_blank"
@@ -358,3 +365,9 @@ export default function Download(): ReactElement {
     </Layout>
   );
 }
+
+export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext) => {
+  return {
+    props: { messages: (await import(`../locales/${context.locale}.json`)).default },
+  };
+};

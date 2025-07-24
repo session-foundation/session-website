@@ -1,10 +1,12 @@
 import classNames from 'classnames';
+import { useTranslations } from 'next-intl';
 import type { ReactElement } from 'react';
 import Container from '@/components/Container';
 import BenefitsCard from '@/components/cards/BenefitsCard';
 import Headline from '@/components/ui/Headline';
 
 export default function Benefits(): ReactElement {
+  const t = useTranslations('landing.benefits');
   const cardClasses = classNames('w-full mb-5');
   const imageWidth = 500;
   const imageHeight = 500;
@@ -19,7 +21,7 @@ export default function Benefits(): ReactElement {
           large: '67rem',
         }}
       >
-        <h2>Benefits</h2>
+        <h2>{t('title')}</h2>
       </Headline>
       <Container
         hasMinHeight={true}
@@ -37,80 +39,59 @@ export default function Benefits(): ReactElement {
           className={classNames(
             'mx-auto mt-4 grid grid-cols-2 gap-4',
             'md:gap-x-8',
-            'lg:mt-16 lg:grid-cols-3',
+            'lg:mt-16 lg:grid-cols-3 lg:gap-y-28',
             'xl:mt-20',
             '2xl:mt-24',
             '3xl:mt-32'
           )}
         >
           <BenefitsCard
-            title="No Phone Numbers"
-            description={[
-              "Protect your identity with Session's Account IDs.",
-              'No phone number or email required to sign up.',
-            ]}
+            itemNumber="1"
             images={['/assets/svgs/no-phone.svg', '/assets/svgs/no-phone-redacted.svg']}
             imageAlt="crossed out telephone"
             imageWidth={imageWidth}
             imageHeight={imageHeight}
-            classes={classNames(cardClasses, 'lg:mb-32')}
+            classes={cardClasses}
           />
           <BenefitsCard
-            title="No Data Breaches"
-            description={['Session doesn’t collect data,', 'so there’s nothing to leak.']}
+            itemNumber="2"
             images={['/assets/svgs/no-data.svg', '/assets/svgs/no-data-redacted.svg']}
             imageAlt="restricted lock"
             imageWidth={imageWidth}
             imageHeight={imageHeight}
-            classes={classNames(cardClasses, 'lg:mb-32')}
+            classes={cardClasses}
           />
           <BenefitsCard
-            title="Safe Paths"
-            description={[
-              'Onion-routed paths protect your conversations ',
-              'from hackers and eavesdroppers.',
-            ]}
+            itemNumber="3"
             images={['/assets/svgs/safe-paths.svg', '/assets/svgs/safe-paths-grey.svg']}
             imageAlt="a node based path"
             imageWidth={imageWidth}
             imageHeight={imageHeight}
-            classes={classNames(cardClasses, 'lg:mb-32')}
+            classes={cardClasses}
           />
           <BenefitsCard
-            title="Open Source"
-            description={[
-              'Session’s code has nothing to hide. Anyone can',
-              'view, audit, and contribute.',
-            ]}
+            itemNumber="4"
             images={['/assets/svgs/open-source.svg', '/assets/svgs/open-source-redacted.svg']}
             imageAlt="open source logo"
             imageWidth={imageWidth}
             imageHeight={imageHeight}
-            classes={classNames(cardClasses, 'lg:mb-24')}
+            classes={cardClasses}
           />
           <BenefitsCard
-            title="People Powered"
-            description={[
-              'Thousands of nodes run by a global community.',
-              'Session is by the people, for the people.',
-            ]}
+            itemNumber="5"
             images={['/assets/svgs/people-powered.svg', '/assets/svgs/people-powered-grey.svg']}
             imageAlt="silenced person"
             imageWidth={imageWidth}
             imageHeight={imageHeight}
-            classes={classNames(cardClasses, 'lg:mb-24')}
+            classes={cardClasses}
           />
           <BenefitsCard
-            title="No Trackers"
-            description={[
-              'Your data is never collected, never tracked, and',
-              'never sold to third parties.',
-            ]}
+            itemNumber="6"
             images={['/assets/svgs/no-trackers.svg', '/assets/svgs/no-trackers-grey.svg']}
             imageAlt="silenced person"
             imageWidth={imageWidth}
             imageHeight={imageHeight}
-            classes={classNames(cardClasses, 'lg:mb-24')}
+            classes={cardClasses}
           />
         </div>
       </Container>

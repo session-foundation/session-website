@@ -49,7 +49,11 @@ export const getStaticProps: GetStaticProps = async (context: GetStaticPropsCont
     const { entries: posts } = await fetchBlogEntriesByTag(tag);
 
     return {
-      props: { tag, posts },
+      props: {
+        tag,
+        posts,
+        messages: (await import(`../../locales/${context.locale}.json`)).default,
+      },
       revalidate: CMS.CONTENT_REVALIDATE_RATE,
     };
   } catch (err) {

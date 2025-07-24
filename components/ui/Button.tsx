@@ -1,7 +1,7 @@
 import classNames from 'classnames';
-import type { LegacyRef, MouseEventHandler, ReactElement } from 'react';
+import type { HTMLAttributes, LegacyRef, ReactElement } from 'react';
 
-interface Props {
+type Props = HTMLAttributes<HTMLButtonElement> & {
   bgColor?: 'primary' | 'black' | 'none';
   textColor?: 'primary' | 'black';
   size?: 'small' | 'medium' | 'large';
@@ -12,9 +12,7 @@ interface Props {
   type?: 'submit';
   reference?: LegacyRef<HTMLButtonElement>;
   classes?: string;
-  children?: string;
-  onClick: MouseEventHandler<HTMLButtonElement>;
-}
+};
 
 export default function Button(props: Props): ReactElement {
   const {
@@ -28,9 +26,9 @@ export default function Button(props: Props): ReactElement {
     animate = false,
     hoverEffect = true,
     classes,
-    children,
-    onClick,
+    ...rest
   } = props;
+
   // See Gotchas in README
   const bgClasses = [
     bgColor === 'primary' && 'bg-primary',
@@ -64,6 +62,7 @@ export default function Button(props: Props): ReactElement {
 
   return (
     <button
+      {...rest}
       className={classNames(
         bgClasses,
         textClasses,
@@ -75,9 +74,6 @@ export default function Button(props: Props): ReactElement {
       )}
       type={type}
       ref={reference}
-      onClick={onClick}
-    >
-      {children}
-    </button>
+    />
   );
 }

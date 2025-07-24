@@ -92,7 +92,7 @@ export default function FAQ(props: Props): ReactElement {
 
   return (
     <Layout
-      title="Frequently Asked Questions"
+      localeKey="faq"
       metadata={METADATA.FAQ_PAGE}
       structuredData={[JSON.stringify(faqStructuredData)]}
     >
@@ -137,6 +137,7 @@ export const getStaticProps: GetStaticProps = async (_context: GetStaticPropsCon
     props: {
       entries,
       total,
+      messages: (await import(`../locales/${_context.locale}.json`)).default,
     },
     revalidate: CMS.CONTENT_REVALIDATE_RATE,
   };

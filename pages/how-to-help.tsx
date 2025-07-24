@@ -1,3 +1,4 @@
+import type { GetStaticProps, GetStaticPropsContext } from 'next';
 import Image from 'next/legacy/image';
 import type { ReactElement } from 'react';
 import CustomHead from '@/components/CustomHead';
@@ -16,3 +17,9 @@ export default function HowToHelpPage(): ReactElement {
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext) => {
+  return {
+    props: { messages: (await import(`../locales/${context.locale}.json`)).default },
+  };
+};

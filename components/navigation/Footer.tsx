@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import type { FunctionComponent, ReactElement, SVGProps } from 'react';
 import { ReactComponent as GithubSVG } from '@/assets/svgs/github.svg';
 import { ReactComponent as InstagramSVG } from '@/assets/svgs/instagram.svg';
@@ -8,12 +9,12 @@ import { ReactComponent as MastodonSVG } from '@/assets/svgs/mastodon.svg';
 import { ReactComponent as RssSVG } from '@/assets/svgs/rss.svg';
 import { ReactComponent as TwitterSVG } from '@/assets/svgs/twitter.svg';
 import { ReactComponent as YouTubeSVG } from '@/assets/svgs/youtube.svg';
+import { NON_LOCALIZED_STRING } from '@/constants/localization';
 import redact from '@/utils/redact';
 
 // Type definitions
 interface SocialLink {
   href: string;
-  label: string;
   icon: FunctionComponent<SVGProps<SVGSVGElement>>;
   external: boolean;
   platform: string;
@@ -34,14 +35,12 @@ const svgClasses = classNames('fill-current w-7 h-7 m-1', 'lg:my-0 lg:ml-0', 'ho
 const socialLinks: SocialLink[] = [
   {
     href: 'https://twitter.com/session_app',
-    label: 'Follow Session on Twitter',
     icon: TwitterSVG,
     external: true,
     platform: 'Twitter',
   },
   {
     href: 'https://mastodon.social/@session',
-    label: 'Follow Session on Mastodon',
     icon: MastodonSVG,
     external: true,
     platform: 'Mastodon',
@@ -50,28 +49,24 @@ const socialLinks: SocialLink[] = [
   },
   {
     href: 'https://www.instagram.com/getsession',
-    label: 'Follow Session on Instagram',
     icon: InstagramSVG,
     external: true,
     platform: 'Instagram',
   },
   {
     href: 'https://www.youtube.com/@SessionTV',
-    label: 'Subscribe to Session on YouTube',
     icon: YouTubeSVG,
     external: true,
     platform: 'YouTube',
   },
   {
     href: 'https://github.com/session-foundation',
-    label: 'View Session on GitHub',
     icon: GithubSVG,
     external: true,
     platform: 'GitHub',
   },
   {
     href: '/feed',
-    label: 'Subscribe to Session RSS feed',
     icon: RssSVG,
     external: false,
     platform: 'RSS',
@@ -79,38 +74,45 @@ const socialLinks: SocialLink[] = [
 ];
 
 function SocialLinks() {
+  const t = useTranslations('footer.aria');
   return (
-    <ul
-      className={classNames('-ml-1 flex flex-wrap', 'md:pr-1', 'lg:gap-2 lg:pr-0')}
-      aria-label="Social media links"
-    >
-      {socialLinks.map((social: SocialLink) => {
-        const IconComponent = social.icon;
+    <ul className={classNames('-ml-1 flex flex-wrap', 'md:pr-1', 'lg:gap-2 lg:pr-0')}>
+      {socialLinks.map(
+        ({ platform, href, external, customIconClasses, icon: IconComponent }: SocialLink) => {
+          const label =
+            platform === 'RSS'
+              ? t('rssLink')
+              : t('socialLink', { appName: NON_LOCALIZED_STRING.appName, platform });
 
-        return (
-          <li key={social.platform}>
-            <Link
-              href={social.href}
-              className={socialLinkClasses}
-              target={social.external ? '_blank' : '_self'}
-              rel={social.external ? 'noopener noreferrer' : undefined}
-              aria-label={social.label}
-              title={social.label}
-            >
-              <IconComponent
-                className={classNames(svgClasses, social.customIconClasses)}
-                aria-hidden={true}
-              />
-              <span className="sr-only">{social.label}</span>
-            </Link>
-          </li>
-        );
-      })}
+          return (
+            <li key={platform}>
+              <Link
+                href={href}
+                className={socialLinkClasses}
+                target={external ? '_blank' : '_self'}
+                rel={external ? 'noopener noreferrer' : undefined}
+                aria-label={label}
+                title={label}
+              >
+                <IconComponent
+                  className={classNames(svgClasses, customIconClasses)}
+                  aria-hidden={true}
+                />
+                <span className="sr-only">{label}</span>
+              </Link>
+            </li>
+          );
+        }
+      )}
     </ul>
   );
 }
 
 export default function Footer(): ReactElement {
+  const t = useTranslations('footer');
+  const tNav = useTranslations('navigation');
+  const tGeneral = useTranslations('general');
+  const tAbout = useTranslations('landing.about');
   const redactedClasses = redact({
     redactColor: 'primary',
     textColor: 'white',
@@ -134,37 +136,37 @@ export default function Footer(): ReactElement {
           )}
         >
           <div className={classNames('mb-4 flex w-1/2 flex-col gap-1', 'md:w-1/4', 'lg:w-1/3')}>
-            <h3 className={headingClasses}>About</h3>
+            <h3 className={headingClasses}>{t('about')}</h3>
             <Link
               href="/whitepaper"
               className={linkClasses}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Whitepaper
+              {tGeneral('whitepaper')}
             </Link>
             <Link href="/privacy-policy" className={linkClasses}>
-              Privacy Policy
+              {tGeneral('privacyPolicy')}
             </Link>
             <Link href="/terms-of-service" className={linkClasses}>
-              Terms of Service
+              {tGeneral('termsOfService')}
             </Link>
             <Link href="/blog" className={linkClasses}>
-              Blog
+              {tNav('blog')}
             </Link>
             <Link href="/faq" className={linkClasses}>
-              FAQ
+              {tNav('faq')}
             </Link>
           </div>
           <div className={classNames('mb-4 flex w-1/2 flex-col gap-1', 'md:w-1/4', 'lg:w-1/3')}>
-            <h3 className={headingClasses}>Other</h3>
+            <h3 className={headingClasses}>{tGeneral('other')}</h3>
             <Link
               href="https://token.getsession.org"
               className={linkClasses}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Session Token
+              {NON_LOCALIZED_STRING.appToken}
             </Link>
             <Link
               href="https://lokinet.org/"
@@ -172,10 +174,10 @@ export default function Footer(): ReactElement {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Lokinet
+              {NON_LOCALIZED_STRING.lokinet}
             </Link>
             <Link href="/assets/downloads/Session-Brandmarks.zip" className={linkClasses}>
-              Media Kit
+              {t('mediaKit')}
             </Link>
             <Link
               href="https://session.foundation/transparency-reports"
@@ -183,7 +185,7 @@ export default function Footer(): ReactElement {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Transparency Report
+              {t('transparencyReport')}
             </Link>
             <Link
               href="https://session.foundation"
@@ -191,23 +193,25 @@ export default function Footer(): ReactElement {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Foundation
+              {t('foundation')}
             </Link>
           </div>
           <div className={classNames('flex w-full', 'md:w-1/2', 'lg:block lg:w-1/3')}>
             <div className={classNames('mb-4 w-1/2', 'lg:w-full')}>
-              <h3 className={headingClasses}>Socials</h3>
+              <h3 className={headingClasses}>{t('socials')}</h3>
               <SocialLinks />
             </div>
             <div className={classNames('mb-4 flex w-1/2 flex-col', 'lg:w-full')}>
-              <h3 className={headingClasses}>Support</h3>
+              <h3 className={headingClasses}>{tNav('support')}</h3>
               <a
                 href="https://sessionapp.zendesk.com/hc/en-us"
                 className={classNames(linkClasses)}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Session Support
+                {t('appSupport', {
+                  appName: NON_LOCALIZED_STRING.appName,
+                })}
               </a>
             </div>
           </div>
@@ -236,11 +240,10 @@ export default function Footer(): ReactElement {
               '2xl:leading-loose'
             )}
           >
-            Session is an <span className={redactedClasses}>end-to-end</span> encrypted messenger
-            that protects your <span className={redactedClasses}>personal</span> data. Take back
-            control with a messaging app designed, built, and operated by a{' '}
-            <span className={redactedClasses}>global</span> community of{' '}
-            <span className={redactedClasses}>privacy</span> experts.
+            {tAbout.rich('content', {
+              span: (chunk) => <span className={redactedClasses}>{chunk}</span>,
+              appName: NON_LOCALIZED_STRING.appName,
+            })}
           </p>
         </div>
       </footer>

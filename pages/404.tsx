@@ -1,9 +1,12 @@
 import classNames from 'classnames';
+import type { GetStaticProps, GetStaticPropsContext } from 'next';
+import { useTranslations } from 'next-intl';
 import Container from '@/components/Container';
 import Layout from '@/components/ui/Layout';
 import METADATA from '@/constants/metadata';
 
 export default function Custom404() {
+  const t = useTranslations('notFound');
   return (
     <Layout title="Page not found" metadata={METADATA[404]}>
       <section>
@@ -21,13 +24,19 @@ export default function Custom404() {
           )}
         >
           <h1 className={classNames('mb-8 font-bold text-5xl text-primary-dark')}>
-            This page doesn&apos;t seem to exist.
+            {t('pageNotFound')}
           </h1>
           <p className={classNames('font-medium text-gray text-xl', 'lg:text-2xl')}>
-            {METADATA[404].DESCRIPTION}
+            {t('description')}
           </p>
         </Container>
       </section>
     </Layout>
   );
 }
+
+export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext) => {
+  return {
+    props: { messages: (await import(`../locales/${context.locale}.json`)).default },
+  };
+};

@@ -1,0 +1,166 @@
+{
+  "feature": {
+    "accountIds": "Account IDs",
+    "nodes": "nodes",
+    "group": "Group",
+    "community": "Community"
+  },
+  "general": {
+    "download": "Download",
+    "whitepaper": "Whitepaper",
+    "litepaper": "Litepaper",
+    "messages": "Messages",
+    "metadata": "Metadata",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "other": "Other"
+  },
+  "navigation": {
+    "blog": "Blog",
+    "resources": "Resources",
+    "docs": "Docs",
+    "network": "Network",
+    "help": "Help",
+    "faq": "FAQ",
+    "support": "Support",
+    "aria": {
+      "whitepaper": "Link to {appName} Whitepaper",
+      "litepaper": "Link to {appName} Litepaper",
+      "sessionToken": "Link to {appName} Token website",
+      "support": "Link to {appName} Support via Zendesk",
+      "iconButtonOpen" : "Open navigation menu",
+      "iconButtonClose" : "Close navigation menu",
+      "downloadButton": "Link to {appName} download"
+    }
+  },
+  "footer": {
+    "about": "About",
+    "mediaKit": "Media Kit",
+    "transparencyReport": "Transparency Report",
+    "foundation": "Foundation",
+    "appSupport": "{appName} Support",
+    "socials": "Socials",
+    "aria": {
+      "socialLink": "Link to {appName} on {platform}",
+      "rssLink": "Link to RSS feed"
+    }
+  },
+  "notFound": {
+    "pageNotFound": "This page doesn't seem to exist.",
+    "description": "It looks like the link pointing here was faulty."
+  },
+  "email": {
+    "heading": "Every project update, delivered straight to your inbox.",
+    "subheading": "Expect an email about once a month.",
+    "placeholder": "Your Email",
+    "submitSuccessConfirm": "Thanks! Check your inbox to confirm your subscription.",
+    "button": {
+      "text": "Sign Up"
+    },
+    "joinCommunity": "Join the <button>{appName} {featureCommunity}</button> and meet the vibrant group of people building, running, and using Session."
+  },
+  "landing": {
+    "hero": {
+      "format": "Send {glitchText} Not Metadata.",
+      "tag": "Find your freedom with {appName}",
+      "glitchTextPrimary": "Messages,",
+      "glitchTextGlitch": "Encrypted"
+    },
+    "about": {
+      "title": "What is {appName}?",
+      "content": "{appName} is an <span>end-to-end</span> encrypted messenger that protects your <span>personal</span> data. Take back control with a messaging app designed, built, and operated by a <span>global</span> community of <span>privacy</span> experts."
+    },
+    "benefits": {
+      "title": "Benefits",
+      "1": {
+        "heading": "No Phone Numbers",
+        "content": "Protect your identity with {appNamePossessive} {featureAccountIds}.<br></br>No phone number or email required to sign up."
+      },
+      "2": {
+        "heading": "No Data Breaches",
+        "content": "{appName} doesn’t collect data,<br></br>so there’s nothing to leak."
+      },
+      "3": {
+        "heading": "Safe Paths",
+        "content": "Onion-routed paths protect your conversations<br></br>from hackers and eavesdroppers."
+      },
+      "4": {
+        "heading": "Open Source",
+        "content": "{appNamePossessive} code has nothing to hide. Anyone can<br></br>view, audit, and contribute."
+      },
+      "5": {
+        "heading": "People Powered",
+        "content": "Thousands of {featureNodes} run by a global community.<br></br>{appName} is by the people, for the people."
+      },
+      "6": {
+        "heading": "No Trackers",
+        "content": "Your data is never collected, never tracked, and<br></br>never sold to third parties."
+      }
+    },
+    "features": {
+      "title": "Features",
+      "heading": "Enjoy the features you love and the security you need.",
+      "1": {
+        "heading": "Speak freely",
+        "content": "Only you and the person you are speaking to can ever see your messages. Enjoy the feeling of freedom with end-to-end encryption and disappearing messages."
+      },
+      "2": {
+        "heading": "Stay in control",
+        "content": "You are in control of your messages from start to finish. Whether it’s managing your own encryption keys or choosing a custom theme—Session puts you in charge."
+      },
+      "3": {
+        "heading": "Keep up with your crowd",
+        "content": "Whether you’re catching up with close friends or organizing a major event, it’s effortless with secure {featureGroup} and {featureCommunity} (100+ members) chats."
+      }
+    }
+  },
+  "redirect": {
+    "heading": "Redirecting...",
+    "content": "Click <button>here</button> to return to the previous page."
+  },
+  "blog": {
+    "readMore": "Read More",
+    "morePosts": "More posts"
+  },
+  "download": {
+    "heading": "Download {appName} for",
+    "mobile": "Mobile",
+    "desktop": "Desktop",
+    "verifySignatures": "Verify Signatures: {platforms}",
+    "releaseNotes": "Release Notes: {platforms}"
+  },
+  "imageAlt": {
+    "hero": "mobile encrypted private messaging app ui showcase",
+    "appLaptop": "encrypted private messaging app running on a macbook pro",
+    "appMobile": "encrypted private messaging app running on an iphone"
+  },
+  "metadata": {
+    "default": {
+      "titleLayout": "{title} - {appName} Private Messenger",
+      "title": "{appName} | Send Messages, Not Metadata. | Private Messenger",
+      "description": "{appName} is a private messenger that aims to remove any chance of metadata collection by routing all messages through an onion routing network."
+    },
+    "download": {
+      "title": "Download",
+      "description": "Download {appName} Today | {appName} is an end-to-end encrypted messenger that removes sensitive metadata collection for all operating systems."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "description": "{appNamePossessive} FAQ. Find answers to some of the most frequently asked questions about {appName} — info on the team, the tech, and the technicalities."
+    },
+    "litepaper": {
+      "description": "{appName} is a decentralised messenger that supports completely private, secure, and anonymous communications."
+    },
+    "whitepaper": {
+      "description": "{appName} is a decentralised messenger that supports completely private, secure, and anonymous communications."
+    },
+    "community": {
+      "title": "{appName} {featureCommunity}",
+      "description": "Join the {appName} {featureCommunity} and meet the vibrant group of people building, running, and using {appName}."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "View the {appName} Blogs. | {appName} is an end-to-end encrypted messenger that removes sensitive metadata collection."
+    }
+  }
+}

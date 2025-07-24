@@ -1,11 +1,14 @@
 import classNames from 'classnames';
+import { useTranslations } from 'next-intl';
 import { type ReactElement, useEffect, useRef, useState } from 'react';
 import Container from '@/components/Container';
 import Headline from '@/components/ui/Headline';
+import { NON_LOCALIZED_STRING } from '@/constants/localization';
 import { useScreen } from '@/contexts/screen';
 import redact from '@/utils/redact';
 
 export default function About(): ReactElement {
+  const t = useTranslations('landing.about');
   const textRef = useRef<HTMLDivElement>(null);
   const { isSmall, isMedium } = useScreen();
   const redactedOptions = {
@@ -46,7 +49,7 @@ export default function About(): ReactElement {
           large: '67rem',
         }}
       >
-        <h2>What is Session?</h2>
+        <h2>{t('title', { appName: NON_LOCALIZED_STRING.appName })}</h2>
       </Headline>
       <Container
         heights={{
@@ -73,11 +76,10 @@ export default function About(): ReactElement {
           )}
           ref={textRef}
         >
-          Session is an <span className={redactedClasses}>end-to-end</span> encrypted messenger that
-          protects your <span className={redactedClasses}>personal</span> data. Take back control
-          with a messaging app designed, built, and operated by a{' '}
-          <span className={redactedClasses}>global</span> community of{' '}
-          <span className={redactedClasses}>privacy</span> experts.
+          {t.rich('content', {
+            span: (chunk) => <span className={redactedClasses}>{chunk}</span>,
+            appName: NON_LOCALIZED_STRING.appName,
+          })}
         </p>
       </Container>
     </section>

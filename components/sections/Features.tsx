@@ -1,15 +1,41 @@
 import classNames from 'classnames';
 import Image from 'next/legacy/image';
+import { useTranslations } from 'next-intl';
 import type { ReactElement } from 'react';
 import Container from '@/components/Container';
 import Headline from '@/components/ui/Headline';
 
-export default function Features(): ReactElement {
-  const headingClasses = classNames(
-    'font-helvetica text-3xl font-bold text-gray-dark mb-1',
-    'md:text-4xl'
+const headingClasses = classNames(
+  'font-helvetica text-3xl font-bold text-gray-dark mb-1',
+  'md:text-4xl'
+);
+
+const paragraphClasses = classNames('text-gray-lighter leading-6 mb-8', 'md:mb-12');
+
+type FeatureSectionProps = {
+  itemNumber: '1' | '2' | '3';
+};
+
+function FeatureSection({ itemNumber }: FeatureSectionProps) {
+  const t = useTranslations('landing.features');
+  const tFeature = useTranslations('feature');
+  return (
+    <>
+      <h3 className={headingClasses}>{t(`${itemNumber}.heading` as const)}</h3>
+      <p className={paragraphClasses}>
+        {t(`${itemNumber}.content` as const, {
+          featureGroup: tFeature('group'),
+          featureCommunity: tFeature('community'),
+        })}
+      </p>
+    </>
   );
-  const paragraphClasses = classNames('text-gray-lighter leading-6 mb-8', 'md:mb-12');
+}
+
+export default function Features(): ReactElement {
+  const t = useTranslations('landing.features');
+  const tImage = useTranslations('imageAlt');
+
   return (
     <section className={classNames('text-gray-dark')}>
       <Headline
@@ -21,7 +47,7 @@ export default function Features(): ReactElement {
           large: '67rem',
         }}
       >
-        <h2>Features</h2>
+        <h2>{t('title')}</h2>
       </Headline>
       <Container
         hasMinHeight={true}
@@ -51,23 +77,11 @@ export default function Features(): ReactElement {
             )}
           >
             <h3 className={classNames(headingClasses, 'pb-8', 'lg:-mr-24', 'xl:pb-12')}>
-              Enjoy the features you love and the security you need.
+              {t('heading')}
             </h3>
-            <h3 className={headingClasses}>Speak freely</h3>
-            <p className={paragraphClasses}>
-              Only you and the person you are speaking to can ever see your messages. Enjoy the
-              feeling of freedom with end-to-end encryption and disappearing messages.
-            </p>
-            <h3 className={headingClasses}>Stay in control</h3>
-            <p className={paragraphClasses}>
-              You are in control of your messages from start to finish. Whether it&rsquo;s managing
-              your own encryption keys or choosing a custom theme—Session puts you in charge.
-            </p>
-            <h3 className={headingClasses}>Keep up with your crowd</h3>
-            <p className={paragraphClasses}>
-              Whether you&rsquo;re catching up with close friends or organizing a major event,
-              it&rsquo;s effortless with secure Group and Community (100+ members) chats.
-            </p>
+            <FeatureSection itemNumber="1" />
+            <FeatureSection itemNumber="2" />
+            <FeatureSection itemNumber="3" />
           </div>
           <div
             className={classNames(
@@ -79,7 +93,7 @@ export default function Features(): ReactElement {
           >
             <Image
               src="/assets/images/encrypted-messaging-app-desktop.png"
-              alt="session desktop running on a macbook pro"
+              alt={tImage('appLaptop')}
               width={1130}
               height={1000}
               quality={100}

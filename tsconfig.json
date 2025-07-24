@@ -21,6 +21,8 @@
     // "noUnusedParameters": true, /* report errors on unused parameters (again, suggested for clean code writing) */
     "incremental": true
   },
-  "include": ["next-env.d.ts", "additional.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "global.d.ts",
+    "next-env.d.ts", "additional.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", ".next", "out"]
 }

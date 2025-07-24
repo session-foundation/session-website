@@ -1,10 +1,11 @@
 /** biome-ignore-all lint/a11y/useKeyWithClickEvents: TODO: refactor this to be more accessible */
+/** biome-ignore-all lint/correctness/useExhaustiveDependencies: TODO: makes it work, but its not good, we want to remove the need to use js for this */
 /** biome-ignore-all lint/a11y/noStaticElementInteractions: TODO: refactor this to be more accessible */
 
 import type { Document } from '@contentful/rich-text-types';
 import classNames from 'classnames';
 import Link from 'next/link';
-import { type ReactElement, useCallback, useEffect, useRef, useState } from 'react';
+import { type ReactElement, useEffect, useRef, useState } from 'react';
 import { ReactComponent as LinkSVG } from '@/assets/svgs/link.svg';
 import { ReactComponent as MinusSVG } from '@/assets/svgs/minus.svg';
 import { ReactComponent as PlusSVG } from '@/assets/svgs/plus.svg';
@@ -35,10 +36,10 @@ export default function Accordion(props: Props): ReactElement {
   const [height, setHeight] = useState(`${content?.current?.scrollHeight}px`);
   const [loaded, setLoaded] = useState(false);
 
-  const handleExpand = useCallback(() => {
+  const handleExpand = () => {
     setIsExpanded(!isExpanded);
     setHeight(isExpanded ? '0px' : `${content?.current?.scrollHeight}px`);
-  }, [isExpanded]);
+  };
   const svgClasses = classNames('w-3 h-3 fill-current mb-1 mr-2');
 
   useEffect(() => {
@@ -67,13 +68,13 @@ export default function Accordion(props: Props): ReactElement {
       setHeight(`${content?.current?.scrollHeight}px`);
     }
     setLoaded(true);
-  }, [expand, handleExpand]);
+  }, [expand]);
 
   useEffect(() => {
     if (loaded && expand) {
       handleExpand();
     }
-  }, [expand, handleExpand, loaded]);
+  }, [expand, loaded]);
 
   return (
     <div

@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import type { GetStaticProps, GetStaticPropsContext } from 'next';
 import Image from 'next/legacy/image';
 import { type ReactElement, useState } from 'react';
 import Container from '@/components/Container';
@@ -21,7 +22,7 @@ export default function Community(): ReactElement {
   };
 
   return (
-    <Layout title="Session Community" metadata={METADATA.COMMUNITY_PAGE}>
+    <Layout localeKey="community" metadata={METADATA.COMMUNITY_PAGE}>
       <section>
         <Headline
           color="gray-dark"
@@ -103,3 +104,9 @@ export default function Community(): ReactElement {
     </Layout>
   );
 }
+
+export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext) => {
+  return {
+    props: { messages: (await import(`../locales/${context.locale}.json`)).default },
+  };
+};

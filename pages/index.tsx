@@ -11,7 +11,7 @@ import generateRSSFeed from '@/utils/rss';
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout localeKey="default">
       <Hero />
       <About />
       <Benefits />
@@ -43,7 +43,7 @@ export const getStaticProps: GetStaticProps = async (_context: GetStaticPropsCon
   }
 
   return {
-    props: {},
+    props: { messages: (await import(`../locales/${_context.locale}.json`)).default },
     revalidate: CMS.CONTENT_REVALIDATE_RATE,
   };
 };

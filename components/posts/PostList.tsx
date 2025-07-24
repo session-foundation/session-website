@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import { useTranslations } from 'next-intl';
 import type { ReactElement } from 'react';
 import Container from '@/components/Container';
 import PostCard from '@/components/cards/PostCard';
@@ -17,6 +18,7 @@ interface Props {
 
 export default function PostList(props: Props): ReactElement {
   const { posts, gridStyle = 'normal', showHeading = true, hoverEffect, compact, classes } = props;
+  const t = useTranslations('blog');
   const cardClasses = classNames('md:w-1/2 mb-5', 'lg:w-1/3 lg:max-w-sm lg:px-3');
   const gridClasses = [
     gridStyle === 'normal' && 'lg:max-w-screen-xl',
@@ -35,7 +37,7 @@ export default function PostList(props: Props): ReactElement {
             huge: gridStyle === 'blog' ? '1024px' : '1280px',
           }}
         >
-          More posts
+          {t('morePosts')}
         </Headline>
       )}
       <Container

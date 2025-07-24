@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import type { ReactElement } from 'react';
 import type { IPost } from '@/types/cms';
 
@@ -13,6 +14,7 @@ interface Props extends IPost {
 }
 
 export default function PostCard(props: Props): ReactElement {
+  const t = useTranslations('blog');
   const {
     title,
     description,
@@ -84,7 +86,7 @@ export default function PostCard(props: Props): ReactElement {
         )}
         {featured && (
           <Link href={route} className={classNames('mt-4 block text-primary-dark text-xs')}>
-            Read More »
+            {t('readMore')} »
           </Link>
         )}
       </div>

@@ -1,14 +1,19 @@
 import classNames from 'classnames';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import { type ReactElement, useState } from 'react';
 import { ReactComponent as CloseSVG } from '@/assets/svgs/close.svg';
 import { ReactComponent as MenuSVG } from '@/assets/svgs/hamburger.svg';
 import NavItem from '@/components/navigation/NavItem';
 import Button from '@/components/ui/Button';
 import { NAVIGATION } from '@/constants';
+import { NON_LOCALIZED_STRING } from '@/constants/localization';
+import type { NavItemKey } from '@/constants/navigation';
 
 export default function Nav(): ReactElement {
+  const t = useTranslations('navigation');
+  const tGeneral = useTranslations('general');
   const [isExpanded, setIsExpanded] = useState(false);
   const toggleNav = () => {
     setIsExpanded(!isExpanded);
@@ -43,12 +48,14 @@ export default function Nav(): ReactElement {
           <button
             className="z-10 flex items-center py-2 text-gray focus:outline-none focus:ring-2 focus:ring-primary"
             onClick={toggleNav}
-            aria-label={isExpanded ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-label={t(isExpanded ? 'aria.iconButtonClose' : 'aria.iconButtonOpen')}
             aria-expanded={isExpanded}
             aria-controls="mobile-navigation"
             type="button"
           >
-            <span className="sr-only">{isExpanded ? 'Close' : 'Open'} navigation menu</span>
+            <span className="sr-only">
+              {t(isExpanded ? 'aria.iconButtonClose' : 'aria.iconButtonOpen')}
+            </span>
             <MenuSVG
               className={classNames(mobileNavButtonClasses, isExpanded ? 'hidden' : 'block')}
               aria-hidden="true"
@@ -77,19 +84,25 @@ export default function Nav(): ReactElement {
           )}
         >
           {Object.entries(NAVIGATION.NAV_ITEMS).map(([key, value], index) => {
+            const titleKey = key as NavItemKey;
+            const title = t.has(titleKey) ? t(titleKey) : key;
             return (
               <NavItem
                 key={`${key}${value.href}`}
                 navItem={value}
-                title={key}
+                title={title}
                 isExpanded={isExpanded}
                 zIndex={index}
               />
             );
           })}
           <Link href="/download" className="hidden lg:inline">
-            <Button fontWeight="bold" classes="ml-6">
-              Download
+            <Button
+              fontWeight="bold"
+              classes="ml-6"
+              aria-label={t('aria.downloadButton', { appName: NON_LOCALIZED_STRING.appName })}
+            >
+              {tGeneral('download')}
             </Button>
           </Link>
         </div>

@@ -78,20 +78,20 @@ const redirects = [
     destination: 'https://fdroid.getsession.org/',
     permanent: true,
   },
-  {
-    source: '/whitepaper',
-    destination: 'https://arxiv.org/pdf/2002.04609.pdf',
-    permanent: true,
-  },
 ];
 
 // @ts-check
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  i18n: {
+    locales: ['en', 'fr', 'zh-TW'],
+    defaultLocale: 'en',
+    localeDetection: false,
+  },
+  trailingSlash: false,
   reactStrictMode: true,
   compress: true,
   generateEtags: true,
-  trailingSlash: false,
   productionBrowserSourceMaps: false,
 
   env: {

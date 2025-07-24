@@ -1,6 +1,8 @@
 import classNames from 'classnames';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import type { ReactElement } from 'react';
+import { NON_LOCALIZED_STRING } from '@/constants/localization';
 
 interface Props {
   classes?: string;
@@ -8,6 +10,8 @@ interface Props {
 
 export default function GroupNotice(props: Props): ReactElement {
   const { classes } = props;
+  const t = useTranslations('email');
+  const tFeature = useTranslations('feature');
   return (
     <div
       className={classNames(
@@ -17,18 +21,22 @@ export default function GroupNotice(props: Props): ReactElement {
       )}
     >
       <h4 className={classNames('break-words text-xl')}>
-        Join the{' '}
-        <Link
-          href="/community"
-          className={classNames(
-            'font-bold text-primary-dark',
-            'transition-colors duration-300',
-            'hover:text-white'
-          )}
-        >
-          Session Community
-        </Link>{' '}
-        and meet the vibrant group of people building, running, and using Session.
+        {t.rich('joinCommunity', {
+          appName: NON_LOCALIZED_STRING.appName,
+          featureCommunity: tFeature('community'),
+          button: (chunk) => (
+            <Link
+              href="/community"
+              className={classNames(
+                'font-bold text-primary-dark',
+                'transition-colors duration-300',
+                'hover:text-white'
+              )}
+            >
+              {chunk}
+            </Link>
+          ),
+        })}
       </h4>
     </div>
   );

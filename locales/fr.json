@@ -1,0 +1,166 @@
+{
+  "feature": {
+    "accountIds": "Identifiants de compte",
+    "nodes": "nœuds",
+    "group": "Groupe",
+    "community": "Communauté"
+  },
+  "general": {
+    "download": "Télécharger",
+    "whitepaper": "Livre blanc",
+    "litepaper": "Document de synthèse",
+    "messages": "Messages",
+    "metadata": "Métadonnées",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfService": "Conditions d'utilisation",
+    "other": "Autre"
+  },
+  "navigation": {
+    "blog": "Blog",
+    "resources": "Ressources",
+    "docs": "Documentation",
+    "network": "Réseau",
+    "help": "Aide",
+    "faq": "FAQ",
+    "support": "Support",
+    "aria": {
+      "whitepaper": "Lien vers le livre blanc {appName}",
+      "litepaper": "Lien vers le document de synthèse {appName}",
+      "sessionToken": "Lien vers le site web du token {appName}",
+      "support": "Lien vers le support {appName} via Zendesk",
+      "iconButtonOpen": "Ouvrir le menu de navigation",
+      "iconButtonClose": "Fermer le menu de navigation",
+      "downloadButton": "Lien vers le téléchargement de {appName}"
+    }
+  },
+  "footer": {
+    "about": "À propos",
+    "mediaKit": "Kit média",
+    "transparencyReport": "Rapport de transparence",
+    "foundation": "Fondation",
+    "appSupport": "Support {appName}",
+    "socials": "Réseaux sociaux",
+    "aria": {
+      "socialLink": "Lien vers {appName} sur {platform}",
+      "rssLink": "Lien vers le flux RSS"
+    }
+  },
+  "notFound": {
+    "pageNotFound": "Cette page ne semble pas exister.",
+    "description": "Il semble que le lien qui vous a amené ici soit défectueux."
+  },
+  "email": {
+    "heading": "Chaque mise à jour du projet, livrée directement dans votre boîte de réception.",
+    "subheading": "Attendez-vous à recevoir un e-mail environ une fois par mois.",
+    "placeholder": "Votre e-mail",
+    "submitSuccessConfirm": "Merci ! Vérifiez votre boîte de réception pour confirmer votre inscription.",
+    "button": {
+      "text": "S'inscrire"
+    },
+    "joinCommunity": "Rejoignez la <button>{featureCommunity} {appName}</button> et rencontrez le groupe dynamique de personnes qui construisent, gèrent et utilisent Session."
+  },
+  "landing": {
+    "hero": {
+      "format": "Envoyez des {glitchText}, pas des métadonnées.",
+      "tag": "Trouvez votre liberté avec {appName}",
+      "glitchTextPrimary": "messages",
+      "glitchTextGlitch": "chiffrés"
+    },
+    "about": {
+      "title": "Qu'est-ce que {appName} ?",
+      "content": "{appName} est une messagerie <span>chiffrée de bout en bout</span> qui protège vos données <span>personnelles</span>. Reprenez le contrôle avec une application de messagerie conçue, construite et exploitée par une <span>communauté mondiale</span> d'experts en <span>confidentialité</span>."
+    },
+    "benefits": {
+      "title": "Avantages",
+      "1": {
+        "heading": "Pas de numéro de téléphone",
+        "content": "Protégez votre identité avec les {featureAccountIds} de {appNamePossessive}.<br></br>Aucun numéro de téléphone ou e-mail requis pour s'inscrire."
+      },
+      "2": {
+        "heading": "Pas de violation de données",
+        "content": "{appName} ne collecte pas de données,<br></br>il n'y a donc rien à divulguer."
+      },
+      "3": {
+        "heading": "Chemins sécurisés",
+        "content": "Les chemins routés par oignon protègent vos conversations<br></br>des pirates et des écoutes indiscrètes."
+      },
+      "4": {
+        "heading": "Open Source",
+        "content": "Le code de {appNamePossessive} n'a rien à cacher. Tout le monde peut<br></br>le consulter, l'auditer et y contribuer."
+      },
+      "5": {
+        "heading": "Alimenté par les gens",
+        "content": "Des milliers de {featureNodes} gérés par une communauté mondiale.<br></br>{appName} est par le peuple, pour le peuple."
+      },
+      "6": {
+        "heading": "Pas de trackers",
+        "content": "Vos données ne sont jamais collectées, jamais suivies et<br></br>jamais vendues à des tiers."
+      }
+    },
+    "features": {
+      "title": "Fonctionnalités",
+      "heading": "Profitez des fonctionnalités que vous aimez et de la sécurité dont vous avez besoin.",
+      "1": {
+        "heading": "Parlez librement",
+        "content": "Seuls vous et votre interlocuteur pouvez voir vos messages. Profitez du sentiment de liberté avec le chiffrement de bout en bout et les messages éphémères."
+      },
+      "2": {
+        "heading": "Gardez le contrôle",
+        "content": "Vous avez le contrôle de vos messages du début à la fin. Qu'il s'agisse de gérer vos propres clés de chiffrement ou de choisir un thème personnalisé, Session vous donne le contrôle."
+      },
+      "3": {
+        "heading": "Restez en contact avec votre groupe",
+        "content": "Que vous discutiez avec des amis proches ou organisiez un événement majeur, c'est facile avec les discussions sécurisées de {featureGroup} et de {featureCommunity} (100+ membres)."
+      }
+    }
+  },
+  "redirect": {
+    "heading": "Redirection...",
+    "content": "Cliquez <button>ici</button> pour retourner à la page précédente."
+  },
+  "blog": {
+    "readMore": "Lire la suite",
+    "morePosts": "Plus d'articles"
+  },
+  "download": {
+    "heading": "Télécharger {appName} pour",
+    "mobile": "Mobile",
+    "desktop": "Bureau",
+    "verifySignatures": "Vérifier les signatures : {platforms}",
+    "releaseNotes": "Notes de version : {platforms}"
+  },
+  "imageAlt": {
+    "hero": "présentation de l'interface de l'application mobile de messagerie privée chiffrée",
+    "appLaptop": "application de messagerie privée chiffrée sur un macbook pro",
+    "appMobile": "application de messagerie privée chiffrée sur un iphone"
+  },
+  "metadata": {
+    "default": {
+      "titleLayout": "{title} - {appName} Messagerie Privée",
+      "title": "{appName} | Envoyez des messages, pas des métadonnées. | Messagerie Privée",
+      "description": "{appName} est une messagerie privée qui vise à éliminer toute possibilité de collecte de métadonnées en acheminant tous les messages via un réseau de routage en oignon."
+    },
+    "download": {
+      "title": "Télécharger",
+      "description": "Téléchargez {appName} aujourd'hui | {appName} est une messagerie chiffrée de bout en bout qui supprime la collecte de métadonnées sensibles pour tous les systèmes d'exploitation."
+    },
+    "faq": {
+      "title": "Questions fréquemment posées",
+      "description": "FAQ de {appNamePossessive}. Trouvez des réponses aux questions les plus fréquemment posées sur {appName} — informations sur l'équipe, la technologie et les aspects techniques."
+    },
+    "litepaper": {
+      "description": "{appName} est une messagerie décentralisée qui prend en charge des communications entièrement privées, sécurisées et anonymes."
+    },
+    "whitepaper": {
+      "description": "{appName} est une messagerie décentralisée qui prend en charge des communications entièrement privées, sécurisées et anonymes."
+    },
+    "community": {
+      "title": "{featureCommunity} {appName}",
+      "description": "Rejoignez la {featureCommunity} {appName} et rencontrez le groupe dynamique de personnes qui construisent, gèrent et utilisent {appName}."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Consultez les blogs {appName}. | {appName} est une messagerie chiffrée de bout en bout qui supprime la collecte de métadonnées sensibles."
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import Document, { type DocumentContext, Head, Html, Main, NextScript } from 'next/document';
+import { getLangDir } from 'rtl-detect';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -7,8 +8,11 @@ class MyDocument extends Document {
   }
 
   render() {
+    const locale = this.props.locale || 'en';
+    const direction = getLangDir(locale);
+
     return (
-      <Html lang="en">
+      <Html lang={locale} dir={direction}>
         <Head />
         <body className="antialiased selection:bg-primary">
           <Main />

@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import { useTranslations } from 'next-intl';
 import { type FormEventHandler, type ReactElement, useRef, useState } from 'react';
 import Container from '@/components/Container';
 import GroupNotice from '@/components/sections/GroupNotice';
@@ -6,6 +7,7 @@ import Button from '@/components/ui/Button';
 import { useScreen } from '@/contexts/screen';
 
 export default function EmailSignup(): ReactElement {
+  const t = useTranslations('email');
   const { isSmall } = useScreen();
 
   const [submitted, setSubmitted] = useState(false);
@@ -46,18 +48,16 @@ export default function EmailSignup(): ReactElement {
   };
   return (
     <section className="bg-primary text-gray-dark">
-      {isSmall && <GroupNotice />}
+      {isSmall ? <GroupNotice /> : null}
       <Container id="signup" classes={classNames('px-8', 'md:px-10', 'lg:py-24')}>
         <h3 className={classNames('mb-2 font-bold text-xl leading-none', 'lg:mb-0 lg:text-3xl')}>
-          Every project update, delivered straight to your inbox.
+          {t('heading')}
         </h3>
-        <p className={classNames('mt-1 mb-6 leading-snug', 'lg:text-xl')}>
-          Expect an email about once a month.
-        </p>
+        <p className={classNames('mt-1 mb-6 leading-snug', 'lg:text-xl')}>{t('subheading')}</p>
         <form onSubmit={handleSubscription}>
           <input
             type="email"
-            placeholder="Your Email"
+            placeholder={t('placeholder')}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className={classNames(
@@ -77,11 +77,11 @@ export default function EmailSignup(): ReactElement {
             type={'submit'}
             reference={buttonRef}
           >
-            Sign up
+            {t('button.text')}
           </Button>
           {submitted && (
             <span className={classNames('mt-6 block', 'md:mt-0 md:ml-2 md:inline', 'lg:ml-4')}>
-              Thanks! Check your inbox to confirm your subscription.
+              {t('submitSuccessConfirm')}
             </span>
           )}
         </form>

@@ -1,6 +1,8 @@
 import '@/styles/globals.css';
 
 import type { AppProps } from 'next/app';
+import { useRouter } from 'next/router';
+import { NextIntlClientProvider } from 'next-intl';
 import { ScreenProvider } from '@/contexts/screen';
 
 if (process.env.NODE_ENV === 'development' && typeof window !== 'undefined') {
@@ -11,10 +13,14 @@ if (process.env.NODE_ENV === 'development' && typeof window !== 'undefined') {
 }
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+
   return (
-    <ScreenProvider>
-      <Component {...pageProps} />
-    </ScreenProvider>
+    <NextIntlClientProvider locale={router.locale} messages={pageProps.messages}>
+      <ScreenProvider>
+        <Component {...pageProps} />
+      </ScreenProvider>
+    </NextIntlClientProvider>
   );
 }
 
