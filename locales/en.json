@@ -70,9 +70,8 @@
   },
   "landing": {
     "hero": {
-      "format": "Send {glitchText} Not Metadata.",
+      "heading": "Send <glitch>Messages,</glitch> Not Metadata.",
       "tag": "Find your freedom with {appName}",
-      "glitchTextPrimary": "Messages,",
       "glitchTextGlitch": "Encrypted"
     },
     "about": {

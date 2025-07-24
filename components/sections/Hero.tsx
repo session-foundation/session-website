@@ -16,7 +16,7 @@ export default function Hero(): ReactElement {
   const tGeneral = useTranslations('general');
   const tImage = useTranslations('imageAlt');
   const headingClasses = classNames(
-    'text-4xl font-semibold text-gray-dark mb-4',
+    'text-4xl font-semibold text-gray-dark mb-4 whitespace-nowrap',
     'md:text-5xl',
     'lg:text-6xl'
   );
@@ -28,9 +28,13 @@ export default function Hero(): ReactElement {
   const downloadLinkClasses = 'text-3xl font-bold text-primary mb-7';
   const downloadSVGClasses = 'inline-block mx-3 -mt-2 fill-current';
 
-  const heroText = t('format', {
-    glitchText: '﻿',
-  }).split('﻿');
+  const heroText = t.rich('heading', {
+    glitch: (chunk) => (
+      <span className={'glitch block'} data-glitch-text={t('glitchTextGlitch')}>
+        {chunk}
+      </span>
+    ),
+  });
 
   return (
     <section className="md:min-h-screen">
@@ -47,13 +51,7 @@ export default function Hero(): ReactElement {
           )}
         >
           <div>
-            <h1 className={classNames(headingClasses)}>
-              <span className="block">{heroText[0] ?? ''}</span>
-              <span className={'glitch block'} data-glitch-text={t('glitchTextGlitch')}>
-                {t('glitchTextPrimary')}
-              </span>
-              <span className="block whitespace-nowrap">{heroText[1] ?? ''}</span>
-            </h1>
+            <h1 className={classNames(headingClasses)}>{heroText}</h1>
             <p className={classNames(subHeadingClasses)}>
               {t('tag', { appName: NON_LOCALIZED_STRING.appName })}
             </p>
