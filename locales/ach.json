@@ -82,7 +82,7 @@
       "title": "crwdns38112:0crwdne38112:0",
       "1": {
         "heading": "crwdns38114:0crwdne38114:0",
-        "content": "crwdns38116:0{appNamePossessive}crwdnd38116:0{featureAccountIds}crwdne38116:0"
+        "content": "crwdns38116:0{featureAccountIds}crwdne38116:0"
       },
       "2": {
         "heading": "crwdns38118:0crwdne38118:0",
@@ -94,7 +94,7 @@
       },
       "4": {
         "heading": "crwdns38126:0crwdne38126:0",
-        "content": "crwdns38128:0{appNamePossessive}crwdne38128:0"
+        "content": "crwdns38128:0{appName}crwdne38128:0"
       },
       "5": {
         "heading": "crwdns38130:0crwdne38130:0",
@@ -154,7 +154,7 @@
     },
     "faq": {
       "title": "crwdns38188:0crwdne38188:0",
-      "description": "crwdns38190:0{appNamePossessive}crwdnd38190:0{appName}crwdne38190:0"
+      "description": "crwdns38190:0{appName}crwdne38190:0"
     },
     "litepaper": {
       "description": "crwdns38192:0{appName}crwdne38192:0"
