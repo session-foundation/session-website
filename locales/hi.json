@@ -1,175 +1,176 @@
 {
   "feature": {
-    "accountIds": "Account IDs",
-    "nodes": "nodes",
-    "group": "Group",
-    "community": "Community"
+    "accountIds": "अकाउंट ID",
+    "nodes": "नोड्स",
+    "group": "समूह",
+    "community": "समुदाय"
   },
   "general": {
-    "download": "Download",
-    "whitepaper": "Whitepaper",
-    "litepaper": "Litepaper",
-    "messages": "Messages",
-    "metadata": "Metadata",
-    "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service",
-    "other": "Other"
+    "download": "डाउनलोड करें",
+    "whitepaper": "वाइटपेपर",
+    "litepaper": "लाइटपेपर",
+    "messages": "मेसेज",
+    "metadata": "मेटाडेटा",
+    "privacyPolicy": "गोपनीयता नीति",
+    "termsOfService": "सेवा की शर्तें",
+    "other": "अन्य"
   },
   "navigation": {
-    "blog": "Blog",
-    "resources": "Resources",
-    "docs": "Docs",
-    "network": "Network",
-    "help": "Help",
-    "faq": "FAQ",
-    "support": "Support",
+    "blog": "ब्लॉग",
+    "resources": "संसाधन",
+    "docs": "डॉक्स",
+    "network": "नेटवर्क",
+    "help": "मदद",
+    "faq": "अक्सर पूछे जाने वाले सवाल",
+    "support": "सहायता",
     "aria": {
-      "whitepaper": "Link to {appName} Whitepaper",
-      "litepaper": "Link to {appName} Litepaper",
-      "sessionToken": "Link to {appName} Token website",
-      "support": "Link to {appName} Support via Zendesk",
-      "iconButtonOpen": "Open navigation menu",
-      "iconButtonClose": "Close navigation menu",
-      "downloadButton": "Link to {appName} download"
+      "whitepaper": "{appName} वाइटपेपर का लिंक",
+      "litepaper": "{appName} लाइटपेपर का लिंक",
+      "sessionToken": "{appName} टोकन वेबसाइट लिंक",
+      "support": "{appName} सहायता लिंक (Zendesk के माध्यम से)",
+      "iconButtonOpen": "नेविगेशन मेनू खोलें",
+      "iconButtonClose": "नेविगेशन मेनू बंद करें",
+      "downloadButton": "{appName} डाउनलोड लिंक"
     }
   },
   "footer": {
-    "about": "About",
-    "mediaKit": "Media Kit",
-    "transparencyReport": "Transparency Report",
-    "foundation": "Foundation",
-    "appSupport": "{appName} Support",
-    "socials": "Socials",
+    "about": "हमारे बारे में",
+    "mediaKit": "मीडियाकिट",
+    "transparencyReport": "पारदर्शिता रिपोर्ट",
+    "foundation": "फ़ाउंडेशन",
+    "appSupport": "{appName} सहायता",
+    "socials": "सोशल मीडिया",
     "aria": {
-      "socialLink": "Link to {appName} on {platform}",
-      "rssLink": "Link to RSS feed"
+      "socialLink": "{platform} पर {appName} का लिंक",
+      "rssLink": "RSS फ़ीड का लिंक"
     }
   },
   "languageSelection": {
-    "title": "Select your language",
-    "description": "Select your preferred language from the list below",
+    "title": "अपनी भाषा चुनें",
+    "description": "नीचे दी गई सूची से अपनी पसंदीदा भाषा चुनें।",
     "aria": {
-      "currentLanguage": "{language} (current language)",
-      "switchToLanguage": "Switch to {language}",
-      "currentLanguageIndicator": "(current)"
+      "currentLanguage": "{language} (वर्तमान भाषा)",
+      "switchToLanguage": "{language} बदलें",
+      "currentLanguageIndicator": "(वर्तमान)"
     }
   },
   "notFound": {
-    "pageNotFound": "This page doesn't seem to exist.",
-    "description": "It looks like the link pointing here was faulty."
+    "pageNotFound": "शायद यह पेज अब उपलब्ध नहीं है।",
+    "description": "लगता है यहां दिया गया लिंक गलत था।"
   },
   "email": {
-    "heading": "Every project update, delivered straight to your inbox.",
-    "subheading": "Expect an email about once a month.",
-    "placeholder": "Your Email",
-    "submitSuccessConfirm": "Thanks! Check your inbox to confirm your subscription.",
+    "heading": "हर प्रोजेक्ट अपडेट, सीधे आपके इनबॉक्स में।",
+    "subheading": "हर महीने बस एक ईमेल आएगा।",
+    "placeholder": "आपका ईमेल",
+    "submitSuccessConfirm": "शुक्रिया! सदस्यता पक्की करने के लिए अपना इनबॉक्स ज़रूर देखें।",
     "button": {
-      "text": "Sign Up"
+      "text": "साइन अप करें"
     },
-    "joinCommunity": "Join the <button>{appName} {featureCommunity}</button> and meet the vibrant group of people building, running, and using Session."
+    "joinCommunity": "<button>{appName} {featureCommunity}</button> से जुड़ें और उन लोगों से मिलें जो Session को बना रहे हैं, चला रहे हैं और इस्तेमाल कर रहे हैं।\n"
   },
   "landing": {
     "hero": {
-      "format": "Send {glitchText} Not Metadata.",
-      "tag": "Find your freedom with {appName}",
-      "glitchTextPrimary": "Messages,",
-      "glitchTextGlitch": "Encrypted"
+      "heading": "<glitch>संदेश भेजें,</glitch> मेटाडेटा नहीं।",
+      "tag": "अपनी आज़ादी पाएं, {appName} के साथ\n",
+      "glitchTextGlitch": "एन्क्रिप्टेड"
     },
     "about": {
-      "title": "What is {appName}?",
-      "content": "{appName} is an <span>end-to-end</span> encrypted messenger that protects your <span>personal</span> data. Take back control with a messaging app designed, built, and operated by a <span>global</span> community of <span>privacy</span> experts."
+      "title": "{appName} क्या है?",
+      "content": "{appName} एक <span>एंड-टू-एंड</span> एन्क्रिप्टेड मैसेंजर है जो आपके <span>व्यक्तिगत</span> डेटा की सुरक्षा करता है। एक <span>वैश्विक</span> <span>प्राइवेसी</span> विशेषज्ञों के समुदाय द्वारा डिज़ाइन, निर्मित और संचालित मैसेजिंग ऐप के साथ नियंत्रण वापस लें।"
     },
     "benefits": {
-      "title": "Benefits",
+      "title": "लाभ",
       "1": {
-        "heading": "No Phone Numbers",
-        "content": "Protect your identity with {appNamePossessive} {featureAccountIds}.<br></br>No phone number or email required to sign up."
+        "heading": "कोई फोन नंबर नहीं",
+        "content": "{featureAccountIds} के साथ अपनी पहचान सुरक्षित रखें।<br></br>साइन अप करने के लिए न फोन नंबर चाहिए, न ईमेल।"
       },
       "2": {
-        "heading": "No Data Breaches",
-        "content": "{appName} doesn’t collect data,<br></br>so there’s nothing to leak."
+        "heading": "कोई डेटा उल्लंघन नहीं",
+        "content": "{appName} डेटा एकत्र नहीं करता,<br></br>इसलिए लीक होने लायक कुछ नहीं है।"
       },
       "3": {
-        "heading": "Safe Paths",
-        "content": "Onion-routed paths protect your conversations<br></br>from hackers and eavesdroppers."
+        "heading": "सुरक्षित रास्ते",
+        "content": "ओनियन-रूटेड रास्ते आपके संवादों को<br></br>हैकर्स और जासूसों से सुरक्षित रखते हैं।"
       },
       "4": {
-        "heading": "Open Source",
-        "content": "{appNamePossessive} code has nothing to hide. Anyone can<br></br>view, audit, and contribute."
+        "heading": "ओपन सोर्स",
+        "content": "{appName} कुछ नहीं छुपाता। कोई भी<br></br>इसका कोड देख सकता है, ऑडिट कर सकता है और उसमें योगदान दे सकता है "
       },
       "5": {
-        "heading": "People Powered",
-        "content": "Thousands of {featureNodes} run by a global community.<br></br>{appName} is by the people, for the people."
+        "heading": "लोगों द्वारा संचालित",
+        "content": "{featureNodes} की हजारों इकाइयाँ एक वैश्विक समुदाय द्वारा चलाई जाती हैं।<br></br>{appName} लोगों के द्वारा, लोगों के लिए है।"
       },
       "6": {
-        "heading": "No Trackers",
-        "content": "Your data is never collected, never tracked, and<br></br>never sold to third parties."
+        "heading": "कोई ट्रैकर नहीं",
+        "content": "आपका डेटा कभी एकत्र नहीं किया जाता, ट्रैक नहीं किया जाता,<br></br>और कभी भी तीसरे पक्ष को बेचा नहीं जाता।"
       }
     },
     "features": {
-      "title": "Features",
-      "heading": "Enjoy the features you love and the security you need.",
+      "title": "विशेषताएँ",
+      "heading": "आपकी पसंदीदा विशेषताओं और आवश्यक सुरक्षा का आनंद लें।",
       "1": {
-        "heading": "Speak freely",
-        "content": "Only you and the person you are speaking to can ever see your messages. Enjoy the feeling of freedom with end-to-end encryption and disappearing messages."
+        "heading": "स्वतंत्र रूप से बात करें",
+        "content": "केवल आप और जिससे आप बात कर रहे हैं वही आपके संदेश देख सकते हैं। एंड-टू-एंड एन्क्रिप्शन और गायब होने वाले संदेशों के साथ स्वतंत्रता की भावना का आनंद लें।"
       },
       "2": {
-        "heading": "Stay in control",
-        "content": "You are in control of your messages from start to finish. Whether it’s managing your own encryption keys or choosing a custom theme—Session puts you in charge."
+        "heading": "नियंत्रण बनाए रखें",
+        "content": "आप शुरुआत से अंत तक अपने संदेशों पर नियंत्रण रखते हैं। चाहे वह आपकी एन्क्रिप्शन कुंजियाँ प्रबंधित करना हो या कस्टम थीम चुनना—Session आपको नियंत्रण प्रदान करता है।"
       },
       "3": {
-        "heading": "Keep up with your crowd",
-        "content": "Whether you’re catching up with close friends or organizing a major event, it’s effortless with secure {featureGroup} and {featureCommunity} (100+ members) chats."
+        "heading": "अपनी भीड़ के साथ जुड़े रहें",
+        "content": "चाहे आप अपने करीबी दोस्तों से संपर्क में हों या कोई बड़ा कार्यक्रम आयोजन कर रहे हों, सुरक्षित {featureGroup} और {featureCommunity} (100+ सदस्य) चैट्स के साथ यह सरल है।"
       }
     }
   },
   "redirect": {
-    "heading": "Redirecting...",
-    "content": "Click <button>here</button> to return to the previous page."
+    "heading": "पुनः निर्देशित किया जा रहा है...",
+    "content": "पिछले पृष्ठ पर लौटने के लिए <button>यहाँ क्लिक करें</button>।"
   },
   "blog": {
-    "readMore": "Read More",
-    "morePosts": "More posts"
+    "readMore": "और पढ़ें",
+    "morePosts": "अधिक पोस्ट्स"
   },
   "download": {
-    "heading": "Download {appName} for",
-    "mobile": "Mobile",
-    "desktop": "Desktop",
-    "verifySignatures": "Verify Signatures: {platforms}",
-    "releaseNotes": "Release Notes: {platforms}"
+    "heading": "{appName} डाउनलोड करें",
+    "mobile": "मोबाइल",
+    "desktop": "डेस्कटॉप",
+    "verifySignatures": "हस्ताक्षर सत्यापित करें: {platforms}",
+    "releaseNotes": "रिलीज़ नोट्स: {platforms}"
   },
   "imageAlt": {
-    "hero": "mobile encrypted private messaging app ui showcase",
-    "appLaptop": "encrypted private messaging app running on a macbook pro",
-    "appMobile": "encrypted private messaging app running on an iphone"
+    "hero": "मोबाइल एन्क्रिप्टेड प्राइवेट मैसेजिंग ऐप यूआई शोकेस",
+    "appLaptop": "एक मैकबुक प्रो पर चलता हुआ एन्क्रिप्टेड प्राइवेट मैसेजिंग ऐप",
+    "appMobile": "एक iPhone पर चलता हुआ एन्क्रिप्टेड प्राइवेट मैसेजिंग ऐप"
   },
   "metadata": {
     "default": {
-      "titleLayout": "{title} - {appName} Private Messenger",
-      "title": "{appName} | Send Messages, Not Metadata. | Private Messenger",
-      "description": "{appName} is a private messenger that aims to remove any chance of metadata collection by routing all messages through an onion routing network."
+      "titleLayout": "{title} - {appName} प्राइवेट मैसेंजर",
+      "title": "{appName} | संदेश भेजें, मेटाडेटा नहीं। | प्राइवेट मैसेंजर",
+      "description": "{appName} एक निजी मैसेंजर है जो सभी संदेशों को ओनियन रूटिंग नेटवर्क के माध्यम से प्रेषित कर किसी भी प्रकार की मेटाडेटा एकत्र करने की संभावना को समाप्त करता है।"
     },
     "download": {
-      "title": "Download",
-      "description": "Download {appName} Today | {appName} is an end-to-end encrypted messenger that removes sensitive metadata collection for all operating systems."
+      "title": "डाउनलोड",
+      "description": "आज ही {appName} डाउनलोड करें | {appName} एक एंड-टू-एंड एन्क्रिप्टेड मैसेंजर है जो सभी ऑपरेटिंग सिस्टम्स के लिए संवेदनशील मेटाडेटा संग्रहण को हटाता है।"
     },
     "faq": {
-      "title": "Frequently Asked Questions",
-      "description": "{appNamePossessive} FAQ. Find answers to some of the most frequently asked questions about {appName} — info on the team, the tech, and the technicalities."
+      "title": "अकसर किये गए सवाल",
+      "description": "{appName} से जुड़े कुछ सबसे अधिक पूछे जाने वाले प्रश्नों के उत्तर जानें।"
     },
     "litepaper": {
-      "description": "{appName} is a decentralised messenger that supports completely private, secure, and anonymous communications."
+      "description": "{appName} एक विकेंद्रीकृत मैसेंजर है जो पूर्ण रूप से निजी, सुरक्षित और गुमनाम संवाद का समर्थन करता है।",
+      "title": "{appName} लाइटपेपर: मैसेज भेजें, मेटाडेटा नहीं"
     },
     "whitepaper": {
-      "description": "{appName} is a decentralised messenger that supports completely private, secure, and anonymous communications."
+      "description": "{appName} एक विकेंद्रीकृत मैसेंजर है जो पूर्ण रूप से निजी, सुरक्षित और गुमनाम संवाद का समर्थन करता है।",
+      "title": "{appName} व्हाइटपेपर: एंड-टू-एंड एन्क्रिप्टेड बातचीत, न्यूनतम मेटाडेटा लीक के साथ"
     },
     "community": {
       "title": "{appName} {featureCommunity}",
-      "description": "Join the {appName} {featureCommunity} and meet the vibrant group of people building, running, and using {appName}."
+      "description": "{appName} {featureCommunity} से जुड़ें और उन लोगों से मिलें जो {appName} का निर्माण, संचालन और उपयोग कर रहे हैं।"
     },
     "blog": {
-      "title": "Blog",
-      "description": "View the {appName} Blogs. | {appName} is an end-to-end encrypted messenger that removes sensitive metadata collection."
+      "title": "ब्लॉग",
+      "description": "{appName} ब्लॉग्स देखें। | {appName} एक एंड-टू-एंड एन्क्रिप्टेड मैसेंजर है जो संवेदनशील मेटाडेटा संग्रहण को हटाता है।"
     }
   }
 }

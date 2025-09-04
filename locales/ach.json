@@ -157,10 +157,12 @@
       "description": "crwdns38190:0{appName}crwdne38190:0"
     },
     "litepaper": {
-      "description": "crwdns38192:0{appName}crwdne38192:0"
+      "description": "crwdns38192:0{appName}crwdne38192:0",
+      "title": "crwdns38456:0{appName}crwdne38456:0"
     },
     "whitepaper": {
-      "description": "crwdns38194:0{appName}crwdne38194:0"
+      "description": "crwdns38194:0{appName}crwdne38194:0",
+      "title": "crwdns38458:0{appName}crwdne38458:0"
     },
     "community": {
       "title": "crwdns38196:0{appName}crwdnd38196:0{featureCommunity}crwdne38196:0",

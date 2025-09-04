@@ -1,175 +1,176 @@
 {
   "feature": {
-    "accountIds": "Account IDs",
-    "nodes": "nodes",
-    "group": "Group",
-    "community": "Community"
+    "accountIds": "帳號 ID",
+    "nodes": "節點",
+    "group": "群組",
+    "community": "社群"
   },
   "general": {
-    "download": "Download",
-    "whitepaper": "Whitepaper",
-    "litepaper": "Litepaper",
-    "messages": "Messages",
-    "metadata": "Metadata",
-    "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service",
-    "other": "Other"
+    "download": "下載",
+    "whitepaper": "白皮書",
+    "litepaper": "簡明白皮書",
+    "messages": "訊息",
+    "metadata": "中繼資料",
+    "privacyPolicy": "隱私政策",
+    "termsOfService": "服務條款",
+    "other": "其他"
   },
   "navigation": {
-    "blog": "Blog",
-    "resources": "Resources",
-    "docs": "Docs",
-    "network": "Network",
-    "help": "Help",
-    "faq": "FAQ",
-    "support": "Support",
+    "blog": "部落格",
+    "resources": "資源",
+    "docs": "文件",
+    "network": "網路",
+    "help": "幫助",
+    "faq": "常見問題",
+    "support": "支援",
     "aria": {
-      "whitepaper": "Link to {appName} Whitepaper",
-      "litepaper": "Link to {appName} Litepaper",
-      "sessionToken": "Link to {appName} Token website",
-      "support": "Link to {appName} Support via Zendesk",
-      "iconButtonOpen": "Open navigation menu",
-      "iconButtonClose": "Close navigation menu",
-      "downloadButton": "Link to {appName} download"
+      "whitepaper": "前往 {appName} 白皮書的連結",
+      "litepaper": "前往 {appName} 簡明白皮書的連結",
+      "sessionToken": "前往 {appName} 代幣網站的連結",
+      "support": "透過 Zendesk 聯絡 {appName} 支援",
+      "iconButtonOpen": "開啟導覽選單",
+      "iconButtonClose": "關閉導覽選單",
+      "downloadButton": "前往 {appName} 下載的連結"
     }
   },
   "footer": {
-    "about": "About",
-    "mediaKit": "Media Kit",
-    "transparencyReport": "Transparency Report",
-    "foundation": "Foundation",
-    "appSupport": "{appName} Support",
-    "socials": "Socials",
+    "about": "關於",
+    "mediaKit": "媒體工具包",
+    "transparencyReport": "透明度報告",
+    "foundation": "基金會",
+    "appSupport": "{appName} 支援",
+    "socials": "社群媒體",
     "aria": {
-      "socialLink": "Link to {appName} on {platform}",
-      "rssLink": "Link to RSS feed"
+      "socialLink": "前往 {platform} 上的 {appName}",
+      "rssLink": "前往 RSS 訂閱"
     }
   },
   "languageSelection": {
-    "title": "Select your language",
-    "description": "Select your preferred language from the list below",
+    "title": "選擇您的語言",
+    "description": "從下方清單中選擇您偏好的語言",
     "aria": {
-      "currentLanguage": "{language} (current language)",
-      "switchToLanguage": "Switch to {language}",
-      "currentLanguageIndicator": "(current)"
+      "currentLanguage": "{language}（目前語言)",
+      "switchToLanguage": "切換為 {language}",
+      "currentLanguageIndicator": "（目前)"
     }
   },
   "notFound": {
-    "pageNotFound": "This page doesn't seem to exist.",
-    "description": "It looks like the link pointing here was faulty."
+    "pageNotFound": "此頁面似乎不存在。",
+    "description": "看起來這個連結有問題。"
   },
   "email": {
-    "heading": "Every project update, delivered straight to your inbox.",
-    "subheading": "Expect an email about once a month.",
-    "placeholder": "Your Email",
-    "submitSuccessConfirm": "Thanks! Check your inbox to confirm your subscription.",
+    "heading": "每一則專案更新，都將直送您的信箱。",
+    "subheading": "大約每月收到一封電子郵件。",
+    "placeholder": "你的電子郵件",
+    "submitSuccessConfirm": "感謝你！請檢查收件匣以確認你的訂閱。",
     "button": {
-      "text": "Sign Up"
+      "text": "註冊"
     },
-    "joinCommunity": "Join the <button>{appName} {featureCommunity}</button> and meet the vibrant group of people building, running, and using Session."
+    "joinCommunity": "加入 <button>{appName} {featureCommunity}</button>，與一群熱情的人們一起建立、營運並使用 Session。"
   },
   "landing": {
     "hero": {
-      "format": "Send {glitchText} Not Metadata.",
-      "tag": "Find your freedom with {appName}",
-      "glitchTextPrimary": "Messages,",
-      "glitchTextGlitch": "Encrypted"
+      "heading": "Send <glitch>Messages,</glitch> Not Metadata.",
+      "tag": "使用 {appName} 找回你的自由",
+      "glitchTextGlitch": "已加密"
     },
     "about": {
-      "title": "What is {appName}?",
-      "content": "{appName} is an <span>end-to-end</span> encrypted messenger that protects your <span>personal</span> data. Take back control with a messaging app designed, built, and operated by a <span>global</span> community of <span>privacy</span> experts."
+      "title": "{appName} 是什麼?",
+      "content": "{appName} 是一款 <span>端對端</span> 加密的即時通訊工具，可保護你的<span>個人</span>資料。這是一款由<span>全球</span><span>隱私</span>專家社群設計、開發及營運的通訊應用，讓你重新掌控權力。"
     },
     "benefits": {
-      "title": "Benefits",
+      "title": "優勢",
       "1": {
-        "heading": "No Phone Numbers",
-        "content": "Protect your identity with {appNamePossessive} {featureAccountIds}.<br></br>No phone number or email required to sign up."
+        "heading": "無需電話號碼",
+        "content": "Protect your identity with {featureAccountIds}.<br></br>No phone number or email required to sign up."
       },
       "2": {
-        "heading": "No Data Breaches",
-        "content": "{appName} doesn’t collect data,<br></br>so there’s nothing to leak."
+        "heading": "無資料外洩",
+        "content": "{appName} 不收集資料，<br></br>所以不會有資料洩漏。"
       },
       "3": {
-        "heading": "Safe Paths",
-        "content": "Onion-routed paths protect your conversations<br></br>from hackers and eavesdroppers."
+        "heading": "安全路徑",
+        "content": "經洋蔥路由的傳輸途徑保護你的對話<br></br>免於駭客與竊聽者的干擾。"
       },
       "4": {
-        "heading": "Open Source",
-        "content": "{appNamePossessive} code has nothing to hide. Anyone can<br></br>view, audit, and contribute."
+        "heading": "開放原始碼",
+        "content": "{appName} has nothing to hide. Anyone can<br></br>view, audit, and contribute to its code. "
       },
       "5": {
-        "heading": "People Powered",
-        "content": "Thousands of {featureNodes} run by a global community.<br></br>{appName} is by the people, for the people."
+        "heading": "由人驅動",
+        "content": "由全球社群運行的數千個 {featureNodes}。<br></br>{appName} 是由人民、為人民設計的。"
       },
       "6": {
-        "heading": "No Trackers",
-        "content": "Your data is never collected, never tracked, and<br></br>never sold to third parties."
+        "heading": "無追蹤器",
+        "content": "你的資料永不被收集、追蹤，<br></br>也永不販售給第三方。"
       }
     },
     "features": {
-      "title": "Features",
-      "heading": "Enjoy the features you love and the security you need.",
+      "title": "功能",
+      "heading": "享受你喜愛的功能和必需的安全性。",
       "1": {
-        "heading": "Speak freely",
-        "content": "Only you and the person you are speaking to can ever see your messages. Enjoy the feeling of freedom with end-to-end encryption and disappearing messages."
+        "heading": "自在對話",
+        "content": "只有你和你的對話對象可以看見訊息。透過端對端加密及閱後即焚訊息，享受自由對話的感覺。"
       },
       "2": {
-        "heading": "Stay in control",
-        "content": "You are in control of your messages from start to finish. Whether it’s managing your own encryption keys or choosing a custom theme—Session puts you in charge."
+        "heading": "自主掌控",
+        "content": "你從頭到尾都能掌控自己的訊息。不論是管理自己的加密金鑰，或是自訂主題，Session 都讓你作主。"
       },
       "3": {
-        "heading": "Keep up with your crowd",
-        "content": "Whether you’re catching up with close friends or organizing a major event, it’s effortless with secure {featureGroup} and {featureCommunity} (100+ members) chats."
+        "heading": "與夥伴保持聯繫",
+        "content": "無論是與親密好友聯絡感情，還是籌辦大型活動，透過安全的 {featureGroup} 和 {featureCommunity}（可容納 100+ 成員）聊天室都毫不費力。"
       }
     }
   },
   "redirect": {
-    "heading": "Redirecting...",
-    "content": "Click <button>here</button> to return to the previous page."
+    "heading": "正在重新導向……",
+    "content": "點擊 <button>這裡</button> 返回上一頁。"
   },
   "blog": {
-    "readMore": "Read More",
-    "morePosts": "More posts"
+    "readMore": "了解更多",
+    "morePosts": "更多文章"
   },
   "download": {
-    "heading": "Download {appName} for",
-    "mobile": "Mobile",
-    "desktop": "Desktop",
-    "verifySignatures": "Verify Signatures: {platforms}",
-    "releaseNotes": "Release Notes: {platforms}"
+    "heading": "下載 {appName} 適用於",
+    "mobile": "行動電話",
+    "desktop": "桌面",
+    "verifySignatures": "驗證簽章：{platforms}",
+    "releaseNotes": "版本更新內容：{platforms}"
   },
   "imageAlt": {
-    "hero": "mobile encrypted private messaging app ui showcase",
-    "appLaptop": "encrypted private messaging app running on a macbook pro",
-    "appMobile": "encrypted private messaging app running on an iphone"
+    "hero": "行動加密私密通訊應用程式介面展示",
+    "appLaptop": "在 MacBook Pro 上執行的加密私密通訊應用程式",
+    "appMobile": "在 iPhone 上執行的加密私密通訊應用程式"
   },
   "metadata": {
     "default": {
-      "titleLayout": "{title} - {appName} Private Messenger",
-      "title": "{appName} | Send Messages, Not Metadata. | Private Messenger",
-      "description": "{appName} is a private messenger that aims to remove any chance of metadata collection by routing all messages through an onion routing network."
+      "titleLayout": "{title} - {appName} 私密通訊工具",
+      "title": "{appName}｜傳送訊息，不傳送中繼資料。｜私密通訊工具",
+      "description": "{appName} 是一款私密通訊工具，透過洋蔥路由網路傳送所有訊息，避免任何中繼資料的蒐集。"
     },
     "download": {
-      "title": "Download",
-      "description": "Download {appName} Today | {appName} is an end-to-end encrypted messenger that removes sensitive metadata collection for all operating systems."
+      "title": "下載",
+      "description": "立即下載 {appName}｜{appName} 是一款端對端加密的通訊工具，可在各種作業系統下避免敏感中繼資料的蒐集。"
     },
     "faq": {
-      "title": "Frequently Asked Questions",
-      "description": "{appNamePossessive} FAQ. Find answers to some of the most frequently asked questions about {appName} — info on the team, the tech, and the technicalities."
+      "title": "常見問題",
+      "description": "Find answers to some of the most frequently asked questions about {appName}."
     },
     "litepaper": {
-      "description": "{appName} is a decentralised messenger that supports completely private, secure, and anonymous communications."
+      "description": "{appName} 是一款去中心化的通訊工具，支援完全私密、安全且匿名的通訊。",
+      "title": "{appName} Litepaper: Send Messages, Not Metadata"
     },
     "whitepaper": {
-      "description": "{appName} is a decentralised messenger that supports completely private, secure, and anonymous communications."
+      "description": "{appName} 是一款去中心化的通訊工具，支援完全私密、安全且匿名的通訊。",
+      "title": "{appName} Whitepaper: End-To-End Encrypted Conversations with Minimal Metadata Leakage"
     },
     "community": {
       "title": "{appName} {featureCommunity}",
-      "description": "Join the {appName} {featureCommunity} and meet the vibrant group of people building, running, and using {appName}."
+      "description": "加入 {appName} {featureCommunity}，與一群熱情的人們一起建立、營運並使用 {appName}。"
     },
     "blog": {
-      "title": "Blog",
-      "description": "View the {appName} Blogs. | {appName} is an end-to-end encrypted messenger that removes sensitive metadata collection."
+      "title": "部落格",
+      "description": "查看 {appName} 部落格。｜{appName} 是一款端對端加密的通訊工具，可去除敏感中繼資料的蒐集。"
     }
   }
 }

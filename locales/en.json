@@ -28,8 +28,8 @@
       "litepaper": "Link to {appName} Litepaper",
       "sessionToken": "Link to {appName} Token website",
       "support": "Link to {appName} Support via Zendesk",
-      "iconButtonOpen" : "Open navigation menu",
-      "iconButtonClose" : "Close navigation menu",
+      "iconButtonOpen": "Open navigation menu",
+      "iconButtonClose": "Close navigation menu",
       "downloadButton": "Link to {appName} download"
     }
   },
@@ -82,7 +82,7 @@
       "title": "Benefits",
       "1": {
         "heading": "No Phone Numbers",
-        "content": "Protect your identity with {appNamePossessive} {featureAccountIds}.<br></br>No phone number or email required to sign up."
+        "content": "Protect your identity with {featureAccountIds}.<br></br>No phone number or email required to sign up."
       },
       "2": {
         "heading": "No Data Breaches",
@@ -94,7 +94,7 @@
       },
       "4": {
         "heading": "Open Source",
-        "content": "{appNamePossessive} code has nothing to hide. Anyone can<br></br>view, audit, and contribute."
+        "content": "{appName} has nothing to hide. Anyone can<br></br>view, audit, and contribute to its code. "
       },
       "5": {
         "heading": "People Powered",
@@ -154,13 +154,15 @@
     },
     "faq": {
       "title": "Frequently Asked Questions",
-      "description": "{appNamePossessive} FAQ. Find answers to some of the most frequently asked questions about {appName} — info on the team, the tech, and the technicalities."
+      "description": "Find answers to some of the most frequently asked questions about {appName}."
     },
     "litepaper": {
-      "description": "{appName} is a decentralised messenger that supports completely private, secure, and anonymous communications."
+      "description": "{appName} is a decentralised messenger that supports completely private, secure, and anonymous communications.",
+      "title": "{appName} Litepaper: Send Messages, Not Metadata"
     },
     "whitepaper": {
-      "description": "{appName} is a decentralised messenger that supports completely private, secure, and anonymous communications."
+      "description": "{appName} is a decentralised messenger that supports completely private, secure, and anonymous communications.",
+      "title": "{appName} Whitepaper: End-To-End Encrypted Conversations with Minimal Metadata Leakage"
     },
     "community": {
       "title": "{appName} {featureCommunity}",

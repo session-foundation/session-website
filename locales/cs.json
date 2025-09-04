@@ -1,175 +1,176 @@
 {
   "feature": {
-    "accountIds": "Account IDs",
-    "nodes": "nodes",
-    "group": "Group",
-    "community": "Community"
+    "accountIds": "ID účtů",
+    "nodes": "uzly",
+    "group": "Skupina",
+    "community": "Komunita"
   },
   "general": {
-    "download": "Download",
+    "download": "Stáhnout",
     "whitepaper": "Whitepaper",
     "litepaper": "Litepaper",
-    "messages": "Messages",
+    "messages": "Zprávy",
     "metadata": "Metadata",
-    "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service",
-    "other": "Other"
+    "privacyPolicy": "Zásady ochrany osobních údajů",
+    "termsOfService": "Podmínky služby",
+    "other": "Další"
   },
   "navigation": {
     "blog": "Blog",
-    "resources": "Resources",
-    "docs": "Docs",
-    "network": "Network",
-    "help": "Help",
+    "resources": "Zdroje",
+    "docs": "Dokumenty",
+    "network": "Síť",
+    "help": "Nápověda",
     "faq": "FAQ",
-    "support": "Support",
+    "support": "Podpora",
     "aria": {
-      "whitepaper": "Link to {appName} Whitepaper",
-      "litepaper": "Link to {appName} Litepaper",
-      "sessionToken": "Link to {appName} Token website",
-      "support": "Link to {appName} Support via Zendesk",
-      "iconButtonOpen": "Open navigation menu",
-      "iconButtonClose": "Close navigation menu",
-      "downloadButton": "Link to {appName} download"
+      "whitepaper": "Odkaz na whitepaper {appName}",
+      "litepaper": "Odkaz na litepaper {appName}",
+      "sessionToken": "Odkaz na stránku tokenu {appName}",
+      "support": "Odkaz na podporu {appName} přes Zendesk",
+      "iconButtonOpen": "Otevřít navigační menu",
+      "iconButtonClose": "Zavřít navigační menu",
+      "downloadButton": "Odkaz na stažení {appName}"
     }
   },
   "footer": {
-    "about": "About",
-    "mediaKit": "Media Kit",
-    "transparencyReport": "Transparency Report",
-    "foundation": "Foundation",
-    "appSupport": "{appName} Support",
-    "socials": "Socials",
+    "about": "Info",
+    "mediaKit": "Mediální sada",
+    "transparencyReport": "Zpráva o transparentnosti",
+    "foundation": "Nadace",
+    "appSupport": "Podpora {appName}",
+    "socials": "Sociální sítě",
     "aria": {
-      "socialLink": "Link to {appName} on {platform}",
-      "rssLink": "Link to RSS feed"
+      "socialLink": "Odkaz na {appName} na {platform}",
+      "rssLink": "Odkaz na RSS kanál"
     }
   },
   "languageSelection": {
-    "title": "Select your language",
-    "description": "Select your preferred language from the list below",
+    "title": "Vyberte jazyk",
+    "description": "Vyberte svůj preferovaný jazyk ze seznamu níže",
     "aria": {
-      "currentLanguage": "{language} (current language)",
-      "switchToLanguage": "Switch to {language}",
-      "currentLanguageIndicator": "(current)"
+      "currentLanguage": "{language} (aktuální jazyk)",
+      "switchToLanguage": "Přepnout na {language}",
+      "currentLanguageIndicator": "(aktuální)"
     }
   },
   "notFound": {
-    "pageNotFound": "This page doesn't seem to exist.",
-    "description": "It looks like the link pointing here was faulty."
+    "pageNotFound": "Zdá se, že tato stránka neexistuje.",
+    "description": "Zdá se, že tento odkaz byl neplatný."
   },
   "email": {
-    "heading": "Every project update, delivered straight to your inbox.",
-    "subheading": "Expect an email about once a month.",
-    "placeholder": "Your Email",
-    "submitSuccessConfirm": "Thanks! Check your inbox to confirm your subscription.",
+    "heading": "Každá aktualizace projektu přímo do vaší schránky.",
+    "subheading": "Očekávejte e-mail přibližně jednou měsíčně.",
+    "placeholder": "Váš e-mail",
+    "submitSuccessConfirm": "Díky! Zkontrolujte svou schránku a potvrďte odběr.",
     "button": {
-      "text": "Sign Up"
+      "text": "Přihlásit se"
     },
-    "joinCommunity": "Join the <button>{appName} {featureCommunity}</button> and meet the vibrant group of people building, running, and using Session."
+    "joinCommunity": "Připojte se k <button>{appName} {featureCommunity}</button> a potkejte živou komunitu lidí, kteří {appName} vyvíjejí, provozují a používají."
   },
   "landing": {
     "hero": {
-      "format": "Send {glitchText} Not Metadata.",
-      "tag": "Find your freedom with {appName}",
-      "glitchTextPrimary": "Messages,",
-      "glitchTextGlitch": "Encrypted"
+      "heading": "Posílejte <glitch>zprávy,</glitch> ne metadata.",
+      "tag": "Objevte svobodu s {appName}",
+      "glitchTextGlitch": "Šifrováno"
     },
     "about": {
-      "title": "What is {appName}?",
-      "content": "{appName} is an <span>end-to-end</span> encrypted messenger that protects your <span>personal</span> data. Take back control with a messaging app designed, built, and operated by a <span>global</span> community of <span>privacy</span> experts."
+      "title": "Co je {appName}?",
+      "content": "{appName} je <span>koncově</span> šifrovaný messenger, který chrání vaše <span>osobní</span> údaje. Znovu získejte kontrolu s aplikací navrženou, vytvořenou a provozovanou <span>globální</span> komunitou odborníků na <span>soukromí</span>."
     },
     "benefits": {
-      "title": "Benefits",
+      "title": "Výhody",
       "1": {
-        "heading": "No Phone Numbers",
-        "content": "Protect your identity with {appNamePossessive} {featureAccountIds}.<br></br>No phone number or email required to sign up."
+        "heading": "Žádná telefonní čísla",
+        "content": "Chraňte svou identitu pomocí {featureAccountIds}.<br></br>K registraci není třeba zadávat telefonní číslo ani e-mailovou adresu."
       },
       "2": {
-        "heading": "No Data Breaches",
-        "content": "{appName} doesn’t collect data,<br></br>so there’s nothing to leak."
+        "heading": "Žádné úniky dat",
+        "content": "{appName} neshromažďuje žádná data,<br></br>takže nemá co uniknout."
       },
       "3": {
-        "heading": "Safe Paths",
-        "content": "Onion-routed paths protect your conversations<br></br>from hackers and eavesdroppers."
+        "heading": "Bezpečné cesty",
+        "content": "Trasy skrze Onion chrání vaše konverzace<br></br>před hackery a odposlechy."
       },
       "4": {
-        "heading": "Open Source",
-        "content": "{appNamePossessive} code has nothing to hide. Anyone can<br></br>view, audit, and contribute."
+        "heading": "Otevřený zdrojový kód",
+        "content": "{appName} nemá co skrývat. Kdokoli může<br></br>zobrazit, provést audit a přispět k jeho kódu. "
       },
       "5": {
-        "heading": "People Powered",
-        "content": "Thousands of {featureNodes} run by a global community.<br></br>{appName} is by the people, for the people."
+        "heading": "Síla komunity",
+        "content": "Tisíce {featureNodes} provozovaných globální komunitou.<br></br>{appName} je od lidí, pro lidi."
       },
       "6": {
-        "heading": "No Trackers",
-        "content": "Your data is never collected, never tracked, and<br></br>never sold to third parties."
+        "heading": "Bez sledování",
+        "content": "Vaše data nejsou nikdy sbírána, sledována ani<br></br>prodávána třetím stranám."
       }
     },
     "features": {
-      "title": "Features",
-      "heading": "Enjoy the features you love and the security you need.",
+      "title": "Funkce",
+      "heading": "Užijte si oblíbené funkce a bezpečnost, kterou potřebujete.",
       "1": {
-        "heading": "Speak freely",
-        "content": "Only you and the person you are speaking to can ever see your messages. Enjoy the feeling of freedom with end-to-end encryption and disappearing messages."
+        "heading": "Mluvte svobodně",
+        "content": "Vaše zprávy vidíte jen vy a osoba, se kterou komunikujete. Užijte si pocit svobody díky end‑to‑end šifrování a mizejícím zprávám."
       },
       "2": {
-        "heading": "Stay in control",
-        "content": "You are in control of your messages from start to finish. Whether it’s managing your own encryption keys or choosing a custom theme—Session puts you in charge."
+        "heading": "Mějte kontrolu",
+        "content": "Máte kontrolu nad svými zprávami od začátku do konce. Ať už jde o správu vlastních šifrovacích klíčů nebo výběr vlastního vzhledu—Session vám dává kontrolu."
       },
       "3": {
-        "heading": "Keep up with your crowd",
-        "content": "Whether you’re catching up with close friends or organizing a major event, it’s effortless with secure {featureGroup} and {featureCommunity} (100+ members) chats."
+        "heading": "Zůstaňte v kontaktu se skupinou",
+        "content": "Ať už doháníte novinky s přáteli nebo organizujete velkou akci, s bezpečnými {featureGroup} a {featureCommunity} (100+ členů) konverzacemi to jde snadno."
       }
     }
   },
   "redirect": {
-    "heading": "Redirecting...",
-    "content": "Click <button>here</button> to return to the previous page."
+    "heading": "Přesměrování...",
+    "content": "Klikněte <button>zde</button> pro návrat na předchozí stránku."
   },
   "blog": {
-    "readMore": "Read More",
-    "morePosts": "More posts"
+    "readMore": "Další informace",
+    "morePosts": "Další příspěvky"
   },
   "download": {
-    "heading": "Download {appName} for",
-    "mobile": "Mobile",
-    "desktop": "Desktop",
-    "verifySignatures": "Verify Signatures: {platforms}",
-    "releaseNotes": "Release Notes: {platforms}"
+    "heading": "Stáhněte si {appName} pro",
+    "mobile": "Mobil",
+    "desktop": "Počítač",
+    "verifySignatures": "Ověřte podpisy: {platforms}",
+    "releaseNotes": "Poznámky k vydání: {platforms}"
   },
   "imageAlt": {
-    "hero": "mobile encrypted private messaging app ui showcase",
-    "appLaptop": "encrypted private messaging app running on a macbook pro",
-    "appMobile": "encrypted private messaging app running on an iphone"
+    "hero": "uživatelské rozhraní šifrované aplikace pro soukromé zprávy na mobilu",
+    "appLaptop": "šifrovaná aplikace pro soukromé zprávy běžící na MacBooku Pro",
+    "appMobile": "šifrovaná aplikace pro soukromé zprávy běžící na iPhonu"
   },
   "metadata": {
     "default": {
-      "titleLayout": "{title} - {appName} Private Messenger",
-      "title": "{appName} | Send Messages, Not Metadata. | Private Messenger",
-      "description": "{appName} is a private messenger that aims to remove any chance of metadata collection by routing all messages through an onion routing network."
+      "titleLayout": "{title} - {appName} Soukromý komunikátor",
+      "title": "{appName} | Posílejte zprávy, ne metadata. | Soukromý komunikátor",
+      "description": "{appName} je soukromý komunikátor, který se snaží znemožnit sběr metadat směrováním všech zpráv přes onion síť."
     },
     "download": {
-      "title": "Download",
-      "description": "Download {appName} Today | {appName} is an end-to-end encrypted messenger that removes sensitive metadata collection for all operating systems."
+      "title": "Stáhnout",
+      "description": "Stáhněte si {appName} ještě dnes | {appName} je komunikátor s end-to-end šifrováním, který eliminuje sběr citlivých metadat pro všechny operační systémy."
     },
     "faq": {
-      "title": "Frequently Asked Questions",
-      "description": "{appNamePossessive} FAQ. Find answers to some of the most frequently asked questions about {appName} — info on the team, the tech, and the technicalities."
+      "title": "Často kladené dotazy",
+      "description": "Najděte odpovědi na některé z nejčastěji kladených otázek týkajících se {appName}."
     },
     "litepaper": {
-      "description": "{appName} is a decentralised messenger that supports completely private, secure, and anonymous communications."
+      "description": "{appName} je decentralizovaný komunikátor, který podporuje zcela soukromou, bezpečnou a anonymní komunikaci.",
+      "title": "{appName} Litepaper: Posílejte zprávy, ne metadata"
     },
     "whitepaper": {
-      "description": "{appName} is a decentralised messenger that supports completely private, secure, and anonymous communications."
+      "description": "{appName} je decentralizovaný komunikátor, který podporuje zcela soukromou, bezpečnou a anonymní komunikaci.",
+      "title": "{appName} Whitepaper: Koncově šifrovaná komunikace s minimálním únikem metadat"
     },
     "community": {
       "title": "{appName} {featureCommunity}",
-      "description": "Join the {appName} {featureCommunity} and meet the vibrant group of people building, running, and using {appName}."
+      "description": "Přidejte se k {appName} {featureCommunity} a poznejte živou komunitu lidí, kteří {appName} vytvářejí, provozují a používají."
     },
     "blog": {
       "title": "Blog",
-      "description": "View the {appName} Blogs. | {appName} is an end-to-end encrypted messenger that removes sensitive metadata collection."
+      "description": "Prohlédněte si blogy {appName}. | {appName} je komunikátor s end‑to‑end šifrováním, který eliminuje sběr citlivých metadat."
     }
   }
 }

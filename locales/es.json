@@ -1,175 +1,176 @@
 {
   "feature": {
-    "accountIds": "Account IDs",
-    "nodes": "nodes",
-    "group": "Group",
-    "community": "Community"
+    "accountIds": "ID de cuenta",
+    "nodes": "nodos",
+    "group": "Grupo",
+    "community": "Comunidad"
   },
   "general": {
-    "download": "Download",
-    "whitepaper": "Whitepaper",
-    "litepaper": "Litepaper",
-    "messages": "Messages",
-    "metadata": "Metadata",
-    "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service",
-    "other": "Other"
+    "download": "Descargar",
+    "whitepaper": "Documento informativo",
+    "litepaper": "Documento resumido",
+    "messages": "Mensajes",
+    "metadata": "Metadatos",
+    "privacyPolicy": "Política de privacidad",
+    "termsOfService": "Términos del servicio",
+    "other": "Otro"
   },
   "navigation": {
     "blog": "Blog",
-    "resources": "Resources",
-    "docs": "Docs",
-    "network": "Network",
-    "help": "Help",
-    "faq": "FAQ",
-    "support": "Support",
+    "resources": "Recursos",
+    "docs": "Documentos",
+    "network": "Red",
+    "help": "Ayuda",
+    "faq": "Preguntas Frecuentes",
+    "support": "Soporte",
     "aria": {
-      "whitepaper": "Link to {appName} Whitepaper",
-      "litepaper": "Link to {appName} Litepaper",
-      "sessionToken": "Link to {appName} Token website",
-      "support": "Link to {appName} Support via Zendesk",
-      "iconButtonOpen": "Open navigation menu",
-      "iconButtonClose": "Close navigation menu",
-      "downloadButton": "Link to {appName} download"
+      "whitepaper": "Enlace al Documento informativo de {appName}",
+      "litepaper": "Enlace al Documento resumido de {appName}",
+      "sessionToken": "Enlace al sitio web del Token de {appName}",
+      "support": "Enlace al Soporte de {appName} vía Zendesk",
+      "iconButtonOpen": "Abrir menú de navegación",
+      "iconButtonClose": "Cerrar menú de navegación",
+      "downloadButton": "Enlace para descargar {appName}"
     }
   },
   "footer": {
-    "about": "About",
-    "mediaKit": "Media Kit",
-    "transparencyReport": "Transparency Report",
-    "foundation": "Foundation",
-    "appSupport": "{appName} Support",
-    "socials": "Socials",
+    "about": "Acerca de",
+    "mediaKit": "Kit de medios",
+    "transparencyReport": "Informe de transparencia",
+    "foundation": "Fundación",
+    "appSupport": "Soporte de {appName}",
+    "socials": "Redes sociales",
     "aria": {
-      "socialLink": "Link to {appName} on {platform}",
-      "rssLink": "Link to RSS feed"
+      "socialLink": "Enlace a {appName} en {platform}",
+      "rssLink": "Enlace al canal RSS"
     }
   },
   "languageSelection": {
-    "title": "Select your language",
-    "description": "Select your preferred language from the list below",
+    "title": "Selecciona tu idioma",
+    "description": "Selecciona tu idioma preferido de la lista a continuación",
     "aria": {
-      "currentLanguage": "{language} (current language)",
-      "switchToLanguage": "Switch to {language}",
-      "currentLanguageIndicator": "(current)"
+      "currentLanguage": "{language} (idioma actual)",
+      "switchToLanguage": "Cambiar a {language}",
+      "currentLanguageIndicator": "(actual)"
     }
   },
   "notFound": {
-    "pageNotFound": "This page doesn't seem to exist.",
-    "description": "It looks like the link pointing here was faulty."
+    "pageNotFound": "Parece que esta página no existe.",
+    "description": "Parece que el enlace que apunta aquí es incorrecto."
   },
   "email": {
-    "heading": "Every project update, delivered straight to your inbox.",
-    "subheading": "Expect an email about once a month.",
-    "placeholder": "Your Email",
-    "submitSuccessConfirm": "Thanks! Check your inbox to confirm your subscription.",
+    "heading": "Todas las actualizaciones del proyecto, directamente en tu bandeja de entrada.",
+    "subheading": "Recibirás un correo aproximadamente una vez al mes.",
+    "placeholder": "Tu correo electrónico",
+    "submitSuccessConfirm": "¡Gracias! Revisa tu bandeja de entrada para confirmar tu suscripción.",
     "button": {
-      "text": "Sign Up"
+      "text": "Registrarse"
     },
-    "joinCommunity": "Join the <button>{appName} {featureCommunity}</button> and meet the vibrant group of people building, running, and using Session."
+    "joinCommunity": "Únete a la <button>{appName} {featureCommunity}</button> y conoce al emocionante grupo de personas que construyen, operan y usan Session."
   },
   "landing": {
     "hero": {
-      "format": "Send {glitchText} Not Metadata.",
-      "tag": "Find your freedom with {appName}",
-      "glitchTextPrimary": "Messages,",
-      "glitchTextGlitch": "Encrypted"
+      "heading": "Envía <glitch>Mensajes,</glitch> No Metadatos.",
+      "tag": "Encuentra tu libertad con {appName}",
+      "glitchTextGlitch": "Cifrado"
     },
     "about": {
-      "title": "What is {appName}?",
-      "content": "{appName} is an <span>end-to-end</span> encrypted messenger that protects your <span>personal</span> data. Take back control with a messaging app designed, built, and operated by a <span>global</span> community of <span>privacy</span> experts."
+      "title": "¿Qué es {appName}?",
+      "content": "{appName} es una aplicación de mensajería con cifrado de <span>extremo a extremo</span> que protege tus datos <span>personales</span>. Recupera el control con una app de mensajería diseñada, desarrollada y operada por una comunidad <span>global</span> de expertos en <span>privacidad</span>."
     },
     "benefits": {
-      "title": "Benefits",
+      "title": "Beneficios",
       "1": {
-        "heading": "No Phone Numbers",
-        "content": "Protect your identity with {appNamePossessive} {featureAccountIds}.<br></br>No phone number or email required to sign up."
+        "heading": "Sin números de teléfono",
+        "content": "Protege tu identidad con {featureAccountIds}.<br></br>No es necesario ningún número de teléfono o correo electrónico para registrarte."
       },
       "2": {
-        "heading": "No Data Breaches",
-        "content": "{appName} doesn’t collect data,<br></br>so there’s nothing to leak."
+        "heading": "Sin filtraciones de datos",
+        "content": "{appName} no recopila datos,<br></br>así que no hay nada que filtrar."
       },
       "3": {
-        "heading": "Safe Paths",
-        "content": "Onion-routed paths protect your conversations<br></br>from hackers and eavesdroppers."
+        "heading": "Rutas seguras",
+        "content": "Las rutas con enrutamiento en cebolla protegen tus conversaciones<br></br>de hackers y espías."
       },
       "4": {
-        "heading": "Open Source",
-        "content": "{appNamePossessive} code has nothing to hide. Anyone can<br></br>view, audit, and contribute."
+        "heading": "Código abierto",
+        "content": "{appName} no tiene nada que ocultar. Cualquiera puede<br></br>ver, examinar y contribuir a su código. "
       },
       "5": {
-        "heading": "People Powered",
-        "content": "Thousands of {featureNodes} run by a global community.<br></br>{appName} is by the people, for the people."
+        "heading": "Impulsado por la comunidad",
+        "content": "Miles de {featureNodes} gestionados por una comunidad global.<br></br>{appName} está hecho por y para la comunidad."
       },
       "6": {
-        "heading": "No Trackers",
-        "content": "Your data is never collected, never tracked, and<br></br>never sold to third parties."
+        "heading": "Sin rastreadores",
+        "content": "Tus datos nunca se recopilan, nunca se rastrean,<br></br>y nunca se venden a terceros."
       }
     },
     "features": {
-      "title": "Features",
-      "heading": "Enjoy the features you love and the security you need.",
+      "title": "Características",
+      "heading": "Disfruta de las funciones que te encantan y de la seguridad que necesitas.",
       "1": {
-        "heading": "Speak freely",
-        "content": "Only you and the person you are speaking to can ever see your messages. Enjoy the feeling of freedom with end-to-end encryption and disappearing messages."
+        "heading": "Habla libremente",
+        "content": "Solo tú y la persona con la que hablas pueden ver tus mensajes. Disfruta la sensación de libertad con cifrado de extremo a extremo y mensajes que desaparecen."
       },
       "2": {
-        "heading": "Stay in control",
-        "content": "You are in control of your messages from start to finish. Whether it’s managing your own encryption keys or choosing a custom theme—Session puts you in charge."
+        "heading": "Mantén el control",
+        "content": "Tienes el control de tus mensajes de principio a fin. Ya sea administrando tus propias claves de cifrado o eligiendo un tema personalizado—Session te pone al mando."
       },
       "3": {
-        "heading": "Keep up with your crowd",
-        "content": "Whether you’re catching up with close friends or organizing a major event, it’s effortless with secure {featureGroup} and {featureCommunity} (100+ members) chats."
+        "heading": "Sigue el ritmo de tu grupo",
+        "content": "Ya sea poniéndote al día con amigos cercanos u organizando un gran evento, es fácil con chats seguros de {featureGroup} y {featureCommunity} (100+ miembros)."
       }
     }
   },
   "redirect": {
-    "heading": "Redirecting...",
-    "content": "Click <button>here</button> to return to the previous page."
+    "heading": "Redirigiendo...",
+    "content": "Haz clic <button>aquí</button> para volver a la página anterior."
   },
   "blog": {
-    "readMore": "Read More",
-    "morePosts": "More posts"
+    "readMore": "Leer Más",
+    "morePosts": "Más publicaciones"
   },
   "download": {
-    "heading": "Download {appName} for",
-    "mobile": "Mobile",
-    "desktop": "Desktop",
-    "verifySignatures": "Verify Signatures: {platforms}",
-    "releaseNotes": "Release Notes: {platforms}"
+    "heading": "Descargar {appName} para",
+    "mobile": "Móvil",
+    "desktop": "Escritorio",
+    "verifySignatures": "Verificar firmas: {platforms}",
+    "releaseNotes": "Notas de la versión: {platforms}"
   },
   "imageAlt": {
-    "hero": "mobile encrypted private messaging app ui showcase",
-    "appLaptop": "encrypted private messaging app running on a macbook pro",
-    "appMobile": "encrypted private messaging app running on an iphone"
+    "hero": "interfaz de app de mensajería privada cifrada en el móvil",
+    "appLaptop": "app de mensajería privada cifrada ejecutándose en una MacBook Pro",
+    "appMobile": "app de mensajería privada cifrada ejecutándose en un iPhone"
   },
   "metadata": {
     "default": {
-      "titleLayout": "{title} - {appName} Private Messenger",
-      "title": "{appName} | Send Messages, Not Metadata. | Private Messenger",
-      "description": "{appName} is a private messenger that aims to remove any chance of metadata collection by routing all messages through an onion routing network."
+      "titleLayout": "{title} - {appName} Mensajero Privado",
+      "title": "{appName} | Envía Mensajes, no Metadatos. | Mensajería Privada",
+      "description": "{appName} es una app de mensajería privada que busca eliminar cualquier posibilidad de recopilación de metadatos, enrutando todos los mensajes a través de una red con enrutamiento en cebolla."
     },
     "download": {
-      "title": "Download",
-      "description": "Download {appName} Today | {appName} is an end-to-end encrypted messenger that removes sensitive metadata collection for all operating systems."
+      "title": "Descargar",
+      "description": "Descarga {appName} hoy | {appName} es una app de mensajería cifrada de extremo a extremo que elimina la recopilación de metadatos sensibles para todos los sistemas operativos."
     },
     "faq": {
-      "title": "Frequently Asked Questions",
-      "description": "{appNamePossessive} FAQ. Find answers to some of the most frequently asked questions about {appName} — info on the team, the tech, and the technicalities."
+      "title": "Preguntas Frecuentes",
+      "description": "Encuentra respuestas a algunas de las preguntas más frecuentes sobre {appName}."
     },
     "litepaper": {
-      "description": "{appName} is a decentralised messenger that supports completely private, secure, and anonymous communications."
+      "description": "{appName} es una app de mensajería descentralizada que admite comunicaciones completamente privadas, seguras y anónimas.",
+      "title": "Documento resumido de {appName}: Envía mensajes, no metadatos"
     },
     "whitepaper": {
-      "description": "{appName} is a decentralised messenger that supports completely private, secure, and anonymous communications."
+      "description": "{appName} es una app de mensajería descentralizada que admite comunicaciones completamente privadas, seguras y anónimas.",
+      "title": "Documento informativo de {appName}: Conversaciones cifradas de extremo a extremo minimizando la filtración de metadatos"
     },
     "community": {
       "title": "{appName} {featureCommunity}",
-      "description": "Join the {appName} {featureCommunity} and meet the vibrant group of people building, running, and using {appName}."
+      "description": "Únete a la {featureCommunity} de {appName} y conoce al emocionante grupo de personas que construyen, ejecutan y usan {appName}."
     },
     "blog": {
       "title": "Blog",
-      "description": "View the {appName} Blogs. | {appName} is an end-to-end encrypted messenger that removes sensitive metadata collection."
+      "description": "Consulta los blogs de {appName}. | {appName} es una app de mensajería cifrada de extremo a extremo que elimina la recopilación de metadatos sensibles."
     }
   }
 }

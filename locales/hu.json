@@ -1,175 +1,176 @@
 {
   "feature": {
-    "accountIds": "Account IDs",
-    "nodes": "nodes",
-    "group": "Group",
-    "community": "Community"
+    "accountIds": "Fiókazonosítók",
+    "nodes": "csomópontok",
+    "group": "Csoport",
+    "community": "Közösség"
   },
   "general": {
-    "download": "Download",
-    "whitepaper": "Whitepaper",
+    "download": "Letöltés",
+    "whitepaper": "Fehér könyv",
     "litepaper": "Litepaper",
-    "messages": "Messages",
-    "metadata": "Metadata",
-    "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service",
-    "other": "Other"
+    "messages": "Üzenetek",
+    "metadata": "Metaadatok",
+    "privacyPolicy": "Adatvédelmi szabályzat",
+    "termsOfService": "Szolgáltatási feltételek",
+    "other": "Egyéb"
   },
   "navigation": {
     "blog": "Blog",
-    "resources": "Resources",
-    "docs": "Docs",
-    "network": "Network",
-    "help": "Help",
-    "faq": "FAQ",
-    "support": "Support",
+    "resources": "Erőforrások",
+    "docs": "Dokumentáció",
+    "network": "Hálózat",
+    "help": "Segítség",
+    "faq": "GYIK",
+    "support": "Támogatás",
     "aria": {
-      "whitepaper": "Link to {appName} Whitepaper",
-      "litepaper": "Link to {appName} Litepaper",
-      "sessionToken": "Link to {appName} Token website",
-      "support": "Link to {appName} Support via Zendesk",
-      "iconButtonOpen": "Open navigation menu",
-      "iconButtonClose": "Close navigation menu",
-      "downloadButton": "Link to {appName} download"
+      "whitepaper": "Hivatkozás a(z) {appName} fehér könyvére",
+      "litepaper": "Hivatkozás a(z) {appName} litepaperére",
+      "sessionToken": "Hivatkozás a(z) {appName} token weboldalára",
+      "support": "Kapcsolat a(z) {appName} ügyfélszolgálattal a Zendesk-en keresztül",
+      "iconButtonOpen": "Navigációs menü megnyitása",
+      "iconButtonClose": "Navigációs menü bezárása",
+      "downloadButton": "Hivatkozás a(z) {appName} letöltéséhez"
     }
   },
   "footer": {
-    "about": "About",
-    "mediaKit": "Media Kit",
-    "transparencyReport": "Transparency Report",
-    "foundation": "Foundation",
-    "appSupport": "{appName} Support",
-    "socials": "Socials",
+    "about": "Névjegy",
+    "mediaKit": "Médiacsomag",
+    "transparencyReport": "Átláthatósági jelentés",
+    "foundation": "Alapítvány",
+    "appSupport": "{appName} támogatás",
+    "socials": "Közösségi oldalak",
     "aria": {
-      "socialLink": "Link to {appName} on {platform}",
-      "rssLink": "Link to RSS feed"
+      "socialLink": "Hivatkozás a(z) {platform} oldalán elérhető {appName}-re",
+      "rssLink": "Hivatkozás az RSS-hírcsatornára"
     }
   },
   "languageSelection": {
-    "title": "Select your language",
-    "description": "Select your preferred language from the list below",
+    "title": "Válaszd ki a nyelved",
+    "description": "Válaszd ki az alábbi listából a kívánt nyelvet",
     "aria": {
-      "currentLanguage": "{language} (current language)",
-      "switchToLanguage": "Switch to {language}",
-      "currentLanguageIndicator": "(current)"
+      "currentLanguage": "{language} (jelenlegi nyelv)",
+      "switchToLanguage": "Váltás erre: {language}",
+      "currentLanguageIndicator": "(jelenleg)"
     }
   },
   "notFound": {
-    "pageNotFound": "This page doesn't seem to exist.",
-    "description": "It looks like the link pointing here was faulty."
+    "pageNotFound": "Úgy tűnik, ez az oldal nem létezik.",
+    "description": "Úgy tűnik, hogy a hivatkozás hibás volt."
   },
   "email": {
-    "heading": "Every project update, delivered straight to your inbox.",
-    "subheading": "Expect an email about once a month.",
-    "placeholder": "Your Email",
-    "submitSuccessConfirm": "Thanks! Check your inbox to confirm your subscription.",
+    "heading": "Minden projektfrissítés, közvetlenül az e-mail fiókodba.",
+    "subheading": "Körülbelül havonta egyszer számíthatsz egy e-mailre.",
+    "placeholder": "E-mail címed",
+    "submitSuccessConfirm": "Köszönjük! Ellenőrizd postafiókodat a feliratkozás megerősítéséhez.",
     "button": {
-      "text": "Sign Up"
+      "text": "Feliratkozás"
     },
-    "joinCommunity": "Join the <button>{appName} {featureCommunity}</button> and meet the vibrant group of people building, running, and using Session."
+    "joinCommunity": "Csatlakozz a <button>{appName} {featureCommunity}</button> közösséghez, és ismerd meg azokat az embereket, akik építik, működtetik és használják a Sessiont."
   },
   "landing": {
     "hero": {
-      "format": "Send {glitchText} Not Metadata.",
-      "tag": "Find your freedom with {appName}",
-      "glitchTextPrimary": "Messages,",
-      "glitchTextGlitch": "Encrypted"
+      "heading": "Send <glitch>Messages,</glitch> Not Metadata.",
+      "tag": "Találd meg a szabadságodat a(z) {appName} segítségével",
+      "glitchTextGlitch": "Titkosítva"
     },
     "about": {
-      "title": "What is {appName}?",
-      "content": "{appName} is an <span>end-to-end</span> encrypted messenger that protects your <span>personal</span> data. Take back control with a messaging app designed, built, and operated by a <span>global</span> community of <span>privacy</span> experts."
+      "title": "Mi az a {appName}?",
+      "content": "A(z) {appName} egy <span>végponttól végpontig</span> titkosított üzenetküldő alkalmazás, amely védi a <span>személyes</span> adataidat. Szerezd vissza az irányítást egy olyan üzenetküldő alkalmazással, amelyet egy <span>világszintű</span> <span>adatvédelmi</span> szakértőkből álló közösség tervezett, fejlesztett és üzemeltet."
     },
     "benefits": {
-      "title": "Benefits",
+      "title": "Előnyök",
       "1": {
-        "heading": "No Phone Numbers",
-        "content": "Protect your identity with {appNamePossessive} {featureAccountIds}.<br></br>No phone number or email required to sign up."
+        "heading": "Nincs telefonszám",
+        "content": "Protect your identity with {featureAccountIds}.<br></br>No phone number or email required to sign up."
       },
       "2": {
-        "heading": "No Data Breaches",
-        "content": "{appName} doesn’t collect data,<br></br>so there’s nothing to leak."
+        "heading": "Nincsenek adatszivárgások",
+        "content": "A(z) {appName} nem gyűjt adatokat,<br></br>így nincs mit kiszivárogtatni."
       },
       "3": {
-        "heading": "Safe Paths",
-        "content": "Onion-routed paths protect your conversations<br></br>from hackers and eavesdroppers."
+        "heading": "Biztonságos útvonalak",
+        "content": "A hagymahálózaton keresztüli útvonalak védik a beszélgetéseidet<br></br>a hackerekkel és lehallgatókkal szemben."
       },
       "4": {
-        "heading": "Open Source",
-        "content": "{appNamePossessive} code has nothing to hide. Anyone can<br></br>view, audit, and contribute."
+        "heading": "Nyílt forráskódú",
+        "content": "{appName} has nothing to hide. Anyone can<br></br>view, audit, and contribute to its code. "
       },
       "5": {
-        "heading": "People Powered",
-        "content": "Thousands of {featureNodes} run by a global community.<br></br>{appName} is by the people, for the people."
+        "heading": "Közösségi működtetésű",
+        "content": "Több ezer {featureNodes} működik világszerte egy globális közösség által.<br></br>A(z) {appName} emberek által, embereknek készült."
       },
       "6": {
-        "heading": "No Trackers",
-        "content": "Your data is never collected, never tracked, and<br></br>never sold to third parties."
+        "heading": "Nincsenek követők",
+        "content": "Az adataidat sosem gyűjtjük, nem követjük nyomon,<br></br>és sosem adjuk el harmadik feleknek."
       }
     },
     "features": {
-      "title": "Features",
-      "heading": "Enjoy the features you love and the security you need.",
+      "title": "Funkciók",
+      "heading": "Élvezd a kedvenc funkcióidat és a szükséges biztonságot.",
       "1": {
-        "heading": "Speak freely",
-        "content": "Only you and the person you are speaking to can ever see your messages. Enjoy the feeling of freedom with end-to-end encryption and disappearing messages."
+        "heading": "Beszélj szabadon",
+        "content": "Csak te és a beszélgetőpartnered láthatjátok az üzeneteket. Élvezd a szabadság érzését végpontok közötti titkosítással és eltűnő üzenetekkel."
       },
       "2": {
-        "heading": "Stay in control",
-        "content": "You are in control of your messages from start to finish. Whether it’s managing your own encryption keys or choosing a custom theme—Session puts you in charge."
+        "heading": "Maradj irányítás alatt",
+        "content": "Az üzeneteid teljes mértékben a te irányításod alatt állnak. Legyen szó a saját titkosítási kulcsaid kezeléséről vagy egyedi téma kiválasztásáról – a Session nálad hagyja az irányítást."
       },
       "3": {
-        "heading": "Keep up with your crowd",
-        "content": "Whether you’re catching up with close friends or organizing a major event, it’s effortless with secure {featureGroup} and {featureCommunity} (100+ members) chats."
+        "heading": "Tartsd a lépést a társaságoddal",
+        "content": "Akár barátokkal csevegsz vagy nagyszabású eseményt szervezel, biztonságos {featureGroup} és {featureCommunity} (100+ tag) csevegésekkel mindez gyerekjáték."
       }
     }
   },
   "redirect": {
-    "heading": "Redirecting...",
-    "content": "Click <button>here</button> to return to the previous page."
+    "heading": "Átirányítás...",
+    "content": "Kattints <button>ide</button> az előző oldalra való visszatéréshez."
   },
   "blog": {
-    "readMore": "Read More",
-    "morePosts": "More posts"
+    "readMore": "Részletek",
+    "morePosts": "További bejegyzések"
   },
   "download": {
-    "heading": "Download {appName} for",
-    "mobile": "Mobile",
-    "desktop": "Desktop",
-    "verifySignatures": "Verify Signatures: {platforms}",
-    "releaseNotes": "Release Notes: {platforms}"
+    "heading": "Töltsd le a(z) {appName} alkalmazást",
+    "mobile": "Mobil",
+    "desktop": "Asztali gép",
+    "verifySignatures": "Aláírások ellenőrzése: {platforms}",
+    "releaseNotes": "Kiadási megjegyzések: {platforms}"
   },
   "imageAlt": {
-    "hero": "mobile encrypted private messaging app ui showcase",
-    "appLaptop": "encrypted private messaging app running on a macbook pro",
-    "appMobile": "encrypted private messaging app running on an iphone"
+    "hero": "mobil titkosított privát üzenetküldő alkalmazás felhasználói felület bemutató",
+    "appLaptop": "titkosított privát üzenetküldő alkalmazás MacBook Pro-n fut",
+    "appMobile": "titkosított privát üzenetküldő alkalmazás iPhone-on fut"
   },
   "metadata": {
     "default": {
-      "titleLayout": "{title} - {appName} Private Messenger",
-      "title": "{appName} | Send Messages, Not Metadata. | Private Messenger",
-      "description": "{appName} is a private messenger that aims to remove any chance of metadata collection by routing all messages through an onion routing network."
+      "titleLayout": "{title} – {appName} Privát Messenger",
+      "title": "{appName} | Küldj üzeneteket, ne metaadatokat. | Privát Messenger",
+      "description": "A(z) {appName} egy privát üzenetküldő, amely célja, hogy megszüntesse a metaadatok gyűjtésének lehetőségét azáltal, hogy minden üzenetet hagymahálózaton keresztül továbbít."
     },
     "download": {
-      "title": "Download",
-      "description": "Download {appName} Today | {appName} is an end-to-end encrypted messenger that removes sensitive metadata collection for all operating systems."
+      "title": "Letöltés",
+      "description": "Töltsd le a(z) {appName} még ma | A(z) {appName} egy végpontok között titkosított üzenetküldő, amely minden operációs rendszeren kiküszöböli az érzékeny metaadatok gyűjtését."
     },
     "faq": {
-      "title": "Frequently Asked Questions",
-      "description": "{appNamePossessive} FAQ. Find answers to some of the most frequently asked questions about {appName} — info on the team, the tech, and the technicalities."
+      "title": "Gyakran Ismételt Kérdések",
+      "description": "Find answers to some of the most frequently asked questions about {appName}."
     },
     "litepaper": {
-      "description": "{appName} is a decentralised messenger that supports completely private, secure, and anonymous communications."
+      "description": "A(z) {appName} egy decentralizált üzenetküldő, amely teljesen privát, biztonságos és névtelen kommunikációt tesz lehetővé.",
+      "title": "{appName} Litepaper: Send Messages, Not Metadata"
     },
     "whitepaper": {
-      "description": "{appName} is a decentralised messenger that supports completely private, secure, and anonymous communications."
+      "description": "A(z) {appName} egy decentralizált üzenetküldő, amely teljesen privát, biztonságos és névtelen kommunikációt tesz lehetővé.",
+      "title": "{appName} Whitepaper: End-To-End Encrypted Conversations with Minimal Metadata Leakage"
     },
     "community": {
       "title": "{appName} {featureCommunity}",
-      "description": "Join the {appName} {featureCommunity} and meet the vibrant group of people building, running, and using {appName}."
+      "description": "Csatlakozz a(z) {appName} {featureCommunity} közösségéhez, és ismerd meg azt az élénk közösséget, amely építi, működteti és használja a(z) {appName} alkalmazást."
     },
     "blog": {
       "title": "Blog",
-      "description": "View the {appName} Blogs. | {appName} is an end-to-end encrypted messenger that removes sensitive metadata collection."
+      "description": "Tekintsd meg a(z) {appName} blogokat. | A(z) {appName} egy végpontok között titkosított üzenetküldő, amely kiküszöböli az érzékeny metaadatok gyűjtését."
     }
   }
 }

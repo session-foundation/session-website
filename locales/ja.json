@@ -1,175 +1,176 @@
 {
   "feature": {
-    "accountIds": "Account IDs",
-    "nodes": "nodes",
-    "group": "Group",
-    "community": "Community"
+    "accountIds": "アカウント ID",
+    "nodes": "ノード",
+    "group": "グループ",
+    "community": "コミュニティ"
   },
   "general": {
-    "download": "Download",
-    "whitepaper": "Whitepaper",
-    "litepaper": "Litepaper",
-    "messages": "Messages",
-    "metadata": "Metadata",
-    "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service",
-    "other": "Other"
+    "download": "ダウンロード",
+    "whitepaper": "ホワイトペーパー",
+    "litepaper": "ライトペーパー",
+    "messages": "メッセージ",
+    "metadata": "メタデータ",
+    "privacyPolicy": "プライバシーポリシー",
+    "termsOfService": "利用規約",
+    "other": "その他"
   },
   "navigation": {
-    "blog": "Blog",
-    "resources": "Resources",
-    "docs": "Docs",
-    "network": "Network",
-    "help": "Help",
-    "faq": "FAQ",
-    "support": "Support",
+    "blog": "ブログ",
+    "resources": "リソース",
+    "docs": "ドキュメント",
+    "network": "ネットワーク",
+    "help": "ヘルプ",
+    "faq": "よくある質問",
+    "support": "サポート",
     "aria": {
-      "whitepaper": "Link to {appName} Whitepaper",
-      "litepaper": "Link to {appName} Litepaper",
-      "sessionToken": "Link to {appName} Token website",
-      "support": "Link to {appName} Support via Zendesk",
-      "iconButtonOpen": "Open navigation menu",
-      "iconButtonClose": "Close navigation menu",
-      "downloadButton": "Link to {appName} download"
+      "whitepaper": "{appName}のホワイトペーパーへのリンク",
+      "litepaper": "{appName}のライトペーパーへのリンク",
+      "sessionToken": "{appName}のトークンサイトへのリンク",
+      "support": "Zendesk経由の{appName}サポートへのリンク",
+      "iconButtonOpen": "ナビゲーションメニューを開く",
+      "iconButtonClose": "ナビゲーションメニューを閉じる",
+      "downloadButton": "{appName}のダウンロードへのリンク"
     }
   },
   "footer": {
-    "about": "About",
-    "mediaKit": "Media Kit",
-    "transparencyReport": "Transparency Report",
-    "foundation": "Foundation",
-    "appSupport": "{appName} Support",
-    "socials": "Socials",
+    "about": "情報",
+    "mediaKit": "メディアキット",
+    "transparencyReport": "透明性レポート",
+    "foundation": "ファウンデーション",
+    "appSupport": "{appName}サポート",
+    "socials": "ソーシャル",
     "aria": {
-      "socialLink": "Link to {appName} on {platform}",
-      "rssLink": "Link to RSS feed"
+      "socialLink": "{platform}上の{appName}へのリンク",
+      "rssLink": "RSSフィードへのリンク"
     }
   },
   "languageSelection": {
-    "title": "Select your language",
-    "description": "Select your preferred language from the list below",
+    "title": "言語を選択",
+    "description": "下記のリストからご希望の言語を選択してください",
     "aria": {
-      "currentLanguage": "{language} (current language)",
-      "switchToLanguage": "Switch to {language}",
-      "currentLanguageIndicator": "(current)"
+      "currentLanguage": "{language}（現在の言語）",
+      "switchToLanguage": "{language}に切り替える",
+      "currentLanguageIndicator": "（現在）"
     }
   },
   "notFound": {
-    "pageNotFound": "This page doesn't seem to exist.",
-    "description": "It looks like the link pointing here was faulty."
+    "pageNotFound": "このページは存在しないようです。",
+    "description": "ここへのリンクが無効のようです。"
   },
   "email": {
-    "heading": "Every project update, delivered straight to your inbox.",
-    "subheading": "Expect an email about once a month.",
-    "placeholder": "Your Email",
-    "submitSuccessConfirm": "Thanks! Check your inbox to confirm your subscription.",
+    "heading": "すべてのプロジェクト更新情報を、直接メールでお届けします。",
+    "subheading": "およそ月に1回、メールをお送りします。",
+    "placeholder": "メールアドレス",
+    "submitSuccessConfirm": "ありがとうございます！購読確認のメールを受信トレイでご確認ください。",
     "button": {
-      "text": "Sign Up"
+      "text": "登録する"
     },
-    "joinCommunity": "Join the <button>{appName} {featureCommunity}</button> and meet the vibrant group of people building, running, and using Session."
+    "joinCommunity": "<button>{appName} {featureCommunity}</button> に参加して、Sessionを構築・運用・使用する活気あるコミュニティと出会いましょう。"
   },
   "landing": {
     "hero": {
-      "format": "Send {glitchText} Not Metadata.",
-      "tag": "Find your freedom with {appName}",
-      "glitchTextPrimary": "Messages,",
-      "glitchTextGlitch": "Encrypted"
+      "heading": "<glitch>メッセージ</glitch>を送信し、メタデータは送信しないでください。",
+      "tag": "{appName}で自由を見つけよう",
+      "glitchTextGlitch": "暗号化"
     },
     "about": {
-      "title": "What is {appName}?",
-      "content": "{appName} is an <span>end-to-end</span> encrypted messenger that protects your <span>personal</span> data. Take back control with a messaging app designed, built, and operated by a <span>global</span> community of <span>privacy</span> experts."
+      "title": "{appName}とは？",
+      "content": "{appName}は、あなたの<span>個人</span>データを保護する<span>エンドツーエンド</span>の暗号化メッセンジャーです。<span>プライバシー</span>の専門家による<span>グローバル</span>なコミュニティによって設計・開発・運営されたメッセージングアプリで、コントロールを取り戻しましょう。"
     },
     "benefits": {
-      "title": "Benefits",
+      "title": "利点",
       "1": {
-        "heading": "No Phone Numbers",
-        "content": "Protect your identity with {appNamePossessive} {featureAccountIds}.<br></br>No phone number or email required to sign up."
+        "heading": "電話番号なし",
+        "content": "{featureAccountIds} であなたの身元を保護。<br></br>電話番号やメールアドレスなしで登録できます。"
       },
       "2": {
-        "heading": "No Data Breaches",
-        "content": "{appName} doesn’t collect data,<br></br>so there’s nothing to leak."
+        "heading": "データ漏洩なし",
+        "content": "{appName}はデータを収集しないため、<br></br>漏洩するものがありません。"
       },
       "3": {
-        "heading": "Safe Paths",
-        "content": "Onion-routed paths protect your conversations<br></br>from hackers and eavesdroppers."
+        "heading": "安全な経路",
+        "content": "オニオンルーティング経由の経路が<br></br>ハッカーや盗聴者から会話を守ります。"
       },
       "4": {
-        "heading": "Open Source",
-        "content": "{appNamePossessive} code has nothing to hide. Anyone can<br></br>view, audit, and contribute."
+        "heading": "オープンソース",
+        "content": "{appName} は隠すものがありません。<br></br>誰でもコードを閲覧・監査・貢献できます。 "
       },
       "5": {
-        "heading": "People Powered",
-        "content": "Thousands of {featureNodes} run by a global community.<br></br>{appName} is by the people, for the people."
+        "heading": "人々による運営",
+        "content": "世界中のコミュニティによって運営されている{featureNodes}が何千も存在します。<br></br>{appName}は人々のために、人々によって作られています。"
       },
       "6": {
-        "heading": "No Trackers",
-        "content": "Your data is never collected, never tracked, and<br></br>never sold to third parties."
+        "heading": "トラッカーなし",
+        "content": "あなたのデータは収集されず、追跡されず、<br></br>第三者に販売されることもありません。"
       }
     },
     "features": {
-      "title": "Features",
-      "heading": "Enjoy the features you love and the security you need.",
+      "title": "機能",
+      "heading": "あなたの好きな機能と必要なセキュリティを両立。",
       "1": {
-        "heading": "Speak freely",
-        "content": "Only you and the person you are speaking to can ever see your messages. Enjoy the feeling of freedom with end-to-end encryption and disappearing messages."
+        "heading": "自由に話そう",
+        "content": "あなたと相手だけがメッセージを見ることができます。エンドツーエンド暗号化とメッセージの自動消去で自由を実感しましょう。"
       },
       "2": {
-        "heading": "Stay in control",
-        "content": "You are in control of your messages from start to finish. Whether it’s managing your own encryption keys or choosing a custom theme—Session puts you in charge."
+        "heading": "自分で管理",
+        "content": "あなたのメッセージは最初から最後まであなたが管理します。暗号鍵の管理からテーマのカスタマイズまで — Sessionがコントロールをあなたに委ねます。"
       },
       "3": {
-        "heading": "Keep up with your crowd",
-        "content": "Whether you’re catching up with close friends or organizing a major event, it’s effortless with secure {featureGroup} and {featureCommunity} (100+ members) chats."
+        "heading": "仲間とつながろう",
+        "content": "親しい友人との近況報告でも、大規模イベントの運営でも、セキュアな{featureGroup}チャットや100人以上対応の{featureCommunity}チャットで簡単に実現できます。"
       }
     }
   },
   "redirect": {
-    "heading": "Redirecting...",
-    "content": "Click <button>here</button> to return to the previous page."
+    "heading": "リダイレクト中...",
+    "content": "<button>こちら</button>をクリックして前のページへ戻ってください。"
   },
   "blog": {
-    "readMore": "Read More",
-    "morePosts": "More posts"
+    "readMore": "続きを読む",
+    "morePosts": "他の記事"
   },
   "download": {
-    "heading": "Download {appName} for",
-    "mobile": "Mobile",
-    "desktop": "Desktop",
-    "verifySignatures": "Verify Signatures: {platforms}",
-    "releaseNotes": "Release Notes: {platforms}"
+    "heading": "{appName}をダウンロード",
+    "mobile": "携帯",
+    "desktop": "デスクトップ",
+    "verifySignatures": "署名を検証：{platforms}",
+    "releaseNotes": "リリースノート：{platforms}"
   },
   "imageAlt": {
-    "hero": "mobile encrypted private messaging app ui showcase",
-    "appLaptop": "encrypted private messaging app running on a macbook pro",
-    "appMobile": "encrypted private messaging app running on an iphone"
+    "hero": "モバイル暗号化プライベートメッセージングアプリのUIショーケース",
+    "appLaptop": "MacBook Proで動作中の暗号化プライベートメッセージングアプリ",
+    "appMobile": "iPhoneで動作中の暗号化プライベートメッセージングアプリ"
   },
   "metadata": {
     "default": {
-      "titleLayout": "{title} - {appName} Private Messenger",
-      "title": "{appName} | Send Messages, Not Metadata. | Private Messenger",
-      "description": "{appName} is a private messenger that aims to remove any chance of metadata collection by routing all messages through an onion routing network."
+      "titleLayout": "{title} - {appName} プライベートメッセンジャー",
+      "title": "{appName} | メッセージを送信、メタデータではなく。 | プライベートメッセンジャー",
+      "description": "{appName}は、すべてのメッセージをオニオンルーティングネットワークを通じて送信することでメタデータ収集の可能性を排除することを目的としたプライベートメッセンジャーです。"
     },
     "download": {
-      "title": "Download",
-      "description": "Download {appName} Today | {appName} is an end-to-end encrypted messenger that removes sensitive metadata collection for all operating systems."
+      "title": "ダウンロード",
+      "description": "今すぐ{appName}をダウンロード | {appName}は機密メタデータの収集を排除するエンドツーエンド暗号化メッセンジャーです。すべてのOSに対応。"
     },
     "faq": {
-      "title": "Frequently Asked Questions",
-      "description": "{appNamePossessive} FAQ. Find answers to some of the most frequently asked questions about {appName} — info on the team, the tech, and the technicalities."
+      "title": "よくある質問",
+      "description": "{appName} に関するよくあるご質問とその回答をご覧いただけます。"
     },
     "litepaper": {
-      "description": "{appName} is a decentralised messenger that supports completely private, secure, and anonymous communications."
+      "description": "{appName}は完全にプライベートで安全、そして匿名性の高い通信を提供する分散型メッセンジャーです。",
+      "title": "{appName} Litepaper：送るのはメッセージであり、メタデータではありません"
     },
     "whitepaper": {
-      "description": "{appName} is a decentralised messenger that supports completely private, secure, and anonymous communications."
+      "description": "{appName}は完全にプライベートで安全、そして匿名性の高い通信を提供する分散型メッセンジャーです。",
+      "title": "{appName} ホワイトペーパー：エンドツーエンド暗号化による会話と、最小限のメタデータ漏えい"
     },
     "community": {
       "title": "{appName} {featureCommunity}",
-      "description": "Join the {appName} {featureCommunity} and meet the vibrant group of people building, running, and using {appName}."
+      "description": "{appName}の{featureCommunity}に参加して、{appName}を構築・運営・利用している活気あるコミュニティメンバーと出会いましょう。"
     },
     "blog": {
-      "title": "Blog",
-      "description": "View the {appName} Blogs. | {appName} is an end-to-end encrypted messenger that removes sensitive metadata collection."
+      "title": "ブログ",
+      "description": "{appName}のブログを表示。| {appName}は機密メタデータ収集を排除するエンドツーエンド暗号化メッセンジャーです。"
     }
   }
 }

@@ -1,175 +1,176 @@
 {
   "feature": {
-    "accountIds": "Account IDs",
-    "nodes": "nodes",
-    "group": "Group",
+    "accountIds": "Kontonummer",
+    "nodes": "noder",
+    "group": "Grupp",
     "community": "Community"
   },
   "general": {
-    "download": "Download",
+    "download": "Hämta",
     "whitepaper": "Whitepaper",
     "litepaper": "Litepaper",
-    "messages": "Messages",
+    "messages": "Meddelanden",
     "metadata": "Metadata",
-    "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service",
-    "other": "Other"
+    "privacyPolicy": "Integritetspolicy",
+    "termsOfService": "Användarvillkor",
+    "other": "Övrigt"
   },
   "navigation": {
-    "blog": "Blog",
-    "resources": "Resources",
-    "docs": "Docs",
-    "network": "Network",
-    "help": "Help",
+    "blog": "Blogg",
+    "resources": "Resurser",
+    "docs": "Dokumentation",
+    "network": "Nätverk",
+    "help": "Hjälp",
     "faq": "FAQ",
     "support": "Support",
     "aria": {
-      "whitepaper": "Link to {appName} Whitepaper",
-      "litepaper": "Link to {appName} Litepaper",
-      "sessionToken": "Link to {appName} Token website",
-      "support": "Link to {appName} Support via Zendesk",
-      "iconButtonOpen": "Open navigation menu",
-      "iconButtonClose": "Close navigation menu",
-      "downloadButton": "Link to {appName} download"
+      "whitepaper": "Länk till {appName} Whitepaper",
+      "litepaper": "Länk till {appName} Litepaper",
+      "sessionToken": "Länk till {appName} Token-webbplats",
+      "support": "Länk till {appName} Support via Zendesk",
+      "iconButtonOpen": "Öppna navigationsmenyn",
+      "iconButtonClose": "Stäng navigationsmenyn",
+      "downloadButton": "Länk till {appName}-nedladdning"
     }
   },
   "footer": {
-    "about": "About",
-    "mediaKit": "Media Kit",
-    "transparencyReport": "Transparency Report",
-    "foundation": "Foundation",
+    "about": "Om",
+    "mediaKit": "Mediasats",
+    "transparencyReport": "Transparensrapport",
+    "foundation": "Stiftelse",
     "appSupport": "{appName} Support",
-    "socials": "Socials",
+    "socials": "Sociala medier",
     "aria": {
-      "socialLink": "Link to {appName} on {platform}",
-      "rssLink": "Link to RSS feed"
+      "socialLink": "Länk till {appName} på {platform}",
+      "rssLink": "Länk till RSS-flöde"
     }
   },
   "languageSelection": {
-    "title": "Select your language",
-    "description": "Select your preferred language from the list below",
+    "title": "Välj ditt språk",
+    "description": "Välj ditt föredragna språk från listan nedan",
     "aria": {
-      "currentLanguage": "{language} (current language)",
-      "switchToLanguage": "Switch to {language}",
-      "currentLanguageIndicator": "(current)"
+      "currentLanguage": "{language} (nuvarande språk)",
+      "switchToLanguage": "Byt till {language}",
+      "currentLanguageIndicator": "(nuvarande)"
     }
   },
   "notFound": {
-    "pageNotFound": "This page doesn't seem to exist.",
-    "description": "It looks like the link pointing here was faulty."
+    "pageNotFound": "Den här sidan verkar inte finnas.",
+    "description": "Det verkar som att länken hit var felaktig."
   },
   "email": {
-    "heading": "Every project update, delivered straight to your inbox.",
-    "subheading": "Expect an email about once a month.",
-    "placeholder": "Your Email",
-    "submitSuccessConfirm": "Thanks! Check your inbox to confirm your subscription.",
+    "heading": "Varje projektuppdatering, direkt till din inkorg.",
+    "subheading": "Förvänta dig ett mejl ungefär en gång i månaden.",
+    "placeholder": "Din e-post",
+    "submitSuccessConfirm": "Tack! Kolla din inkorg för att bekräfta din prenumeration.",
     "button": {
-      "text": "Sign Up"
+      "text": "Registrera dig"
     },
-    "joinCommunity": "Join the <button>{appName} {featureCommunity}</button> and meet the vibrant group of people building, running, and using Session."
+    "joinCommunity": "Gå med i <button>{appName} {featureCommunity}</button> och träffa den livliga gruppen människor som bygger, underhåller och använder Session."
   },
   "landing": {
     "hero": {
-      "format": "Send {glitchText} Not Metadata.",
-      "tag": "Find your freedom with {appName}",
-      "glitchTextPrimary": "Messages,",
-      "glitchTextGlitch": "Encrypted"
+      "heading": "Send <glitch>Messages,</glitch> Not Metadata.",
+      "tag": "Hitta din frihet med {appName}",
+      "glitchTextGlitch": "Krypterat"
     },
     "about": {
-      "title": "What is {appName}?",
-      "content": "{appName} is an <span>end-to-end</span> encrypted messenger that protects your <span>personal</span> data. Take back control with a messaging app designed, built, and operated by a <span>global</span> community of <span>privacy</span> experts."
+      "title": "Vad är {appName}?",
+      "content": "{appName} är en <span>ände-till-ände</span> krypterad meddelandeapp som skyddar din <span>personliga</span> data. Ta tillbaka kontrollen med en meddelandeapp designad, utvecklad och driven av en <span>global</span> community av <span>integritets</span>experter."
     },
     "benefits": {
-      "title": "Benefits",
+      "title": "Fördelar",
       "1": {
-        "heading": "No Phone Numbers",
-        "content": "Protect your identity with {appNamePossessive} {featureAccountIds}.<br></br>No phone number or email required to sign up."
+        "heading": "Inga telefonnummer",
+        "content": "Protect your identity with {featureAccountIds}.<br></br>No phone number or email required to sign up."
       },
       "2": {
-        "heading": "No Data Breaches",
-        "content": "{appName} doesn’t collect data,<br></br>so there’s nothing to leak."
+        "heading": "Inga dataintrång",
+        "content": "{appName} samlar inte in data,<br></br>så det finns inget att läcka."
       },
       "3": {
-        "heading": "Safe Paths",
-        "content": "Onion-routed paths protect your conversations<br></br>from hackers and eavesdroppers."
+        "heading": "Säkra vägar",
+        "content": "Lökroutade vägar skyddar dina konversationer<br></br>från hackare och avlyssnare."
       },
       "4": {
-        "heading": "Open Source",
-        "content": "{appNamePossessive} code has nothing to hide. Anyone can<br></br>view, audit, and contribute."
+        "heading": "Öppen källkod",
+        "content": "{appName} has nothing to hide. Anyone can<br></br>view, audit, and contribute to its code. "
       },
       "5": {
-        "heading": "People Powered",
-        "content": "Thousands of {featureNodes} run by a global community.<br></br>{appName} is by the people, for the people."
+        "heading": "Drivet av människor",
+        "content": "Tusentals {featureNodes} drivs av ett globalt community.<br></br>{appName} är av folket, för folket."
       },
       "6": {
-        "heading": "No Trackers",
-        "content": "Your data is never collected, never tracked, and<br></br>never sold to third parties."
+        "heading": "Inga spårare",
+        "content": "Dina data samlas aldrig in, spåras aldrig och<br></br>säljs aldrig till tredje part."
       }
     },
     "features": {
-      "title": "Features",
-      "heading": "Enjoy the features you love and the security you need.",
+      "title": "Funktioner",
+      "heading": "Njut av funktionerna du älskar och säkerheten du behöver.",
       "1": {
-        "heading": "Speak freely",
-        "content": "Only you and the person you are speaking to can ever see your messages. Enjoy the feeling of freedom with end-to-end encryption and disappearing messages."
+        "heading": "Tala fritt",
+        "content": "Bara du och den du pratar med kan se dina meddelanden. Njut av känslan av frihet med end-to-end-kryptering och självförstörande meddelanden."
       },
       "2": {
-        "heading": "Stay in control",
-        "content": "You are in control of your messages from start to finish. Whether it’s managing your own encryption keys or choosing a custom theme—Session puts you in charge."
+        "heading": "Behåll kontrollen",
+        "content": "Du har kontroll över dina meddelanden från början till slut. Oavsett om det handlar om att hantera dina egna krypteringsnycklar eller välja ett anpassat tema – Session ger dig kontrollen."
       },
       "3": {
-        "heading": "Keep up with your crowd",
-        "content": "Whether you’re catching up with close friends or organizing a major event, it’s effortless with secure {featureGroup} and {featureCommunity} (100+ members) chats."
+        "heading": "Häng med din grupp",
+        "content": "Oavsett om du uppdaterar dig med nära vänner eller organiserar ett stort event, är det enkelt med säkra {featureGroup}- och {featureCommunity}-chattar (100+ medlemmar)."
       }
     }
   },
   "redirect": {
-    "heading": "Redirecting...",
-    "content": "Click <button>here</button> to return to the previous page."
+    "heading": "Omdirigerar...",
+    "content": "Klicka <button>här</button> för att återgå till föregående sida."
   },
   "blog": {
-    "readMore": "Read More",
-    "morePosts": "More posts"
+    "readMore": "Läs mer",
+    "morePosts": "Fler inlägg"
   },
   "download": {
-    "heading": "Download {appName} for",
-    "mobile": "Mobile",
-    "desktop": "Desktop",
-    "verifySignatures": "Verify Signatures: {platforms}",
-    "releaseNotes": "Release Notes: {platforms}"
+    "heading": "Ladda ner {appName} för",
+    "mobile": "Mobil",
+    "desktop": "Dator",
+    "verifySignatures": "Verifiera signaturer: {platforms}",
+    "releaseNotes": "Versionsanteckningar: {platforms}"
   },
   "imageAlt": {
-    "hero": "mobile encrypted private messaging app ui showcase",
-    "appLaptop": "encrypted private messaging app running on a macbook pro",
-    "appMobile": "encrypted private messaging app running on an iphone"
+    "hero": "mobil krypterad privat meddelandeapp gränssnittsvy",
+    "appLaptop": "krypterad privat meddelandeapp som körs på en MacBook Pro",
+    "appMobile": "krypterad privat meddelandeapp som körs på en iPhone"
   },
   "metadata": {
     "default": {
-      "titleLayout": "{title} - {appName} Private Messenger",
-      "title": "{appName} | Send Messages, Not Metadata. | Private Messenger",
-      "description": "{appName} is a private messenger that aims to remove any chance of metadata collection by routing all messages through an onion routing network."
+      "titleLayout": "{title} - {appName} Privat Messenger",
+      "title": "{appName} | Skicka meddelanden, inte metadata. | Privat Messenger",
+      "description": "{appName} är en privat messenger som syftar till att eliminera möjligheten till metadatainsamling genom att dirigera alla meddelanden via ett lökroutat nätverk."
     },
     "download": {
-      "title": "Download",
-      "description": "Download {appName} Today | {appName} is an end-to-end encrypted messenger that removes sensitive metadata collection for all operating systems."
+      "title": "Hämta",
+      "description": "Ladda ner {appName} idag | {appName} är en end-to-end-krypterad messenger som eliminerar insamling av känsliga metadata för alla operativsystem."
     },
     "faq": {
-      "title": "Frequently Asked Questions",
-      "description": "{appNamePossessive} FAQ. Find answers to some of the most frequently asked questions about {appName} — info on the team, the tech, and the technicalities."
+      "title": "Vanliga frågor",
+      "description": "Find answers to some of the most frequently asked questions about {appName}."
     },
     "litepaper": {
-      "description": "{appName} is a decentralised messenger that supports completely private, secure, and anonymous communications."
+      "description": "{appName} är en decentraliserad messenger som stöder fullständigt privata, säkra och anonyma kommunikationer.",
+      "title": "{appName} Litepaper: Send Messages, Not Metadata"
     },
     "whitepaper": {
-      "description": "{appName} is a decentralised messenger that supports completely private, secure, and anonymous communications."
+      "description": "{appName} är en decentraliserad messenger som stöder fullständigt privata, säkra och anonyma kommunikationer.",
+      "title": "{appName} Whitepaper: End-To-End Encrypted Conversations with Minimal Metadata Leakage"
     },
     "community": {
       "title": "{appName} {featureCommunity}",
-      "description": "Join the {appName} {featureCommunity} and meet the vibrant group of people building, running, and using {appName}."
+      "description": "Gå med i {appName} {featureCommunity} och möt den livliga gruppen människor som bygger, driver och använder {appName}."
     },
     "blog": {
-      "title": "Blog",
-      "description": "View the {appName} Blogs. | {appName} is an end-to-end encrypted messenger that removes sensitive metadata collection."
+      "title": "Blogg",
+      "description": "Visa {appName} bloggar. | {appName} är en end-to-end-krypterad messenger som eliminerar insamling av känsliga metadata."
     }
   }
 }
