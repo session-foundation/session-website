@@ -34,7 +34,6 @@ export default function CustomHead(props: Props): ReactElement {
 
   if (localeKey) {
     const titleKey = `${localeKey}.title` as const;
-    // @ts-expect-error -- we use .has to check if the key exists, this should not cause an issue
     const pageTitle = t.has(titleKey) ? t(titleKey, localeArgs) : undefined;
 
     title =

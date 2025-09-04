@@ -41,6 +41,7 @@ export default function Nav(): ReactElement {
           <Image
             src="/assets/svgs/logo.svg"
             alt="session logo"
+            title="Session Logo"
             width={196}
             height={40}
             priority={true}
@@ -106,7 +107,7 @@ export default function Nav(): ReactElement {
               className={classNames(
                 navLinkClasses,
                 navLinkHoverClasses,
-                'flex flex-row gap-1.5 font-bold'
+                'flex flex-row items-center gap-1.5 font-bold'
               )}
             >
               <GlobeIcon />

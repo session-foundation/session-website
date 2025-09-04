@@ -3,10 +3,10 @@ const withSvgr = require('@newhighsco/next-plugin-svgr');
 const ContentSecurityPolicy = `
   default-src 'self';
   script-src 'self' ${
-    process.env.NODE_ENV == 'development'
-      ? "'unsafe-eval' 'unsafe-inline' "
-      : ''
-  }*.ctfassets.net *.youtube.com *.twitter.com;
+  process.env.NODE_ENV == 'development'
+    ? "'unsafe-eval' 'unsafe-inline' "
+    : ''
+}*.ctfassets.net *.youtube.com *.twitter.com;
   child-src 'self' *.ctfassets.net *.youtube.com player.vimeo.com *.twitter.com;
   style-src 'self' 'unsafe-inline' *.googleapis.com;
   img-src 'self' blob: data: *.ctfassets.net *.youtube.com *.twitter.com;
@@ -15,44 +15,6 @@ const ContentSecurityPolicy = `
   font-src 'self' blob: data: fonts.gstatic.com maxcdn.bootstrapcdn.com;
   worker-src 'self' blob:;
 `;
-
-const securityHeaders = () => {
-  const headers = [
-    {
-      key: 'X-DNS-Prefetch-Control',
-      value: 'on',
-    },
-    {
-      key: 'Strict-Transport-Security',
-      value: 'max-age=63072000; includeSubDomains; preload',
-    },
-    {
-      key: 'X-XSS-Protection',
-      value: '1; mode=block',
-    },
-    {
-      key: 'X-Frame-Options',
-      value: 'SAMEORIGIN',
-    },
-    {
-      key: 'Permissions-Policy',
-      value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
-    },
-    {
-      key: 'X-Content-Type-Options',
-      value: 'nosniff',
-    },
-    {
-      key: 'Referrer-Policy',
-      value: 'strict-origin-when-cross-origin',
-    },
-    {
-      key: 'Content-Security-Policy',
-      value: ContentSecurityPolicy.replace(/\n/g, ''),
-    },
-  ];
-  return headers;
-};
 
 const redirects = [
   {
@@ -114,6 +76,12 @@ const nextConfig = {
   generateEtags: true,
   productionBrowserSourceMaps: false,
 
+  // SEO Enhancement: Enable static optimization
+  experimental: {
+    optimizeCss: true,
+    scrollRestoration: true,
+  },
+
   env: {
     STAGING_SECRET: process.env.STAGING_SECRET,
     CONTENTFUL_SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
@@ -123,9 +91,9 @@ const nextConfig = {
     CAMPAIGN_MONITOR_CLIENT_ID: process.env.CAMPAIGN_MONITOR_CLIENT_ID,
     CAMPAIGN_MONITOR_API_KEY: process.env.CAMPAIGN_MONITOR_API_KEY,
     CAMPAIGN_MONITOR_LIST_SESSION_ID:
-      process.env.CAMPAIGN_MONITOR_LIST_SESSION_ID,
+    process.env.CAMPAIGN_MONITOR_LIST_SESSION_ID,
     CAMPAIGN_MONITOR_LIST_MARKET_RESEARCH_ID:
-      process.env.CAMPAIGN_MONITOR_LIST_MARKET_RESEARCH_ID,
+    process.env.CAMPAIGN_MONITOR_LIST_MARKET_RESEARCH_ID,
     MAILERLITE_API_KEY: process.env.MAILERLITE_API_KEY,
     MAILERLITE_GROUP_ID: process.env.MAILERLITE_GROUP_ID,
   },
@@ -134,14 +102,62 @@ const nextConfig = {
     return [
       {
         source: '/(.*)',
-        headers: securityHeaders(),
+        headers: [
+          {
+            key: 'X-DNS-Prefetch-Control',
+            value: 'on',
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=63072000; includeSubDomains; preload',
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'SAMEORIGIN',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin',
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: ContentSecurityPolicy.replace(/\n/g, ''),
+          },
+          {
+            key: 'X-Robots-Tag',
+            value: 'index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1',
+          },
+          // better caching
+          {
+            key: 'Vary',
+            value: 'Accept-Encoding, Accept-Language',
+          },
+        ],
       },
+      // Caching for static assets
       {
         source: '/assets/:path*',
         headers: [
           {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable',
+          },
+          // Preload hints for critical assets
+          {
+            key: 'Link',
+            value: '</assets/css/critical.css>; rel=preload; as=style',
           },
         ],
       },
@@ -161,6 +177,56 @@ const nextConfig = {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable',
           },
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: '*',
+          },
+        ],
+      },
+      {
+        source: '/((?!api|_next|assets|images|fonts).*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, must-revalidate',
+          },
+        ],
+      },
+      {
+        source: '/api/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=300, s-maxage=600, stale-while-revalidate=86400',
+          },
+        ],
+      },
+      // Sitemap caching
+      {
+        source: '/sitemap.xml',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, s-maxage=7200',
+          },
+          {
+            key: 'Content-Type',
+            value: 'application/xml',
+          },
+        ],
+      },
+      // RSS feed caching
+      {
+        source: '/feed/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, s-maxage=7200',
+          },
+          {
+            key: 'Content-Type',
+            value: 'application/rss+xml',
+          },
         ],
       },
     ];
@@ -177,8 +243,10 @@ const nextConfig = {
     ],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    formats: ['image/webp'],
+    formats: ['image/avif', 'image/webp'], // AVIF first for better compression
     minimumCacheTTL: 86400,
+    dangerouslyAllowSVG: false, // Security best practice
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 
   async redirects() {
@@ -198,6 +266,14 @@ const nextConfig = {
       {
         source: '/sitemap.xml',
         destination: '/api/sitemap',
+      },
+      {
+        source: '/sitemap-:page.xml',
+        destination: '/api/sitemap/:page',
+      },
+      {
+        source: '/robots.txt',
+        destination: '/api/robots',
       },
       {
         source: '/linux',
@@ -238,7 +314,7 @@ const nextConfig = {
     ];
   },
 
-  // Webpack optimizations for better bundle splitting
+  // SEO Enhancement: Improved Webpack optimizations
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     // Optimize bundle size in production
     if (!dev && !isServer) {
@@ -259,6 +335,10 @@ const nextConfig = {
           },
         },
       };
+
+      // SEO Enhancement: Tree shaking and dead code elimination
+      config.optimization.usedExports = true;
+      config.optimization.sideEffects = false;
     }
 
     return config;

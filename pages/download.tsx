@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import type { GetStaticProps, GetStaticPropsContext } from 'next';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import type { ReactElement } from 'react';
 import { ReactComponent as AndroidSVG } from '@/assets/svgs/android_robot_head.svg';
 import { ReactComponent as AppleSVG } from '@/assets/svgs/apple.svg';
@@ -17,8 +17,8 @@ import { NON_LOCALIZED_STRING } from '@/constants/localization';
 import METADATA from '@/constants/metadata';
 
 export default function Download(): ReactElement {
+  const locale = useLocale();
   const t = useTranslations('download');
-  const _tGeneral = useTranslations('general');
   const tImage = useTranslations('imageAlt');
 
   const panelClasses = classNames('mx-auto text-center', 'lg:w-1/2 lg:flex lg:flex-col lg:pb-16');
@@ -71,6 +71,13 @@ export default function Download(): ReactElement {
             '2xl: mt-0'
           )}
         >
+          <h1 className="sr-only">
+            {t('heading', { appName: NON_LOCALIZED_STRING.appName })}{' '}
+            {new Intl.ListFormat(locale, {
+              style: 'long',
+              type: 'conjunction',
+            }).format([t('mobile'), t('desktop')])}{' '}
+          </h1>
           <div
             className={classNames(
               panelClasses,
@@ -85,19 +92,21 @@ export default function Download(): ReactElement {
                 '2xl:mr-24 2xl:w-1/2'
               )}
             >
-              <p
-                className={classNames(
-                  subtitleClasses,
-                  'pt-12',
-                  'md:pt-8',
-                  'lg:pt-20',
-                  'xl:pt-8',
-                  '2xl:pt-12'
-                )}
-              >
-                {t('heading', { appName: NON_LOCALIZED_STRING.appName })}
-              </p>
-              <h2 className={classNames(headingClasses, 'my-4')}>{t('mobile')}</h2>
+              <h2>
+                <p
+                  className={classNames(
+                    subtitleClasses,
+                    'pt-12',
+                    'md:pt-8',
+                    'lg:pt-20',
+                    'xl:pt-8',
+                    '2xl:pt-12'
+                  )}
+                >
+                  {t('heading', { appName: NON_LOCALIZED_STRING.appName })}
+                </p>{' '}
+                <span className={classNames(headingClasses, 'my-4')}>{t('mobile')}</span>
+              </h2>
               <div
                 className={classNames(
                   '-mt-2 -ml-1 mb-3 px-16',
@@ -241,12 +250,22 @@ export default function Download(): ReactElement {
                 '2xl:ml-24 2xl:w-1/2'
               )}
             >
-              <p
-                className={classNames(subtitleClasses, 'pt-12', 'lg:pt-20', 'xl:pt-8', '2xl:pt-12')}
-              >
-                {t('heading', { appName: NON_LOCALIZED_STRING.appName })}
-              </p>
-              <h2 className={classNames(headingClasses, 'mt-4', 'lg:mb-auto')}>{t('desktop')}</h2>
+              <h2>
+                <p
+                  className={classNames(
+                    subtitleClasses,
+                    'pt-12',
+                    'lg:pt-20',
+                    'xl:pt-8',
+                    '2xl:pt-12'
+                  )}
+                >
+                  {t('heading', { appName: NON_LOCALIZED_STRING.appName })}
+                </p>{' '}
+                <span className={classNames(headingClasses, 'mt-4', 'lg:mb-auto')}>
+                  {t('desktop')}
+                </span>
+              </h2>
               <div
                 className={classNames(
                   '-ml-1 z-0 mt-8 mb-12 px-3',

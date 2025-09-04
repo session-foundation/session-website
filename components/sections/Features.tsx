@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import type { ReactElement } from 'react';
 import Container from '@/components/Container';
 import Headline from '@/components/ui/Headline';
+import capitalize from '@/utils/capitalize';
 
 const headingClasses = classNames(
   'font-helvetica text-3xl font-bold text-gray-dark mb-1',
@@ -94,6 +95,7 @@ export default function Features(): ReactElement {
             <Image
               src="/assets/images/encrypted-messaging-app-desktop.png"
               alt={tImage('appLaptop')}
+              title={capitalize(tImage('appLaptop'))}
               width={1130}
               height={1000}
               quality={100}

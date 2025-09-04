@@ -227,6 +227,7 @@ export default function Footer(): ReactElement {
             <Image
               src="/assets/images/logo-white.png"
               alt="session logo"
+              title="Session Logo"
               width={120}
               height={26}
               layout="responsive"

@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import type { ReactNode } from 'react';
 import { NON_LOCALIZED_STRING } from '@/constants/localization';
 import { useScreen } from '@/contexts/screen';
+import capitalize from '@/utils/capitalize';
 import redact from '@/utils/redact';
 
 interface Props {
@@ -45,6 +46,7 @@ export default function BenefitsCard(props: Props): ReactNode {
         <Image
           src={images[0]}
           alt={imageAlt}
+          title={capitalize(imageAlt)}
           width={imageWidth}
           height={imageHeight}
           layout="responsive"
@@ -62,6 +64,7 @@ export default function BenefitsCard(props: Props): ReactNode {
             <Image
               src={img}
               alt={imageAlt}
+              title={capitalize(imageAlt)}
               width={imageWidth}
               height={imageHeight}
               layout="responsive"

@@ -10,6 +10,7 @@ import { ReactComponent as FDroidSVG } from '@/assets/svgs/fdroid-logo.svg';
 import Container from '@/components/Container';
 import Button from '@/components/ui/Button';
 import { NON_LOCALIZED_STRING } from '@/constants/localization';
+import capitalize from '@/utils/capitalize';
 
 export default function Hero(): ReactElement {
   const t = useTranslations('landing.hero');
@@ -69,6 +70,7 @@ export default function Hero(): ReactElement {
             <Image
               src="/assets/images/encrypted-messaging-app.webp"
               alt={tImage('hero')}
+              title={capitalize(tImage('hero'))}
               width={1080}
               height={940}
               priority={true}

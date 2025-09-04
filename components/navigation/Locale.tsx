@@ -23,14 +23,14 @@ export function LocaleDialogContent() {
   const t = useTranslations('languageSelection');
 
   return (
-    <DialogContent>
-      <DialogHeader>
+    <DialogContent className="my-10 h-max px-0">
+      <DialogHeader className="px-6">
         <DialogTitle id="language-selection-title">{t('title')}</DialogTitle>
       </DialogHeader>
 
       <DialogDescription className="sr-only">{t('description')}</DialogDescription>
 
-      <ul className="space-y-2">
+      <ul className="max-h-[75vh] w-full space-y-2 overflow-y-auto px-6">
         {router.locales?.map((locale) => {
           const isCurrentLocale = locale === currentLocale;
           const languageName = getLanguageDisplayName(locale) ?? locale;
