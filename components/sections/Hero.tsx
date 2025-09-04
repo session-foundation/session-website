@@ -31,7 +31,7 @@ export default function Hero(): ReactElement {
 
   const heroText = t.rich('heading', {
     glitch: (chunk) => (
-      <span className={'glitch block'} data-glitch-text={t('glitchTextGlitch')}>
+      <span className="glitch block" data-glitch-text={t('glitchTextGlitch')}>
         {chunk}
       </span>
     ),
@@ -52,7 +52,7 @@ export default function Hero(): ReactElement {
           )}
         >
           <div>
-            <h1 className={classNames(headingClasses)}>{heroText}</h1>
+            <h1 className={classNames(headingClasses, 'whitespace-pre-line')}>{heroText}</h1>
             <p className={classNames(subHeadingClasses)}>
               {t('tag', { appName: NON_LOCALIZED_STRING.appName })}
             </p>
@@ -64,7 +64,7 @@ export default function Hero(): ReactElement {
             </Link>
           </div>
           <div
-            className={classNames('w-full', 'mr-auto ml-auto', 'max-w-full')}
+            className={classNames('w-full', 'mr-auto ml-auto', 'max-w-xl')}
             style={{ aspectRatio: '2499/2176' }}
           >
             <Image
