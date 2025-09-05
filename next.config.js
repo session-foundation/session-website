@@ -43,23 +43,25 @@ const redirects = [
 ];
 
 const isTranslateMode =process.env.NEXT_PUBLIC_TRANSLATION_MODE === 'true';
+
+// TODO: enable all available locales as we get them fully translated
 const locales = !isTranslateMode ? [
   'en',    // English
   'zh-CN', // Chinese Simplified
-  'zh-TW', // Chinese Traditional
+  // 'zh-TW', // Chinese Traditional
   'cs',    // Czech
   'nl',    // Dutch
   'fr',    // French
   'de',    // German
   'hi',    // Hindi
-  'hu',    // Hungarian
+  // 'hu',    // Hungarian
   'it',    // Italian
   'ja',    // Japanese
   'pl',    // Polish
-  'pt',    // Portuguese
-  'ro',    // Romanian
+  // 'pt',    // Portuguese
+  // 'ro',    // Romanian
   'es',    // Spanish
-  'sv',    // Swedish
+  // 'sv',    // Swedish
 ] : ['ach'];
 
 // @ts-check
