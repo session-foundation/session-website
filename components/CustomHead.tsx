@@ -113,7 +113,7 @@ export default function CustomHead(props: Props): ReactElement {
         "@id": "${pageUrl}#primaryimage",
         "url": "${imageUrl}",
         "width": "${imageWidth}",
-        "height": "${imageHeight}",
+        "height": "${imageHeight}"
       },
       {
         "@type": "WebPage",
