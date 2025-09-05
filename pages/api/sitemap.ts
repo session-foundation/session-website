@@ -12,11 +12,57 @@ const redirects: IRedirection[] = await config.redirects();
 const locales: Array<string> = config.i18n.locales;
 const defaultLocale: string = config.i18n.defaultLocale;
 
+enum ChangeFrequency {
+  // Constantly changing and include index pages on major news publications, Google News, stock market data and social bookmarking categories.
+  Always = 'Always',
+  // Update every hour and will also include major news publications as well as weather services and forums.
+  Hourly = 'Hourly',
+  // Updated on average once per day and include things like blog posts, smaller web forum pages, message boards and classified ads.
+  Daily = 'Daily',
+  // Updates typically occur once per week, these pages will include website directories, product info and pricing pages as well as less frequent blogs.
+  Weekly = 'Weekly',
+  // Updated roughly once per month and include category pages, FAQs, Help Desk articles that require occasional updates.
+  Monthly = 'Monthly',
+  // Updates on these pages happen on an annual basis and are typically your contact page, “About” page, login pages and registration pages.
+  Yearly = 'Yearly',
+  // Never ever get updates. These are really old blog posts, press releases, notifications about updates that never need updating and any completely static pages.
+  Never = 'Never',
+}
+
+const changeFrequencies = Object.values(ChangeFrequency);
+
+function isChangeFrequency(frequency: unknown): frequency is ChangeFrequency {
+  return typeof frequency === 'string' && changeFrequencies.includes(frequency as ChangeFrequency);
+}
+
 interface LocalizedUrl {
   url: string;
   alternates: Array<{ locale: string; url: string }>;
   lastmod?: string;
   published?: string;
+  priority?: number;
+  changeFrequency?: ChangeFrequency;
+}
+
+function handlePriority(priority: number) {
+  if (typeof priority !== 'number' || priority > 1 || priority < 0) {
+    throw new Error('Priority must be a number between 0 and 1');
+  }
+  return priority;
+}
+
+const overridePageOptions: Record<string, Partial<LocalizedUrl>> = {
+  '': { priority: 1.0, changeFrequency: ChangeFrequency.Weekly },
+  download: { priority: 0.9, changeFrequency: ChangeFrequency.Weekly },
+  blog: { priority: 0.9, changeFrequency: ChangeFrequency.Weekly },
+  faq: { priority: 0.9, changeFrequency: ChangeFrequency.Weekly },
+  litepaper: { priority: 0.75, changeFrequency: ChangeFrequency.Yearly },
+  whitepaper: { priority: 0.75, changeFrequency: ChangeFrequency.Yearly },
+};
+
+function getOverridePageOptions(slug: string) {
+  const page = overridePageOptions[slug];
+  return page ?? {};
 }
 
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
@@ -35,6 +81,7 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     lastmod?: string,
     published?: string
   ): LocalizedUrl[] => {
+    const overrides = getOverridePageOptions(slug);
     if (!shouldLocalize(slug)) {
       return [
         {
@@ -42,6 +89,7 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
           alternates: [{ locale: defaultLocale, url: `${baseUrl}/${slug}` }],
           lastmod,
           published,
+          ...overrides,
         },
       ];
     }
@@ -60,6 +108,7 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
         alternates,
         lastmod,
         published,
+        ...overrides,
       };
     });
   };
@@ -154,8 +203,8 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
           <url>
             <loc>${page.url}</loc>
             <lastmod>${page.published || page.lastmod}</lastmod>
-            <changefreq>monthly</changefreq>
-            <priority>1.0</priority>
+            <changefreq>${isChangeFrequency(page.changeFrequency) ? page.changeFrequency : ChangeFrequency.Monthly}</changefreq>
+            <priority>${page.priority !== undefined ? handlePriority(page.priority) : 0.5}</priority>
 ${hreflangLinks}
           </url>
         `;
