@@ -59,7 +59,7 @@
     "description": "It looks like the link pointing here was faulty."
   },
   "email": {
-    "heading": "Every project update, delivered straight to your inbox.",
+    "heading": "Every update on digital privacy, delivered straight to your inbox.",
     "subheading": "Expect an email about once a month.",
     "placeholder": "Your Email",
     "submitSuccessConfirm": "Thanks! Check your inbox to confirm your subscription.",
@@ -71,38 +71,38 @@
   "landing": {
     "hero": {
       "heading": "Send <glitch>Messages,</glitch> Not Metadata.",
-      "tag": "Find your freedom with {appName}",
+      "tag": "The decentralized private messaging app",
       "glitchTextGlitch": "Encrypted"
     },
     "about": {
       "title": "What is {appName}?",
-      "content": "{appName} is an <span>end-to-end</span> encrypted messenger that protects your <span>personal</span> data. Take back control with a messaging app designed, built, and operated by a <span>global</span> community of <span>privacy</span> experts."
+      "content": "{appName} is an end-to-end encrypted messenger that protects your private data. A decentralized app designed, built, and operated by a global community of privacy experts."
     },
     "benefits": {
-      "title": "Benefits",
+      "title": "Privacy Benefits",
       "1": {
         "heading": "No Phone Numbers",
-        "content": "Protect your identity with {featureAccountIds}.<br></br>No phone number or email required to sign up."
+        "content": "Keep your identity private with Account IDs. No phone number or email required to sign up."
       },
       "2": {
         "heading": "No Data Breaches",
-        "content": "{appName} doesn’t collect data,<br></br>so there’s nothing to leak."
+        "content": "{appName} doesn’t collect your private data, so there’s nothing to leak."
       },
       "3": {
         "heading": "Safe Paths",
-        "content": "Onion-routed paths protect your conversations<br></br>from hackers and eavesdroppers."
+        "content": "Onion-routed paths protect your conversations from hackers and eavesdroppers."
       },
       "4": {
         "heading": "Open Source",
-        "content": "{appName} has nothing to hide. Anyone can<br></br>view, audit, and contribute to its code. "
+        "content": "Privacy is more than a promise. Anyone can view, audit, and contribute to {appName}'s code."
       },
       "5": {
         "heading": "People Powered",
-        "content": "Thousands of {featureNodes} run by a global community.<br></br>{appName} is by the people, for the people."
+        "content": "Thousands of {featureNodes} run by a global community. {appName} is by the people, for the people."
       },
       "6": {
         "heading": "No Trackers",
-        "content": "Your data is never collected, never tracked, and<br></br>never sold to third parties."
+        "content": "Your data is never collected, never tracked, and never sold to third parties."
       }
     },
     "features": {
@@ -117,7 +117,7 @@
         "content": "You are in control of your messages from start to finish. Whether it’s managing your own encryption keys or choosing a custom theme—Session puts you in charge."
       },
       "3": {
-        "heading": "Keep up with your crowd",
+        "heading": "Privacy for your crowd",
         "content": "Whether you’re catching up with close friends or organizing a major event, it’s effortless with secure {featureGroup} and {featureCommunity} (100+ members) chats."
       }
     }
