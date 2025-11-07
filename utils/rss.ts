@@ -43,7 +43,7 @@ export default function generateRSSFeed(posts: IPost[]) {
     });
   });
 
-  rimraf.sync(`./public/rss`);
+  rimraf?.sync(`./public/rss`);
   mkdirSync(`./public/rss`, { recursive: true });
   writeFileSync(`./public/rss/feed.xml`, feed.rss2(), {
     encoding: 'utf-8',

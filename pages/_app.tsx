@@ -14,9 +14,13 @@ if (process.env.NODE_ENV === 'development' && typeof window !== 'undefined') {
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
-
+  const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   return (
-    <NextIntlClientProvider locale={router.locale} messages={pageProps.messages}>
+    <NextIntlClientProvider
+      locale={router.locale}
+      messages={pageProps.messages}
+      timeZone={timeZone}
+    >
       <ScreenProvider>
         <Component {...pageProps} />
       </ScreenProvider>

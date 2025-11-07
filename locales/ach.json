@@ -71,7 +71,7 @@
   "landing": {
     "hero": {
       "heading": "crwdns38204:0crwdne38204:0",
-      "tag": "crwdns38102:0{appName}crwdne38102:0",
+      "tag": "crwdns38102:0crwdne38102:0",
       "glitchTextGlitch": "crwdns38106:0crwdne38106:0"
     },
     "about": {
@@ -82,7 +82,7 @@
       "title": "crwdns38112:0crwdne38112:0",
       "1": {
         "heading": "crwdns38114:0crwdne38114:0",
-        "content": "crwdns38116:0{featureAccountIds}crwdne38116:0"
+        "content": "crwdns38116:0crwdne38116:0"
       },
       "2": {
         "heading": "crwdns38118:0crwdne38118:0",
@@ -171,6 +171,30 @@
     "blog": {
       "title": "crwdns38200:0crwdne38200:0",
       "description": "crwdns38202:0{appName}crwdnd38202:0{appName}crwdne38202:0"
+    }
+  },
+  "donate": {
+    "heading": "crwdns38858:0{appName}crwdne38858:0",
+    "heroContent": "crwdns38860:0{appName}crwdnd38860:0{appName}crwdnd38860:0{appName}crwdnd38860:0{appName}crwdne38860:0",
+    "1": {
+      "heading": "crwdns38862:0crwdne38862:0",
+      "content": "crwdns38872:0crwdne38872:0"
+    },
+    "2": {
+      "heading": "crwdns38864:0crwdne38864:0",
+      "content": "crwdns38874:0{appName}crwdnd38874:0{foundationName}crwdnd38874:0{appName}crwdnd38874:0{foundationName}crwdnd38874:0{appName}crwdnd38874:0{ethNetworkName}crwdnd38874:0{usdcSymbol}crwdne38874:0"
+    },
+    "3": {
+      "heading": "crwdns38866:0crwdne38866:0",
+      "content": "crwdns38876:0{foundationName}crwdnd38876:0{swissSupervisory}crwdnd38876:0{ethNetworkName}crwdnd38876:0{usdcSymbol}crwdne38876:0"
+    },
+    "4": {
+      "heading": "crwdns38868:0{donationProviderName}crwdne38868:0",
+      "content": "crwdns38878:0crwdne38878:0"
+    },
+    "5": {
+      "heading": "crwdns38870:0crwdne38870:0",
+      "content": "crwdns38880:0{ethSymbol}crwdnd38880:0{usdcSymbol}crwdnd38880:0{usdtSymbol}crwdnd38880:0{btcSymbol}crwdnd38880:0{foundationName}crwdne38880:0"
     }
   }
 }

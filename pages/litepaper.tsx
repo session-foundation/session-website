@@ -8,7 +8,7 @@ export default function Litepaper(): ReactElement {
     <RedirectPage
       localeKey="litepaper"
       metadata={METADATA.LITEPAPER_PAGE}
-      redirectUrl="https://arxiv.org/pdf/2002.04609.pdf"
+      redirectUrl="/assets/papers/Litepaper_Session_private_messenger.pdf"
     />
   );
 }

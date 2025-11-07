@@ -2,12 +2,11 @@ const withSvgr = require('@newhighsco/next-plugin-svgr');
 
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' ${
-  process.env.NODE_ENV == 'development'
+  script-src 'self' ${process.env.NODE_ENV == 'development'
     ? "'unsafe-eval' 'unsafe-inline' "
     : ''
-}*.ctfassets.net *.youtube.com *.twitter.com;
-  child-src 'self' *.ctfassets.net *.youtube.com player.vimeo.com *.twitter.com;
+  }*.ctfassets.net *.youtube.com *.twitter.com donorbox.org;
+  child-src 'self' *.ctfassets.net *.youtube.com player.vimeo.com *.twitter.com donorbox.org;
   style-src 'self' 'unsafe-inline' *.googleapis.com;
   img-src 'self' blob: data: *.ctfassets.net *.youtube.com *.twitter.com;
   media-src 'self' *.youtube.com;
@@ -42,7 +41,9 @@ const redirects = [
   },
 ];
 
-const isTranslateMode =process.env.NEXT_PUBLIC_TRANSLATION_MODE === 'true';
+const isTranslateMode = process.env.NEXT_PUBLIC_TRANSLATION_MODE === 'true';
+
+process.env.ENVIRONMENT_FALLBACK = 'en'
 
 // TODO: enable all available locales as we get them fully translated
 const locales = !isTranslateMode ? [
@@ -93,11 +94,12 @@ const nextConfig = {
     CAMPAIGN_MONITOR_CLIENT_ID: process.env.CAMPAIGN_MONITOR_CLIENT_ID,
     CAMPAIGN_MONITOR_API_KEY: process.env.CAMPAIGN_MONITOR_API_KEY,
     CAMPAIGN_MONITOR_LIST_SESSION_ID:
-    process.env.CAMPAIGN_MONITOR_LIST_SESSION_ID,
+      process.env.CAMPAIGN_MONITOR_LIST_SESSION_ID,
     CAMPAIGN_MONITOR_LIST_MARKET_RESEARCH_ID:
-    process.env.CAMPAIGN_MONITOR_LIST_MARKET_RESEARCH_ID,
+      process.env.CAMPAIGN_MONITOR_LIST_MARKET_RESEARCH_ID,
     MAILERLITE_API_KEY: process.env.MAILERLITE_API_KEY,
     MAILERLITE_GROUP_ID: process.env.MAILERLITE_GROUP_ID,
+    NEXT_PUBLIC_TRANSLATION_MODE: process.env.NEXT_PUBLIC_TRANSLATION_MODE,
   },
 
   async headers() {
