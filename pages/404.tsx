@@ -1,12 +1,9 @@
 import classNames from 'classnames';
-import type { GetStaticProps, GetStaticPropsContext } from 'next';
-import { useTranslations } from 'next-intl';
 import Container from '@/components/Container';
 import Layout from '@/components/ui/Layout';
 import METADATA from '@/constants/metadata';
 
 export default function Custom404() {
-  const t = useTranslations('notFound');
   return (
     <Layout title="Page not found" metadata={METADATA[404]}>
       <section>
@@ -24,10 +21,10 @@ export default function Custom404() {
           )}
         >
           <h1 className={classNames('mb-8 font-bold text-5xl text-primary-dark')}>
-            {t('pageNotFound')}
+            This page doesn't seem to exist.
           </h1>
           <p className={classNames('font-medium text-gray text-xl', 'lg:text-2xl')}>
-            {t('description')}
+            It looks like the link pointing here was faulty.
           </p>
         </Container>
       </section>
@@ -35,8 +32,3 @@ export default function Custom404() {
   );
 }
 
-export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext) => {
-  return {
-    props: { messages: (await import(`../locales/${context.locale}.json`)).default },
-  };
-};

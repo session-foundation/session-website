@@ -2,9 +2,9 @@ const withSvgr = require('@newhighsco/next-plugin-svgr');
 
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' ${process.env.NODE_ENV == 'development'
+  script-src 'self' ${process.env.NODE_ENV === 'development'
     ? "'unsafe-eval' 'unsafe-inline' "
-    : ''
+    : "'unsafe-inline' " // ← Add this for Next.js production builds
   }*.ctfassets.net *.youtube.com *.twitter.com donorbox.org;
   child-src 'self' *.ctfassets.net *.youtube.com player.vimeo.com *.twitter.com donorbox.org;
   style-src 'self' 'unsafe-inline' *.googleapis.com;
@@ -13,7 +13,7 @@ const ContentSecurityPolicy = `
   connect-src *;
   font-src 'self' blob: data: fonts.gstatic.com maxcdn.bootstrapcdn.com;
   worker-src 'self' blob:;
-`;
+`.replace(/\s{2,}/g, ' ').trim();
 
 const redirects = [
   {
