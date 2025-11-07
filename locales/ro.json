@@ -31,7 +31,8 @@
       "iconButtonOpen": "Deschide meniul de navigare",
       "iconButtonClose": "Închide meniul de navigare",
       "downloadButton": "Link pentru descărcarea aplicației {appName}"
-    }
+    },
+    "donate": "Donate"
   },
   "footer": {
     "about": "Despre",
@@ -171,6 +172,10 @@
     "blog": {
       "title": "Blog",
       "description": "Vizualizează blogurile {appName}. | {appName} este un mesager criptat end-to-end care elimină colectarea metadatelor sensibile."
+    },
+    "donate": {
+      "title": "Donate | Support Privacy Technology",
+      "description": "Support to the Session Technology Foundation to protect online privacy. Your donation funds secure, open-source messaging technology that safeguards human rights worldwide."
     }
   },
   "donate": {

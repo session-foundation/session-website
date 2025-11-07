@@ -31,7 +31,8 @@
       "iconButtonOpen": "Ouvrir le menu de navigation",
       "iconButtonClose": "Fermer le menu de navigation",
       "downloadButton": "Lien pour télécharger {appName}"
-    }
+    },
+    "donate": "Donate"
   },
   "footer": {
     "about": "À propos",
@@ -171,6 +172,10 @@
     "blog": {
       "title": "Blog",
       "description": "Consultez les articles de blog de {appName}. | {appName} est une messagerie chiffrée de bout en bout qui empêche la collecte de métadonnées sensibles."
+    },
+    "donate": {
+      "title": "Donate | Support Privacy Technology",
+      "description": "Support to the Session Technology Foundation to protect online privacy. Your donation funds secure, open-source messaging technology that safeguards human rights worldwide."
     }
   },
   "donate": {

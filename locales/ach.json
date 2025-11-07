@@ -31,7 +31,8 @@
       "iconButtonOpen": "crwdns38052:0crwdne38052:0",
       "iconButtonClose": "crwdns38054:0crwdne38054:0",
       "downloadButton": "crwdns38056:0{appName}crwdne38056:0"
-    }
+    },
+    "donate": "crwdns38882:0crwdne38882:0"
   },
   "footer": {
     "about": "crwdns38058:0crwdne38058:0",
@@ -171,6 +172,10 @@
     "blog": {
       "title": "crwdns38200:0crwdne38200:0",
       "description": "crwdns38202:0{appName}crwdnd38202:0{appName}crwdne38202:0"
+    },
+    "donate": {
+      "title": "crwdns38884:0crwdne38884:0",
+      "description": "crwdns38886:0crwdne38886:0"
     }
   },
   "donate": {

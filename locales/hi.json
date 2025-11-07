@@ -31,7 +31,8 @@
       "iconButtonOpen": "नेविगेशन मेनू खोलें",
       "iconButtonClose": "नेविगेशन मेनू बंद करें",
       "downloadButton": "{appName} डाउनलोड लिंक"
-    }
+    },
+    "donate": "Donate"
   },
   "footer": {
     "about": "हमारे बारे में",
@@ -171,6 +172,10 @@
     "blog": {
       "title": "ब्लॉग",
       "description": "{appName} ब्लॉग्स देखें। | {appName} एक एंड-टू-एंड एन्क्रिप्टेड मैसेंजर है जो संवेदनशील मेटाडेटा संग्रहण को हटाता है।"
+    },
+    "donate": {
+      "title": "Donate | Support Privacy Technology",
+      "description": "Support to the Session Technology Foundation to protect online privacy. Your donation funds secure, open-source messaging technology that safeguards human rights worldwide."
     }
   },
   "donate": {

@@ -31,7 +31,8 @@
       "iconButtonOpen": "Navigatiemenu openen",
       "iconButtonClose": "Navigatiemenu sluiten",
       "downloadButton": "Link naar {appName}-download"
-    }
+    },
+    "donate": "Donate"
   },
   "footer": {
     "about": "Over",
@@ -171,6 +172,10 @@
     "blog": {
       "title": "Blog",
       "description": "Bekijk de {appName} Blogs. | {appName} is een end-to-end versleutelde messenger die het verzamelen van gevoelige metadata uitsluit."
+    },
+    "donate": {
+      "title": "Donate | Support Privacy Technology",
+      "description": "Support to the Session Technology Foundation to protect online privacy. Your donation funds secure, open-source messaging technology that safeguards human rights worldwide."
     }
   },
   "donate": {

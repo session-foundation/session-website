@@ -31,7 +31,8 @@
       "iconButtonOpen": "Abrir menu de navegação",
       "iconButtonClose": "Fechar menu de navegação",
       "downloadButton": "Ligação para a transferência de {appName}"
-    }
+    },
+    "donate": "Donate"
   },
   "footer": {
     "about": "Sobre",
@@ -171,6 +172,10 @@
     "blog": {
       "title": "Blogue",
       "description": "Veja os Blogues do {appName}. | O {appName} é um mensageiro com criptografia de ponta a ponta que elimina a coleta de metadados sensíveis."
+    },
+    "donate": {
+      "title": "Donate | Support Privacy Technology",
+      "description": "Support to the Session Technology Foundation to protect online privacy. Your donation funds secure, open-source messaging technology that safeguards human rights worldwide."
     }
   },
   "donate": {

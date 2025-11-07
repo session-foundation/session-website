@@ -31,7 +31,8 @@
       "iconButtonOpen": "Otevřít navigační menu",
       "iconButtonClose": "Zavřít navigační menu",
       "downloadButton": "Odkaz na stažení {appName}"
-    }
+    },
+    "donate": "Donate"
   },
   "footer": {
     "about": "Info",
@@ -171,6 +172,10 @@
     "blog": {
       "title": "Blog",
       "description": "Prohlédněte si blogy {appName}. | {appName} je komunikátor s end‑to‑end šifrováním, který eliminuje sběr citlivých metadat."
+    },
+    "donate": {
+      "title": "Donate | Support Privacy Technology",
+      "description": "Support to the Session Technology Foundation to protect online privacy. Your donation funds secure, open-source messaging technology that safeguards human rights worldwide."
     }
   },
   "donate": {

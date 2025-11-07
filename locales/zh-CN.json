@@ -31,7 +31,8 @@
       "iconButtonOpen": "打开导航菜单",
       "iconButtonClose": "关闭导航菜单",
       "downloadButton": "链接到 {appName} 下载页面"
-    }
+    },
+    "donate": "Donate"
   },
   "footer": {
     "about": "关于",
@@ -171,6 +172,10 @@
     "blog": {
       "title": "博客",
       "description": "查看 {appName} 博客。| {appName} 是一款端到端加密的消息应用，消除敏感元数据的收集。"
+    },
+    "donate": {
+      "title": "Donate | Support Privacy Technology",
+      "description": "Support to the Session Technology Foundation to protect online privacy. Your donation funds secure, open-source messaging technology that safeguards human rights worldwide."
     }
   },
   "donate": {

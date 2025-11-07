@@ -31,7 +31,8 @@
       "iconButtonOpen": "ナビゲーションメニューを開く",
       "iconButtonClose": "ナビゲーションメニューを閉じる",
       "downloadButton": "{appName}のダウンロードへのリンク"
-    }
+    },
+    "donate": "Donate"
   },
   "footer": {
     "about": "情報",
@@ -171,6 +172,10 @@
     "blog": {
       "title": "ブログ",
       "description": "{appName}のブログを表示。| {appName}は機密メタデータ収集を排除するエンドツーエンド暗号化メッセンジャーです。"
+    },
+    "donate": {
+      "title": "Donate | Support Privacy Technology",
+      "description": "Support to the Session Technology Foundation to protect online privacy. Your donation funds secure, open-source messaging technology that safeguards human rights worldwide."
     }
   },
   "donate": {

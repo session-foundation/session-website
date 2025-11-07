@@ -66,6 +66,11 @@ const NAV_ITEMS: INavList = {
       },
     },
   },
+  donate: {
+    href: '/donate',
+    target: '_self',
+  },
+
 };
 
 const NAVIGATION = {

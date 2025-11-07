@@ -31,7 +31,8 @@
       "iconButtonOpen": "Öppna navigationsmenyn",
       "iconButtonClose": "Stäng navigationsmenyn",
       "downloadButton": "Länk till {appName}-nedladdning"
-    }
+    },
+    "donate": "Donate"
   },
   "footer": {
     "about": "Om",
@@ -171,6 +172,10 @@
     "blog": {
       "title": "Blogg",
       "description": "Visa {appName} bloggar. | {appName} är en end-to-end-krypterad messenger som eliminerar insamling av känsliga metadata."
+    },
+    "donate": {
+      "title": "Donate | Support Privacy Technology",
+      "description": "Support to the Session Technology Foundation to protect online privacy. Your donation funds secure, open-source messaging technology that safeguards human rights worldwide."
     }
   },
   "donate": {

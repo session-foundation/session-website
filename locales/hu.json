@@ -31,7 +31,8 @@
       "iconButtonOpen": "Navigációs menü megnyitása",
       "iconButtonClose": "Navigációs menü bezárása",
       "downloadButton": "Hivatkozás a(z) {appName} letöltéséhez"
-    }
+    },
+    "donate": "Donate"
   },
   "footer": {
     "about": "Névjegy",
@@ -171,6 +172,10 @@
     "blog": {
       "title": "Blog",
       "description": "Tekintsd meg a(z) {appName} blogokat. | A(z) {appName} egy végpontok között titkosított üzenetküldő, amely kiküszöböli az érzékeny metaadatok gyűjtését."
+    },
+    "donate": {
+      "title": "Donate | Support Privacy Technology",
+      "description": "Support to the Session Technology Foundation to protect online privacy. Your donation funds secure, open-source messaging technology that safeguards human rights worldwide."
     }
   },
   "donate": {

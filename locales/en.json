@@ -31,7 +31,8 @@
       "iconButtonOpen": "Open navigation menu",
       "iconButtonClose": "Close navigation menu",
       "downloadButton": "Link to {appName} download"
-    }
+    },
+    "donate": "Donate"
   },
   "footer": {
     "about": "About",
@@ -171,6 +172,10 @@
     "blog": {
       "title": "Blog",
       "description": "View the {appName} Blogs. | {appName} is an end-to-end encrypted messenger that removes sensitive metadata collection."
+    },
+    "donate": {
+      "title": "Donate | Support Privacy Technology",
+      "description": "Support to the Session Technology Foundation to protect online privacy. Your donation funds secure, open-source messaging technology that safeguards human rights worldwide."
     }
   },
   "donate": {

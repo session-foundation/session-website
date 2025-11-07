@@ -31,7 +31,8 @@
       "iconButtonOpen": "Otwórz menu nawigacyjne",
       "iconButtonClose": "Zamknij menu nawigacyjne",
       "downloadButton": "Link do pobrania {appName}"
-    }
+    },
+    "donate": "Donate"
   },
   "footer": {
     "about": "O aplikacji",
@@ -171,6 +172,10 @@
     "blog": {
       "title": "Blog",
       "description": "Zobacz blogi {appName}. | {appName} to komunikator z szyfrowaniem end-to-end, który usuwa zbieranie wrażliwych metadanych."
+    },
+    "donate": {
+      "title": "Donate | Support Privacy Technology",
+      "description": "Support to the Session Technology Foundation to protect online privacy. Your donation funds secure, open-source messaging technology that safeguards human rights worldwide."
     }
   },
   "donate": {

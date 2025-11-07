@@ -31,7 +31,8 @@
       "iconButtonOpen": "Abrir menú de navegación",
       "iconButtonClose": "Cerrar menú de navegación",
       "downloadButton": "Enlace para descargar {appName}"
-    }
+    },
+    "donate": "Donate"
   },
   "footer": {
     "about": "Acerca de",
@@ -171,6 +172,10 @@
     "blog": {
       "title": "Blog",
       "description": "Consulta los blogs de {appName}. | {appName} es una app de mensajería cifrada de extremo a extremo que elimina la recopilación de metadatos sensibles."
+    },
+    "donate": {
+      "title": "Donate | Support Privacy Technology",
+      "description": "Support to the Session Technology Foundation to protect online privacy. Your donation funds secure, open-source messaging technology that safeguards human rights worldwide."
     }
   },
   "donate": {
