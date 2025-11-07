@@ -136,7 +136,7 @@ export default function Donate(): ReactElement {
   const t = useTranslations('donate');
 
   return (
-    <Layout localeKey="download" metadata={METADATA.DOWNLOAD_PAGE}>
+    <Layout localeKey="donate" metadata={METADATA.DOWNLOAD_PAGE}>
       <section>
         <Container
           heights={{
