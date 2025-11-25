@@ -1,177 +1,177 @@
 {
   "feature": {
-    "accountIds": "ID de cuenta",
-    "nodes": "nodos",
-    "group": "Grupo",
-    "community": "Comunidad"
+    "accountIds": "Account-IDs",
+    "nodes": "Knoten",
+    "group": "Gruppe",
+    "community": "Community"
   },
   "general": {
-    "download": "Descargar",
-    "whitepaper": "Documento informativo",
-    "litepaper": "Documento resumido",
-    "messages": "Mensajes",
-    "metadata": "Metadatos",
-    "privacyPolicy": "Política de privacidad",
-    "termsOfService": "Términos del servicio",
-    "other": "Otro"
+    "download": "Herunterladen",
+    "whitepaper": "Whitepaper",
+    "litepaper": "Litepaper",
+    "messages": "Nachrichten",
+    "metadata": "Metadaten",
+    "privacyPolicy": "Datenschutzerklärung",
+    "termsOfService": "Nutzungsbedingungen",
+    "other": "Sonstiges"
   },
   "navigation": {
     "blog": "Blog",
-    "resources": "Recursos",
-    "docs": "Documentos",
-    "network": "Red",
-    "help": "Ayuda",
-    "faq": "Preguntas Frecuentes",
-    "support": "Soporte",
+    "resources": "Ressourcen",
+    "docs": "Dokumentation",
+    "network": "Netzwerk",
+    "help": "Hilfe",
+    "faq": "Häufig gestellte Fragen (FAQ)",
+    "support": "Support",
     "aria": {
-      "whitepaper": "Enlace al Documento informativo de {appName}",
-      "litepaper": "Enlace al Documento resumido de {appName}",
-      "sessionToken": "Enlace al sitio web del Token de {appName}",
-      "support": "Enlace al Soporte de {appName} vía Zendesk",
-      "iconButtonOpen": "Abrir menú de navegación",
-      "iconButtonClose": "Cerrar menú de navegación",
-      "downloadButton": "Enlace para descargar {appName}"
+      "whitepaper": "Link zum {appName}-Whitepaper",
+      "litepaper": "Link zum {appName}-Litepaper",
+      "sessionToken": "Link zur Token-Website von {appName}",
+      "support": "Link zum {appName} Support über Zendesk",
+      "iconButtonOpen": "Navigationsmenü öffnen",
+      "iconButtonClose": "Navigationsmenü schließen",
+      "downloadButton": "Link zum Download von {appName}"
     },
     "donate": "Donate"
   },
   "footer": {
-    "about": "Acerca de",
-    "mediaKit": "Kit de medios",
-    "transparencyReport": "Informe de transparencia",
-    "foundation": "Fundación",
-    "appSupport": "Soporte de {appName}",
-    "socials": "Redes sociales",
+    "about": "App-Info",
+    "mediaKit": "Medienkit",
+    "transparencyReport": "Transparenzbericht",
+    "foundation": "Stiftung",
+    "appSupport": "{appName} Support",
+    "socials": "Soziale Netzwerke",
     "aria": {
-      "socialLink": "Enlace a {appName} en {platform}",
-      "rssLink": "Enlace al canal RSS"
+      "socialLink": "Link zu {appName} auf {platform}",
+      "rssLink": "Link zum RSS-Feed"
     }
   },
   "languageSelection": {
-    "title": "Selecciona tu idioma",
-    "description": "Selecciona tu idioma preferido de la lista a continuación",
+    "title": "Sprache wählen",
+    "description": "Wähle deine bevorzugte Sprache aus der Liste unten",
     "aria": {
-      "currentLanguage": "{language} (idioma actual)",
-      "switchToLanguage": "Cambiar a {language}",
-      "currentLanguageIndicator": "(actual)"
+      "currentLanguage": "{language} (aktuelle Sprache)",
+      "switchToLanguage": "Zu {language} wechseln",
+      "currentLanguageIndicator": "(aktuell)"
     }
   },
   "notFound": {
-    "pageNotFound": "Parece que esta página no existe.",
-    "description": "Parece que el enlace que apunta aquí es incorrecto."
+    "pageNotFound": "Diese Seite scheint nicht zu existieren.",
+    "description": "Es sieht so aus, als wäre der Link hierher fehlerhaft."
   },
   "email": {
-    "heading": "Todas las actualizaciones del proyecto, directamente en tu bandeja de entrada.",
-    "subheading": "Recibirás un correo aproximadamente una vez al mes.",
-    "placeholder": "Tu correo electrónico",
-    "submitSuccessConfirm": "¡Gracias! Revisa tu bandeja de entrada para confirmar tu suscripción.",
+    "heading": "Jedes Projekt-Update direkt in deinen Posteingang.",
+    "subheading": "Etwa einmal im Monat erhältst du eine E-Mail.",
+    "placeholder": "Deine E-Mail",
+    "submitSuccessConfirm": "Danke! Überprüfe deinen Posteingang, um dein Abo zu bestätigen.",
     "button": {
-      "text": "Registrarse"
+      "text": "Registrieren"
     },
-    "joinCommunity": "Únete a la <button>{appName} {featureCommunity}</button> y conoce al emocionante grupo de personas que construyen, operan y usan Session."
+    "joinCommunity": "Tritt der <button>{appName} {featureCommunity}</button> bei und lerne die lebendige Community kennen, die Session entwickelt, betreibt und nutzt."
   },
   "landing": {
     "hero": {
-      "heading": "Envía <glitch>Mensajes,</glitch> No Metadatos.",
-      "tag": "Encuentra tu libertad con {appName}",
-      "glitchTextGlitch": "Cifrado"
+      "heading": "Sende <glitch>Nachrichten,</glitch> Nicht Metadaten.",
+      "tag": "Finde deine Freiheit mit {appName}",
+      "glitchTextGlitch": "Verschlüsselt"
     },
     "about": {
-      "title": "¿Qué es {appName}?",
-      "content": "{appName} es una aplicación de mensajería con cifrado de <span>extremo a extremo</span> que protege tus datos <span>personales</span>. Recupera el control con una app de mensajería diseñada, desarrollada y operada por una comunidad <span>global</span> de expertos en <span>privacidad</span>."
+      "title": "Was ist {appName}?",
+      "content": "{appName} ist ein <span>Ende-zu-Ende</span> verschlüsselter Messenger, der deine <span>persönlichen</span> Daten schützt. Hol dir die Kontrolle zurück – mit einer Messaging-App, die von einer <span>globalen</span> Community aus <span>Privatsphäre</span>-Experten entworfen, entwickelt und betrieben wird."
     },
     "benefits": {
-      "title": "Beneficios",
+      "title": "Vorteile",
       "1": {
-        "heading": "Sin números de teléfono",
-        "content": "Protege tu identidad con {featureAccountIds}.<br></br>No es necesario ningún número de teléfono o correo electrónico para registrarte."
+        "heading": "Keine Rufnummern",
+        "content": "Schütze deine Identität mit {featureAccountIds}.<br></br>Keine Telefonnummer oder E-Mail notwendig, um sich anzumelden."
       },
       "2": {
-        "heading": "Sin filtraciones de datos",
-        "content": "{appName} no recopila datos,<br></br>así que no hay nada que filtrar."
+        "heading": "Keine Datenlecks",
+        "content": "{appName} sammelt keine Daten,<br></br>daher gibt es nichts, was geleakt werden kann."
       },
       "3": {
-        "heading": "Rutas seguras",
-        "content": "Las rutas con enrutamiento en cebolla protegen tus conversaciones<br></br>de hackers y espías."
+        "heading": "Sichere Pfade",
+        "content": "Onion-geroutete Pfade schützen deine Gespräche<br></br>vor Hackern und Abhörern."
       },
       "4": {
-        "heading": "Código abierto",
-        "content": "{appName} no tiene nada que ocultar. Cualquiera puede<br></br>ver, examinar y contribuir a su código. "
+        "heading": "Open Source",
+        "content": "{appName} Code hat nichts zu verbergen. Jeder kann<br></br>ansehen, prüfen und beitragen. "
       },
       "5": {
-        "heading": "Impulsado por la comunidad",
-        "content": "Miles de {featureNodes} gestionados por una comunidad global.<br></br>{appName} está hecho por y para la comunidad."
+        "heading": "Von Leuten betrieben",
+        "content": "Tausende von {featureNodes}, betrieben von einer globalen Community.<br></br>{appName} ist von den Menschen, für die Menschen."
       },
       "6": {
-        "heading": "Sin rastreadores",
-        "content": "Tus datos nunca se recopilan, nunca se rastrean,<br></br>y nunca se venden a terceros."
+        "heading": "Keine Tracker",
+        "content": "Deine Daten werden niemals gesammelt, niemals verfolgt und<br></br>niemals an Dritte verkauft."
       }
     },
     "features": {
-      "title": "Características",
-      "heading": "Disfruta de las funciones que te encantan y de la seguridad que necesitas.",
+      "title": "Funktionen",
+      "heading": "Genieße die Funktionen, die du liebst, und die Sicherheit, die du brauchst.",
       "1": {
-        "heading": "Habla libremente",
-        "content": "Solo tú y la persona con la que hablas pueden ver tus mensajes. Disfruta la sensación de libertad con cifrado de extremo a extremo y mensajes que desaparecen."
+        "heading": "Sprich frei",
+        "content": "Nur du und die Person, mit der du sprichst, können deine Nachrichten sehen. Genieße das Gefühl von Freiheit mit Ende-zu-Ende-Verschlüsselung und selbstlöschenden Nachrichten."
       },
       "2": {
-        "heading": "Mantén el control",
-        "content": "Tienes el control de tus mensajes de principio a fin. Ya sea administrando tus propias claves de cifrado o eligiendo un tema personalizado—Session te pone al mando."
+        "heading": "Behalte die Kontrolle",
+        "content": "Du hast die volle Kontrolle über deine Nachrichten – vom Anfang bis zum Ende. Ob du deine eigenen Verschlüsselungsschlüssel verwaltest oder ein benutzerdefiniertes Design wählst – Session gibt dir die Kontrolle."
       },
       "3": {
-        "heading": "Sigue el ritmo de tu grupo",
-        "content": "Ya sea poniéndote al día con amigos cercanos u organizando un gran evento, es fácil con chats seguros de {featureGroup} y {featureCommunity} (100+ miembros)."
+        "heading": "Bleib mit deiner Gruppe in Verbindung",
+        "content": "Egal ob du mit engen Freund*innen chattest oder ein großes Event organisierst – sichere {featureGroup}- und {featureCommunity}-Chats (100+ Mitglieder) machen es kinderleicht."
       }
     }
   },
   "redirect": {
-    "heading": "Redirigiendo...",
-    "content": "Haz clic <button>aquí</button> para volver a la página anterior."
+    "heading": "Weiterleitung...",
+    "content": "Klicke <button>hier</button>, um zur vorherigen Seite zurückzukehren."
   },
   "blog": {
-    "readMore": "Leer Más",
-    "morePosts": "Más publicaciones"
+    "readMore": "Weiterlesen",
+    "morePosts": "Weitere Beiträge"
   },
   "download": {
-    "heading": "Descargar {appName} para",
-    "mobile": "Móvil",
-    "desktop": "Escritorio",
-    "verifySignatures": "Verificar firmas: {platforms}",
-    "releaseNotes": "Notas de la versión: {platforms}"
+    "heading": "Lade {appName} herunter für",
+    "mobile": "Mobiles Gerät",
+    "desktop": "Desktop",
+    "verifySignatures": "Signaturen prüfen: {platforms}",
+    "releaseNotes": "Versionshinweise: {platforms}"
   },
   "imageAlt": {
-    "hero": "interfaz de app de mensajería privada cifrada en el móvil",
-    "appLaptop": "app de mensajería privada cifrada ejecutándose en una MacBook Pro",
-    "appMobile": "app de mensajería privada cifrada ejecutándose en un iPhone"
+    "hero": "mobile verschlüsselte private Messaging-App UI-Vorschau",
+    "appLaptop": "verschlüsselte private Messaging-App, die auf einem Macbook Pro läuft",
+    "appMobile": "verschlüsselte private Messaging-App, die auf einem iPhone läuft"
   },
   "metadata": {
     "default": {
-      "titleLayout": "{title} - {appName} Mensajero Privado",
-      "title": "{appName} | Envía Mensajes, no Metadatos. | Mensajería Privada",
-      "description": "{appName} es una app de mensajería privada que busca eliminar cualquier posibilidad de recopilación de metadatos, enrutando todos los mensajes a través de una red con enrutamiento en cebolla."
+      "titleLayout": "{title} – {appName} Privater Messenger",
+      "title": "{appName} | Sende Nachrichten, Nicht Metadaten. | Privater Messenger",
+      "description": "{appName} ist ein privater Messenger, der versucht, jegliche Möglichkeit der Metadatenerfassung zu eliminieren, indem alle Nachrichten über ein Onion-Routing-Netzwerk geleitet werden."
     },
     "download": {
-      "title": "Descargar",
-      "description": "Descarga {appName} hoy | {appName} es una app de mensajería cifrada de extremo a extremo que elimina la recopilación de metadatos sensibles para todos los sistemas operativos."
+      "title": "Herunterladen",
+      "description": "Lade {appName} noch heute herunter | {appName} ist ein Ende-zu-Ende-verschlüsselter Messenger, der die Erfassung sensibler Metadaten für alle Betriebssysteme verhindert."
     },
     "faq": {
-      "title": "Preguntas Frecuentes",
-      "description": "Encuentra respuestas a algunas de las preguntas más frecuentes sobre {appName}."
+      "title": "Häufig gestellte Fragen (FAQ)",
+      "description": "Finde Antworten auf einige der am häufigsten gestellten Fragen zu {appName}."
     },
     "litepaper": {
-      "description": "{appName} es una app de mensajería descentralizada que admite comunicaciones completamente privadas, seguras y anónimas.",
-      "title": "Documento resumido de {appName}: Envía mensajes, no metadatos"
+      "description": "{appName} ist ein dezentraler Messenger, der vollständig private, sichere und anonyme Kommunikation ermöglicht.",
+      "title": "{appName} Litepaper: Sende Nachrichten, keine Metadaten"
     },
     "whitepaper": {
-      "description": "{appName} es una app de mensajería descentralizada que admite comunicaciones completamente privadas, seguras y anónimas.",
-      "title": "Documento informativo de {appName}: Conversaciones cifradas de extremo a extremo minimizando la filtración de metadatos"
+      "description": "{appName} ist ein dezentraler Messenger, der vollständig private, sichere und anonyme Kommunikation ermöglicht.",
+      "title": "{appName} Whitepaper: Ende-zu-Ende verschlüsselte Konversationen mit minimalem Leak von Metadaten"
     },
     "community": {
       "title": "{appName} {featureCommunity}",
-      "description": "Únete a la {featureCommunity} de {appName} y conoce al emocionante grupo de personas que construyen, ejecutan y usan {appName}."
+      "description": "Tritt der {appName} {featureCommunity} bei und lerne die lebendige Community kennen, die {appName} entwickelt, betreibt und nutzt."
     },
     "blog": {
       "title": "Blog",
-      "description": "Consulta los blogs de {appName}. | {appName} es una app de mensajería cifrada de extremo a extremo que elimina la recopilación de metadatos sensibles."
+      "description": "Sieh dir die {appName}-Blogs an. | {appName} ist ein Ende-zu-Ende-verschlüsselter Messenger, der die Sammlung sensibler Metadaten eliminiert."
     },
     "donate": {
       "title": "Donate | Support Privacy Technology",
@@ -180,18 +180,18 @@
   },
   "donate": {
     "heading": "{appName} needs your help",
-    "heroContent": "Private messaging is an essential part of our modern life. Secure communication shelters people from tyranny, protects those fighting against injustice, and empowers defenders of human rights worldwide.<br></br> However, the well-resourced opponents of privacy are actively working to suppress the tech that guards people's basic human rights and dignities. Politicians around the world are pushing for encryption-busting laws, privacy tech is slandered in the media, and surveillance capitalists are profiting from the chaos.<image></image> Despite the adversity, {appName} continues to provide a safe, secure, and trusted space for people to communicate online. {appName} is a free, private, and secure messaging app. It does not track users or sell your data—it just sends messages, privately. Millions of people around the world have turned to Session when they needed a safe and secure place to have a conversation.<br></br> More than just a tool, {appName} is a symbol of the importance of open-source, transparent, and resilient technology. It is technology like {appName} which safeguards our basic human rights in an era of increasing uncertainty and authoritarianism.",
+    "heroContent": "Private messaging is an essential part of our modern life. Secure communication shelters people from tyranny, protects those fighting against injustice, and empowers defenders of human rights worldwide.<br></br><br></br> However, the well-resourced opponents of privacy are actively working to suppress the tech that guards people's basic human rights and dignities. Politicians around the world are pushing for encryption-busting laws, privacy tech is slandered in the media, and surveillance capitalists are profiting from the chaos.<image></image> Despite the adversity, {appName} continues to provide a safe, secure, and trusted space for people to communicate online. {appName} is a free, private, and secure messaging app. It does not track users or sell your data—it just sends messages, privately. Millions of people around the world have turned to Session when they needed a safe and secure place to have a conversation.<br></br><br></br> More than just a tool, {appName} is a symbol of the importance of open-source, transparent, and resilient technology. It is technology like {appName} which safeguards our basic human rights in an era of increasing uncertainty and authoritarianism.",
     "1": {
       "heading": "A force for good",
       "content": "Technology is transforming our society. Currently, a tiny cohort of powerful individuals and institutions have disproportionate control over the internet. In many cases, tech is being used to silence, manipulate, and suppress. It's time to push back against these forces of power.<image></image>We are agents of change in a world where technology is a tool for upending oppression. We believe in a future where technology is collaborative, transparent, equitable, and liberating."
     },
     "2": {
       "heading": "Meet your privacy defenders",
-      "content": "{appName} is stewarded by the {foundationName}, a Swiss foundation dedicated to maintaining the open-source {appName} ecosystem. We are a team of technologists, engineers, and activists dedicated to the mission of restoring online privacy.<image></image> The financial independence of the {foundationName} allows us to fearlessly build the privacy technology that protects everyone's human rights. Your support will contribute to new {appName} development, fund essential network infrastructure, and the ongoing fight for freedom and privacy rights.<br></br> We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}."
+      "content": "{appName} is stewarded by the {foundationName}, a Swiss foundation dedicated to maintaining the open-source {appName} ecosystem. We are a team of technologists, engineers, and activists dedicated to the mission of restoring online privacy.<image></image> The financial independence of the {foundationName} allows us to fearlessly build the privacy technology that protects everyone's human rights. Your support will contribute to new {appName} development, fund essential network infrastructure, and the ongoing fight for freedom and privacy rights.<br></br><br></br> We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}."
     },
     "3": {
       "heading": "Thank you for caring",
-      "content": "The {foundationName} is a Swiss-registered foundation. We are a non-profit oriented organization, subject to audits from the {swissSupervisory}. Our work helps protect privacy for all and shield those most at risk.<image></image>We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}.<br></br>Note that donations are not tax-deductible. If you have queries about donations or gifts, contact us via email: <contact-email></contact-email> <br></br>Please verify the URL is <validation-url></validation-url> before sending funds. If needed, addresses can be authenticated via email."
+      "content": "The {foundationName} is a Swiss-registered foundation. We are a non-profit oriented organization, subject to audits from the {swissSupervisory}. Our work helps protect privacy for all and shield those most at risk.<image></image>We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}.<br></br><br></br>Note that donations are not tax-deductible. If you have queries about donations or gifts, contact us via email: <contact-email></contact-email> <br></br><br></br>Please verify the URL is <validation-url></validation-url> before sending funds. If needed, addresses can be authenticated via email."
     },
     "4": {
       "heading": "Donate via Credit Card ({donationProviderName})",
@@ -200,6 +200,7 @@
     "5": {
       "heading": "Donate via Crypto",
       "content": "You can send {ethSymbol}, {usdcSymbol}, {usdtSymbol} or {btcSymbol} to the following {foundationName} addresses."
-    }
+    },
+    "button": "Donate Now"
   }
 }

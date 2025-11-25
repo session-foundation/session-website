@@ -32,7 +32,7 @@
       "iconButtonClose": "Zavřít navigační menu",
       "downloadButton": "Odkaz na stažení {appName}"
     },
-    "donate": "Donate"
+    "donate": "Darovat"
   },
   "footer": {
     "about": "Info",
@@ -174,32 +174,33 @@
       "description": "Prohlédněte si blogy {appName}. | {appName} je komunikátor s end‑to‑end šifrováním, který eliminuje sběr citlivých metadat."
     },
     "donate": {
-      "title": "Donate | Support Privacy Technology",
-      "description": "Support to the Session Technology Foundation to protect online privacy. Your donation funds secure, open-source messaging technology that safeguards human rights worldwide."
+      "title": "Přispějte | Podpořte technologii ochrany osobních údajů",
+      "description": "Podpora Session Technology Foundation na ochranu soukromí online. Vaše darované prostředky podpoří komunikační technologii s otevřeným zdrojovým kódem, která chrání lidská práva po celém světě."
     }
   },
   "donate": {
-    "heading": "{appName} needs your help",
-    "heroContent": "Private messaging is an essential part of our modern life. Secure communication shelters people from tyranny, protects those fighting against injustice, and empowers defenders of human rights worldwide.<br></br> However, the well-resourced opponents of privacy are actively working to suppress the tech that guards people's basic human rights and dignities. Politicians around the world are pushing for encryption-busting laws, privacy tech is slandered in the media, and surveillance capitalists are profiting from the chaos.<image></image> Despite the adversity, {appName} continues to provide a safe, secure, and trusted space for people to communicate online. {appName} is a free, private, and secure messaging app. It does not track users or sell your data—it just sends messages, privately. Millions of people around the world have turned to Session when they needed a safe and secure place to have a conversation.<br></br> More than just a tool, {appName} is a symbol of the importance of open-source, transparent, and resilient technology. It is technology like {appName} which safeguards our basic human rights in an era of increasing uncertainty and authoritarianism.",
+    "heading": "{appName} potřebuje vaši pomoc",
+    "heroContent": "Soukromé zasílání zpráv je nezbytnou součástí našeho moderního života. Zabezpečená komunikace chrání lidi proti tyranii, chrání lidi bojující proti nespravedlnosti a posiluje obhájce lidských práv po celém světě.<br></br> Dobře financovaní odpůrci soukromí však aktivně pracují na potlačení technologie, která chrání základní lidská práva a důstojnost lidí. Politici z celého světa prosazují zákony ohrožující šifrování, technologie ochrany soukromí jsou v médiích zpochybňovány a kapitalisté vydělávající na šmírování těží z chaosu.<image></image> Navzdory nepřízni {appName} nadále poskytuje bezpečný a důvěryhodný prostor pro komunikaci lidí online. {appName} je zdarma, soukromá a bezpečná aplikace pro zasílání zpráv. Nesleduje uživatele ani neprodává vaše data - pouze odesílá zprávy soukromě. Miliony lidí po celém světě se obrátily na Session, když potřebovali bezpečné místo pro konverzaci.<br></br><br></br> Více než jen nástroj, {appName} je symbolem důležitosti technologií, které mají otevřený zdrojový kód, jsou transparentní a odolné. Je to technologie jako {appName}, která chrání naše základní lidská práva v éře rostoucí nejistoty a autoritářství.",
     "1": {
-      "heading": "A force for good",
-      "content": "Technology is transforming our society. Currently, a tiny cohort of powerful individuals and institutions have disproportionate control over the internet. In many cases, tech is being used to silence, manipulate, and suppress. It's time to push back against these forces of power.<image></image>We are agents of change in a world where technology is a tool for upending oppression. We believe in a future where technology is collaborative, transparent, equitable, and liberating."
+      "heading": "Síla pro dobro",
+      "content": "Technologie proměňuje naši společnost. V současné době má nepřiměřenou kontrolu nad internetem malá skupina mocných jednotlivců a institucí. V mnoha případech se technologie používají k umlčování, manipulaci a potlačování. Je na čase zatlačit proti těmto silám.<image></image>Jsme agenty změny ve světě, kde technologie je nástrojem pro vzrůstající útlak. Věříme v budoucnost, kdy bude technologie něčím, na čem se spolupracuje, bude transparentní, spravedlivá a osvobozující."
     },
     "2": {
-      "heading": "Meet your privacy defenders",
-      "content": "{appName} is stewarded by the {foundationName}, a Swiss foundation dedicated to maintaining the open-source {appName} ecosystem. We are a team of technologists, engineers, and activists dedicated to the mission of restoring online privacy.<image></image> The financial independence of the {foundationName} allows us to fearlessly build the privacy technology that protects everyone's human rights. Your support will contribute to new {appName} development, fund essential network infrastructure, and the ongoing fight for freedom and privacy rights.<br></br> We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}."
+      "heading": "Seznamte se s ochránci vašeho soukromí",
+      "content": "{appName} je spravována švýcarskou nadací {foundationName}, která je zaměřena na udržování ekosystému {appName} s otevřeným zdrojovým kódem. Jsme tým technologů, inženýrů a aktivistů oddaných misi na obnovu soukromí online.<image></image> Finanční nezávislost {foundationName} nám umožňuje bez obav budovat technologii ochrany soukromí, která chrání lidská práva všech. Vaše podpora přispěje k rozvoji {appName}, financování důležité síťové infrastruktury a k pokračování boje za práva na svobodu a soukromí.<br></br><br></br> V současnosti přijímáme dary platební kartou a kryptoměnou. Darovací adresa kryptoměny je k dispozici pro {ethNetworkName} a další EVM-kompatibilní tokeny jako je {usdcSymbol}."
     },
     "3": {
-      "heading": "Thank you for caring",
-      "content": "The {foundationName} is a Swiss-registered foundation. We are a non-profit oriented organization, subject to audits from the {swissSupervisory}. Our work helps protect privacy for all and shield those most at risk.<image></image>We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}.<br></br>Note that donations are not tax-deductible. If you have queries about donations or gifts, contact us via email: <contact-email></contact-email> <br></br>Please verify the URL is <validation-url></validation-url> before sending funds. If needed, addresses can be authenticated via email."
+      "heading": "Děkujeme za váš zájem",
+      "content": "{foundationName} je nadace registrovaná ve Švýcarsku. Jsme nezisková organizace, která podléhá auditům {swissSupervisory}. Naše práce pomáhá chránit soukromí pro všechny a chránit ty nejohroženější.<image></image>V současnosti přijímáme dary prostřednictvím platební karty a kryptoměny. Darovací adresa kryptoměny je k dispozici pro {ethNetworkName} a další tokeny kompatibilní s EVM, jako je {usdcSymbol}.<br></br>Berte na vědomí, že dary nejsou daňově odčitatelné. Pokud máte dotazy ohledně darů, kontaktujte nás e-mailem: <contact-email></contact-email> <br></br><br></br>Před odesláním prostředků prosím ověřte, že adresa URL je <validation-url></validation-url>. V případě potřeby lze adresy ověřit po e-mailu."
     },
     "4": {
-      "heading": "Donate via Credit Card ({donationProviderName})",
+      "heading": "Darovat platební kartou ({donationProviderName})",
       "content": ""
     },
     "5": {
-      "heading": "Donate via Crypto",
-      "content": "You can send {ethSymbol}, {usdcSymbol}, {usdtSymbol} or {btcSymbol} to the following {foundationName} addresses."
-    }
+      "heading": "Darovat kryptoměnu",
+      "content": "Můžete odeslat {ethSymbol}, {usdcSymbol}, {usdtSymbol} nebo {btcSymbol} na následující adresu {foundationName}."
+    },
+    "button": "Donate Now"
   }
 }

@@ -189,7 +189,7 @@ export default function Donate(): ReactElement {
               shape="semiround"
               classes="text-2xl my-4 md:my-6 py-4 px-6"
             >
-              Donate Now
+              {t('button')}
             </Button>
           </Link>
         </HeroContainer>
