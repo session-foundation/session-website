@@ -1,5 +1,5 @@
 import type { Messages } from 'next-intl';
-import { type ReactElement, type ReactNode } from 'react';
+import type { ReactElement, ReactNode } from 'react';
 import CustomHead from '@/components/CustomHead';
 import Footer from '@/components/navigation/Footer';
 import Nav from '@/components/navigation/Nav';

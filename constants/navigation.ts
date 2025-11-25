@@ -70,7 +70,6 @@ const NAV_ITEMS: INavList = {
     href: '/donate',
     target: '_self',
   },
-
 };
 
 const NAVIGATION = {

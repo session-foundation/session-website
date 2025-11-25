@@ -10,7 +10,7 @@ import { type IPage, type IPost, isPost } from '@/types/cms';
 interface Props {
   content: IPage | IPost;
   otherPosts?: IPost[];
-  messages?: any;
+  messages: any;
 }
 
 export default function Page(props: Props): ReactElement {
@@ -23,14 +23,20 @@ export default function Page(props: Props): ReactElement {
 }
 
 export async function getStaticProps(context: GetStaticPropsContext) {
+  const locale = context.locale || 'en';
+
   console.log(
     `Building: Page%c${context.params?.slug ? ` /${context.params?.slug}` : ''}`,
     'color: purple;'
   );
   const slug = String(context.params?.slug);
+
+  const messages = (await import(`../locales/${locale}.json`)).default;
+
   const redirect = await hasRedirection(`/${slug}`);
   if (redirect) {
     return {
+      props: { messages },
       redirect: redirect,
       revalidate: CMS.CONTENT_REVALIDATE_RATE,
     };
@@ -42,7 +48,6 @@ export async function getStaticProps(context: GetStaticPropsContext) {
     // embedded links in content body need metadata for preview
     content.body = await generateLinkMeta(content.body);
 
-    const messages = (await import(`../locales/${context.locale}.json`)).default;
     const props: Props = { content, messages };
 
     if (isPost(content)) {
@@ -62,22 +67,15 @@ export async function getStaticProps(context: GetStaticPropsContext) {
   } catch (err) {
     console.error(err);
     return {
+      props: { messages },
       notFound: true,
       revalidate: CMS.CONTENT_REVALIDATE_RATE,
     };
   }
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
   const { entries: pages } = await fetchPages();
-  const pagePaths = pages.map((page) => {
-    return {
-      params: {
-        slug: page.slug,
-      },
-    };
-  });
-
   const posts: IPost[] = [];
   let currentPage = 1;
   let foundAllPosts = false;
@@ -85,26 +83,35 @@ export const getStaticPaths: GetStaticPaths = async () => {
   // Contentful only allows 100 at a time
   while (!foundAllPosts) {
     const { entries: _posts } = await fetchBlogEntries(100, currentPage);
-
     if (_posts.length === 0) {
       foundAllPosts = true;
       continue;
     }
-
     posts.push(..._posts);
     currentPage++;
   }
 
-  const postPaths = posts.map((post) => {
-    return {
+  // Generate paths for pages (all locales) and posts (en only)
+  const pagePaths = pages.flatMap((page) =>
+    (locales || ['en']).map((locale) => ({
       params: {
-        slug: post.slug,
+        slug: page.slug,
       },
-    };
-  });
+      locale,
+    }))
+  );
+
+  const postPaths = posts.map((post) => ({
+    params: {
+      slug: post.slug,
+    },
+    locale: 'en',
+  }));
+
+  const paths = [...pagePaths, ...postPaths];
 
   return {
-    paths: [...pagePaths, ...postPaths],
+    paths,
     fallback: 'blocking',
   };
 };
