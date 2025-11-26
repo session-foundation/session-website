@@ -22,7 +22,7 @@ export default function Layout({
   metadata,
   children,
   structuredData,
-  showBanner = false,
+  showBanner = true,
 }: Props): ReactElement {
   return (
     <>

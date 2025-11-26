@@ -26,7 +26,7 @@ export default function Banner(): ReactElement {
         aria-label={BANNER.ARIA}
       >
         <Button fontWeight="bold" size={isSmall ? 'small' : 'medium'} classes="whitespace-nowrap">
-          Learn more
+          {BANNER.BUTTON_TEXT}
         </Button>
       </Link>
     </div>
