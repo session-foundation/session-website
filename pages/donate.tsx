@@ -67,7 +67,7 @@ function DonorBox() {
       scrolling="no"
       seamless
       src="https://donorbox.org/embed/session-technology-foundation-donations"
-      className="mx-auto max-h-[700px] sm:min-w-[350px] md:min-w-[420px]"
+      className="mx-auto sm:min-w-[350px] md:min-w-[420px]"
       width="max-content"
       height="max-content"
     />
@@ -231,7 +231,12 @@ export default function Donate(): ReactElement {
           paragraphClassName="mb-0 md:mb-0 lg:mb-0 xl:mb-0 2xl:mb-0 3xl:mb-0"
         />
       </div>
-      <Section section="4" id="app" paragraphClassName="w-full md:w-max" className="max-w-screen">
+      <Section
+        section="4"
+        id="app"
+        paragraphClassName="w-full md:w-max"
+        className="min-h-[1150px] max-w-screen"
+      >
         <DonorBox />
       </Section>
       <Section section="5">
