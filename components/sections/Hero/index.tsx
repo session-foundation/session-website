@@ -50,7 +50,7 @@ export default function Hero(): ReactElement {
             </p>
 
             <Link href="/download">
-              <a className="hidden lg:block mt-2">
+              <a className="hidden lg:inline mt-2">
                 <Button fontWeight="bold" size="large" classes="mt-4 px-12">
                   Download
                 </Button>
