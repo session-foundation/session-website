@@ -5,8 +5,6 @@ import Features from '@/components/sections/Features';
 import Hero from '@/components/sections/Hero';
 import Layout from '@/components/ui/Layout';
 import { CMS } from '@/constants';
-import { fetchBlogEntries } from '@/services/cms';
-import type { IPost } from '@/types/cms';
 import generateRSSFeed from '@/utils/rss';
 
 export default function Home() {
@@ -22,23 +20,8 @@ export default function Home() {
 
 export const getStaticProps: GetStaticProps = async (_context: GetStaticPropsContext) => {
   if (process.env.NEXT_PUBLIC_SITE_ENV !== 'development') {
-    const posts: IPost[] = [];
-    let page = 1;
-    let foundAllPosts = false;
-
-    // Contentful only allows 100 at a time
-    while (!foundAllPosts) {
-      const { entries: _posts } = await fetchBlogEntries(100, page);
-
-      if (_posts.length === 0) {
-        foundAllPosts = true;
-        continue;
-      }
-
-      posts.push(..._posts);
-      page++;
-    }
-
+    const { fetchAllBlogEntries } = await import('@/services/cms');
+    const posts = await fetchAllBlogEntries();
     generateRSSFeed(posts);
   }
 

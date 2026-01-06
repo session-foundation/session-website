@@ -3,7 +3,7 @@ import type { ReactElement } from 'react';
 import BlogPost from '@/components/BlogPost';
 import RichPage from '@/components/RichPage';
 import { CMS } from '@/constants';
-import { fetchBlogEntries, fetchEntryBySlug, fetchPages, generateLinkMeta } from '@/services/cms';
+import { fetchBlogEntries, fetchEntryBySlug, generateLinkMeta } from '@/services/cms';
 import { hasRedirection } from '@/services/redirect';
 import { type IPage, type IPost, isPost } from '@/types/cms';
 
@@ -75,21 +75,9 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 }
 
 export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
+  const { fetchPages, fetchAllBlogEntries } = await import('@/services/cms');
   const { entries: pages } = await fetchPages();
-  const posts: IPost[] = [];
-  let currentPage = 1;
-  let foundAllPosts = false;
-
-  // Contentful only allows 100 at a time
-  while (!foundAllPosts) {
-    const { entries: _posts } = await fetchBlogEntries(100, currentPage);
-    if (_posts.length === 0) {
-      foundAllPosts = true;
-      continue;
-    }
-    posts.push(..._posts);
-    currentPage++;
-  }
+  const posts = await fetchAllBlogEntries();
 
   // Generate paths for pages (all locales) and posts (en only)
   const pagePaths = pages.flatMap((page) =>

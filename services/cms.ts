@@ -2,6 +2,7 @@ import type { Block, Document, Inline } from '@contentful/rich-text-types';
 import { type ContentfulClientApi, createClient, type EntryCollection, type Tag } from 'contentful';
 import { format, parseISO } from 'date-fns';
 import { METADATA } from '@/constants';
+import blogCache from '@/services/cache';
 import { fetchContent } from '@/services/embed';
 import type {
   IAuthor,
@@ -33,6 +34,13 @@ export async function fetchTagList(): Promise<ITagList> {
 }
 
 export async function fetchBlogEntries(quantity = 100, page = 1): Promise<IFetchBlogEntriesReturn> {
+  const cacheKey = `blog_entries_${quantity}_${page}`;
+  const cached = blogCache.get<IFetchBlogEntriesReturn>(cacheKey);
+  
+  if (cached) {
+    return cached;
+  }
+
   const _entries = await client.getEntries({
     content_type: 'post', // only fetch blog post entry
     order: '-fields.date',
@@ -41,10 +49,41 @@ export async function fetchBlogEntries(quantity = 100, page = 1): Promise<IFetch
   });
 
   const results = await generateEntries(_entries, 'post');
-  return {
+  const data = {
     entries: results.entries as Array<IPost>,
     total: results.total,
   };
+  
+  blogCache.set(cacheKey, data);
+  return data;
+}
+
+export async function fetchAllBlogEntries(): Promise<IPost[]> {
+  const cacheKey = 'all_blog_entries';
+  const cached = blogCache.get<IPost[]>(cacheKey);
+  
+  if (cached) {
+    return cached;
+  }
+
+  const posts: IPost[] = [];
+  let currentPage = 1;
+  
+  // First fetch to get total count
+  const firstBatch = await fetchBlogEntries(100, 1);
+  posts.push(...firstBatch.entries);
+  
+  // Calculate remaining pages
+  const totalPages = Math.ceil(firstBatch.total / 100);
+  
+  // Fetch remaining pages if needed
+  for (currentPage = 2; currentPage <= totalPages; currentPage++) {
+    const { entries } = await fetchBlogEntries(100, currentPage);
+    posts.push(...entries);
+  }
+  
+  blogCache.set(cacheKey, posts);
+  return posts;
 }
 
 export async function fetchBlogEntriesByTag(
