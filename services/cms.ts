@@ -17,6 +17,9 @@ import type {
   ITagList,
 } from '@/types/cms';
 
+// Contentful API pagination limit
+const CONTENTFUL_PAGE_SIZE = 100;
+
 const client: ContentfulClientApi = createClient({
   space: process.env.CONTENTFUL_SPACE_ID!,
   environment: process.env.CONTENTFUL_ENVIRONMENT_ID!,
@@ -33,7 +36,7 @@ export async function fetchTagList(): Promise<ITagList> {
   return tags;
 }
 
-export async function fetchBlogEntries(quantity = 100, page = 1): Promise<IFetchBlogEntriesReturn> {
+export async function fetchBlogEntries(quantity = CONTENTFUL_PAGE_SIZE, page = 1): Promise<IFetchBlogEntriesReturn> {
   const cacheKey = `blog_entries_${quantity}_${page}`;
   const cached = blogCache.get<IFetchBlogEntriesReturn>(cacheKey);
   
@@ -86,15 +89,15 @@ export async function fetchAllBlogEntries(): Promise<IPost[]> {
   let currentPage = 1;
   
   // First fetch to get total count
-  const firstBatch = await fetchBlogEntries(100, 1);
+  const firstBatch = await fetchBlogEntries(CONTENTFUL_PAGE_SIZE, 1);
   posts.push(...firstBatch.entries);
   
   // Calculate remaining pages
-  const totalPages = Math.ceil(firstBatch.total / 100);
+  const totalPages = Math.ceil(firstBatch.total / CONTENTFUL_PAGE_SIZE);
   
   // Fetch remaining pages if needed
   for (currentPage = 2; currentPage <= totalPages; currentPage++) {
-    const { entries } = await fetchBlogEntries(100, currentPage);
+    const { entries } = await fetchBlogEntries(CONTENTFUL_PAGE_SIZE, currentPage);
     posts.push(...entries);
   }
   
@@ -104,7 +107,7 @@ export async function fetchAllBlogEntries(): Promise<IPost[]> {
 
 export async function fetchBlogEntriesByTag(
   tag: string,
-  quantity = 100
+  quantity = CONTENTFUL_PAGE_SIZE
 ): Promise<IFetchBlogEntriesReturn> {
   const taglist = await fetchTagList();
   const id = Object.entries(taglist).filter(([_, value]) => {
@@ -325,7 +328,7 @@ function convertFAQ(rawData: any): IFAQItem {
   };
 }
 
-export async function fetchPages(quantity = 100): Promise<IFetchPagesReturn> {
+export async function fetchPages(quantity = CONTENTFUL_PAGE_SIZE): Promise<IFetchPagesReturn> {
   const _entries = await client.getEntries({
     content_type: 'page',
     limit: quantity,

@@ -95,10 +95,19 @@ class BlogCache {
 const blogCache = new BlogCache();
 
 // Periodic cleanup every 10 minutes
+let cleanupIntervalId: NodeJS.Timeout | undefined;
 if (typeof setInterval !== 'undefined') {
-  setInterval(() => {
+  cleanupIntervalId = setInterval(() => {
     blogCache.cleanup();
   }, 600000);
 }
+
+// Export cleanup interval ID for testing purposes
+export const clearCleanupInterval = () => {
+  if (cleanupIntervalId) {
+    clearInterval(cleanupIntervalId);
+    cleanupIntervalId = undefined;
+  }
+};
 
 export default blogCache;
