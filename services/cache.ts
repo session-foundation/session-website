@@ -1,3 +1,25 @@
+/**
+ * Blog Cache Service
+ * 
+ * Provides in-memory caching for Contentful blog data to reduce API calls.
+ * 
+ * Features:
+ * - Configurable TTL (Time To Live) for cache entries
+ * - Automatic expiration checking
+ * - Periodic cleanup of expired entries
+ * - Type-safe cache operations
+ * 
+ * Cache Strategy:
+ * - Default TTL: 1 hour (3600000ms) aligned with CONTENT_REVALIDATE_RATE
+ * - Automatic invalidation on expiration
+ * - Fallback to API calls when cache is empty or expired
+ * 
+ * Usage:
+ * - Caches blog entries with pagination keys
+ * - Caches all blog entries under 'all_blog_entries' key
+ * - Reduces Contentful API usage by serving cached data when available
+ */
+
 interface CacheEntry<T> {
   data: T;
   timestamp: number;

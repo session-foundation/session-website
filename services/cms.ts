@@ -58,6 +58,22 @@ export async function fetchBlogEntries(quantity = 100, page = 1): Promise<IFetch
   return data;
 }
 
+/**
+ * Efficiently fetches all blog entries with optimized pagination
+ * 
+ * This function replaces inefficient while loops that made unnecessary API calls.
+ * 
+ * Optimizations:
+ * - Calculates total pages from first API call
+ * - Uses for loop with known bounds instead of while loop
+ * - Caches the complete result to avoid repeated full fetches
+ * - Leverages per-page caching for individual requests
+ * 
+ * Cache Key: 'all_blog_entries'
+ * TTL: 1 hour (default cache TTL)
+ * 
+ * @returns Promise<IPost[]> Array of all blog posts
+ */
 export async function fetchAllBlogEntries(): Promise<IPost[]> {
   const cacheKey = 'all_blog_entries';
   const cached = blogCache.get<IPost[]>(cacheKey);
