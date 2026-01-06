@@ -2,7 +2,7 @@ import type { GetStaticPaths, GetStaticPropsContext } from 'next';
 import type { ReactElement } from 'react';
 import BlogPost from '@/components/BlogPost';
 import RichPage from '@/components/RichPage';
-import { CMS } from '@/constants';
+import { CMS, getRevalidationTime } from '@/constants';
 import { fetchBlogEntries, fetchEntryBySlug, generateLinkMeta } from '@/services/cms';
 import { hasRedirection } from '@/services/redirect';
 import { type IPage, type IPost, isPost } from '@/types/cms';
@@ -60,9 +60,14 @@ export async function getStaticProps(context: GetStaticPropsContext) {
         .slice(0, 6);
     }
 
+    // Calculate revalidation time based on content age
+    const revalidate = isPost(content)
+      ? getRevalidationTime(content.publishedDateISO)
+      : CMS.CONTENT_REVALIDATE_RATE;
+
     return {
       props,
-      revalidate: CMS.CONTENT_REVALIDATE_RATE,
+      revalidate,
     };
   } catch (err) {
     console.error(err);
