@@ -30,8 +30,7 @@ class BlogCache {
   private cache: Map<string, CacheEntry<unknown>>;
   private defaultTTL: number; // Time to live in milliseconds
 
-  constructor(defaultTTL = 3600000) {
-    // Default 1 hour
+  constructor(defaultTTL = 3600000 /* 1 hour */) {
     this.cache = new Map();
     this.defaultTTL = defaultTTL;
   }
@@ -95,11 +94,12 @@ class BlogCache {
 const blogCache = new BlogCache();
 
 // Periodic cleanup every 10 minutes
+const CLEANUP_INTERVAL_MS = 600000; // 10 minutes
 let cleanupIntervalId: NodeJS.Timeout | undefined;
 if (typeof setInterval !== 'undefined') {
   cleanupIntervalId = setInterval(() => {
     blogCache.cleanup();
-  }, 600000);
+  }, CLEANUP_INTERVAL_MS);
 }
 
 // Export cleanup interval ID for testing purposes

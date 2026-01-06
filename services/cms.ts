@@ -86,7 +86,6 @@ export async function fetchAllBlogEntries(): Promise<IPost[]> {
   }
 
   const posts: IPost[] = [];
-  let currentPage = 1;
   
   // First fetch to get total count
   const firstBatch = await fetchBlogEntries(CONTENTFUL_PAGE_SIZE, 1);
@@ -96,8 +95,8 @@ export async function fetchAllBlogEntries(): Promise<IPost[]> {
   const totalPages = Math.ceil(firstBatch.total / CONTENTFUL_PAGE_SIZE);
   
   // Fetch remaining pages if needed
-  for (currentPage = 2; currentPage <= totalPages; currentPage++) {
-    const { entries } = await fetchBlogEntries(CONTENTFUL_PAGE_SIZE, currentPage);
+  for (let page = 2; page <= totalPages; page++) {
+    const { entries } = await fetchBlogEntries(CONTENTFUL_PAGE_SIZE, page);
     posts.push(...entries);
   }
   
