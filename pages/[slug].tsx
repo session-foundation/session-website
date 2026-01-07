@@ -65,6 +65,17 @@ export async function getStaticProps(context: GetStaticPropsContext) {
       ? getRevalidationTime(content.publishedDateISO)
       : CMS.CONTENT_REVALIDATE_RATE;
 
+    // Log revalidation time in dev builds
+    if (process.env.NODE_ENV === 'development') {
+      const contentType = isPost(content) ? 'Post' : 'Page';
+      const ageInfo = isPost(content) 
+        ? ` (published: ${content.publishedDate})` 
+        : '';
+      console.log(
+        `[Revalidate] ${contentType} "/${slug}"${ageInfo} - ${revalidate}s (${Math.round(revalidate / 60)}min)`
+      );
+    }
+
     return {
       props,
       revalidate,

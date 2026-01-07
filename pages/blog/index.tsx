@@ -18,9 +18,18 @@ export const getStaticProps: GetStaticProps = async (_context: GetStaticPropsCon
   const { fetchAllBlogEntries } = await import('@/services/cms');
   const posts = await fetchAllBlogEntries();
 
+  const revalidate = CMS.CONTENT_REVALIDATE_RATE;
+
+  // Log revalidation time in dev builds
+  if (process.env.NODE_ENV === 'development') {
+    console.log(
+      `[Revalidate] Blog Index - ${revalidate}s (${Math.round(revalidate / 60)}min)`
+    );
+  }
+
   return {
     props: { posts, messages: (await import(`../../locales/${_context.locale}.json`)).default },
-    revalidate: CMS.CONTENT_REVALIDATE_RATE,
+    revalidate,
   };
 };
 

@@ -25,8 +25,17 @@ export const getStaticProps: GetStaticProps = async (_context: GetStaticPropsCon
     generateRSSFeed(posts);
   }
 
+  const revalidate = CMS.CONTENT_REVALIDATE_RATE;
+
+  // Log revalidation time in dev builds
+  if (process.env.NODE_ENV === 'development') {
+    console.log(
+      `[Revalidate] Home Page - ${revalidate}s (${Math.round(revalidate / 60)}min)`
+    );
+  }
+
   return {
     props: { messages: (await import(`../locales/${_context.locale}.json`)).default },
-    revalidate: CMS.CONTENT_REVALIDATE_RATE,
+    revalidate,
   };
 };

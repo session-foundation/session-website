@@ -45,8 +45,17 @@ export const getStaticProps: GetStaticProps = async (context: GetStaticPropsCont
   console.log(`Building: Results for tag "%c${context.params?.tag}"`, 'color: purple;');
   const tag = String(context.params?.tag);
 
+  const revalidate = CMS.CONTENT_REVALIDATE_RATE;
+
   try {
     const { entries: posts } = await fetchBlogEntriesByTag(tag);
+
+    // Log revalidation time in dev builds
+    if (process.env.NODE_ENV === 'development') {
+      console.log(
+        `[Revalidate] Tag Page "${tag}" - ${revalidate}s (${Math.round(revalidate / 60)}min)`
+      );
+    }
 
     return {
       props: {
@@ -54,13 +63,13 @@ export const getStaticProps: GetStaticProps = async (context: GetStaticPropsCont
         posts,
         messages: (await import(`../../locales/${context.locale}.json`)).default,
       },
-      revalidate: CMS.CONTENT_REVALIDATE_RATE,
+      revalidate,
     };
   } catch (err) {
     console.error(err);
     return {
       notFound: true,
-      revalidate: CMS.CONTENT_REVALIDATE_RATE,
+      revalidate,
     };
   }
 };
