@@ -66,6 +66,9 @@ function getOverridePageOptions(slug: string) {
 }
 
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
+  // Cache the sitemap for 1 hour to reduce API calls
+  res.setHeader('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=7200');
+  
   const baseUrl = {
     development: 'http://localhost:3000',
     test: 'http://localhost:3000',

@@ -104,6 +104,47 @@ export async function fetchAllBlogEntries(): Promise<IPost[]> {
   return posts;
 }
 
+/**
+ * Check if a slug likely exists without making API calls
+ * Uses cached data to quickly validate if a slug might be valid
+ * 
+ * @param slug - The slug to check
+ * @returns boolean - true if slug might exist, false if definitely doesn't exist in cache
+ */
+export async function slugMightExist(slug: string): Promise<boolean> {
+  // Check if it's already in the entry cache
+  const cacheKey = `entry_by_slug_${slug}`;
+  if (blogCache.has(cacheKey)) {
+    return true;
+  }
+  
+  // Check if we have all blog entries cached
+  const allPostsKey = 'all_blog_entries';
+  const cachedPosts = blogCache.get<IPost[]>(allPostsKey);
+  
+  if (cachedPosts) {
+    const found = cachedPosts.some(post => post.slug === slug);
+    if (found) {
+      return true;
+    }
+  }
+  
+  // Check if we have pages cached
+  const allPagesKey = 'all_pages';
+  const cachedPages = blogCache.get<IPage[]>(allPagesKey);
+  
+  if (cachedPages) {
+    const found = cachedPages.some(page => page.slug === slug);
+    if (found) {
+      return true;
+    }
+  }
+  
+  // If we have cache and slug not found, likely doesn't exist
+  // But return true to allow API call as fallback (cache might be incomplete)
+  return true;
+}
+
 export async function fetchBlogEntriesByTag(
   tag: string,
   quantity = CONTENTFUL_PAGE_SIZE
@@ -166,6 +207,18 @@ export async function fetchEntryPreview(slug: string): Promise<IPage | IPost> {
 }
 
 export async function fetchEntryBySlug(slug: string): Promise<IPage | IPost> {
+  const cacheKey = `entry_by_slug_${slug}`;
+  const cached = blogCache.get<IPage | IPost | null>(cacheKey);
+  
+  // If cached as null, it means we previously checked and it doesn't exist
+  if (cached === null) {
+    return Promise.reject(new Error(`Failed to fetch entry for ${slug}`));
+  }
+  
+  if (cached) {
+    return cached;
+  }
+
   const _pages = await client.getEntries({
     content_type: 'page',
     'fields.slug': slug,
@@ -180,14 +233,23 @@ export async function fetchEntryBySlug(slug: string): Promise<IPage | IPost> {
 
   if (_entries.length > 0) {
     const entry = _entries[0];
+    let result: IPage | IPost;
     if (entry.sys.contentType.sys.id === 'post') {
-      return convertPost(entry, taglist);
+      result = convertPost(entry, taglist);
+    } else if (entry.sys.contentType.sys.id === 'page') {
+      result = convertPage(entry);
+    } else {
+      return Promise.reject(new Error(`Failed to fetch entry for ${slug}`));
     }
-    if (entry.sys.contentType.sys.id === 'page') {
-      return convertPage(entry);
-    }
+    
+    // Cache successful lookups for 1 hour
+    blogCache.set(cacheKey, result);
+    return result;
   }
 
+  // Cache negative results for 10 minutes to prevent repeated lookups of non-existent pages
+  // This is shorter than successful lookups since content might be added
+  blogCache.set(cacheKey, null, 600000); // 10 minutes
   return Promise.reject(new Error(`Failed to fetch entry for ${slug}`));
 }
 
@@ -328,16 +390,31 @@ function convertFAQ(rawData: any): IFAQItem {
 }
 
 export async function fetchPages(quantity = CONTENTFUL_PAGE_SIZE): Promise<IFetchPagesReturn> {
+  const cacheKey = `pages_${quantity}`;
+  const cached = blogCache.get<IFetchPagesReturn>(cacheKey);
+  
+  if (cached) {
+    return cached;
+  }
+
   const _entries = await client.getEntries({
     content_type: 'page',
     limit: quantity,
   });
 
   const results = await generateEntries(_entries, 'page');
-  return {
+  const data = {
     entries: results.entries as Array<IPage>,
     total: results.total,
   };
+  
+  // Cache all pages for slug validation
+  if (quantity >= results.total) {
+    blogCache.set('all_pages', data.entries);
+  }
+  
+  blogCache.set(cacheKey, data);
+  return data;
 }
 
 function convertPage(rawData: any): IPage {

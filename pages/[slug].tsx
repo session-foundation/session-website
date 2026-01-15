@@ -81,11 +81,21 @@ export async function getStaticProps(context: GetStaticPropsContext) {
       revalidate,
     };
   } catch (err) {
-    console.error(err);
+    // Log 404s in dev builds to help identify problematic access patterns
+    if (process.env.NODE_ENV === 'development') {
+      console.warn(`[404] Page not found: "/${slug}"`);
+    }
+    
+    // For non-dev, only log actual errors (not 404s from regular navigation)
+    if (err instanceof Error && !err.message.includes('Failed to fetch entry')) {
+      console.error(err);
+    }
+    
     return {
       props: { messages },
       notFound: true,
-      revalidate: CMS.CONTENT_REVALIDATE_RATE,
+      // Use longer revalidation for 404 pages to reduce unnecessary rebuilds
+      revalidate: CMS.CONTENT_REVALIDATE_RATE_OLD,
     };
   }
 }
