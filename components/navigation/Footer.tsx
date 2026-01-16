@@ -93,6 +93,7 @@ function SocialLinks() {
                 rel={external ? 'noopener noreferrer' : undefined}
                 aria-label={label}
                 title={label}
+                prefetch={false}
               >
                 <IconComponent
                   className={classNames(svgClasses, customIconClasses)}

@@ -128,6 +128,7 @@ export default function Download(): ReactElement {
                 <div className={classNames(downloadContainerClasses)}>
                   <Link
                     href="/android"
+                    prefetch={false}
                     className={classNames(
                       downloadLinkClasses,
                       'lg:hover:bg-gray-dark lg:hover:text-primary'
@@ -142,6 +143,7 @@ export default function Download(): ReactElement {
                 <div className={classNames(downloadContainerClasses)}>
                   <Link
                     href="/apk"
+                    prefetch={false}
                     className={classNames(
                       downloadLinkClasses,
                       'lg:hover:bg-gray-dark lg:hover:text-primary'
@@ -170,6 +172,7 @@ export default function Download(): ReactElement {
                 <div className={classNames(downloadContainerClasses)}>
                   <Link
                     href="/iphone"
+                    prefetch={false}
                     className={classNames(
                       downloadLinkClasses,
                       'lg:hover:bg-gray-dark lg:hover:text-primary'
