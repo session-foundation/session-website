@@ -20,6 +20,9 @@ import type {
 // Contentful API pagination limit
 const CONTENTFUL_PAGE_SIZE = 100;
 
+// Sentinel value to mark 404s in cache
+const NOT_FOUND_MARKER = Symbol('NOT_FOUND');
+
 const client: ContentfulClientApi = createClient({
   space: process.env.CONTENTFUL_SPACE_ID!,
   environment: process.env.CONTENTFUL_ENVIRONMENT_ID!,
@@ -208,17 +211,23 @@ export async function fetchEntryPreview(slug: string): Promise<IPage | IPost> {
 
 export async function fetchEntryBySlug(slug: string): Promise<IPage | IPost> {
   const cacheKey = `entry_by_slug_${slug}`;
-  const cached = blogCache.get<IPage | IPost | null>(cacheKey);
   
-  // If cached as null, it means we previously checked and it doesn't exist
-  if (cached === null) {
-    return Promise.reject(new Error(`Failed to fetch entry for ${slug}`));
-  }
-  
-  if (cached) {
-    return cached;
+  // Check if we have this in cache (either valid entry or 404 marker)
+  if (blogCache.has(cacheKey)) {
+    const cached = blogCache.get<IPage | IPost | typeof NOT_FOUND_MARKER>(cacheKey);
+    
+    // If it's the NOT_FOUND marker, we previously checked and it doesn't exist
+    if (cached === NOT_FOUND_MARKER) {
+      return Promise.reject(new Error(`Failed to fetch entry for ${slug}`));
+    }
+    
+    // Otherwise it's a valid cached entry
+    if (cached) {
+      return cached;
+    }
   }
 
+  // Not in cache, proceed with API call
   const _pages = await client.getEntries({
     content_type: 'page',
     'fields.slug': slug,
@@ -249,7 +258,7 @@ export async function fetchEntryBySlug(slug: string): Promise<IPage | IPost> {
 
   // Cache negative results for 10 minutes to prevent repeated lookups of non-existent pages
   // This is shorter than successful lookups since content might be added
-  blogCache.set(cacheKey, null, 600000); // 10 minutes
+  blogCache.set(cacheKey, NOT_FOUND_MARKER as any, 600000); // 10 minutes
   return Promise.reject(new Error(`Failed to fetch entry for ${slug}`));
 }
 
