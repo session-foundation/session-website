@@ -16,13 +16,13 @@ const CMS = {
 
 /**
  * Calculate the appropriate revalidation time for a blog post based on its age.
- * 
+ *
  * Strategy:
  * - Posts newer than 30 days: revalidate every 1 hour (more frequent updates expected)
  * - Posts older than 30 days: revalidate once per day (content is stable)
- * 
+ *
  * This reduces API calls for older content that rarely changes.
- * 
+ *
  * @param publishedDateISO - ISO date string of when the post was published
  * @returns Revalidation time in seconds
  */

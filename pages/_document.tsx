@@ -1,5 +1,6 @@
 import Document, { type DocumentContext, Head, Html, Main, NextScript } from 'next/document';
 import { getLangDir } from 'rtl-detect';
+import StyledComponentsRegistry from '@/lib/registry';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -15,7 +16,9 @@ class MyDocument extends Document {
       <Html lang={locale} dir={direction}>
         <Head />
         <body className="antialiased selection:bg-primary">
-          <Main />
+          <StyledComponentsRegistry>
+            <Main />
+          </StyledComponentsRegistry>
           <NextScript />
         </body>
       </Html>

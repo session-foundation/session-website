@@ -48,6 +48,9 @@ module.exports = {
           DEFAULT: 'var(--gray-DEFAULT)',
           dark: 'var(--gray-dark)',
         },
+        border: {
+          DEFAULT: 'var(--border)'
+        }
       },
       height: {
         120: '30rem', // for larger images

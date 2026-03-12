@@ -9,7 +9,7 @@ import generateRSSFeed from '@/utils/rss';
 
 export default function Home() {
   return (
-    <Layout localeKey="default">
+    <Layout localeKey="default" showBanner={true}>
       <Hero />
       <About />
       <Benefits />
@@ -29,9 +29,7 @@ export const getStaticProps: GetStaticProps = async (_context: GetStaticPropsCon
 
   // Log revalidation time in dev builds
   if (process.env.NODE_ENV === 'development') {
-    console.log(
-      `[Revalidate] Home Page - ${revalidate}s (${Math.round(revalidate / 60)}min)`
-    );
+    console.log(`[Revalidate] Home Page - ${revalidate}s (${Math.round(revalidate / 60)}min)`);
   }
 
   return {
