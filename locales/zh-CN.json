@@ -1,0 +1,206 @@
+{
+  "feature": {
+    "accountIds": "账户 ID",
+    "nodes": "节点",
+    "group": "群组",
+    "community": "社群"
+  },
+  "general": {
+    "download": "下载",
+    "whitepaper": "白皮书",
+    "litepaper": "轻论文",
+    "messages": "消息",
+    "metadata": "元数据",
+    "privacyPolicy": "隐私政策",
+    "termsOfService": "服务条款",
+    "other": "其它"
+  },
+  "navigation": {
+    "blog": "博客",
+    "resources": "资源",
+    "docs": "文档",
+    "network": "网络",
+    "help": "帮助",
+    "faq": "常见问题",
+    "support": "支持",
+    "aria": {
+      "whitepaper": "链接至 {appName} 白皮书",
+      "litepaper": "链接至 {appName} 轻论文",
+      "sessionToken": "链接至 {appName} 代币网站",
+      "support": "通过 Zendesk 联系 {appName} 支持",
+      "iconButtonOpen": "打开导航菜单",
+      "iconButtonClose": "关闭导航菜单",
+      "downloadButton": "链接到 {appName} 下载页面"
+    },
+    "donate": "Donate"
+  },
+  "footer": {
+    "about": "关于",
+    "mediaKit": "媒体工具包",
+    "transparencyReport": "透明度报告",
+    "foundation": "基金会",
+    "appSupport": "{appName} 支持",
+    "socials": "社交平台",
+    "aria": {
+      "socialLink": "链接至 {platform} 上的 {appName}",
+      "rssLink": "链接至 RSS 订阅源"
+    }
+  },
+  "languageSelection": {
+    "title": "选择您的语言",
+    "description": "从下方列表中选择您偏好的语言",
+    "aria": {
+      "currentLanguage": "{language}（当前语言)",
+      "switchToLanguage": "切换至 {language}",
+      "currentLanguageIndicator": "（当前)"
+    }
+  },
+  "notFound": {
+    "pageNotFound": "此页面似乎不存在。",
+    "description": "看起来指向此处的链接有误。"
+  },
+  "email": {
+    "heading": "每个项目更新，直接送达您的收件箱。",
+    "subheading": "大约每月会收到一封邮件。",
+    "placeholder": "您的电子邮件",
+    "submitSuccessConfirm": "感谢订阅！请查收您的邮箱以确认订阅。",
+    "button": {
+      "text": "注册"
+    },
+    "joinCommunity": "加入<button>{appName} {featureCommunity}</button>，与全球热情的构建者、运营者和使用者见面交流。"
+  },
+  "landing": {
+    "hero": {
+      "heading": "发送 <glitch>消息，</glitch> 不发送非元数据。",
+      "tag": "使用 {appName} 找回您的自由",
+      "glitchTextGlitch": "已加密"
+    },
+    "about": {
+      "title": "什么是 {appName}？",
+      "content": "{appName} 是一款采用<span>端到端</span>加密的消息应用，保护您的<span>个人</span>数据。由<span>全球</span><span>隐私</span>专家社群共同设计、构建并维护，让您重新掌握控制权。"
+    },
+    "benefits": {
+      "title": "优势",
+      "1": {
+        "heading": "无手机号码",
+        "content": "使用 {featureAccountIds} 保护您的身份。<br></br>注册无需提供电话号码或邮箱。"
+      },
+      "2": {
+        "heading": "无数据泄露",
+        "content": "{appName} 不收集数据，<br></br>因此无可泄露之物。"
+      },
+      "3": {
+        "heading": "安全路径",
+        "content": "洋葱路由路径可防止黑客和窃听者<br></br>窃取您的对话内容。"
+      },
+      "4": {
+        "heading": "开源",
+        "content": "{appName} 毫无隐瞒。任何人都可以<br></br>查看、审核并为其代码做出贡献。 "
+      },
+      "5": {
+        "heading": "由用户驱动",
+        "content": "由全球社区运行的数千个 {featureNodes}。<br></br>{appName} 源于用户，服务用户。"
+      },
+      "6": {
+        "heading": "无追踪器",
+        "content": "您的数据永远不会被收集、追踪，<br></br>也不会出售给第三方。"
+      }
+    },
+    "features": {
+      "title": "功能",
+      "heading": "享受您喜爱的功能，同时保障所需的安全性。",
+      "1": {
+        "heading": "畅所欲言",
+        "content": "只有您和对方才能看到您的消息。端到端加密与阅后即焚消息功能，为您带来自由的沟通体验。"
+      },
+      "2": {
+        "heading": "掌控一切",
+        "content": "从头到尾，您掌控自己的消息。无论是管理加密密钥还是选择自定义主题—Session 都给予您主导权。"
+      },
+      "3": {
+        "heading": "紧随您的圈子",
+        "content": "无论是与好友叙旧，还是组织大型活动，通过安全的 {featureGroup} 和 {featureCommunity}（100+ 成员）聊天都轻而易举。"
+      }
+    }
+  },
+  "redirect": {
+    "heading": "正在跳转……",
+    "content": "点击 <button>此处</button> 返回上一页。"
+  },
+  "blog": {
+    "readMore": "了解更多",
+    "morePosts": "更多文章"
+  },
+  "download": {
+    "heading": "下载 {appName} 适用于",
+    "mobile": "手机",
+    "desktop": "桌面",
+    "verifySignatures": "验证签名：{platforms}",
+    "releaseNotes": "发行说明：{platforms}"
+  },
+  "imageAlt": {
+    "hero": "移动端加密的私人消息应用界面展示",
+    "appLaptop": "运行于 MacBook Pro 上的加密私人消息应用",
+    "appMobile": "运行于 iPhone 上的加密私人消息应用"
+  },
+  "metadata": {
+    "default": {
+      "titleLayout": "{title} - {appName} 私人消息应用",
+      "title": "{appName} | 发送消息，不发送元数据。| 私人消息应用",
+      "description": "{appName} 是一款私人消息应用，旨在通过将所有消息通过洋葱路由网络传输，彻底消除收集元数据的可能性。"
+    },
+    "download": {
+      "title": "下载",
+      "description": "立即下载 {appName} | {appName} 是一款端到端加密的消息应用，针对所有操作系统移除敏感元数据的收集。"
+    },
+    "faq": {
+      "title": "常见问题",
+      "description": "查找关于 {appName} 的一些常见问题。"
+    },
+    "litepaper": {
+      "description": "{appName} 是一款去中心化的消息应用，支持完全私密、安全和匿名的通信。",
+      "title": "{appName} 轻文档：发送消息，而非元数据"
+    },
+    "whitepaper": {
+      "description": "{appName} 是一款去中心化的消息应用，支持完全私密、安全和匿名的通信。",
+      "title": "{appName} 白皮书：端到端加密对话，最小化元数据泄露"
+    },
+    "community": {
+      "title": "{appName} {featureCommunity}",
+      "description": "加入 {appName} {featureCommunity}，结识正在构建、运行和使用 {appName} 的充满活力的用户群体。"
+    },
+    "blog": {
+      "title": "博客",
+      "description": "查看 {appName} 博客。| {appName} 是一款端到端加密的消息应用，消除敏感元数据的收集。"
+    },
+    "donate": {
+      "title": "Donate | Support Privacy Technology",
+      "description": "Support to the Session Technology Foundation to protect online privacy. Your donation funds secure, open-source messaging technology that safeguards human rights worldwide."
+    }
+  },
+  "donate": {
+    "heading": "{appName} needs your help",
+    "heroContent": "Private messaging is an essential part of our modern life. Secure communication shelters people from tyranny, protects those fighting against injustice, and empowers defenders of human rights worldwide.<br></br><br></br> However, the well-resourced opponents of privacy are actively working to suppress the tech that guards people's basic human rights and dignities. Politicians around the world are pushing for encryption-busting laws, privacy tech is slandered in the media, and surveillance capitalists are profiting from the chaos.<image></image> Despite the adversity, {appName} continues to provide a safe, secure, and trusted space for people to communicate online. {appName} is a free, private, and secure messaging app. It does not track users or sell your data—it just sends messages, privately. Millions of people around the world have turned to Session when they needed a safe and secure place to have a conversation.<br></br><br></br> More than just a tool, {appName} is a symbol of the importance of open-source, transparent, and resilient technology. It is technology like {appName} which safeguards our basic human rights in an era of increasing uncertainty and authoritarianism.",
+    "1": {
+      "heading": "A force for good",
+      "content": "Technology is transforming our society. Currently, a tiny cohort of powerful individuals and institutions have disproportionate control over the internet. In many cases, tech is being used to silence, manipulate, and suppress. It's time to push back against these forces of power.<image></image>We are agents of change in a world where technology is a tool for upending oppression. We believe in a future where technology is collaborative, transparent, equitable, and liberating."
+    },
+    "2": {
+      "heading": "Meet your privacy defenders",
+      "content": "{appName} is stewarded by the {foundationName}, a Swiss foundation dedicated to maintaining the open-source {appName} ecosystem. We are a team of technologists, engineers, and activists dedicated to the mission of restoring online privacy.<image></image> The financial independence of the {foundationName} allows us to fearlessly build the privacy technology that protects everyone's human rights. Your support will contribute to new {appName} development, fund essential network infrastructure, and the ongoing fight for freedom and privacy rights.<br></br><br></br> We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}."
+    },
+    "3": {
+      "heading": "Thank you for caring",
+      "content": "The {foundationName} is a Swiss-registered foundation. We are a non-profit oriented organization, subject to audits from the {swissSupervisory}. Our work helps protect privacy for all and shield those most at risk.<image></image>We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}.<br></br><br></br>Note that donations are not tax-deductible. If you have queries about donations or gifts, contact us via email: <contact-email></contact-email> <br></br><br></br>Please verify the URL is <validation-url></validation-url> before sending funds. If needed, addresses can be authenticated via email."
+    },
+    "4": {
+      "heading": "Donate via Credit Card ({donationProviderName})",
+      "content": ""
+    },
+    "5": {
+      "heading": "Donate via Crypto",
+      "content": "You can send {ethSymbol}, {usdcSymbol}, {usdtSymbol} or {btcSymbol} to the following {foundationName} addresses."
+    },
+    "button": "Donate Now"
+  }
+}

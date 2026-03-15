@@ -1,4 +1,4 @@
-import { Element } from '@/types/himalaya';
+import type { Element } from '@/types/himalaya';
 import sanitize from '@/utils/sanitize';
 
 export interface IEmbed {
@@ -23,12 +23,12 @@ function extractMetadata(html: string): IEmbed {
           return node.children;
         }
       });
-      const metaNodes = headNode!.children.filter((node: Element) => {
+      const metaNodes = headNode?.children.filter((node: Element) => {
         if (node.type === 'element' && node.tagName === 'meta') {
           return node;
         }
       });
-      metaNodes.forEach((node: Element) => {
+      metaNodes?.forEach((node: Element) => {
         if (node.attributes.length > 2) return;
         const prop = node.attributes[0]?.value;
         let content = node.attributes[1]?.value;
@@ -66,9 +66,8 @@ function extractMetadata(html: string): IEmbed {
 
 async function fetchMetadata(targetUrl: string): Promise<IEmbed> {
   const response = await fetch(targetUrl);
-  let html = await response.text();
-  const data = extractMetadata(html);
-  return data;
+  const html = await response.text();
+  return extractMetadata(html);
 }
 
 // https://noembed.com/#supported-sites
@@ -86,18 +85,14 @@ export interface INoembed extends IEmbed {
   // version?: string;
 }
 
-export function isNoembed(object: unknown): object is INoembed {
-  return Object.prototype.hasOwnProperty.call(object, 'html');
+export function isNoembed(obj: unknown): obj is INoembed {
+  return !!(typeof obj === 'object' && obj && Object.hasOwn(obj, 'html'));
 }
 
 // fetch noembed data and render on client at run time.
 // fallback is fetch and render metadata on server at build time
-export async function fetchContent(
-  targetUrl: string
-): Promise<IEmbed | INoembed> {
-  const fetchUrl = `https://www.noembed.com/embed?url=${encodeURIComponent(
-    targetUrl
-  )}`;
+export async function fetchContent(targetUrl: string): Promise<IEmbed | INoembed> {
+  const fetchUrl = `https://www.noembed.com/embed?url=${encodeURIComponent(targetUrl)}`;
   const response = await fetch(fetchUrl);
   let data = await response.json();
 
@@ -109,9 +104,7 @@ export async function fetchContent(
         return data;
       }
     } else {
-      console.error(
-        `unknown error when fetching noembed data for ${targetUrl}`
-      );
+      console.error(`unknown error when fetching noembed data for ${targetUrl}`);
     }
   }
 
@@ -129,10 +122,10 @@ function convertToNoembed(rawData: any): INoembed {
 
   switch (noembed.site_name) {
     case 'Vimeo':
-    case 'YouTube':
+    case 'YouTube': {
       const himalaya = require('himalaya');
 
-      let nodes = himalaya.parse(rawData.html);
+      const nodes = himalaya.parse(rawData.html);
       nodes[0].attributes = nodes[0].attributes.map((attr: any) => {
         switch (attr.key) {
           case 'width':
@@ -153,6 +146,7 @@ function convertToNoembed(rawData: any): INoembed {
       noembed.html = himalaya.stringify(nodes);
       noembed.isExternalVideo = true;
       break;
+    }
     default:
       noembed.html = sanitize(rawData.html);
       break;

@@ -14,11 +14,9 @@ export function useScreenSize() {
 
   useEffect(() => {
     const _isSmall = width < UI.MEDIUM_BREAKPOINT;
-    const _isMedium =
-      width >= UI.MEDIUM_BREAKPOINT && width < UI.LARGE_BREAKPOINT;
+    const _isMedium = width >= UI.MEDIUM_BREAKPOINT && width < UI.LARGE_BREAKPOINT;
     const _isLarge = width >= UI.LARGE_BREAKPOINT && width < UI.HUGE_BREAKPOINT;
-    const _isHuge =
-      width >= UI.HUGE_BREAKPOINT && width < UI.ENORMOUS_BREAKPOINT;
+    const _isHuge = width >= UI.HUGE_BREAKPOINT && width < UI.ENORMOUS_BREAKPOINT;
     const _isEnormous = width >= UI.ENORMOUS_BREAKPOINT;
 
     setIsSmall(_isSmall);

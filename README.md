@@ -9,7 +9,7 @@ This project is built with [Contentful](https://www.contentful.com), [Next.js](h
 
 ### System Requirements
 
-- [Node.js 16.20.1](https://nodejs.org/) or later
+- [Node.js 24.4.1](https://nodejs.org/) or later
 
 ### Setup
 
@@ -20,22 +20,18 @@ Follow nvm setup instructions [here](https://github.com/nvm-sh/nvm/blob/master/R
 2. Install Node.js locally
 
 ```
-nvm install 16.20.1
-nvm use 16.20.1
+nvm install 24.4.1
+nvm use 24.4.1
 ```
 
-3. Install `yarn`
+3. Install `pnpm`
 
-```
-npm install yarn -g
-```
+Follow pnpm setup instruction [here](https://pnpm.io/installation).
 
 4. Install dependencies
 
-Using `--frozen-lockfile` makes sure that the environment is consistent on any machine by installing the exact package versions listed in the [yarn.lock](yarn.lock).
-
 ```
-yarn install --frozen-lockfile
+pnpm install
 ```
 
 5. Signup for a free [Contentful](https://www.contentful.com/) account and create an organisation and within that create a space.
@@ -59,7 +55,6 @@ yarn install --frozen-lockfile
 ## Developing
 
 - For accessbility testing we use the [axe-react](https://github.com/dequelabs/axe-core-npm/blob/develop/packages/react/README.md) plugin.
-- We use the [Headwind](https://github.com/heybourn/headwind) VSCode extension for sorting TailwindCSS classes.
 - We use [classnames](https://www.npmjs.com/package/classnames) to organise our classes into groups that combine at build time.
 
 If you are new to Next.js, this is a helpful introduction: https://nextjs.org/docs
@@ -67,7 +62,7 @@ If you are new to Next.js, this is a helpful introduction: https://nextjs.org/do
 Now you can run the development server:
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the Session homepage.
@@ -136,7 +131,7 @@ We can't use template literals with classes if we want to purge (shrink) the CSS
 You can run the project in a production environment by running:
 
 ```
-yarn run build && yarn run start
+pnpm run build && pnpm run start
 ```
 
 **Make sure to do this locally and check for errors before pushing any code changes to your hosted repository**
@@ -150,7 +145,7 @@ If you want to see your Contentful changes faster while using a production serve
 You can test the project in a staging environment by running:
 
 ```
-yarn run build:staging && yarn run start:staging
+pnpm run build:staging && pnpm run start:staging
 ```
 
 Staging environments are password protected using the password you assign to `STAGING_SECRET` in `.env.local`.

@@ -1,9 +1,8 @@
-import { mkdirSync, writeFileSync } from 'fs';
-
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { Feed } from 'feed';
-import { IPost } from '../types/cms';
-import METADATA from '@/constants/metadata';
 import rimraf from 'rimraf';
+import METADATA from '@/constants/metadata';
+import type { IPost } from '../types/cms';
 
 const baseUrl = METADATA.HOST_URL;
 
@@ -44,7 +43,7 @@ export default function generateRSSFeed(posts: IPost[]) {
     });
   });
 
-  rimraf.sync(`./public/rss`);
+  rimraf?.sync(`./public/rss`);
   mkdirSync(`./public/rss`, { recursive: true });
   writeFileSync(`./public/rss/feed.xml`, feed.rss2(), {
     encoding: 'utf-8',

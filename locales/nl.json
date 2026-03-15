@@ -1,0 +1,206 @@
+{
+  "feature": {
+    "accountIds": "Account-ID's",
+    "nodes": "nodes",
+    "group": "Groep",
+    "community": "Community"
+  },
+  "general": {
+    "download": "Downloaden",
+    "whitepaper": "Whitepaper",
+    "litepaper": "Litepaper",
+    "messages": "Berichten",
+    "metadata": "Metadata",
+    "privacyPolicy": "Privacybeleid",
+    "termsOfService": "Gebruiksvoorwaarden",
+    "other": "Overige"
+  },
+  "navigation": {
+    "blog": "Blog",
+    "resources": "Bronnen",
+    "docs": "Documentatie",
+    "network": "Netwerk",
+    "help": "Help",
+    "faq": "Veelgestelde vragen",
+    "support": "Helpdesk",
+    "aria": {
+      "whitepaper": "Link naar {appName} Whitepaper",
+      "litepaper": "Link naar {appName} Litepaper",
+      "sessionToken": "Link naar {appName} Token-website",
+      "support": "Link naar {appName} helpdesk via Zendesk",
+      "iconButtonOpen": "Navigatiemenu openen",
+      "iconButtonClose": "Navigatiemenu sluiten",
+      "downloadButton": "Link naar {appName}-download"
+    },
+    "donate": "Donate"
+  },
+  "footer": {
+    "about": "Over",
+    "mediaKit": "Mediakit",
+    "transparencyReport": "Transparantierapport",
+    "foundation": "Stichting",
+    "appSupport": "{appName} Helpdesk",
+    "socials": "Socials",
+    "aria": {
+      "socialLink": "Link naar {appName} op {platform}",
+      "rssLink": "Link naar RSS-feed"
+    }
+  },
+  "languageSelection": {
+    "title": "Selecteer je taal",
+    "description": "Selecteer je voorkeurstaal uit de onderstaande lijst",
+    "aria": {
+      "currentLanguage": "{language} (huidige taal)",
+      "switchToLanguage": "Overschakelen naar {language}",
+      "currentLanguageIndicator": "(momenteel)"
+    }
+  },
+  "notFound": {
+    "pageNotFound": "Deze pagina lijkt niet te bestaan.",
+    "description": "De link naar deze pagina lijkt niet te werken."
+  },
+  "email": {
+    "heading": "Alle projectupdates rechtstreeks in je inbox.",
+    "subheading": "Verwacht ongeveer één e-mail per maand.",
+    "placeholder": "Je e-mailadres",
+    "submitSuccessConfirm": "Bedankt! Controleer je inbox om je abonnement te bevestigen.",
+    "button": {
+      "text": "Inschrijven"
+    },
+    "joinCommunity": "Word lid van de <button>{appName} {featureCommunity}</button> en maak kennis met de bruisende community die Session ontwikkelt, beheert en gebruikt."
+  },
+  "landing": {
+    "hero": {
+      "heading": "Verstuur <glitch>berichten,</glitch> geen metadata.",
+      "tag": "Vind je vrijheid met {appName}",
+      "glitchTextGlitch": "Versleuteld"
+    },
+    "about": {
+      "title": "Wat is {appName}?",
+      "content": "{appName} is een <span>end-to-end</span> versleutelde messenger die jouw <span>persoonlijke</span> gegevens beschermt. Herpak de controle met een berichtenapp die is ontworpen, gebouwd en beheerd door een <span>wereldwijde</span> community van <span>privacy</span>-experts."
+    },
+    "benefits": {
+      "title": "Voordelen",
+      "1": {
+        "heading": "Geen telefoonnummers",
+        "content": "Bescherm je identiteit met {featureAccountIds}.<br></br> Je hebt geen telefoonnummer of e-mailadres nodig om je aan te melden."
+      },
+      "2": {
+        "heading": "Geen datalekken",
+        "content": "{appName} verzamelt geen gegevens,<br></br>dus er is niets dat gelekt kan worden."
+      },
+      "3": {
+        "heading": "Veilige paden",
+        "content": "Onion-gerouteerde paden beschermen je gesprekken<br></br>tegen hackers en afluisteraars."
+      },
+      "4": {
+        "heading": "Open source",
+        "content": "{appName} heeft niets te verbergen. Iedereen kan<br></br>de code bekijken, controleren en eraan bijdragen. "
+      },
+      "5": {
+        "heading": "Gedreven door mensen",
+        "content": "Duizenden {featureNodes} worden beheerd door een wereldwijde community.<br></br>{appName} is door de mensen, voor de mensen."
+      },
+      "6": {
+        "heading": "Geen trackers",
+        "content": "Jouw gegevens worden nooit verzameld, nooit gevolgd en<br></br>nooit verkocht aan derden."
+      }
+    },
+    "features": {
+      "title": "Functies",
+      "heading": "Geniet van de functies die je leuk vindt en de beveiliging die je nodig hebt.",
+      "1": {
+        "heading": "Spreek vrijuit",
+        "content": "Je berichten zijn alleen zichtbaar voor jou en degene met wie je praat. Ervaar echte vrijheid dankzij end-to-end encryptie en verdwijnende berichten."
+      },
+      "2": {
+        "heading": "Behoud de controle",
+        "content": "Jij hebt de controle over je berichten van begin tot eind. Of het nu gaat om het beheren van je eigen versleutelingssleutels of het kiezen van een aangepast thema—Session geeft jou de touwtjes in handen."
+      },
+      "3": {
+        "heading": "Blijf in contact met jouw community",
+        "content": "Of je nu bijpraat met goede vrienden of een groot evenement organiseert, met beveiligde {featureGroup}- en {featureCommunity}-chats (100+ leden) doe je dat eenvoudig en veilig."
+      }
+    }
+  },
+  "redirect": {
+    "heading": "Doorsturen...",
+    "content": "Klik <button>hier</button> om terug te gaan naar de vorige pagina."
+  },
+  "blog": {
+    "readMore": "Lees meer",
+    "morePosts": "Meer berichten"
+  },
+  "download": {
+    "heading": "Download {appName} voor",
+    "mobile": "Mobiel",
+    "desktop": "Desktop",
+    "verifySignatures": "Handtekeningen verifiëren: {platforms}",
+    "releaseNotes": "Versie-opmerkingen: {platforms}"
+  },
+  "imageAlt": {
+    "hero": "mobiele versleutelde privéberichten-app UI-weergave",
+    "appLaptop": "versleutelde privéberichten-app draaiend op een MacBook Pro",
+    "appMobile": "versleutelde privéberichten-app draaiend op een iPhone"
+  },
+  "metadata": {
+    "default": {
+      "titleLayout": "{title} - {appName} Privé Messenger",
+      "title": "{appName} | Verstuur berichten, geen metadata. | Privé Messenger",
+      "description": "{appName} is een privé messenger die elke kans op het verzamelen van metadata wil uitsluiten door alle berichten via een onion-routingnetwerk te versturen."
+    },
+    "download": {
+      "title": "Downloaden",
+      "description": "Download {appName} vandaag nog | {appName} is een end-to-end versleutelde messenger die het verzamelen van gevoelige metadata op elk besturingssysteem uitsluit."
+    },
+    "faq": {
+      "title": "Veelgestelde vragen (FAQ)",
+      "description": "Vind antwoorden op de meest gestelde vragen over {appName}."
+    },
+    "litepaper": {
+      "description": "{appName} is een gedecentraliseerde messenger die volledig privé, veilig en anoniem communiceren ondersteunt.",
+      "title": "{appName} Litepaper: Verstuur berichten, geen metadata"
+    },
+    "whitepaper": {
+      "description": "{appName} is een gedecentraliseerde messenger die volledig privé, veilig en anoniem communiceren ondersteunt.",
+      "title": "{appName} Whitepaper: End-to-end versleutelde gesprekken met minimale metadata-lekkage"
+    },
+    "community": {
+      "title": "{appName} {featureCommunity}",
+      "description": "Word lid van de {appName} {featureCommunity} en maak kennis met de bruisende community die {appName} ontwikkelt, beheert en gebruikt."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Bekijk de {appName} Blogs. | {appName} is een end-to-end versleutelde messenger die het verzamelen van gevoelige metadata uitsluit."
+    },
+    "donate": {
+      "title": "Donate | Support Privacy Technology",
+      "description": "Support to the Session Technology Foundation to protect online privacy. Your donation funds secure, open-source messaging technology that safeguards human rights worldwide."
+    }
+  },
+  "donate": {
+    "heading": "{appName} needs your help",
+    "heroContent": "Private messaging is an essential part of our modern life. Secure communication shelters people from tyranny, protects those fighting against injustice, and empowers defenders of human rights worldwide.<br></br><br></br> However, the well-resourced opponents of privacy are actively working to suppress the tech that guards people's basic human rights and dignities. Politicians around the world are pushing for encryption-busting laws, privacy tech is slandered in the media, and surveillance capitalists are profiting from the chaos.<image></image> Despite the adversity, {appName} continues to provide a safe, secure, and trusted space for people to communicate online. {appName} is a free, private, and secure messaging app. It does not track users or sell your data—it just sends messages, privately. Millions of people around the world have turned to Session when they needed a safe and secure place to have a conversation.<br></br><br></br> More than just a tool, {appName} is a symbol of the importance of open-source, transparent, and resilient technology. It is technology like {appName} which safeguards our basic human rights in an era of increasing uncertainty and authoritarianism.",
+    "1": {
+      "heading": "A force for good",
+      "content": "Technology is transforming our society. Currently, a tiny cohort of powerful individuals and institutions have disproportionate control over the internet. In many cases, tech is being used to silence, manipulate, and suppress. It's time to push back against these forces of power.<image></image>We are agents of change in a world where technology is a tool for upending oppression. We believe in a future where technology is collaborative, transparent, equitable, and liberating."
+    },
+    "2": {
+      "heading": "Meet your privacy defenders",
+      "content": "{appName} is stewarded by the {foundationName}, a Swiss foundation dedicated to maintaining the open-source {appName} ecosystem. We are a team of technologists, engineers, and activists dedicated to the mission of restoring online privacy.<image></image> The financial independence of the {foundationName} allows us to fearlessly build the privacy technology that protects everyone's human rights. Your support will contribute to new {appName} development, fund essential network infrastructure, and the ongoing fight for freedom and privacy rights.<br></br><br></br> We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}."
+    },
+    "3": {
+      "heading": "Thank you for caring",
+      "content": "The {foundationName} is a Swiss-registered foundation. We are a non-profit oriented organization, subject to audits from the {swissSupervisory}. Our work helps protect privacy for all and shield those most at risk.<image></image>We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}.<br></br><br></br>Note that donations are not tax-deductible. If you have queries about donations or gifts, contact us via email: <contact-email></contact-email> <br></br><br></br>Please verify the URL is <validation-url></validation-url> before sending funds. If needed, addresses can be authenticated via email."
+    },
+    "4": {
+      "heading": "Donate via Credit Card ({donationProviderName})",
+      "content": ""
+    },
+    "5": {
+      "heading": "Donate via Crypto",
+      "content": "You can send {ethSymbol}, {usdcSymbol}, {usdtSymbol} or {btcSymbol} to the following {foundationName} addresses."
+    },
+    "button": "Donate Now"
+  }
+}

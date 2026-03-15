@@ -1,16 +1,8 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import { readFileSync } from 'node:fs';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { readFileSync } from 'fs';
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.statusCode = 200;
   res.setHeader('content-type', 'application/pdf');
-  res.end(
-    readFileSync(
-      './public/assets/papers/Litepaper_Session_private_messenger.pdf'
-    )
-  );
+  res.end(readFileSync('./public/assets/papers/Litepaper_Session_private_messenger.pdf'));
 }

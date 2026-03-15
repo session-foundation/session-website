@@ -1,0 +1,206 @@
+{
+  "feature": {
+    "accountIds": "अकाउंट ID",
+    "nodes": "नोड्स",
+    "group": "समूह",
+    "community": "समुदाय"
+  },
+  "general": {
+    "download": "डाउनलोड करें",
+    "whitepaper": "वाइटपेपर",
+    "litepaper": "लाइटपेपर",
+    "messages": "मेसेज",
+    "metadata": "मेटाडेटा",
+    "privacyPolicy": "गोपनीयता नीति",
+    "termsOfService": "सेवा की शर्तें",
+    "other": "अन्य"
+  },
+  "navigation": {
+    "blog": "ब्लॉग",
+    "resources": "संसाधन",
+    "docs": "डॉक्स",
+    "network": "नेटवर्क",
+    "help": "मदद",
+    "faq": "अक्सर पूछे जाने वाले सवाल",
+    "support": "सहायता",
+    "aria": {
+      "whitepaper": "{appName} वाइटपेपर का लिंक",
+      "litepaper": "{appName} लाइटपेपर का लिंक",
+      "sessionToken": "{appName} टोकन वेबसाइट लिंक",
+      "support": "{appName} सहायता लिंक (Zendesk के माध्यम से)",
+      "iconButtonOpen": "नेविगेशन मेनू खोलें",
+      "iconButtonClose": "नेविगेशन मेनू बंद करें",
+      "downloadButton": "{appName} डाउनलोड लिंक"
+    },
+    "donate": "Donate"
+  },
+  "footer": {
+    "about": "हमारे बारे में",
+    "mediaKit": "मीडियाकिट",
+    "transparencyReport": "पारदर्शिता रिपोर्ट",
+    "foundation": "फ़ाउंडेशन",
+    "appSupport": "{appName} सहायता",
+    "socials": "सोशल मीडिया",
+    "aria": {
+      "socialLink": "{platform} पर {appName} का लिंक",
+      "rssLink": "RSS फ़ीड का लिंक"
+    }
+  },
+  "languageSelection": {
+    "title": "अपनी भाषा चुनें",
+    "description": "नीचे दी गई सूची से अपनी पसंदीदा भाषा चुनें।",
+    "aria": {
+      "currentLanguage": "{language} (वर्तमान भाषा)",
+      "switchToLanguage": "{language} बदलें",
+      "currentLanguageIndicator": "(वर्तमान)"
+    }
+  },
+  "notFound": {
+    "pageNotFound": "शायद यह पेज अब उपलब्ध नहीं है।",
+    "description": "लगता है यहां दिया गया लिंक गलत था।"
+  },
+  "email": {
+    "heading": "हर प्रोजेक्ट अपडेट, सीधे आपके इनबॉक्स में।",
+    "subheading": "हर महीने बस एक ईमेल आएगा।",
+    "placeholder": "आपका ईमेल",
+    "submitSuccessConfirm": "शुक्रिया! सदस्यता पक्की करने के लिए अपना इनबॉक्स ज़रूर देखें।",
+    "button": {
+      "text": "साइन अप करें"
+    },
+    "joinCommunity": "<button>{appName} {featureCommunity}</button> से जुड़ें और उन लोगों से मिलें जो Session को बना रहे हैं, चला रहे हैं और इस्तेमाल कर रहे हैं।\n"
+  },
+  "landing": {
+    "hero": {
+      "heading": "<glitch>संदेश भेजें,</glitch> मेटाडेटा नहीं।",
+      "tag": "अपनी आज़ादी पाएं, {appName} के साथ\n",
+      "glitchTextGlitch": "एन्क्रिप्टेड"
+    },
+    "about": {
+      "title": "{appName} क्या है?",
+      "content": "{appName} एक <span>एंड-टू-एंड</span> एन्क्रिप्टेड मैसेंजर है जो आपके <span>व्यक्तिगत</span> डेटा की सुरक्षा करता है। एक <span>वैश्विक</span> <span>प्राइवेसी</span> विशेषज्ञों के समुदाय द्वारा डिज़ाइन, निर्मित और संचालित मैसेजिंग ऐप के साथ नियंत्रण वापस लें।"
+    },
+    "benefits": {
+      "title": "लाभ",
+      "1": {
+        "heading": "कोई फोन नंबर नहीं",
+        "content": "{featureAccountIds} के साथ अपनी पहचान सुरक्षित रखें।<br></br>साइन अप करने के लिए न फोन नंबर चाहिए, न ईमेल।"
+      },
+      "2": {
+        "heading": "कोई डेटा उल्लंघन नहीं",
+        "content": "{appName} डेटा एकत्र नहीं करता,<br></br>इसलिए लीक होने लायक कुछ नहीं है।"
+      },
+      "3": {
+        "heading": "सुरक्षित रास्ते",
+        "content": "ओनियन-रूटेड रास्ते आपके संवादों को<br></br>हैकर्स और जासूसों से सुरक्षित रखते हैं।"
+      },
+      "4": {
+        "heading": "ओपन सोर्स",
+        "content": "{appName} कुछ नहीं छुपाता। कोई भी<br></br>इसका कोड देख सकता है, ऑडिट कर सकता है और उसमें योगदान दे सकता है "
+      },
+      "5": {
+        "heading": "लोगों द्वारा संचालित",
+        "content": "{featureNodes} की हजारों इकाइयाँ एक वैश्विक समुदाय द्वारा चलाई जाती हैं।<br></br>{appName} लोगों के द्वारा, लोगों के लिए है।"
+      },
+      "6": {
+        "heading": "कोई ट्रैकर नहीं",
+        "content": "आपका डेटा कभी एकत्र नहीं किया जाता, ट्रैक नहीं किया जाता,<br></br>और कभी भी तीसरे पक्ष को बेचा नहीं जाता।"
+      }
+    },
+    "features": {
+      "title": "विशेषताएँ",
+      "heading": "आपकी पसंदीदा विशेषताओं और आवश्यक सुरक्षा का आनंद लें।",
+      "1": {
+        "heading": "स्वतंत्र रूप से बात करें",
+        "content": "केवल आप और जिससे आप बात कर रहे हैं वही आपके संदेश देख सकते हैं। एंड-टू-एंड एन्क्रिप्शन और गायब होने वाले संदेशों के साथ स्वतंत्रता की भावना का आनंद लें।"
+      },
+      "2": {
+        "heading": "नियंत्रण बनाए रखें",
+        "content": "आप शुरुआत से अंत तक अपने संदेशों पर नियंत्रण रखते हैं। चाहे वह आपकी एन्क्रिप्शन कुंजियाँ प्रबंधित करना हो या कस्टम थीम चुनना—Session आपको नियंत्रण प्रदान करता है।"
+      },
+      "3": {
+        "heading": "अपनी भीड़ के साथ जुड़े रहें",
+        "content": "चाहे आप अपने करीबी दोस्तों से संपर्क में हों या कोई बड़ा कार्यक्रम आयोजन कर रहे हों, सुरक्षित {featureGroup} और {featureCommunity} (100+ सदस्य) चैट्स के साथ यह सरल है।"
+      }
+    }
+  },
+  "redirect": {
+    "heading": "पुनः निर्देशित किया जा रहा है...",
+    "content": "पिछले पृष्ठ पर लौटने के लिए <button>यहाँ क्लिक करें</button>।"
+  },
+  "blog": {
+    "readMore": "और पढ़ें",
+    "morePosts": "अधिक पोस्ट्स"
+  },
+  "download": {
+    "heading": "{appName} डाउनलोड करें",
+    "mobile": "मोबाइल",
+    "desktop": "डेस्कटॉप",
+    "verifySignatures": "हस्ताक्षर सत्यापित करें: {platforms}",
+    "releaseNotes": "रिलीज़ नोट्स: {platforms}"
+  },
+  "imageAlt": {
+    "hero": "मोबाइल एन्क्रिप्टेड प्राइवेट मैसेजिंग ऐप यूआई शोकेस",
+    "appLaptop": "एक मैकबुक प्रो पर चलता हुआ एन्क्रिप्टेड प्राइवेट मैसेजिंग ऐप",
+    "appMobile": "एक iPhone पर चलता हुआ एन्क्रिप्टेड प्राइवेट मैसेजिंग ऐप"
+  },
+  "metadata": {
+    "default": {
+      "titleLayout": "{title} - {appName} प्राइवेट मैसेंजर",
+      "title": "{appName} | संदेश भेजें, मेटाडेटा नहीं। | प्राइवेट मैसेंजर",
+      "description": "{appName} एक निजी मैसेंजर है जो सभी संदेशों को ओनियन रूटिंग नेटवर्क के माध्यम से प्रेषित कर किसी भी प्रकार की मेटाडेटा एकत्र करने की संभावना को समाप्त करता है।"
+    },
+    "download": {
+      "title": "डाउनलोड",
+      "description": "आज ही {appName} डाउनलोड करें | {appName} एक एंड-टू-एंड एन्क्रिप्टेड मैसेंजर है जो सभी ऑपरेटिंग सिस्टम्स के लिए संवेदनशील मेटाडेटा संग्रहण को हटाता है।"
+    },
+    "faq": {
+      "title": "अकसर किये गए सवाल",
+      "description": "{appName} से जुड़े कुछ सबसे अधिक पूछे जाने वाले प्रश्नों के उत्तर जानें।"
+    },
+    "litepaper": {
+      "description": "{appName} एक विकेंद्रीकृत मैसेंजर है जो पूर्ण रूप से निजी, सुरक्षित और गुमनाम संवाद का समर्थन करता है।",
+      "title": "{appName} लाइटपेपर: मैसेज भेजें, मेटाडेटा नहीं"
+    },
+    "whitepaper": {
+      "description": "{appName} एक विकेंद्रीकृत मैसेंजर है जो पूर्ण रूप से निजी, सुरक्षित और गुमनाम संवाद का समर्थन करता है।",
+      "title": "{appName} व्हाइटपेपर: एंड-टू-एंड एन्क्रिप्टेड बातचीत, न्यूनतम मेटाडेटा लीक के साथ"
+    },
+    "community": {
+      "title": "{appName} {featureCommunity}",
+      "description": "{appName} {featureCommunity} से जुड़ें और उन लोगों से मिलें जो {appName} का निर्माण, संचालन और उपयोग कर रहे हैं।"
+    },
+    "blog": {
+      "title": "ब्लॉग",
+      "description": "{appName} ब्लॉग्स देखें। | {appName} एक एंड-टू-एंड एन्क्रिप्टेड मैसेंजर है जो संवेदनशील मेटाडेटा संग्रहण को हटाता है।"
+    },
+    "donate": {
+      "title": "Donate | Support Privacy Technology",
+      "description": "Support to the Session Technology Foundation to protect online privacy. Your donation funds secure, open-source messaging technology that safeguards human rights worldwide."
+    }
+  },
+  "donate": {
+    "heading": "{appName} needs your help",
+    "heroContent": "Private messaging is an essential part of our modern life. Secure communication shelters people from tyranny, protects those fighting against injustice, and empowers defenders of human rights worldwide.<br></br><br></br> However, the well-resourced opponents of privacy are actively working to suppress the tech that guards people's basic human rights and dignities. Politicians around the world are pushing for encryption-busting laws, privacy tech is slandered in the media, and surveillance capitalists are profiting from the chaos.<image></image> Despite the adversity, {appName} continues to provide a safe, secure, and trusted space for people to communicate online. {appName} is a free, private, and secure messaging app. It does not track users or sell your data—it just sends messages, privately. Millions of people around the world have turned to Session when they needed a safe and secure place to have a conversation.<br></br><br></br> More than just a tool, {appName} is a symbol of the importance of open-source, transparent, and resilient technology. It is technology like {appName} which safeguards our basic human rights in an era of increasing uncertainty and authoritarianism.",
+    "1": {
+      "heading": "A force for good",
+      "content": "Technology is transforming our society. Currently, a tiny cohort of powerful individuals and institutions have disproportionate control over the internet. In many cases, tech is being used to silence, manipulate, and suppress. It's time to push back against these forces of power.<image></image>We are agents of change in a world where technology is a tool for upending oppression. We believe in a future where technology is collaborative, transparent, equitable, and liberating."
+    },
+    "2": {
+      "heading": "Meet your privacy defenders",
+      "content": "{appName} is stewarded by the {foundationName}, a Swiss foundation dedicated to maintaining the open-source {appName} ecosystem. We are a team of technologists, engineers, and activists dedicated to the mission of restoring online privacy.<image></image> The financial independence of the {foundationName} allows us to fearlessly build the privacy technology that protects everyone's human rights. Your support will contribute to new {appName} development, fund essential network infrastructure, and the ongoing fight for freedom and privacy rights.<br></br><br></br> We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}."
+    },
+    "3": {
+      "heading": "Thank you for caring",
+      "content": "The {foundationName} is a Swiss-registered foundation. We are a non-profit oriented organization, subject to audits from the {swissSupervisory}. Our work helps protect privacy for all and shield those most at risk.<image></image>We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}.<br></br><br></br>Note that donations are not tax-deductible. If you have queries about donations or gifts, contact us via email: <contact-email></contact-email> <br></br><br></br>Please verify the URL is <validation-url></validation-url> before sending funds. If needed, addresses can be authenticated via email."
+    },
+    "4": {
+      "heading": "Donate via Credit Card ({donationProviderName})",
+      "content": ""
+    },
+    "5": {
+      "heading": "Donate via Crypto",
+      "content": "You can send {ethSymbol}, {usdcSymbol}, {usdtSymbol} or {btcSymbol} to the following {foundationName} addresses."
+    },
+    "button": "Donate Now"
+  }
+}

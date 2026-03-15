@@ -1,0 +1,206 @@
+{
+  "feature": {
+    "accountIds": "ID-uri de cont",
+    "nodes": "noduri",
+    "group": "Grup",
+    "community": "Comunitate"
+  },
+  "general": {
+    "download": "Descarcă",
+    "whitepaper": "Document tehnic",
+    "litepaper": "Document ușor",
+    "messages": "Mesaje",
+    "metadata": "Metadate",
+    "privacyPolicy": "Politica de confidențialitate",
+    "termsOfService": "Termeni și condiții",
+    "other": "Altele"
+  },
+  "navigation": {
+    "blog": "Blog",
+    "resources": "Resurse",
+    "docs": "Documentație",
+    "network": "Rețea",
+    "help": "Ajutor",
+    "faq": "Întrebări frecvente",
+    "support": "Asistență",
+    "aria": {
+      "whitepaper": "Link către whitepaper-ul {appName}",
+      "litepaper": "Link către litepaper-ul {appName}",
+      "sessionToken": "Link către site-ul token al {appName}",
+      "support": "Link către suportul {appName} prin Zendesk",
+      "iconButtonOpen": "Deschide meniul de navigare",
+      "iconButtonClose": "Închide meniul de navigare",
+      "downloadButton": "Link pentru descărcarea aplicației {appName}"
+    },
+    "donate": "Donate"
+  },
+  "footer": {
+    "about": "Despre",
+    "mediaKit": "Kit media",
+    "transparencyReport": "Raport de transparență",
+    "foundation": "Fundație",
+    "appSupport": "Asistență {appName}",
+    "socials": "Rețele sociale",
+    "aria": {
+      "socialLink": "Link către {appName} pe {platform}",
+      "rssLink": "Link către fluxul RSS"
+    }
+  },
+  "languageSelection": {
+    "title": "Selectează limba ta",
+    "description": "Selectează limba preferată din lista de mai jos",
+    "aria": {
+      "currentLanguage": "{language} (limba curentă)",
+      "switchToLanguage": "Schimbă în {language}",
+      "currentLanguageIndicator": "(curentă)"
+    }
+  },
+  "notFound": {
+    "pageNotFound": "Această pagină nu pare să existe.",
+    "description": "Se pare că linkul către această pagină a fost defect."
+  },
+  "email": {
+    "heading": "Fiecare actualizare de proiect, livrată direct în inbox-ul tău.",
+    "subheading": "Primești un e-mail cam o dată pe lună.",
+    "placeholder": "Emailul tău",
+    "submitSuccessConfirm": "Mulțumim! Verifică inbox-ul pentru a confirma abonarea.",
+    "button": {
+      "text": "Înregistrează-te"
+    },
+    "joinCommunity": "Alătură-te <button>{appName} {featureCommunity}</button> și întâlnește grupul vibrant de oameni care creează, gestionează și folosesc Session."
+  },
+  "landing": {
+    "hero": {
+      "heading": "Send <glitch>Messages,</glitch> Not Metadata.",
+      "tag": "Găsește-ți libertatea cu {appName}",
+      "glitchTextGlitch": "Criptate"
+    },
+    "about": {
+      "title": "Ce este {appName}?",
+      "content": "{appName} este un mesager criptat <span>end-to-end</span> care îți protejează datele <span>personale</span>. Recâștigă controlul cu o aplicație de mesagerie concepută, construită și operată de o comunitate <span>globală</span> de experți în <span>confidențialitate</span>."
+    },
+    "benefits": {
+      "title": "Beneficii",
+      "1": {
+        "heading": "Fără numere de telefon",
+        "content": "Keep your identity private with Account IDs. No phone number or email required to sign up."
+      },
+      "2": {
+        "heading": "Fără breșe de date",
+        "content": "{appName} nu colectează date,<br></br>așa că nu are nimic de scurs."
+      },
+      "3": {
+        "heading": "Căi sigure",
+        "content": "Căile rutate prin onion îți protejează conversațiile<br></br>de hackeri și interceptori."
+      },
+      "4": {
+        "heading": "Open source",
+        "content": "Privacy is more than a promise. Anyone can view, audit, and contribute to {appName}'s code."
+      },
+      "5": {
+        "heading": "Putere prin oameni",
+        "content": "Mii de {featureNodes} operate de o comunitate globală.<br></br>{appName} este creat de oameni, pentru oameni."
+      },
+      "6": {
+        "heading": "Fără trackere",
+        "content": "Datele tale nu sunt colectate niciodată, nici urmărite,<br></br>și nici vândute către terți."
+      }
+    },
+    "features": {
+      "title": "Funcționalități",
+      "heading": "Bucură-te de funcționalitățile pe care le iubești și de securitatea de care ai nevoie.",
+      "1": {
+        "heading": "Vorbește liber",
+        "content": "Doar tu și persoana cu care vorbești puteți vedea mesajele. Bucură-te de sentimentul de libertate cu criptare end-to-end și mesaje care dispar."
+      },
+      "2": {
+        "heading": "Fii în control",
+        "content": "Deții controlul asupra mesajelor tale de la început până la sfârșit. Fie că gestionezi propriile tale chei de criptare sau alegi o temă personalizată — Session te pune la conducere."
+      },
+      "3": {
+        "heading": "Ține pasul cu grupul tău",
+        "content": "Indiferent dacă stai de vorbă cu prieteni apropiați sau organizezi un eveniment important, este ușor cu discuțiile {featureGroup} și {featureCommunity} (peste 100 de membri) securizate."
+      }
+    }
+  },
+  "redirect": {
+    "heading": "Redirecționare...",
+    "content": "Fă clic pe <button>aici</button> pentru a te întoarce la pagina anterioară."
+  },
+  "blog": {
+    "readMore": "Informații suplimentare",
+    "morePosts": "Mai multe articole"
+  },
+  "download": {
+    "heading": "Descarcă {appName} pentru",
+    "mobile": "Mobil",
+    "desktop": "Desktop",
+    "verifySignatures": "Verifică semnăturile: {platforms}",
+    "releaseNotes": "Note de lansare: {platforms}"
+  },
+  "imageAlt": {
+    "hero": "interfață aplicație mobilă de mesagerie privată criptată",
+    "appLaptop": "aplicație de mesagerie privată criptată rulând pe un macbook pro",
+    "appMobile": "aplicație de mesagerie privată criptată rulând pe un iPhone"
+  },
+  "metadata": {
+    "default": {
+      "titleLayout": "{title} - Mesager Privat {appName}",
+      "title": "{appName} | Trimite mesaje, nu metadate. | Mesager Privat",
+      "description": "{appName} este un mesager privat care are scopul de a elimina orice posibilitate de colectare a metadatelor prin redirecționarea tuturor mesajelor printr-o rețea onion."
+    },
+    "download": {
+      "title": "Descarcă",
+      "description": "Descarcă {appName} astăzi | {appName} este un mesager criptat end-to-end care elimină colectarea datelor sensibile de pe toate sistemele de operare."
+    },
+    "faq": {
+      "title": "Întrebări frecvente",
+      "description": "Find answers to some of the most frequently asked questions about {appName}."
+    },
+    "litepaper": {
+      "description": "{appName} este un mesager descentralizat care permite comunicații complet private, sigure și anonime.",
+      "title": "{appName} Litepaper: Send Messages, Not Metadata"
+    },
+    "whitepaper": {
+      "description": "{appName} este un mesager descentralizat care permite comunicații complet private, sigure și anonime.",
+      "title": "{appName} Whitepaper: End-To-End Encrypted Conversations with Minimal Metadata Leakage"
+    },
+    "community": {
+      "title": "{appName} {featureCommunity}",
+      "description": "Alătură-te {featureCommunity} din {appName} și cunoaște grupul dinamic de oameni care dezvoltă, operează și folosesc {appName}."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Vizualizează blogurile {appName}. | {appName} este un mesager criptat end-to-end care elimină colectarea metadatelor sensibile."
+    },
+    "donate": {
+      "title": "Donate | Support Privacy Technology",
+      "description": "Support to the Session Technology Foundation to protect online privacy. Your donation funds secure, open-source messaging technology that safeguards human rights worldwide."
+    }
+  },
+  "donate": {
+    "heading": "{appName} needs your help",
+    "heroContent": "Private messaging is an essential part of our modern life. Secure communication shelters people from tyranny, protects those fighting against injustice, and empowers defenders of human rights worldwide.<br></br><br></br> However, the well-resourced opponents of privacy are actively working to suppress the tech that guards people's basic human rights and dignities. Politicians around the world are pushing for encryption-busting laws, privacy tech is slandered in the media, and surveillance capitalists are profiting from the chaos.<image></image> Despite the adversity, {appName} continues to provide a safe, secure, and trusted space for people to communicate online. {appName} is a free, private, and secure messaging app. It does not track users or sell your data—it just sends messages, privately. Millions of people around the world have turned to Session when they needed a safe and secure place to have a conversation.<br></br><br></br> More than just a tool, {appName} is a symbol of the importance of open-source, transparent, and resilient technology. It is technology like {appName} which safeguards our basic human rights in an era of increasing uncertainty and authoritarianism.",
+    "1": {
+      "heading": "A force for good",
+      "content": "Technology is transforming our society. Currently, a tiny cohort of powerful individuals and institutions have disproportionate control over the internet. In many cases, tech is being used to silence, manipulate, and suppress. It's time to push back against these forces of power.<image></image>We are agents of change in a world where technology is a tool for upending oppression. We believe in a future where technology is collaborative, transparent, equitable, and liberating."
+    },
+    "2": {
+      "heading": "Meet your privacy defenders",
+      "content": "{appName} is stewarded by the {foundationName}, a Swiss foundation dedicated to maintaining the open-source {appName} ecosystem. We are a team of technologists, engineers, and activists dedicated to the mission of restoring online privacy.<image></image> The financial independence of the {foundationName} allows us to fearlessly build the privacy technology that protects everyone's human rights. Your support will contribute to new {appName} development, fund essential network infrastructure, and the ongoing fight for freedom and privacy rights.<br></br><br></br> We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}."
+    },
+    "3": {
+      "heading": "Thank you for caring",
+      "content": "The {foundationName} is a Swiss-registered foundation. We are a non-profit oriented organization, subject to audits from the {swissSupervisory}. Our work helps protect privacy for all and shield those most at risk.<image></image>We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}.<br></br><br></br>Note that donations are not tax-deductible. If you have queries about donations or gifts, contact us via email: <contact-email></contact-email> <br></br><br></br>Please verify the URL is <validation-url></validation-url> before sending funds. If needed, addresses can be authenticated via email."
+    },
+    "4": {
+      "heading": "Donate via Credit Card ({donationProviderName})",
+      "content": ""
+    },
+    "5": {
+      "heading": "Donate via Crypto",
+      "content": "You can send {ethSymbol}, {usdcSymbol}, {usdtSymbol} or {btcSymbol} to the following {foundationName} addresses."
+    },
+    "button": "Donate Now"
+  }
+}
