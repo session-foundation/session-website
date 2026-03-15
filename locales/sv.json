@@ -1,0 +1,206 @@
+{
+  "feature": {
+    "accountIds": "Kontonummer",
+    "nodes": "noder",
+    "group": "Grupp",
+    "community": "Community"
+  },
+  "general": {
+    "download": "Hämta",
+    "whitepaper": "Whitepaper",
+    "litepaper": "Litepaper",
+    "messages": "Meddelanden",
+    "metadata": "Metadata",
+    "privacyPolicy": "Integritetspolicy",
+    "termsOfService": "Användarvillkor",
+    "other": "Övrigt"
+  },
+  "navigation": {
+    "blog": "Blogg",
+    "resources": "Resurser",
+    "docs": "Dokumentation",
+    "network": "Nätverk",
+    "help": "Hjälp",
+    "faq": "FAQ",
+    "support": "Support",
+    "aria": {
+      "whitepaper": "Länk till {appName} Whitepaper",
+      "litepaper": "Länk till {appName} Litepaper",
+      "sessionToken": "Länk till {appName} Token-webbplats",
+      "support": "Länk till {appName} Support via Zendesk",
+      "iconButtonOpen": "Öppna navigationsmenyn",
+      "iconButtonClose": "Stäng navigationsmenyn",
+      "downloadButton": "Länk till {appName}-nedladdning"
+    },
+    "donate": "Donate"
+  },
+  "footer": {
+    "about": "Om",
+    "mediaKit": "Mediasats",
+    "transparencyReport": "Transparensrapport",
+    "foundation": "Stiftelse",
+    "appSupport": "{appName} Support",
+    "socials": "Sociala medier",
+    "aria": {
+      "socialLink": "Länk till {appName} på {platform}",
+      "rssLink": "Länk till RSS-flöde"
+    }
+  },
+  "languageSelection": {
+    "title": "Välj ditt språk",
+    "description": "Välj ditt föredragna språk från listan nedan",
+    "aria": {
+      "currentLanguage": "{language} (nuvarande språk)",
+      "switchToLanguage": "Byt till {language}",
+      "currentLanguageIndicator": "(nuvarande)"
+    }
+  },
+  "notFound": {
+    "pageNotFound": "Den här sidan verkar inte finnas.",
+    "description": "Det verkar som att länken hit var felaktig."
+  },
+  "email": {
+    "heading": "Varje projektuppdatering, direkt till din inkorg.",
+    "subheading": "Förvänta dig ett mejl ungefär en gång i månaden.",
+    "placeholder": "Din e-post",
+    "submitSuccessConfirm": "Tack! Kolla din inkorg för att bekräfta din prenumeration.",
+    "button": {
+      "text": "Registrera dig"
+    },
+    "joinCommunity": "Gå med i <button>{appName} {featureCommunity}</button> och träffa den livliga gruppen människor som bygger, underhåller och använder Session."
+  },
+  "landing": {
+    "hero": {
+      "heading": "Send <glitch>Messages,</glitch> Not Metadata.",
+      "tag": "Hitta din frihet med {appName}",
+      "glitchTextGlitch": "Krypterat"
+    },
+    "about": {
+      "title": "Vad är {appName}?",
+      "content": "{appName} är en <span>ände-till-ände</span> krypterad meddelandeapp som skyddar din <span>personliga</span> data. Ta tillbaka kontrollen med en meddelandeapp designad, utvecklad och driven av en <span>global</span> community av <span>integritets</span>experter."
+    },
+    "benefits": {
+      "title": "Fördelar",
+      "1": {
+        "heading": "Inga telefonnummer",
+        "content": "Keep your identity private with Account IDs. No phone number or email required to sign up."
+      },
+      "2": {
+        "heading": "Inga dataintrång",
+        "content": "{appName} samlar inte in data,<br></br>så det finns inget att läcka."
+      },
+      "3": {
+        "heading": "Säkra vägar",
+        "content": "Lökroutade vägar skyddar dina konversationer<br></br>från hackare och avlyssnare."
+      },
+      "4": {
+        "heading": "Öppen källkod",
+        "content": "Privacy is more than a promise. Anyone can view, audit, and contribute to {appName}'s code."
+      },
+      "5": {
+        "heading": "Drivet av människor",
+        "content": "Tusentals {featureNodes} drivs av ett globalt community.<br></br>{appName} är av folket, för folket."
+      },
+      "6": {
+        "heading": "Inga spårare",
+        "content": "Dina data samlas aldrig in, spåras aldrig och<br></br>säljs aldrig till tredje part."
+      }
+    },
+    "features": {
+      "title": "Funktioner",
+      "heading": "Njut av funktionerna du älskar och säkerheten du behöver.",
+      "1": {
+        "heading": "Tala fritt",
+        "content": "Bara du och den du pratar med kan se dina meddelanden. Njut av känslan av frihet med end-to-end-kryptering och självförstörande meddelanden."
+      },
+      "2": {
+        "heading": "Behåll kontrollen",
+        "content": "Du har kontroll över dina meddelanden från början till slut. Oavsett om det handlar om att hantera dina egna krypteringsnycklar eller välja ett anpassat tema – Session ger dig kontrollen."
+      },
+      "3": {
+        "heading": "Häng med din grupp",
+        "content": "Oavsett om du uppdaterar dig med nära vänner eller organiserar ett stort event, är det enkelt med säkra {featureGroup}- och {featureCommunity}-chattar (100+ medlemmar)."
+      }
+    }
+  },
+  "redirect": {
+    "heading": "Omdirigerar...",
+    "content": "Klicka <button>här</button> för att återgå till föregående sida."
+  },
+  "blog": {
+    "readMore": "Läs mer",
+    "morePosts": "Fler inlägg"
+  },
+  "download": {
+    "heading": "Ladda ner {appName} för",
+    "mobile": "Mobil",
+    "desktop": "Dator",
+    "verifySignatures": "Verifiera signaturer: {platforms}",
+    "releaseNotes": "Versionsanteckningar: {platforms}"
+  },
+  "imageAlt": {
+    "hero": "mobil krypterad privat meddelandeapp gränssnittsvy",
+    "appLaptop": "krypterad privat meddelandeapp som körs på en MacBook Pro",
+    "appMobile": "krypterad privat meddelandeapp som körs på en iPhone"
+  },
+  "metadata": {
+    "default": {
+      "titleLayout": "{title} - {appName} Privat Messenger",
+      "title": "{appName} | Skicka meddelanden, inte metadata. | Privat Messenger",
+      "description": "{appName} är en privat messenger som syftar till att eliminera möjligheten till metadatainsamling genom att dirigera alla meddelanden via ett lökroutat nätverk."
+    },
+    "download": {
+      "title": "Hämta",
+      "description": "Ladda ner {appName} idag | {appName} är en end-to-end-krypterad messenger som eliminerar insamling av känsliga metadata för alla operativsystem."
+    },
+    "faq": {
+      "title": "Vanliga frågor",
+      "description": "Find answers to some of the most frequently asked questions about {appName}."
+    },
+    "litepaper": {
+      "description": "{appName} är en decentraliserad messenger som stöder fullständigt privata, säkra och anonyma kommunikationer.",
+      "title": "{appName} Litepaper: Send Messages, Not Metadata"
+    },
+    "whitepaper": {
+      "description": "{appName} är en decentraliserad messenger som stöder fullständigt privata, säkra och anonyma kommunikationer.",
+      "title": "{appName} Whitepaper: End-To-End Encrypted Conversations with Minimal Metadata Leakage"
+    },
+    "community": {
+      "title": "{appName} {featureCommunity}",
+      "description": "Gå med i {appName} {featureCommunity} och möt den livliga gruppen människor som bygger, driver och använder {appName}."
+    },
+    "blog": {
+      "title": "Blogg",
+      "description": "Visa {appName} bloggar. | {appName} är en end-to-end-krypterad messenger som eliminerar insamling av känsliga metadata."
+    },
+    "donate": {
+      "title": "Donate | Support Privacy Technology",
+      "description": "Support to the Session Technology Foundation to protect online privacy. Your donation funds secure, open-source messaging technology that safeguards human rights worldwide."
+    }
+  },
+  "donate": {
+    "heading": "{appName} needs your help",
+    "heroContent": "Private messaging is an essential part of our modern life. Secure communication shelters people from tyranny, protects those fighting against injustice, and empowers defenders of human rights worldwide.<br></br><br></br> However, the well-resourced opponents of privacy are actively working to suppress the tech that guards people's basic human rights and dignities. Politicians around the world are pushing for encryption-busting laws, privacy tech is slandered in the media, and surveillance capitalists are profiting from the chaos.<image></image> Despite the adversity, {appName} continues to provide a safe, secure, and trusted space for people to communicate online. {appName} is a free, private, and secure messaging app. It does not track users or sell your data—it just sends messages, privately. Millions of people around the world have turned to Session when they needed a safe and secure place to have a conversation.<br></br><br></br> More than just a tool, {appName} is a symbol of the importance of open-source, transparent, and resilient technology. It is technology like {appName} which safeguards our basic human rights in an era of increasing uncertainty and authoritarianism.",
+    "1": {
+      "heading": "A force for good",
+      "content": "Technology is transforming our society. Currently, a tiny cohort of powerful individuals and institutions have disproportionate control over the internet. In many cases, tech is being used to silence, manipulate, and suppress. It's time to push back against these forces of power.<image></image>We are agents of change in a world where technology is a tool for upending oppression. We believe in a future where technology is collaborative, transparent, equitable, and liberating."
+    },
+    "2": {
+      "heading": "Meet your privacy defenders",
+      "content": "{appName} is stewarded by the {foundationName}, a Swiss foundation dedicated to maintaining the open-source {appName} ecosystem. We are a team of technologists, engineers, and activists dedicated to the mission of restoring online privacy.<image></image> The financial independence of the {foundationName} allows us to fearlessly build the privacy technology that protects everyone's human rights. Your support will contribute to new {appName} development, fund essential network infrastructure, and the ongoing fight for freedom and privacy rights.<br></br><br></br> We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}."
+    },
+    "3": {
+      "heading": "Thank you for caring",
+      "content": "The {foundationName} is a Swiss-registered foundation. We are a non-profit oriented organization, subject to audits from the {swissSupervisory}. Our work helps protect privacy for all and shield those most at risk.<image></image>We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}.<br></br><br></br>Note that donations are not tax-deductible. If you have queries about donations or gifts, contact us via email: <contact-email></contact-email> <br></br><br></br>Please verify the URL is <validation-url></validation-url> before sending funds. If needed, addresses can be authenticated via email."
+    },
+    "4": {
+      "heading": "Donate via Credit Card ({donationProviderName})",
+      "content": ""
+    },
+    "5": {
+      "heading": "Donate via Crypto",
+      "content": "You can send {ethSymbol}, {usdcSymbol}, {usdtSymbol} or {btcSymbol} to the following {foundationName} addresses."
+    },
+    "button": "Donate Now"
+  }
+}

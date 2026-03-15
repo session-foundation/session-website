@@ -1,12 +1,11 @@
-import { Block, Inline } from '@contentful/rich-text-types';
-import { CSSProperties, ReactElement } from 'react';
-
-import EmbedContent from '@/components/EmbedContent';
-import Image from 'next/image';
-import Link from 'next/link';
+import type { Block, Inline } from '@contentful/rich-text-types';
 import classNames from 'classnames';
-import sanitize from '@/utils/sanitize';
+import Image from 'next/legacy/image';
+import Link from 'next/link';
+import type { CSSProperties, ReactElement } from 'react';
+import EmbedContent from '@/components/EmbedContent';
 import { useScreen } from '@/contexts/screen';
+import sanitize from '@/utils/sanitize';
 
 function Markup(node: any): ReactElement {
   const frontTags: string[] = [];
@@ -30,24 +29,17 @@ function Markup(node: any): ReactElement {
 
   let htmlContent = frontTags.join('') + node.content + endTags.join('');
   htmlContent = sanitize(htmlContent);
-  return (
-    <span dangerouslySetInnerHTML={{ __html: htmlContent }} style={styles} />
-  );
+  // biome-ignore lint/security/noDangerouslySetInnerHtml: Intended behaviour
+  return <span dangerouslySetInnerHTML={{ __html: htmlContent }} style={styles} />;
 }
 
-function EmbeddedLink(
-  node: any,
-  isInline = false,
-  textDirection: string
-): ReactElement {
+function EmbeddedLink(node: any, isInline = false, textDirection: string): ReactElement {
   const figureClasses = [
     isInline && node.position === 'left' && 'md:float-left',
     isInline && node.position === 'right' && 'md:float-right',
     isInline && node.position && 'md:w-3/5 lg:w-1/2',
   ];
-  const inlineClasses = [
-    isInline && !node.position && 'inline-block align-middle mx-1',
-  ];
+  const inlineClasses = [isInline && !node.position && 'inline-block align-middle mx-1'];
   const captionClasses = [...inlineClasses, !isInline && 'pb-4'];
   return (
     <figure className={classNames(figureClasses)}>
@@ -65,11 +57,8 @@ function EmbeddedLink(
   );
 }
 
-function EmbeddedMedia(
-  node: any,
-  isInline = false,
-  textDirection: string
-): ReactElement {
+function EmbeddedMedia(node: any, isInline = false, textDirection: string): ReactElement {
+  // biome-ignore lint/correctness/useHookAtTopLevel: This feels a bit weird TODO: look into fixing this
   const { isSmall, isMedium } = useScreen();
   // is either an asset or entry
   const media = node.file.fields ?? node;
@@ -78,7 +67,7 @@ function EmbeddedMedia(
     case 'image/jpeg':
     case 'image/png':
     case 'image/gif':
-    case 'image/svg+xml':
+    case 'image/svg+xml': {
       const imageWidth = node.width ?? media.file.details.image.width;
       const imageHeight = node.height ?? media.file.details.image.height;
       const figureClasses = [
@@ -87,15 +76,11 @@ function EmbeddedMedia(
         isInline && node.position === 'left' && 'md:float-left',
         isInline && node.position === 'right' && 'md:float-right',
         !isInline && textDirection === 'ltr' && 'text-center mb-8',
-        !isInline &&
-          textDirection === 'rtl' &&
-          'flex flex-col items-center mb-8',
+        !isInline && textDirection === 'rtl' && 'flex flex-col items-center mb-8',
       ];
       const captionClasses = [
         !node.position && 'mt-1',
-        isInline &&
-          !node.position &&
-          'text-center md:inline-block md:align-middle md:mx-1',
+        isInline && !node.position && 'text-center md:inline-block md:align-middle md:mx-1',
       ];
       const figureStyles: CSSProperties = {};
       if (!isSmall && node.position) {
@@ -115,20 +100,17 @@ function EmbeddedMedia(
               <figcaption className={classNames(captionClasses)}>
                 <em>
                   {node.sourceUrl ? (
-                    <Link href={node.sourceUrl}>
-                      <a
-                        aria-label={node.caption}
-                        className={classNames(
-                          'text-primary-dark font-extralight'
-                        )}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {node.caption}
-                      </a>
+                    <Link
+                      href={node.sourceUrl}
+                      aria-label={node.caption}
+                      className={classNames('font-extralight text-primary-dark')}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {node.caption}
                     </Link>
                   ) : (
-                    <>{node.caption}</>
+                    node.caption
                   )}
                 </em>
               </figcaption>
@@ -136,6 +118,7 @@ function EmbeddedMedia(
           </figure>
         </span>
       );
+    }
     default:
       return <></>;
   }

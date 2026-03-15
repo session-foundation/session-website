@@ -1,9 +1,13 @@
 const BANNER = {
   TEXT: {
-    MOBILE: 'Session has migrated to the new Session Network.',
-    DESKTOP: 'Session has migrated to the new Session Network.',
+    MOBILE:
+      'Looking for Session Token? Session Token keeps Session decentralized, secure, and independent.',
+    DESKTOP:
+      'Looking for Session Token? Session Token keeps Session decentralized, secure, and independent.',
   },
-  URL: 'https://getsession.org/blog/migrating-from-the-oxen-network-to-session-network',
+  ARIA: 'Looking for Session Token? Session Token keeps Session decentralized, secure, and independent.',
+  URL: 'https://token.getsession.org/',
+  BUTTON_TEXT: 'Session Token',
 };
 
 export default BANNER;

@@ -1,5 +1,5 @@
 export interface IMetadata {
-  DESCRIPTION: string;
+  DESCRIPTION?: string;
   TYPE?: string;
   CANONICAL_URL?: string;
   OG_IMAGE?: {
@@ -19,9 +19,6 @@ const METADATA = {
       ? 'https://getsession.org'
       : 'https://staging.getsession.org',
   SITE_NAME: 'Session',
-  TITLE: 'Session | Send Messages, Not Metadata. | Private Messenger',
-  DESCRIPTION:
-    'Session is a private messenger that aims to remove any chance of metadata collection by routing all messages through an onion routing network.',
   TAGS: [
     'Privacy',
     'co-op',
@@ -90,8 +87,31 @@ const METADATA = {
     DESCRIPTION: 'How you can help. A Session Community Help Guide Document.',
   },
   LITEPAPER_PAGE: {
-    DESCRIPTION:
-      'Session is a decentralised messenger that supports completely private, secure, and anonymous communications.',
+    OG_IMAGE: {
+      URL: '/assets/images/litepaper.png',
+      WIDTH: 1200,
+      HEIGHT: 627,
+      ALT: 'Black background with a neon white Session logo with Litepaper written as a heading',
+    },
+    TAGS: [
+      'Session',
+      'Session Foundation',
+      'litepaper',
+      'lightpaper',
+      'metadata',
+      'messenger',
+      'encryption',
+      'encrypted',
+      'onion routing',
+      'decentralisation',
+      'Oxen',
+      'blockchain',
+      'messaging',
+      'private',
+      'privacy',
+    ],
+  },
+  WHITEPAPER_PAGE: {
     OG_IMAGE: {
       URL: '/assets/images/litepaper.png',
       WIDTH: 1200,

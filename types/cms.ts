@@ -1,11 +1,11 @@
-import { Document } from '@contentful/rich-text-types';
+import type { Document } from '@contentful/rich-text-types';
 
 export type IFigureImage = {
   title: string | null;
   description: string | null;
   imageUrl: string;
-  width: string | number;
-  height: string | number;
+  width: number;
+  height: number;
 };
 
 export type IAuthor = {
@@ -35,8 +35,8 @@ export interface IPost {
   slug: string;
 }
 
-export function isPost(object: unknown): object is IPost {
-  return Object.prototype.hasOwnProperty.call(object, 'publishedDate');
+export function isPost(obj: unknown): obj is IPost {
+  return !!(typeof obj === 'object' && obj && Object.hasOwn(obj, 'publishedDate'));
 }
 
 export interface IFAQItem {
@@ -75,8 +75,8 @@ export interface IPage {
   body: Document;
 }
 
-export function isPage(object: unknown): object is IPage {
-  return Object.prototype.hasOwnProperty.call(object, 'headline');
+export function isPage(obj: unknown): obj is IPage {
+  return !!(typeof obj === 'object' && obj && Object.hasOwn(obj, 'headline'));
 }
 
 export interface IFetchPagesReturn extends IFetchEntriesReturn {

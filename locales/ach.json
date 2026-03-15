@@ -1,0 +1,206 @@
+{
+  "feature": {
+    "accountIds": "crwdns38006:0crwdne38006:0",
+    "nodes": "crwdns38008:0crwdne38008:0",
+    "group": "crwdns38010:0crwdne38010:0",
+    "community": "crwdns38012:0crwdne38012:0"
+  },
+  "general": {
+    "download": "crwdns38014:0crwdne38014:0",
+    "whitepaper": "crwdns38016:0crwdne38016:0",
+    "litepaper": "crwdns38018:0crwdne38018:0",
+    "messages": "crwdns38020:0crwdne38020:0",
+    "metadata": "crwdns38022:0crwdne38022:0",
+    "privacyPolicy": "crwdns38024:0crwdne38024:0",
+    "termsOfService": "crwdns38026:0crwdne38026:0",
+    "other": "crwdns38028:0crwdne38028:0"
+  },
+  "navigation": {
+    "blog": "crwdns38030:0crwdne38030:0",
+    "resources": "crwdns38032:0crwdne38032:0",
+    "docs": "crwdns38034:0crwdne38034:0",
+    "network": "crwdns38036:0crwdne38036:0",
+    "help": "crwdns38038:0crwdne38038:0",
+    "faq": "crwdns38040:0crwdne38040:0",
+    "support": "crwdns38042:0crwdne38042:0",
+    "aria": {
+      "whitepaper": "crwdns38044:0{appName}crwdne38044:0",
+      "litepaper": "crwdns38046:0{appName}crwdne38046:0",
+      "sessionToken": "crwdns38048:0{appName}crwdne38048:0",
+      "support": "crwdns38050:0{appName}crwdne38050:0",
+      "iconButtonOpen": "crwdns38052:0crwdne38052:0",
+      "iconButtonClose": "crwdns38054:0crwdne38054:0",
+      "downloadButton": "crwdns38056:0{appName}crwdne38056:0"
+    },
+    "donate": "crwdns38882:0crwdne38882:0"
+  },
+  "footer": {
+    "about": "crwdns38058:0crwdne38058:0",
+    "mediaKit": "crwdns38060:0crwdne38060:0",
+    "transparencyReport": "crwdns38062:0crwdne38062:0",
+    "foundation": "crwdns38064:0crwdne38064:0",
+    "appSupport": "crwdns38066:0{appName}crwdne38066:0",
+    "socials": "crwdns38068:0crwdne38068:0",
+    "aria": {
+      "socialLink": "crwdns38070:0{appName}crwdnd38070:0{platform}crwdne38070:0",
+      "rssLink": "crwdns38072:0crwdne38072:0"
+    }
+  },
+  "languageSelection": {
+    "title": "crwdns38074:0crwdne38074:0",
+    "description": "crwdns38076:0crwdne38076:0",
+    "aria": {
+      "currentLanguage": "crwdns38078:0{language}crwdne38078:0",
+      "switchToLanguage": "crwdns38080:0{language}crwdne38080:0",
+      "currentLanguageIndicator": "crwdns38082:0crwdne38082:0"
+    }
+  },
+  "notFound": {
+    "pageNotFound": "crwdns38084:0crwdne38084:0",
+    "description": "crwdns38086:0crwdne38086:0"
+  },
+  "email": {
+    "heading": "crwdns38088:0crwdne38088:0",
+    "subheading": "crwdns38090:0crwdne38090:0",
+    "placeholder": "crwdns38092:0crwdne38092:0",
+    "submitSuccessConfirm": "crwdns38094:0crwdne38094:0",
+    "button": {
+      "text": "crwdns38096:0crwdne38096:0"
+    },
+    "joinCommunity": "crwdns38098:0{appName}crwdnd38098:0{featureCommunity}crwdne38098:0"
+  },
+  "landing": {
+    "hero": {
+      "heading": "crwdns38204:0crwdne38204:0",
+      "tag": "crwdns38102:0crwdne38102:0",
+      "glitchTextGlitch": "crwdns38106:0crwdne38106:0"
+    },
+    "about": {
+      "title": "crwdns38108:0{appName}crwdne38108:0",
+      "content": "crwdns38110:0{appName}crwdne38110:0"
+    },
+    "benefits": {
+      "title": "crwdns38112:0crwdne38112:0",
+      "1": {
+        "heading": "crwdns38114:0crwdne38114:0",
+        "content": "crwdns38116:0crwdne38116:0"
+      },
+      "2": {
+        "heading": "crwdns38118:0crwdne38118:0",
+        "content": "crwdns38120:0{appName}crwdne38120:0"
+      },
+      "3": {
+        "heading": "crwdns38122:0crwdne38122:0",
+        "content": "crwdns38124:0crwdne38124:0"
+      },
+      "4": {
+        "heading": "crwdns38126:0crwdne38126:0",
+        "content": "crwdns38128:0{appName}crwdne38128:0"
+      },
+      "5": {
+        "heading": "crwdns38130:0crwdne38130:0",
+        "content": "crwdns38132:0{featureNodes}crwdnd38132:0{appName}crwdne38132:0"
+      },
+      "6": {
+        "heading": "crwdns38134:0crwdne38134:0",
+        "content": "crwdns38136:0crwdne38136:0"
+      }
+    },
+    "features": {
+      "title": "crwdns38138:0crwdne38138:0",
+      "heading": "crwdns38140:0crwdne38140:0",
+      "1": {
+        "heading": "crwdns38142:0crwdne38142:0",
+        "content": "crwdns38144:0crwdne38144:0"
+      },
+      "2": {
+        "heading": "crwdns38146:0crwdne38146:0",
+        "content": "crwdns38148:0crwdne38148:0"
+      },
+      "3": {
+        "heading": "crwdns38150:0crwdne38150:0",
+        "content": "crwdns38152:0{featureGroup}crwdnd38152:0{featureCommunity}crwdne38152:0"
+      }
+    }
+  },
+  "redirect": {
+    "heading": "crwdns38154:0crwdne38154:0",
+    "content": "crwdns38156:0crwdne38156:0"
+  },
+  "blog": {
+    "readMore": "crwdns38158:0crwdne38158:0",
+    "morePosts": "crwdns38160:0crwdne38160:0"
+  },
+  "download": {
+    "heading": "crwdns38162:0{appName}crwdne38162:0",
+    "mobile": "crwdns38164:0crwdne38164:0",
+    "desktop": "crwdns38166:0crwdne38166:0",
+    "verifySignatures": "crwdns38168:0{platforms}crwdne38168:0",
+    "releaseNotes": "crwdns38170:0{platforms}crwdne38170:0"
+  },
+  "imageAlt": {
+    "hero": "crwdns38172:0crwdne38172:0",
+    "appLaptop": "crwdns38174:0crwdne38174:0",
+    "appMobile": "crwdns38176:0crwdne38176:0"
+  },
+  "metadata": {
+    "default": {
+      "titleLayout": "crwdns38178:0{title}crwdnd38178:0{appName}crwdne38178:0",
+      "title": "crwdns38180:0{appName}crwdne38180:0",
+      "description": "crwdns38182:0{appName}crwdne38182:0"
+    },
+    "download": {
+      "title": "crwdns38184:0crwdne38184:0",
+      "description": "crwdns38186:0{appName}crwdnd38186:0{appName}crwdne38186:0"
+    },
+    "faq": {
+      "title": "crwdns38188:0crwdne38188:0",
+      "description": "crwdns38190:0{appName}crwdne38190:0"
+    },
+    "litepaper": {
+      "description": "crwdns38192:0{appName}crwdne38192:0",
+      "title": "crwdns38456:0{appName}crwdne38456:0"
+    },
+    "whitepaper": {
+      "description": "crwdns38194:0{appName}crwdne38194:0",
+      "title": "crwdns38458:0{appName}crwdne38458:0"
+    },
+    "community": {
+      "title": "crwdns38196:0{appName}crwdnd38196:0{featureCommunity}crwdne38196:0",
+      "description": "crwdns38198:0{appName}crwdnd38198:0{featureCommunity}crwdnd38198:0{appName}crwdne38198:0"
+    },
+    "blog": {
+      "title": "crwdns38200:0crwdne38200:0",
+      "description": "crwdns38202:0{appName}crwdnd38202:0{appName}crwdne38202:0"
+    },
+    "donate": {
+      "title": "crwdns38884:0crwdne38884:0",
+      "description": "crwdns38886:0crwdne38886:0"
+    }
+  },
+  "donate": {
+    "heading": "crwdns38858:0{appName}crwdne38858:0",
+    "heroContent": "crwdns38860:0{appName}crwdnd38860:0{appName}crwdnd38860:0{appName}crwdnd38860:0{appName}crwdne38860:0",
+    "1": {
+      "heading": "crwdns38862:0crwdne38862:0",
+      "content": "crwdns38872:0crwdne38872:0"
+    },
+    "2": {
+      "heading": "crwdns38864:0crwdne38864:0",
+      "content": "crwdns38874:0{appName}crwdnd38874:0{foundationName}crwdnd38874:0{appName}crwdnd38874:0{foundationName}crwdnd38874:0{appName}crwdnd38874:0{ethNetworkName}crwdnd38874:0{usdcSymbol}crwdne38874:0"
+    },
+    "3": {
+      "heading": "crwdns38866:0crwdne38866:0",
+      "content": "crwdns38876:0{foundationName}crwdnd38876:0{swissSupervisory}crwdnd38876:0{ethNetworkName}crwdnd38876:0{usdcSymbol}crwdne38876:0"
+    },
+    "4": {
+      "heading": "crwdns38868:0{donationProviderName}crwdne38868:0",
+      "content": "crwdns38878:0crwdne38878:0"
+    },
+    "5": {
+      "heading": "crwdns38870:0crwdne38870:0",
+      "content": "crwdns38880:0{ethSymbol}crwdnd38880:0{usdcSymbol}crwdnd38880:0{usdtSymbol}crwdnd38880:0{btcSymbol}crwdnd38880:0{foundationName}crwdne38880:0"
+    },
+    "button": "crwdns38924:0crwdne38924:0"
+  }
+}

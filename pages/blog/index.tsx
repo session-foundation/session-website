@@ -1,44 +1,35 @@
-import { ReactElement } from 'react';
-import { GetStaticProps, GetStaticPropsContext } from 'next';
 import classNames from 'classnames';
-
-import { CMS } from '@/constants';
-import { IPost } from '@/types/cms';
-import { fetchBlogEntries, generateRoute } from '@/services/cms';
-import METADATA from '@/constants/metadata';
-
-import { Layout } from '@/components/ui';
+import type { GetStaticProps, GetStaticPropsContext } from 'next';
+import type { ReactElement } from 'react';
 import Container from '@/components/Container';
-import { PostCard } from '@/components/cards';
-import { PostList } from '@/components/posts';
+import PostCard from '@/components/cards/PostCard';
+import PostList from '@/components/posts/PostList';
+import Layout from '@/components/ui/Layout';
+import { CMS } from '@/constants';
+import METADATA from '@/constants/metadata';
+import { generateRoute } from '@/services/cms';
+import type { IPost } from '@/types/cms';
 
 interface Props {
   posts: IPost[];
 }
 
-export const getStaticProps: GetStaticProps = async (
-  context: GetStaticPropsContext
-) => {
-  const posts: IPost[] = [];
-  let currentPage = 1;
-  let foundAllPosts = false;
+export const getStaticProps: GetStaticProps = async (_context: GetStaticPropsContext) => {
+  const { fetchAllBlogEntries } = await import('@/services/cms');
+  const posts = await fetchAllBlogEntries();
 
-  // Contentful only allows 100 at a time
-  while (!foundAllPosts) {
-    const { entries: _posts } = await fetchBlogEntries(100, currentPage);
+  const revalidate = CMS.CONTENT_REVALIDATE_RATE;
 
-    if (_posts.length === 0) {
-      foundAllPosts = true;
-      continue;
-    }
-
-    posts.push(..._posts);
-    currentPage++;
+  // Log revalidation time in dev builds
+  if (process.env.NODE_ENV === 'development') {
+    console.log(
+      `[Revalidate] Blog Index - ${revalidate}s (${Math.round(revalidate / 60)}min)`
+    );
   }
 
   return {
-    props: { posts },
-    revalidate: CMS.CONTENT_REVALIDATE_RATE,
+    props: { posts, messages: (await import(`../../locales/${_context.locale}.json`)).default },
+    revalidate,
   };
 };
 
@@ -46,7 +37,7 @@ export default function Blog(props: Props): ReactElement {
   const { posts } = props;
   const [featuredPost, ...otherPosts] = posts;
   return (
-    <Layout title={'Blog'} metadata={METADATA.BLOG_PAGE}>
+    <Layout localeKey="blog" metadata={METADATA.BLOG_PAGE}>
       <section>
         <Container
           classes={classNames(

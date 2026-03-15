@@ -26,8 +26,7 @@ const SIGNUPS: ISignups = {
       type: 'checkbox',
     },
     {
-      question:
-        'Do you identify as any of the following? (Select any or all that apply)',
+      question: 'Do you identify as any of the following? (Select any or all that apply)',
       answer: [
         'Journalist',
         'Civil Society/Public Servant',

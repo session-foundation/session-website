@@ -1,15 +1,15 @@
-import { About, Benefits, Features, Hero } from '@/components/sections';
-import { GetStaticProps, GetStaticPropsContext } from 'next';
-
+import type { GetStaticProps, GetStaticPropsContext } from 'next';
+import About from '@/components/sections/About';
+import Benefits from '@/components/sections/Benefits';
+import Features from '@/components/sections/Features';
+import Hero from '@/components/sections/Hero';
+import Layout from '@/components/ui/Layout';
 import { CMS } from '@/constants';
-import { IPost } from '@/types/cms';
-import { Layout } from '@/components/ui';
-import { fetchBlogEntries } from '@/services/cms';
 import generateRSSFeed from '@/utils/rss';
 
 export default function Home() {
   return (
-    <Layout showBanner={true}>
+    <Layout localeKey="default">
       <Hero />
       <About />
       <Benefits />
@@ -18,32 +18,24 @@ export default function Home() {
   );
 }
 
-export const getStaticProps: GetStaticProps = async (
-  context: GetStaticPropsContext
-) => {
+export const getStaticProps: GetStaticProps = async (_context: GetStaticPropsContext) => {
   if (process.env.NEXT_PUBLIC_SITE_ENV !== 'development') {
-    const posts: IPost[] = [];
-    let page = 1;
-    let foundAllPosts = false;
-
-    // Contentful only allows 100 at a time
-    while (!foundAllPosts) {
-      const { entries: _posts } = await fetchBlogEntries(100, page);
-
-      if (_posts.length === 0) {
-        foundAllPosts = true;
-        continue;
-      }
-
-      posts.push(..._posts);
-      page++;
-    }
-
+    const { fetchAllBlogEntries } = await import('@/services/cms');
+    const posts = await fetchAllBlogEntries();
     generateRSSFeed(posts);
   }
 
+  const revalidate = CMS.CONTENT_REVALIDATE_RATE;
+
+  // Log revalidation time in dev builds
+  if (process.env.NODE_ENV === 'development') {
+    console.log(
+      `[Revalidate] Home Page - ${revalidate}s (${Math.round(revalidate / 60)}min)`
+    );
+  }
+
   return {
-    props: {},
-    revalidate: CMS.CONTENT_REVALIDATE_RATE,
+    props: { messages: (await import(`../locales/${_context.locale}.json`)).default },
+    revalidate,
   };
 };

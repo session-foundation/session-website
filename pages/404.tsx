@@ -1,10 +1,11 @@
 import classNames from 'classnames';
-
-import { Layout } from '@/components/ui';
+import { useTranslations } from 'next-intl';
 import Container from '@/components/Container';
+import Layout from '@/components/ui/Layout';
 import METADATA from '@/constants/metadata';
 
 export default function Custom404() {
+  const t = useTranslations('notFound');
   return (
     <Layout title="Page not found" metadata={METADATA[404]}>
       <section>
@@ -21,18 +22,11 @@ export default function Custom404() {
             'md:flex md:flex-col md:justify-center md:items-center'
           )}
         >
-          <h1
-            className={classNames('text-primary-dark text-5xl font-bold mb-8')}
-          >
-            This page doesn&apos;t seem to exist.
+          <h1 className={classNames('mb-8 font-bold text-5xl text-primary-dark')}>
+            {t('pageNotFound')}
           </h1>
-          <p
-            className={classNames(
-              'text-gray text-xl font-medium',
-              'lg:text-2xl'
-            )}
-          >
-            {METADATA[404].DESCRIPTION}
+          <p className={classNames('font-medium text-gray text-xl', 'lg:text-2xl')}>
+            {t('description')}
           </p>
         </Container>
       </section>

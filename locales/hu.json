@@ -1,0 +1,206 @@
+{
+  "feature": {
+    "accountIds": "Fiókazonosítók",
+    "nodes": "csomópontok",
+    "group": "Csoport",
+    "community": "Közösség"
+  },
+  "general": {
+    "download": "Letöltés",
+    "whitepaper": "Fehér könyv",
+    "litepaper": "Litepaper",
+    "messages": "Üzenetek",
+    "metadata": "Metaadatok",
+    "privacyPolicy": "Adatvédelmi szabályzat",
+    "termsOfService": "Szolgáltatási feltételek",
+    "other": "Egyéb"
+  },
+  "navigation": {
+    "blog": "Blog",
+    "resources": "Erőforrások",
+    "docs": "Dokumentáció",
+    "network": "Hálózat",
+    "help": "Segítség",
+    "faq": "GYIK",
+    "support": "Támogatás",
+    "aria": {
+      "whitepaper": "Hivatkozás a(z) {appName} fehér könyvére",
+      "litepaper": "Hivatkozás a(z) {appName} litepaperére",
+      "sessionToken": "Hivatkozás a(z) {appName} token weboldalára",
+      "support": "Kapcsolat a(z) {appName} ügyfélszolgálattal a Zendesk-en keresztül",
+      "iconButtonOpen": "Navigációs menü megnyitása",
+      "iconButtonClose": "Navigációs menü bezárása",
+      "downloadButton": "Hivatkozás a(z) {appName} letöltéséhez"
+    },
+    "donate": "Donate"
+  },
+  "footer": {
+    "about": "Névjegy",
+    "mediaKit": "Médiacsomag",
+    "transparencyReport": "Átláthatósági jelentés",
+    "foundation": "Alapítvány",
+    "appSupport": "{appName} támogatás",
+    "socials": "Közösségi oldalak",
+    "aria": {
+      "socialLink": "Hivatkozás a(z) {platform} oldalán elérhető {appName}-re",
+      "rssLink": "Hivatkozás az RSS-hírcsatornára"
+    }
+  },
+  "languageSelection": {
+    "title": "Válaszd ki a nyelved",
+    "description": "Válaszd ki az alábbi listából a kívánt nyelvet",
+    "aria": {
+      "currentLanguage": "{language} (jelenlegi nyelv)",
+      "switchToLanguage": "Váltás erre: {language}",
+      "currentLanguageIndicator": "(jelenleg)"
+    }
+  },
+  "notFound": {
+    "pageNotFound": "Úgy tűnik, ez az oldal nem létezik.",
+    "description": "Úgy tűnik, hogy a hivatkozás hibás volt."
+  },
+  "email": {
+    "heading": "Minden projektfrissítés, közvetlenül az e-mail fiókodba.",
+    "subheading": "Körülbelül havonta egyszer számíthatsz egy e-mailre.",
+    "placeholder": "E-mail címed",
+    "submitSuccessConfirm": "Köszönjük! Ellenőrizd postafiókodat a feliratkozás megerősítéséhez.",
+    "button": {
+      "text": "Feliratkozás"
+    },
+    "joinCommunity": "Csatlakozz a <button>{appName} {featureCommunity}</button> közösséghez, és ismerd meg azokat az embereket, akik építik, működtetik és használják a Sessiont."
+  },
+  "landing": {
+    "hero": {
+      "heading": "Send <glitch>Messages,</glitch> Not Metadata.",
+      "tag": "Találd meg a szabadságodat a(z) {appName} segítségével",
+      "glitchTextGlitch": "Titkosítva"
+    },
+    "about": {
+      "title": "Mi az a {appName}?",
+      "content": "A(z) {appName} egy <span>végponttól végpontig</span> titkosított üzenetküldő alkalmazás, amely védi a <span>személyes</span> adataidat. Szerezd vissza az irányítást egy olyan üzenetküldő alkalmazással, amelyet egy <span>világszintű</span> <span>adatvédelmi</span> szakértőkből álló közösség tervezett, fejlesztett és üzemeltet."
+    },
+    "benefits": {
+      "title": "Előnyök",
+      "1": {
+        "heading": "Nincs telefonszám",
+        "content": "Keep your identity private with Account IDs. No phone number or email required to sign up."
+      },
+      "2": {
+        "heading": "Nincsenek adatszivárgások",
+        "content": "A(z) {appName} nem gyűjt adatokat,<br></br>így nincs mit kiszivárogtatni."
+      },
+      "3": {
+        "heading": "Biztonságos útvonalak",
+        "content": "A hagymahálózaton keresztüli útvonalak védik a beszélgetéseidet<br></br>a hackerekkel és lehallgatókkal szemben."
+      },
+      "4": {
+        "heading": "Nyílt forráskódú",
+        "content": "Privacy is more than a promise. Anyone can view, audit, and contribute to {appName}'s code."
+      },
+      "5": {
+        "heading": "Közösségi működtetésű",
+        "content": "Több ezer {featureNodes} működik világszerte egy globális közösség által.<br></br>A(z) {appName} emberek által, embereknek készült."
+      },
+      "6": {
+        "heading": "Nincsenek követők",
+        "content": "Az adataidat sosem gyűjtjük, nem követjük nyomon,<br></br>és sosem adjuk el harmadik feleknek."
+      }
+    },
+    "features": {
+      "title": "Funkciók",
+      "heading": "Élvezd a kedvenc funkcióidat és a szükséges biztonságot.",
+      "1": {
+        "heading": "Beszélj szabadon",
+        "content": "Csak te és a beszélgetőpartnered láthatjátok az üzeneteket. Élvezd a szabadság érzését végpontok közötti titkosítással és eltűnő üzenetekkel."
+      },
+      "2": {
+        "heading": "Maradj irányítás alatt",
+        "content": "Az üzeneteid teljes mértékben a te irányításod alatt állnak. Legyen szó a saját titkosítási kulcsaid kezeléséről vagy egyedi téma kiválasztásáról – a Session nálad hagyja az irányítást."
+      },
+      "3": {
+        "heading": "Tartsd a lépést a társaságoddal",
+        "content": "Akár barátokkal csevegsz vagy nagyszabású eseményt szervezel, biztonságos {featureGroup} és {featureCommunity} (100+ tag) csevegésekkel mindez gyerekjáték."
+      }
+    }
+  },
+  "redirect": {
+    "heading": "Átirányítás...",
+    "content": "Kattints <button>ide</button> az előző oldalra való visszatéréshez."
+  },
+  "blog": {
+    "readMore": "Részletek",
+    "morePosts": "További bejegyzések"
+  },
+  "download": {
+    "heading": "Töltsd le a(z) {appName} alkalmazást",
+    "mobile": "Mobil",
+    "desktop": "Asztali gép",
+    "verifySignatures": "Aláírások ellenőrzése: {platforms}",
+    "releaseNotes": "Kiadási megjegyzések: {platforms}"
+  },
+  "imageAlt": {
+    "hero": "mobil titkosított privát üzenetküldő alkalmazás felhasználói felület bemutató",
+    "appLaptop": "titkosított privát üzenetküldő alkalmazás MacBook Pro-n fut",
+    "appMobile": "titkosított privát üzenetküldő alkalmazás iPhone-on fut"
+  },
+  "metadata": {
+    "default": {
+      "titleLayout": "{title} – {appName} Privát Messenger",
+      "title": "{appName} | Küldj üzeneteket, ne metaadatokat. | Privát Messenger",
+      "description": "A(z) {appName} egy privát üzenetküldő, amely célja, hogy megszüntesse a metaadatok gyűjtésének lehetőségét azáltal, hogy minden üzenetet hagymahálózaton keresztül továbbít."
+    },
+    "download": {
+      "title": "Letöltés",
+      "description": "Töltsd le a(z) {appName} még ma | A(z) {appName} egy végpontok között titkosított üzenetküldő, amely minden operációs rendszeren kiküszöböli az érzékeny metaadatok gyűjtését."
+    },
+    "faq": {
+      "title": "Gyakran Ismételt Kérdések",
+      "description": "Find answers to some of the most frequently asked questions about {appName}."
+    },
+    "litepaper": {
+      "description": "A(z) {appName} egy decentralizált üzenetküldő, amely teljesen privát, biztonságos és névtelen kommunikációt tesz lehetővé.",
+      "title": "{appName} Litepaper: Send Messages, Not Metadata"
+    },
+    "whitepaper": {
+      "description": "A(z) {appName} egy decentralizált üzenetküldő, amely teljesen privát, biztonságos és névtelen kommunikációt tesz lehetővé.",
+      "title": "{appName} Whitepaper: End-To-End Encrypted Conversations with Minimal Metadata Leakage"
+    },
+    "community": {
+      "title": "{appName} {featureCommunity}",
+      "description": "Csatlakozz a(z) {appName} {featureCommunity} közösségéhez, és ismerd meg azt az élénk közösséget, amely építi, működteti és használja a(z) {appName} alkalmazást."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Tekintsd meg a(z) {appName} blogokat. | A(z) {appName} egy végpontok között titkosított üzenetküldő, amely kiküszöböli az érzékeny metaadatok gyűjtését."
+    },
+    "donate": {
+      "title": "Donate | Support Privacy Technology",
+      "description": "Support to the Session Technology Foundation to protect online privacy. Your donation funds secure, open-source messaging technology that safeguards human rights worldwide."
+    }
+  },
+  "donate": {
+    "heading": "{appName} needs your help",
+    "heroContent": "Private messaging is an essential part of our modern life. Secure communication shelters people from tyranny, protects those fighting against injustice, and empowers defenders of human rights worldwide.<br></br><br></br> However, the well-resourced opponents of privacy are actively working to suppress the tech that guards people's basic human rights and dignities. Politicians around the world are pushing for encryption-busting laws, privacy tech is slandered in the media, and surveillance capitalists are profiting from the chaos.<image></image> Despite the adversity, {appName} continues to provide a safe, secure, and trusted space for people to communicate online. {appName} is a free, private, and secure messaging app. It does not track users or sell your data—it just sends messages, privately. Millions of people around the world have turned to Session when they needed a safe and secure place to have a conversation.<br></br><br></br> More than just a tool, {appName} is a symbol of the importance of open-source, transparent, and resilient technology. It is technology like {appName} which safeguards our basic human rights in an era of increasing uncertainty and authoritarianism.",
+    "1": {
+      "heading": "A force for good",
+      "content": "Technology is transforming our society. Currently, a tiny cohort of powerful individuals and institutions have disproportionate control over the internet. In many cases, tech is being used to silence, manipulate, and suppress. It's time to push back against these forces of power.<image></image>We are agents of change in a world where technology is a tool for upending oppression. We believe in a future where technology is collaborative, transparent, equitable, and liberating."
+    },
+    "2": {
+      "heading": "Meet your privacy defenders",
+      "content": "{appName} is stewarded by the {foundationName}, a Swiss foundation dedicated to maintaining the open-source {appName} ecosystem. We are a team of technologists, engineers, and activists dedicated to the mission of restoring online privacy.<image></image> The financial independence of the {foundationName} allows us to fearlessly build the privacy technology that protects everyone's human rights. Your support will contribute to new {appName} development, fund essential network infrastructure, and the ongoing fight for freedom and privacy rights.<br></br><br></br> We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}."
+    },
+    "3": {
+      "heading": "Thank you for caring",
+      "content": "The {foundationName} is a Swiss-registered foundation. We are a non-profit oriented organization, subject to audits from the {swissSupervisory}. Our work helps protect privacy for all and shield those most at risk.<image></image>We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}.<br></br><br></br>Note that donations are not tax-deductible. If you have queries about donations or gifts, contact us via email: <contact-email></contact-email> <br></br><br></br>Please verify the URL is <validation-url></validation-url> before sending funds. If needed, addresses can be authenticated via email."
+    },
+    "4": {
+      "heading": "Donate via Credit Card ({donationProviderName})",
+      "content": ""
+    },
+    "5": {
+      "heading": "Donate via Crypto",
+      "content": "You can send {ethSymbol}, {usdcSymbol}, {usdtSymbol} or {btcSymbol} to the following {foundationName} addresses."
+    },
+    "button": "Donate Now"
+  }
+}

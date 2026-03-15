@@ -1,0 +1,206 @@
+{
+  "feature": {
+    "accountIds": "ID du compte",
+    "nodes": "nœuds",
+    "group": "Groupe",
+    "community": "Communauté"
+  },
+  "general": {
+    "download": "Télécharger",
+    "whitepaper": "Livre blanc",
+    "litepaper": "Litepaper",
+    "messages": "Messages",
+    "metadata": "Métadonnées",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfService": "Conditions d'utilisation",
+    "other": "Autre"
+  },
+  "navigation": {
+    "blog": "Blog",
+    "resources": "Ressources",
+    "docs": "Docs",
+    "network": "Réseau",
+    "help": "Aide",
+    "faq": "FAQ",
+    "support": "Assistance",
+    "aria": {
+      "whitepaper": "Lien vers le livre blanc de {appName}",
+      "litepaper": "Lien vers le litepaper de {appName}",
+      "sessionToken": "Lien vers le site du Token {appName}",
+      "support": "Lien vers l’assistance {appName} via Zendesk",
+      "iconButtonOpen": "Ouvrir le menu de navigation",
+      "iconButtonClose": "Fermer le menu de navigation",
+      "downloadButton": "Lien pour télécharger {appName}"
+    },
+    "donate": "Donate"
+  },
+  "footer": {
+    "about": "À propos",
+    "mediaKit": "Kit médias",
+    "transparencyReport": "Rapport de transparence",
+    "foundation": "Fondation",
+    "appSupport": "Assistance {appName}",
+    "socials": "Réseaux sociaux",
+    "aria": {
+      "socialLink": "Lien vers {appName} sur {platform}",
+      "rssLink": "Lien vers le fil RSS"
+    }
+  },
+  "languageSelection": {
+    "title": "Choisissez votre langue",
+    "description": "Sélectionnez votre langue préférée dans la liste ci-dessous",
+    "aria": {
+      "currentLanguage": "{language} (langue actuelle)",
+      "switchToLanguage": "Basculer en {language}",
+      "currentLanguageIndicator": "(actuel)"
+    }
+  },
+  "notFound": {
+    "pageNotFound": "Cette page ne semble pas exister.",
+    "description": "Il semble que le lien pointant ici soit défectueux."
+  },
+  "email": {
+    "heading": "Chaque mise à jour de projet, directement dans votre boîte de réception.",
+    "subheading": "Vous recevrez environ un email par mois.",
+    "placeholder": "Votre adresse email",
+    "submitSuccessConfirm": "Merci ! Vérifiez votre boîte de réception pour confirmer votre abonnement.",
+    "button": {
+      "text": "S'inscrire"
+    },
+    "joinCommunity": "Rejoignez la <button>communauté {featureCommunity} de {appName}</button> et rencontrez le groupe dynamique de personnes qui créent, gèrent et utilisent Session."
+  },
+  "landing": {
+    "hero": {
+      "heading": "Envoyez <glitch>des messages,</glitch> pas des métadonnées.",
+      "tag": "Trouvez votre liberté avec {appName}",
+      "glitchTextGlitch": "Chiffrés"
+    },
+    "about": {
+      "title": "Qu'est-ce que {appName} ?",
+      "content": "{appName} est une messagerie chiffrée <span>de bout en bout</span> qui protège vos <span>données personnelles</span>. Reprenez le contrôle avec une application de messagerie conçue, développée et exploitée par une communauté <span>mondiale</span> d'experts en <span>confidentialité</span>."
+    },
+    "benefits": {
+      "title": "Avantages",
+      "1": {
+        "heading": "Aucun numéro de téléphone",
+        "content": "Protégez votre identité avec un {featureAccountIds}.<br></br>Aucun numéro ou e-mail requis."
+      },
+      "2": {
+        "heading": "Aucune fuite de données",
+        "content": "{appName} ne collecte pas de données,<br></br>donc rien ne peut être divulgué."
+      },
+      "3": {
+        "heading": "Chemins sécurisés",
+        "content": "Les chemins à routage en oignon protègent vos conversations<br></br>des pirates et des traqueurs."
+      },
+      "4": {
+        "heading": "Open Source",
+        "content": "{appName} n'a rien à cacher. Tout le mode peut<br></br>voir, contrôler et contribuer à son code. "
+      },
+      "5": {
+        "heading": "Par les utilisateurs",
+        "content": "Des milliers de {featureNodes} gérés par une communauté mondiale.<br></br>{appName} est fait par le peuple, pour le peuple."
+      },
+      "6": {
+        "heading": "Aucun traceur",
+        "content": "Vos données ne sont jamais collectées, jamais suivies, et<br></br>jamais revendues à des tiers."
+      }
+    },
+    "features": {
+      "title": "Fonctionnalités",
+      "heading": "Profitez des fonctionnalités que vous aimez et de la sécurité qu’il vous faut.",
+      "1": {
+        "heading": "Parlez librement",
+        "content": "Seuls vous et votre interlocuteur pouvez voir vos messages. Soyez libre grâce au chiffrement de bout en bout et aux messages éphémères."
+      },
+      "2": {
+        "heading": "Gardez le contrôle",
+        "content": "Restez en contrôle de vos messages du début à la fin. Qu’il s’agisse de gérer vos propres clés de chiffrement ou de choisir un thème personnalisé — Session vous met aux commandes."
+      },
+      "3": {
+        "heading": "Restez connecté avec votre communauté",
+        "content": "Que vous retrouviez des amis proches ou organisiez un grand événement, c’est simple avec des discussions {featureGroup} et {featureCommunity} (100+ membres) sécurisées."
+      }
+    }
+  },
+  "redirect": {
+    "heading": "Redirection...",
+    "content": "Cliquez <button>ici</button> pour revenir à la page précédente."
+  },
+  "blog": {
+    "readMore": "En savoir plus",
+    "morePosts": "Autres articles"
+  },
+  "download": {
+    "heading": "Télécharger {appName} pour",
+    "mobile": "Smartphone",
+    "desktop": "Ordinateur",
+    "verifySignatures": "Vérifier les signatures : {platforms}",
+    "releaseNotes": "Notes de version : {platforms}"
+  },
+  "imageAlt": {
+    "hero": "interface d’une application de messagerie privée chiffrée sur mobile",
+    "appLaptop": "application de messagerie privée chiffrée fonctionnant sur un MacBook Pro",
+    "appMobile": "application de messagerie privée chiffrée fonctionnant sur un iPhone"
+  },
+  "metadata": {
+    "default": {
+      "titleLayout": "{title} - Messagerie privée {appName}",
+      "title": "{appName} | Envoyez des messages, pas des métadonnées. | Messagerie privée",
+      "description": "{appName} est une messagerie privée qui vise à empêcher toute collecte de métadonnées en relayant tous les messages via un réseau de routage en oignon."
+    },
+    "download": {
+      "title": "Télécharger",
+      "description": "Téléchargez {appName} dès aujourd’hui | {appName} est une messagerie chiffrée de bout en bout qui empêche la collecte de métadonnées sensibles pour tous les systèmes d’exploitation."
+    },
+    "faq": {
+      "title": "Foire Aux Questions",
+      "description": "Trouvez les réponses aux questions les plus fréquemment posées à propos de {appName}."
+    },
+    "litepaper": {
+      "description": "{appName} est une messagerie décentralisée qui permet des communications entièrement privées, sécurisées et anonymes.",
+      "title": "{appName} Litepaper : Envoyez des messages, pas des métadonnées"
+    },
+    "whitepaper": {
+      "description": "{appName} est une messagerie décentralisée qui permet des communications entièrement privées, sécurisées et anonymes.",
+      "title": "{appName} Livre blanc : Conversations chiffrées de bout en bout avec fuite de métadonnées minimales"
+    },
+    "community": {
+      "title": "{appName} {featureCommunity}",
+      "description": "Rejoignez la {featureCommunity} de {appName} et découvrez un groupe dynamique de personnes construisant, exploitant et utilisant {appName}."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Consultez les articles de blog de {appName}. | {appName} est une messagerie chiffrée de bout en bout qui empêche la collecte de métadonnées sensibles."
+    },
+    "donate": {
+      "title": "Donate | Support Privacy Technology",
+      "description": "Support to the Session Technology Foundation to protect online privacy. Your donation funds secure, open-source messaging technology that safeguards human rights worldwide."
+    }
+  },
+  "donate": {
+    "heading": "{appName} needs your help",
+    "heroContent": "Private messaging is an essential part of our modern life. Secure communication shelters people from tyranny, protects those fighting against injustice, and empowers defenders of human rights worldwide.<br></br><br></br> However, the well-resourced opponents of privacy are actively working to suppress the tech that guards people's basic human rights and dignities. Politicians around the world are pushing for encryption-busting laws, privacy tech is slandered in the media, and surveillance capitalists are profiting from the chaos.<image></image> Despite the adversity, {appName} continues to provide a safe, secure, and trusted space for people to communicate online. {appName} is a free, private, and secure messaging app. It does not track users or sell your data—it just sends messages, privately. Millions of people around the world have turned to Session when they needed a safe and secure place to have a conversation.<br></br><br></br> More than just a tool, {appName} is a symbol of the importance of open-source, transparent, and resilient technology. It is technology like {appName} which safeguards our basic human rights in an era of increasing uncertainty and authoritarianism.",
+    "1": {
+      "heading": "A force for good",
+      "content": "Technology is transforming our society. Currently, a tiny cohort of powerful individuals and institutions have disproportionate control over the internet. In many cases, tech is being used to silence, manipulate, and suppress. It's time to push back against these forces of power.<image></image>We are agents of change in a world where technology is a tool for upending oppression. We believe in a future where technology is collaborative, transparent, equitable, and liberating."
+    },
+    "2": {
+      "heading": "Meet your privacy defenders",
+      "content": "{appName} is stewarded by the {foundationName}, a Swiss foundation dedicated to maintaining the open-source {appName} ecosystem. We are a team of technologists, engineers, and activists dedicated to the mission of restoring online privacy.<image></image> The financial independence of the {foundationName} allows us to fearlessly build the privacy technology that protects everyone's human rights. Your support will contribute to new {appName} development, fund essential network infrastructure, and the ongoing fight for freedom and privacy rights.<br></br><br></br> We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}."
+    },
+    "3": {
+      "heading": "Thank you for caring",
+      "content": "The {foundationName} is a Swiss-registered foundation. We are a non-profit oriented organization, subject to audits from the {swissSupervisory}. Our work helps protect privacy for all and shield those most at risk.<image></image>We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}.<br></br><br></br>Note that donations are not tax-deductible. If you have queries about donations or gifts, contact us via email: <contact-email></contact-email> <br></br><br></br>Please verify the URL is <validation-url></validation-url> before sending funds. If needed, addresses can be authenticated via email."
+    },
+    "4": {
+      "heading": "Donate via Credit Card ({donationProviderName})",
+      "content": ""
+    },
+    "5": {
+      "heading": "Donate via Crypto",
+      "content": "You can send {ethSymbol}, {usdcSymbol}, {usdtSymbol} or {btcSymbol} to the following {foundationName} addresses."
+    },
+    "button": "Donate Now"
+  }
+}
