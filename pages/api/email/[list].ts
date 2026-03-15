@@ -59,30 +59,28 @@ async function makeCMRequest(req: NextApiRequest): Promise<Response> {
   return await fetch(`${cm_BaseUrl}/subscribers/${cm_listId}.json`, params);
 }
 
-const ml_ApiKey = process.env.MAILERLITE_API_KEY;
-const ml_BaseUrl = 'https://connect.mailerlite.com/api';
-const ml_GroupId = process.env.MAILERLITE_GROUP_ID; // the session mailing list is using this API
+const brevo_ApiKey = process.env.BREVO_API_KEY;
+const brevo_BaseUrl = 'https://api.brevo.com/v3';
+const brevo_ListId = Number(process.env.BREVO_LIST_ID);
 
-async function makeMLRequest(req: NextApiRequest): Promise<Response> {
+async function makeBrevoRequest(req: NextApiRequest): Promise<Response> {
   const email = req.body.email;
   const body = {
     email,
-    groups: [ml_GroupId],
+    listIds: [brevo_ListId],
+    updateEnabled: true,
   };
+
   const params = {
     method: 'POST',
     headers: {
-      // prevents issues when the API version is updated
-      'X-Version': '2025-02-11',
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${ml_ApiKey}`,
+      'api-key': brevo_ApiKey!,
     },
     body: JSON.stringify(body),
   };
 
-  // NOTE request limit is 120 requests per minute https://developers.mailerlite.com/docs/#rate-limits
-  // TODO implement batch requests https://developers.mailerlite.com/docs/batching.html
-  return await fetch(`${ml_BaseUrl}/subscribers`, params);
+  return await fetch(`${brevo_BaseUrl}/contacts`, params);
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -107,14 +105,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       res.status(result.Code).json({ email, message: result.Message });
     }
   } else {
-    response = await makeMLRequest(req);
-    // 201 Created: The subscriber was successfully added to the list.
-    // 200 OK: The subscriber was already in the list.
-    if (response.status === 201 || response.status === 200) {
+    response = await makeBrevoRequest(req);
+
+    // Brevo returns 201 for new contacts, 204 for updated existing contacts
+    if (response.status === 201 || response.status === 204) {
       res.status(201).json({ email });
     } else {
       const result = await response.json();
-      res.status(result.code).json({ email, message: result.message });
+      res.status(response.status).json({ email, message: result.message });
     }
   }
 }
