@@ -57,7 +57,7 @@ export default function Hero(): ReactElement {
               {t('tag', { appName: NON_LOCALIZED_STRING.appName })}
             </p>
 
-            <Link href="/download" className="mt-2 hidden lg:block">
+            <Link href="/download" className="mt-2 hidden lg:inline">
               <Button fontWeight="bold" size="large" classes="mt-4 px-12">
                 {tGeneral('download')}
               </Button>
