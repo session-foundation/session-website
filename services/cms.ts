@@ -1,8 +1,9 @@
 import type { Block, Document, Inline } from '@contentful/rich-text-types';
 import { type ContentfulClientApi, createClient, type EntryCollection, type Tag } from 'contentful';
 import { format, parseISO } from 'date-fns';
+import { unstable_cache } from 'next/cache';
 import { METADATA } from '@/constants';
-import blogCache from '@/services/cache';
+import CMS, { IS_STATIC_MODE } from '@/constants/cms';
 import { fetchContent } from '@/services/embed';
 import type {
   IAuthor,
@@ -20,9 +21,6 @@ import type {
 // Contentful API pagination limit
 const CONTENTFUL_PAGE_SIZE = 100;
 
-// Sentinel value to mark 404s in cache
-const NOT_FOUND_MARKER = Symbol('NOT_FOUND');
-
 const client: ContentfulClientApi = createClient({
   space: process.env.CONTENTFUL_SPACE_ID!,
   environment: process.env.CONTENTFUL_ENVIRONMENT_ID!,
@@ -30,171 +28,235 @@ const client: ContentfulClientApi = createClient({
   host: 'cdn.contentful.com',
 });
 
+const previewClient: ContentfulClientApi = createClient({
+  space: process.env.CONTENTFUL_SPACE_ID!,
+  environment: process.env.CONTENTFUL_ENVIRONMENT_ID!,
+  accessToken: process.env.CONTENTFUL_PREVIEW_TOKEN!,
+  host: 'preview.contentful.com',
+});
+
+/**
+ * Cache tags used for on-demand revalidation via revalidateTag() in the webhook handler.
+ * Exported so the webhook handler can reference them without magic strings.
+ */
+export const CACHE_TAGS = {
+  TAGS: 'contentful-tags',
+  POSTS: 'contentful-posts',
+  PAGES: 'contentful-pages',
+  FAQ: 'contentful-faq',
+} as const;
+
+// In static mode, use a 5-second TTL rather than caching indefinitely.
+// revalidateTag() requires App Router context and cannot be called from a Pages Router
+// API route, so we can't explicitly bust the cache on demand. A 5-second TTL ensures
+// data is always fresh when res.revalidate() triggers ISR regeneration — any regen
+// happens well after the cache has expired, so getStaticProps fetches live Contentful data.
+// The 5-second window still deduplicates concurrent calls during parallel page builds.
+const cacheOptions = { revalidate: IS_STATIC_MODE ? 5 : CMS.CONTENT_REVALIDATE_RATE } as const;
+
+// ---------------------------------------------------------------------------
+// Internal cached implementations
+// Exported functions below normalise default parameters then delegate here
+// so that cache keys are always consistent regardless of how callers pass args.
+// ---------------------------------------------------------------------------
+
+const _fetchTagList = unstable_cache(
+  async (): Promise<ITagList> => {
+    const _tags = await client.getTags();
+    const tags: ITagList = {};
+    _tags.items.forEach((tag) => {
+      tags[tag.sys.id] = tag.name;
+    });
+    return tags;
+  },
+  ['contentful-tag-list'],
+  { ...cacheOptions, tags: [CACHE_TAGS.TAGS] }
+);
+
+const _fetchBlogEntries = unstable_cache(
+  async (quantity: number, page: number): Promise<IFetchBlogEntriesReturn> => {
+    const _entries = await client.getEntries({
+      content_type: 'post',
+      order: '-fields.date',
+      limit: quantity,
+      skip: (page - 1) * quantity,
+    });
+    const results = await generateEntries(_entries, 'post');
+    return {
+      entries: results.entries as Array<IPost>,
+      total: results.total,
+    };
+  },
+  ['contentful-blog-entries'],
+  { ...cacheOptions, tags: [CACHE_TAGS.POSTS] }
+);
+
+const _fetchAllBlogEntries = unstable_cache(
+  async (): Promise<IPost[]> => {
+    const posts: IPost[] = [];
+
+    const firstBatch = await fetchBlogEntries(CONTENTFUL_PAGE_SIZE, 1);
+    posts.push(...firstBatch.entries);
+
+    const totalPages = Math.ceil(firstBatch.total / CONTENTFUL_PAGE_SIZE);
+    if (totalPages > 1) {
+      const remainingPages = Array.from({ length: totalPages - 1 }, (_, i) => i + 2);
+      const batches = await Promise.all(
+        remainingPages.map((page) => fetchBlogEntries(CONTENTFUL_PAGE_SIZE, page))
+      );
+      for (const { entries } of batches) {
+        posts.push(...entries);
+      }
+    }
+
+    return posts;
+  },
+  ['contentful-all-blog-entries'],
+  { ...cacheOptions, tags: [CACHE_TAGS.POSTS] }
+);
+
+const _fetchBlogEntriesByTag = unstable_cache(
+  async (tag: string, quantity: number): Promise<IFetchBlogEntriesReturn> => {
+    const taglist = await fetchTagList();
+    const entry = Object.entries(taglist).find(([, value]) => value === tag);
+    if (!entry) {
+      throw new Error(`Tag not found: ${tag}`);
+    }
+    const [id] = entry;
+
+    const _entries = await client.getEntries({
+      content_type: 'post',
+      order: '-fields.date',
+      'metadata.tags.sys.id[in]': id,
+      limit: quantity,
+    });
+
+    if (_entries.items.length === 0) {
+      throw new Error(`Failed to fetch entries for ${tag}`);
+    }
+
+    const results = await generateEntries(_entries, 'post', taglist);
+    return {
+      entries: results.entries as Array<IPost>,
+      total: results.total,
+    };
+  },
+  ['contentful-blog-entries-by-tag'],
+  { ...cacheOptions, tags: [CACHE_TAGS.POSTS] }
+);
+
+const _fetchEntryBySlug = unstable_cache(
+  async (slug: string): Promise<IPage | IPost> => {
+    const [_pages, _posts] = await Promise.all([
+      client.getEntries({ content_type: 'page', 'fields.slug': slug }),
+      client.getEntries({ content_type: 'post', 'fields.slug': slug }),
+    ]);
+
+    const _entries = [..._pages.items, ..._posts.items];
+    const hasPost = _entries.some((e) => e.sys.contentType.sys.id === 'post');
+    const taglist = hasPost ? await fetchTagList() : {};
+
+    if (_entries.length > 0) {
+      const entry = _entries[0];
+      if (entry.sys.contentType.sys.id === 'post') {
+        return convertPost(entry, taglist);
+      }
+      if (entry.sys.contentType.sys.id === 'page') {
+        return convertPage(entry);
+      }
+    }
+
+    throw new Error(`Failed to fetch entry for ${slug}`);
+  },
+  ['contentful-entry-by-slug'],
+  { ...cacheOptions, tags: [CACHE_TAGS.POSTS, CACHE_TAGS.PAGES] }
+);
+
+const _fetchFAQItems = unstable_cache(
+  async (): Promise<IFetchFAQItemsReturn> => {
+    const _entries = await client.getEntries({
+      content_type: 'faq_item',
+      order: 'fields.id',
+    });
+    const results = await generateEntries(_entries, 'faq');
+    return { entries: results.entries as Array<IFAQItem>, total: results.total };
+  },
+  ['contentful-faq-items'],
+  { ...cacheOptions, tags: [CACHE_TAGS.FAQ] }
+);
+
+const _fetchPages = unstable_cache(
+  async (quantity: number): Promise<IFetchPagesReturn> => {
+    const _entries = await client.getEntries({
+      content_type: 'page',
+      limit: quantity,
+    });
+    const results = await generateEntries(_entries, 'page');
+    return {
+      entries: results.entries as Array<IPage>,
+      total: results.total,
+    };
+  },
+  ['contentful-pages'],
+  { ...cacheOptions, tags: [CACHE_TAGS.PAGES] }
+);
+
+// ---------------------------------------------------------------------------
+// Public API
+// ---------------------------------------------------------------------------
+
 export async function fetchTagList(): Promise<ITagList> {
-  const _tags = await client.getTags();
-  const tags: ITagList = {};
-  _tags.items.forEach((tag) => {
-    tags[tag.sys.id] = tag.name;
-  });
-  return tags;
+  return _fetchTagList();
 }
 
-export async function fetchBlogEntries(quantity = CONTENTFUL_PAGE_SIZE, page = 1): Promise<IFetchBlogEntriesReturn> {
-  const cacheKey = `blog_entries_${quantity}_${page}`;
-  const cached = blogCache.get<IFetchBlogEntriesReturn>(cacheKey);
-  
-  if (cached) {
-    return cached;
-  }
-
-  const _entries = await client.getEntries({
-    content_type: 'post', // only fetch blog post entry
-    order: '-fields.date',
-    limit: quantity,
-    skip: (page - 1) * quantity,
-  });
-
-  const results = await generateEntries(_entries, 'post');
-  const data = {
-    entries: results.entries as Array<IPost>,
-    total: results.total,
-  };
-  
-  blogCache.set(cacheKey, data);
-  return data;
+export async function fetchBlogEntries(
+  quantity = CONTENTFUL_PAGE_SIZE,
+  page = 1
+): Promise<IFetchBlogEntriesReturn> {
+  return _fetchBlogEntries(quantity, page);
 }
 
-/**
- * Efficiently fetches all blog entries with optimized pagination
- * 
- * This function replaces inefficient while loops that made unnecessary API calls.
- * 
- * Optimizations:
- * - Calculates total pages from first API call
- * - Uses for loop with known bounds instead of while loop
- * - Caches the complete result to avoid repeated full fetches
- * - Leverages per-page caching for individual requests
- * 
- * Cache Key: 'all_blog_entries'
- * TTL: 1 hour (default cache TTL)
- * 
- * @returns Promise<IPost[]> Array of all blog posts
- */
 export async function fetchAllBlogEntries(): Promise<IPost[]> {
-  const cacheKey = 'all_blog_entries';
-  const cached = blogCache.get<IPost[]>(cacheKey);
-  
-  if (cached) {
-    return cached;
-  }
-
-  const posts: IPost[] = [];
-  
-  // First fetch to get total count
-  const firstBatch = await fetchBlogEntries(CONTENTFUL_PAGE_SIZE, 1);
-  posts.push(...firstBatch.entries);
-  
-  // Calculate remaining pages
-  const totalPages = Math.ceil(firstBatch.total / CONTENTFUL_PAGE_SIZE);
-  
-  // Fetch remaining pages if needed
-  for (let page = 2; page <= totalPages; page++) {
-    const { entries } = await fetchBlogEntries(CONTENTFUL_PAGE_SIZE, page);
-    posts.push(...entries);
-  }
-  
-  blogCache.set(cacheKey, posts);
-  return posts;
-}
-
-/**
- * Check if a slug likely exists without making API calls
- * Uses cached data to quickly validate if a slug might be valid
- * 
- * @param slug - The slug to check
- * @returns boolean - true if slug might exist, false if definitely doesn't exist in cache
- */
-export async function slugMightExist(slug: string): Promise<boolean> {
-  // Check if it's already in the entry cache
-  const cacheKey = `entry_by_slug_${slug}`;
-  if (blogCache.has(cacheKey)) {
-    return true;
-  }
-  
-  // Check if we have all blog entries cached
-  const allPostsKey = 'all_blog_entries';
-  const cachedPosts = blogCache.get<IPost[]>(allPostsKey);
-  
-  if (cachedPosts) {
-    const found = cachedPosts.some(post => post.slug === slug);
-    if (found) {
-      return true;
-    }
-  }
-  
-  // Check if we have pages cached
-  const allPagesKey = 'all_pages';
-  const cachedPages = blogCache.get<IPage[]>(allPagesKey);
-  
-  if (cachedPages) {
-    const found = cachedPages.some(page => page.slug === slug);
-    if (found) {
-      return true;
-    }
-  }
-  
-  // If we have cache and slug not found, likely doesn't exist
-  // But return true to allow API call as fallback (cache might be incomplete)
-  return true;
+  return _fetchAllBlogEntries();
 }
 
 export async function fetchBlogEntriesByTag(
   tag: string,
   quantity = CONTENTFUL_PAGE_SIZE
 ): Promise<IFetchBlogEntriesReturn> {
-  const taglist = await fetchTagList();
-  const id = Object.entries(taglist).filter(([_, value]) => {
-    return tag === value;
-  })[0][0];
-
-  const _entries = await client.getEntries({
-    content_type: 'post', // only fetch blog post entry
-    order: '-fields.date',
-    'metadata.tags.sys.id[in]': id,
-    limit: quantity,
-  });
-
-  if (_entries.items.length > 0) {
-    const results = await generateEntries(_entries, 'post');
-    return {
-      entries: results.entries as Array<IPost>,
-      total: results.total,
-    };
-  }
-
-  return Promise.reject(new Error(`Failed to fetch entries for ${tag}`));
+  return _fetchBlogEntriesByTag(tag, quantity);
 }
 
-export async function fetchEntryPreview(slug: string): Promise<IPage | IPost> {
-  const _client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID!,
-    accessToken: process.env.CONTENTFUL_PREVIEW_TOKEN!,
-    host: 'preview.contentful.com',
-  });
+export async function fetchEntryBySlug(slug: string): Promise<IPage | IPost> {
+  return _fetchEntryBySlug(slug);
+}
 
-  const _pages = await _client.getEntries({
-    content_type: 'page',
-    'fields.slug': slug,
-    'fields.preview': true,
-  });
-  const _posts = await _client.getEntries({
-    content_type: 'post',
-    'fields.slug': slug,
-    'fields.preview': true,
-  });
+export async function fetchFAQItems(): Promise<IFetchFAQItemsReturn> {
+  return _fetchFAQItems();
+}
+
+export async function fetchPages(quantity = CONTENTFUL_PAGE_SIZE): Promise<IFetchPagesReturn> {
+  return _fetchPages(quantity);
+}
+
+// Preview is intentionally not cached — it always fetches live draft content.
+export async function fetchEntryPreview(slug: string): Promise<IPage | IPost> {
+  const [_pages, _posts] = await Promise.all([
+    previewClient.getEntries({
+      content_type: 'page',
+      'fields.slug': slug,
+      'fields.preview': true,
+    }),
+    previewClient.getEntries({
+      content_type: 'post',
+      'fields.slug': slug,
+      'fields.preview': true,
+    }),
+  ]);
 
   const _entries = [..._pages.items, ..._posts.items];
-  const taglist = await fetchTagList();
+  const hasPost = _entries.some((e) => e.sys.contentType.sys.id === 'post');
+  const taglist = hasPost ? await fetchTagList() : {};
 
   if (_entries.length > 0) {
     const entry = _entries[0];
@@ -209,58 +271,9 @@ export async function fetchEntryPreview(slug: string): Promise<IPage | IPost> {
   return Promise.reject(new Error(`Failed to fetch preview for ${slug}`));
 }
 
-export async function fetchEntryBySlug(slug: string): Promise<IPage | IPost> {
-  const cacheKey = `entry_by_slug_${slug}`;
-  
-  // Check if we have this in cache (either valid entry or 404 marker)
-  if (blogCache.has(cacheKey)) {
-    const cached = blogCache.get<IPage | IPost | typeof NOT_FOUND_MARKER>(cacheKey);
-    
-    // If it's the NOT_FOUND marker, we previously checked and it doesn't exist
-    if (cached === NOT_FOUND_MARKER) {
-      return Promise.reject(new Error(`Failed to fetch entry for ${slug}`));
-    }
-    
-    // Otherwise it's a valid cached entry
-    if (cached) {
-      return cached;
-    }
-  }
-
-  // Not in cache, proceed with API call
-  const _pages = await client.getEntries({
-    content_type: 'page',
-    'fields.slug': slug,
-  });
-  const _posts = await client.getEntries({
-    content_type: 'post',
-    'fields.slug': slug,
-  });
-
-  const _entries = [..._pages.items, ..._posts.items];
-  const taglist = await fetchTagList();
-
-  if (_entries.length > 0) {
-    const entry = _entries[0];
-    let result: IPage | IPost;
-    if (entry.sys.contentType.sys.id === 'post') {
-      result = convertPost(entry, taglist);
-    } else if (entry.sys.contentType.sys.id === 'page') {
-      result = convertPage(entry);
-    } else {
-      return Promise.reject(new Error(`Failed to fetch entry for ${slug}`));
-    }
-    
-    // Cache successful lookups for 1 hour
-    blogCache.set(cacheKey, result);
-    return result;
-  }
-
-  // Cache negative results for 10 minutes to prevent repeated lookups of non-existent pages
-  // This is shorter than successful lookups since content might be added
-  blogCache.set(cacheKey, NOT_FOUND_MARKER as any, 600000); // 10 minutes
-  return Promise.reject(new Error(`Failed to fetch entry for ${slug}`));
-}
+// ---------------------------------------------------------------------------
+// Helpers
+// ---------------------------------------------------------------------------
 
 function convertPost(rawData: any, taglist: ITagList): IPost {
   const rawPost = rawData.fields;
@@ -285,7 +298,7 @@ function convertPost(rawData: any, taglist: ITagList): IPost {
 
 function convertImage(rawImage: any): IFigureImage {
   return {
-    imageUrl: rawImage.file.url.replace('//', 'https://'), // may need to put null check as well here
+    imageUrl: rawImage.file.url.replace('//', 'https://'),
     description: rawImage.description ?? null,
     title: rawImage.title ?? null,
     width: rawImage.file.details.image.width,
@@ -307,21 +320,20 @@ function convertAuthor(rawAuthor: any): IAuthor {
 }
 
 function convertTags(rawTags: any, taglist: ITagList): string[] {
-  return rawTags.map((tag: Tag) => {
-    return taglist[tag.sys.id];
-  });
+  return rawTags.map((tag: Tag) => taglist[tag.sys.id]);
 }
 
 async function generateEntries(
   entries: EntryCollection<unknown>,
-  entryType: 'post' | 'faq' | 'page'
+  entryType: 'post' | 'faq' | 'page',
+  taglist?: ITagList
 ): Promise<IFetchEntriesReturn> {
   let _entries: any = [];
   if (entries?.items && entries.items.length > 0) {
     switch (entryType) {
       case 'post': {
-        const taglist = await fetchTagList();
-        _entries = entries.items.map((entry) => convertPost(entry, taglist));
+        const tags = taglist ?? (await fetchTagList());
+        _entries = entries.items.map((entry) => convertPost(entry, tags));
         break;
       }
       case 'faq':
@@ -344,7 +356,6 @@ export function generateRoute(slug: string): string {
 }
 
 async function loadMetaData(node: Block | Inline) {
-  // is embedded link not embedded media
   if (!node.data.target.fields.file) {
     if (node.data.target.sys.contentType.sys.id === 'post') {
       node.data.target.fields.url = `${METADATA.HOST_URL}/blog/${node.data.target.fields.slug}`;
@@ -359,7 +370,6 @@ export async function generateLinkMeta(doc: Document): Promise<Document> {
     if (node.nodeType === 'embedded-entry-block') {
       node = await loadMetaData(node);
     } else {
-      // check for inline embedding
       const innerPromises = node.content.map(async (innerNode) => {
         if (
           innerNode.nodeType === 'embedded-entry-inline' &&
@@ -375,20 +385,9 @@ export async function generateLinkMeta(doc: Document): Promise<Document> {
   return doc;
 }
 
-export async function fetchFAQItems(): Promise<IFetchFAQItemsReturn> {
-  const _entries = await client.getEntries({
-    content_type: 'faq_item', // only fetch faq items
-    order: 'fields.id',
-  });
-
-  const results = await generateEntries(_entries, 'faq');
-  return { entries: results.entries as Array<IFAQItem>, total: results.total };
-}
-
 function convertFAQ(rawData: any): IFAQItem {
   const rawFAQ = rawData.fields;
   const { question, answer, id, tag, slug } = rawFAQ;
-
   return {
     id: id ?? null,
     question: question ?? null,
@@ -398,37 +397,8 @@ function convertFAQ(rawData: any): IFAQItem {
   };
 }
 
-export async function fetchPages(quantity = CONTENTFUL_PAGE_SIZE): Promise<IFetchPagesReturn> {
-  const cacheKey = `pages_${quantity}`;
-  const cached = blogCache.get<IFetchPagesReturn>(cacheKey);
-  
-  if (cached) {
-    return cached;
-  }
-
-  const _entries = await client.getEntries({
-    content_type: 'page',
-    limit: quantity,
-  });
-
-  const results = await generateEntries(_entries, 'page');
-  const data = {
-    entries: results.entries as Array<IPage>,
-    total: results.total,
-  };
-  
-  // Cache all pages for slug validation
-  if (quantity >= results.total) {
-    blogCache.set('all_pages', data.entries);
-  }
-  
-  blogCache.set(cacheKey, data);
-  return data;
-}
-
 function convertPage(rawData: any): IPage {
   const rawPage = rawData.fields;
-
   return {
     title: rawPage.title,
     slug: rawPage.slug,

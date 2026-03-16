@@ -6,7 +6,7 @@ import Container from '@/components/Container';
 import Accordion from '@/components/ui/Accordion';
 import Headline from '@/components/ui/Headline';
 import Layout from '@/components/ui/Layout';
-import { CMS } from '@/constants';
+import { CMS, IS_STATIC_MODE } from '@/constants';
 import METADATA from '@/constants/metadata';
 import { fetchFAQItems, generateLinkMeta } from '@/services/cms';
 import type { IFAQItem, IFAQList } from '@/types/cms';
@@ -139,6 +139,6 @@ export const getStaticProps: GetStaticProps = async (_context: GetStaticPropsCon
       total,
       messages: (await import(`../locales/${_context.locale}.json`)).default,
     },
-    revalidate: CMS.CONTENT_REVALIDATE_RATE,
+    revalidate: IS_STATIC_MODE ? false : CMS.CONTENT_REVALIDATE_RATE,
   };
 };

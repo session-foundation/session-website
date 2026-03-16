@@ -1,13 +1,28 @@
 import isLive from '@/utils/environment';
 
+/**
+ * When either WEBHOOK_SECRET or FORCE_STATIC is set the site operates in fully-static
+ * mode: getStaticProps returns revalidate: false on every page and Next.js will never
+ * re-fetch content on its own schedule.
+ *
+ * WEBHOOK_SECRET additionally enables the /api/revalidate endpoint so Contentful can
+ * trigger on-demand revalidation when content is published.
+ *
+ * Configure the Contentful webhook to POST to:
+ *   https://<your-domain>/api/revalidate?secret=<WEBHOOK_SECRET>
+ */
+export const IS_STATIC_MODE =
+  typeof process !== 'undefined' &&
+  !!(process.env.FORCE_STATIC || process.env.WEBHOOK_SECRET);
+
 const CMS = {
   BLOG_RESULTS_PER_PAGE: 13,
   BLOG_RESULTS_PER_PAGE_TAGGED: 12,
   // Next.js will try and re-build the page when a request comes in
-  // every 1 hour for production and every 30 seconds for staging
-  CONTENT_REVALIDATE_RATE: isLive() ? 3600 : 30,
-  // For older blog posts (>30 days), revalidate once per day
-  CONTENT_REVALIDATE_RATE_OLD: isLive() ? 86400 : 30,
+  // every 6 hours for production and every 30 seconds for staging
+  CONTENT_REVALIDATE_RATE: isLive() ? 21600 : 30,
+  // For older blog posts (>30 days), revalidate once per week
+  CONTENT_REVALIDATE_RATE_OLD: isLive() ? 604800 : 30,
   // Age threshold (in days) to consider a post "old"
   OLD_POST_AGE_DAYS: 30,
   // So we dont get rate limited by the GitHub API
@@ -16,13 +31,13 @@ const CMS = {
 
 /**
  * Calculate the appropriate revalidation time for a blog post based on its age.
- * 
+ *
  * Strategy:
- * - Posts newer than 30 days: revalidate every 1 hour (more frequent updates expected)
- * - Posts older than 30 days: revalidate once per day (content is stable)
- * 
+ * - Posts newer than 30 days: revalidate every 6 hours (recently published content)
+ * - Posts older than 30 days: revalidate once per week (stable content)
+ *
  * This reduces API calls for older content that rarely changes.
- * 
+ *
  * @param publishedDateISO - ISO date string of when the post was published
  * @returns Revalidation time in seconds
  */

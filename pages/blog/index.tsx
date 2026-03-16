@@ -5,27 +5,27 @@ import Container from '@/components/Container';
 import PostCard from '@/components/cards/PostCard';
 import PostList from '@/components/posts/PostList';
 import Layout from '@/components/ui/Layout';
-import { CMS } from '@/constants';
+import { CMS, IS_STATIC_MODE } from '@/constants';
 import METADATA from '@/constants/metadata';
 import { generateRoute } from '@/services/cms';
 import type { IPost } from '@/types/cms';
+import generateRSSFeed from '@/utils/rss';
 
 interface Props {
   posts: IPost[];
 }
 
 export const getStaticProps: GetStaticProps = async (_context: GetStaticPropsContext) => {
+  console.log('[Build] Page: /blog');
   const { fetchAllBlogEntries } = await import('@/services/cms');
   const posts = await fetchAllBlogEntries();
+  console.log(`[Build] Done: /blog (${posts.length} posts)`);
 
-  const revalidate = CMS.CONTENT_REVALIDATE_RATE;
-
-  // Log revalidation time in dev builds
-  if (process.env.NODE_ENV === 'development') {
-    console.log(
-      `[Revalidate] Blog Index - ${revalidate}s (${Math.round(revalidate / 60)}min)`
-    );
+  if (process.env.NEXT_PUBLIC_SITE_ENV !== 'development') {
+    generateRSSFeed(posts);
   }
+
+  const revalidate = IS_STATIC_MODE ? false : CMS.CONTENT_REVALIDATE_RATE;
 
   return {
     props: { posts, messages: (await import(`../../locales/${_context.locale}.json`)).default },

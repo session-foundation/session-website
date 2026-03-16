@@ -4,8 +4,6 @@ import Benefits from '@/components/sections/Benefits';
 import Features from '@/components/sections/Features';
 import Hero from '@/components/sections/Hero';
 import Layout from '@/components/ui/Layout';
-import { CMS } from '@/constants';
-import generateRSSFeed from '@/utils/rss';
 
 export default function Home() {
   return (
@@ -19,23 +17,7 @@ export default function Home() {
 }
 
 export const getStaticProps: GetStaticProps = async (_context: GetStaticPropsContext) => {
-  if (process.env.NEXT_PUBLIC_SITE_ENV !== 'development') {
-    const { fetchAllBlogEntries } = await import('@/services/cms');
-    const posts = await fetchAllBlogEntries();
-    generateRSSFeed(posts);
-  }
-
-  const revalidate = CMS.CONTENT_REVALIDATE_RATE;
-
-  // Log revalidation time in dev builds
-  if (process.env.NODE_ENV === 'development') {
-    console.log(
-      `[Revalidate] Home Page - ${revalidate}s (${Math.round(revalidate / 60)}min)`
-    );
-  }
-
   return {
     props: { messages: (await import(`../locales/${_context.locale}.json`)).default },
-    revalidate,
   };
 };
