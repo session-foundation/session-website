@@ -5,7 +5,7 @@ import Container from '@/components/Container';
 import PostCard from '@/components/cards/PostCard';
 import PostList from '@/components/posts/PostList';
 import Layout from '@/components/ui/Layout';
-import { CMS } from '@/constants';
+import { CMS, IS_STATIC_MODE } from '@/constants';
 import METADATA from '@/constants/metadata';
 import { generateRoute } from '@/services/cms';
 import type { IPost } from '@/types/cms';
@@ -23,14 +23,7 @@ export const getStaticProps: GetStaticProps = async (_context: GetStaticPropsCon
     generateRSSFeed(posts);
   }
 
-  const revalidate = CMS.CONTENT_REVALIDATE_RATE;
-
-  // Log revalidation time in dev builds
-  if (process.env.NODE_ENV === 'development') {
-    console.log(
-      `[Revalidate] Blog Index - ${revalidate}s (${Math.round(revalidate / 60)}min)`
-    );
-  }
+  const revalidate = IS_STATIC_MODE ? false : CMS.CONTENT_REVALIDATE_RATE;
 
   return {
     props: { posts, messages: (await import(`../../locales/${_context.locale}.json`)).default },

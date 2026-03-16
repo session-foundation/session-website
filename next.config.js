@@ -100,6 +100,8 @@ const nextConfig = {
     MAILERLITE_API_KEY: process.env.MAILERLITE_API_KEY,
     MAILERLITE_GROUP_ID: process.env.MAILERLITE_GROUP_ID,
     NEXT_PUBLIC_TRANSLATION_MODE: process.env.NEXT_PUBLIC_TRANSLATION_MODE,
+    WEBHOOK_SECRET: process.env.WEBHOOK_SECRET,
+    FORCE_STATIC: process.env.FORCE_STATIC,
   },
 
   async headers() {

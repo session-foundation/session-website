@@ -4,7 +4,7 @@ import type { ReactElement } from 'react';
 import Container from '@/components/Container';
 import PostList from '@/components/posts/PostList';
 import Layout from '@/components/ui/Layout';
-import { CMS, METADATA } from '@/constants';
+import { CMS, IS_STATIC_MODE, METADATA } from '@/constants';
 import { fetchBlogEntriesByTag, fetchTagList } from '@/services/cms';
 import type { IPost, ITagList } from '@/types/cms';
 
@@ -45,17 +45,10 @@ export const getStaticProps: GetStaticProps = async (context: GetStaticPropsCont
   console.log(`Building: Results for tag "%c${context.params?.tag}"`, 'color: purple;');
   const tag = String(context.params?.tag);
 
-  const revalidate = CMS.CONTENT_REVALIDATE_RATE;
+  const revalidate = IS_STATIC_MODE ? false : CMS.CONTENT_REVALIDATE_RATE;
 
   try {
     const { entries: posts } = await fetchBlogEntriesByTag(tag);
-
-    // Log revalidation time in dev builds
-    if (process.env.NODE_ENV === 'development') {
-      console.log(
-        `[Revalidate] Tag Page "${tag}" - ${revalidate}s (${Math.round(revalidate / 60)}min)`
-      );
-    }
 
     return {
       props: {

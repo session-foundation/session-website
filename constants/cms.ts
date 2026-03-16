@@ -1,5 +1,20 @@
 import isLive from '@/utils/environment';
 
+/**
+ * When either WEBHOOK_SECRET or FORCE_STATIC is set the site operates in fully-static
+ * mode: getStaticProps returns revalidate: false on every page and Next.js will never
+ * re-fetch content on its own schedule.
+ *
+ * WEBHOOK_SECRET additionally enables the /api/revalidate endpoint so Contentful can
+ * trigger on-demand revalidation when content is published.
+ *
+ * Configure the Contentful webhook to POST to:
+ *   https://<your-domain>/api/revalidate?secret=<WEBHOOK_SECRET>
+ */
+export const IS_STATIC_MODE =
+  typeof process !== 'undefined' &&
+  !!(process.env.FORCE_STATIC || process.env.WEBHOOK_SECRET);
+
 const CMS = {
   BLOG_RESULTS_PER_PAGE: 13,
   BLOG_RESULTS_PER_PAGE_TAGGED: 12,

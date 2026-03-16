@@ -156,6 +156,92 @@ System environment variables and page metadata will also be updated to show it's
 
 Any changes made on Contentful will be reflected on the staging server **every 30 seconds**.
 
+## Contentful Webhook Setup
+
+This guide explains how to configure a Contentful webhook to trigger on-demand ISR revalidation for the session website.
+
+### Prerequisites
+
+Set `WEBHOOK_SECRET` in your environment. This activates webhook mode, which also disables time-based ISR — the site becomes fully static and only revalidates when the webhook fires.
+
+```env
+WEBHOOK_SECRET=your-secret-value-here
+```
+
+### Contentful Configuration
+
+1. In Contentful, go to **Settings → Webhooks → Add Webhook**.
+
+2. **Name**: `Session Website Revalidation` (or any descriptive name)
+
+3. **URL**: `https://<your-domain>/api/revalidate?secret=<WEBHOOK_SECRET>`
+
+   Replace `<your-domain>` with your production domain and `<WEBHOOK_SECRET>` with the value set in your environment.
+
+4. **Triggers**: Select the following events under **Entries**:
+   - `Publish`
+   - `Unpublish`
+   - `Delete`
+
+   Deselect all others (Save, Auto save, Create, Archive, Unarchive). The handler ignores other events, but limiting triggers avoids unnecessary webhook calls.
+
+5. **Content type filter** *(optional but recommended)*: Restrict to the content types the site uses:
+   - `post`
+   - `page`
+   - `faq_item`
+
+6. **Headers**: No custom headers are required. The secret is passed as a query parameter. If you prefer header-based auth, you can add a custom header (e.g. `X-Webhook-Secret: <value>`) and update the handler to verify it instead.
+
+7. **Content type** (request body): Leave as the default — `application/vnd.contentful.management.v1+json`.
+
+8. Click **Save**.
+
+### What Gets Revalidated
+
+| Content type | Event        | What is revalidated                                           |
+|-------------|--------------|---------------------------------------------------------------|
+| `post`      | publish      | `/${slug}`, `/blog` (all locales), tag pages for all post tags |
+| `post`      | unpublish / delete | `/blog` (all locales) — slug not available in tombstone payload |
+| `page`      | publish      | `/${slug}` (all locales)                                      |
+| `page`      | unpublish / delete | Data cache busted only — slug not available in tombstone payload |
+| `faq_item`  | any          | `/faq` (all locales)                                          |
+
+### Notes on unpublish / delete
+
+Contentful sends a tombstone payload for unpublish and delete events — the `fields` object is absent. The handler can still identify the content type from `sys.contentType.sys.id` and will:
+
+- Bust the relevant Next.js data cache tag so subsequent requests fetch fresh content.
+- Revalidate listing pages (blog index, faq) so removed content disappears from lists.
+- For posts: the post's own page at `/${slug}` will naturally return 404 on the next visit because it's no longer in Contentful. ISR handles this via `notFound: true` in `getStaticProps`.
+- For pages: without a slug, the specific page path cannot be targeted. The stale page will persist until the next visitor triggers a background regeneration (which will then 404 it).
+
+### Verifying the Webhook
+
+After saving, use the **Send test** button in Contentful to send a test request. The handler will return one of:
+
+- `200 { revalidated: true, ... }` — success
+- `200 { revalidated: false, reason: "Ignored topic" }` — test event uses a non-revalidation topic, expected
+- `401` — secret mismatch, check the URL query parameter
+- `503` — `WEBHOOK_SECRET` is not set in the environment
+
+You can also test locally with:
+
+```bash
+curl -X POST \
+  "http://localhost:3000/api/revalidate?secret=your-secret-value-here" \
+  -H "Content-Type: application/vnd.contentful.management.v1+json" \
+  -H "X-Contentful-Topic: ContentManagement.Entry.publish" \
+  -d '{
+    "sys": {
+      "contentType": { "sys": { "id": "post" } }
+    },
+    "fields": {
+      "slug": { "en-US": "your-post-slug" }
+    },
+    "metadata": { "tags": [] }
+  }'
+```
+
 ## License
 
 Distributed under the GNU GPLv3 License. See [LICENSE](LICENSE) for more information.

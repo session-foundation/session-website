@@ -2,7 +2,7 @@ import type { GetStaticPaths, GetStaticPropsContext } from 'next';
 import type { ReactElement } from 'react';
 import BlogPost from '@/components/BlogPost';
 import RichPage from '@/components/RichPage';
-import { CMS, getRevalidationTime } from '@/constants';
+import { CMS, getRevalidationTime, IS_STATIC_MODE } from '@/constants';
 import { fetchBlogEntries, fetchEntryBySlug, generateLinkMeta } from '@/services/cms';
 import { hasRedirection } from '@/services/redirect';
 import { type IPage, type IPost, isPost } from '@/types/cms';
@@ -38,7 +38,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
     return {
       props: { messages },
       redirect: redirect,
-      revalidate: CMS.CONTENT_REVALIDATE_RATE,
+      revalidate: IS_STATIC_MODE ? false : CMS.CONTENT_REVALIDATE_RATE,
     };
   }
 
@@ -60,20 +60,19 @@ export async function getStaticProps(context: GetStaticPropsContext) {
         .slice(0, 6);
     }
 
-    // Calculate revalidation time based on content age
-    const revalidate = isPost(content)
-      ? getRevalidationTime(content.publishedDateISO)
-      : CMS.CONTENT_REVALIDATE_RATE;
+    // Calculate revalidation time based on content age (ignored in static mode)
+    const revalidate = IS_STATIC_MODE
+      ? false
+      : isPost(content)
+        ? getRevalidationTime(content.publishedDateISO)
+        : CMS.CONTENT_REVALIDATE_RATE;
 
     // Log revalidation time in dev builds
     if (process.env.NODE_ENV === 'development') {
       const contentType = isPost(content) ? 'Post' : 'Page';
-      const ageInfo = isPost(content) 
-        ? ` (published: ${content.publishedDate})` 
-        : '';
-      console.log(
-        `[Revalidate] ${contentType} "/${slug}"${ageInfo} - ${revalidate}s (${Math.round(revalidate / 60)}min)`
-      );
+      const ageInfo = isPost(content) ? ` (published: ${content.publishedDate})` : '';
+      const revalidateInfo = IS_STATIC_MODE ? 'static (webhook-only)' : `${revalidate}s (${Math.round((revalidate as number) / 60)}min)`;
+      console.log(`[Revalidate] ${contentType} "/${slug}"${ageInfo} - ${revalidateInfo}`);
     }
 
     return {
@@ -85,17 +84,16 @@ export async function getStaticProps(context: GetStaticPropsContext) {
     if (process.env.NODE_ENV === 'development') {
       console.warn(`[404] Page not found: "/${slug}"`);
     }
-    
+
     // For non-dev, only log actual errors (not 404s from regular navigation)
     if (err instanceof Error && !err.message.includes('Failed to fetch entry')) {
       console.error(err);
     }
-    
+
     return {
       props: { messages },
       notFound: true,
-      // Use longer revalidation for 404 pages to reduce unnecessary rebuilds
-      revalidate: CMS.CONTENT_REVALIDATE_RATE_OLD,
+      revalidate: IS_STATIC_MODE ? false : CMS.CONTENT_REVALIDATE_RATE_OLD,
     };
   }
 }
