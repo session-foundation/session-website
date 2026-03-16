@@ -9,6 +9,7 @@ import { CMS } from '@/constants';
 import METADATA from '@/constants/metadata';
 import { generateRoute } from '@/services/cms';
 import type { IPost } from '@/types/cms';
+import generateRSSFeed from '@/utils/rss';
 
 interface Props {
   posts: IPost[];
@@ -17,6 +18,10 @@ interface Props {
 export const getStaticProps: GetStaticProps = async (_context: GetStaticPropsContext) => {
   const { fetchAllBlogEntries } = await import('@/services/cms');
   const posts = await fetchAllBlogEntries();
+
+  if (process.env.NEXT_PUBLIC_SITE_ENV !== 'development') {
+    generateRSSFeed(posts);
+  }
 
   const revalidate = CMS.CONTENT_REVALIDATE_RATE;
 

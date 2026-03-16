@@ -31,11 +31,19 @@ const client: ContentfulClientApi = createClient({
 });
 
 export async function fetchTagList(): Promise<ITagList> {
+  const cacheKey = 'tag_list';
+  const cached = blogCache.get<ITagList>(cacheKey);
+  if (cached) {
+    return cached;
+  }
+
   const _tags = await client.getTags();
   const tags: ITagList = {};
   _tags.items.forEach((tag) => {
     tags[tag.sys.id] = tag.name;
   });
+
+  blogCache.set(cacheKey, tags);
   return tags;
 }
 
@@ -89,18 +97,19 @@ export async function fetchAllBlogEntries(): Promise<IPost[]> {
   }
 
   const posts: IPost[] = [];
-  
+
   // First fetch to get total count
   const firstBatch = await fetchBlogEntries(CONTENTFUL_PAGE_SIZE, 1);
   posts.push(...firstBatch.entries);
-  
-  // Calculate remaining pages
+
+  // Calculate remaining pages and fetch them all in parallel
   const totalPages = Math.ceil(firstBatch.total / CONTENTFUL_PAGE_SIZE);
-  
-  // Fetch remaining pages if needed
-  for (let page = 2; page <= totalPages; page++) {
-    const { entries } = await fetchBlogEntries(CONTENTFUL_PAGE_SIZE, page);
-    posts.push(...entries);
+  if (totalPages > 1) {
+    const remainingPages = Array.from({ length: totalPages - 1 }, (_, i) => i + 2);
+    const batches = await Promise.all(remainingPages.map((page) => fetchBlogEntries(CONTENTFUL_PAGE_SIZE, page)));
+    for (const { entries } of batches) {
+      posts.push(...entries);
+    }
   }
   
   blogCache.set(cacheKey, posts);
@@ -152,6 +161,12 @@ export async function fetchBlogEntriesByTag(
   tag: string,
   quantity = CONTENTFUL_PAGE_SIZE
 ): Promise<IFetchBlogEntriesReturn> {
+  const cacheKey = `blog_entries_tag_${tag}_${quantity}`;
+  const cached = blogCache.get<IFetchBlogEntriesReturn>(cacheKey);
+  if (cached) {
+    return cached;
+  }
+
   const taglist = await fetchTagList();
   const id = Object.entries(taglist).filter(([_, value]) => {
     return tag === value;
@@ -165,36 +180,42 @@ export async function fetchBlogEntriesByTag(
   });
 
   if (_entries.items.length > 0) {
-    const results = await generateEntries(_entries, 'post');
-    return {
+    const results = await generateEntries(_entries, 'post', taglist);
+    const data = {
       entries: results.entries as Array<IPost>,
       total: results.total,
     };
+    blogCache.set(cacheKey, data);
+    return data;
   }
 
   return Promise.reject(new Error(`Failed to fetch entries for ${tag}`));
 }
 
-export async function fetchEntryPreview(slug: string): Promise<IPage | IPost> {
-  const _client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID!,
-    accessToken: process.env.CONTENTFUL_PREVIEW_TOKEN!,
-    host: 'preview.contentful.com',
-  });
+const previewClient: ContentfulClientApi = createClient({
+  space: process.env.CONTENTFUL_SPACE_ID!,
+  environment: process.env.CONTENTFUL_ENVIRONMENT_ID!,
+  accessToken: process.env.CONTENTFUL_PREVIEW_TOKEN!,
+  host: 'preview.contentful.com',
+});
 
-  const _pages = await _client.getEntries({
-    content_type: 'page',
-    'fields.slug': slug,
-    'fields.preview': true,
-  });
-  const _posts = await _client.getEntries({
-    content_type: 'post',
-    'fields.slug': slug,
-    'fields.preview': true,
-  });
+export async function fetchEntryPreview(slug: string): Promise<IPage | IPost> {
+  const [_pages, _posts] = await Promise.all([
+    previewClient.getEntries({
+      content_type: 'page',
+      'fields.slug': slug,
+      'fields.preview': true,
+    }),
+    previewClient.getEntries({
+      content_type: 'post',
+      'fields.slug': slug,
+      'fields.preview': true,
+    }),
+  ]);
 
   const _entries = [..._pages.items, ..._posts.items];
-  const taglist = await fetchTagList();
+  const hasPost = _entries.some((e) => e.sys.contentType.sys.id === 'post');
+  const taglist = hasPost ? await fetchTagList() : {};
 
   if (_entries.length > 0) {
     const entry = _entries[0];
@@ -227,18 +248,23 @@ export async function fetchEntryBySlug(slug: string): Promise<IPage | IPost> {
     }
   }
 
-  // Not in cache, proceed with API call
-  const _pages = await client.getEntries({
-    content_type: 'page',
-    'fields.slug': slug,
-  });
-  const _posts = await client.getEntries({
-    content_type: 'post',
-    'fields.slug': slug,
-  });
+  // Not in cache, proceed with API call — fetch both types in parallel
+  const [_pages, _posts] = await Promise.all([
+    client.getEntries({
+      content_type: 'page',
+      'fields.slug': slug,
+    }),
+    client.getEntries({
+      content_type: 'post',
+      'fields.slug': slug,
+    }),
+  ]);
 
   const _entries = [..._pages.items, ..._posts.items];
-  const taglist = await fetchTagList();
+
+  // Only fetch tags if there are post entries (pages don't use tags)
+  const hasPost = _entries.some((e) => e.sys.contentType.sys.id === 'post');
+  const taglist = hasPost ? await fetchTagList() : {};
 
   if (_entries.length > 0) {
     const entry = _entries[0];
@@ -314,14 +340,15 @@ function convertTags(rawTags: any, taglist: ITagList): string[] {
 
 async function generateEntries(
   entries: EntryCollection<unknown>,
-  entryType: 'post' | 'faq' | 'page'
+  entryType: 'post' | 'faq' | 'page',
+  taglist?: ITagList
 ): Promise<IFetchEntriesReturn> {
   let _entries: any = [];
   if (entries?.items && entries.items.length > 0) {
     switch (entryType) {
       case 'post': {
-        const taglist = await fetchTagList();
-        _entries = entries.items.map((entry) => convertPost(entry, taglist));
+        const tags = taglist ?? (await fetchTagList());
+        _entries = entries.items.map((entry) => convertPost(entry, tags));
         break;
       }
       case 'faq':
@@ -376,13 +403,22 @@ export async function generateLinkMeta(doc: Document): Promise<Document> {
 }
 
 export async function fetchFAQItems(): Promise<IFetchFAQItemsReturn> {
+  const cacheKey = 'faq_items';
+  const cached = blogCache.get<IFetchFAQItemsReturn>(cacheKey);
+  if (cached) {
+    return cached;
+  }
+
   const _entries = await client.getEntries({
     content_type: 'faq_item', // only fetch faq items
     order: 'fields.id',
   });
 
   const results = await generateEntries(_entries, 'faq');
-  return { entries: results.entries as Array<IFAQItem>, total: results.total };
+  const data = { entries: results.entries as Array<IFAQItem>, total: results.total };
+
+  blogCache.set(cacheKey, data);
+  return data;
 }
 
 function convertFAQ(rawData: any): IFAQItem {
