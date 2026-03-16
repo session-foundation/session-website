@@ -106,8 +106,7 @@ export async function POST(request: NextRequest) {
       paths.push(...localizedPaths('blog'));
 
       if (slug) {
-        // The post itself — posts are English-only, no locale-prefixed variants
-        paths.push(`/${slug}`);
+        paths.push(...localizedPaths(`/blog/${slug}`));
 
         // Tag pages for each tag on this post (only available on publish events)
         if (tagRefs.length > 0) {
