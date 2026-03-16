@@ -1,11 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { revalidateTag } from 'next/cache';
+import { revalidatePath, revalidateTag } from 'next/cache';
+import { type NextRequest, NextResponse } from 'next/server';
 import nextConfig from 'next.config';
 import { CACHE_TAGS, fetchTagList } from '@/services/cms';
-
-// Disable Next.js body parser — Contentful sends Content-Type: application/vnd.contentful.management.v1+json
-// which Next.js won't auto-parse. We read and parse the raw body manually.
-export const config = { api: { bodyParser: false } };
 
 const locales: string[] = nextConfig.i18n.locales;
 const defaultLocale: string = nextConfig.i18n.defaultLocale;
@@ -35,23 +31,6 @@ function localizedPaths(slug: string): string[] {
   );
 }
 
-function readRawBody(req: NextApiRequest): Promise<unknown> {
-  return new Promise((resolve, reject) => {
-    let data = '';
-    req.on('data', (chunk: Buffer) => {
-      data += chunk.toString();
-    });
-    req.on('end', () => {
-      try {
-        resolve(JSON.parse(data));
-      } catch {
-        reject(new Error('Invalid JSON body'));
-      }
-    });
-    req.on('error', reject);
-  });
-}
-
 /**
  * Contentful webhook handler — triggers on-demand ISR revalidation.
  *
@@ -70,29 +49,33 @@ function readRawBody(req: NextApiRequest): Promise<unknown> {
  *   - page       → revalidates the page slug (all locales, if slug known)
  *   - faq_item   → revalidates /faq (all locales)
  */
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Method not allowed' });
-  }
-
+export async function POST(request: NextRequest) {
   const secret = process.env.WEBHOOK_SECRET;
   if (!secret) {
-    return res.status(503).json({ message: 'Webhook revalidation is not configured' });
+    return NextResponse.json({ message: 'Webhook revalidation is not configured' }, { status: 503 });
   }
 
-  if (req.query.secret !== secret) {
-    return res.status(401).json({ message: 'Invalid token' });
+  const { searchParams } = new URL(request.url);
+  if (searchParams.get('secret') !== secret) {
+    return NextResponse.json({ message: 'Invalid token' }, { status: 401 });
   }
 
   // Only act on publish / unpublish / delete — ignore save, auto_save, create, archive, etc.
-  const topic = req.headers['x-contentful-topic'] as string | undefined;
+  const topic = request.headers.get('x-contentful-topic');
   if (!topic || !REVALIDATE_TOPICS.has(topic)) {
-    return res.status(200).json({ revalidated: false, reason: 'Ignored topic', topic });
+    return NextResponse.json({ revalidated: false, reason: 'Ignored topic', topic });
+  }
+
+  let payload: Record<string, any>;
+  try {
+    // App Router automatically handles any Content-Type including
+    // application/vnd.contentful.management.v1+json
+    payload = await request.json();
+  } catch {
+    return NextResponse.json({ message: 'Invalid JSON body' }, { status: 400 });
   }
 
   try {
-    const payload = (await readRawBody(req)) as Record<string, any>;
-
     // sys.contentType is present on all events, including delete (sys.type === 'DeletedEntry')
     const contentType: string | undefined = payload?.sys?.contentType?.sys?.id;
 
@@ -103,8 +86,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // metadata.tags (tag references) is only present on publish events
     const tagRefs: Array<{ sys: { id: string } }> = payload?.metadata?.tags ?? [];
 
-    // Invalidate the Next.js data cache for the affected content type.
-    // revalidateTag() busts all unstable_cache entries carrying that tag so
+    // Invalidate the Next.js data cache for the affected content type so that
     // getStaticProps fetches fresh data from Contentful when pages regenerate.
     if (contentType === 'post') {
       revalidateTag(CACHE_TAGS.POSTS);
@@ -112,6 +94,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       revalidateTag(CACHE_TAGS.PAGES);
     } else if (contentType === 'faq_item') {
       revalidateTag(CACHE_TAGS.FAQ);
+    } else {
+      return NextResponse.json({ revalidated: false, reason: 'Unhandled content type', contentType });
     }
 
     // Build the list of paths to revalidate
@@ -140,36 +124,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       if (slug) {
         paths.push(...localizedPaths(slug));
       }
-      // For page unpublish/delete without a slug, the data cache tag has already been busted
-      // above. Next requests will fetch fresh data; we can't target a specific path without the slug.
+      // For page unpublish/delete without a slug the cache tag has already been busted above;
+      // we can't target a specific path without the slug.
     } else if (contentType === 'faq_item') {
       paths.push(...localizedPaths('faq'));
-    } else {
-      // Unknown content type — acknowledge the webhook but revalidate nothing
-      return res.status(200).json({ revalidated: false, reason: 'Unhandled content type', contentType });
     }
 
-    // Revalidate all paths concurrently; collect any failures without aborting
-    const results = await Promise.allSettled(paths.map((path) => res.revalidate(path)));
-
-    const failed = results
-      .map((result, i) => (result.status === 'rejected' ? paths[i] : null))
-      .filter((p): p is string => p !== null);
-
-    if (failed.length > 0) {
-      console.error('[Revalidate] Failed to revalidate paths:', failed);
+    // Revalidate all paths. revalidatePath() works for both Pages Router and App Router pages.
+    for (const path of paths) {
+      revalidatePath(path);
     }
 
-    return res.status(200).json({
-      revalidated: true,
-      topic,
-      contentType,
-      slug,
-      paths,
-      ...(failed.length > 0 && { failed }),
-    });
+    return NextResponse.json({ revalidated: true, topic, contentType, slug, paths });
   } catch (err) {
     console.error('[Revalidate] Unexpected error:', err);
-    return res.status(500).json({ message: 'Revalidation failed', error: String(err) });
+    return NextResponse.json({ message: 'Revalidation failed', error: String(err) }, { status: 500 });
   }
 }
