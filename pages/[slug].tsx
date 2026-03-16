@@ -1,34 +1,24 @@
 import type { GetStaticPaths, GetStaticPropsContext } from 'next';
 import type { ReactElement } from 'react';
-import BlogPost from '@/components/BlogPost';
 import RichPage from '@/components/RichPage';
-import { CMS, getRevalidationTime, IS_STATIC_MODE } from '@/constants';
-import { fetchBlogEntries, fetchEntryBySlug, generateLinkMeta } from '@/services/cms';
+import { CMS, IS_STATIC_MODE } from '@/constants';
+import { fetchEntryBySlug, generateLinkMeta } from '@/services/cms';
 import { hasRedirection } from '@/services/redirect';
-import { type IPage, type IPost, isPost } from '@/types/cms';
+import { type IPage, isPost } from '@/types/cms';
 
 interface Props {
-  content: IPage | IPost;
-  otherPosts?: IPost[];
+  content: IPage;
   messages: any;
 }
 
 export default function Page(props: Props): ReactElement {
-  const { content } = props;
-  if (isPost(content)) {
-    return <BlogPost post={content} otherPosts={props.otherPosts} />;
-  } else {
-    return <RichPage page={content} />;
-  }
+  return <RichPage page={props.content} />;
 }
 
 export async function getStaticProps(context: GetStaticPropsContext) {
   const locale = context.locale || 'en';
 
-  console.log(
-    `Building: Page%c${context.params?.slug ? ` /${context.params?.slug}` : ''}`,
-    'color: purple;'
-  );
+  console.log(`[Build] Page: /${context.params?.slug ?? ''}`);
   const slug = String(context.params?.slug);
 
   const messages = (await import(`../locales/${locale}.json`)).default;
@@ -43,40 +33,23 @@ export async function getStaticProps(context: GetStaticPropsContext) {
   }
 
   try {
-    const content: IPage | IPost = await fetchEntryBySlug(slug);
+    const content = await fetchEntryBySlug(slug);
+
+    // Posts have moved to /blog/[slug] — redirect permanently so existing links are preserved
+    if (isPost(content)) {
+      return {
+        redirect: { destination: `/blog/${slug}`, permanent: true },
+      };
+    }
 
     // embedded links in content body need metadata for preview
     content.body = await generateLinkMeta(content.body);
 
-    const props: Props = { content, messages };
-
-    if (isPost(content)) {
-      // we want 6 posts excluding the current one if it's found
-      const { entries: posts } = await fetchBlogEntries(7);
-      props.otherPosts = posts
-        .filter((post) => {
-          return content.slug !== post.slug;
-        })
-        .slice(0, 6);
-    }
-
-    // Calculate revalidation time based on content age (ignored in static mode)
-    const revalidate = IS_STATIC_MODE
-      ? false
-      : isPost(content)
-        ? getRevalidationTime(content.publishedDateISO)
-        : CMS.CONTENT_REVALIDATE_RATE;
-
-    // Log revalidation time in dev builds
-    if (process.env.NODE_ENV === 'development') {
-      const contentType = isPost(content) ? 'Post' : 'Page';
-      const ageInfo = isPost(content) ? ` (published: ${content.publishedDate})` : '';
-      const revalidateInfo = IS_STATIC_MODE ? 'static (webhook-only)' : `${revalidate}s (${Math.round((revalidate as number) / 60)}min)`;
-      console.log(`[Revalidate] ${contentType} "/${slug}"${ageInfo} - ${revalidateInfo}`);
-    }
+    const revalidate = IS_STATIC_MODE ? false : CMS.CONTENT_REVALIDATE_RATE;
+    console.log(`[Build] Done: /${slug} (page, revalidate=${IS_STATIC_MODE ? 'static/webhook' : `${revalidate}s`})`);
 
     return {
-      props,
+      props: { content, messages },
       revalidate,
     };
   } catch (err) {
@@ -99,31 +72,17 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 }
 
 export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
-  const { fetchPages, fetchAllBlogEntries } = await import('@/services/cms');
+  const { fetchPages } = await import('@/services/cms');
   const { entries: pages } = await fetchPages();
-  const posts = await fetchAllBlogEntries();
 
-  // Generate paths for pages (all locales) and posts (en only)
-  const pagePaths = pages.flatMap((page) =>
+  // Only pre-build CMS pages. Post slugs are handled by pages/blog/[slug].tsx.
+  // Any /{post-slug} hit falls through to getStaticProps which issues a permanent redirect.
+  const paths = pages.flatMap((page) =>
     (locales || ['en']).map((locale) => ({
-      params: {
-        slug: page.slug,
-      },
+      params: { slug: page.slug },
       locale,
     }))
   );
 
-  const postPaths = posts.map((post) => ({
-    params: {
-      slug: post.slug,
-    },
-    locale: 'en',
-  }));
-
-  const paths = [...pagePaths, ...postPaths];
-
-  return {
-    paths,
-    fallback: 'blocking',
-  };
+  return { paths, fallback: 'blocking' };
 };

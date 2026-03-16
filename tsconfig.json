@@ -2,10 +2,16 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": [
+        "./*"
+      ]
     },
     "target": "ESNext",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true /* allows javaScript files to be compiled */,
     "skipLibCheck": true /* skip type checking of all declaration files */,
     "strict": true /* enables all strict type checking options */,
@@ -19,10 +25,24 @@
     "jsx": "preserve" /* Controls how JSX constructs are emitted in JavaScript files. This only affects output of JS files that started in .tsx files. */,
     // "noUnusedLocals": true, /* reports errors on unused locals (suggested for clean code writing) */
     // "noUnusedParameters": true, /* report errors on unused parameters (again, suggested for clean code writing) */
-    "incremental": true
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "additional.d.ts",
     "global.d.ts",
-    "next-env.d.ts", "additional.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", ".next", "out"]
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next",
+    "out"
+  ]
 }

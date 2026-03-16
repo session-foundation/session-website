@@ -16,8 +16,10 @@ interface Props {
 }
 
 export const getStaticProps: GetStaticProps = async (_context: GetStaticPropsContext) => {
+  console.log('[Build] Page: /blog');
   const { fetchAllBlogEntries } = await import('@/services/cms');
   const posts = await fetchAllBlogEntries();
+  console.log(`[Build] Done: /blog (${posts.length} posts)`);
 
   if (process.env.NEXT_PUBLIC_SITE_ENV !== 'development') {
     generateRSSFeed(posts);

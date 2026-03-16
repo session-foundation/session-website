@@ -313,10 +313,6 @@ const nextConfig = {
         source: '/windows',
         destination: '/api/download/windows',
       },
-      {
-        source: '/blog/:slug',
-        destination: '/:slug',
-      },
     ];
   },
 

@@ -42,7 +42,7 @@ export default function Tag(props: Props): ReactElement {
 }
 
 export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext) => {
-  console.log(`Building: Results for tag "%c${context.params?.tag}"`, 'color: purple;');
+  console.log(`[Build] Page: /tag/${context.params?.tag}`);
   const tag = String(context.params?.tag);
 
   const revalidate = IS_STATIC_MODE ? false : CMS.CONTENT_REVALIDATE_RATE;

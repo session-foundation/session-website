@@ -46,7 +46,13 @@ export const CACHE_TAGS = {
   FAQ: 'contentful-faq',
 } as const;
 
-const cacheOptions = { revalidate: IS_STATIC_MODE ? false : CMS.CONTENT_REVALIDATE_RATE } as const;
+// In static mode, use a 5-second TTL rather than caching indefinitely.
+// revalidateTag() requires App Router context and cannot be called from a Pages Router
+// API route, so we can't explicitly bust the cache on demand. A 5-second TTL ensures
+// data is always fresh when res.revalidate() triggers ISR regeneration — any regen
+// happens well after the cache has expired, so getStaticProps fetches live Contentful data.
+// The 5-second window still deduplicates concurrent calls during parallel page builds.
+const cacheOptions = { revalidate: IS_STATIC_MODE ? 5 : CMS.CONTENT_REVALIDATE_RATE } as const;
 
 // ---------------------------------------------------------------------------
 // Internal cached implementations
