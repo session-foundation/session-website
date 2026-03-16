@@ -42,6 +42,7 @@ const LucideIconWrapper = styled.div<{
   color: ${(props) => props.$iconColor};
   align-content: center;
   ${(props) => props.$mirrorIt && 'display: inline-block;  transform: scaleX(-1);'}
+  user-select: none;
 `;
 
 export type LucideIconProps = WithLucideUnicode & {
