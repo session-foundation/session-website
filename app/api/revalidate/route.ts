@@ -106,7 +106,7 @@ export async function POST(request: NextRequest) {
       paths.push(...localizedPaths('blog'));
 
       if (slug) {
-        paths.push(...localizedPaths(`/blog/${slug}`));
+        paths.push(...localizedPaths(`blog/${slug}`));
 
         // Tag pages for each tag on this post (only available on publish events)
         if (tagRefs.length > 0) {
