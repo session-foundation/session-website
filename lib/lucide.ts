@@ -1,0 +1,174 @@
+export enum LUCIDE_ICONS_UNICODE {
+  ARROW_DOWN_TO_LINE = '',
+  ARROW_UP = '',
+  AT_SIGN = '',
+  BAN = '',
+  BUG = '',
+  CHECK = '',
+  CHECK_CHECK = '',
+  CHEVRON_DOWN = '',
+  CHEVRON_LEFT = '',
+  CHEVRON_RIGHT = '',
+  CHEVRON_UP = '',
+  CIRCLE_ALERT = '',
+  CIRCLE_CHECK = '',
+  CIRCLE_ELLIPSES = '',
+  CIRCLE_HELP = '',
+  CIRCLE_PLUS = '',
+  CIRCLE_X = '',
+  CLAPERBOARD = '',
+  COPY = '',
+  EXTERNAL_LINK_ICON = '',
+  EYE = '',
+  EYE_OFF = '',
+  FILE = '',
+  FILE_PLUS_2 = '',
+  GLOBE = '',
+  HEART = '',
+  IMAGE = '',
+  INFO = '',
+  LINK = '',
+  LOCK_KEYHOLE = '',
+  LOG_OUT = '',
+  MAIL = '',
+  MAIL_OPEN = '',
+  MAXIMIZE = '',
+  MESSAGE_SQUARE = '',
+  MESSAGE_SQUARE_WARNING = '',
+  MIC = '',
+  MOON = '',
+  LAPTOP = '',
+  OCTAGON_X = '',
+  PAINTBRUSH_VERTICAL = '',
+  PAUSE = '',
+  PENCIL = '',
+  PHONE = '',
+  PHONE_CALL = '',
+  PHONE_INCOMING = '',
+  PHONE_MISSED = '',
+  PHONE_OFF = '',
+  PHONE_OUTGOING = '',
+  PIN = '',
+  PIN_OFF = '',
+  PLAY = '',
+  PLUS = '',
+  QR_CODE = '',
+  RECTANGLE_ELLIPSES = '',
+  REFRESH_CW = '',
+  REPEAT_2 = '',
+  REPLY = '',
+  SEARCH = '',
+  SETTINGS = '',
+  SMARTPHONE = '',
+  SMILE_PLUS = '',
+  SQUARE = '',
+  SQUARE_CODE = '',
+  SQUARE_PLAY = '',
+  SUN_MEDIUM = '',
+  TIMER = '',
+  TRASH2 = '',
+  TRIANGLE_ALERT = '',
+  USER_ROUND = '',
+  USER_ROUND_CHECK = '',
+  USER_ROUND_PEN = '',
+  USER_ROUND_PLUS = '',
+  USER_ROUND_X = '',
+  USERS_ROUND = '',
+  VOLUME_2 = '',
+  VOLUME_OFF = '',
+  X = '',
+}
+
+export type WithLucideUnicode = { unicode: LUCIDE_ICONS_UNICODE };
+export type WithOptLucideUnicode = Partial<WithLucideUnicode>;
+
+export function isIconToMirrorRtl(unicode: LUCIDE_ICONS_UNICODE) {
+  switch (unicode) {
+    case LUCIDE_ICONS_UNICODE.CHEVRON_LEFT:
+    case LUCIDE_ICONS_UNICODE.CHEVRON_RIGHT:
+    case LUCIDE_ICONS_UNICODE.VOLUME_2:
+    case LUCIDE_ICONS_UNICODE.VOLUME_OFF:
+    case LUCIDE_ICONS_UNICODE.REPLY:
+    case LUCIDE_ICONS_UNICODE.PENCIL:
+    case LUCIDE_ICONS_UNICODE.MESSAGE_SQUARE_WARNING:
+    case LUCIDE_ICONS_UNICODE.MESSAGE_SQUARE:
+    case LUCIDE_ICONS_UNICODE.EXTERNAL_LINK_ICON:
+      return true;
+    case LUCIDE_ICONS_UNICODE.ARROW_DOWN_TO_LINE:
+    case LUCIDE_ICONS_UNICODE.ARROW_UP:
+    case LUCIDE_ICONS_UNICODE.AT_SIGN:
+    case LUCIDE_ICONS_UNICODE.BAN:
+    case LUCIDE_ICONS_UNICODE.BUG:
+    case LUCIDE_ICONS_UNICODE.CHECK:
+    case LUCIDE_ICONS_UNICODE.CHECK_CHECK:
+    case LUCIDE_ICONS_UNICODE.CHEVRON_DOWN:
+    case LUCIDE_ICONS_UNICODE.CHEVRON_UP:
+    case LUCIDE_ICONS_UNICODE.CIRCLE_CHECK:
+    case LUCIDE_ICONS_UNICODE.CIRCLE_ELLIPSES:
+    case LUCIDE_ICONS_UNICODE.CIRCLE_HELP:
+    case LUCIDE_ICONS_UNICODE.CIRCLE_PLUS:
+    case LUCIDE_ICONS_UNICODE.CIRCLE_X:
+    case LUCIDE_ICONS_UNICODE.CLAPERBOARD:
+    case LUCIDE_ICONS_UNICODE.COPY:
+    case LUCIDE_ICONS_UNICODE.EYE:
+    case LUCIDE_ICONS_UNICODE.EYE_OFF:
+    case LUCIDE_ICONS_UNICODE.FILE:
+    case LUCIDE_ICONS_UNICODE.GLOBE:
+    case LUCIDE_ICONS_UNICODE.HEART:
+    case LUCIDE_ICONS_UNICODE.IMAGE:
+    case LUCIDE_ICONS_UNICODE.INFO:
+    case LUCIDE_ICONS_UNICODE.LINK:
+    case LUCIDE_ICONS_UNICODE.LOCK_KEYHOLE:
+    case LUCIDE_ICONS_UNICODE.LOG_OUT:
+    case LUCIDE_ICONS_UNICODE.MAIL:
+    case LUCIDE_ICONS_UNICODE.MAIL_OPEN:
+    case LUCIDE_ICONS_UNICODE.MAXIMIZE:
+    case LUCIDE_ICONS_UNICODE.MIC:
+    case LUCIDE_ICONS_UNICODE.MOON:
+    case LUCIDE_ICONS_UNICODE.OCTAGON_X:
+    case LUCIDE_ICONS_UNICODE.PAINTBRUSH_VERTICAL:
+    case LUCIDE_ICONS_UNICODE.PAUSE:
+    case LUCIDE_ICONS_UNICODE.PHONE:
+    case LUCIDE_ICONS_UNICODE.PHONE_CALL:
+    case LUCIDE_ICONS_UNICODE.PHONE_INCOMING:
+    case LUCIDE_ICONS_UNICODE.PHONE_MISSED:
+    case LUCIDE_ICONS_UNICODE.PHONE_OFF:
+    case LUCIDE_ICONS_UNICODE.PHONE_OUTGOING:
+    case LUCIDE_ICONS_UNICODE.PIN:
+    case LUCIDE_ICONS_UNICODE.PIN_OFF:
+    case LUCIDE_ICONS_UNICODE.PLAY:
+    case LUCIDE_ICONS_UNICODE.PLUS:
+    case LUCIDE_ICONS_UNICODE.QR_CODE:
+    case LUCIDE_ICONS_UNICODE.RECTANGLE_ELLIPSES:
+    case LUCIDE_ICONS_UNICODE.REFRESH_CW:
+    case LUCIDE_ICONS_UNICODE.REPEAT_2:
+    case LUCIDE_ICONS_UNICODE.SEARCH:
+    case LUCIDE_ICONS_UNICODE.SETTINGS:
+    case LUCIDE_ICONS_UNICODE.SMARTPHONE:
+    case LUCIDE_ICONS_UNICODE.SMILE_PLUS:
+    case LUCIDE_ICONS_UNICODE.SQUARE:
+    case LUCIDE_ICONS_UNICODE.SQUARE_CODE:
+    case LUCIDE_ICONS_UNICODE.SQUARE_PLAY:
+    case LUCIDE_ICONS_UNICODE.SUN_MEDIUM:
+    case LUCIDE_ICONS_UNICODE.TIMER:
+    case LUCIDE_ICONS_UNICODE.TRASH2:
+    case LUCIDE_ICONS_UNICODE.TRIANGLE_ALERT:
+    case LUCIDE_ICONS_UNICODE.USER_ROUND:
+    case LUCIDE_ICONS_UNICODE.USER_ROUND_CHECK:
+    case LUCIDE_ICONS_UNICODE.USER_ROUND_PEN:
+    case LUCIDE_ICONS_UNICODE.USER_ROUND_PLUS:
+    case LUCIDE_ICONS_UNICODE.USER_ROUND_X:
+    case LUCIDE_ICONS_UNICODE.USERS_ROUND:
+    case LUCIDE_ICONS_UNICODE.X:
+    case LUCIDE_ICONS_UNICODE.CIRCLE_ALERT:
+      return false;
+    default:
+      throw new Error('isIconToMirrorRtl: unknown case'); // just to make the compiler happy
+  }
+}
+
+const lucideIconValues: Set<string> = new Set(Object.values(LUCIDE_ICONS_UNICODE));
+
+export function isLucideIcon(unicode: string): unicode is LUCIDE_ICONS_UNICODE {
+  return lucideIconValues.has(unicode);
+}

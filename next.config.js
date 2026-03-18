@@ -85,6 +85,9 @@ const nextConfig = {
     defaultLocale: isTranslateMode ? 'ach' : 'en',
     localeDetection: false,
   },
+  compiler: {
+    styledComponents: true,
+  },
   trailingSlash: false,
   reactStrictMode: true,
   compress: true,

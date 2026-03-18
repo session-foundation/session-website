@@ -68,9 +68,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
     // Log revalidation time in dev builds
     if (process.env.NODE_ENV === 'development') {
       const contentType = isPost(content) ? 'Post' : 'Page';
-      const ageInfo = isPost(content) 
-        ? ` (published: ${content.publishedDate})` 
-        : '';
+      const ageInfo = isPost(content) ? ` (published: ${content.publishedDate})` : '';
       console.log(
         `[Revalidate] ${contentType} "/${slug}"${ageInfo} - ${revalidate}s (${Math.round(revalidate / 60)}min)`
       );
@@ -85,12 +83,12 @@ export async function getStaticProps(context: GetStaticPropsContext) {
     if (process.env.NODE_ENV === 'development') {
       console.warn(`[404] Page not found: "/${slug}"`);
     }
-    
+
     // For non-dev, only log actual errors (not 404s from regular navigation)
     if (err instanceof Error && !err.message.includes('Failed to fetch entry')) {
       console.error(err);
     }
-    
+
     return {
       props: { messages },
       notFound: true,

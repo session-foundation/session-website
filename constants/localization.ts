@@ -1,6 +1,10 @@
 export enum NON_LOCALIZED_STRING {
   appName = 'Session',
   appNamePossessive = "Session's",
+  appNamePro = 'Session Pro',
+  wordBeta = 'Beta',
+  wordPro = 'Pro',
+  wordsProBeta = 'Pro Beta',
   appToken = 'Session Token',
   foundationName = 'Session Technology Foundation',
   swissSupervisory = 'Federal Supervisory Authority for Foundations (ESA)',
@@ -12,7 +16,21 @@ export enum NON_LOCALIZED_STRING {
   btcSymbol = 'BTC',
   donationProviderName = 'Donorbox',
   donateAppealName = 'Cofounder of Session - Chris McCabe',
-  donateSignerName = 'Chris McCabe'
+  donateSignerName = 'Chris McCabe',
+  wordDesktop = 'Desktop',
+  platformAndroid = 'Android',
+  platformIos = 'iOS',
+  platformStoreGoogle = 'Google Play Store',
+  platformStoreGoogleShort = 'Google Play',
+  wordFDroid = 'F-Droid',
+  wordAPK = 'APK',
+  wordIPAs = 'IPAs',
+  platformStoreApple = 'Apple App Store',
+  platformStoreAppleShort = 'App Store',
+  standardUserFileUploadLimit = '10MB',
+  standardUserMaxGroupSize = '100',
+  proUserMaxGroupSize = '300',
+  appNameRouterPossessive = "Session Router's",
 }
 
 export const appUserNumber = 1_500_000;

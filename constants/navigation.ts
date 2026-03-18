@@ -11,14 +11,18 @@ export type NavItemKey = keyof Omit<Messages['navigation'], 'aria'>;
 type INavList = Record<NavItemKey | string, INavItem>;
 
 const NAV_ITEMS: INavList = {
-  blog: {
-    href: '/blog',
+  pro: {
+    href: '/pro',
     target: '_self',
   },
   resources: {
     href: '/resources',
     target: '_self',
     items: {
+      blog: {
+        href: '/blog',
+        target: '_self',
+      },
       github: {
         href: 'https://github.com/session-foundation',
         target: '_blank',
