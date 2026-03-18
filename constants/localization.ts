@@ -11,4 +11,10 @@ export enum NON_LOCALIZED_STRING {
   usdtSymbol = 'USDT',
   btcSymbol = 'BTC',
   donationProviderName = 'Donorbox',
+  donateAppealName = 'Cofounder of Session - Chris McCabe',
+  donateSignerName = 'Chris McCabe'
 }
+
+export const appUserNumber = 1_500_000;
+
+export const localeArgs = { ...NON_LOCALIZED_STRING }

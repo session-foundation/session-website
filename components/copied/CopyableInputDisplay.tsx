@@ -1,29 +1,66 @@
+import { cva, type VariantProps } from 'class-variance-authority';
 import cn from 'classnames';
-import { forwardRef } from 'react';
+import { type ReactNode } from 'react';
 import { CopyToClipboardButton, type CopyToClipboardButtonProps } from './CopyToClipboardButton';
-import { type InputProps, InputWithEndAdornment } from './input';
 
-export type CopyableInputDisplayProps = InputProps & {
-  copyToClipboardProps: CopyToClipboardButtonProps;
-};
-
-const CopyableInputDisplay = forwardRef<HTMLInputElement, CopyableInputDisplayProps>(
-  ({ className, copyToClipboardProps, ...props }, ref) => {
-    return (
-      <InputWithEndAdornment
-        {...props}
-        ref={ref}
-        className={cn(className, 'pe-9')}
-        endAdornment={
-          <div className="flex items-center pe-2">
-            <CopyToClipboardButton {...copyToClipboardProps} />
-          </div>
-        }
-      />
-    );
+const displayVariants = cva(
+  'flex w-full rounded-md border py-2 pl-3 pr-10 font-normal text-sm break-all',
+  {
+    variants: {
+      variant: {
+        dark: 'border-white bg-black text-white',
+        light: 'border-black bg-background text-black',
+      },
+    },
+    defaultVariants: {
+      variant: 'light',
+    },
   }
 );
 
+export type DisplayVariantProps = VariantProps<typeof displayVariants>;
+
+type DivWithEndAdornmentProps = DisplayVariantProps & {
+  className?: string;
+  children?: ReactNode;
+  endAdornment?: ReactNode;
+};
+
+function DivWithEndAdornment({ className, variant, children, endAdornment }: DivWithEndAdornmentProps) {
+  return (
+    <div className="relative w-full">
+      <div className={cn(displayVariants({ variant, className }))}>
+        {children}
+      </div>
+      <div className="absolute top-0 right-0 flex h-full items-center">
+        {endAdornment}
+      </div>
+    </div>
+  );
+}
+
+export type CopyableInputDisplayProps = DisplayVariantProps & {
+  value?: string;
+  className?: string;
+  copyToClipboardProps: CopyToClipboardButtonProps;
+};
+
+function CopyableInputDisplay({ className, variant, value, copyToClipboardProps }: CopyableInputDisplayProps) {
+  return (
+    <DivWithEndAdornment
+      variant={variant}
+      className={className}
+      endAdornment={
+        <div className="flex items-center pe-2">
+          <CopyToClipboardButton {...copyToClipboardProps} />
+        </div>
+      }
+    >
+      {value}
+    </DivWithEndAdornment>
+  );
+}
+
 CopyableInputDisplay.displayName = 'CopyableInputDisplay';
 
-export { CopyableInputDisplay };
+export { CopyableInputDisplay, DivWithEndAdornment };

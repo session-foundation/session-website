@@ -5,13 +5,13 @@ import Image from 'next/legacy/image';
 import Link from 'next/link';
 import Script from 'next/script';
 import { useTranslations } from 'next-intl';
-import { forwardRef, type HTMLAttributes, type ReactElement, type ReactNode } from 'react';
+import { forwardRef, useEffect, useRef, useState, type HTMLAttributes, type ReactElement, type ReactNode } from 'react';
 import Container from '@/components/Container';
 import { SanityCryptoAddressDisplay } from '@/components/copied/CryptoAddressDisplay';
 import Button from '@/components/ui/Button';
 import Headline from '@/components/ui/Headline';
 import Layout from '@/components/ui/Layout';
-import { NON_LOCALIZED_STRING } from '@/constants/localization';
+import { appUserNumber, localeArgs, NON_LOCALIZED_STRING } from '@/constants/localization';
 import METADATA from '@/constants/metadata';
 
 function DonateImage({ src, className }: { src: string; className?: string }) {
@@ -55,34 +55,73 @@ const sectionVariants = {
 function variantFromNumber(n: number): SectionVariant {
   return (n - 1) % 3;
 }
+const DONORBOX_SCRIPT_URL = 'https://donorbox.org/widgets.js';
+const DONORBOX_SCRIPT_ID = 'donorbox-widget-script';
+const DONORBOX_CAMPAIGN = 'session-technology-foundation-donations';
 
-function DonorBox() {
+export function DonorBox({ showDonateCrypto }: { showDonateCrypto?: boolean }) {
+  const t = useTranslations('donate');
+  useEffect(() => {
+    // Check if already loaded by id, src, or registered custom element
+    const alreadyLoaded =
+      document.getElementById(DONORBOX_SCRIPT_ID) ||
+      document.querySelector(`script[src="${DONORBOX_SCRIPT_URL}"]`) ||
+      customElements.get('dbox-widget');
+
+    if (alreadyLoaded) return;
+
+    const script = document.createElement('script');
+    script.src = DONORBOX_SCRIPT_URL;
+    script.id = DONORBOX_SCRIPT_ID;
+    script.type = 'module';
+    script.async = true;
+    document.head.appendChild(script);
+
+    return () => {
+      // Only remove if this instance added it
+      const el = document.getElementById(DONORBOX_SCRIPT_ID);
+      if (el) document.head.removeChild(el);
+    };
+  }, []);
+
   return (
-    <iframe
-      allow="payment"
-      // @ts-expect-error -- Custom required donorbox property
-      allowpaymentrequest="allowpaymentrequest"
-      frameBorder="0"
-      name="donorbox"
-      scrolling="no"
-      seamless
-      src="https://donorbox.org/embed/session-technology-foundation-donations"
-      className="mx-auto sm:min-w-[350px] md:min-w-[420px]"
-      width="max-content"
-      height="max-content"
-    />
+    <div
+      className="sm:min-w-[350px] md:min-w-[420px]"
+    >
+      <div
+        dangerouslySetInnerHTML={{
+          __html: `<dbox-widget 
+          campaign="${DONORBOX_CAMPAIGN}" 
+          type="donation_form"
+          interval="1 T" 
+          enable-auto-scroll="true">
+        </dbox-widget>`
+        }}
+      />
+      {showDonateCrypto ? <Link href="#crypto">
+        <Button
+          size="medium"
+          shape="semiround"
+          classes="text-xl w-full mt-8 mb-2 py-3"
+        >
+          {t('buttonCrypto')}
+        </Button>
+      </Link> : null}
+    </div>
   );
+
 }
 
 interface SectionProps extends HTMLAttributes<HTMLDivElement> {
   imageSrc?: string;
   hideHeadline?: boolean;
   paragraphClassName?: string;
+  containerClassName?: string;
   section: '1' | '2' | '3' | '4' | '5';
 }
 
 const Section = forwardRef<HTMLDivElement, SectionProps>(
-  ({ imageSrc, section, hideHeadline, children, paragraphClassName, className, ...props }, ref) => {
+  ({ imageSrc, section, hideHeadline, children, paragraphClassName, containerClassName, className, ...props }, ref) => {
     const t = useTranslations('donate');
 
     const variant = variantFromNumber(Number.parseInt(section));
@@ -117,7 +156,8 @@ const Section = forwardRef<HTMLDivElement, SectionProps>(
             'lg:items-start lg:mt-16 lg:pb-16',
             'xl:mt-16',
             '2xl:mt-0 2xl:justify-start',
-            '3xl:-mt-8  3xl:pb-24'
+            '3xl:-mt-8 3xl:pb-24',
+            containerClassName
           )}
         >
           <div
@@ -171,75 +211,124 @@ function HeroContainer({ children, className }: { children: ReactNode; className
   );
 }
 
+function FloatingButtons() {
+  const [hideFloatingButtons, setHideFloatingButtons] = useState(false)
+  const [pastCrypto, setPastCrypto] = useState(false)
+  const t = useTranslations('donate');
+
+  useEffect(() => {
+    const cryptoSection = document.getElementById('crypto');
+    if (!cryptoSection) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting || entry.boundingClientRect.top < 0) {
+          setPastCrypto(true);
+        } else {
+          setPastCrypto(false);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(cryptoSection);
+    return () => observer.disconnect();
+  }, []);
+
+  if (hideFloatingButtons || pastCrypto) return null;
+  return !hideFloatingButtons ? <div className='fixed w-screen px-6 py-6 z-[9999999] bg-white md:hidden grid grid-cols-1 sm:grid-cols-2 gap-4'
+    style={{
+      boxShadow: '0 -1px 15.3px 0 rgba(0, 0, 0, 0.14)',
+      top: '100dvh',
+      transform: 'translateY(-100%)',
+    }}>
+    <Link href="#card" className='w-full'>
+      <Button
+        size="medium"
+        shape="semiround"
+        classes="w-full py-4 px-0 no-wrap whitespace-nowrap"
+      >
+        {t('buttonCard')}
+      </Button>
+    </Link>
+    <Link href="#crypto" className='w-full'>
+      <Button
+        size="medium"
+        shape="semiround"
+        classes="w-full py-4 px-0 no-wrap whitespace-nowrap"
+      >
+        {t('buttonCrypto')}
+      </Button>
+    </Link>
+    <Button classes='absolute -top-1 -right-1 px-0 py-0 h-3 w-3' size="medium" shape="round" bgColor='none' textColor='black' onClick={() => setHideFloatingButtons(true)}>x</Button>
+  </div> : null
+}
+
 export default function Donate(): ReactElement {
   const t = useTranslations('donate');
 
   return (
-    <Layout localeKey="donate" metadata={METADATA.DOWNLOAD_PAGE}>
+    <Layout localeKey="donate" metadata={METADATA.DOWNLOAD_PAGE} showBanner={false} hideCommunityNotice={true}>
       <div className="wrap flex w-screen flex-row flex-wrap pb-10 md:pb-28">
         <HeroContainer className="md:mb-4 lg:mt-16 2xl:mx-0 2xl:mt-16 2xl:ml-auto 2xl:max-w-5xl 2xl:pb-0 2xl:pl-[180px]">
-          <DonateImage src="/assets/images/donate-hero.png" className="rounded-xl" />
-          <h2 className="pb-5 font-semibold text-5xl xl:text-6xl">
-            {t('heading', { appName: NON_LOCALIZED_STRING.appName })}
+          <div className="my-8 w-full md:my-10">
+            <Image
+              priority={true}
+              className="rounded-xl"
+              src="/assets/images/chris.jpg"
+              alt=""
+              width={4032}
+              height={2268}
+              quality={100}
+              layout="responsive"
+              sizes="(max-width: 4032px) 100vw, 500px"
+            />
+          </div>
+          <h2 className="pb-5 font-semibold text-4xl xl:text-5xl">
+            {t('appealheading', localeArgs)}
           </h2>
-          <Link href="#app">
-            <Button
-              size="large"
-              fontWeight="semibold"
-              shape="semiround"
-              classes="text-2xl my-4 md:my-6 py-4 px-6"
-            >
-              {t('button')}
-            </Button>
-          </Link>
+          <p
+            className={classNames(
+              'group text-lg leading-normal',
+              'md:mt-0 md:text-2xl',
+              'lg:text-xl',
+              'pt-4 text-left md:text-justify'
+            )}
+          >
+            {t.rich('heroAppeal', {
+              ...localeArgs,
+              appUserNumber: new Intl.NumberFormat().format(appUserNumber),
+              br: () => <br />,
+              italic: (chunks) => <i>{chunks}</i>,
+            })}
+          </p>
+          <div className="w-72">
+            <Image
+              priority={true}
+              src="/assets/images/chris-signature.png"
+              alt=""
+              width={453}
+              height={187}
+              quality={100}
+              layout="responsive"
+              sizes="(max-width: 453px) 100vw, 500px"
+            />
+          </div>
         </HeroContainer>
         <div className="sticky top-10 mt-16 mr-auto hidden pt-10 2xl:block">
-          <Script
-            src="https://donorbox.org/widget.js"
-            // @ts-expect-error -- Custom required donorbox property
-            paypalExpress="false"
-          />
-          <DonorBox />
+          <DonorBox showDonateCrypto={true} />
         </div>
-        <div className="w-screen pb-16">
-          <HeroContainer className="md:px-12 md:py-0">
-            <p
-              className={classNames(
-                'group mb-20 font-light text-lg leading-8',
-                'md:mt-0 md:mb-20 md:max-w-xl md:text-2xl md:leading-9',
-                'lg:max-w-3xl lg:text-3xl lg:leading-relaxed',
-                'xl:mb-8',
-                '2xl:mb-20 2xl:max-w-3xl',
-                '3xl:mb-16 3xl:max-w-3xl',
-                'text-gray-dark'
-              )}
-            >
-              {t.rich('heroContent', {
-                span: (chunk) => <span>{chunk}</span>,
-                appName: NON_LOCALIZED_STRING.appName,
-                br: () => <br />,
-                image: () => <DonateImage src="/assets/images/donate-family.webp" />,
-              })}
-            </p>
-          </HeroContainer>
-        </div>
-        <Section section="1" imageSrc="/assets/images/donate-freedom.png" />
-        <Section section="2" imageSrc="/assets/images/donate-hands-holding.png" />
-        <Section
-          section="3"
-          imageSrc="/assets/images/donate-hands.png"
-          paragraphClassName="mb-0 md:mb-0 lg:mb-0 xl:mb-0 2xl:mb-0 3xl:mb-0"
-        />
       </div>
       <Section
         section="4"
-        id="app"
-        paragraphClassName="w-full md:w-max"
+        id="card"
+        paragraphClassName="md:w-max"
         className="min-h-[1150px] max-w-screen"
+        containerClassName="p-0 items-center"
       >
         <DonorBox />
       </Section>
-      <Section section="5">
+      <Section section="5" id="crypto">
         <SanityCryptoAddressDisplay
           value={{
             cryptoAddress: {
@@ -259,6 +348,7 @@ export default function Donate(): ReactElement {
           }}
         />
       </Section>
+      <FloatingButtons />
     </Layout>
   );
 }

@@ -1,19 +1,31 @@
 const withSvgr = require('@newhighsco/next-plugin-svgr');
 
-const ContentSecurityPolicy = `
-  default-src 'self';
-  script-src 'self' ${process.env.NODE_ENV === 'development'
-    ? "'unsafe-eval' 'unsafe-inline' "
-    : "'unsafe-inline' " // ← Add this for Next.js production builds
-  }*.ctfassets.net *.youtube.com *.twitter.com donorbox.org;
-  child-src 'self' *.ctfassets.net *.youtube.com player.vimeo.com *.twitter.com donorbox.org;
-  style-src 'self' 'unsafe-inline' *.googleapis.com;
-  img-src 'self' blob: data: *.ctfassets.net *.youtube.com *.twitter.com;
-  media-src 'self' *.youtube.com;
-  connect-src *;
-  font-src 'self' blob: data: fonts.gstatic.com maxcdn.bootstrapcdn.com;
-  worker-src 'self' blob:;
-`.replace(/\s{2,}/g, ' ').trim();
+const isDev = process.env.NODE_ENV === 'development';
+
+const baseCsp = (isDev) => [
+  "default-src 'self'",
+  `script-src 'self' ${isDev ? "'unsafe-eval' 'unsafe-inline'" : "'unsafe-inline'"} *.ctfassets.net *.youtube.com *.twitter.com donorbox.org`,
+  "child-src 'self' *.ctfassets.net *.youtube.com player.vimeo.com *.twitter.com donorbox.org",
+  "style-src 'self' 'unsafe-inline' *.googleapis.com",
+  "img-src 'self' blob: data: *.ctfassets.net *.youtube.com *.twitter.com",
+  "media-src 'self' *.youtube.com",
+  "connect-src *",
+  "font-src 'self' blob: data: fonts.gstatic.com maxcdn.bootstrapcdn.com",
+  "worker-src 'self' blob:",
+].join('; ');
+
+const donateCsp = (isDev) => [
+  "default-src 'self'",
+  `script-src 'self' ${isDev ? "'unsafe-eval' 'unsafe-inline'" : "'unsafe-inline'"} *.ctfassets.net *.youtube.com *.twitter.com donorbox.org *.donorbox.org js.stripe.com jspm.dev cdn.jsdelivr.net *.googleapis.com *.google.com *.gstatic.com`,
+  "child-src 'self' *.ctfassets.net *.youtube.com player.vimeo.com *.twitter.com donorbox.org *.donorbox.org js.stripe.com *.google.com",
+  "style-src 'self' 'unsafe-inline' *.googleapis.com donorbox.org *.donorbox.org rsms.me",
+  "img-src 'self' blob: data: *.ctfassets.net *.youtube.com *.twitter.com donorbox.org *.donorbox.org *.googleapis.com *.gstatic.com *.google.com",
+  "media-src 'self' *.youtube.com",
+  "connect-src *",
+  "font-src 'self' blob: data: fonts.gstatic.com maxcdn.bootstrapcdn.com rsms.me",
+  "frame-src 'self' donorbox.org *.donorbox.org js.stripe.com *.google.com",
+  "worker-src 'self' blob:",
+].join('; ');
 
 const redirects = [
   {
@@ -104,6 +116,7 @@ const nextConfig = {
 
   async headers() {
     return [
+      // ── All pages: shared security headers + base CSP ──
       {
         source: '/(.*)',
         headers: [
@@ -137,20 +150,19 @@ const nextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: ContentSecurityPolicy.replace(/\n/g, ''),
+            value: baseCsp(isDev),
           },
           {
             key: 'X-Robots-Tag',
             value: 'index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1',
           },
-          // better caching
           {
             key: 'Vary',
             value: 'Accept-Encoding, Accept-Language',
           },
         ],
       },
-      // Caching for static assets
+      // ── Static asset caching ──
       {
         source: '/assets/:path*',
         headers: [
@@ -158,7 +170,6 @@ const nextConfig = {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable',
           },
-          // Preload hints for critical assets
           {
             key: 'Link',
             value: '</assets/css/critical.css>; rel=preload; as=style',
@@ -205,7 +216,6 @@ const nextConfig = {
           },
         ],
       },
-      // Sitemap caching
       {
         source: '/sitemap.xml',
         headers: [
@@ -219,7 +229,6 @@ const nextConfig = {
           },
         ],
       },
-      // RSS feed caching
       {
         source: '/feed/:path*',
         headers: [
@@ -232,6 +241,16 @@ const nextConfig = {
             value: 'application/rss+xml',
           },
         ],
+      },
+      // ── /donate: overrides base CSP — must come AFTER /(.*) so it wins ──
+      // Covers bare /donate and all i18n locale-prefixed paths e.g. /en/donate
+      {
+        source: '/donate',
+        headers: [{ key: 'Content-Security-Policy', value: donateCsp(isDev) }],
+      },
+      {
+        source: '/:locale/donate',
+        headers: [{ key: 'Content-Security-Policy', value: donateCsp(isDev) }],
       },
     ];
   },
@@ -247,9 +266,9 @@ const nextConfig = {
     ],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    formats: ['image/avif', 'image/webp'], // AVIF first for better compression
+    formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 86400,
-    dangerouslyAllowSVG: false, // Security best practice
+    dangerouslyAllowSVG: false,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 
@@ -318,9 +337,7 @@ const nextConfig = {
     ];
   },
 
-  // SEO Enhancement: Improved Webpack optimizations
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    // Optimize bundle size in production
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
         chunks: 'all',
@@ -340,7 +357,6 @@ const nextConfig = {
         },
       };
 
-      // SEO Enhancement: Tree shaking and dead code elimination
       config.optimization.usedExports = true;
       config.optimization.sideEffects = false;
     }

@@ -6,7 +6,7 @@ import GroupNotice from '@/components/sections/GroupNotice';
 import Button from '@/components/ui/Button';
 import { useScreen } from '@/contexts/screen';
 
-export default function EmailSignup(): ReactElement {
+export default function EmailSignup({ hideCommunityNotice }: { hideCommunityNotice?: boolean }): ReactElement {
   const t = useTranslations('email');
   const { isSmall } = useScreen();
 
@@ -48,7 +48,7 @@ export default function EmailSignup(): ReactElement {
   };
   return (
     <section className="bg-primary text-gray-dark">
-      {isSmall ? <GroupNotice /> : null}
+      {isSmall && !hideCommunityNotice ? <GroupNotice /> : null}
       <Container id="signup" classes={classNames('px-8', 'md:px-10', 'lg:py-24')}>
         <h3 className={classNames('mb-2 font-bold text-xl leading-none', 'lg:mb-0 lg:text-3xl')}>
           {t('heading')}

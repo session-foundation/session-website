@@ -57,7 +57,7 @@ export function SanityCryptoAddressDisplay({
       </div>
       <IconComp className="hidden h-9 w-9 md:block" />
       <CopyableInputDisplay
-        className="text-black text-xs md:text-sm"
+        className="text-black bg-white"
         value={value.cryptoAddress.address}
         copyToClipboardProps={{
           textToCopy: value.cryptoAddress.address,
