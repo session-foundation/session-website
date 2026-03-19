@@ -318,7 +318,7 @@ function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 }
     <Collapsible className='transition-all duration-300 w-full' id={id}>
       <StyledCollapsibleTrigger className="flex w-full flex-row gap-2 bg-[#E8E8E8] px-2 py-2 text-left font-bold transition-all duration-300 items-center leading-0">
         <LucideIcon unicode={LUCIDE_ICONS_UNICODE.PLUS} iconSize="medium" />
-        <span className="whitespace-normal leading-0 -mb-1">{question}</span>
+        <span className="whitespace-normal leading-0">{question}</span>
         <a href={`#${id}`} style={{ lineHeight: 0 }}>
           <LucideIcon
             unicode={LUCIDE_ICONS_UNICODE.LINK}
@@ -422,8 +422,17 @@ export default function Donate(): ReactElement {
         <SanityCryptoAddressDisplay
           value={{
             cryptoAddress: {
+              name: 'Bitcoin Address',
+              address: NON_LOCALIZED_STRING.addressBitcoin,
+              icon: 'Bitcoin',
+            },
+          }}
+        />
+        <SanityCryptoAddressDisplay
+          value={{
+            cryptoAddress: {
               name: 'Ethereum Address',
-              address: '0xec793F400B2c133299ed78f22f5708872555F958',
+              address: NON_LOCALIZED_STRING.addressEthereum,
               icon: 'Ethereum',
             },
           }}
@@ -431,12 +440,13 @@ export default function Donate(): ReactElement {
         <SanityCryptoAddressDisplay
           value={{
             cryptoAddress: {
-              name: 'Bitcoin Address',
-              address: 'bc1qmuyaayx6xdfpvgdu5a0eqgzqrvr5d35f5y6k8w',
-              icon: 'Bitcoin',
+              name: 'Bitcoin Cash Address',
+              address: NON_LOCALIZED_STRING.addressBitcoinCash,
+              icon: 'Bitcoin Cash',
             },
           }}
         />
+
       </Section>
       <Section
         section='6'

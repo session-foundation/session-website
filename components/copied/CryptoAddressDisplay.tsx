@@ -5,6 +5,7 @@ import { BNBIcon } from './BNBIcon';
 import { CopyableInputDisplay } from './CopyableInputDisplay';
 import { EthIcon } from './EthIcon';
 import type { InputVariantProps } from './input';
+import { BitcoinCashIcon } from './BitcoinCashIcon';
 
 type CryptoAddressDisplaySchemaType = {
   cryptoAddress: {
@@ -21,6 +22,8 @@ function getIcon(value: CryptoAddressDisplaySchemaType) {
   switch (value.cryptoAddress.icon) {
     case 'Bitcoin':
       return BitcoinIcon;
+    case 'Bitcoin Cash':
+      return BitcoinCashIcon;
     case 'BNB':
       return BNBIcon;
     case 'Arbitrum':
