@@ -32,7 +32,7 @@
       "iconButtonClose": "Navigationsmenü schließen",
       "downloadButton": "Link zum Download von {appName}"
     },
-    "donate": "Donate"
+    "donate": "Spenden"
   },
   "footer": {
     "about": "App-Info",
@@ -226,6 +226,6 @@
         "answer": "Spenden sind derzeit der wichtigste Weg, wie du {appName} unterstützen kannst. Wenn du jedoch nicht spenden kannst, gibt es mehrere andere Möglichkeiten, wie du helfen kannst:<ol><li>Teile diesen Aufruf mit Freunden und Familienmitgliedern, die {appName} nutzen und möglicherweise daran interessiert sind, unsere Mission zu unterstützen.</li><li>Hilf dabei, {appName} über <crowdin-link>{wordCrowdin}</crowdin-link> in andere Sprachen zu übersetzen</li><li>Trage zur <github-link>Open-Source-Codebasis</github-link> von {appNamePossessive} bei</li></ol>"
       }
     },
-    "appealHeading": "A Personal Appeal From {donateAppealName}"
+    "appealHeading": "Ein persönlicher Spendenaufruf von {donateAppealName}"
   }
 }

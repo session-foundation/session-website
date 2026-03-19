@@ -226,6 +226,6 @@
         "answer": "Dary jsou v současnosti hlavním způsobem, jak můžete {appName} podpořit. Pokud však nemůžete přispět, existuje několik dalších způsobů, jak můžete pomoci:<ol><li>Sdílejte tuto výzvu s přáteli a rodinou, kteří používají {appName} a mohli by mít zájem podpořit naše poslání.</li><li>Pomozte přeložit {appName} do dalších jazyků prostřednictvím <crowdin-link>{wordCrowdin}</crowdin-link></li><li>Přispějte do <github-link>open source kódové základny</github-link> {appNamePossessive}</li></ol>"
       }
     },
-    "appealHeading": "A Personal Appeal From {donateAppealName}"
+    "appealHeading": "Osobní výzva od {donateAppealName}"
   }
 }

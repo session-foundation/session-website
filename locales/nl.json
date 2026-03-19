@@ -226,6 +226,6 @@
         "answer": "Donaties zijn momenteel de belangrijkste manier waarop je {appName} kunt ondersteunen. Als je echter niet kunt doneren, zijn er verschillende andere manieren waarop je kunt helpen:<ol><li>Deel deze oproep met vrienden en familie die {appName} gebruiken en mogelijk geïnteresseerd zijn om onze missie te steunen.</li><li>Help {appName} naar andere talen te vertalen via <crowdin-link>{wordCrowdin}</crowdin-link></li><li>Draag bij aan de <github-link>open-sourcecodebase</github-link> van {appNamePossessive}</li></ol>"
       }
     },
-    "appealHeading": "A Personal Appeal From {donateAppealName}"
+    "appealHeading": "Een persoonlijke oproep van {donateAppealName}"
   }
 }

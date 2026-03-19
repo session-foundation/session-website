@@ -32,7 +32,7 @@
       "iconButtonClose": "Zamknij menu nawigacyjne",
       "downloadButton": "Link do pobrania {appName}"
     },
-    "donate": "Donate"
+    "donate": "Wspomóż"
   },
   "footer": {
     "about": "O aplikacji",
@@ -174,58 +174,58 @@
       "description": "Zobacz blogi {appName}. | {appName} to komunikator z szyfrowaniem end-to-end, który usuwa zbieranie wrażliwych metadanych."
     },
     "donate": {
-      "title": "Donate | Support Privacy Technology",
-      "description": "The {foundationName} cannot continue without your support. Donate today to help {appName} in its fight for survival."
+      "title": "Przekaż darowiznę | Wspieraj technologie prywatności",
+      "description": "{foundationName} nie może działać dalej bez Twojego wsparcia. Przekaż darowiznę już dziś, aby pomóc {appName} w walce o przetrwanie."
     }
   },
   "donate": {
-    "heading": "{appName} needs your help",
-    "heroContent": "Private messaging is an essential part of our modern life. Secure communication shelters people from tyranny, protects those fighting against injustice, and empowers defenders of human rights worldwide.<br></br><br></br> However, the well-resourced opponents of privacy are actively working to suppress the tech that guards people's basic human rights and dignities. Politicians around the world are pushing for encryption-busting laws, privacy tech is slandered in the media, and surveillance capitalists are profiting from the chaos.<image></image> Despite the adversity, {appName} continues to provide a safe, secure, and trusted space for people to communicate online. {appName} is a free, private, and secure messaging app. It does not track users or sell your data—it just sends messages, privately. Millions of people around the world have turned to Session when they needed a safe and secure place to have a conversation.<br></br><br></br> More than just a tool, {appName} is a symbol of the importance of open-source, transparent, and resilient technology. It is technology like {appName} which safeguards our basic human rights in an era of increasing uncertainty and authoritarianism.",
+    "heading": "{appName} potrzebuje Twojej pomocy",
+    "heroContent": "Prywatne wiadomości są niezbędną częścią naszego współczesnego życia. Bezpieczna komunikacja chroni ludzi przed tyranią, wspiera tych, którzy walczą z niesprawiedliwością, i wzmacnia obrońców praw człowieka na całym świecie.<br></br><br></br> Jednak dobrze finansowani przeciwnicy prywatności aktywnie pracują nad stłumieniem technologii, która chroni podstawowe prawa człowieka i godność ludzi. Politycy na całym świecie forsują przepisy osłabiające szyfrowanie, technologie prywatności są oczerniane w mediach, a kapitaliści nadzoru czerpią zyski z tego chaosu.<image></image> Pomimo przeciwności {appName} nadal zapewnia ludziom bezpieczną, chronioną i godną zaufania przestrzeń do komunikacji online. {appName} to darmowa, prywatna i bezpieczna aplikacja do przesyłania wiadomości. Nie śledzi użytkowników ani nie sprzedaje Twoich danych — po prostu wysyła wiadomości, prywatnie. Miliony ludzi na całym świecie zwróciły się ku Session, gdy potrzebowały bezpiecznego i chronionego miejsca do rozmowy.<br></br><br></br> {appName} to coś więcej niż tylko narzędzie — to symbol znaczenia technologii otwartej, przejrzystej i odpornej. To właśnie technologia taka jak {appName} chroni nasze podstawowe prawa człowieka w epoce narastającej niepewności i autorytaryzmu.",
     "1": {
-      "heading": "A force for good",
-      "content": "Technology is transforming our society. Currently, a tiny cohort of powerful individuals and institutions have disproportionate control over the internet. In many cases, tech is being used to silence, manipulate, and suppress. It's time to push back against these forces of power.<image></image>We are agents of change in a world where technology is a tool for upending oppression. We believe in a future where technology is collaborative, transparent, equitable, and liberating."
+      "heading": "Siła dobra",
+      "content": "Technologia zmienia nasze społeczeństwo. Obecnie niewielka grupa wpływowych osób i instytucji ma nieproporcjonalnie dużą kontrolę nad internetem. W wielu przypadkach technologia jest wykorzystywana do uciszania, manipulowania i tłumienia. Nadszedł czas, by przeciwstawić się tym siłom władzy.<image></image>Jesteśmy siłą napędową zmian w świecie, w którym technologia jest narzędziem do obalania ucisku. Wierzymy w przyszłość, w której technologia będzie oparta na współpracy, przejrzysta, sprawiedliwa i wyzwalająca."
     },
     "2": {
-      "heading": "Meet your privacy defenders",
-      "content": "{appName} is stewarded by the {foundationName}, a Swiss foundation dedicated to maintaining the open-source {appName} ecosystem. We are a team of technologists, engineers, and activists dedicated to the mission of restoring online privacy.<image></image> The financial independence of the {foundationName} allows us to fearlessly build the privacy technology that protects everyone's human rights. Your support will contribute to new {appName} development, fund essential network infrastructure, and the ongoing fight for freedom and privacy rights.<br></br><br></br> We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}."
+      "heading": "Poznaj obrońców swojej prywatności",
+      "content": "{appName} znajduje się pod opieką {foundationName}, szwajcarskiej fundacji zajmującej się utrzymaniem ekosystemu open source {appName}. Jesteśmy zespołem technologów, inżynierów i aktywistów oddanych misji przywracania prywatności w internecie.<image></image> Niezależność finansowa {foundationName} pozwala nam bez obaw rozwijać technologie prywatności, które chronią prawa człowieka każdego z nas. Twoje wsparcie przyczyni się do dalszego rozwoju {appName}, sfinansowania niezbędnej infrastruktury sieciowej oraz dalszej walki o wolność i prawo do prywatności.<br></br><br></br> Obecnie przyjmujemy darowizny kartą płatniczą i w kryptowalutach. Adres do wpłat w kryptowalutach jest dostępny dla {ethNetworkName} i innych tokenów zgodnych z EVM, takich jak {usdcSymbol}."
     },
     "3": {
-      "heading": "Thank you for caring",
-      "content": "The {foundationName} is a Swiss-registered foundation. We are a non-profit oriented organization, subject to audits from the {swissSupervisory}. Our work helps protect privacy for all and shield those most at risk.<image></image>We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}.<br></br><br></br>Note that donations are not tax-deductible. If you have queries about donations or gifts, contact us via email: <contact-email></contact-email> <br></br><br></br>Please verify the URL is <validation-url></validation-url> before sending funds. If needed, addresses can be authenticated via email."
+      "heading": "Dziękujemy, że Ci zależy",
+      "content": "{foundationName} jest fundacją zarejestrowaną w Szwajcarii. Jesteśmy organizacją non-profit, podlegającą audytom prowadzonym przez {swissSupervisory}. Nasza praca pomaga chronić prywatność wszystkich i wspierać tych, którzy są najbardziej zagrożeni.<image></image>Obecnie przyjmujemy darowizny kartą płatniczą i w kryptowalutach. Adres do wpłat w kryptowalutach jest dostępny dla {ethNetworkName} i innych tokenów zgodnych z EVM, takich jak {usdcSymbol}.<br></br><br></br>Pamiętaj, że darowizny nie podlegają odliczeniu od podatku. Jeśli masz pytania dotyczące darowizn lub prezentów, skontaktuj się z nami mailowo: <contact-email></contact-email> <br></br><br></br>Przed wysłaniem środków sprawdź, czy adres URL to <validation-url></validation-url>. W razie potrzeby adresy można potwierdzić mailowo."
     },
     "4": {
-      "heading": "Donate via Credit Card ({donationProviderName})",
+      "heading": "Przekaż darowiznę kartą płatniczą ({donationProviderName})",
       "content": ""
     },
     "5": {
-      "heading": "Donate via Crypto",
-      "content": "You can send {ethSymbol}, {usdcSymbol}, {usdtSymbol} or {btcSymbol} to the following {foundationName} addresses."
+      "heading": "Przekaż darowiznę w kryptowalucie",
+      "content": "Możesz wysłać {ethSymbol}, {usdcSymbol}, {usdtSymbol} lub {btcSymbol} na poniższe adresy {foundationName}."
     },
-    "heroAppeal": "Eight years ago, {appName} was founded with a mission to restore your privacy and give you control over your speech and life — in essence, digital freedom. However, without your help today, we won’t be able to continue developing {appName} for much longer. If you’ve ever found value in {appName} or its mission, please give me a moment of your time and read this appeal.<br></br><br></br>{appName} is controversial technology in a time when free speech is not a given, the right to privacy is abhorred, and the truth is a lie. Over the years, the organisations safeguarding {appName} have faced many challenges, but now {appNamePossessive} very survival is at risk.<br></br><br></br>The threats against privacy are now greater than ever before, and {appName} must evolve to face the challenges of the future. {appNamePossessive} current caretaker, the {foundationName}, does not have the funding required to carry {appName} any further. Important work, such as PFS and post-quantum cryptography, is still in progress — and we don’t have enough time left.<br></br><br></br>Our mission is to bring back the freedom, creativity, and privacy that people once felt when communicating online. We’ve planted a seed for a truly free messenger that removes the censors, the surveillers, and the centralized entities that monitor your conversations. So far, that idea has worked. Every month, over {appUserNumber} people use {appName} to send messages, not metadata.<br></br><br></br>{appName} is a platform that is built and owned by its community — not by big tech, private equity, or any other shadowy masters. Now, {appName} is turning to you.<br></br><br></br>The project is on a path to self-sustainability, but the future is fragile. If every {appName} user contributed just one dollar, it would go a long way towards {appName} reaching sustainability. If you've ever considered donating, now is the time to act.<br></br><br></br>{donateSignerName}",
+    "heroAppeal": "Osiem lat temu {appName} powstało z misją przywrócenia Ci prywatności i oddania Ci kontroli nad Twoją wypowiedzią i życiem — czyli w istocie cyfrowej wolności. Jednak bez Twojej pomocy już dziś nie będziemy w stanie rozwijać {appName} jeszcze przez długi czas. Jeśli kiedykolwiek dostrzegłeś wartość w {appName} lub jego misji, poświęć mi chwilę i przeczytaj ten apel.<br></br><br></br>{appName} to kontrowersyjna technologia w czasach, gdy wolność słowa nie jest dana raz na zawsze, prawo do prywatności budzi odrazę, a prawda staje się kłamstwem. Przez lata organizacje chroniące {appName} mierzyły się z wieloma wyzwaniami, ale teraz samo przetrwanie {appNamePossessive} jest zagrożone.<br></br><br></br>Zagrożenia dla prywatności są dziś większe niż kiedykolwiek wcześniej, a {appName} musi ewoluować, aby sprostać wyzwaniom przyszłości. Obecny opiekun {appNamePossessive}, {foundationName}, nie dysponuje środkami potrzebnymi, by rozwijać {appName} dalej. Ważne prace, takie jak PFS i kryptografia postkwantowa, wciąż trwają — a nam nie zostało już dość czasu.<br></br><br></br>Naszą misją jest przywrócenie wolności, kreatywności i prywatności, które ludzie kiedyś odczuwali, komunikując się online. Zasialiśmy ziarno prawdziwie wolnego komunikatora, który eliminuje cenzorów, inwigilatorów i scentralizowane podmioty monitorujące Twoje rozmowy. Jak dotąd ten pomysł się sprawdza. Każdego miesiąca ponad {appUserNumber} osób używa {appName} do wysyłania wiadomości, a nie metadanych.<br></br><br></br>{appName} to platforma tworzona i należąca do swojej społeczności — a nie do big techu, funduszy private equity ani innych mrocznych mocodawców. Teraz {appName} zwraca się do Ciebie.<br></br><br></br>Projekt jest na drodze do samowystarczalności, ale przyszłość pozostaje krucha. Gdyby każdy użytkownik {appName} przekazał tylko jednego dolara, bardzo pomogłoby to {appName} osiągnąć stabilność. Jeśli kiedykolwiek rozważałeś przekazanie darowizny, teraz jest czas, by działać.<br></br><br></br>{donateSignerName}",
     "6": {
       "heading": "FAQ",
       "content": ""
     },
-    "buttonCard": "Donate Card",
-    "buttonCrypto": "Donate Crypto",
+    "buttonCard": "Przekaż darowiznę kartą",
+    "buttonCrypto": "Przekaż darowiznę w kryptowalucie",
     "faq": {
       "1": {
-        "question": "How can I donate to {appName}?",
-        "answer": "There are currently two ways to support the continued development of {appName}:<br></br><br></br><bold>Donorbox</bold><br></br><br></br>{donationProviderName} is a third-party platform that helps non-profit organizations accept donations through a variety of payment methods. You can donate to the {foundationName} via {donationProviderName} <donate-link>here</donate-link>.<br></br><br></br>Supported payment methods include:<payment-providers></payment-providers><bold>Cryptocurrency</bold><br></br><br></br>You can also donate cryptocurrency directly to the {foundationName} by sending funds to the wallet addresses listed below.<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>This {wordEthereumAddress} accepts donations in {ethSymbol}, as well as {wordErc20} {wordTokens} (such as {usdtSymbol} and {usdcSymbol}) across {wordEvmCompatible} chains, like {ethNetworkName}, {arbNetworkName}, and {baseNetworkName}.<br></br><br></br><bold>Note:</bold> If you are considering providing a donation of more than {largeDonationAmount} using any payment method, please contact us at <donations-email></donations-email>"
+        "question": "Jak mogę przekazać darowiznę na rzecz {appName}?",
+        "answer": "Obecnie istnieją dwa sposoby wsparcia dalszego rozwoju {appName}:<br></br><br></br><bold>Donorbox</bold><br></br><br></br>{donationProviderName} to platforma zewnętrzna, która pomaga organizacjom non-profit przyjmować darowizny za pomocą różnych metod płatności. Możesz przekazać darowiznę na rzecz {foundationName} przez {donationProviderName} <donate-link>tutaj</donate-link>.<br></br><br></br>Obsługiwane metody płatności obejmują:<payment-providers></payment-providers><bold>Kryptowaluty</bold><br></br><br></br>Możesz także przekazać kryptowaluty bezpośrednio na rzecz {foundationName}, wysyłając środki na adresy portfeli podane poniżej.<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>Ten {wordEthereumAddress} przyjmuje darowizny w {ethSymbol}, a także w tokenach {wordErc20} {wordTokens} (takich jak {usdtSymbol} i {usdcSymbol}) w sieciach zgodnych z {wordEvmCompatible}, takich jak {ethNetworkName}, {arbNetworkName} i {baseNetworkName}.<br></br><br></br><bold>Uwaga:</bold> Jeśli rozważasz przekazanie darowizny przekraczającej {largeDonationAmount} przy użyciu dowolnej metody płatności, skontaktuj się z nami pod adresem <donations-email></donations-email>"
       },
       "2": {
-        "question": "What will my donation be used for?",
-        "answer": "Your donation will be received by the <foundation-link>{foundationName}</foundation-link>, a Swiss-based foundation which is the current steward of the {appName} application and project. Your donation will be used to support the ongoing development and sustainability of {appName}."
+        "question": "Na co zostanie przeznaczona moja darowizna?",
+        "answer": "Twoja darowizna zostanie otrzymana przez <foundation-link>{foundationName}</foundation-link>, fundację z siedzibą w Szwajcarii, która obecnie sprawuje pieczę nad aplikacją i projektem {appName}. Twoja darowizna zostanie przeznaczona na wsparcie dalszego rozwoju i stabilności {appName}."
       },
       "3": {
-        "question": "What is the {foundationName}?",
-        "answer": "The {foundationName} ({foundationAcronym}) is a Swiss-based foundation and the steward of the {appName} application and project. You can learn more about the foundation’s role within the {appName} ecosystem <foundation-link>here</foundation-link>."
+        "question": "Czym jest {foundationName}?",
+        "answer": "{foundationName} ({foundationAcronym}) to fundacja z siedzibą w Szwajcarii i opiekun aplikacji oraz projektu {appName}. Więcej o roli fundacji w ekosystemie {appName} możesz dowiedzieć się <foundation-link>tutaj</foundation-link>."
       },
       "4": {
-        "question": "Are there any other ways I can help {appName}?",
-        "answer": "Donations are the primary way you can help support {appName} currently. However, if you’re unable to donate, there are several other ways you can help:<ol><li>Share this appeal with friends and family who use {appName} and may be interested in supporting our mission.</li><li>Help translate {appName} into other languages via <crowdin-link>{wordCrowdin}</crowdin-link></li><li>Contribute to {appNamePossessive} <github-link>open source codebase</github-link></li></ol>"
+        "question": "Czy są inne sposoby, w jakie mogę pomóc {appName}?",
+        "answer": "Darowizny są obecnie głównym sposobem, w jaki możesz wesprzeć {appName}. Jeśli jednak nie możesz przekazać darowizny, istnieje kilka innych sposobów, w jakie możesz pomóc:<ol><li>Udostępnij ten apel znajomym i rodzinie, którzy korzystają z {appName} i mogą chcieć wesprzeć naszą misję.</li><li>Pomóż tłumaczyć {appName} na inne języki przez <crowdin-link>{wordCrowdin}</crowdin-link></li><li>Współtwórz <github-link>kod źródłowy open source {appNamePossessive}</github-link></li></ol>"
       }
     },
-    "appealHeading": "A Personal Appeal From {donateAppealName}"
+    "appealHeading": "Osobisty apel od {donateAppealName}"
   }
 }

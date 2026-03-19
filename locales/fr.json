@@ -226,6 +226,6 @@
         "answer": "Les dons sont actuellement le principal moyen d'aider à soutenir {appName}. Cependant, si vous n'êtes pas en mesure de faire un don, il existe plusieurs autres façons de nous aider :<ol><li>Partagez cet appel avec des amis et des membres de votre famille qui utilisent {appName} et qui pourraient souhaiter soutenir notre mission.</li><li>Aidez à traduire {appName} dans d'autres langues via <crowdin-link>{wordCrowdin}</crowdin-link></li><li>Contribuez à la <github-link>base de code open source</github-link> de {appNamePossessive}</li></ol>"
       }
     },
-    "appealHeading": "A Personal Appeal From {donateAppealName}"
+    "appealHeading": "Appel personnel de {donateAppealName}"
   }
 }

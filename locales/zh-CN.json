@@ -32,7 +32,7 @@
       "iconButtonClose": "关闭导航菜单",
       "downloadButton": "链接到 {appName} 下载页面"
     },
-    "donate": "Donate"
+    "donate": "捐赠"
   },
   "footer": {
     "about": "关于",
@@ -226,6 +226,6 @@
         "answer": "捐赠是您目前支持 {appName} 的主要方式。不过，如果您无法捐赠，仍然还有其他几种方式可以提供帮助：<ol><li>将这份呼吁分享给使用 {appName} 且可能有兴趣支持我们使命的朋友和家人。</li><li>通过 <crowdin-link>{wordCrowdin}</crowdin-link> 帮助将 {appName} 翻译成其他语言</li><li>为 {appNamePossessive} 的 <github-link>开源代码库</github-link> 做出贡献</li></ol>"
       }
     },
-    "appealHeading": "A Personal Appeal From {donateAppealName}"
+    "appealHeading": "来自 {donateAppealName} 的个人呼吁"
   }
 }

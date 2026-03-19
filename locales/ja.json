@@ -32,7 +32,7 @@
       "iconButtonClose": "ナビゲーションメニューを閉じる",
       "downloadButton": "{appName}のダウンロードへのリンク"
     },
-    "donate": "Donate"
+    "donate": "寄付"
   },
   "footer": {
     "about": "情報",
@@ -174,58 +174,58 @@
       "description": "{appName}のブログを表示。| {appName}は機密メタデータ収集を排除するエンドツーエンド暗号化メッセンジャーです。"
     },
     "donate": {
-      "title": "Donate | Support Privacy Technology",
-      "description": "The {foundationName} cannot continue without your support. Donate today to help {appName} in its fight for survival."
+      "title": "寄付 | プライバシー技術を支援",
+      "description": "{foundationName}は、皆さまのご支援なしには活動を続けられません。{appName}の存続を支えるために、今すぐご寄付ください。"
     }
   },
   "donate": {
-    "heading": "{appName} needs your help",
-    "heroContent": "Private messaging is an essential part of our modern life. Secure communication shelters people from tyranny, protects those fighting against injustice, and empowers defenders of human rights worldwide.<br></br><br></br> However, the well-resourced opponents of privacy are actively working to suppress the tech that guards people's basic human rights and dignities. Politicians around the world are pushing for encryption-busting laws, privacy tech is slandered in the media, and surveillance capitalists are profiting from the chaos.<image></image> Despite the adversity, {appName} continues to provide a safe, secure, and trusted space for people to communicate online. {appName} is a free, private, and secure messaging app. It does not track users or sell your data—it just sends messages, privately. Millions of people around the world have turned to Session when they needed a safe and secure place to have a conversation.<br></br><br></br> More than just a tool, {appName} is a symbol of the importance of open-source, transparent, and resilient technology. It is technology like {appName} which safeguards our basic human rights in an era of increasing uncertainty and authoritarianism.",
+    "heading": "{appName}へのご支援をお願いします",
+    "heroContent": "プライベートメッセージは、現代生活に欠かせない要素です。安全なコミュニケーションは、人々を専制から守り、不正義と闘う人々を保護し、世界中の人権擁護者に力を与えます。<br></br><br></br>しかし、プライバシーの敵である潤沢な資金を持つ勢力は、人々の基本的人権と尊厳を守る技術を抑え込もうと積極的に活動しています。世界中の政治家たちは暗号化を弱体化させる法律を推し進め、プライバシー技術はメディアで中傷され、監視資本主義の担い手たちはこの混乱から利益を得ています。<image></image>こうした逆風の中でも、{appName}は人々がオンラインでやり取りできる安全で、安心でき、信頼できる場を提供し続けています。{appName}は、無料で、プライベートかつ安全なメッセージアプリです。ユーザーを追跡したり、データを販売したりすることはありません。ただプライベートにメッセージを送るだけです。世界中の何百万人もの人々が、安全に会話できる場を必要としたときにSessionを選んできました。<br></br><br></br>{appName}は単なるツールではありません。オープンソースで、透明性があり、レジリエントな技術の重要性を象徴する存在です。不確実性と権威主義が高まる時代において、私たちの基本的人権を守るのは{appName}のような技術です。",
     "1": {
-      "heading": "A force for good",
-      "content": "Technology is transforming our society. Currently, a tiny cohort of powerful individuals and institutions have disproportionate control over the internet. In many cases, tech is being used to silence, manipulate, and suppress. It's time to push back against these forces of power.<image></image>We are agents of change in a world where technology is a tool for upending oppression. We believe in a future where technology is collaborative, transparent, equitable, and liberating."
+      "heading": "善のための力",
+      "content": "テクノロジーは私たちの社会を変えています。現在、少数の強大な個人や組織がインターネットに対して不釣り合いなほど大きな支配力を持っています。多くの場合、テクノロジーは沈黙させ、操作し、抑圧するために使われています。今こそ、こうした権力に立ち向かう時です。<image></image>私たちは、テクノロジーが抑圧を打ち破るための道具となる世界で、変化をもたらす担い手です。私たちは、テクノロジーが協働的で、透明性があり、公平で、人を解放する未来を信じています。"
     },
     "2": {
-      "heading": "Meet your privacy defenders",
-      "content": "{appName} is stewarded by the {foundationName}, a Swiss foundation dedicated to maintaining the open-source {appName} ecosystem. We are a team of technologists, engineers, and activists dedicated to the mission of restoring online privacy.<image></image> The financial independence of the {foundationName} allows us to fearlessly build the privacy technology that protects everyone's human rights. Your support will contribute to new {appName} development, fund essential network infrastructure, and the ongoing fight for freedom and privacy rights.<br></br><br></br> We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}."
+      "heading": "あなたのプライバシーを守る人々をご紹介します",
+      "content": "{appName}は、オープンソースの{appName}エコシステムの維持に取り組むスイスの財団{foundationName}によって運営されています。私たちは、オンラインのプライバシーを取り戻すという使命に尽力する技術者、エンジニア、活動家のチームです。<image></image>{foundationName}の財政的独立性により、私たちはすべての人の人権を守るプライバシー技術を臆することなく構築できます。皆さまのご支援は、{appName}の新たな開発、重要なネットワークインフラの維持、そして自由とプライバシーの権利を守る継続的な闘いに役立てられます。<br></br><br></br>現在、寄付はクレジットカードと暗号資産で受け付けています。暗号資産の寄付先アドレスは、{ethNetworkName}および{usdcSymbol}などのその他のEVM互換トークンに対応しています。"
     },
     "3": {
-      "heading": "Thank you for caring",
-      "content": "The {foundationName} is a Swiss-registered foundation. We are a non-profit oriented organization, subject to audits from the {swissSupervisory}. Our work helps protect privacy for all and shield those most at risk.<image></image>We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}.<br></br><br></br>Note that donations are not tax-deductible. If you have queries about donations or gifts, contact us via email: <contact-email></contact-email> <br></br><br></br>Please verify the URL is <validation-url></validation-url> before sending funds. If needed, addresses can be authenticated via email."
+      "heading": "ご関心をお寄せいただきありがとうございます",
+      "content": "{foundationName}はスイスで登録された財団です。私たちは非営利志向の組織であり、{swissSupervisory}による監査の対象となっています。私たちの活動は、すべての人のプライバシーを守り、最も危険にさらされている人々を保護することに役立っています。<image></image>現在、寄付はクレジットカードと暗号資産で受け付けています。暗号資産の寄付先アドレスは、{ethNetworkName}および{usdcSymbol}などのその他のEVM互換トークンに対応しています。<br></br><br></br>なお、寄付は税控除の対象ではありません。寄付や贈与についてご質問がある場合は、メールでお問い合わせください：<contact-email></contact-email> <br></br><br></br>送金前に、URLが<validation-url></validation-url>であることをご確認ください。必要に応じて、アドレスはメールで認証できます。"
     },
     "4": {
-      "heading": "Donate via Credit Card ({donationProviderName})",
+      "heading": "クレジットカードで寄付する（{donationProviderName}）",
       "content": ""
     },
     "5": {
-      "heading": "Donate via Crypto",
-      "content": "You can send {ethSymbol}, {usdcSymbol}, {usdtSymbol} or {btcSymbol} to the following {foundationName} addresses."
+      "heading": "暗号資産で寄付する",
+      "content": "以下の{foundationName}のアドレスに{ethSymbol}、{usdcSymbol}、{usdtSymbol}または{btcSymbol}を送金できます。"
     },
-    "heroAppeal": "Eight years ago, {appName} was founded with a mission to restore your privacy and give you control over your speech and life — in essence, digital freedom. However, without your help today, we won’t be able to continue developing {appName} for much longer. If you’ve ever found value in {appName} or its mission, please give me a moment of your time and read this appeal.<br></br><br></br>{appName} is controversial technology in a time when free speech is not a given, the right to privacy is abhorred, and the truth is a lie. Over the years, the organisations safeguarding {appName} have faced many challenges, but now {appNamePossessive} very survival is at risk.<br></br><br></br>The threats against privacy are now greater than ever before, and {appName} must evolve to face the challenges of the future. {appNamePossessive} current caretaker, the {foundationName}, does not have the funding required to carry {appName} any further. Important work, such as PFS and post-quantum cryptography, is still in progress — and we don’t have enough time left.<br></br><br></br>Our mission is to bring back the freedom, creativity, and privacy that people once felt when communicating online. We’ve planted a seed for a truly free messenger that removes the censors, the surveillers, and the centralized entities that monitor your conversations. So far, that idea has worked. Every month, over {appUserNumber} people use {appName} to send messages, not metadata.<br></br><br></br>{appName} is a platform that is built and owned by its community — not by big tech, private equity, or any other shadowy masters. Now, {appName} is turning to you.<br></br><br></br>The project is on a path to self-sustainability, but the future is fragile. If every {appName} user contributed just one dollar, it would go a long way towards {appName} reaching sustainability. If you've ever considered donating, now is the time to act.<br></br><br></br>{donateSignerName}",
+    "heroAppeal": "8年前、{appName}はあなたのプライバシーを取り戻し、発言と生活を自分でコントロールできるようにすること、つまりデジタルの自由を実現することを使命として創設されました。しかし今、皆さまのご支援がなければ、私たちは{appName}の開発をこれ以上長く続けることができません。もし{appName}やその使命に価値を感じたことがあるなら、少しだけお時間をいただき、このお願いをお読みください。<br></br><br></br>{appName}は、言論の自由が当然ではなく、プライバシーの権利が忌み嫌われ、真実が嘘にされる時代において、物議を醸す技術です。これまで長年にわたり、{appName}を守ってきた組織はいくつもの困難に直面してきましたが、今や{appNamePossessive}存続そのものが危機にさらされています。<br></br><br></br>プライバシーへの脅威はかつてないほど大きくなっており、{appName}は将来の課題に立ち向かうために進化しなければなりません。{appNamePossessive}現在の管理団体である{foundationName}には、{appName}をさらに前へ進めるために必要な資金がありません。PFSや耐量子暗号のような重要な作業は今なお進行中ですが、残された時間は十分ではありません。<br></br><br></br>私たちの使命は、かつて人々がオンラインでコミュニケーションするときに感じていた自由、創造性、そしてプライバシーを取り戻すことです。私たちは、検閲者、監視者、そしてあなたの会話を監視する中央集権的な存在を取り除く、真に自由なメッセンジャーの種を蒔いてきました。これまでのところ、その理念は機能しています。毎月、{appUserNumber}人を超える人々が、メタデータではなくメッセージを送るために{appName}を利用しています。<br></br><br></br>{appName}は、そのコミュニティによって構築され、所有されるプラットフォームです。巨大テック企業やプライベートエクイティ、その他の得体の知れない支配者たちのものではありません。そして今、{appName}はあなたに助けを求めています。<br></br><br></br>このプロジェクトは自立可能な運営に向けて進んでいますが、その未来はまだ脆弱です。もし{appName}のユーザー一人ひとりがわずか1ドルを拠出してくれれば、{appName}が持続可能性に到達するための大きな助けになります。寄付を考えたことがあるなら、今こそ行動するときです。<br></br><br></br>{donateSignerName}",
     "6": {
-      "heading": "FAQ",
+      "heading": "よくある質問",
       "content": ""
     },
-    "buttonCard": "Donate Card",
-    "buttonCrypto": "Donate Crypto",
+    "buttonCard": "カードで寄付",
+    "buttonCrypto": "暗号資産で寄付",
     "faq": {
       "1": {
-        "question": "How can I donate to {appName}?",
-        "answer": "There are currently two ways to support the continued development of {appName}:<br></br><br></br><bold>Donorbox</bold><br></br><br></br>{donationProviderName} is a third-party platform that helps non-profit organizations accept donations through a variety of payment methods. You can donate to the {foundationName} via {donationProviderName} <donate-link>here</donate-link>.<br></br><br></br>Supported payment methods include:<payment-providers></payment-providers><bold>Cryptocurrency</bold><br></br><br></br>You can also donate cryptocurrency directly to the {foundationName} by sending funds to the wallet addresses listed below.<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>This {wordEthereumAddress} accepts donations in {ethSymbol}, as well as {wordErc20} {wordTokens} (such as {usdtSymbol} and {usdcSymbol}) across {wordEvmCompatible} chains, like {ethNetworkName}, {arbNetworkName}, and {baseNetworkName}.<br></br><br></br><bold>Note:</bold> If you are considering providing a donation of more than {largeDonationAmount} using any payment method, please contact us at <donations-email></donations-email>"
+        "question": "{appName}に寄付するにはどうすればよいですか？",
+        "answer": "現在、{appName}の継続的な開発を支援する方法は2つあります。<br></br><br></br><bold>Donorbox</bold><br></br><br></br>{donationProviderName}は、非営利団体がさまざまな支払い方法で寄付を受け取れるよう支援するサードパーティのプラットフォームです。{foundationName}へは、{donationProviderName}を通じて<donate-link>こちら</donate-link>から寄付できます。<br></br><br></br>対応している支払い方法は以下のとおりです：<payment-providers></payment-providers><bold>暗号資産</bold><br></br><br></br>以下に記載されたウォレットアドレスに送金することで、{foundationName}に暗号資産を直接寄付することもできます。<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>この{wordEthereumAddress}では、{ethSymbol}に加え、{ethNetworkName}、{arbNetworkName}、{baseNetworkName}などの{wordEvmCompatible}チェーン上の{wordErc20}{wordTokens}（{usdtSymbol}や{usdcSymbol}など）による寄付も受け付けています。<br></br><br></br><bold>注:</bold> いずれかの支払い方法で{largeDonationAmount}を超える寄付をご検討の場合は、<donations-email></donations-email>までご連絡ください"
       },
       "2": {
-        "question": "What will my donation be used for?",
-        "answer": "Your donation will be received by the <foundation-link>{foundationName}</foundation-link>, a Swiss-based foundation which is the current steward of the {appName} application and project. Your donation will be used to support the ongoing development and sustainability of {appName}."
+        "question": "寄付金は何に使われますか？",
+        "answer": "皆さまからの寄付は、{appName}アプリケーションおよびプロジェクトの現在の管理団体である、スイス拠点の財団<foundation-link>{foundationName}</foundation-link>が受け取ります。寄付金は、{appName}の継続的な開発と持続可能な運営の支援に充てられます。"
       },
       "3": {
-        "question": "What is the {foundationName}?",
-        "answer": "The {foundationName} ({foundationAcronym}) is a Swiss-based foundation and the steward of the {appName} application and project. You can learn more about the foundation’s role within the {appName} ecosystem <foundation-link>here</foundation-link>."
+        "question": "{foundationName}とは何ですか？",
+        "answer": "{foundationName}（{foundationAcronym}）は、スイスを拠点とする財団であり、{appName}アプリケーションおよびプロジェクトの管理団体です。{appName}エコシステムにおける財団の役割については、<foundation-link>こちら</foundation-link>をご覧ください。"
       },
       "4": {
-        "question": "Are there any other ways I can help {appName}?",
-        "answer": "Donations are the primary way you can help support {appName} currently. However, if you’re unable to donate, there are several other ways you can help:<ol><li>Share this appeal with friends and family who use {appName} and may be interested in supporting our mission.</li><li>Help translate {appName} into other languages via <crowdin-link>{wordCrowdin}</crowdin-link></li><li>Contribute to {appNamePossessive} <github-link>open source codebase</github-link></li></ol>"
+        "question": "{appName}を支援する他の方法はありますか？",
+        "answer": "現在、{appName}を支援する主な方法は寄付です。ただし、寄付が難しい場合でも、ほかにも支援できる方法がいくつかあります。<ol><li>{appName}を使っていて、私たちの使命への支援に関心を持ちそうなご友人やご家族に、このお願いを共有してください。</li><li><crowdin-link>{wordCrowdin}</crowdin-link>を通じて、{appName}の他言語への翻訳に協力してください</li><li>{appNamePossessive}<github-link>オープンソースコードベース</github-link>への貢献</li></ol>"
       }
     },
-    "appealHeading": "A Personal Appeal From {donateAppealName}"
+    "appealHeading": "{donateAppealName}からの個人的な訴え"
   }
 }
