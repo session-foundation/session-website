@@ -174,33 +174,58 @@
       "description": "查看 {appName} 博客。| {appName} 是一款端到端加密的消息应用，消除敏感元数据的收集。"
     },
     "donate": {
-      "title": "Donate | Support Privacy Technology",
-      "description": "Support to the Session Technology Foundation to protect online privacy. Your donation funds secure, open-source messaging technology that safeguards human rights worldwide."
+      "title": "捐赠 | 支持隐私技术",
+      "description": "没有您的支持，{foundationName} 就无法继续前行。立即捐赠，帮助 {appName} 继续为生存而战。"
     }
   },
   "donate": {
-    "heading": "{appName} needs your help",
-    "heroContent": "Private messaging is an essential part of our modern life. Secure communication shelters people from tyranny, protects those fighting against injustice, and empowers defenders of human rights worldwide.<br></br><br></br> However, the well-resourced opponents of privacy are actively working to suppress the tech that guards people's basic human rights and dignities. Politicians around the world are pushing for encryption-busting laws, privacy tech is slandered in the media, and surveillance capitalists are profiting from the chaos.<image></image> Despite the adversity, {appName} continues to provide a safe, secure, and trusted space for people to communicate online. {appName} is a free, private, and secure messaging app. It does not track users or sell your data—it just sends messages, privately. Millions of people around the world have turned to Session when they needed a safe and secure place to have a conversation.<br></br><br></br> More than just a tool, {appName} is a symbol of the importance of open-source, transparent, and resilient technology. It is technology like {appName} which safeguards our basic human rights in an era of increasing uncertainty and authoritarianism.",
+    "heading": "{appName} 需要您的帮助",
+    "heroContent": "私密消息传递是现代生活中不可或缺的一部分。安全的通信让人们免受暴政侵害，保护那些对抗不公的人，并赋能全球各地的人权捍卫者。<br></br><br></br>然而，拥有充足资源的隐私反对者正积极试图压制那些守护人们基本人权与尊严的技术。世界各地的政客都在推动破坏加密的法律，隐私技术在媒体中遭到诋毁，而监控资本家则正从这种混乱中牟利。<image></image>尽管面临重重逆境，{appName} 仍持续为人们提供一个安全、可靠且值得信赖的在线沟通空间。{appName} 是一款免费、私密且安全的消息应用。它不追踪用户，也不会出售您的数据——它只是私密地发送消息。全球数百万人在需要一个安全可靠的对话空间时选择了 Session。<br></br><br></br>{appName} 不仅仅是一个工具，它还是开源、透明且具备韧性技术重要性的象征。正是像 {appName} 这样的技术，在这个日益充满不确定性与威权主义的时代，守护着我们的基本人权。",
     "1": {
-      "heading": "A force for good",
-      "content": "Technology is transforming our society. Currently, a tiny cohort of powerful individuals and institutions have disproportionate control over the internet. In many cases, tech is being used to silence, manipulate, and suppress. It's time to push back against these forces of power.<image></image>We are agents of change in a world where technology is a tool for upending oppression. We believe in a future where technology is collaborative, transparent, equitable, and liberating."
+      "heading": "向善的力量",
+      "content": "技术正在改变我们的社会。当前，少数强大的个人和机构对互联网拥有不成比例的控制权。在许多情况下，技术正被用来压制、操纵和打压他人。现在是时候反击这些权力力量了。<image></image>我们是在一个将技术作为颠覆压迫工具的世界中的变革推动者。我们相信，未来的技术将是协作的、透明的、公平的，并且能带来自由。"
     },
     "2": {
-      "heading": "Meet your privacy defenders",
-      "content": "{appName} is stewarded by the {foundationName}, a Swiss foundation dedicated to maintaining the open-source {appName} ecosystem. We are a team of technologists, engineers, and activists dedicated to the mission of restoring online privacy.<image></image> The financial independence of the {foundationName} allows us to fearlessly build the privacy technology that protects everyone's human rights. Your support will contribute to new {appName} development, fund essential network infrastructure, and the ongoing fight for freedom and privacy rights.<br></br><br></br> We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}."
+      "heading": "认识您的隐私捍卫者",
+      "content": "{appName} 由 {foundationName} 管护，这是一个致力于维护开源 {appName} 生态系统的瑞士基金会。我们是一支由技术专家、工程师和活动人士组成的团队，致力于恢复在线隐私这一使命。<image></image>{foundationName} 的财务独立性使我们能够无所畏惧地构建保护每个人人权的隐私技术。您的支持将用于推动 {appName} 的新开发、资助关键网络基础设施，以及持续推进争取自由与隐私权的斗争。<br></br><br></br>我们目前接受信用卡和加密货币捐赠。可用于接收加密货币捐赠的地址支持 {ethNetworkName} 以及其他与 EVM 兼容的代币，例如 {usdcSymbol}。"
     },
     "3": {
-      "heading": "Thank you for caring",
-      "content": "The {foundationName} is a Swiss-registered foundation. We are a non-profit oriented organization, subject to audits from the {swissSupervisory}. Our work helps protect privacy for all and shield those most at risk.<image></image>We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}.<br></br><br></br>Note that donations are not tax-deductible. If you have queries about donations or gifts, contact us via email: <contact-email></contact-email> <br></br><br></br>Please verify the URL is <validation-url></validation-url> before sending funds. If needed, addresses can be authenticated via email."
+      "heading": "感谢您的关心",
+      "content": "{foundationName} 是一家在瑞士注册的基金会。我们是一个以非营利为导向的组织，接受 {swissSupervisory} 的审计监督。我们的工作有助于保护所有人的隐私，并为那些风险最高的人提供庇护。<image></image>我们目前接受信用卡和加密货币捐赠。可用于接收加密货币捐赠的地址支持 {ethNetworkName} 以及其他与 EVM 兼容的代币，例如 {usdcSymbol}。<br></br><br></br>请注意，捐赠不可用于抵税。如果您对捐赠或馈赠有任何疑问，请通过电子邮件联系我们：<contact-email></contact-email><br></br><br></br>在发送资金之前，请确认网址为 <validation-url></validation-url>。如有需要，也可通过电子邮件验证地址。"
     },
     "4": {
-      "heading": "Donate via Credit Card ({donationProviderName})",
+      "heading": "通过信用卡捐赠（{donationProviderName}）",
       "content": ""
     },
     "5": {
-      "heading": "Donate via Crypto",
-      "content": "You can send {ethSymbol}, {usdcSymbol}, {usdtSymbol} or {btcSymbol} to the following {foundationName} addresses."
+      "heading": "通过加密货币捐赠",
+      "content": "您可以将 {ethSymbol}、{usdcSymbol}、{usdtSymbol} 或 {btcSymbol} 发送到以下 {foundationName} 地址。"
     },
-    "button": "Donate Now"
+    "heroAppeal": "八年前，{appName} 在“恢复您的隐私并让您掌控自己的言论和生活——本质上就是数字自由”这一使命下创立。然而，如果今天没有您的帮助，我们将无法再继续开发 {appName} 太久。如果 {appName} 或其使命曾对您有过价值，请花一点时间读完这份呼吁。<br></br><br></br>在一个言论自由不再是理所当然、隐私权遭人憎恶、真相被颠倒为谎言的时代，{appName} 是一项充满争议的技术。多年来，守护 {appName} 的组织面临了许多挑战，而如今，{appNamePossessive} 的生存本身正处于危险之中。<br></br><br></br>如今，对隐私的威胁比以往任何时候都更大，{appName} 必须进化以应对未来的挑战。{appNamePossessive} 当前的管护机构 {foundationName} 并没有足够的资金来继续推进 {appName}。像 PFS 和后量子密码学这样的重要工作仍在进行中——而我们剩下的时间已经不多了。<br></br><br></br>我们的使命，是找回人们曾经在网上交流时感受到的自由、创造力和隐私。我们已经为一个真正自由的即时通讯工具播下了种子，它将移除审查者、监视者以及那些监控您对话的中心化实体。到目前为止，这一理念已经奏效。每个月，超过 {appUserNumber} 人使用 {appName} 发送的是消息，而不是元数据。<br></br><br></br>{appName} 是一个由其社区构建并拥有的平台——而不是属于大型科技公司、私募资本或任何其他隐藏在幕后的主宰者。现在，{appName} 正向您发出请求。<br></br><br></br>该项目正走在实现自我可持续的道路上，但未来依然脆弱。如果每位 {appName} 用户只贡献 1 美元，这将极大推动 {appName} 实现可持续发展。如果您曾考虑过捐赠，现在就是行动的时候。<br></br><br></br>{donateSignerName}",
+    "6": {
+      "heading": "常见问题",
+      "content": ""
+    },
+    "buttonCard": "信用卡捐赠",
+    "buttonCrypto": "加密货币捐赠",
+    "faq": {
+      "1": {
+        "question": "我如何向 {appName} 捐赠？",
+        "answer": "目前有两种方式可以支持 {appName} 的持续开发：<br></br><br></br><bold>Donorbox</bold><br></br><br></br>{donationProviderName} 是一个第三方平台，帮助非营利组织通过多种支付方式接受捐赠。您可以通过 {donationProviderName} <donate-link>在此</donate-link>向 {foundationName} 捐赠。<br></br><br></br>支持的支付方式包括：<payment-providers></payment-providers><bold>加密货币</bold><br></br><br></br>您也可以通过向下方列出的钱包地址转账，直接向 {foundationName} 捐赠加密货币。<br></br><br></br>{wordBitcoinAddress}：{addressBitcoin}<br></br><br></br>{wordEthereumAddress}：{addressEthereum}<br></br><br></br>此 {wordEthereumAddress} 接受 {ethSymbol} 捐赠，以及通过与 {wordEvmCompatible} 链兼容的 {wordTokens}（如 {ethNetworkName}、{arbNetworkName} 和 {baseNetworkName}）发送的 {wordErc20} 代币（例如 {usdtSymbol} 和 {usdcSymbol}）。<br></br><br></br><bold>注意：</bold>如果您考虑通过任何支付方式捐赠超过 {largeDonationAmount}，请通过 <donations-email></donations-email> 联系我们。"
+      },
+      "2": {
+        "question": "我的捐赠将用于什么用途？",
+        "answer": "您的捐赠将由 <foundation-link>{foundationName}</foundation-link> 接收。该基金会位于瑞士，是当前 {appName} 应用和项目的管护机构。您的捐赠将用于支持 {appName} 的持续开发与长期可持续性。"
+      },
+      "3": {
+        "question": "什么是 {foundationName}？",
+        "answer": "{foundationName}（{foundationAcronym}）是一家位于瑞士的基金会，也是 {appName} 应用和项目的管护机构。您可以 <foundation-link>在此</foundation-link> 进一步了解该基金会在 {appName} 生态系统中的作用。"
+      },
+      "4": {
+        "question": "还有其他方式可以帮助 {appName} 吗？",
+        "answer": "捐赠是您目前支持 {appName} 的主要方式。不过，如果您无法捐赠，仍然还有其他几种方式可以提供帮助：<ol><li>将这份呼吁分享给使用 {appName} 且可能有兴趣支持我们使命的朋友和家人。</li><li>通过 <crowdin-link>{wordCrowdin}</crowdin-link> 帮助将 {appName} 翻译成其他语言</li><li>为 {appNamePossessive} 的 <github-link>开源代码库</github-link> 做出贡献</li></ol>"
+      }
+    },
+    "appealHeading": "A Personal Appeal From {donateAppealName}"
   }
 }

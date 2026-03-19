@@ -13,6 +13,11 @@ import Headline from '@/components/ui/Headline';
 import Layout from '@/components/ui/Layout';
 import { appUserNumber, localeArgs, NON_LOCALIZED_STRING } from '@/constants/localization';
 import METADATA from '@/constants/metadata';
+import styled from 'styled-components';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+import { LucideIcon } from '@/components/LucideIconWrapper';
+import { LUCIDE_ICONS_UNICODE } from '@/lib/lucide';
+import { StyledCollapsibleContent, StyledCollapsibleTrigger, StyledRoundedPanelButtonGroup } from './pro';
 
 function DonateImage({ src, className }: { src: string; className?: string }) {
   return (
@@ -98,7 +103,7 @@ export function DonorBox({ showDonateCrypto }: { showDonateCrypto?: boolean }) {
         </dbox-widget>`
         }}
       />
-      {showDonateCrypto ? <Link href="#crypto">
+      {showDonateCrypto ? <a href="#crypto">
         <Button
           size="medium"
           shape="semiround"
@@ -106,7 +111,7 @@ export function DonorBox({ showDonateCrypto }: { showDonateCrypto?: boolean }) {
         >
           {t('buttonCrypto')}
         </Button>
-      </Link> : null}
+      </a> : null}
     </div>
   );
 
@@ -117,7 +122,7 @@ interface SectionProps extends HTMLAttributes<HTMLDivElement> {
   hideHeadline?: boolean;
   paragraphClassName?: string;
   containerClassName?: string;
-  section: '1' | '2' | '3' | '4' | '5';
+  section: '1' | '2' | '3' | '4' | '5' | '6';
 }
 
 const Section = forwardRef<HTMLDivElement, SectionProps>(
@@ -219,7 +224,6 @@ function FloatingButtons() {
   useEffect(() => {
     const cryptoSection = document.getElementById('crypto');
     if (!cryptoSection) return;
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting || entry.boundingClientRect.top < 0) {
@@ -230,48 +234,134 @@ function FloatingButtons() {
       },
       { threshold: 0.1 }
     );
-
     observer.observe(cryptoSection);
     return () => observer.disconnect();
   }, []);
 
-  if (hideFloatingButtons || pastCrypto) return null;
-  return !hideFloatingButtons ? <div className='fixed w-screen px-6 py-6 z-[9999999] bg-white md:hidden grid grid-cols-1 sm:grid-cols-2 gap-4'
-    style={{
-      boxShadow: '0 -1px 15.3px 0 rgba(0, 0, 0, 0.14)',
-      top: '100dvh',
-      transform: 'translateY(-100%)',
-    }}>
-    <Link href="#card" className='w-full'>
+  return (
+    <div
+      className='fixed w-screen px-6 py-6 z-[9999999] bg-white md:hidden grid grid-cols-1 sm:grid-cols-2 gap-4 transition-transform duration-300 ease-in-out'
+      style={{
+        boxShadow: '0 -1px 15.3px 0 rgba(0, 0, 0, 0.14)',
+        bottom: '0dvh',
+        transform: pastCrypto || hideFloatingButtons ? 'translateY(100%)' : 'translateY(0%)',
+      }}
+    >
+      <a href="#card" className='w-full'>
+        <Button
+          size="medium"
+          shape="semiround"
+          classes="w-full py-4 px-0 no-wrap whitespace-nowrap"
+        >
+          {t('buttonCard')}
+        </Button>
+      </a>
+      <a href="#crypto" className='w-full'>
+        <Button
+          size="medium"
+          shape="semiround"
+          classes="w-full py-4 px-0 no-wrap whitespace-nowrap"
+        >
+          {t('buttonCrypto')}
+        </Button>
+      </a>
       <Button
+        classes='absolute top-1 -right-1 px-0 py-0 h-3 w-3'
         size="medium"
-        shape="semiround"
-        classes="w-full py-4 px-0 no-wrap whitespace-nowrap"
+        shape="round"
+        bgColor='none'
+        textColor='black'
+        onClick={() => setHideFloatingButtons(true)}
       >
-        {t('buttonCard')}
+        <LucideIcon unicode={LUCIDE_ICONS_UNICODE.X} />
       </Button>
-    </Link>
-    <Link href="#crypto" className='w-full'>
-      <Button
-        size="medium"
-        shape="semiround"
-        classes="w-full py-4 px-0 no-wrap whitespace-nowrap"
-      >
-        {t('buttonCrypto')}
-      </Button>
-    </Link>
-    <Button classes='absolute -top-1 -right-1 px-0 py-0 h-3 w-3' size="medium" shape="round" bgColor='none' textColor='black' onClick={() => setHideFloatingButtons(true)}>x</Button>
-  </div> : null
+    </div>
+  );
+}
+
+function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 }) {
+  const t = useTranslations('donate.faq');
+
+  const question = t(`${localeKey}.question`, localeArgs)
+  const answer = t.rich(`${localeKey}.answer`, {
+    ...localeArgs,
+    br: () => <br />,
+    bold: (chunks: ReactNode) => <strong className='font-bold'>{chunks}</strong>,
+    'payment-providers': () => (
+      <ul className="ml-7 my-4">
+        <li className="list-disc">Credit Card and Debit Card</li>
+        <li className="list-disc">Apple Pay</li>
+        <li className="list-disc">Google Pay</li>
+        <li className="list-disc">PayPal</li>
+        <li className="list-disc">Amazon Pay</li>
+        <li className="list-disc">Bank Transfer</li>
+        <li className="list-disc">Link</li>
+        <li className="list-disc">And more</li>
+      </ul>),
+    'ol': (chunks) => (
+      <ol className="ml-7 my-4">
+        {chunks}
+      </ol>),
+    'li': (chunks) => <li className='list-decimal'>{chunks}</li>,
+    'donations-email': () => <Link className="text-primary-dark" href="mailto:donations@getsession.org">
+      donations@getsession.org
+    </Link>,
+    'donate-link': (chunks) => <a href="#card" className='text-primary-dark'>{chunks}</a>,
+    'foundation-link': (chunks) => <Link href="https://session.foundation" className='text-primary-dark'>{chunks}</Link>,
+    'github-link': (chunks) => <Link href="https://github.com/session-foundation/" className='text-primary-dark'>{chunks}</Link>,
+    'crowdin-link': (chunks) => <Link href="https://getsession.org/translate" className='text-primary-dark'>{chunks}</Link>,
+  })
+
+  const id = question.toLocaleLowerCase().replaceAll(' ', '-').replaceAll('?', '')
+
+  return (
+    <Collapsible className='transition-all duration-300 w-full' id={id}>
+      <StyledCollapsibleTrigger className="flex w-full flex-row gap-2 bg-[#E8E8E8] px-2 py-2 text-left font-bold transition-all duration-300 items-center leading-0">
+        <LucideIcon unicode={LUCIDE_ICONS_UNICODE.PLUS} iconSize="medium" />
+        <span className="whitespace-normal leading-0 -mb-1">{question}</span>
+        <a href={`#${id}`} style={{ lineHeight: 0 }}>
+          <LucideIcon
+            unicode={LUCIDE_ICONS_UNICODE.LINK}
+            iconSize="medium"
+            iconColor="var(--gray-lighter)"
+          />
+        </a>
+      </StyledCollapsibleTrigger>
+      <StyledCollapsibleContent className='rounded-b-xl transition-all duration-300'>
+        <StyledRoundedPanelButtonGroup className='rounded-b-xl text-left px-6'>
+          <p className='whitespace-normal break-words'>
+            {answer}
+          </p>
+        </StyledRoundedPanelButtonGroup>
+      </StyledCollapsibleContent>
+    </Collapsible>
+  );
+}
+
+function DonateFAQ() {
+  return (
+    <div
+      className="flex w-full flex-col items-center gap-4 self-center justify-center">
+      <div className={'w-full items-center self-center justify-center flex px-4 md:ml-6'}>
+        <div className="flex w-full max-w-3xl flex-col gap-3 text-lg">
+          <FAQItem localeKey={1} />
+          <FAQItem localeKey={2} />
+          <FAQItem localeKey={3} />
+          <FAQItem localeKey={4} />
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default function Donate(): ReactElement {
   const t = useTranslations('donate');
 
   return (
-    <Layout localeKey="donate" metadata={METADATA.DOWNLOAD_PAGE} showBanner={false} hideCommunityNotice={true}>
+    <Layout localeKey="donate" metadata={METADATA.DONATE_PAGE} showBanner={false} hideCommunityNotice={true}>
       <div className="wrap flex w-screen flex-row flex-wrap pb-10 md:pb-28">
         <HeroContainer className="md:mb-4 lg:mt-16 2xl:mx-0 2xl:mt-16 2xl:ml-auto 2xl:max-w-5xl 2xl:pb-0 2xl:pl-[180px]">
-          <div className="my-8 w-full md:my-10">
+          <div className="mt-4 mb-8 w-full md:mt-8 md:mb-10">
             <Image
               priority={true}
               className="rounded-xl"
@@ -284,8 +374,8 @@ export default function Donate(): ReactElement {
               sizes="(max-width: 4032px) 100vw, 500px"
             />
           </div>
-          <h2 className="pb-5 font-semibold text-4xl xl:text-5xl">
-            {t('appealheading', localeArgs)}
+          <h2 className="pb-5 font-semibold text-3xl md:text-4xl xl:text-5xl">
+            {t('appealHeading', localeArgs)}
           </h2>
           <p
             className={classNames(
@@ -347,6 +437,14 @@ export default function Donate(): ReactElement {
             },
           }}
         />
+      </Section>
+      <Section
+        section='6'
+        id="faq"
+        paragraphClassName="w-full"
+        containerClassName="w-full p-0 items-center"
+      >
+        <DonateFAQ />
       </Section>
       <FloatingButtons />
     </Layout>

@@ -175,7 +175,7 @@
     },
     "donate": {
       "title": "crwdns38884:0crwdne38884:0",
-      "description": "crwdns38886:0crwdne38886:0"
+      "description": "crwdns38886:0{foundationName}crwdnd38886:0{appName}crwdne38886:0"
     }
   },
   "donate": {
@@ -201,6 +201,31 @@
       "heading": "crwdns38870:0crwdne38870:0",
       "content": "crwdns38880:0{ethSymbol}crwdnd38880:0{usdcSymbol}crwdnd38880:0{usdtSymbol}crwdnd38880:0{btcSymbol}crwdnd38880:0{foundationName}crwdne38880:0"
     },
-    "button": "crwdns38924:0crwdne38924:0"
+    "heroAppeal": "crwdns39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{appNamePossessive}crwdnd39082:0{appName}crwdnd39082:0{appNamePossessive}crwdnd39082:0{foundationName}crwdnd39082:0{appName}crwdnd39082:0{appUserNumber}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{donateSignerName}crwdne39082:0",
+    "6": {
+      "heading": "crwdns39084:0crwdne39084:0",
+      "content": "crwdns39086:0crwdne39086:0"
+    },
+    "buttonCard": "crwdns39088:0crwdne39088:0",
+    "buttonCrypto": "crwdns39090:0crwdne39090:0",
+    "faq": {
+      "1": {
+        "question": "crwdns39092:0{appName}crwdne39092:0",
+        "answer": "crwdns39094:0{appName}crwdnd39094:0{donationProviderName}crwdnd39094:0{foundationName}crwdnd39094:0{donationProviderName}crwdnd39094:0{foundationName}crwdnd39094:0{wordBitcoinAddress}crwdnd39094:0{addressBitcoin}crwdnd39094:0{wordEthereumAddress}crwdnd39094:0{addressEthereum}crwdnd39094:0{wordEthereumAddress}crwdnd39094:0{ethSymbol}crwdnd39094:0{wordErc20}crwdnd39094:0{wordTokens}crwdnd39094:0{usdtSymbol}crwdnd39094:0{usdcSymbol}crwdnd39094:0{wordEvmCompatible}crwdnd39094:0{ethNetworkName}crwdnd39094:0{arbNetworkName}crwdnd39094:0{baseNetworkName}crwdnd39094:0{largeDonationAmount}crwdne39094:0"
+      },
+      "2": {
+        "question": "crwdns39096:0crwdne39096:0",
+        "answer": "crwdns39098:0{foundationName}crwdnd39098:0{appName}crwdnd39098:0{appName}crwdne39098:0"
+      },
+      "3": {
+        "question": "crwdns39100:0{foundationName}crwdne39100:0",
+        "answer": "crwdns39102:0{foundationName}crwdnd39102:0{foundationAcronym}crwdnd39102:0{appName}crwdnd39102:0{appName}crwdne39102:0"
+      },
+      "4": {
+        "question": "crwdns39104:0{appName}crwdne39104:0",
+        "answer": "crwdns39106:0{appName}crwdnd39106:0{appName}crwdnd39106:0{appName}crwdnd39106:0{wordCrowdin}crwdnd39106:0{appNamePossessive}crwdne39106:0"
+      }
+    },
+    "appealHeading": "crwdns39108:0{donateAppealName}crwdne39108:0"
   }
 }

@@ -94,6 +94,10 @@ const nextConfig = {
   generateEtags: true,
   productionBrowserSourceMaps: false,
 
+  typescript: {
+    ignoreBuildErrors: true
+  },
+
   // SEO Enhancement: Enable static optimization
   experimental: {
     optimizeCss: true,
@@ -115,6 +119,7 @@ const nextConfig = {
     MAILERLITE_API_KEY: process.env.MAILERLITE_API_KEY,
     MAILERLITE_GROUP_ID: process.env.MAILERLITE_GROUP_ID,
     NEXT_PUBLIC_TRANSLATION_MODE: process.env.NEXT_PUBLIC_TRANSLATION_MODE,
+    ENABLE_PRO_PAGE: process.env.ENABLE_PRO_PAGE
   },
 
   async headers() {

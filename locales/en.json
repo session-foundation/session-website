@@ -32,8 +32,7 @@
       "iconButtonClose": "Close navigation menu",
       "downloadButton": "Link to {appName} download"
     },
-    "donate": "Donate",
-    "pro": "Pro"
+    "donate": "Donate"
   },
   "footer": {
     "about": "About",
@@ -176,14 +175,12 @@
     },
     "donate": {
       "title": "Donate | Support Privacy Technology",
-      "description": "Support to the Session Technology Foundation to protect online privacy. Your donation funds secure, open-source messaging technology that safeguards human rights worldwide."
+      "description": "The {foundationName} cannot continue without your support. Donate today to help {appName} in its fight for survival."
     }
   },
   "donate": {
     "heading": "{appName} needs your help",
-    "appealheading": "A Personal Appeal From {donateAppealName}",
-    "heroAppeal": "Eight years ago, {appName} was founded with a mission to restore your privacy and give you control over your speech and life — in essence, digital freedom. However, without your help today, we won’t be able to continue developing {appName} for much longer. If you’ve ever found value in {appName} or its mission, please give me a moment of your time and read this appeal.<br></br><br></br>{appName} is controversial technology in a time when free speech is not a given, the right to privacy is abhorred, and the truth is a lie. Over the years, the organisations safeguarding {appName} have faced many challenges, but now {appNamePossessive} very survival is at risk.<br></br><br></br>The threats against privacy are now greater than ever before, and {appName} must evolve to face the challenges of the future. {appNamePossessive} current caretaker, the {foundationName}, does not have the funding required to carry {appName} any further. Important work, such as PFS and post-quantum cryptography, is still in progress — and we don’t have enough time left.<br></br><br></br>Our mission is to bring back the feeling of freedom, creativity, and privacy that people once felt when communicating online. We’ve planted a seed for a truly free messenger that removes the censors, the surveillers, and the centralized entities that monitor your conversations. So far, that idea has worked. Every month, over {appUserNumber} people use {appName} to send messages, not metadata.<br></br><br></br>{appName} is a platform that is built and owned by its community — not by big tech, private equity, or any other shadowy masters. Now, {appName} is turning to you.<br></br><br></br>The project is on a path to self-sustainability, but the future is fragile. If every {appName} user contributed just one dollar, it would go a long way towards {appName} reaching sustainability. If you've ever considered donating, now is the time to act.<br></br><br></br>{donateSignerName}",
-    "heroContent": "Private messaging is an essential part of our modern life. Secure communication shelters people from tyranny, protects those fighting against injustice, and empowers defenders of human rights worldwide.<br></br><br></br> However, the well-resourced opponents of privacy are actively working to suppress the tech that guards people's basic human rights and dignities. Politicians around the world are pushing for encryption-busting laws, privacy tech is slandered in the media, and surveillance capitalists are profiting from the chaos.<image></image> Despite the adversity, {appName} continues to provide a safe, secure, and trusted space for people to communicate online. {appName} is a free, private, and secure messaging app. It does not track users or sell your data—it just sends messages, privately. Millions of people around the world have turned to {appName} when they needed a safe and secure place to have a conversation.<br></br><br></br> More than just a tool, {appName} is a symbol of the importance of open-source, transparent, and resilient technology. It is technology like {appName} which safeguards our basic human rights in an era of increasing uncertainty and authoritarianism.",
+    "heroContent": "Private messaging is an essential part of our modern life. Secure communication shelters people from tyranny, protects those fighting against injustice, and empowers defenders of human rights worldwide.<br></br><br></br> However, the well-resourced opponents of privacy are actively working to suppress the tech that guards people's basic human rights and dignities. Politicians around the world are pushing for encryption-busting laws, privacy tech is slandered in the media, and surveillance capitalists are profiting from the chaos.<image></image> Despite the adversity, {appName} continues to provide a safe, secure, and trusted space for people to communicate online. {appName} is a free, private, and secure messaging app. It does not track users or sell your data—it just sends messages, privately. Millions of people around the world have turned to Session when they needed a safe and secure place to have a conversation.<br></br><br></br> More than just a tool, {appName} is a symbol of the importance of open-source, transparent, and resilient technology. It is technology like {appName} which safeguards our basic human rights in an era of increasing uncertainty and authoritarianism.",
     "1": {
       "heading": "A force for good",
       "content": "Technology is transforming our society. Currently, a tiny cohort of powerful individuals and institutions have disproportionate control over the internet. In many cases, tech is being used to silence, manipulate, and suppress. It's time to push back against these forces of power.<image></image>We are agents of change in a world where technology is a tool for upending oppression. We believe in a future where technology is collaborative, transparent, equitable, and liberating."
@@ -204,157 +201,31 @@
       "heading": "Donate via Crypto",
       "content": "You can send {ethSymbol}, {usdcSymbol}, {usdtSymbol} or {btcSymbol} to the following {foundationName} addresses."
     },
-    "buttonCard": "Donate Card",
-    "buttonCrypto": "Donate Crypto"
-  },
-  "pro": {
-    "heading": "Privacy that feels <pro-badge></pro-badge>",
-    "tag": "Upgrade to {appNamePro} and unlock the full potential of private communication",
-    "features": {
-      "priceFrom": "From {price}/Month",
-      "headingMobile": "Features",
-      "detailedRoadmap": "Detailed Roadmap",
-      "1": {
-        "heading": "Free",
-        "tag": "Security for Everyone",
-        "1": {
-          "featureName": "Private & Secure Messaging",
-          "featureDescription": "Send end to end encrypted messages to contacts and groups with full privacy."
-        },
-        "2": {
-          "featureName": "No Phone Numbers",
-          "featureDescription": "Create an account without a phone number or real world identity."
-        },
-        "3": {
-          "featureName": "Onion Routing",
-          "featureDescription": "Use Onion Routing to hide your IP address from eavesdroppers."
-        },
-        "4": {
-          "featureName": "Files & Attachments",
-          "featureDescription": "Send end to end encrypted attachments to contacts and groups up to 10mb."
-        }
-      },
-      "2": {
-        "heading": "{wordPro}",
-        "tag": "Advanced Features",
-        "moreName": "Plus Loads More...",
-        "moreDescription": "More Pro features are on the way. Take a look at what’s <bold>Coming Soon <icon></icon></bold>"
-      },
-      "3": {
-        "heading": "Coming Soon",
-        "tag": "Future {wordPro} Features",
-        "tagMobile": "Coming Soon to {wordPro}",
-        "1": {
-          "featureName": "Larger File Attachments",
-          "featureDescription": "Send attachments which exceed the 10mb file size limit. "
-        },
-        "2": {
-          "featureName": "Bigger Groups",
-          "featureDescription": "Increased member limits in groups where you are an admin."
-        },
-        "3": {
-          "featureName": "Message Editing and Formatting",
-          "featureDescription": "Edit your messages and use advanced formatting features."
-        },
-        "4": {
-          "featureName": "Multiple Identities",
-          "featureDescription": "Manage multiple {appName} accounts from a single device."
-        }
-      }
-    },
-    "info": {
-      "heading": "What is {appNamePro}",
-      "content": "{appNamePro} offers premium features and functionality in the {appName} messaging app. {wordPro} includes unique and exclusive cosmetic upgrades and unlocks additional access to {appNamePossessive} decentralized network.<br></br><br></br>With {wordPro}, users pay to offset the increased network usage of certain activities, such as sending long messages or large attachments."
-    },
-    "upgrade": {
-      "heading": "Upgrade to {wordPro} Beta <platform-badge></platform-badge>",
-      "mobile": {
-        "1": {
-          "upgradeName": "On your {platform} Device",
-          "upgradeDescription": "Open {appName} on your {platform} device, go to {appName} Settings, and tap Upgrade {appName}.",
-          "upgradeSubDescription": "{appName} must have been installed via {platformStoreShort}. Billing is not supported {notSupportedInfo}",
-          "upgradeSubDescriptionNotSupportedInfoAndroid": "via {wordFDroid} or {wordAPK} installs.",
-          "upgradeSubDescriptionNotSupportedInfoIos": "when sideloading {wordIPAs}."
-        },
-        "2": {
-          "upgradeName": "On a linked Device",
-          "upgradeDescription": "Open {appName} on a linked {platformA} or {platformB} device, go to {appName} Settings, and tap Upgrade {appName}.",
-          "upgradeSubDescription": "Soon after upgrading all devices sharing that {appName} account will inherit {wordPro}."
-        }
-      },
-      "desktop": {
-        "1": {
-          "upgradeName": "On a linked device",
-          "upgradeDescription": "Unfortunately, {wordPro} access can only be purchased via the {platformStoreGoogle} or {platformStoreApple}. {appName} developers are working on alternative payment options to allow users to purchase {wordPro} access outside of the {platformStoreGoogle} and {platformStoreApple}.<br></br><br></br>For now, to upgrade a {wordDesktop} device to {wordPro}, open {appName} on a linked {platformAndroid} or {platformIos} device, go to {appName} Settings, and tap Upgrade {appName}.",
-          "upgradeSubDescription": "Soon after upgrading, all devices sharing that {appName} account will inherit {wordPro}."
-        }
-      }
-    },
-    "roadmap": {
-      "heading": "Roadmap",
-      "1": {
-        "featureName": "Larger File Attachments",
-        "featureDescription": "{appNamePro} will remove the constraints on file sharing for {wordPro} users, allowing attachments well beyond the standard {standardUserFileUploadLimit} limit. This feature leverages the {appNameRouterPossessive} capabilities for more efficient file transfers across the network, making it practical to share documents, images, and media files without leaving the secure {appName} environment.",
-        "featureSubheading": "Key benefits:",
-        "featureSublist": "<li><bold>Share complete documents and high-quality media:</bold> Send PDFs, presentations, and spreadsheets without compression or splitting. Transfer photos and videos in their original resolution, preserving quality for professional or personal use.</li><li><bold>Secure file exchange:</bold> Keep sensitive documents within {appNamePossessive} encrypted environment instead of relying on less secure third-party file sharing services.</li><li><bold>Streamlined workflow:</bold> Eliminate the need to switch between apps or platforms when collaborating on projects or sharing important files.</li>"
-      },
-      "2": {
-        "featureName": "Bigger Groups",
-        "featureDescription": "Groups with at least one {wordPro} administrator will accommodate up to {proUserMaxGroupSize} members—triple the standard {standardUserMaxGroupSize}-member limit. This expanded capacity transforms how larger communities can coordinate and communicate privately on {appName}.",
-        "featureSubheading": "Key benefits:",
-        "featureSublist": "<li><bold>Organization-ready:</bold> Support entire departments, teams, or small companies within a single secure group chat.</li><li><bold>Community building:</bold> Run larger interest-based or regional groups without hitting member limits or splitting conversations.</li><li><bold>Event coordination:</bold> Manage conferences, workshops, or large-scale projects with all stakeholders in one encrypted space.</li>"
-      },
-      "3": {
-        "featureName": "Message Editing and Formatting",
-        "featureDescription": "{appNamePro} members will gain access to a full suite of powerful messaging features that enhance how messages are composed and refined. These tools bring professional communication capabilities to {appName} while maintaining complete privacy. These features will also roll out on a limited basis for free users, ensuring everyone benefits from {appNamePossessive} evolution.",
-        "featureSubheading": "Key benefits:",
-        "featureSublist": "<li><bold>Markdown formatting:</bold> Style messages with rich text formatting for clearer communication in 1:1 conversations, group chats and communities.</li><li><bold>Message editing:</bold> Correct typos and update sent messages at any point after sending.</li><li><bold>Professional communication:</bold> Create well-structured messages with bold, italics, lists, and code blocks for technical discussions or detailed explanations</li>"
-      },
-      "4": {
-        "featureName": "Multiple Identities",
-        "featureDescription": "A highly requested feature, multi-account support will allow users to manage multiple {appName} identities within a single installation. This powerful feature will let users compartmentalize different aspects of their digital life without juggling multiple devices or app installations. Free users of {appName} will also have access to multi-account support on a more limited basis.",
-        "featureSubheading": "Key benefits:",
-        "featureSublist": "<li><bold>Identity separation:</bold> Maintain distinct personas for work, personal, and anonymous communications without cross-contamination.</li><li><bold>Simplified switching:</bold> Toggle between accounts instantly without logging in and out or managing multiple apps.</li><li><bold>Enhanced operational security:</bold> Reduce the risk of accidentally mixing professional and personal contacts or conversations.</li>"
-      }
-    },
-    "faq": {
+    "heroAppeal": "Eight years ago, {appName} was founded with a mission to restore your privacy and give you control over your speech and life — in essence, digital freedom. However, without your help today, we won’t be able to continue developing {appName} for much longer. If you’ve ever found value in {appName} or its mission, please give me a moment of your time and read this appeal.<br></br><br></br>{appName} is controversial technology in a time when free speech is not a given, the right to privacy is abhorred, and the truth is a lie. Over the years, the organisations safeguarding {appName} have faced many challenges, but now {appNamePossessive} very survival is at risk.<br></br><br></br>The threats against privacy are now greater than ever before, and {appName} must evolve to face the challenges of the future. {appNamePossessive} current caretaker, the {foundationName}, does not have the funding required to carry {appName} any further. Important work, such as PFS and post-quantum cryptography, is still in progress — and we don’t have enough time left.<br></br><br></br>Our mission is to bring back the freedom, creativity, and privacy that people once felt when communicating online. We’ve planted a seed for a truly free messenger that removes the censors, the surveillers, and the centralized entities that monitor your conversations. So far, that idea has worked. Every month, over {appUserNumber} people use {appName} to send messages, not metadata.<br></br><br></br>{appName} is a platform that is built and owned by its community — not by big tech, private equity, or any other shadowy masters. Now, {appName} is turning to you.<br></br><br></br>The project is on a path to self-sustainability, but the future is fragile. If every {appName} user contributed just one dollar, it would go a long way towards {appName} reaching sustainability. If you've ever considered donating, now is the time to act.<br></br><br></br>{donateSignerName}",
+    "6": {
       "heading": "FAQ",
+      "content": ""
+    },
+    "buttonCard": "Donate Card",
+    "buttonCrypto": "Donate Crypto",
+    "faq": {
       "1": {
-        "question": "What is included in {appNamePro}?",
-        "answer": ""
+        "question": "How can I donate to {appName}?",
+        "answer": "There are currently two ways to support the continued development of {appName}:<br></br><br></br><bold>Donorbox</bold><br></br><br></br>{donationProviderName} is a third-party platform that helps non-profit organizations accept donations through a variety of payment methods. You can donate to the {foundationName} via {donationProviderName} <donate-link>here</donate-link>.<br></br><br></br>Supported payment methods include:<payment-providers></payment-providers><bold>Cryptocurrency</bold><br></br><br></br>You can also donate cryptocurrency directly to the {foundationName} by sending funds to the wallet addresses listed below.<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>This {wordEthereumAddress} accepts donations in {ethSymbol}, as well as {wordErc20} {wordTokens} (such as {usdtSymbol} and {usdcSymbol}) across {wordEvmCompatible} chains, like {ethNetworkName}, {arbNetworkName}, and {baseNetworkName}.<br></br><br></br><bold>Note:</bold> If you are considering providing a donation of more than {largeDonationAmount} using any payment method, please contact us at <donations-email></donations-email>"
       },
       "2": {
-        "question": "How does {appNamePro} affect my privacy?",
-        "answer": ""
+        "question": "What will my donation be used for?",
+        "answer": "Your donation will be received by the <foundation-link>{foundationName}</foundation-link>, a Swiss-based foundation which is the current steward of the {appName} application and project. Your donation will be used to support the ongoing development and sustainability of {appName}."
       },
       "3": {
-        "question": "Is {appName} still free?",
-        "answer": ""
+        "question": "What is the {foundationName}?",
+        "answer": "The {foundationName} ({foundationAcronym}) is a Swiss-based foundation and the steward of the {appName} application and project. You can learn more about the foundation’s role within the {appName} ecosystem <foundation-link>here</foundation-link>."
       },
       "4": {
-        "question": "What is the difference between {wordsProBeta} and {wordPro}?",
-        "answer": ""
-      },
-      "5": {
-        "question": "Can I purchase {appNamePro} for my friend?",
-        "answer": ""
-      },
-      "6": {
-        "question": "How can I purchase {appNamePro} for my account?",
-        "answer": ""
-      },
-      "7": {
-        "question": "Can I refund my purchase?",
-        "answer": ""
-      },
-      "8": {
-        "question": "How are funds from {appNamePro} used?",
-        "answer": ""
-      },
-      "9": {
-        "question": "Will more features be added to {wordPro} in the future?",
-        "answer": ""
+        "question": "Are there any other ways I can help {appName}?",
+        "answer": "Donations are the primary way you can help support {appName} currently. However, if you’re unable to donate, there are several other ways you can help:<ol><li>Share this appeal with friends and family who use {appName} and may be interested in supporting our mission.</li><li>Help translate {appName} into other languages via <crowdin-link>{wordCrowdin}</crowdin-link></li><li>Contribute to {appNamePossessive} <github-link>open source codebase</github-link></li></ol>"
       }
-    }
+    },
+    "appealHeading": "A Personal Appeal From {donateAppealName}"
   }
 }

@@ -25,6 +25,7 @@ import {
 } from '@/lib/proPageSchema';
 import { useRouter } from 'next/router';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+import { notFound } from 'next/navigation';
 
 function ProLogoPath() {
   return (
@@ -154,7 +155,7 @@ const StyledContent = styled.div<{ $alignItems?: string }>`
   gap: 14px;
 `;
 
-const StyledRoundedPanelButtonGroup = styled.div<{
+export const StyledRoundedPanelButtonGroup = styled.div<{
   $isSidePanel?: boolean;
   $isDarkTheme?: boolean;
   $withBorder?: boolean;
@@ -942,7 +943,7 @@ function ProRoadmap() {
   );
 }
 
-const StyledCollapsibleTrigger = styled(CollapsibleTrigger)`
+export const StyledCollapsibleTrigger = styled(CollapsibleTrigger)`
   border-radius: .5rem;
 
   &[data-state="open"] {
@@ -964,7 +965,7 @@ const StyledCollapsibleTrigger = styled(CollapsibleTrigger)`
   }
 `
 
-const StyledCollapsibleContent = styled(CollapsibleContent)`
+export const StyledCollapsibleContent = styled(CollapsibleContent)`
   overflow: hidden;
 
   &[data-state="open"] {
@@ -1077,6 +1078,9 @@ export default function ProPage({
 }
 
 export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext) => {
+  if (process.env.ENABLE_PRO_PAGE !== '1') {
+    return { notFound: true };
+  }
   const locale = context.locale ?? 'en';
   const messages = (await import(`../locales/${locale}.json`)).default;
 

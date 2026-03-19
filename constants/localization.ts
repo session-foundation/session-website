@@ -7,9 +7,12 @@ export enum NON_LOCALIZED_STRING {
   wordsProBeta = 'Pro Beta',
   appToken = 'Session Token',
   foundationName = 'Session Technology Foundation',
+  foundationAcronym = 'STF',
   swissSupervisory = 'Federal Supervisory Authority for Foundations (ESA)',
   lokinet = 'Lokinet',
   ethNetworkName = 'Ethereum',
+  arbNetworkName = 'Arbitrum',
+  baseNetworkName = 'Base',
   ethSymbol = 'ETH',
   usdcSymbol = 'USDC',
   usdtSymbol = 'USDT',
@@ -31,6 +34,15 @@ export enum NON_LOCALIZED_STRING {
   standardUserMaxGroupSize = '100',
   proUserMaxGroupSize = '300',
   appNameRouterPossessive = "Session Router's",
+  addressBitcoin = "bc1qmuyaayx6xdfpvgdu5a0eqgzqrvr5d35f5y6k8w",
+  addressEthereum = "0xec793F400B2c133299ed78f22f5708872555F958",
+  wordEthereumAddress = "Ethereum Address",
+  wordBitcoinAddress = "Bitcoin Address",
+  wordErc20 = "ERC-20",
+  wordTokens = "tokens",
+  wordEvmCompatible = "EVM-compatible",
+  largeDonationAmount = "$50,000 dollars",
+  wordCrowdin = "Crowdin"
 }
 
 export const appUserNumber = 1_500_000;

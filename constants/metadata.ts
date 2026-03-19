@@ -75,7 +75,7 @@ const METADATA = {
   DONATE_PAGE: {
     TYPE: 'article',
     DESCRIPTION:
-      'Donate to Session Today | Session is an end-to-end encrypted messenger that removes sensitive metadata collection for all operating systems.',
+      'Donate | Session is an end-to-end encrypted messenger that removes sensitive metadata collection for all operating systems.',
     OG_IMAGE: {
       URL: '/assets/images/donate-meta.jpg',
       WIDTH: 1024,

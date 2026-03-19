@@ -43,7 +43,7 @@ const InputWithEndAdornment = forwardRef<HTMLInputElement, InputWithEndAdornment
   ({ className, type, variant, endAdornment, ...props }, ref) => {
     return (
       <div className="relative w-full">
-        <textarea
+        <Input
           type={type}
           className={cn(inputVariants({ variant, className }), 'w-full')}
           ref={ref}

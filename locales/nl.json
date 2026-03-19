@@ -174,33 +174,58 @@
       "description": "Bekijk de {appName} Blogs. | {appName} is een end-to-end versleutelde messenger die het verzamelen van gevoelige metadata uitsluit."
     },
     "donate": {
-      "title": "Donate | Support Privacy Technology",
-      "description": "Support to the Session Technology Foundation to protect online privacy. Your donation funds secure, open-source messaging technology that safeguards human rights worldwide."
+      "title": "Doneer | Ondersteun privacytechnologie",
+      "description": "De {foundationName} kan niet doorgaan zonder jouw steun. Doneer vandaag nog om {appName} te helpen in zijn strijd om te overleven."
     }
   },
   "donate": {
-    "heading": "{appName} needs your help",
-    "heroContent": "Private messaging is an essential part of our modern life. Secure communication shelters people from tyranny, protects those fighting against injustice, and empowers defenders of human rights worldwide.<br></br><br></br> However, the well-resourced opponents of privacy are actively working to suppress the tech that guards people's basic human rights and dignities. Politicians around the world are pushing for encryption-busting laws, privacy tech is slandered in the media, and surveillance capitalists are profiting from the chaos.<image></image> Despite the adversity, {appName} continues to provide a safe, secure, and trusted space for people to communicate online. {appName} is a free, private, and secure messaging app. It does not track users or sell your data—it just sends messages, privately. Millions of people around the world have turned to Session when they needed a safe and secure place to have a conversation.<br></br><br></br> More than just a tool, {appName} is a symbol of the importance of open-source, transparent, and resilient technology. It is technology like {appName} which safeguards our basic human rights in an era of increasing uncertainty and authoritarianism.",
+    "heading": "{appName} heeft je hulp nodig",
+    "heroContent": "Privéberichten zijn een essentieel onderdeel van ons moderne leven. Veilige communicatie beschermt mensen tegen tirannie, beschermt degenen die strijden tegen onrecht en versterkt verdedigers van mensenrechten wereldwijd.<br></br><br></br> Tegenstanders van privacy met veel middelen werken echter actief aan het onderdrukken van de technologie die de fundamentele mensenrechten en waardigheid van mensen beschermt. Politici over de hele wereld dringen aan op wetten die encryptie ondermijnen, privacytechnologie wordt in de media belasterd en surveillancekapitalisten profiteren van de chaos.<image></image> Ondanks deze tegenslagen blijft {appName} een veilige, beveiligde en vertrouwde plek bieden waar mensen online kunnen communiceren. {appName} is een gratis, privé en veilige berichtenapp. De app volgt gebruikers niet en verkoopt je gegevens niet — hij verstuurt alleen berichten, privé. Miljoenen mensen over de hele wereld hebben zich tot Session gewend toen ze een veilige en beveiligde plek nodig hadden om een gesprek te voeren.<br></br><br></br> Meer dan alleen een hulpmiddel is {appName} een symbool van het belang van open-source, transparante en veerkrachtige technologie. Het is technologie zoals {appName} die onze fundamentele mensenrechten beschermt in een tijdperk van toenemende onzekerheid en autoritarisme.",
     "1": {
-      "heading": "A force for good",
-      "content": "Technology is transforming our society. Currently, a tiny cohort of powerful individuals and institutions have disproportionate control over the internet. In many cases, tech is being used to silence, manipulate, and suppress. It's time to push back against these forces of power.<image></image>We are agents of change in a world where technology is a tool for upending oppression. We believe in a future where technology is collaborative, transparent, equitable, and liberating."
+      "heading": "Een kracht voor het goede",
+      "content": "Technologie verandert onze samenleving. Op dit moment heeft een kleine groep machtige individuen en instellingen een onevenredige controle over het internet. In veel gevallen wordt technologie gebruikt om het zwijgen op te leggen, te manipuleren en te onderdrukken. Het is tijd om weerstand te bieden aan deze machtsstructuren.<image></image>Wij zijn aanjagers van verandering in een wereld waarin technologie een middel is om onderdrukking omver te werpen. Wij geloven in een toekomst waarin technologie collaboratief, transparant, rechtvaardig en bevrijdend is."
     },
     "2": {
-      "heading": "Meet your privacy defenders",
-      "content": "{appName} is stewarded by the {foundationName}, a Swiss foundation dedicated to maintaining the open-source {appName} ecosystem. We are a team of technologists, engineers, and activists dedicated to the mission of restoring online privacy.<image></image> The financial independence of the {foundationName} allows us to fearlessly build the privacy technology that protects everyone's human rights. Your support will contribute to new {appName} development, fund essential network infrastructure, and the ongoing fight for freedom and privacy rights.<br></br><br></br> We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}."
+      "heading": "Maak kennis met de verdedigers van je privacy",
+      "content": "{appName} wordt beheerd door de {foundationName}, een Zwitserse stichting die zich inzet voor het onderhouden van het open-source-{appName}-ecosysteem. Wij zijn een team van technologen, ingenieurs en activisten dat zich inzet voor de missie om online privacy te herstellen.<image></image> De financiële onafhankelijkheid van de {foundationName} stelt ons in staat om zonder angst privacytechnologie te bouwen die ieders mensenrechten beschermt. Je steun draagt bij aan de verdere ontwikkeling van {appName}, financiert essentiële netwerkinfrastructuur en ondersteunt de voortdurende strijd voor vrijheid en privacyrechten.<br></br><br></br> We accepteren momenteel donaties via creditcard en cryptocurrency. Er is een cryptocurrency-donatieadres beschikbaar voor {ethNetworkName} en andere EVM-compatibele tokens, zoals {usdcSymbol}."
     },
     "3": {
-      "heading": "Thank you for caring",
-      "content": "The {foundationName} is a Swiss-registered foundation. We are a non-profit oriented organization, subject to audits from the {swissSupervisory}. Our work helps protect privacy for all and shield those most at risk.<image></image>We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}.<br></br><br></br>Note that donations are not tax-deductible. If you have queries about donations or gifts, contact us via email: <contact-email></contact-email> <br></br><br></br>Please verify the URL is <validation-url></validation-url> before sending funds. If needed, addresses can be authenticated via email."
+      "heading": "Bedankt dat je betrokken bent",
+      "content": "De {foundationName} is een in Zwitserland geregistreerde stichting. Wij zijn een organisatie zonder winstoogmerk en staan onder toezicht van audits door de {swissSupervisory}. Ons werk helpt de privacy van iedereen te beschermen en biedt bescherming aan degenen die het grootste risico lopen.<image></image>We accepteren momenteel donaties via creditcard en cryptocurrency. Er is een cryptocurrency-donatieadres beschikbaar voor {ethNetworkName} en andere EVM-compatibele tokens, zoals {usdcSymbol}.<br></br><br></br>Houd er rekening mee dat donaties niet fiscaal aftrekbaar zijn. Als je vragen hebt over donaties of schenkingen, neem dan per e-mail contact met ons op: <contact-email></contact-email> <br></br><br></br>Controleer voordat je geld overmaakt of de URL <validation-url></validation-url> is. Indien nodig kunnen adressen via e-mail worden geverifieerd."
     },
     "4": {
-      "heading": "Donate via Credit Card ({donationProviderName})",
+      "heading": "Doneer via creditcard ({donationProviderName})",
       "content": ""
     },
     "5": {
-      "heading": "Donate via Crypto",
-      "content": "You can send {ethSymbol}, {usdcSymbol}, {usdtSymbol} or {btcSymbol} to the following {foundationName} addresses."
+      "heading": "Doneer via crypto",
+      "content": "Je kunt {ethSymbol}, {usdcSymbol}, {usdtSymbol} of {btcSymbol} sturen naar de volgende adressen van {foundationName}."
     },
-    "button": "Donate Now"
+    "heroAppeal": "Acht jaar geleden werd {appName} opgericht met de missie om je privacy te herstellen en je controle te geven over je meningsuiting en je leven — in essentie: digitale vrijheid. Maar zonder jouw hulp vandaag kunnen we niet veel langer doorgaan met de ontwikkeling van {appName}. Als {appName} of zijn missie ooit waarde voor je heeft gehad, vraag ik je om even de tijd te nemen en deze oproep te lezen.<br></br><br></br>{appName} is controversiële technologie in een tijd waarin vrije meningsuiting niet vanzelfsprekend is, het recht op privacy wordt verafschuwd en de waarheid een leugen is. In de loop der jaren hebben de organisaties die {appName} beschermen veel uitdagingen gekend, maar nu staat het voortbestaan van {appNamePossessive} zelf op het spel.<br></br><br></br>De bedreigingen voor privacy zijn nu groter dan ooit, en {appName} moet zich ontwikkelen om de uitdagingen van de toekomst aan te kunnen. De huidige beheerder van {appNamePossessive}, de {foundationName}, beschikt niet over de financiering die nodig is om {appName} verder te brengen. Belangrijk werk, zoals PFS en post-quantumcryptografie, is nog in uitvoering — en we hebben niet veel tijd meer.<br></br><br></br>Onze missie is om de vrijheid, creativiteit en privacy terug te brengen die mensen ooit voelden wanneer ze online communiceerden. We hebben een zaadje geplant voor een echt vrije messenger die censors, toezichthouders en gecentraliseerde entiteiten die je gesprekken monitoren, uitschakelt. Tot nu toe werkt dat idee. Elke maand gebruiken meer dan {appUserNumber} mensen {appName} om berichten te versturen, geen metadata.<br></br><br></br>{appName} is een platform dat is gebouwd door en eigendom is van de gemeenschap — niet van big tech, private equity of welke schimmige machthebbers dan ook. Nu wendt {appName} zich tot jou.<br></br><br></br>Het project is op weg naar zelfvoorzienendheid, maar de toekomst is kwetsbaar. Als elke gebruiker van {appName} slechts één dollar zou bijdragen, zou dat een grote stap zijn richting een duurzame toekomst voor {appName}. Als je ooit hebt overwogen om te doneren, dan is dit het moment om in actie te komen.<br></br><br></br>{donateSignerName}",
+    "6": {
+      "heading": "Veelgestelde vragen",
+      "content": ""
+    },
+    "buttonCard": "Doneer met kaart",
+    "buttonCrypto": "Doneer met crypto",
+    "faq": {
+      "1": {
+        "question": "Hoe kan ik doneren aan {appName}?",
+        "answer": "Er zijn momenteel twee manieren om de verdere ontwikkeling van {appName} te ondersteunen:<br></br><br></br><bold>Donorbox</bold><br></br><br></br>{donationProviderName} is een platform van een derde partij dat non-profitorganisaties helpt donaties te accepteren via verschillende betaalmethoden. Je kunt <donate-link>hier</donate-link> aan de {foundationName} doneren via {donationProviderName}.<br></br><br></br>Ondersteunde betaalmethoden zijn onder meer:<payment-providers></payment-providers><bold>Cryptocurrency</bold><br></br><br></br>Je kunt ook rechtstreeks cryptocurrency doneren aan de {foundationName} door geld te sturen naar de hieronder vermelde walletadressen.<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>Dit {wordEthereumAddress} accepteert donaties in {ethSymbol}, evenals {wordErc20} {wordTokens} (zoals {usdtSymbol} en {usdcSymbol}) op {wordEvmCompatible}-chains, zoals {ethNetworkName}, {arbNetworkName} en {baseNetworkName}.<br></br><br></br><bold>Opmerking:</bold> Als je overweegt een donatie van meer dan {largeDonationAmount} te doen via welke betaalmethode dan ook, neem dan contact met ons op via <donations-email></donations-email>"
+      },
+      "2": {
+        "question": "Waarvoor wordt mijn donatie gebruikt?",
+        "answer": "Je donatie wordt ontvangen door de <foundation-link>{foundationName}</foundation-link>, een in Zwitserland gevestigde stichting die de huidige beheerder is van de {appName}-applicatie en het project. Je donatie wordt gebruikt ter ondersteuning van de voortdurende ontwikkeling en duurzaamheid van {appName}."
+      },
+      "3": {
+        "question": "Wat is de {foundationName}?",
+        "answer": "De {foundationName} ({foundationAcronym}) is een in Zwitserland gevestigde stichting en de beheerder van de {appName}-applicatie en het project. Je kunt <foundation-link>hier</foundation-link> meer lezen over de rol van de stichting binnen het {appName}-ecosysteem."
+      },
+      "4": {
+        "question": "Zijn er nog andere manieren waarop ik {appName} kan helpen?",
+        "answer": "Donaties zijn momenteel de belangrijkste manier waarop je {appName} kunt ondersteunen. Als je echter niet kunt doneren, zijn er verschillende andere manieren waarop je kunt helpen:<ol><li>Deel deze oproep met vrienden en familie die {appName} gebruiken en mogelijk geïnteresseerd zijn om onze missie te steunen.</li><li>Help {appName} naar andere talen te vertalen via <crowdin-link>{wordCrowdin}</crowdin-link></li><li>Draag bij aan de <github-link>open-sourcecodebase</github-link> van {appNamePossessive}</li></ol>"
+      }
+    },
+    "appealHeading": "A Personal Appeal From {donateAppealName}"
   }
 }
