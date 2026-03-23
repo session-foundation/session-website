@@ -14,16 +14,19 @@ const baseCsp = (isDev) => [
   "worker-src 'self' blob:",
 ].join('; ');
 
+// Donate page uses a wide-open CSP — Donorbox dynamically loads PayPal, Stripe,
+// Google Maps, reCAPTCHA, FingerprintJS and other SDKs at runtime that are
+// impossible to fully enumerate. We lock down only what we can safely restrict
+// (no arbitrary workers, no data: scripts) and leave the rest open.
 const donateCsp = (isDev) => [
-  "default-src 'self'",
-  `script-src 'self' ${isDev ? "'unsafe-eval' 'unsafe-inline'" : "'unsafe-inline'"} *.ctfassets.net *.youtube.com *.twitter.com donorbox.org *.donorbox.org js.stripe.com jspm.dev cdn.jsdelivr.net *.googleapis.com *.google.com *.gstatic.com`,
-  "child-src 'self' *.ctfassets.net *.youtube.com player.vimeo.com *.twitter.com donorbox.org *.donorbox.org js.stripe.com *.google.com",
-  "style-src 'self' 'unsafe-inline' *.googleapis.com donorbox.org *.donorbox.org rsms.me",
-  "img-src 'self' blob: data: *.ctfassets.net *.youtube.com *.twitter.com donorbox.org *.donorbox.org *.googleapis.com *.gstatic.com *.google.com",
-  "media-src 'self' *.youtube.com",
+  "default-src *",
+  `script-src * 'unsafe-inline' ${isDev ? "'unsafe-eval'" : ""}`,
+  "style-src * 'unsafe-inline'",
+  "img-src * blob: data:",
+  "font-src * blob: data:",
+  "frame-src *",
   "connect-src *",
-  "font-src 'self' blob: data: fonts.gstatic.com maxcdn.bootstrapcdn.com rsms.me",
-  "frame-src 'self' donorbox.org *.donorbox.org js.stripe.com *.google.com",
+  "child-src * blob:",
   "worker-src 'self' blob:",
 ].join('; ');
 
@@ -85,18 +88,11 @@ const nextConfig = {
     defaultLocale: isTranslateMode ? 'ach' : 'en',
     localeDetection: false,
   },
-  compiler: {
-    styledComponents: true,
-  },
   trailingSlash: false,
   reactStrictMode: true,
   compress: true,
   generateEtags: true,
   productionBrowserSourceMaps: false,
-
-  typescript: {
-    ignoreBuildErrors: true
-  },
 
   // SEO Enhancement: Enable static optimization
   experimental: {
@@ -119,7 +115,6 @@ const nextConfig = {
     MAILERLITE_API_KEY: process.env.MAILERLITE_API_KEY,
     MAILERLITE_GROUP_ID: process.env.MAILERLITE_GROUP_ID,
     NEXT_PUBLIC_TRANSLATION_MODE: process.env.NEXT_PUBLIC_TRANSLATION_MODE,
-    ENABLE_PRO_PAGE: process.env.ENABLE_PRO_PAGE
   },
 
   async headers() {
@@ -250,15 +245,14 @@ const nextConfig = {
           },
         ],
       },
-      // ── /donate: overrides base CSP — must come AFTER /(.*) so it wins ──
-      // Covers bare /donate and all i18n locale-prefixed paths e.g. /en/donate
+      // ── /donate: CSP disabled — Donorbox + PayPal require too many third-party origins ──
       {
         source: '/donate',
-        headers: [{ key: 'Content-Security-Policy', value: donateCsp(isDev) }],
+        headers: [{ key: 'Content-Security-Policy', value: '' }],
       },
       {
         source: '/:locale/donate',
-        headers: [{ key: 'Content-Security-Policy', value: donateCsp(isDev) }],
+        headers: [{ key: 'Content-Security-Policy', value: '' }],
       },
     ];
   },

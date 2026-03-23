@@ -58,7 +58,7 @@ export function SanityCryptoAddressDisplay({
         <IconComp className="h-5 w-5" />
         <span className="font-semibold text-base md:text-lg">{value.cryptoAddress.name}</span>
       </div>
-      <IconComp className="hidden h-9 w-9 md:block" />
+      <IconComp className="hidden h-9 w-9 min-w-max md:block" />
       <CopyableInputDisplay
         className="text-black bg-white"
         value={value.cryptoAddress.address}
