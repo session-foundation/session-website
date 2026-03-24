@@ -3,7 +3,6 @@ import classNames from 'classnames';
 import type { GetStaticProps, GetStaticPropsContext } from 'next';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
-import Script from 'next/script';
 import { useTranslations } from 'next-intl';
 import {
   forwardRef,
@@ -11,18 +10,26 @@ import {
   type ReactElement,
   type ReactNode,
   useEffect,
-  useRef,
   useState,
 } from 'react';
-import styled from 'styled-components';
 import Container from '@/components/Container';
+import { BankIcon } from '@/components/copied/BankIcon';
+import { BitcoinIcon } from '@/components/copied/BitcoinIcon';
 import { SanityCryptoAddressDisplay } from '@/components/copied/CryptoAddressDisplay';
+import { EthIcon } from '@/components/copied/EthIcon';
+import { MoneroIcon } from '@/components/copied/MoneroIcon';
+import { USDCIcon } from '@/components/copied/USDCIcon';
 import { LucideIcon } from '@/components/LucideIconWrapper';
 import Button from '@/components/ui/Button';
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+import { Collapsible } from '@/components/ui/collapsible';
 import Headline from '@/components/ui/Headline';
 import Layout from '@/components/ui/Layout';
-import { appUserNumber, localeArgs, NON_LOCALIZED_STRING } from '@/constants/localization';
+import {
+  appUserNumber,
+  localeArgs,
+  NON_LOCALIZED_STRING,
+  SILENT_DONOR_LEGAL_DISCLAIMER,
+} from '@/constants/localization';
 import METADATA from '@/constants/metadata';
 import { LUCIDE_ICONS_UNICODE } from '@/lib/lucide';
 import {
@@ -60,7 +67,7 @@ const sectionVariants = {
     headlineColor: 'primary',
   },
   [SectionVariant.GREEN]: {
-    section: 'bg-primary text-gray-dark',
+    section: 'bg-primary text-gray-dark selection:bg-black selection:text-primary',
     headlineColor: 'gray-dark',
   },
   [SectionVariant.WHITE]: {
@@ -69,9 +76,6 @@ const sectionVariants = {
   },
 } as const;
 
-function variantFromNumber(n: number): SectionVariant {
-  return (n - 1) % 3;
-}
 const DONORBOX_SCRIPT_URL = 'https://donorbox.org/widgets.js';
 const DONORBOX_SCRIPT_ID = 'donorbox-widget-script';
 const DONORBOX_CAMPAIGN = 'session-technology-foundation-donations';
@@ -129,14 +133,18 @@ interface SectionProps extends HTMLAttributes<HTMLDivElement> {
   hideHeadline?: boolean;
   paragraphClassName?: string;
   containerClassName?: string;
-  section: '1' | '2' | '3' | '4' | '5' | '6';
+  localeKey: 1 | 2 | 3 | 4 | 5 | 6 | 7;
+  styleVariant: SectionVariant;
 }
+
+const cryptoIconClassName = 'h-6 w-6 md:w-7 md:h-7 -mr-1.5 md:-mr-2';
 
 const Section = forwardRef<HTMLDivElement, SectionProps>(
   (
     {
       imageSrc,
-      section,
+      localeKey,
+      styleVariant,
       hideHeadline,
       children,
       paragraphClassName,
@@ -148,25 +156,23 @@ const Section = forwardRef<HTMLDivElement, SectionProps>(
   ) => {
     const t = useTranslations('donate');
 
-    const variant = variantFromNumber(Number.parseInt(section));
-
     return (
       <section
         {...props}
-        className={classNames(sectionVariants[variant].section, 'w-screen', className)}
+        className={classNames(sectionVariants[styleVariant].section, 'w-screen', className)}
         ref={ref}
       >
         {!hideHeadline ? (
           <Headline
             classes={classNames('text-lg font-bold pt-16', 'lg:pt-20')}
-            color={sectionVariants[variant].headlineColor}
+            color={sectionVariants[styleVariant].headlineColor}
             containerWidths={{
               small: '10rem',
               medium: '34rem',
               large: '67rem',
             }}
           >
-            <h2>{t(`${section}.heading`, { ...NON_LOCALIZED_STRING })}</h2>
+            <h2>{t(`${localeKey}.heading`, { ...NON_LOCALIZED_STRING })}</h2>
           </Headline>
         ) : null}
         <Container
@@ -195,7 +201,7 @@ const Section = forwardRef<HTMLDivElement, SectionProps>(
               paragraphClassName
             )}
           >
-            {t.rich(`${section}.content`, {
+            {t.rich(`${localeKey}.content`, {
               ...NON_LOCALIZED_STRING,
               br: () => <br />,
               image: () => (imageSrc ? <DonateImage src={imageSrc} /> : null),
@@ -205,6 +211,31 @@ const Section = forwardRef<HTMLDivElement, SectionProps>(
                 </Link>
               ),
               'validation-url': () => <strong>https://getsession.org</strong>,
+              'silent-donor-link': (chunks) => (
+                <Link
+                  href="https://www.silentdonor.com/donate-now-session-technology-foundation/"
+                  target="_blank"
+                  className="underline whitespace-nowrap"
+                >
+                  {chunks}
+                </Link>
+              ),
+              'crypto-icons': (chunks) => (
+                <div className="inline-flex whitespace-nowrap flex-nowrap items-center">
+                  {chunks}
+                  <MoneroIcon
+                    style={{ zIndex: 6 }}
+                    className={classNames(
+                      cryptoIconClassName,
+                      'ml-1 md:ml-1.5 bg-white rounded-full'
+                    )}
+                  />
+                  <BitcoinIcon style={{ zIndex: 5 }} className={cryptoIconClassName} />
+                  <EthIcon style={{ zIndex: 4 }} className={cryptoIconClassName} />
+                  <USDCIcon style={{ zIndex: 3 }} className={cryptoIconClassName} />
+                  <BankIcon style={{ zIndex: 2 }} className={cryptoIconClassName} />
+                </div>
+              ),
             })}
             {children}
           </div>
@@ -213,7 +244,6 @@ const Section = forwardRef<HTMLDivElement, SectionProps>(
     );
   }
 );
-
 function HeroContainer({ children, className }: { children: ReactNode; className?: string }) {
   return (
     <Container
@@ -447,7 +477,8 @@ export default function Donate(): ReactElement {
         </div>
       </div>
       <Section
-        section="4"
+        localeKey={4}
+        styleVariant={SectionVariant.GREEN}
         id="card"
         paragraphClassName="md:w-max"
         className="min-h-[1150px] max-w-screen"
@@ -455,7 +486,7 @@ export default function Donate(): ReactElement {
       >
         <DonorBox />
       </Section>
-      <Section section="5" id="crypto">
+      <Section localeKey={5} styleVariant={SectionVariant.GRAY} id="crypto">
         <SanityCryptoAddressDisplay
           value={{
             cryptoAddress: {
@@ -484,8 +515,30 @@ export default function Donate(): ReactElement {
           }}
         />
       </Section>
+      <Section localeKey={6} styleVariant={SectionVariant.GREEN} id="silent-donor" className="">
+        <a
+          href="https://www.silentdonor.com/donate-now-session-technology-foundation/"
+          target="_blank"
+          rel="noopener"
+          referrerPolicy="no-referrer"
+        >
+          <Button
+            size="large"
+            shape="semiround"
+            bgColor="gray"
+            textColor="white"
+            classes="text-xl md:text-2xl font-bold block my-8 md:py-4"
+          >
+            {t('6.heading', { ...NON_LOCALIZED_STRING })}
+          </Button>
+        </a>
+        <div id="monero" />
+        <div id="xmr" />
+        <p className="text-xs md:text-base italic">{SILENT_DONOR_LEGAL_DISCLAIMER}</p>
+      </Section>
       <Section
-        section="6"
+        localeKey={7}
+        styleVariant={SectionVariant.WHITE}
         id="faq"
         paragraphClassName="w-full"
         containerClassName="w-full p-0 items-center"

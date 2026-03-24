@@ -46,7 +46,11 @@ export enum NON_LOCALIZED_STRING {
   wordEvmCompatible = 'EVM-compatible',
   largeDonationAmount = '$50,000 dollars',
   wordCrowdin = 'Crowdin',
+  wordSilentDonor = 'Silent Donor',
 }
+
+export const SILENT_DONOR_LEGAL_DISCLAIMER =
+  'Silent Donor is a third party service, and their terms and privacy policies govern your use of their services. The availability of tax deductible gift status may vary depending on your jurisdiction. The Session Technology Foundation does not accept any liability for any third party websites, apps, content, or other products or services.';
 
 export const appUserNumber = 1_500_000;
 
