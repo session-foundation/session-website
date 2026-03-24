@@ -5,19 +5,31 @@ import Image from 'next/legacy/image';
 import Link from 'next/link';
 import Script from 'next/script';
 import { useTranslations } from 'next-intl';
-import { forwardRef, useEffect, useRef, useState, type HTMLAttributes, type ReactElement, type ReactNode } from 'react';
+import {
+  forwardRef,
+  type HTMLAttributes,
+  type ReactElement,
+  type ReactNode,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
+import styled from 'styled-components';
 import Container from '@/components/Container';
 import { SanityCryptoAddressDisplay } from '@/components/copied/CryptoAddressDisplay';
+import { LucideIcon } from '@/components/LucideIconWrapper';
 import Button from '@/components/ui/Button';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import Headline from '@/components/ui/Headline';
 import Layout from '@/components/ui/Layout';
 import { appUserNumber, localeArgs, NON_LOCALIZED_STRING } from '@/constants/localization';
 import METADATA from '@/constants/metadata';
-import styled from 'styled-components';
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
-import { LucideIcon } from '@/components/LucideIconWrapper';
 import { LUCIDE_ICONS_UNICODE } from '@/lib/lucide';
-import { StyledCollapsibleContent, StyledCollapsibleTrigger, StyledRoundedPanelButtonGroup } from './pro';
+import {
+  StyledCollapsibleContent,
+  StyledCollapsibleTrigger,
+  StyledRoundedPanelButtonGroup,
+} from './pro';
 
 function DonateImage({ src, className }: { src: string; className?: string }) {
   return (
@@ -90,9 +102,7 @@ export function DonorBox({ showDonateCrypto }: { showDonateCrypto?: boolean }) {
   }, []);
 
   return (
-    <div
-      className="sm:min-w-[350px] md:min-w-[420px]"
-    >
+    <div className="sm:min-w-[350px] md:min-w-[420px]">
       <div
         dangerouslySetInnerHTML={{
           __html: `<dbox-widget 
@@ -100,21 +110,18 @@ export function DonorBox({ showDonateCrypto }: { showDonateCrypto?: boolean }) {
           type="donation_form"
           interval="1 T" 
           enable-auto-scroll="true">
-        </dbox-widget>`
+        </dbox-widget>`,
         }}
       />
-      {showDonateCrypto ? <a href="#crypto">
-        <Button
-          size="medium"
-          shape="semiround"
-          classes="text-xl w-full mt-8 mb-2 py-3"
-        >
-          {t('buttonCrypto')}
-        </Button>
-      </a> : null}
+      {showDonateCrypto ? (
+        <a href="#crypto">
+          <Button size="medium" shape="semiround" classes="text-xl w-full mt-8 mb-2 py-3">
+            {t('buttonCrypto')}
+          </Button>
+        </a>
+      ) : null}
     </div>
   );
-
 }
 
 interface SectionProps extends HTMLAttributes<HTMLDivElement> {
@@ -126,7 +133,19 @@ interface SectionProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 const Section = forwardRef<HTMLDivElement, SectionProps>(
-  ({ imageSrc, section, hideHeadline, children, paragraphClassName, containerClassName, className, ...props }, ref) => {
+  (
+    {
+      imageSrc,
+      section,
+      hideHeadline,
+      children,
+      paragraphClassName,
+      containerClassName,
+      className,
+      ...props
+    },
+    ref
+  ) => {
     const t = useTranslations('donate');
 
     const variant = variantFromNumber(Number.parseInt(section));
@@ -217,8 +236,8 @@ function HeroContainer({ children, className }: { children: ReactNode; className
 }
 
 function FloatingButtons() {
-  const [hideFloatingButtons, setHideFloatingButtons] = useState(false)
-  const [pastCrypto, setPastCrypto] = useState(false)
+  const [hideFloatingButtons, setHideFloatingButtons] = useState(false);
+  const [pastCrypto, setPastCrypto] = useState(false);
   const t = useTranslations('donate');
 
   useEffect(() => {
@@ -240,14 +259,14 @@ function FloatingButtons() {
 
   return (
     <div
-      className='fixed w-screen px-6 py-6 z-[9999999] bg-white md:hidden grid grid-cols-1 sm:grid-cols-2 gap-4 transition-transform duration-300 ease-in-out'
+      className="fixed z-[9999999] grid w-screen grid-cols-1 gap-4 bg-white px-6 py-6 transition-transform duration-300 ease-in-out sm:grid-cols-2 md:hidden"
       style={{
         boxShadow: '0 -1px 15.3px 0 rgba(0, 0, 0, 0.14)',
         bottom: '0dvh',
         transform: pastCrypto || hideFloatingButtons ? 'translateY(100%)' : 'translateY(0%)',
       }}
     >
-      <a href="#card" className='w-full'>
+      <a href="#card" className="w-full">
         <Button
           size="medium"
           shape="semiround"
@@ -256,7 +275,7 @@ function FloatingButtons() {
           {t('buttonCard')}
         </Button>
       </a>
-      <a href="#crypto" className='w-full'>
+      <a href="#crypto" className="w-full">
         <Button
           size="medium"
           shape="semiround"
@@ -266,29 +285,29 @@ function FloatingButtons() {
         </Button>
       </a>
       <Button
-        classes='absolute top-1 -right-1 px-0 py-0 h-3 w-3'
+        classes="absolute top-1 -right-1 px-0 py-0 h-3 w-3"
         size="medium"
         shape="round"
-        bgColor='none'
-        textColor='black'
+        bgColor="none"
+        textColor="black"
         onClick={() => setHideFloatingButtons(true)}
       >
-        <LucideIcon unicode={LUCIDE_ICONS_UNICODE.X} />
+        <LucideIcon unicode={LUCIDE_ICONS_UNICODE.X} iconSize="small" />
       </Button>
     </div>
   );
 }
 
-function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 }) {
+function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 }) {
   const t = useTranslations('donate.faq');
 
-  const question = t(`${localeKey}.question`, localeArgs)
+  const question = t(`${localeKey}.question`, localeArgs);
   const answer = t.rich(`${localeKey}.answer`, {
     ...localeArgs,
     br: () => <br />,
-    bold: (chunks: ReactNode) => <strong className='font-bold'>{chunks}</strong>,
+    bold: (chunks: ReactNode) => <strong className="font-bold">{chunks}</strong>,
     'payment-providers': () => (
-      <ul className="ml-7 my-4">
+      <ul className="my-4 ml-7">
         <li className="list-disc">Credit Card and Debit Card</li>
         <li className="list-disc">Apple Pay</li>
         <li className="list-disc">Google Pay</li>
@@ -297,26 +316,42 @@ function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 }
         <li className="list-disc">Bank Transfer</li>
         <li className="list-disc">Link</li>
         <li className="list-disc">And more</li>
-      </ul>),
-    'ol': (chunks) => (
-      <ol className="ml-7 my-4">
+      </ul>
+    ),
+    ol: (chunks) => <ol className="my-4 ml-7">{chunks}</ol>,
+    li: (chunks) => <li className="list-decimal">{chunks}</li>,
+    'donations-email': () => (
+      <Link className="text-primary-dark" href="mailto:donations@getsession.org">
+        donations@getsession.org
+      </Link>
+    ),
+    'donate-link': (chunks) => (
+      <a href="#card" className="text-primary-dark">
         {chunks}
-      </ol>),
-    'li': (chunks) => <li className='list-decimal'>{chunks}</li>,
-    'donations-email': () => <Link className="text-primary-dark" href="mailto:donations@getsession.org">
-      donations@getsession.org
-    </Link>,
-    'donate-link': (chunks) => <a href="#card" className='text-primary-dark'>{chunks}</a>,
-    'foundation-link': (chunks) => <Link href="https://session.foundation" className='text-primary-dark'>{chunks}</Link>,
-    'github-link': (chunks) => <Link href="https://github.com/session-foundation/" className='text-primary-dark'>{chunks}</Link>,
-    'crowdin-link': (chunks) => <Link href="https://getsession.org/translate" className='text-primary-dark'>{chunks}</Link>,
-  })
+      </a>
+    ),
+    'foundation-link': (chunks) => (
+      <Link href="https://session.foundation" className="text-primary-dark">
+        {chunks}
+      </Link>
+    ),
+    'github-link': (chunks) => (
+      <Link href="https://github.com/session-foundation/" className="text-primary-dark">
+        {chunks}
+      </Link>
+    ),
+    'crowdin-link': (chunks) => (
+      <Link href="https://getsession.org/translate" className="text-primary-dark">
+        {chunks}
+      </Link>
+    ),
+  });
 
-  const id = question.toLocaleLowerCase().replaceAll(' ', '-').replaceAll('?', '')
+  const id = question.toLocaleLowerCase().replaceAll(' ', '-').replaceAll('?', '');
 
   return (
-    <Collapsible className='transition-all duration-300 w-full' id={id}>
-      <StyledCollapsibleTrigger className="flex w-full flex-row gap-2 bg-[#E8E8E8] px-2 py-2 text-left font-bold transition-all duration-300 items-center leading-0">
+    <Collapsible className="w-full transition-all duration-300" id={id}>
+      <StyledCollapsibleTrigger className="flex w-full flex-row items-center gap-2 bg-[#E8E8E8] px-2 py-2 text-left font-bold leading-0 transition-all duration-300">
         <LucideIcon unicode={LUCIDE_ICONS_UNICODE.PLUS} iconSize="medium" />
         <span className="whitespace-normal leading-0">{question}</span>
         <a href={`#${id}`} style={{ lineHeight: 0 }}>
@@ -327,11 +362,9 @@ function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 }
           />
         </a>
       </StyledCollapsibleTrigger>
-      <StyledCollapsibleContent className='rounded-b-xl transition-all duration-300'>
-        <StyledRoundedPanelButtonGroup className='rounded-b-xl text-left px-6'>
-          <p className='whitespace-normal break-words'>
-            {answer}
-          </p>
+      <StyledCollapsibleContent className="rounded-b-xl transition-all duration-300">
+        <StyledRoundedPanelButtonGroup className="rounded-b-xl px-6 text-left">
+          <p className="whitespace-normal break-words">{answer}</p>
         </StyledRoundedPanelButtonGroup>
       </StyledCollapsibleContent>
     </Collapsible>
@@ -340,9 +373,8 @@ function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 }
 
 function DonateFAQ() {
   return (
-    <div
-      className="flex w-full flex-col items-center gap-4 self-center justify-center">
-      <div className={'w-full items-center self-center justify-center flex px-4 md:ml-6'}>
+    <div className="flex w-full flex-col items-center justify-center gap-4 self-center">
+      <div className={'flex w-full items-center justify-center self-center px-4 md:ml-6'}>
         <div className="flex w-full max-w-3xl flex-col gap-3 text-lg">
           <FAQItem localeKey={1} />
           <FAQItem localeKey={2} />
@@ -358,7 +390,12 @@ export default function Donate(): ReactElement {
   const t = useTranslations('donate');
 
   return (
-    <Layout localeKey="donate" metadata={METADATA.DONATE_PAGE} showBanner={false} hideCommunityNotice={true}>
+    <Layout
+      localeKey="donate"
+      metadata={METADATA.DONATE_PAGE}
+      showBanner={false}
+      hideCommunityNotice={true}
+    >
       <div className="wrap flex w-screen flex-row flex-wrap pb-10 md:pb-28">
         <HeroContainer className="md:mb-4 lg:mt-16 2xl:mx-0 2xl:mt-16 2xl:ml-auto 2xl:max-w-5xl 2xl:pb-0 2xl:pl-[180px]">
           <div className="mt-4 mb-8 w-full md:mt-8 md:mb-10">
@@ -446,10 +483,9 @@ export default function Donate(): ReactElement {
             },
           }}
         />
-
       </Section>
       <Section
-        section='6'
+        section="6"
         id="faq"
         paragraphClassName="w-full"
         containerClassName="w-full p-0 items-center"

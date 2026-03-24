@@ -6,7 +6,11 @@ import GroupNotice from '@/components/sections/GroupNotice';
 import Button from '@/components/ui/Button';
 import { useScreen } from '@/contexts/screen';
 
-export default function EmailSignup({ hideCommunityNotice }: { hideCommunityNotice?: boolean }): ReactElement {
+export default function EmailSignup({
+  hideCommunityNotice,
+}: {
+  hideCommunityNotice?: boolean;
+}): ReactElement {
   const t = useTranslations('email');
   const { isSmall } = useScreen();
 

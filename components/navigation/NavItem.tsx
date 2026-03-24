@@ -148,7 +148,7 @@ export default function NavItem(props: NavItemProps): ReactElement {
             className={classNames(
               'w-full overflow-hidden',
               'transform transition-all duration-300',
-              'lg:absolute lg:top-12 lg:w-44 lg:overflow-visible lg:bg-white lg:invisible lg:group-hover:visible lg:opacity-0',
+              'lg:invisible lg:absolute lg:top-12 lg:w-44 lg:overflow-visible lg:bg-white lg:opacity-0 lg:group-hover:visible',
               'lg:duration-300',
               'lg:group-hover:opacity-100 lg:group-hover:duration-700',
               (isSmall || isMedium) && IsDropdownExpanded

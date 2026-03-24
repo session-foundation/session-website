@@ -36,7 +36,7 @@ export default function Layout({
       />
       {showBanner ? <Banner /> : null}
       <Nav />
-      <main className='overflow-x-hidden'>{children}</main>
+      <main className="overflow-x-hidden">{children}</main>
       <EmailSignup hideCommunityNotice={hideCommunityNotice} />
       <Footer />
     </>

@@ -35,19 +35,19 @@ export enum NON_LOCALIZED_STRING {
   standardUserMaxGroupSize = '100',
   proUserMaxGroupSize = '300',
   appNameRouterPossessive = "Session Router's",
-  addressBitcoin = "bc1qmuyaayx6xdfpvgdu5a0eqgzqrvr5d35f5y6k8w",
-  addressBitcoinCash = "qq7x2x7wa5gtl8s2wzq45h83vcczeenpgu2e2jlm4v",
-  addressEthereum = "0xec793F400B2c133299ed78f22f5708872555F958",
-  wordEthereumAddress = "Ethereum Address",
-  wordBitcoinAddress = "Bitcoin Address",
-  wordBitcoinCashAddress = "Bitcoin Cash Address",
-  wordErc20 = "ERC-20",
-  wordTokens = "tokens",
-  wordEvmCompatible = "EVM-compatible",
-  largeDonationAmount = "$50,000 dollars",
-  wordCrowdin = "Crowdin"
+  addressBitcoin = 'bc1qmuyaayx6xdfpvgdu5a0eqgzqrvr5d35f5y6k8w',
+  addressBitcoinCash = 'qq7x2x7wa5gtl8s2wzq45h83vcczeenpgu2e2jlm4v',
+  addressEthereum = '0xec793F400B2c133299ed78f22f5708872555F958',
+  wordEthereumAddress = 'Ethereum Address',
+  wordBitcoinAddress = 'Bitcoin Address',
+  wordBitcoinCashAddress = 'Bitcoin Cash Address',
+  wordErc20 = 'ERC-20',
+  wordTokens = 'tokens',
+  wordEvmCompatible = 'EVM-compatible',
+  largeDonationAmount = '$50,000 dollars',
+  wordCrowdin = 'Crowdin',
 }
 
 export const appUserNumber = 1_500_000;
 
-export const localeArgs = { ...NON_LOCALIZED_STRING }
+export const localeArgs = { ...NON_LOCALIZED_STRING };

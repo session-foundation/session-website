@@ -1,10 +1,10 @@
 import { cva, type VariantProps } from 'class-variance-authority';
 import cn from 'classnames';
-import { type ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import { CopyToClipboardButton, type CopyToClipboardButtonProps } from './CopyToClipboardButton';
 
 const displayVariants = cva(
-  'flex w-full rounded-md border py-2 pl-3 pr-10 font-normal text-sm break-all',
+  'flex w-full break-all rounded-md border py-2 pr-10 pl-3 font-normal text-sm',
   {
     variants: {
       variant: {
@@ -26,15 +26,16 @@ type DivWithEndAdornmentProps = DisplayVariantProps & {
   endAdornment?: ReactNode;
 };
 
-function DivWithEndAdornment({ className, variant, children, endAdornment }: DivWithEndAdornmentProps) {
+function DivWithEndAdornment({
+  className,
+  variant,
+  children,
+  endAdornment,
+}: DivWithEndAdornmentProps) {
   return (
     <div className="relative w-full">
-      <div className={cn(displayVariants({ variant, className }))}>
-        {children}
-      </div>
-      <div className="absolute top-0 right-0 flex h-full items-center">
-        {endAdornment}
-      </div>
+      <div className={cn(displayVariants({ variant, className }))}>{children}</div>
+      <div className="absolute top-0 right-0 flex h-full items-center">{endAdornment}</div>
     </div>
   );
 }
@@ -45,7 +46,12 @@ export type CopyableInputDisplayProps = DisplayVariantProps & {
   copyToClipboardProps: CopyToClipboardButtonProps;
 };
 
-function CopyableInputDisplay({ className, variant, value, copyToClipboardProps }: CopyableInputDisplayProps) {
+function CopyableInputDisplay({
+  className,
+  variant,
+  value,
+  copyToClipboardProps,
+}: CopyableInputDisplayProps) {
   return (
     <DivWithEndAdornment
       variant={variant}

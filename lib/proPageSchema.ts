@@ -113,6 +113,7 @@ function resolve(obj: Record<string, any>, path: string): string {
   // TODO: make PR to localization repo to expose utility functions
   const t = new LocalizedStringBuilder(rawMessage as any);
   t.withArgs({ ...NON_LOCALIZED_STRING });
+  // @ts-expect-error TODO: make method public
   return t.formatStringWithArgs(rawMessage);
 }
 
@@ -152,7 +153,9 @@ function buildProFeaturesSchema(messages: Record<string, any>) {
     name: 'Session Pro Features',
     itemListElement: features.map((f) => ({
       '@type': 'ListItem',
+      // @ts-expect-error TODO:this is fine
       name: tr(f.title.token),
+      // @ts-expect-error TODO:this is fine
       description: tr(f.description.token),
     })),
   };

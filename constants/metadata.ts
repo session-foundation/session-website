@@ -80,6 +80,7 @@ const METADATA = {
       URL: '/assets/images/donate-meta.jpg',
       WIDTH: 1024,
       HEIGHT: 1024,
+      ALT: 'Read appeal',
     },
   },
   FAQ_PAGE: {

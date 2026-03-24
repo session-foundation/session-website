@@ -3,19 +3,20 @@
 import { TabsContent, TabsList, TabsTrigger } from '@radix-ui/react-tabs';
 import classNames from 'classnames';
 import type { GetStaticProps, GetStaticPropsContext } from 'next';
-import Head from 'next/head';
+import { useRouter } from 'next/router';
 import { useLocale, useTranslations } from 'next-intl';
-import { type ReactElement, type ReactNode, useEffect, Dispatch, useState } from 'react';
+import { type Dispatch, type ReactElement, type ReactNode, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { ReactComponent as AndroidSVG } from '@/assets/svgs/android_robot_head.svg';
 import { ReactComponent as AppleSVG } from '@/assets/svgs/apple.svg';
 import Container from '@/components/Container';
 import { LucideIcon, type SessionIconSize } from '@/components/LucideIconWrapper';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import Layout from '@/components/ui/Layout';
 import { Tabs } from '@/components/ui/tabs';
 import { NON_LOCALIZED_STRING } from '@/constants/localization';
 import METADATA from '@/constants/metadata';
-import { isCrowdinLocale, setLocaleInUse, type TrArgs, tr } from '@/lib/app_localization';
+import { isCrowdinLocale, setLocaleInUse, tr } from '@/lib/app_localization';
 import { LUCIDE_ICONS_UNICODE, type WithLucideUnicode } from '@/lib/lucide';
 import { fetchProPricing } from '@/lib/proBackend';
 import {
@@ -23,9 +24,6 @@ import {
   getProFeatures,
   type PricingApiResponse,
 } from '@/lib/proPageSchema';
-import { useRouter } from 'next/router';
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
-import { notFound } from 'next/navigation';
 
 function ProLogoPath() {
   return (
@@ -184,7 +182,7 @@ const StyledPanelButton = styled.div<{
   flex-grow: 1;
   width: 100%;
   padding-inline: 16px;
-  ${props => props.onClick ? 'cursor: pointer;' : ''}
+  ${(props) => (props.onClick ? 'cursor: pointer;' : '')}
 `;
 const localeArgs = {
   ...NON_LOCALIZED_STRING,
@@ -407,7 +405,13 @@ background: #DEDEDE;
 color: #6D6D6D;
 `;
 
-function ProFeatureItems({ localeKey, forceShowDetailedRoadmapButton }: { localeKey: 1 | 3, forceShowDetailedRoadmapButton?: boolean }) {
+function ProFeatureItems({
+  localeKey,
+  forceShowDetailedRoadmapButton,
+}: {
+  localeKey: 1 | 3;
+  forceShowDetailedRoadmapButton?: boolean;
+}) {
   return (
     <>
       <ProFeatureItemLocalized groupLocaleKey={localeKey} itemLocaleKey={1} />
@@ -417,7 +421,10 @@ function ProFeatureItems({ localeKey, forceShowDetailedRoadmapButton }: { locale
       {localeKey === 3 ? (
         <StyledDetailedRoadmapButton
           href="#roadmap"
-          className={classNames("-bottom-2 py-0.5 opacity-0 absolute hidden w-max flex-row items-center gap-1 self-center rounded-md px-2 align-center text-xs font-bold transition-all duration-300 md:flex md:group-hover:opacity-100 drop-shadow-md", forceShowDetailedRoadmapButton ? "md:opacity-100" : "")}
+          className={classNames(
+            '-bottom-2 absolute hidden w-max flex-row items-center gap-1 self-center rounded-md px-2 py-0.5 align-center font-bold text-xs opacity-0 drop-shadow-md transition-all duration-300 md:flex md:group-hover:opacity-100',
+            forceShowDetailedRoadmapButton ? 'md:opacity-100' : ''
+          )}
         >
           Detailed Roadmap{' '}
           <LucideIcon unicode={LUCIDE_ICONS_UNICODE.CHEVRON_DOWN} iconSize="small" />
@@ -436,11 +443,14 @@ function ProFeatureItemsPro({ onMoreClick }: { onMoreClick?: () => void }) {
         return (
           <ProFeatureItem
             key={title.token}
+            // @ts-expect-error TODO: fix localization library fn
             title={tr(title.token)}
             description={
               <ProFeatureDescription>
+                {/** @ts-expect-error TODO: fix localization library fn */}
                 {tr(description.token)}
-              </ProFeatureDescription>}
+              </ProFeatureDescription>
+            }
             unicode={unicode}
             position={i}
           />
@@ -457,7 +467,10 @@ function ProFeatureItemsPro({ onMoreClick }: { onMoreClick?: () => void }) {
               ...localeArgs,
               bold: (chunks: ReactNode) => <strong className="inline-flex gap-1">{chunks}</strong>,
               icon: () => (
-                <LucideIcon unicode={LUCIDE_ICONS_UNICODE.EXTERNAL_LINK_ICON} iconSize="extraSmall" />
+                <LucideIcon
+                  unicode={LUCIDE_ICONS_UNICODE.EXTERNAL_LINK_ICON}
+                  iconSize="extraSmall"
+                />
               ),
             })}
           </ProFeatureDescription>
@@ -482,12 +495,28 @@ function ProFeatureSection({
   setForceFocusComingSoon?: Dispatch<boolean>;
   children?: ReactNode;
 }) {
+  const onMoreClick = setForceFocusComingSoon
+    ? () => setForceFocusComingSoon(!forceFocusComingSoon)
+    : undefined;
+
   // NOTE: we need the bottom padding to ensure the sections go past the gradient
   return (
     <div className="justify-left flex h-[max-content] w-full flex-col gap-2 rounded-xl bg-white p-4 text-left md:pb-14">
       <ProFeatureSectionHeading localeKey={localeKey} />
-      <StyledRoundedPanelButtonGroup className={classNames("group relative rounded-lg transition-all duration-300", localeKey === 3 ? forceFocusComingSoon ? 'drop-shadow-xl' : 'hover:drop-shadow-xl' : '')}>
-        {localeKey === 2 ? <ProFeatureItemsPro onMoreClick={setForceFocusComingSoon ? () => setForceFocusComingSoon(v => !v) : undefined} /> : <ProFeatureItems localeKey={localeKey} forceShowDetailedRoadmapButton={forceFocusComingSoon} />}
+      <StyledRoundedPanelButtonGroup
+        className={classNames(
+          'group relative rounded-lg transition-all duration-300',
+          localeKey === 3 ? (forceFocusComingSoon ? 'drop-shadow-xl' : 'hover:drop-shadow-xl') : ''
+        )}
+      >
+        {localeKey === 2 ? (
+          <ProFeatureItemsPro onMoreClick={onMoreClick} />
+        ) : (
+          <ProFeatureItems
+            localeKey={localeKey}
+            forceShowDetailedRoadmapButton={forceFocusComingSoon}
+          />
+        )}
       </StyledRoundedPanelButtonGroup>
       {children}
     </div>
@@ -563,12 +592,24 @@ function ProFeaturesMobile() {
 }
 
 function ProFeaturesDesktop() {
-  const [forceFocusComingSoon, setForceFocusComingSoon] = useState<boolean>(false)
+  const [forceFocusComingSoon, setForceFocusComingSoon] = useState<boolean>(false);
   return (
     <div className="mx-auto hidden max-w-7xl flex-row items-end gap-6 self-center px-4 pt-8 md:flex">
-      <ProFeatureSection localeKey={1} forceFocusComingSoon={forceFocusComingSoon} setForceFocusComingSoon={setForceFocusComingSoon} />
-      <ProFeatureSection localeKey={2} forceFocusComingSoon={forceFocusComingSoon} setForceFocusComingSoon={setForceFocusComingSoon} />
-      <ProFeatureSection localeKey={3} forceFocusComingSoon={forceFocusComingSoon} setForceFocusComingSoon={setForceFocusComingSoon} />
+      <ProFeatureSection
+        localeKey={1}
+        forceFocusComingSoon={forceFocusComingSoon}
+        setForceFocusComingSoon={setForceFocusComingSoon}
+      />
+      <ProFeatureSection
+        localeKey={2}
+        forceFocusComingSoon={forceFocusComingSoon}
+        setForceFocusComingSoon={setForceFocusComingSoon}
+      />
+      <ProFeatureSection
+        localeKey={3}
+        forceFocusComingSoon={forceFocusComingSoon}
+        setForceFocusComingSoon={setForceFocusComingSoon}
+      />
     </div>
   );
 }
@@ -587,7 +628,7 @@ function ProHero() {
   return (
     <ProSection className="relative mt-10 mb-10 flex flex-col gap-5 md:mt-0">
       <HeroImageBg $height="875px" $top="-30px" className="hidden md:block" />
-      <h1 className="inline-flex self-center font-bold text-4xl flex-wrap items-center content-center justify-center">
+      <h1 className="inline-flex flex-wrap content-center items-center justify-center self-center font-bold text-4xl">
         {t.rich('heading', {
           'pro-badge': () => <ProBadge className="ml-2 w-20" />,
         })}
@@ -613,12 +654,11 @@ function ProInfo() {
   );
 }
 
-
 function getUpgradeTabReadMoreHref() {
   return undefined;
 }
 
-function UpgradeTabInfoItem({ platform, n, }: { platform: UpgradePlatform; n: 1 | 2 }) {
+function UpgradeTabInfoItem({ platform, n }: { platform: UpgradePlatform; n: 1 | 2 }) {
   const t = useTranslations('pro.upgrade');
   const isDesktop = platform === 'desktop';
   const prefix = isDesktop ? ('desktop.1' as const) : (`mobile.${n}` as const);
@@ -643,9 +683,9 @@ function UpgradeTabInfoItem({ platform, n, }: { platform: UpgradePlatform; n: 1 
     notSupportedInfo:
       !isDesktop && n === 1
         ? t(
-          `mobile.1.upgradeSubDescriptionNotSupportedInfo${platform === 'ios' ? 'Ios' : 'Android'}`,
-          localeArgs
-        )
+            `mobile.1.upgradeSubDescriptionNotSupportedInfo${platform === 'ios' ? 'Ios' : 'Android'}`,
+            localeArgs
+          )
         : '',
   };
 
@@ -666,7 +706,7 @@ function UpgradeTabInfoItem({ platform, n, }: { platform: UpgradePlatform; n: 1 
         iconSize={'medium'}
         title={t(titleKey, _localeArgs)}
         description={
-          <div className="h-full w-full leading-snug text-sm">
+          <div className="h-full w-full text-sm leading-snug">
             <p className="text-black">
               {t.rich(descriptionKey, {
                 ..._localeArgs,
@@ -675,7 +715,7 @@ function UpgradeTabInfoItem({ platform, n, }: { platform: UpgradePlatform; n: 1 
             </p>
             <br />
             <p className="text-gray-lighter italic">{t(subDescriptionKey, _localeArgs)}</p>
-            {readMoreHref ?
+            {readMoreHref ? (
               <>
                 <br />
                 <a className="flex flex-row items-center gap-1 font-bold">
@@ -686,7 +726,8 @@ function UpgradeTabInfoItem({ platform, n, }: { platform: UpgradePlatform; n: 1 
                     iconSize="extraSmall"
                   />{' '}
                 </a>
-              </> : null}
+              </>
+            ) : null}
           </div>
         }
       />
@@ -746,7 +787,10 @@ enum UpgradePlatform {
   DESKTOP = 'desktop',
 }
 
-const upgradeStyledTriggerClassName = classNames(styledTriggerClassName, 'flex-1 md:flex-auto max-w-max')
+const upgradeStyledTriggerClassName = classNames(
+  styledTriggerClassName,
+  'flex-1 md:flex-auto max-w-max'
+);
 
 function ProUpgrade() {
   const t = useTranslations('pro.upgrade');
@@ -808,7 +852,10 @@ function ProUpgrade() {
               <AndroidSVG className={iconClassName} />
               <span className={iconTextClassName}>{NON_LOCALIZED_STRING.platformAndroid}</span>
             </StyledUpgradeTrigger>
-            <StyledUpgradeTrigger value={UpgradePlatform.IOS} className={upgradeStyledTriggerClassName}>
+            <StyledUpgradeTrigger
+              value={UpgradePlatform.IOS}
+              className={upgradeStyledTriggerClassName}
+            >
               <AppleSVG className={iconClassName} />
               <span className={iconTextClassName}>{NON_LOCALIZED_STRING.platformIos}</span>
             </StyledUpgradeTrigger>
@@ -873,7 +920,7 @@ function RoadmapTabInfoItem({ value }: { value: RoadmapValue }) {
         title={t('featureName', localeArgs)}
         iconClassName="flex md:hidden"
         description={
-          <div className="h-full w-full text-black leading-snug text-sm">
+          <div className="h-full w-full text-black text-sm leading-snug">
             <p className="text-black">
               {t.rich('featureDescription', {
                 ...localeArgs,
@@ -911,13 +958,12 @@ function ProRoadmap() {
 
   return (
     <ProSection id="roadmap">
-      <Heading2 className="flex items-center self-center">
-        {t('heading', localeArgs)}
-      </Heading2>
+      <Heading2 className="flex items-center self-center">{t('heading', localeArgs)}</Heading2>
       <Tabs
         value={roadmapTab}
         onValueChange={(v) => setRoadmapTab(v as RoadmapValue)}
-        className="flex w-full flex-col items-center gap-4">
+        className="flex w-full flex-col items-center gap-4"
+      >
         <div className={tabsListContainerClassName}>
           <TabsList className={tabsListClassName}>
             {roadmapItems.map((item) => (
@@ -963,7 +1009,7 @@ export const StyledCollapsibleTrigger = styled(CollapsibleTrigger)`
   &:focus {
     outline: none !important;
   }
-`
+`;
 
 export const StyledCollapsibleContent = styled(CollapsibleContent)`
   overflow: hidden;
@@ -985,17 +1031,17 @@ export const StyledCollapsibleContent = styled(CollapsibleContent)`
     from { height: var(--radix-collapsible-content-height); opacity: 1; }
     to { height: 0; opacity: 0; }
   }
-`
+`;
 
 function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 }) {
   const t = useTranslations('pro.faq');
 
-  const question = t(`${localeKey}.question`, localeArgs)
+  const question = t(`${localeKey}.question`, localeArgs);
 
-  const id = question.toLocaleLowerCase().replaceAll(' ', '-').replaceAll('?', '')
+  const id = question.toLocaleLowerCase().replaceAll(' ', '-').replaceAll('?', '');
 
   return (
-    <Collapsible className='transition-all duration-300' id={id}>
+    <Collapsible className="transition-all duration-300" id={id}>
       <StyledCollapsibleTrigger className="flex w-full flex-row flex-wrap gap-2 bg-[#E8E8E8] px-2 py-2 text-left font-bold transition-all duration-300">
         <LucideIcon unicode={LUCIDE_ICONS_UNICODE.PLUS} iconSize="medium" />
         <span className="whitespace-normal">{question}</span>
@@ -1007,12 +1053,12 @@ function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 }
           />
         </a>
       </StyledCollapsibleTrigger>
-      <StyledCollapsibleContent className='rounded-b-xl transition-all duration-300'>
-        <StyledRoundedPanelButtonGroup className='rounded-b-xl text-left px-6'>
+      <StyledCollapsibleContent className="rounded-b-xl transition-all duration-300">
+        <StyledRoundedPanelButtonGroup className="rounded-b-xl px-6 text-left">
           Yes this is mock content, yes there will be real content, yes this seems to be working.
         </StyledRoundedPanelButtonGroup>
       </StyledCollapsibleContent>
-    </Collapsible >
+    </Collapsible>
   );
 }
 
@@ -1021,9 +1067,8 @@ function ProFAQ() {
   return (
     <ProSection id="faq">
       <Heading2>{t('heading', localeArgs)}</Heading2>
-      <div
-        className="flex w-full flex-col items-center gap-4 self-center justify-center">
-        <div className={'w-full items-center self-center justify-center flex px-4 md:ml-6'}>
+      <div className="flex w-full flex-col items-center justify-center gap-4 self-center">
+        <div className={'flex w-full items-center justify-center self-center px-4 md:ml-6'}>
           <HiddenCenteringSpacer />
           <div className="flex w-full max-w-3xl flex-col gap-3">
             <FAQItem localeKey={1} />
@@ -1039,7 +1084,7 @@ function ProFAQ() {
           <HiddenCenteringSpacer />
         </div>
       </div>
-    </ProSection >
+    </ProSection>
   );
 }
 

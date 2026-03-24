@@ -22,14 +22,42 @@ export default function Page(props: Props): ReactElement {
   }
 }
 
+const extensions = ['php', 'yaml'];
+
+const forbiddenWords = [...extensions, '.env', '%2f', 'credentials', 'docker'];
+
+function shouldBuildSlug(slug: string): boolean {
+  const extension = slug.split('.')[-1];
+
+  if (extension) {
+    if (extensions.includes(extension)) {
+      return false;
+    }
+  }
+
+  const c1 = slug[0];
+
+  if (c1) {
+    if (['@'].includes(c1)) {
+      return false;
+    }
+  }
+
+  for (const w in forbiddenWords) {
+    if (slug.includes(w)) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
 export async function getStaticProps(context: GetStaticPropsContext) {
   const locale = context.locale || 'en';
 
-  console.log(
-    `Building: Page%c${context.params?.slug ? ` /${context.params?.slug}` : ''}`,
-    'color: purple;'
-  );
   const slug = String(context.params?.slug);
+
+  console.log(`Building: Page%c${slug ? ` /${slug}` : ''}`, 'color: purple;');
 
   const messages = (await import(`../locales/${locale}.json`)).default;
 
@@ -39,6 +67,19 @@ export async function getStaticProps(context: GetStaticPropsContext) {
       props: { messages },
       redirect: redirect,
       revalidate: CMS.CONTENT_REVALIDATE_RATE,
+    };
+  }
+
+  if (!shouldBuildSlug(slug)) {
+    console.log(
+      `Slug returned false in the shouldBuildSlug check, not building: Page%c${slug ? ` /${slug}` : ''}`,
+      'color: purple;'
+    );
+    return {
+      props: { messages },
+      notFound: true,
+      // Use longer revalidation for 404 pages to reduce unnecessary rebuilds
+      revalidate: CMS.CONTENT_REVALIDATE_RATE_OLD,
     };
   }
 

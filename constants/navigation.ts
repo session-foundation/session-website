@@ -11,12 +11,14 @@ export type NavItemKey = keyof Omit<Messages['navigation'], 'aria'>;
 type INavList = Record<NavItemKey | string, INavItem>;
 
 const NAV_ITEMS: INavList = {
-  ...process.env.ENABLE_PRO_PAGE === '1' ? {
-    pro: {
-      href: '/pro',
-      target: '_self',
-    }
-  } : {},
+  ...(process.env.ENABLE_PRO_PAGE === '1'
+    ? {
+        pro: {
+          href: '/pro',
+          target: '_self',
+        },
+      }
+    : {}),
   resources: {
     href: '/resources',
     target: '_self',
