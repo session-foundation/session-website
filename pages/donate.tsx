@@ -562,6 +562,8 @@ export default function Donate(): ReactElement {
           }}
         />
       </Section>
+      <div id="monero" />
+      <div id="xmr" />
       <Section localeKey={6} styleVariant={SectionVariant.GREEN} id="silent-donor" className="">
         <a
           href="https://www.silentdonor.com/donate-now-session-technology-foundation/"
@@ -579,8 +581,6 @@ export default function Donate(): ReactElement {
             {t('6.heading', { ...NON_LOCALIZED_STRING })}
           </Button>
         </a>
-        <div id="monero" />
-        <div id="xmr" />
         <p className="text-xs italic md:text-base">{SILENT_DONOR_LEGAL_DISCLAIMER}</p>
       </Section>
       <Section
