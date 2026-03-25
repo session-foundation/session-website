@@ -52,9 +52,6 @@ export enum NON_LOCALIZED_STRING {
 export const SILENT_DONOR_LEGAL_DISCLAIMER =
   'Silent Donor is a third party service, and their terms and privacy policies govern your use of their services. The availability of tax deductible gift status may vary depending on your jurisdiction. The Session Technology Foundation does not accept any liability for any third party websites, apps, content, or other products or services.';
 
-export const SILENT_DONOR_PAYMENT_DESCRIPTION =
-  'Silent donor is a third-party service which allows you to give a gift anonymously. Donations are directed through The AnonDo Fund, a U.S.-registered 501(c)(3) donor-advised fund approved as a non-profit by the Internal Revenue Service, before being transferred to the Session Technology Foundation. ';
-
 export const appUserNumber = 1_500_000;
 
 export const localeArgs = { ...NON_LOCALIZED_STRING };

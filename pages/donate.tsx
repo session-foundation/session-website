@@ -29,7 +29,6 @@ import {
   localeArgs,
   NON_LOCALIZED_STRING,
   SILENT_DONOR_LEGAL_DISCLAIMER,
-  SILENT_DONOR_PAYMENT_DESCRIPTION,
 } from '@/constants/localization';
 import METADATA from '@/constants/metadata';
 import { LUCIDE_ICONS_UNICODE } from '@/lib/lucide';
@@ -346,6 +345,20 @@ export const TaxAnswer = () => (
   </>
 );
 
+export const SilentDonorPaymentDescription = () => (
+  <>
+    <a
+      href="https://www.silentdonor.com/donate-now-session-technology-foundation/"
+      className="text-primary-dark"
+    >
+      Silent Donor
+    </a>{' '}
+    is a third-party service which allows you to give a gift anonymously. Donations are directed
+    through The AnonDo Fund, a U.S.-registered 501(c)(3) donor-advised fund approved as a non-profit
+    by the Internal Revenue Service, before being transferred to the Session Technology Foundation.
+  </>
+);
+
 function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 | 'tax-question' }) {
   const t = useTranslations('donate.faq');
 
@@ -395,7 +408,8 @@ function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 | 'tax-question' }) {
     ),
     'silent-donor-info': () => (
       <>
-        {SILENT_DONOR_PAYMENT_DESCRIPTION}
+        <SilentDonorPaymentDescription />
+        <br />
         <br />
         Supported donation methods include:
         <ul className="mt-4 mb-8 ml-7">
