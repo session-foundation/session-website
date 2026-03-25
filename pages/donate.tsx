@@ -29,6 +29,7 @@ import {
   localeArgs,
   NON_LOCALIZED_STRING,
   SILENT_DONOR_LEGAL_DISCLAIMER,
+  SILENT_DONOR_PAYMENT_DESCRIPTION,
 } from '@/constants/localization';
 import METADATA from '@/constants/metadata';
 import { LUCIDE_ICONS_UNICODE } from '@/lib/lucide';
@@ -215,19 +216,19 @@ const Section = forwardRef<HTMLDivElement, SectionProps>(
                 <Link
                   href="https://www.silentdonor.com/donate-now-session-technology-foundation/"
                   target="_blank"
-                  className="underline whitespace-nowrap"
+                  className="whitespace-nowrap underline"
                 >
                   {chunks}
                 </Link>
               ),
               'crypto-icons': (chunks) => (
-                <div className="inline-flex whitespace-nowrap flex-nowrap items-center">
+                <div className="inline-flex flex-nowrap items-center whitespace-nowrap">
                   {chunks}
                   <MoneroIcon
                     style={{ zIndex: 6 }}
                     className={classNames(
                       cryptoIconClassName,
-                      'ml-1 md:ml-1.5 bg-white rounded-full'
+                      'ml-1 rounded-full bg-white md:ml-1.5'
                     )}
                   />
                   <BitcoinIcon style={{ zIndex: 5 }} className={cryptoIconClassName} />
@@ -328,7 +329,24 @@ function FloatingButtons() {
   );
 }
 
-function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 }) {
+export const TaxAnswer = () => (
+  <>
+    Donations made to the Session Technology Foundation via Silent Donor are directed to the AnonDo
+    Fund, a U.S.-registered 501(c)(3) donor-advised fund. For both international and U.S.-based
+    donors, this structure may allow contributions to be considered tax-deductible depending on
+    local laws. More information about making a tax-deductible donation is available on the Silent
+    Donor{' '}
+    <a
+      href="https://www.silentdonor.com/donate-now-session-technology-foundation/"
+      className="text-primary-dark"
+    >
+      website
+    </a>
+    .
+  </>
+);
+
+function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 | 'tax-question' }) {
   const t = useTranslations('donate.faq');
 
   const question = t(`${localeKey}.question`, localeArgs);
@@ -348,7 +366,7 @@ function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 }) {
         <li className="list-disc">And more</li>
       </ul>
     ),
-    ol: (chunks) => <ol className="my-4 ml-7">{chunks}</ol>,
+    ol: (chunks) => <ol className="mt-4 mb-8 ml-7">{chunks}</ol>,
     li: (chunks) => <li className="list-decimal">{chunks}</li>,
     'donations-email': () => (
       <Link className="text-primary-dark" href="mailto:donations@getsession.org">
@@ -375,6 +393,18 @@ function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 }) {
         {chunks}
       </Link>
     ),
+    'silent-donor-info': () => (
+      <>
+        {SILENT_DONOR_PAYMENT_DESCRIPTION}
+        <br />
+        Supported donation methods include:
+        <ul className="mt-4 mb-8 ml-7">
+          <li className="list-disc">Cryptocurrency (XMR, BTC, ETH, and more)</li>
+          <li className="list-disc">Credit card</li>
+          <li className="list-disc">Bank Transfer</li>
+        </ul>
+      </>
+    ),
   });
 
   const id = question.toLocaleLowerCase().replaceAll(' ', '-').replaceAll('?', '');
@@ -394,7 +424,9 @@ function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 }) {
       </StyledCollapsibleTrigger>
       <StyledCollapsibleContent className="rounded-b-xl transition-all duration-300">
         <StyledRoundedPanelButtonGroup className="rounded-b-xl px-6 text-left">
-          <p className="whitespace-normal break-words">{answer}</p>
+          <p className="whitespace-normal break-words">
+            {localeKey === 'tax-question' ? <TaxAnswer /> : answer}
+          </p>
         </StyledRoundedPanelButtonGroup>
       </StyledCollapsibleContent>
     </Collapsible>
@@ -407,6 +439,7 @@ function DonateFAQ() {
       <div className={'flex w-full items-center justify-center self-center px-4 md:ml-6'}>
         <div className="flex w-full max-w-3xl flex-col gap-3 text-lg">
           <FAQItem localeKey={1} />
+          <FAQItem localeKey="tax-question" />
           <FAQItem localeKey={2} />
           <FAQItem localeKey={3} />
           <FAQItem localeKey={4} />
@@ -534,7 +567,7 @@ export default function Donate(): ReactElement {
         </a>
         <div id="monero" />
         <div id="xmr" />
-        <p className="text-xs md:text-base italic">{SILENT_DONOR_LEGAL_DISCLAIMER}</p>
+        <p className="text-xs italic md:text-base">{SILENT_DONOR_LEGAL_DISCLAIMER}</p>
       </Section>
       <Section
         localeKey={7}

@@ -219,7 +219,7 @@
     "faq": {
       "1": {
         "question": "How can I donate to {appName}?",
-        "answer": "There are currently two ways to support the continued development of {appName}:<br></br><br></br><bold>Donorbox</bold><br></br><br></br>{donationProviderName} is a third-party platform that helps non-profit organizations accept donations through a variety of payment methods. You can donate to the {foundationName} via {donationProviderName} <donate-link>here</donate-link>.<br></br><br></br>Supported payment methods include:<payment-providers></payment-providers><bold>Cryptocurrency</bold><br></br><br></br>You can also donate cryptocurrency directly to the {foundationName} by sending funds to the wallet addresses listed below.<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordBitcoinCashAddress}: {addressBitcoinCash}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>This {wordEthereumAddress} accepts donations in {ethSymbol}, as well as {wordErc20} {wordTokens} (such as {usdtSymbol} and {usdcSymbol}) across {wordEvmCompatible} chains, like {ethNetworkName}, {arbNetworkName}, and {baseNetworkName}.<br></br><br></br><bold>Note:</bold> If you are considering providing a donation of more than {largeDonationAmount} using any payment method, please contact us at <donations-email></donations-email>"
+        "answer": "There are currently three ways to support the continued development of {appName}:<br></br><br></br><bold>{donationProviderName}</bold><br></br><br></br>{donationProviderName} is a third-party platform that helps non-profit organizations accept donations through a variety of payment methods. You can donate to the {foundationName} via {donationProviderName} <donate-link>here</donate-link>.<br></br><br></br>Supported payment methods include:<payment-providers></payment-providers><bold>{wordSilentDonor}</bold><br></br><br></br><silent-donor-info></silent-donor-info><bold>Direct Cryptocurrency</bold><br></br><br></br>You can also donate cryptocurrency directly to the {foundationName} by sending funds to the wallet addresses listed below.<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordBitcoinCashAddress}: {addressBitcoinCash}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>This {wordEthereumAddress} accepts donations in {ethSymbol}, as well as {wordErc20} {wordTokens} (such as {usdtSymbol} and {usdcSymbol}) across {wordEvmCompatible} chains, like {ethNetworkName}, {arbNetworkName}, and {baseNetworkName}.<br></br><br></br><bold>Note:</bold> If you are considering providing a donation of more than {largeDonationAmount} using any payment method, please contact us at <donations-email></donations-email>"
       },
       "2": {
         "question": "What will my donation be used for?",
@@ -232,6 +232,10 @@
       "4": {
         "question": "Are there any other ways I can help {appName}?",
         "answer": "Donations are the primary way you can help support {appName} currently. However, if you’re unable to donate, there are several other ways you can help:<ol><li>Share this appeal with friends and family who use {appName} and may be interested in supporting our mission.</li><li>Help translate {appName} into other languages via <crowdin-link>{wordCrowdin}</crowdin-link></li><li>Contribute to {appNamePossessive} <github-link>open source codebase</github-link></li></ol>"
+      },
+      "tax-question": {
+        "question": "Can I make a tax deductible donation?",
+        "answer": ""
       }
     },
     "appealHeading": "A Personal Appeal From {donateAppealName}"
