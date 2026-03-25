@@ -174,24 +174,24 @@
       "description": "查看 {appName} 部落格。｜{appName} 是一款端對端加密的通訊工具，可去除敏感中繼資料的蒐集。"
     },
     "donate": {
-      "title": "捐款｜支持隱私技術",
-      "description": "沒有您的支持，{foundationName} 無法繼續前行。立即捐款，幫助 {appName} 在生存之戰中堅持下去。"
+      "title": "捐款 | 支持隱私技術",
+      "description": "沒有您的支持，{foundationName} 就無法繼續前行。立即捐款，幫助 {appName} 繼續為生存而戰。"
     }
   },
   "donate": {
     "heading": "{appName} 需要您的幫助",
-    "heroContent": "私人訊息是現代生活中不可或缺的一部分。安全的通訊能庇護人們免於暴政，保護對抗不公的人，並賦予全球人權捍衛者力量。<br></br><br></br>然而，資源充足的隱私反對者正積極打壓守護人們基本人權與尊嚴的技術。世界各地的政治人物正推動削弱加密的法律，隱私技術在媒體上遭到抹黑，而監控資本家則從這場混亂中牟利。<image></image>儘管面臨逆境，{appName} 仍持續為人們提供一個安全、可靠且值得信賴的線上通訊空間。{appName} 是一款免費、私密且安全的通訊應用程式。它不會追蹤使用者，也不會出售您的資料——它只是私密地傳送訊息。當數百萬人需要一個安全可靠的對話空間時，他們選擇了 Session。<br></br><br></br>{appName} 不只是一種工具，更是開源、透明且具韌性技術重要性的象徵。正是像 {appName} 這樣的技術，在日益充滿不確定性與威權主義的時代中，守護著我們的基本人權。",
+    "heroContent": "私人訊息傳遞是現代生活中不可或缺的一部分。安全的通訊讓人們免受暴政侵害，保護那些對抗不公的人，並賦予全球各地人權捍衛者力量。<br></br><br></br>然而，資源充足的隱私反對者正積極試圖壓制那些守護人們基本人權與尊嚴的技術。世界各地的政客都在推動破壞加密的法律，隱私技術在媒體中遭到抹黑，而監控資本家則正從這種混亂中牟利。<image></image>儘管面臨重重逆境，{appName} 仍持續為人們提供一個安全、可靠且值得信賴的線上溝通空間。{appName} 是一款免費、私密且安全的訊息應用程式。它不追蹤使用者，也不會出售您的資料——它只是私密地傳送訊息。全球數百萬人在需要一個安全可靠的對話空間時選擇了 Session。<br></br><br></br>{appName} 不僅僅是一個工具，它也是開源、透明且具韌性技術重要性的象徵。正是像 {appName} 這樣的技術，在這個日益充滿不確定性與威權主義的時代，守護著我們的基本人權。",
     "1": {
-      "heading": "一股向善的力量",
-      "content": "科技正在改變我們的社會。當前，少數強大的個人與機構對網際網路掌握了不成比例的控制權。在許多情況下，科技被用來噤聲、操控與打壓。現在是時候反擊這些權力力量了。<image></image>我們是在這個將科技作為顛覆壓迫工具的世界中的改變推動者。我們相信未來的科技應是協作的、透明的、公平的，並且能帶來解放。"
+      "heading": "向善的力量",
+      "content": "科技正在改變我們的社會。當前，少數強大的個人和機構對網際網路擁有不成比例的控制權。在許多情況下，科技正被用來壓制、操縱和打壓他人。現在是時候反擊這些權力力量了。<image></image>我們是在一個將科技作為顛覆壓迫工具的世界中的變革推動者。我們相信，未來的科技將是協作的、透明的、公平的，並且能帶來自由。"
     },
     "2": {
       "heading": "認識您的隱私捍衛者",
-      "content": "{appName} 由 {foundationName} 管理，這是一家致力於維護開源 {appName} 生態系的瑞士基金會。我們是一支由技術專家、工程師與行動者組成的團隊，致力於恢復線上隱私的使命。<image></image>{foundationName} 的財務獨立性讓我們能無所畏懼地打造保護每個人人權的隱私技術。您的支持將有助於推動新的 {appName} 開發、資助關鍵的網路基礎設施，以及持續為自由與隱私權奮戰。<br></br><br></br>我們目前接受信用卡與加密貨幣捐款。{ethNetworkName} 與其他相容 EVM 的代幣（例如 {usdcSymbol}）皆可使用加密貨幣捐款地址。"
+      "content": "{appName} 由 {foundationName} 管護，這是一個致力於維護開源 {appName} 生態系的瑞士基金會。我們是一支由技術專家、工程師和行動者組成的團隊，致力於恢復線上隱私這一使命。<image></image>{foundationName} 的財務獨立性使我們能夠無所畏懼地建構保護每個人人權的隱私技術。您的支持將用於推動 {appName} 的新開發、資助關鍵網路基礎設施，以及持續推進爭取自由與隱私權的奮鬥。<br></br><br></br>我們目前接受信用卡和加密貨幣捐款。可用於接收加密貨幣捐款的地址支援 {ethNetworkName} 以及其他與 EVM 相容的代幣，例如 {usdcSymbol}。"
     },
     "3": {
       "heading": "感謝您的關心",
-      "content": "{foundationName} 是在瑞士註冊的基金會。我們是以非營利為導向的組織，接受 {swissSupervisory} 的審計監督。我們的工作有助於為所有人保護隱私，並為風險最高的人提供庇護。<image></image>我們目前接受信用卡與加密貨幣捐款。{ethNetworkName} 與其他相容 EVM 的代幣（例如 {usdcSymbol}）皆可使用加密貨幣捐款地址。<br></br><br></br>請注意，捐款不可抵稅。若您對捐款或贈與有任何疑問，請透過電子郵件與我們聯絡：<contact-email></contact-email><br></br><br></br>在匯款前，請確認網址為 <validation-url></validation-url>。如有需要，也可透過電子郵件驗證地址。"
+      "content": "{foundationName} 是一家在瑞士註冊的基金會。我們是一個以非營利為導向的組織，接受 {swissSupervisory} 的審計監督。我們的工作有助於保護所有人的隱私，並為那些風險最高的人提供庇護。<image></image>我們目前接受信用卡和加密貨幣捐款。可用於接收加密貨幣捐款的地址支援 {ethNetworkName} 以及其他與 EVM 相容的代幣，例如 {usdcSymbol}。<br></br><br></br>請注意，捐款不可用於抵稅。如果您對捐款或贈與有任何疑問，請透過電子郵件聯絡我們：<contact-email></contact-email> <br></br><br></br>在匯款之前，請確認網址為 <validation-url></validation-url>。如有需要，也可透過電子郵件驗證地址。"
     },
     "4": {
       "heading": "透過信用卡捐款（{donationProviderName}）",
@@ -199,33 +199,41 @@
     },
     "5": {
       "heading": "透過加密貨幣捐款",
-      "content": "您可以將 {ethSymbol}、{usdcSymbol}、{usdtSymbol} 或 {btcSymbol} 發送至以下 {foundationName} 地址。"
+      "content": "您可以將 {ethSymbol}、{usdcSymbol}、{usdtSymbol} 或 {btcSymbol} 傳送到以下 {foundationName} 地址。"
     },
-    "heroAppeal": "八年前，{appName} 帶著恢復您的隱私並讓您重新掌控自己的言論與生活——也就是數位自由——的使命而誕生。然而，如果今天沒有您的幫助，我們將無法再持續開發 {appName} 太久。若您曾從 {appName} 或其使命中獲得價值，請給我片刻時間，讀完這份呼籲。<br></br><br></br>在這個言論自由不再是理所當然、隱私權令人厭棄、真相被視為謊言的時代，{appName} 是一項充滿爭議的技術。多年來，守護 {appName} 的組織面臨了許多挑戰，而如今，{appNamePossessive} 的生存本身正岌岌可危。<br></br><br></br>對隱私的威脅如今比以往任何時候都更加嚴峻，而 {appName} 必須進化，才能面對未來的挑戰。{appNamePossessive} 目前的管理者 {foundationName} 並沒有足夠的資金，讓 {appName} 繼續走得更遠。像是 PFS 與後量子密碼學等重要工作仍在進行中——而我們剩下的時間已經不多了。<br></br><br></br>我們的使命，是帶回人們過去在線上交流時曾感受到的自由、創造力與隱私。我們已為一款真正自由的通訊軟體種下種子，它能移除審查者、監控者，以及那些監視您對話的中心化實體。到目前為止，這個理念已經奏效。每個月都有超過 {appUserNumber} 人使用 {appName} 傳送的是訊息，而不是元資料。<br></br><br></br>{appName} 是一個由其社群打造並擁有的平台——而不是由大型科技公司、私募股權，或任何其他神祕幕後主宰所控制。現在，{appName} 正向您尋求幫助。<br></br><br></br>這個專案正走在自給自足的道路上，但未來仍然脆弱。如果每位 {appName} 使用者只貢獻一美元，將能大大幫助 {appName} 邁向永續。如果您曾考慮捐款，現在就是採取行動的時候。<br></br><br></br>{donateSignerName}",
+    "heroAppeal": "八年前，{appName} 創立的使命，是恢復您的隱私，並讓您重新掌控自己的言論與生活——也就是數位自由。然而，如果今天沒有您的幫助，我們將無法再繼續開發 {appName} 太久。若您曾經認同 {appName} 或其使命的價值，懇請您撥冗片刻，讀完這份呼籲。<br></br><br></br>在這個言論自由不再理所當然、隱私權遭人厭棄、真相被說成謊言的時代，{appName} 是一項充滿爭議的技術。多年來，守護 {appName} 的組織面臨了許多挑戰，但如今，{appNamePossessive} 的生存本身已岌岌可危。<br></br><br></br>如今，對隱私的威脅比以往任何時候都更嚴重，而 {appName} 必須持續演進，才能面對未來的挑戰。{appNamePossessive} 目前的守護者——{foundationName}——並沒有足夠的資金，讓 {appName} 繼續走下去。像 PFS 與後量子密碼學這類重要工作仍在進行中——而我們剩下的時間已經不多了。<br></br><br></br>我們的使命，是找回人們過去在線上交流時所感受到的自由、創造力與隱私。我們已為一個真正自由的通訊軟體播下種子；它將移除審查者、監控者，以及那些監視您對話的中心化實體。到目前為止，這個理念已經奏效。每個月，都有超過 {appUserNumber} 人使用 {appName} 傳送訊息，而非中繼資料。<br></br><br></br>{appName} 是一個由其社群打造並擁有的平台——而不是由大型科技公司、私募股權，或任何其他藏身幕後的主宰者所掌控。現在，{appName} 正向您尋求支持。<br></br><br></br>這個專案正走在自給自足的道路上，但未來依然脆弱。如果每位 {appName} 使用者只貢獻一美元，將能大幅幫助 {appName} 邁向永續。如果您曾考慮捐款，現在就是行動的時候。<br></br><br></br>{donateSignerName}",
     "6": {
-      "heading": "常見問題",
-      "content": ""
+      "heading": "透過 {wordSilentDonor} 捐款",
+      "content": "Individuals may make an anonymous tax deductible gift to the {foundationName} using <silent-donor-link>{wordSilentDonor}</silent-donor-link>.<br></br><br></br>{wordSilentDonor} is a third party which can facilitate donations to the {foundationAcronym} using card, bank transfer, and <crypto-icons>crypto</crypto-icons>"
     },
     "buttonCard": "信用卡捐款",
     "buttonCrypto": "加密貨幣捐款",
     "faq": {
       "1": {
-        "question": "我該如何捐款給 {appName}？",
-        "answer": "目前有兩種方式可以支持 {appName} 的持續開發：<br></br><br></br><bold>Donorbox</bold><br></br><br></br>{donationProviderName} 是一個第三方平台，協助非營利組織透過多種付款方式接受捐款。您可以透過 {donationProviderName} <donate-link>在此</donate-link>捐款給 {foundationName}。<br></br><br></br>支援的付款方式包括：<payment-providers></payment-providers><bold>加密貨幣</bold><br></br><br></br>您也可以透過將資金發送到下方列出的錢包地址，直接以加密貨幣捐款給 {foundationName}。<br></br><br></br>{wordBitcoinAddress}：{addressBitcoin}<br></br><br></br>{wordEthereumAddress}：{addressEthereum}<br></br><br></br>此 {wordEthereumAddress} 接受 {ethSymbol} 捐款，也接受跨 {wordEvmCompatible} 鏈的 {wordErc20} {wordTokens}（例如 {usdtSymbol} 與 {usdcSymbol}），例如 {ethNetworkName}、{arbNetworkName} 與 {baseNetworkName}。<br></br><br></br><bold>注意：</bold>如果您考慮透過任何付款方式捐贈超過 {largeDonationAmount}，請透過 <donations-email></donations-email> 與我們聯絡"
+        "question": "我如何向 {appName} 捐款？",
+        "answer": "目前有三種方式可以支持 {appName} 的持續開發：<br></br><br></br><bold>{donationProviderName}</bold><br></br><br></br>{donationProviderName} 是一個協助非營利組織透過多種付款方式接受捐款的第三方平台。您可以透過 {donationProviderName} <donate-link>在此</donate-link> 向 {foundationName} 捐款。<br></br><br></br>支援的付款方式包括：<payment-providers></payment-providers><bold>{wordSilentDonor}</bold><br></br><br></br><silent-donor-info></silent-donor-info><bold>直接加密貨幣</bold><br></br><br></br>您也可以將資金發送到下列錢包地址，直接向 {foundationName} 捐贈加密貨幣。<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordBitcoinCashAddress}: {addressBitcoinCash}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>此 {wordEthereumAddress} 接受 {ethSymbol} 捐款，也接受跨 {wordEvmCompatible} 鏈（例如 {ethNetworkName}、{arbNetworkName} 和 {baseNetworkName}）的 {wordErc20} {wordTokens}（例如 {usdtSymbol} 和 {usdcSymbol}）。<br></br><br></br><bold>注意：</bold>如果您考慮透過任何付款方式捐贈超過 {largeDonationAmount}，請透過 <donations-email></donations-email> 與我們聯絡"
       },
       "2": {
         "question": "我的捐款將用於什麼用途？",
-        "answer": "您的捐款將由 <foundation-link>{foundationName}</foundation-link> 接收。這是一家位於瑞士的基金會，也是目前 {appName} 應用程式與專案的管理者。您的捐款將用於支持 {appName} 的持續開發與永續發展。"
+        "answer": "您的捐款將由 <foundation-link>{foundationName}</foundation-link> 接收。該基金會位於瑞士，是目前 {appName} 應用程式和專案的管護機構。您的捐款將用於支持 {appName} 的持續開發與長期永續性。"
       },
       "3": {
-        "question": "{foundationName} 是什麼？",
-        "answer": "{foundationName}（{foundationAcronym}）是一家位於瑞士的基金會，也是 {appName} 應用程式與專案的管理者。您可以 <foundation-link>在此</foundation-link> 進一步了解該基金會在 {appName} 生態系中的角色。"
+        "question": "什麼是 {foundationName}？",
+        "answer": "{foundationName}（{foundationAcronym}）是一家位於瑞士的基金會，也是 {appName} 應用程式和專案的管護機構。您可以 <foundation-link>在此</foundation-link> 進一步了解該基金會在 {appName} 生態系中的角色。"
       },
       "4": {
         "question": "還有其他方式可以幫助 {appName} 嗎？",
-        "answer": "目前，捐款是您支持 {appName} 的主要方式。不過，如果您無法捐款，還有幾種其他方式可以提供幫助：<ol><li>將這份呼籲分享給使用 {appName} 且可能有興趣支持我們使命的親友。</li><li>透過 <crowdin-link>{wordCrowdin}</crowdin-link> 協助將 {appName} 翻譯成其他語言</li><li>為 {appNamePossessive} 的 <github-link>開源程式碼庫</github-link> 做出貢獻</li></ol>"
+        "answer": "捐款是您目前支持 {appName} 的主要方式。不過，如果您無法捐款，仍然還有其他幾種方式可以提供幫助：<ol><li>將這份呼籲分享給使用 {appName} 且可能有興趣支持我們使命的朋友和家人。</li><li>透過 <crowdin-link>{wordCrowdin}</crowdin-link> 幫助將 {appName} 翻譯成其他語言</li><li>為 {appNamePossessive} 的 <github-link>開源程式碼庫</github-link> 做出貢獻</li></ol>"
+      },
+      "tax-question": {
+        "question": "我可以進行可抵稅的捐款嗎？",
+        "answer": ""
       }
     },
-    "appealHeading": "A Personal Appeal From {donateAppealName}"
+    "appealHeading": "A Personal Appeal From {donateAppealName}",
+    "7": {
+      "heading": "常見問題",
+      "content": ""
+    }
   }
 }

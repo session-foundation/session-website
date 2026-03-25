@@ -203,15 +203,15 @@
     },
     "heroAppeal": "Acht jaar geleden werd {appName} opgericht met de missie om je privacy te herstellen en je controle te geven over je meningsuiting en je leven — in essentie: digitale vrijheid. Maar zonder jouw hulp vandaag kunnen we niet veel langer doorgaan met de ontwikkeling van {appName}. Als {appName} of zijn missie ooit waarde voor je heeft gehad, vraag ik je om even de tijd te nemen en deze oproep te lezen.<br></br><br></br>{appName} is controversiële technologie in een tijd waarin vrije meningsuiting niet vanzelfsprekend is, het recht op privacy wordt verafschuwd en de waarheid een leugen is. In de loop der jaren hebben de organisaties die {appName} beschermen veel uitdagingen gekend, maar nu staat het voortbestaan van {appNamePossessive} zelf op het spel.<br></br><br></br>De bedreigingen voor privacy zijn nu groter dan ooit, en {appName} moet zich ontwikkelen om de uitdagingen van de toekomst aan te kunnen. De huidige beheerder van {appNamePossessive}, de {foundationName}, beschikt niet over de financiering die nodig is om {appName} verder te brengen. Belangrijk werk, zoals PFS en post-quantumcryptografie, is nog in uitvoering — en we hebben niet veel tijd meer.<br></br><br></br>Onze missie is om de vrijheid, creativiteit en privacy terug te brengen die mensen ooit voelden wanneer ze online communiceerden. We hebben een zaadje geplant voor een echt vrije messenger die censors, toezichthouders en gecentraliseerde entiteiten die je gesprekken monitoren, uitschakelt. Tot nu toe werkt dat idee. Elke maand gebruiken meer dan {appUserNumber} mensen {appName} om berichten te versturen, geen metadata.<br></br><br></br>{appName} is een platform dat is gebouwd door en eigendom is van de gemeenschap — niet van big tech, private equity of welke schimmige machthebbers dan ook. Nu wendt {appName} zich tot jou.<br></br><br></br>Het project is op weg naar zelfvoorzienendheid, maar de toekomst is kwetsbaar. Als elke gebruiker van {appName} slechts één dollar zou bijdragen, zou dat een grote stap zijn richting een duurzame toekomst voor {appName}. Als je ooit hebt overwogen om te doneren, dan is dit het moment om in actie te komen.<br></br><br></br>{donateSignerName}",
     "6": {
-      "heading": "Veelgestelde vragen",
-      "content": ""
+      "heading": "Doneer via {wordSilentDonor}",
+      "content": "Individuals may make an anonymous tax deductible gift to the {foundationName} using <silent-donor-link>{wordSilentDonor}</silent-donor-link>.<br></br><br></br>{wordSilentDonor} is a third party which can facilitate donations to the {foundationAcronym} using card, bank transfer, and <crypto-icons>crypto</crypto-icons>"
     },
     "buttonCard": "Doneer met kaart",
     "buttonCrypto": "Doneer met crypto",
     "faq": {
       "1": {
         "question": "Hoe kan ik doneren aan {appName}?",
-        "answer": "Er zijn momenteel twee manieren om de verdere ontwikkeling van {appName} te ondersteunen:<br></br><br></br><bold>Donorbox</bold><br></br><br></br>{donationProviderName} is een platform van een derde partij dat non-profitorganisaties helpt donaties te accepteren via verschillende betaalmethoden. Je kunt <donate-link>hier</donate-link> aan de {foundationName} doneren via {donationProviderName}.<br></br><br></br>Ondersteunde betaalmethoden zijn onder meer:<payment-providers></payment-providers><bold>Cryptocurrency</bold><br></br><br></br>Je kunt ook rechtstreeks cryptocurrency doneren aan de {foundationName} door geld te sturen naar de hieronder vermelde walletadressen.<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>Dit {wordEthereumAddress} accepteert donaties in {ethSymbol}, evenals {wordErc20} {wordTokens} (zoals {usdtSymbol} en {usdcSymbol}) op {wordEvmCompatible}-chains, zoals {ethNetworkName}, {arbNetworkName} en {baseNetworkName}.<br></br><br></br><bold>Opmerking:</bold> Als je overweegt een donatie van meer dan {largeDonationAmount} te doen via welke betaalmethode dan ook, neem dan contact met ons op via <donations-email></donations-email>"
+        "answer": "Er zijn momenteel drie manieren om de verdere ontwikkeling van {appName} te ondersteunen:<br></br><br></br><bold>{donationProviderName}</bold><br></br><br></br>{donationProviderName} is een platform van een derde partij dat non-profitorganisaties helpt donaties te accepteren via verschillende betaalmethoden. Je kunt <donate-link>hier</donate-link> aan de {foundationName} doneren via {donationProviderName}.<br></br><br></br>Ondersteunde betaalmethoden zijn onder meer:<payment-providers></payment-providers><bold>{wordSilentDonor}</bold><br></br><br></br><silent-donor-info></silent-donor-info><bold>Directe cryptocurrency</bold><br></br><br></br>Je kunt ook rechtstreeks cryptocurrency doneren aan de {foundationName} door geld te sturen naar de hieronder vermelde walletadressen.<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordBitcoinCashAddress}: {addressBitcoinCash}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>Dit {wordEthereumAddress} accepteert donaties in {ethSymbol}, evenals {wordErc20} {wordTokens} (zoals {usdtSymbol} en {usdcSymbol}) op {wordEvmCompatible}-chains, zoals {ethNetworkName}, {arbNetworkName} en {baseNetworkName}.<br></br><br></br><bold>Opmerking:</bold> Als je overweegt een donatie van meer dan {largeDonationAmount} te doen via welke betaalmethode dan ook, neem dan contact met ons op via <donations-email></donations-email>"
       },
       "2": {
         "question": "Waarvoor wordt mijn donatie gebruikt?",
@@ -224,8 +224,16 @@
       "4": {
         "question": "Zijn er nog andere manieren waarop ik {appName} kan helpen?",
         "answer": "Donaties zijn momenteel de belangrijkste manier waarop je {appName} kunt ondersteunen. Als je echter niet kunt doneren, zijn er verschillende andere manieren waarop je kunt helpen:<ol><li>Deel deze oproep met vrienden en familie die {appName} gebruiken en mogelijk geïnteresseerd zijn om onze missie te steunen.</li><li>Help {appName} naar andere talen te vertalen via <crowdin-link>{wordCrowdin}</crowdin-link></li><li>Draag bij aan de <github-link>open-sourcecodebase</github-link> van {appNamePossessive}</li></ol>"
+      },
+      "tax-question": {
+        "question": "Kan ik een fiscaal aftrekbare donatie doen?",
+        "answer": ""
       }
     },
-    "appealHeading": "Een persoonlijke oproep van {donateAppealName}"
+    "appealHeading": "Een persoonlijke oproep van {donateAppealName}",
+    "7": {
+      "heading": "Veelgestelde vragen",
+      "content": ""
+    }
   }
 }

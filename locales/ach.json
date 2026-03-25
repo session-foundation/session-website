@@ -203,15 +203,15 @@
     },
     "heroAppeal": "crwdns39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{appNamePossessive}crwdnd39082:0{appName}crwdnd39082:0{appNamePossessive}crwdnd39082:0{foundationName}crwdnd39082:0{appName}crwdnd39082:0{appUserNumber}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{donateSignerName}crwdne39082:0",
     "6": {
-      "heading": "crwdns39084:0crwdne39084:0",
-      "content": "crwdns39086:0crwdne39086:0"
+      "heading": "crwdns39084:0{wordSilentDonor}crwdne39084:0",
+      "content": "crwdns39086:0{foundationName}crwdnd39086:0{wordSilentDonor}crwdnd39086:0{wordSilentDonor}crwdnd39086:0{foundationAcronym}crwdne39086:0"
     },
     "buttonCard": "crwdns39088:0crwdne39088:0",
     "buttonCrypto": "crwdns39090:0crwdne39090:0",
     "faq": {
       "1": {
         "question": "crwdns39092:0{appName}crwdne39092:0",
-        "answer": "crwdns39094:0{appName}crwdnd39094:0{donationProviderName}crwdnd39094:0{foundationName}crwdnd39094:0{donationProviderName}crwdnd39094:0{foundationName}crwdnd39094:0{wordBitcoinAddress}crwdnd39094:0{addressBitcoin}crwdnd39094:0{wordEthereumAddress}crwdnd39094:0{addressEthereum}crwdnd39094:0{wordEthereumAddress}crwdnd39094:0{ethSymbol}crwdnd39094:0{wordErc20}crwdnd39094:0{wordTokens}crwdnd39094:0{usdtSymbol}crwdnd39094:0{usdcSymbol}crwdnd39094:0{wordEvmCompatible}crwdnd39094:0{ethNetworkName}crwdnd39094:0{arbNetworkName}crwdnd39094:0{baseNetworkName}crwdnd39094:0{largeDonationAmount}crwdne39094:0"
+        "answer": "crwdns39094:0{appName}crwdnd39094:0{donationProviderName}crwdnd39094:0{donationProviderName}crwdnd39094:0{foundationName}crwdnd39094:0{donationProviderName}crwdnd39094:0{wordSilentDonor}crwdnd39094:0{foundationName}crwdnd39094:0{wordBitcoinAddress}crwdnd39094:0{addressBitcoin}crwdnd39094:0{wordBitcoinCashAddress}crwdnd39094:0{addressBitcoinCash}crwdnd39094:0{wordEthereumAddress}crwdnd39094:0{addressEthereum}crwdnd39094:0{wordEthereumAddress}crwdnd39094:0{ethSymbol}crwdnd39094:0{wordErc20}crwdnd39094:0{wordTokens}crwdnd39094:0{usdtSymbol}crwdnd39094:0{usdcSymbol}crwdnd39094:0{wordEvmCompatible}crwdnd39094:0{ethNetworkName}crwdnd39094:0{arbNetworkName}crwdnd39094:0{baseNetworkName}crwdnd39094:0{largeDonationAmount}crwdne39094:0"
       },
       "2": {
         "question": "crwdns39096:0crwdne39096:0",
@@ -224,8 +224,16 @@
       "4": {
         "question": "crwdns39104:0{appName}crwdne39104:0",
         "answer": "crwdns39106:0{appName}crwdnd39106:0{appName}crwdnd39106:0{appName}crwdnd39106:0{wordCrowdin}crwdnd39106:0{appNamePossessive}crwdne39106:0"
+      },
+      "tax-question": {
+        "question": "crwdns39124:0crwdne39124:0",
+        "answer": "crwdns39126:0crwdne39126:0"
       }
     },
-    "appealHeading": "crwdns39108:0{donateAppealName}crwdne39108:0"
+    "appealHeading": "crwdns39108:0{donateAppealName}crwdne39108:0",
+    "7": {
+      "heading": "crwdns39128:0crwdne39128:0",
+      "content": "crwdns39130:0crwdne39130:0"
+    }
   }
 }

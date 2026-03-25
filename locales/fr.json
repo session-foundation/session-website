@@ -203,15 +203,15 @@
     },
     "heroAppeal": "Il y a huit ans, {appName} a été fondée avec pour mission de restaurer votre vie privée et de vous redonner le contrôle de votre expression et de votre vie — en somme, votre liberté numérique. Cependant, sans votre aide aujourd'hui, nous ne pourrons pas continuer à développer {appName} encore très longtemps. Si {appName} ou sa mission ont déjà eu de la valeur à vos yeux, accordez-moi un instant de votre temps et lisez cet appel.<br></br><br></br>{appName} est une technologie controversée à une époque où la liberté d'expression n'est pas acquise, où le droit à la vie privée est honni et où la vérité devient mensonge. Au fil des ans, les organisations qui protègent {appName} ont fait face à de nombreux défis, mais aujourd'hui, la survie même de {appNamePossessive} est menacée.<br></br><br></br>Les menaces contre la vie privée sont aujourd'hui plus grandes que jamais, et {appName} doit évoluer pour relever les défis de l'avenir. L'actuel garant de {appNamePossessive}, la {foundationName}, ne dispose pas des financements nécessaires pour faire avancer davantage {appName}. Des travaux importants, comme le PFS et la cryptographie post-quantique, sont toujours en cours — et le temps nous est compté.<br></br><br></br>Notre mission est de redonner la liberté, la créativité et la vie privée que les gens ressentaient autrefois lorsqu'ils communiquaient en ligne. Nous avons semé la graine d'une messagerie véritablement libre qui élimine les censeurs, les surveillants et les entités centralisées qui observent vos conversations. Jusqu'à présent, cette idée fonctionne. Chaque mois, plus de {appUserNumber} personnes utilisent {appName} pour envoyer des messages, et non des métadonnées.<br></br><br></br>{appName} est une plateforme construite et possédée par sa communauté — et non par la big tech, le capital-investissement ou d'autres maîtres de l'ombre. Aujourd'hui, {appName} se tourne vers vous.<br></br><br></br>Le projet est sur la voie de l'autonomie financière, mais l'avenir reste fragile. Si chaque utilisateur de {appName} contribuait seulement un dollar, cela aiderait grandement {appName} à atteindre la pérennité. Si vous avez déjà envisagé de faire un don, c'est le moment d'agir.<br></br><br></br>{donateSignerName}",
     "6": {
-      "heading": "FAQ",
-      "content": ""
+      "heading": "Faire un don via {wordSilentDonor}",
+      "content": "Individuals may make an anonymous tax deductible gift to the {foundationName} using <silent-donor-link>{wordSilentDonor}</silent-donor-link>.<br></br><br></br>{wordSilentDonor} is a third party which can facilitate donations to the {foundationAcronym} using card, bank transfer, and <crypto-icons>crypto</crypto-icons>"
     },
     "buttonCard": "Don par carte",
     "buttonCrypto": "Don en cryptomonnaie",
     "faq": {
       "1": {
         "question": "Comment puis-je faire un don à {appName} ?",
-        "answer": "Il existe actuellement deux façons de soutenir le développement continu de {appName} :<br></br><br></br><bold>Donorbox</bold><br></br><br></br>{donationProviderName} est une plateforme tierce qui aide les organisations à but non lucratif à accepter des dons via divers moyens de paiement. Vous pouvez faire un don à la {foundationName} via {donationProviderName} <donate-link>ici</donate-link>.<br></br><br></br>Les moyens de paiement pris en charge comprennent :<payment-providers></payment-providers><bold>Cryptomonnaie</bold><br></br><br></br>Vous pouvez également faire un don en cryptomonnaie directement à la {foundationName} en envoyant des fonds aux adresses de portefeuille indiquées ci-dessous.<br></br><br></br>{wordBitcoinAddress} : {addressBitcoin}<br></br><br></br>{wordEthereumAddress} : {addressEthereum}<br></br><br></br>Cette {wordEthereumAddress} accepte les dons en {ethSymbol}, ainsi que les {wordTokens} {wordErc20} (tels que {usdtSymbol} et {usdcSymbol}) sur des chaînes {wordEvmCompatible}, comme {ethNetworkName}, {arbNetworkName} et {baseNetworkName}.<br></br><br></br><bold>Remarque :</bold> Si vous envisagez de faire un don de plus de {largeDonationAmount} par quelque moyen de paiement que ce soit, veuillez nous contacter à <donations-email></donations-email>"
+        "answer": "Il existe actuellement trois façons de soutenir le développement continu de {appName} :<br></br><br></br><bold>{donationProviderName}</bold><br></br><br></br>{donationProviderName} est une plateforme tierce qui aide les organisations à but non lucratif à accepter des dons via divers moyens de paiement. Vous pouvez faire un don à la {foundationName} via {donationProviderName} <donate-link>ici</donate-link>.<br></br><br></br>Les moyens de paiement pris en charge comprennent :<payment-providers></payment-providers><bold>{wordSilentDonor}</bold><br></br><br></br><silent-donor-info></silent-donor-info><bold>Cryptomonnaie directe</bold><br></br><br></br>Vous pouvez également faire un don en cryptomonnaie directement à la {foundationName} en envoyant des fonds aux adresses de portefeuille indiquées ci-dessous.<br></br><br></br>{wordBitcoinAddress} : {addressBitcoin}<br></br><br></br>{wordBitcoinCashAddress} : {addressBitcoinCash}<br></br><br></br>{wordEthereumAddress} : {addressEthereum}<br></br><br></br>Cette {wordEthereumAddress} accepte les dons en {ethSymbol}, ainsi que les {wordTokens} {wordErc20} (tels que {usdtSymbol} et {usdcSymbol}) sur des chaînes {wordEvmCompatible}, comme {ethNetworkName}, {arbNetworkName} et {baseNetworkName}.<br></br><br></br><bold>Remarque :</bold> Si vous envisagez de faire un don de plus de {largeDonationAmount} par quelque moyen de paiement que ce soit, veuillez nous contacter à <donations-email></donations-email>"
       },
       "2": {
         "question": "À quoi servira mon don ?",
@@ -224,8 +224,16 @@
       "4": {
         "question": "Existe-t-il d'autres façons d'aider {appName} ?",
         "answer": "Les dons sont actuellement le principal moyen d'aider à soutenir {appName}. Cependant, si vous n'êtes pas en mesure de faire un don, il existe plusieurs autres façons de nous aider :<ol><li>Partagez cet appel avec des amis et des membres de votre famille qui utilisent {appName} et qui pourraient souhaiter soutenir notre mission.</li><li>Aidez à traduire {appName} dans d'autres langues via <crowdin-link>{wordCrowdin}</crowdin-link></li><li>Contribuez à la <github-link>base de code open source</github-link> de {appNamePossessive}</li></ol>"
+      },
+      "tax-question": {
+        "question": "Puis-je faire un don déductible des impôts ?",
+        "answer": ""
       }
     },
-    "appealHeading": "Appel personnel de {donateAppealName}"
+    "appealHeading": "Appel personnel de {donateAppealName}",
+    "7": {
+      "heading": "FAQ",
+      "content": ""
+    }
   }
 }

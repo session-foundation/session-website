@@ -203,15 +203,15 @@
     },
     "heroAppeal": "Osiem lat temu {appName} powstało z misją przywrócenia Ci prywatności i oddania Ci kontroli nad Twoją wypowiedzią i życiem — czyli w istocie cyfrowej wolności. Jednak bez Twojej pomocy już dziś nie będziemy w stanie rozwijać {appName} jeszcze przez długi czas. Jeśli kiedykolwiek dostrzegłeś wartość w {appName} lub jego misji, poświęć mi chwilę i przeczytaj ten apel.<br></br><br></br>{appName} to kontrowersyjna technologia w czasach, gdy wolność słowa nie jest dana raz na zawsze, prawo do prywatności budzi odrazę, a prawda staje się kłamstwem. Przez lata organizacje chroniące {appName} mierzyły się z wieloma wyzwaniami, ale teraz samo przetrwanie {appNamePossessive} jest zagrożone.<br></br><br></br>Zagrożenia dla prywatności są dziś większe niż kiedykolwiek wcześniej, a {appName} musi ewoluować, aby sprostać wyzwaniom przyszłości. Obecny opiekun {appNamePossessive}, {foundationName}, nie dysponuje środkami potrzebnymi, by rozwijać {appName} dalej. Ważne prace, takie jak PFS i kryptografia postkwantowa, wciąż trwają — a nam nie zostało już dość czasu.<br></br><br></br>Naszą misją jest przywrócenie wolności, kreatywności i prywatności, które ludzie kiedyś odczuwali, komunikując się online. Zasialiśmy ziarno prawdziwie wolnego komunikatora, który eliminuje cenzorów, inwigilatorów i scentralizowane podmioty monitorujące Twoje rozmowy. Jak dotąd ten pomysł się sprawdza. Każdego miesiąca ponad {appUserNumber} osób używa {appName} do wysyłania wiadomości, a nie metadanych.<br></br><br></br>{appName} to platforma tworzona i należąca do swojej społeczności — a nie do big techu, funduszy private equity ani innych mrocznych mocodawców. Teraz {appName} zwraca się do Ciebie.<br></br><br></br>Projekt jest na drodze do samowystarczalności, ale przyszłość pozostaje krucha. Gdyby każdy użytkownik {appName} przekazał tylko jednego dolara, bardzo pomogłoby to {appName} osiągnąć stabilność. Jeśli kiedykolwiek rozważałeś przekazanie darowizny, teraz jest czas, by działać.<br></br><br></br>{donateSignerName}",
     "6": {
-      "heading": "FAQ",
-      "content": ""
+      "heading": "Przekaż darowiznę przez {wordSilentDonor}",
+      "content": "Individuals may make an anonymous tax deductible gift to the {foundationName} using <silent-donor-link>{wordSilentDonor}</silent-donor-link>.<br></br><br></br>{wordSilentDonor} is a third party which can facilitate donations to the {foundationAcronym} using card, bank transfer, and <crypto-icons>crypto</crypto-icons>"
     },
     "buttonCard": "Przekaż darowiznę kartą",
     "buttonCrypto": "Przekaż darowiznę w kryptowalucie",
     "faq": {
       "1": {
         "question": "Jak mogę przekazać darowiznę na rzecz {appName}?",
-        "answer": "Obecnie istnieją dwa sposoby wsparcia dalszego rozwoju {appName}:<br></br><br></br><bold>Donorbox</bold><br></br><br></br>{donationProviderName} to platforma zewnętrzna, która pomaga organizacjom non-profit przyjmować darowizny za pomocą różnych metod płatności. Możesz przekazać darowiznę na rzecz {foundationName} przez {donationProviderName} <donate-link>tutaj</donate-link>.<br></br><br></br>Obsługiwane metody płatności obejmują:<payment-providers></payment-providers><bold>Kryptowaluty</bold><br></br><br></br>Możesz także przekazać kryptowaluty bezpośrednio na rzecz {foundationName}, wysyłając środki na adresy portfeli podane poniżej.<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>Ten {wordEthereumAddress} przyjmuje darowizny w {ethSymbol}, a także w tokenach {wordErc20} {wordTokens} (takich jak {usdtSymbol} i {usdcSymbol}) w sieciach zgodnych z {wordEvmCompatible}, takich jak {ethNetworkName}, {arbNetworkName} i {baseNetworkName}.<br></br><br></br><bold>Uwaga:</bold> Jeśli rozważasz przekazanie darowizny przekraczającej {largeDonationAmount} przy użyciu dowolnej metody płatności, skontaktuj się z nami pod adresem <donations-email></donations-email>"
+        "answer": "Obecnie istnieją trzy sposoby wsparcia dalszego rozwoju {appName}:<br></br><br></br><bold>{donationProviderName}</bold><br></br><br></br>{donationProviderName} to platforma zewnętrzna, która pomaga organizacjom non-profit przyjmować darowizny za pomocą różnych metod płatności. Możesz przekazać darowiznę na rzecz {foundationName} przez {donationProviderName} <donate-link>tutaj</donate-link>.<br></br><br></br>Obsługiwane metody płatności obejmują:<payment-providers></payment-providers><bold>{wordSilentDonor}</bold><br></br><br></br><silent-donor-info></silent-donor-info><bold>Bezpośrednia darowizna w kryptowalutach</bold><br></br><br></br>Możesz także przekazać kryptowaluty bezpośrednio na rzecz {foundationName}, wysyłając środki na adresy portfeli podane poniżej.<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordBitcoinCashAddress}: {addressBitcoinCash}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>Ten {wordEthereumAddress} przyjmuje darowizny w {ethSymbol}, a także w tokenach {wordErc20} {wordTokens} (takich jak {usdtSymbol} i {usdcSymbol}) w sieciach zgodnych z {wordEvmCompatible}, takich jak {ethNetworkName}, {arbNetworkName} i {baseNetworkName}.<br></br><br></br><bold>Uwaga:</bold> Jeśli rozważasz przekazanie darowizny przekraczającej {largeDonationAmount} przy użyciu dowolnej metody płatności, skontaktuj się z nami pod adresem <donations-email></donations-email>"
       },
       "2": {
         "question": "Na co zostanie przeznaczona moja darowizna?",
@@ -224,8 +224,16 @@
       "4": {
         "question": "Czy są inne sposoby, w jakie mogę pomóc {appName}?",
         "answer": "Darowizny są obecnie głównym sposobem, w jaki możesz wesprzeć {appName}. Jeśli jednak nie możesz przekazać darowizny, istnieje kilka innych sposobów, w jakie możesz pomóc:<ol><li>Udostępnij ten apel znajomym i rodzinie, którzy korzystają z {appName} i mogą chcieć wesprzeć naszą misję.</li><li>Pomóż tłumaczyć {appName} na inne języki przez <crowdin-link>{wordCrowdin}</crowdin-link></li><li>Współtwórz <github-link>kod źródłowy open source {appNamePossessive}</github-link></li></ol>"
+      },
+      "tax-question": {
+        "question": "Czy mogę przekazać darowiznę podlegającą odliczeniu od podatku?",
+        "answer": ""
       }
     },
-    "appealHeading": "Osobisty apel od {donateAppealName}"
+    "appealHeading": "Osobisty apel od {donateAppealName}",
+    "7": {
+      "heading": "FAQ",
+      "content": ""
+    }
   }
 }

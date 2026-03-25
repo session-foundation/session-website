@@ -203,15 +203,15 @@
     },
     "heroAppeal": "八年前，{appName} 在“恢复您的隐私并让您掌控自己的言论和生活——本质上就是数字自由”这一使命下创立。然而，如果今天没有您的帮助，我们将无法再继续开发 {appName} 太久。如果 {appName} 或其使命曾对您有过价值，请花一点时间读完这份呼吁。<br></br><br></br>在一个言论自由不再是理所当然、隐私权遭人憎恶、真相被颠倒为谎言的时代，{appName} 是一项充满争议的技术。多年来，守护 {appName} 的组织面临了许多挑战，而如今，{appNamePossessive} 的生存本身正处于危险之中。<br></br><br></br>如今，对隐私的威胁比以往任何时候都更大，{appName} 必须进化以应对未来的挑战。{appNamePossessive} 当前的管护机构 {foundationName} 并没有足够的资金来继续推进 {appName}。像 PFS 和后量子密码学这样的重要工作仍在进行中——而我们剩下的时间已经不多了。<br></br><br></br>我们的使命，是找回人们曾经在网上交流时感受到的自由、创造力和隐私。我们已经为一个真正自由的即时通讯工具播下了种子，它将移除审查者、监视者以及那些监控您对话的中心化实体。到目前为止，这一理念已经奏效。每个月，超过 {appUserNumber} 人使用 {appName} 发送的是消息，而不是元数据。<br></br><br></br>{appName} 是一个由其社区构建并拥有的平台——而不是属于大型科技公司、私募资本或任何其他隐藏在幕后的主宰者。现在，{appName} 正向您发出请求。<br></br><br></br>该项目正走在实现自我可持续的道路上，但未来依然脆弱。如果每位 {appName} 用户只贡献 1 美元，这将极大推动 {appName} 实现可持续发展。如果您曾考虑过捐赠，现在就是行动的时候。<br></br><br></br>{donateSignerName}",
     "6": {
-      "heading": "常见问题",
-      "content": ""
+      "heading": "通过 {wordSilentDonor} 捐赠",
+      "content": "Individuals may make an anonymous tax deductible gift to the {foundationName} using <silent-donor-link>{wordSilentDonor}</silent-donor-link>.<br></br><br></br>{wordSilentDonor} is a third party which can facilitate donations to the {foundationAcronym} using card, bank transfer, and <crypto-icons>crypto</crypto-icons>"
     },
     "buttonCard": "信用卡捐赠",
     "buttonCrypto": "加密货币捐赠",
     "faq": {
       "1": {
         "question": "我如何向 {appName} 捐赠？",
-        "answer": "目前有两种方式可以支持 {appName} 的持续开发：<br></br><br></br><bold>Donorbox</bold><br></br><br></br>{donationProviderName} 是一个第三方平台，帮助非营利组织通过多种支付方式接受捐赠。您可以通过 {donationProviderName} <donate-link>在此</donate-link>向 {foundationName} 捐赠。<br></br><br></br>支持的支付方式包括：<payment-providers></payment-providers><bold>加密货币</bold><br></br><br></br>您也可以通过向下方列出的钱包地址转账，直接向 {foundationName} 捐赠加密货币。<br></br><br></br>{wordBitcoinAddress}：{addressBitcoin}<br></br><br></br>{wordEthereumAddress}：{addressEthereum}<br></br><br></br>此 {wordEthereumAddress} 接受 {ethSymbol} 捐赠，以及通过与 {wordEvmCompatible} 链兼容的 {wordTokens}（如 {ethNetworkName}、{arbNetworkName} 和 {baseNetworkName}）发送的 {wordErc20} 代币（例如 {usdtSymbol} 和 {usdcSymbol}）。<br></br><br></br><bold>注意：</bold>如果您考虑通过任何支付方式捐赠超过 {largeDonationAmount}，请通过 <donations-email></donations-email> 联系我们。"
+        "answer": "目前有三种方式可以支持 {appName} 的持续开发：<br></br><br></br><bold>{donationProviderName}</bold><br></br><br></br>{donationProviderName} 是一个第三方平台，帮助非营利组织通过多种支付方式接受捐赠。您可以通过 {donationProviderName} <donate-link>在此</donate-link>向 {foundationName} 捐赠。<br></br><br></br>支持的支付方式包括：<payment-providers></payment-providers><bold>{wordSilentDonor}</bold><br></br><br></br><silent-donor-info></silent-donor-info><bold>直接加密货币</bold><br></br><br></br>您也可以通过向下方列出的钱包地址转账，直接向 {foundationName} 捐赠加密货币。<br></br><br></br>{wordBitcoinAddress}：{addressBitcoin}<br></br><br></br>{wordBitcoinCashAddress}：{addressBitcoinCash}<br></br><br></br>{wordEthereumAddress}：{addressEthereum}<br></br><br></br>此 {wordEthereumAddress} 接受 {ethSymbol} 捐赠，以及通过与 {wordEvmCompatible} 链兼容的 {wordErc20} {wordTokens}（例如 {usdtSymbol} 和 {usdcSymbol}）在 {ethNetworkName}、{arbNetworkName} 和 {baseNetworkName} 等链上进行的捐赠。<br></br><br></br><bold>注意：</bold>如果您考虑通过任何支付方式捐赠超过 {largeDonationAmount}，请通过 <donations-email></donations-email> 联系我们"
       },
       "2": {
         "question": "我的捐赠将用于什么用途？",
@@ -224,8 +224,16 @@
       "4": {
         "question": "还有其他方式可以帮助 {appName} 吗？",
         "answer": "捐赠是您目前支持 {appName} 的主要方式。不过，如果您无法捐赠，仍然还有其他几种方式可以提供帮助：<ol><li>将这份呼吁分享给使用 {appName} 且可能有兴趣支持我们使命的朋友和家人。</li><li>通过 <crowdin-link>{wordCrowdin}</crowdin-link> 帮助将 {appName} 翻译成其他语言</li><li>为 {appNamePossessive} 的 <github-link>开源代码库</github-link> 做出贡献</li></ol>"
+      },
+      "tax-question": {
+        "question": "我可以进行可抵税的捐赠吗？",
+        "answer": ""
       }
     },
-    "appealHeading": "来自 {donateAppealName} 的个人呼吁"
+    "appealHeading": "来自 {donateAppealName} 的个人呼吁",
+    "7": {
+      "heading": "常见问题",
+      "content": ""
+    }
   }
 }

@@ -203,15 +203,15 @@
     },
     "heroAppeal": "8年前、{appName}はあなたのプライバシーを取り戻し、発言と生活を自分でコントロールできるようにすること、つまりデジタルの自由を実現することを使命として創設されました。しかし今、皆さまのご支援がなければ、私たちは{appName}の開発をこれ以上長く続けることができません。もし{appName}やその使命に価値を感じたことがあるなら、少しだけお時間をいただき、このお願いをお読みください。<br></br><br></br>{appName}は、言論の自由が当然ではなく、プライバシーの権利が忌み嫌われ、真実が嘘にされる時代において、物議を醸す技術です。これまで長年にわたり、{appName}を守ってきた組織はいくつもの困難に直面してきましたが、今や{appNamePossessive}存続そのものが危機にさらされています。<br></br><br></br>プライバシーへの脅威はかつてないほど大きくなっており、{appName}は将来の課題に立ち向かうために進化しなければなりません。{appNamePossessive}現在の管理団体である{foundationName}には、{appName}をさらに前へ進めるために必要な資金がありません。PFSや耐量子暗号のような重要な作業は今なお進行中ですが、残された時間は十分ではありません。<br></br><br></br>私たちの使命は、かつて人々がオンラインでコミュニケーションするときに感じていた自由、創造性、そしてプライバシーを取り戻すことです。私たちは、検閲者、監視者、そしてあなたの会話を監視する中央集権的な存在を取り除く、真に自由なメッセンジャーの種を蒔いてきました。これまでのところ、その理念は機能しています。毎月、{appUserNumber}人を超える人々が、メタデータではなくメッセージを送るために{appName}を利用しています。<br></br><br></br>{appName}は、そのコミュニティによって構築され、所有されるプラットフォームです。巨大テック企業やプライベートエクイティ、その他の得体の知れない支配者たちのものではありません。そして今、{appName}はあなたに助けを求めています。<br></br><br></br>このプロジェクトは自立可能な運営に向けて進んでいますが、その未来はまだ脆弱です。もし{appName}のユーザー一人ひとりがわずか1ドルを拠出してくれれば、{appName}が持続可能性に到達するための大きな助けになります。寄付を考えたことがあるなら、今こそ行動するときです。<br></br><br></br>{donateSignerName}",
     "6": {
-      "heading": "よくある質問",
-      "content": ""
+      "heading": "{wordSilentDonor}で寄付する",
+      "content": "Individuals may make an anonymous tax deductible gift to the {foundationName} using <silent-donor-link>{wordSilentDonor}</silent-donor-link>.<br></br><br></br>{wordSilentDonor} is a third party which can facilitate donations to the {foundationAcronym} using card, bank transfer, and <crypto-icons>crypto</crypto-icons>"
     },
     "buttonCard": "カードで寄付",
     "buttonCrypto": "暗号資産で寄付",
     "faq": {
       "1": {
         "question": "{appName}に寄付するにはどうすればよいですか？",
-        "answer": "現在、{appName}の継続的な開発を支援する方法は2つあります。<br></br><br></br><bold>Donorbox</bold><br></br><br></br>{donationProviderName}は、非営利団体がさまざまな支払い方法で寄付を受け取れるよう支援するサードパーティのプラットフォームです。{foundationName}へは、{donationProviderName}を通じて<donate-link>こちら</donate-link>から寄付できます。<br></br><br></br>対応している支払い方法は以下のとおりです：<payment-providers></payment-providers><bold>暗号資産</bold><br></br><br></br>以下に記載されたウォレットアドレスに送金することで、{foundationName}に暗号資産を直接寄付することもできます。<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>この{wordEthereumAddress}では、{ethSymbol}に加え、{ethNetworkName}、{arbNetworkName}、{baseNetworkName}などの{wordEvmCompatible}チェーン上の{wordErc20}{wordTokens}（{usdtSymbol}や{usdcSymbol}など）による寄付も受け付けています。<br></br><br></br><bold>注:</bold> いずれかの支払い方法で{largeDonationAmount}を超える寄付をご検討の場合は、<donations-email></donations-email>までご連絡ください"
+        "answer": "現在、{appName}の継続的な開発を支援する方法は3つあります。<br></br><br></br><bold>{donationProviderName}</bold><br></br><br></br>{donationProviderName}は、非営利団体がさまざまな支払い方法で寄付を受け取れるよう支援するサードパーティのプラットフォームです。{foundationName}へは、{donationProviderName}を通じて<donate-link>こちら</donate-link>から寄付できます。<br></br><br></br>対応している支払い方法は以下のとおりです：<payment-providers></payment-providers><bold>{wordSilentDonor}</bold><br></br><br></br><silent-donor-info></silent-donor-info><bold>暗号資産の直接寄付</bold><br></br><br></br>以下に記載されたウォレットアドレスに送金することで、{foundationName}に暗号資産を直接寄付することもできます。<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordBitcoinCashAddress}: {addressBitcoinCash}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>この{wordEthereumAddress}では、{ethSymbol}に加え、{ethNetworkName}、{arbNetworkName}、{baseNetworkName}などの{wordEvmCompatible}チェーン上の{wordErc20} {wordTokens}（{usdtSymbol}や{usdcSymbol}など）による寄付も受け付けています。<br></br><br></br><bold>注:</bold> いずれかの支払い方法で{largeDonationAmount}を超える寄付をご検討の場合は、<donations-email></donations-email>までご連絡ください"
       },
       "2": {
         "question": "寄付金は何に使われますか？",
@@ -224,8 +224,16 @@
       "4": {
         "question": "{appName}を支援する他の方法はありますか？",
         "answer": "現在、{appName}を支援する主な方法は寄付です。ただし、寄付が難しい場合でも、ほかにも支援できる方法がいくつかあります。<ol><li>{appName}を使っていて、私たちの使命への支援に関心を持ちそうなご友人やご家族に、このお願いを共有してください。</li><li><crowdin-link>{wordCrowdin}</crowdin-link>を通じて、{appName}の他言語への翻訳に協力してください</li><li>{appNamePossessive}<github-link>オープンソースコードベース</github-link>への貢献</li></ol>"
+      },
+      "tax-question": {
+        "question": "税控除の対象となる寄付はできますか？",
+        "answer": ""
       }
     },
-    "appealHeading": "{donateAppealName}からの個人的な訴え"
+    "appealHeading": "{donateAppealName}からの個人的な訴え",
+    "7": {
+      "heading": "よくある質問",
+      "content": ""
+    }
   }
 }

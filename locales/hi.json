@@ -203,15 +203,15 @@
     },
     "heroAppeal": "आठ साल पहले, {appName} की स्थापना आपकी गोपनीयता बहाल करने और आपको अपनी अभिव्यक्ति तथा जीवन पर नियंत्रण देने के मिशन के साथ की गई थी — मूल रूप से, डिजिटल स्वतंत्रता। हालांकि, यदि आज आपकी मदद नहीं मिली, तो हम अधिक समय तक {appName} का विकास जारी नहीं रख पाएंगे। यदि आपने कभी {appName} या इसके मिशन में मूल्य देखा है, तो कृपया अपना थोड़ा समय दें और इस अपील को पढ़ें।<br></br><br></br>{appName} ऐसे समय की विवादास्पद तकनीक है जब अभिव्यक्ति की स्वतंत्रता सुनिश्चित नहीं है, गोपनीयता के अधिकार से घृणा की जाती है, और सत्य को झूठ बना दिया गया है। वर्षों के दौरान, {appName} की रक्षा करने वाले संगठनों ने अनेक चुनौतियों का सामना किया है, लेकिन अब स्वयं {appNamePossessive} का अस्तित्व जोखिम में है।<br></br><br></br>गोपनीयता के खिलाफ खतरे अब पहले से कहीं अधिक बड़े हैं, और भविष्य की चुनौतियों का सामना करने के लिए {appName} को विकसित होना होगा। {appNamePossessive} के वर्तमान संरक्षक, {foundationName}, के पास {appName} को आगे ले जाने के लिए आवश्यक धनराशि नहीं है। PFS और पोस्ट-क्वांटम क्रिप्टोग्राफी जैसे महत्वपूर्ण कार्य अभी भी प्रगति पर हैं — और हमारे पास पर्याप्त समय नहीं बचा है।<br></br><br></br>हमारा मिशन उस स्वतंत्रता, रचनात्मकता और गोपनीयता को वापस लाना है जिसे लोग कभी ऑनलाइन संवाद करते समय महसूस करते थे। हमने एक सचमुच स्वतंत्र मैसेंजर के लिए बीज बोया है, जो सेंसरों, निगरानी करने वालों और आपकी बातचीत पर नज़र रखने वाली केंद्रीकृत संस्थाओं को हटाता है। अभी तक, यह विचार काम कर रहा है। हर महीने, {appUserNumber} से अधिक लोग {appName} का उपयोग संदेश भेजने के लिए करते हैं, मेटाडेटा नहीं।<br></br><br></br>{appName} एक ऐसा मंच है जिसे इसके समुदाय ने बनाया है और जिसका स्वामित्व भी उसी के पास है — न कि बड़ी टेक कंपनियों, निजी इक्विटी, या किसी अन्य छायादार मालिकों के पास। अब, {appName} आपकी ओर देख रहा है।<br></br><br></br>यह परियोजना आत्मनिर्भरता की राह पर है, लेकिन भविष्य नाज़ुक है। यदि {appName} का हर उपयोगकर्ता सिर्फ एक डॉलर का योगदान दे, तो {appName} की स्थिरता की दिशा में यह बहुत मददगार होगा। यदि आपने कभी दान करने के बारे में सोचा है, तो अब कार्रवाई करने का समय है।<br></br><br></br>{donateSignerName}",
     "6": {
-      "heading": "अक्सर पूछे जाने वाले सवाल",
-      "content": ""
+      "heading": "{wordSilentDonor} के माध्यम से दान करें",
+      "content": "Individuals may make an anonymous tax deductible gift to the {foundationName} using <silent-donor-link>{wordSilentDonor}</silent-donor-link>.<br></br><br></br>{wordSilentDonor} is a third party which can facilitate donations to the {foundationAcronym} using card, bank transfer, and <crypto-icons>crypto</crypto-icons>"
     },
     "buttonCard": "कार्ड से दान करें",
     "buttonCrypto": "क्रिप्टो से दान करें",
     "faq": {
       "1": {
         "question": "मैं {appName} को दान कैसे कर सकता/सकती हूँ?",
-        "answer": "वर्तमान में {appName} के निरंतर विकास का समर्थन करने के दो तरीके हैं:<br></br><br></br><bold>Donorbox</bold><br></br><br></br>{donationProviderName} एक तृतीय-पक्ष प्लेटफ़ॉर्म है जो गैर-लाभकारी संगठनों को विभिन्न भुगतान विधियों के माध्यम से दान स्वीकार करने में मदद करता है। आप {foundationName} को {donationProviderName} के माध्यम से <donate-link>यहाँ</donate-link> दान कर सकते हैं।<br></br><br></br>समर्थित भुगतान विधियों में शामिल हैं:<payment-providers></payment-providers><bold>क्रिप्टोकरेंसी</bold><br></br><br></br>आप नीचे सूचीबद्ध वॉलेट पतों पर धन भेजकर सीधे {foundationName} को क्रिप्टोकरेंसी भी दान कर सकते हैं।<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>यह {wordEthereumAddress} {ethSymbol} में दान स्वीकार करता है, साथ ही {wordErc20} {wordTokens} भी (जैसे {usdtSymbol} और {usdcSymbol}), {wordEvmCompatible} चेन पर, जैसे {ethNetworkName}, {arbNetworkName}, और {baseNetworkName}।<br></br><br></br><bold>नोट:</bold> यदि आप किसी भी भुगतान विधि का उपयोग करके {largeDonationAmount} से अधिक का दान देने पर विचार कर रहे हैं, तो कृपया हमसे <donations-email></donations-email> पर संपर्क करें"
+        "answer": "वर्तमान में {appName} के निरंतर विकास का समर्थन करने के तीन तरीके हैं:<br></br><br></br><bold>{donationProviderName}</bold><br></br><br></br>{donationProviderName} एक तृतीय-पक्ष प्लेटफ़ॉर्म है जो गैर-लाभकारी संगठनों को विभिन्न भुगतान विधियों के माध्यम से दान स्वीकार करने में मदद करता है। आप {foundationName} को {donationProviderName} के माध्यम से <donate-link>यहाँ</donate-link> दान कर सकते हैं।<br></br><br></br>समर्थित भुगतान विधियों में शामिल हैं:<payment-providers></payment-providers><bold>{wordSilentDonor}</bold><br></br><br></br><silent-donor-info></silent-donor-info><bold>प्रत्यक्ष क्रिप्टोकरेंसी</bold><br></br><br></br>आप नीचे सूचीबद्ध वॉलेट पतों पर धन भेजकर सीधे {foundationName} को क्रिप्टोकरेंसी भी दान कर सकते हैं।<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordBitcoinCashAddress}: {addressBitcoinCash}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>यह {wordEthereumAddress} {ethSymbol} में दान स्वीकार करता है, साथ ही {wordErc20} {wordTokens} भी (जैसे {usdtSymbol} और {usdcSymbol}), {wordEvmCompatible} चेन पर, जैसे {ethNetworkName}, {arbNetworkName}, और {baseNetworkName}।<br></br><br></br><bold>नोट:</bold> यदि आप किसी भी भुगतान विधि का उपयोग करके {largeDonationAmount} से अधिक का दान देने पर विचार कर रहे हैं, तो कृपया हमसे <donations-email></donations-email> पर संपर्क करें"
       },
       "2": {
         "question": "मेरे दान का उपयोग किस लिए किया जाएगा?",
@@ -224,8 +224,16 @@
       "4": {
         "question": "क्या {appName} की मदद करने के अन्य तरीके भी हैं?",
         "answer": "वर्तमान में {appName} का समर्थन करने का मुख्य तरीका दान है। हालांकि, यदि आप दान नहीं कर सकते, तो मदद करने के कई अन्य तरीके हैं:<ol><li>इस अपील को उन मित्रों और परिवार के साथ साझा करें जो {appName} का उपयोग करते हैं और हमारे मिशन का समर्थन करने में रुचि रख सकते हैं।</li><li><crowdin-link>{wordCrowdin}</crowdin-link> के माध्यम से {appName} का अन्य भाषाओं में अनुवाद करने में मदद करें</li><li>{appNamePossessive} के <github-link>ओपन सोर्स कोडबेस</github-link> में योगदान दें</li></ol>"
+      },
+      "tax-question": {
+        "question": "क्या मैं कर-कटौती योग्य दान कर सकता/सकती हूँ?",
+        "answer": ""
       }
     },
-    "appealHeading": "{donateAppealName} की ओर से एक व्यक्तिगत अपील"
+    "appealHeading": "{donateAppealName} की ओर से एक व्यक्तिगत अपील",
+    "7": {
+      "heading": "अक्सर पूछे जाने वाले सवाल",
+      "content": ""
+    }
   }
 }
