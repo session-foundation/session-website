@@ -1,13 +1,13 @@
 const BANNER = {
   TEXT: {
     MOBILE:
-      'Looking for Session Token? Session Token keeps Session decentralized, secure, and independent.',
+      "Session development can't continue without your help, please take a moment to read our appeal.",
     DESKTOP:
-      'Looking for Session Token? Session Token keeps Session decentralized, secure, and independent.',
+      "Session development can't continue without your help, please take a moment to read our appeal.",
   },
-  ARIA: 'Looking for Session Token? Session Token keeps Session decentralized, secure, and independent.',
-  URL: 'https://token.getsession.org/',
-  BUTTON_TEXT: 'Session Token',
+  ARIA: "Session development can't continue without your help, please take a moment to read our appeal.",
+  URL: 'https://getsession.org/donate',
+  BUTTON_TEXT: 'Read Appeal',
 };
 
 export default BANNER;
