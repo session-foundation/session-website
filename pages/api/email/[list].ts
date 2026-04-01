@@ -7,6 +7,8 @@ const cm_ApiKey = process.env.CAMPAIGN_MONITOR_API_KEY;
 const cm_BaseUrl = 'https://api.createsend.com/api/v3.2';
 const cm_listId = process.env.CAMPAIGN_MONITOR_LIST_MARKET_RESEARCH_ID; // only the market research mailing list is using this API
 
+const emailListUrl = process.env.EMAIL_LIST_URL ?? 'https://getsession.org/api/subscribe';
+
 // Multi-Valued Select Many custom fields are set by providing multiple Custom Field array items with the same key.
 // https://www.campaignmonitor.com/api/v3-3/subscribers/#adding-a-subscriber
 function handleCMMultiValueSelect(arr: string[], field: string) {
@@ -59,28 +61,14 @@ async function makeCMRequest(req: NextApiRequest): Promise<Response> {
   return await fetch(`${cm_BaseUrl}/subscribers/${cm_listId}.json`, params);
 }
 
-const brevo_ApiKey = process.env.BREVO_API_KEY;
-const brevo_BaseUrl = 'https://api.brevo.com/v3';
-const brevo_ListId = Number(process.env.BREVO_LIST_ID);
-
-async function makeBrevoRequest(req: NextApiRequest): Promise<Response> {
+async function makeEmailListRequest(req: NextApiRequest): Promise<Response> {
   const email = req.body.email;
-  const body = {
-    email,
-    listIds: [brevo_ListId],
-    updateEnabled: true,
-  };
 
-  const params = {
+  return await fetch(emailListUrl, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'api-key': brevo_ApiKey!,
-    },
-    body: JSON.stringify(body),
-  };
-
-  return await fetch(`${brevo_BaseUrl}/contacts`, params);
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email }),
+  });
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -105,14 +93,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       res.status(result.Code).json({ email, message: result.Message });
     }
   } else {
-    response = await makeBrevoRequest(req);
+    response = await makeEmailListRequest(req);
 
-    // Brevo returns 201 for new contacts, 204 for updated existing contacts
-    if (response.status === 201 || response.status === 204) {
+    if (response.status === 200) {
       res.status(201).json({ email });
     } else {
       const result = await response.json();
-      res.status(response.status).json({ email, message: result.message });
+      res.status(response.status).json({ email, message: result.error });
     }
   }
 }
