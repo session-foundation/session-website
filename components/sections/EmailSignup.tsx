@@ -57,8 +57,7 @@ export default function EmailSignup({
         <h3 className={classNames('mb-2 font-bold text-xl leading-none', 'lg:mb-0 lg:text-3xl')}>
           {t('heading')}
         </h3>
-        <p className={classNames('mt-1 mb-6 leading-snug', 'lg:text-xl')}>{t('subheading')}</p>
-        <form onSubmit={handleSubscription}>
+        <form onSubmit={handleSubscription} className="mt-6">
           <input
             type="email"
             placeholder={t('placeholder')}
@@ -85,7 +84,7 @@ export default function EmailSignup({
           </Button>
           {submitted && (
             <span className={classNames('mt-6 block', 'md:mt-0 md:ml-2 md:inline', 'lg:ml-4')}>
-              {t('submitSuccessConfirm')}
+              Thanks!
             </span>
           )}
         </form>
