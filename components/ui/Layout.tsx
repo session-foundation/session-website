@@ -13,6 +13,7 @@ interface Props {
   metadata?: IMetadata;
   children: ReactNode;
   showBanner?: boolean;
+  hideCommunityNotice?: boolean;
   structuredData?: Array<string>;
 }
 
@@ -22,7 +23,8 @@ export default function Layout({
   metadata,
   children,
   structuredData,
-  showBanner = true,
+  hideCommunityNotice = false,
+  showBanner = false,
 }: Props): ReactElement {
   return (
     <>
@@ -34,8 +36,8 @@ export default function Layout({
       />
       {showBanner ? <Banner /> : null}
       <Nav />
-      <main>{children}</main>
-      <EmailSignup />
+      <main className="overflow-x-hidden">{children}</main>
+      <EmailSignup hideCommunityNotice={hideCommunityNotice} />
       <Footer />
     </>
   );

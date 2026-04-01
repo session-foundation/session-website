@@ -174,33 +174,66 @@
       "description": "Visa {appName} bloggar. | {appName} är en end-to-end-krypterad messenger som eliminerar insamling av känsliga metadata."
     },
     "donate": {
-      "title": "Donate | Support Privacy Technology",
-      "description": "Support to the Session Technology Foundation to protect online privacy. Your donation funds secure, open-source messaging technology that safeguards human rights worldwide."
+      "title": "Donera | Stöd integritetsteknik",
+      "description": "{foundationName} kan inte fortsätta utan ditt stöd. Donera idag för att hjälpa {appName} i kampen för sin överlevnad."
     }
   },
   "donate": {
-    "heading": "{appName} needs your help",
-    "heroContent": "Private messaging is an essential part of our modern life. Secure communication shelters people from tyranny, protects those fighting against injustice, and empowers defenders of human rights worldwide.<br></br><br></br> However, the well-resourced opponents of privacy are actively working to suppress the tech that guards people's basic human rights and dignities. Politicians around the world are pushing for encryption-busting laws, privacy tech is slandered in the media, and surveillance capitalists are profiting from the chaos.<image></image> Despite the adversity, {appName} continues to provide a safe, secure, and trusted space for people to communicate online. {appName} is a free, private, and secure messaging app. It does not track users or sell your data—it just sends messages, privately. Millions of people around the world have turned to Session when they needed a safe and secure place to have a conversation.<br></br><br></br> More than just a tool, {appName} is a symbol of the importance of open-source, transparent, and resilient technology. It is technology like {appName} which safeguards our basic human rights in an era of increasing uncertainty and authoritarianism.",
+    "heading": "{appName} behöver din hjälp",
+    "heroContent": "Privata meddelanden är en viktig del av vårt moderna liv. Säker kommunikation skyddar människor från tyranni, skyddar dem som kämpar mot orättvisor och stärker människorättsförsvarare världen över.<br></br><br></br> De välfinansierade motståndarna till integritet arbetar aktivt för att undertrycka den teknik som skyddar människors grundläggande mänskliga rättigheter och värdighet. Politiker runt om i världen driver på för lagar som bryter kryptering, integritetsteknik förtalas i medierna och övervakningskapitalister tjänar på kaoset.<image></image> Trots motgångarna fortsätter {appName} att erbjuda en säker, trygg och pålitlig plats för människor att kommunicera online. {appName} är en gratis, privat och säker meddelandeapp. Den spårar inte användare och säljer inte dina data – den skickar bara meddelanden, privat. Miljontals människor runt om i världen har vänt sig till Session när de behövt en säker och trygg plats för att föra ett samtal.<br></br><br></br> {appName} är mer än bara ett verktyg – det är en symbol för vikten av öppen källkod, transparent och motståndskraftig teknik. Det är teknik som {appName} som skyddar våra grundläggande mänskliga rättigheter i en tid av växande osäkerhet och auktoritarism.",
     "1": {
-      "heading": "A force for good",
-      "content": "Technology is transforming our society. Currently, a tiny cohort of powerful individuals and institutions have disproportionate control over the internet. In many cases, tech is being used to silence, manipulate, and suppress. It's time to push back against these forces of power.<image></image>We are agents of change in a world where technology is a tool for upending oppression. We believe in a future where technology is collaborative, transparent, equitable, and liberating."
+      "heading": "En kraft för det goda",
+      "content": "Teknik förändrar vårt samhälle. Just nu har en liten grupp mäktiga individer och institutioner oproportionerligt stor kontroll över internet. I många fall används teknik för att tysta, manipulera och förtrycka. Det är dags att stå emot dessa maktkrafter.<image></image>Vi är förändringsaktörer i en värld där teknik är ett verktyg för att störta förtryck. Vi tror på en framtid där teknik är samarbetsinriktad, transparent, rättvis och befriande."
     },
     "2": {
-      "heading": "Meet your privacy defenders",
-      "content": "{appName} is stewarded by the {foundationName}, a Swiss foundation dedicated to maintaining the open-source {appName} ecosystem. We are a team of technologists, engineers, and activists dedicated to the mission of restoring online privacy.<image></image> The financial independence of the {foundationName} allows us to fearlessly build the privacy technology that protects everyone's human rights. Your support will contribute to new {appName} development, fund essential network infrastructure, and the ongoing fight for freedom and privacy rights.<br></br><br></br> We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}."
+      "heading": "Möt dem som försvarar din integritet",
+      "content": "{appName} förvaltas av {foundationName}, en schweizisk stiftelse som arbetar för att upprätthålla ekosystemet kring {appName} med öppen källkod. Vi är ett team av teknologer, ingenjörer och aktivister som är engagerade i uppdraget att återställa integriteten online.<image></image> Den finansiella självständigheten hos {foundationName} gör det möjligt för oss att utan rädsla bygga integritetsteknik som skyddar allas mänskliga rättigheter. Ditt stöd kommer att bidra till ny utveckling av {appName}, finansiera viktig nätverksinfrastruktur och den fortsatta kampen för frihet och rätten till integritet.<br></br><br></br> Vi tar för närvarande emot donationer via kreditkort och kryptovaluta. En donationsadress för kryptovaluta finns tillgänglig för {ethNetworkName} och andra EVM-kompatibla token, såsom {usdcSymbol}."
     },
     "3": {
-      "heading": "Thank you for caring",
-      "content": "The {foundationName} is a Swiss-registered foundation. We are a non-profit oriented organization, subject to audits from the {swissSupervisory}. Our work helps protect privacy for all and shield those most at risk.<image></image>We currently accept donations via credit card and cryptocurrency. A cryptocurrency donation address is available for {ethNetworkName} and other EVM-compatible tokens, such as {usdcSymbol}.<br></br><br></br>Note that donations are not tax-deductible. If you have queries about donations or gifts, contact us via email: <contact-email></contact-email> <br></br><br></br>Please verify the URL is <validation-url></validation-url> before sending funds. If needed, addresses can be authenticated via email."
+      "heading": "Tack för att du bryr dig",
+      "content": "{foundationName} är en stiftelse registrerad i Schweiz. Vi är en organisation med ideell inriktning och står under tillsyn genom revisioner från {swissSupervisory}. Vårt arbete hjälper till att skydda allas integritet och skydda dem som löper störst risk.<image></image>Vi tar för närvarande emot donationer via kreditkort och kryptovaluta. En donationsadress för kryptovaluta finns tillgänglig för {ethNetworkName} och andra EVM-kompatibla token, såsom {usdcSymbol}.<br></br><br></br>Observera att donationer inte är avdragsgilla. Om du har frågor om donationer eller gåvor kan du kontakta oss via e-post: <contact-email></contact-email> <br></br><br></br>Kontrollera att URL:en är <validation-url></validation-url> innan du skickar pengar. Vid behov kan adresser verifieras via e-post."
     },
     "4": {
-      "heading": "Donate via Credit Card ({donationProviderName})",
+      "heading": "Donera med kreditkort ({donationProviderName})",
       "content": ""
     },
     "5": {
-      "heading": "Donate via Crypto",
-      "content": "You can send {ethSymbol}, {usdcSymbol}, {usdtSymbol} or {btcSymbol} to the following {foundationName} addresses."
+      "heading": "Donera med krypto",
+      "content": "Du kan skicka {ethSymbol}, {usdcSymbol}, {usdtSymbol} eller {btcSymbol} till följande adresser tillhörande {foundationName}."
     },
-    "button": "Donate Now"
+    "heroAppeal": "För åtta år sedan grundades {appName} med uppdraget att återställa din integritet och ge dig kontroll över ditt yttrande och ditt liv – i grunden digital frihet. Men utan din hjälp idag kommer vi inte att kunna fortsätta utveckla {appName} särskilt mycket längre. Om du någon gång har sett ett värde i {appName} eller dess uppdrag, ber jag dig att ge mig en stund av din tid och läsa denna vädjan.<br></br><br></br>{appName} är kontroversiell teknik i en tid då yttrandefrihet inte är självklar, rätten till integritet avskys och sanningen är en lögn. Under årens lopp har organisationerna som skyddar {appName} mött många utmaningar, men nu är själva {appNamePossessive} överlevnad hotad.<br></br><br></br>Hoten mot integriteten är nu större än någonsin tidigare, och {appName} måste utvecklas för att möta framtidens utmaningar. {appNamePossessive} nuvarande förvaltare, {foundationName}, har inte den finansiering som krävs för att föra {appName} vidare. Viktigt arbete, såsom PFS och postkvantkryptografi, pågår fortfarande – och vi har inte tillräckligt med tid kvar.<br></br><br></br>Vårt uppdrag är att återge den frihet, kreativitet och integritet som människor en gång kände när de kommunicerade online. Vi har sått ett frö till en verkligt fri meddelandeapp som undanröjer censorer, övervakare och centraliserade enheter som övervakar dina samtal. Hittills har den idén fungerat. Varje månad använder över {appUserNumber} personer {appName} för att skicka meddelanden, inte metadata.<br></br><br></br>{appName} är en plattform som byggs och ägs av sin community – inte av big tech, private equity eller några andra skuggiga makthavare. Nu vänder sig {appName} till dig.<br></br><br></br>Projektet är på väg mot självförsörjning, men framtiden är skör. Om varje {appName}-användare bidrog med bara en dollar skulle det vara ett stort steg mot att {appName} blir hållbart. Om du någonsin har övervägt att donera är det dags att agera nu.<br></br><br></br>{donateSignerName}",
+    "6": {
+      "heading": "Donera via {wordSilentDonor}",
+      "content": "Individuals may make an anonymous tax deductible gift to the {foundationName} using <silent-donor-link>{wordSilentDonor}</silent-donor-link>.<br></br><br></br>{wordSilentDonor} is a third party which can facilitate donations to the {foundationAcronym} using card, bank transfer, and <crypto-icons>crypto</crypto-icons>"
+    },
+    "buttonCard": "Donera med kort",
+    "buttonCrypto": "Donera med krypto",
+    "faq": {
+      "1": {
+        "question": "Hur kan jag donera till {appName}?",
+        "answer": "Det finns för närvarande tre sätt att stödja den fortsatta utvecklingen av {appName}:<br></br><br></br><bold>{donationProviderName}</bold><br></br><br></br>{donationProviderName} är en tredjepartsplattform som hjälper ideella organisationer att ta emot donationer genom en rad olika betalningsmetoder. Du kan donera till {foundationName} via {donationProviderName} <donate-link>här</donate-link>.<br></br><br></br>Betalningsmetoder som stöds inkluderar:<payment-providers></payment-providers><bold>{wordSilentDonor}</bold><br></br><br></br><silent-donor-info></silent-donor-info><bold>Direkt kryptovaluta</bold><br></br><br></br>Du kan också donera kryptovaluta direkt till {foundationName} genom att skicka medel till plånboksadresserna nedan.<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordBitcoinCashAddress}: {addressBitcoinCash}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>Denna {wordEthereumAddress} tar emot donationer i {ethSymbol}, samt {wordErc20} {wordTokens} (såsom {usdtSymbol} och {usdcSymbol}) över {wordEvmCompatible}-kedjor, som {ethNetworkName}, {arbNetworkName} och {baseNetworkName}.<br></br><br></br><bold>Obs:</bold> Om du överväger att ge en donation på mer än {largeDonationAmount} med någon betalningsmetod, vänligen kontakta oss på <donations-email></donations-email>"
+      },
+      "2": {
+        "question": "Vad kommer min donation att användas till?",
+        "answer": "Din donation tas emot av <foundation-link>{foundationName}</foundation-link>, en stiftelse baserad i Schweiz som är nuvarande förvaltare av {appName}-appen och projektet. Din donation kommer att användas för att stödja den fortsatta utvecklingen och långsiktiga hållbarheten för {appName}."
+      },
+      "3": {
+        "question": "Vad är {foundationName}?",
+        "answer": "{foundationName} ({foundationAcronym}) är en schweizisk stiftelse och förvaltare av {appName}-appen och projektet. Du kan läsa mer om stiftelsens roll inom ekosystemet för {appName} <foundation-link>här</foundation-link>."
+      },
+      "4": {
+        "question": "Finns det andra sätt jag kan hjälpa {appName}?",
+        "answer": "Donationer är för närvarande det främsta sättet du kan hjälpa till att stödja {appName}. Om du inte har möjlighet att donera finns det dock flera andra sätt du kan hjälpa till:<ol><li>Dela denna vädjan med vänner och familj som använder {appName} och kan vara intresserade av att stödja vårt uppdrag.</li><li>Hjälp till att översätta {appName} till andra språk via <crowdin-link>{wordCrowdin}</crowdin-link></li><li>Bidra till {appNamePossessive} <github-link>kodbas med öppen källkod</github-link></li></ol>"
+      },
+      "tax-question": {
+        "question": "Kan jag göra en avdragsgill donation?",
+        "answer": ""
+      }
+    },
+    "appealHeading": "A Personal Appeal From {donateAppealName}",
+    "7": {
+      "heading": "Vanliga frågor",
+      "content": ""
+    }
   }
 }

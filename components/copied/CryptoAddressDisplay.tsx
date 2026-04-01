@@ -1,5 +1,6 @@
 import cn from 'classnames';
 import { ArbitrumIcon } from './ArbitrumIcon';
+import { BitcoinCashIcon } from './BitcoinCashIcon';
 import { BitcoinIcon } from './BitcoinIcon';
 import { BNBIcon } from './BNBIcon';
 import { CopyableInputDisplay } from './CopyableInputDisplay';
@@ -21,6 +22,8 @@ function getIcon(value: CryptoAddressDisplaySchemaType) {
   switch (value.cryptoAddress.icon) {
     case 'Bitcoin':
       return BitcoinIcon;
+    case 'Bitcoin Cash':
+      return BitcoinCashIcon;
     case 'BNB':
       return BNBIcon;
     case 'Arbitrum':
@@ -55,9 +58,9 @@ export function SanityCryptoAddressDisplay({
         <IconComp className="h-5 w-5" />
         <span className="font-semibold text-base md:text-lg">{value.cryptoAddress.name}</span>
       </div>
-      <IconComp className="hidden h-9 w-9 md:block" />
+      <IconComp className="hidden h-9 w-9 min-w-max md:block" />
       <CopyableInputDisplay
-        className="text-black text-xs md:text-sm"
+        className="bg-white text-black"
         value={value.cryptoAddress.address}
         copyToClipboardProps={{
           textToCopy: value.cryptoAddress.address,

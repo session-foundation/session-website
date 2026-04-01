@@ -27,8 +27,7 @@ export default function CustomHead(props: Props): ReactElement {
   let description = '';
 
   const localeArgs = {
-    appName: NON_LOCALIZED_STRING.appName,
-    appNamePossessive: NON_LOCALIZED_STRING.appNamePossessive,
+    ...NON_LOCALIZED_STRING,
     featureCommunity: tFeature('community'),
   };
 

@@ -6,7 +6,11 @@ import GroupNotice from '@/components/sections/GroupNotice';
 import Button from '@/components/ui/Button';
 import { useScreen } from '@/contexts/screen';
 
-export default function EmailSignup(): ReactElement {
+export default function EmailSignup({
+  hideCommunityNotice,
+}: {
+  hideCommunityNotice?: boolean;
+}): ReactElement {
   const t = useTranslations('email');
   const { isSmall } = useScreen();
 
@@ -48,13 +52,12 @@ export default function EmailSignup(): ReactElement {
   };
   return (
     <section className="bg-primary text-gray-dark">
-      {isSmall ? <GroupNotice /> : null}
+      {isSmall && !hideCommunityNotice ? <GroupNotice /> : null}
       <Container id="signup" classes={classNames('px-8', 'md:px-10', 'lg:py-24')}>
         <h3 className={classNames('mb-2 font-bold text-xl leading-none', 'lg:mb-0 lg:text-3xl')}>
           {t('heading')}
         </h3>
-        <p className={classNames('mt-1 mb-6 leading-snug', 'lg:text-xl')}>{t('subheading')}</p>
-        <form onSubmit={handleSubscription}>
+        <form onSubmit={handleSubscription} className="mt-6">
           <input
             type="email"
             placeholder={t('placeholder')}
@@ -81,7 +84,7 @@ export default function EmailSignup(): ReactElement {
           </Button>
           {submitted && (
             <span className={classNames('mt-6 block', 'md:mt-0 md:ml-2 md:inline', 'lg:ml-4')}>
-              {t('submitSuccessConfirm')}
+              Thanks!
             </span>
           )}
         </form>

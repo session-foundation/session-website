@@ -21,7 +21,6 @@ export default function Banner(): ReactElement {
       <Link
         href={BANNER.URL}
         rel="noopener noreferrer"
-        target="_blank"
         title={BANNER.ARIA}
         aria-label={BANNER.ARIA}
       >

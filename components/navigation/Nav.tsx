@@ -115,7 +115,7 @@ export default function Nav(): ReactElement {
             </DialogTrigger>
             <LocaleDialogContent />
           </Dialog>
-          <Link href="/download" className="hidden lg:inline ml-6">
+          <Link href="/download" className="ml-6 hidden lg:inline">
             <Button
               fontWeight="bold"
               aria-label={t('aria.downloadButton', { appName: NON_LOCALIZED_STRING.appName })}

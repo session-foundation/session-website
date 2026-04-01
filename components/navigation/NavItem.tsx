@@ -148,8 +148,8 @@ export default function NavItem(props: NavItemProps): ReactElement {
             className={classNames(
               'w-full overflow-hidden',
               'transform transition-all duration-300',
-              'lg:absolute lg:top-12 lg:w-44 lg:overflow-visible lg:bg-white lg:opacity-0',
-              'lg:duration-500',
+              'lg:invisible lg:absolute lg:top-12 lg:w-44 lg:overflow-visible lg:bg-white lg:opacity-0 lg:group-hover:visible',
+              'lg:duration-300',
               'lg:group-hover:opacity-100 lg:group-hover:duration-700',
               (isSmall || isMedium) && IsDropdownExpanded
                 ? Object.keys(navItem.items).length > 2
@@ -158,17 +158,6 @@ export default function NavItem(props: NavItemProps): ReactElement {
                 : 'h-0 translate-y-auto lg:translate-y-0'
             )}
             style={{ zIndex: zIndex ? zIndex : undefined }}
-            // onMouseOut={() => setIsHover(false)}
-            onMouseOver={() => {
-              if (isLarge || isHuge || isEnormous) {
-                setIsDropdownExpanded(true);
-              }
-            }}
-            onMouseLeave={() => {
-              if (isLarge || isHuge || isEnormous) {
-                setIsDropdownExpanded(false);
-              }
-            }}
           >
             {Object.entries(navItem.items).map(([key, value]) => {
               return <NavDropdown key={`${key}${value.href}`} navItem={value} title={key} />;

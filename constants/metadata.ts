@@ -72,6 +72,17 @@ const METADATA = {
       ALT: 'Mysterious man on the phone. Heading is Use Session.',
     },
   },
+  DONATE_PAGE: {
+    TYPE: 'article',
+    DESCRIPTION:
+      'Donate | Session is an end-to-end encrypted messenger that removes sensitive metadata collection for all operating systems.',
+    OG_IMAGE: {
+      URL: '/assets/images/donate-meta.jpg',
+      WIDTH: 1024,
+      HEIGHT: 1024,
+      ALT: 'Read appeal',
+    },
+  },
   FAQ_PAGE: {
     TYPE: 'FAQPage',
     DESCRIPTION:
@@ -85,6 +96,16 @@ const METADATA = {
   },
   HELP_PAGE: {
     DESCRIPTION: 'How you can help. A Session Community Help Guide Document.',
+  },
+  PRO_PAGE: {
+    DESCRIPTION:
+      'Session Pro | Session is an end-to-end encrypted messenger that removes sensitive metadata collection for all operating systems.',
+    OG_IMAGE: {
+      URL: '/assets/images/send-messages-not-metadata.jpg',
+      WIDTH: 1024,
+      HEIGHT: 1024,
+      ALT: 'Mysterious man on the phone. Heading is Use Session.',
+    },
   },
   LITEPAPER_PAGE: {
     OG_IMAGE: {

@@ -175,7 +175,7 @@
     },
     "donate": {
       "title": "Přispějte | Podpořte technologii ochrany osobních údajů",
-      "description": "Podpora Session Technology Foundation na ochranu soukromí online. Vaše darované prostředky podpoří komunikační technologii s otevřeným zdrojovým kódem, která chrání lidská práva po celém světě."
+      "description": "Bez vaší podpory nemůže {foundationName} pokračovat. Přispějte ještě dnes a pomozte {appName} v jeho boji o přežití."
     }
   },
   "donate": {
@@ -201,6 +201,39 @@
       "heading": "Darovat kryptoměnu",
       "content": "Můžete odeslat {ethSymbol}, {usdcSymbol}, {usdtSymbol} nebo {btcSymbol} na následující adresu {foundationName}."
     },
-    "button": "Donate Now"
+    "heroAppeal": "Před osmi lety byl {appName} založen s posláním obnovit vaše soukromí a dát vám kontrolu nad vaším projevem a životem — v podstatě digitální svobodu. Bez vaší dnešní pomoci však nebudeme schopni pokračovat ve vývoji {appName} ještě příliš dlouho. Pokud jste kdy vnímali {appName} nebo jeho poslání jako hodnotné, věnujte mi prosím chvilku svého času a přečtěte si tuto výzvu.<br></br><br></br>{appName} je kontroverzní technologie v době, kdy svoboda projevu není samozřejmostí, právo na soukromí je opovrhováno a pravda je považována za lež. V průběhu let čelily organizace chránící {appName} mnoha výzvám, ale nyní je ohroženo samotné přežití {appNamePossessive}.<br></br><br></br>Hrozby vůči soukromí jsou nyní větší než kdy dříve a {appName} se musí vyvíjet, aby dokázal čelit výzvám budoucnosti. Současný správce {appNamePossessive}, {foundationName}, nemá financování potřebné k tomu, aby mohl {appName} posunout dál. Důležitá práce, jako je PFS a postkvantová kryptografie, stále probíhá — a nezbývá nám už dost času.<br></br><br></br>Naším posláním je vrátit svobodu, kreativitu a soukromí, které lidé kdysi pociťovali při online komunikaci. Zasadili jsme semínko skutečně svobodného komunikátoru, který odstraňuje cenzory, dohledové struktury a centralizované subjekty sledující vaše konverzace. Zatím tato myšlenka funguje. Každý měsíc používá {appName} k posílání zpráv, nikoli metadat, více než {appUserNumber} lidí.<br></br><br></br>{appName} je platforma, kterou vytváří a vlastní její komunita — ne big tech, private equity ani jiní temní páni. Nyní se {appName} obrací na vás.<br></br><br></br>Projekt směřuje k finanční soběstačnosti, ale budoucnost je křehká. Kdyby každý uživatel {appName} přispěl jen jedním dolarem, výrazně by to pomohlo {appName} dosáhnout udržitelnosti. Pokud jste někdy uvažovali o daru, teď je čas jednat.<br></br><br></br>{donateSignerName}",
+    "6": {
+      "heading": "Darovat přes {wordSilentDonor}",
+      "content": "Individuals may make an anonymous tax deductible gift to the {foundationName} using <silent-donor-link>{wordSilentDonor}</silent-donor-link>.<br></br><br></br>{wordSilentDonor} is a third party which can facilitate donations to the {foundationAcronym} using card, bank transfer, and <crypto-icons>crypto</crypto-icons>"
+    },
+    "buttonCard": "Darovat kartou",
+    "buttonCrypto": "Darovat kryptoměnu",
+    "faq": {
+      "1": {
+        "question": "Jak mohu přispět na {appName}?",
+        "answer": "V současnosti existují tři způsoby, jak podpořit další vývoj {appName}:<br></br><br></br><bold>{donationProviderName}</bold><br></br><br></br>{donationProviderName} je platforma třetí strany, která pomáhá neziskovým organizacím přijímat dary prostřednictvím různých platebních metod. Na {foundationName} můžete přes {donationProviderName} přispět <donate-link>zde</donate-link>.<br></br><br></br>Podporované platební metody zahrnují:<payment-providers></payment-providers><bold>{wordSilentDonor}</bold><br></br><br></br><silent-donor-info></silent-donor-info><bold>Přímá kryptoměna</bold><br></br><br></br>Kryptoměnu můžete také darovat přímo {foundationName} zasláním prostředků na níže uvedené adresy peněženek.<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordBitcoinCashAddress}: {addressBitcoinCash}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>Tato {wordEthereumAddress} přijímá dary v {ethSymbol} a také {wordErc20} {wordTokens} (například {usdtSymbol} a {usdcSymbol}) v rámci řetězců {wordEvmCompatible}, jako jsou {ethNetworkName}, {arbNetworkName} a {baseNetworkName}.<br></br><br></br><bold>Poznámka:</bold> Pokud zvažujete dar ve výši více než {largeDonationAmount} jakoukoli platební metodou, kontaktujte nás prosím na adrese <donations-email></donations-email>"
+      },
+      "2": {
+        "question": "Na co bude můj dar použit?",
+        "answer": "Váš dar obdrží <foundation-link>{foundationName}</foundation-link>, nadace se sídlem ve Švýcarsku, která je současným správcem aplikace a projektu {appName}. Váš dar bude použit na podporu dalšího vývoje a udržitelnosti {appName}."
+      },
+      "3": {
+        "question": "Co je {foundationName}?",
+        "answer": "{foundationName} ({foundationAcronym}) je nadace se sídlem ve Švýcarsku a správce aplikace a projektu {appName}. Více o roli nadace v ekosystému {appName} se můžete dozvědět <foundation-link>zde</foundation-link>."
+      },
+      "4": {
+        "question": "Existují i jiné způsoby, jak mohu {appName} pomoci?",
+        "answer": "Dary jsou v současnosti hlavním způsobem, jak můžete {appName} podpořit. Pokud však nemůžete přispět, existuje několik dalších způsobů, jak můžete pomoci:<ol><li>Sdílejte tuto výzvu s přáteli a rodinou, kteří používají {appName} a mohli by mít zájem podpořit naše poslání.</li><li>Pomozte přeložit {appName} do dalších jazyků prostřednictvím <crowdin-link>{wordCrowdin}</crowdin-link></li><li>Přispějte do <github-link>open source kódové základny</github-link> {appNamePossessive}</li></ol>"
+      },
+      "tax-question": {
+        "question": "Mohu poskytnout daňově odčitatelný dar?",
+        "answer": ""
+      }
+    },
+    "appealHeading": "Osobní výzva od {donateAppealName}",
+    "7": {
+      "heading": "Časté dotazy",
+      "content": ""
+    }
   }
 }
