@@ -24,6 +24,7 @@ import Button from '@/components/ui/Button';
 import { Collapsible } from '@/components/ui/collapsible';
 import Headline from '@/components/ui/Headline';
 import Layout from '@/components/ui/Layout';
+import { DONATION_PROGRESS } from '@/constants/donate';
 import {
   appUserNumber,
   localeArgs,
@@ -80,7 +81,13 @@ const DONORBOX_SCRIPT_URL = 'https://donorbox.org/widgets.js';
 const DONORBOX_SCRIPT_ID = 'donorbox-widget-script';
 const DONORBOX_CAMPAIGN = 'session-technology-foundation-donations';
 
-export function DonorBox({ showDonateCrypto }: { showDonateCrypto?: boolean }) {
+export function DonorBox({
+  showDonateCrypto,
+  showGoal,
+}: {
+  showDonateCrypto?: boolean;
+  showGoal?: boolean;
+}) {
   const t = useTranslations('donate');
   useEffect(() => {
     // Check if already loaded by id, src, or registered custom element
@@ -106,7 +113,7 @@ export function DonorBox({ showDonateCrypto }: { showDonateCrypto?: boolean }) {
   }, []);
 
   return (
-    <div className="sm:min-w-[350px] md:min-w-[420px]">
+    <div className="flex flex-col gap-4 sm:min-w-[350px] md:w-[425px] md:min-w-[410px]">
       <div
         dangerouslySetInnerHTML={{
           __html: `<dbox-widget 
@@ -116,10 +123,12 @@ export function DonorBox({ showDonateCrypto }: { showDonateCrypto?: boolean }) {
           enable-auto-scroll="true">
         </dbox-widget>`,
         }}
+        className="overflow-hidden rounded-md border border-2 shadow-sm"
       />
+      {showGoal ? <DonationProgressIndicator compact={true} /> : null}
       {showDonateCrypto ? (
         <a href="#crypto">
-          <Button size="medium" shape="semiround" classes="text-xl w-full mt-8 mb-2 py-3">
+          <Button size="medium" shape="semiround" classes="text-xl w-full">
             {t('buttonCrypto')}
           </Button>
         </a>
@@ -262,6 +271,62 @@ function HeroContainer({ children, className }: { children: ReactNode; className
     >
       {children}{' '}
     </Container>
+  );
+}
+
+function formatCompactCurrency(amount: number): string {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    notation: 'compact',
+    maximumFractionDigits: 1,
+  }).format(amount);
+}
+
+function formatFullCurrency(amount: number): string {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    maximumFractionDigits: 0,
+  }).format(amount);
+}
+
+function DonationProgressIndicator({ compact = true }: { compact?: boolean }) {
+  const { currentAmount, goalAmount, goalBlogPostUrl } = DONATION_PROGRESS;
+  const pct = Math.min((currentAmount / goalAmount) * 100, 100);
+  const format = compact ? formatCompactCurrency : formatFullCurrency;
+
+  return (
+    <section className="w-full rounded-md border bg-white p-6 text-gray-dark shadow-sm">
+      <div className="flex flex-col items-start justify-start">
+        <p className="mb-6 font-bold text-xl md:text-lg lg:text-xl">Fundraising Goal</p>
+        <div className="h-5 w-full overflow-hidden rounded-full bg-gray-200 md:h-6">
+          <div
+            className="h-full rounded-full bg-primary transition-all duration-700"
+            style={{ width: `${pct}%` }}
+            role="progressbar"
+            aria-valuenow={currentAmount}
+            aria-valuemin={0}
+            aria-valuemax={goalAmount}
+          />
+        </div>
+        <div className="mt-3 flex w-full items-center justify-between gap-2 text-sm md:text-base">
+          <span className="font-bold">{format(currentAmount)} raised</span>
+          <span className="flex items-center gap-2 font-normal">
+            <span className="font-bold">{format(goalAmount)} goal</span>
+            <span aria-hidden="true">·</span>
+            <Link
+              href={goalBlogPostUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 transition-colors hover:opacity-70"
+            >
+              Why this goal?
+            </Link>
+          </span>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -475,7 +540,7 @@ export default function Donate(): ReactElement {
     >
       <div className="wrap flex w-screen flex-row flex-wrap pb-10 md:pb-28">
         <HeroContainer className="md:mb-4 lg:mt-16 2xl:mx-0 2xl:mt-16 2xl:ml-auto 2xl:max-w-5xl 2xl:pb-0 2xl:pl-[180px]">
-          <div className="mt-4 mb-8 w-full md:mt-8 md:mb-10">
+          <div className="mb-8 w-full md:mb-10">
             <Image
               priority={true}
               className="rounded-xl"
@@ -518,9 +583,12 @@ export default function Donate(): ReactElement {
               sizes="(max-width: 453px) 100vw, 500px"
             />
           </div>
+          <div className="mt-8 block w-full 2xl:hidden">
+            <DonationProgressIndicator />
+          </div>
         </HeroContainer>
-        <div className="sticky top-10 mt-16 mr-auto hidden pt-10 2xl:block">
-          <DonorBox showDonateCrypto={true} />
+        <div className="sticky top-10 mt-16 mr-auto hidden 2xl:block">
+          <DonorBox showDonateCrypto={true} showGoal={true} />
         </div>
       </div>
       <Section
