@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import classNames from 'classnames';
-import type { GetStaticProps, GetStaticPropsContext } from 'next';
+import type { GetServerSideProps, GetServerSidePropsContext } from 'next';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
@@ -24,7 +24,6 @@ import Button from '@/components/ui/Button';
 import { Collapsible } from '@/components/ui/collapsible';
 import Headline from '@/components/ui/Headline';
 import Layout from '@/components/ui/Layout';
-import { DONATION_PROGRESS } from '@/constants/donate';
 import {
   appUserNumber,
   localeArgs,
@@ -33,6 +32,7 @@ import {
 } from '@/constants/localization';
 import METADATA from '@/constants/metadata';
 import { LUCIDE_ICONS_UNICODE } from '@/lib/lucide';
+import type { DonationProgressData } from './api/donation-progress';
 import {
   StyledCollapsibleContent,
   StyledCollapsibleTrigger,
@@ -84,9 +84,11 @@ const DONORBOX_CAMPAIGN = 'session-technology-foundation-donations';
 export function DonorBox({
   showDonateCrypto,
   showGoal,
+  donationProgress,
 }: {
   showDonateCrypto?: boolean;
   showGoal?: boolean;
+  donationProgress?: DonationProgressData;
 }) {
   const t = useTranslations('donate');
   useEffect(() => {
@@ -125,7 +127,9 @@ export function DonorBox({
         }}
         className="overflow-hidden rounded-md border border-2 shadow-sm"
       />
-      {showGoal ? <DonationProgressIndicator compact={true} /> : null}
+      {showGoal && donationProgress ? (
+        <DonationProgressIndicator compact={true} donationProgress={donationProgress} />
+      ) : null}
       {showDonateCrypto ? (
         <a href="#crypto">
           <Button size="medium" shape="semiround" classes="text-xl w-full">
@@ -291,8 +295,14 @@ function formatFullCurrency(amount: number): string {
   }).format(amount);
 }
 
-function DonationProgressIndicator({ compact = true }: { compact?: boolean }) {
-  const { currentAmount, goalAmount, goalBlogPostUrl } = DONATION_PROGRESS;
+function DonationProgressIndicator({
+  compact = true,
+  donationProgress,
+}: {
+  compact?: boolean;
+  donationProgress: DonationProgressData;
+}) {
+  const { currentAmount, goalAmount, goalBlogPostUrl } = donationProgress;
   const pct = Math.min((currentAmount / goalAmount) * 100, 100);
   const format = compact ? formatCompactCurrency : formatFullCurrency;
 
@@ -528,7 +538,11 @@ function DonateFAQ() {
   );
 }
 
-export default function Donate(): ReactElement {
+export default function Donate({
+  donationProgress,
+}: {
+  donationProgress: DonationProgressData;
+}): ReactElement {
   const t = useTranslations('donate');
 
   return (
@@ -584,11 +598,11 @@ export default function Donate(): ReactElement {
             />
           </div>
           <div className="mt-8 block w-full 2xl:hidden">
-            <DonationProgressIndicator />
+            <DonationProgressIndicator donationProgress={donationProgress} />
           </div>
         </HeroContainer>
         <div className="sticky top-10 mt-16 mr-auto hidden 2xl:block">
-          <DonorBox showDonateCrypto={true} showGoal={true} />
+          <DonorBox showDonateCrypto={true} showGoal={true} donationProgress={donationProgress} />
         </div>
       </div>
       <Section
@@ -665,8 +679,18 @@ export default function Donate(): ReactElement {
   );
 }
 
-export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext) => {
-  return {
-    props: { messages: (await import(`../locales/${context.locale}.json`)).default },
-  };
+export const getServerSideProps: GetServerSideProps = async (
+  context: GetServerSidePropsContext
+) => {
+  const { readDonationProgress } = await import('./api/donation-progress');
+
+  const messages = (await import(`../locales/${context.locale}.json`)).default;
+
+  try {
+    const donationProgress = readDonationProgress();
+    return { props: { messages, donationProgress } };
+  } catch (err) {
+    console.error('[donate] Failed to load donation progress data:', err);
+    return { props: { messages, donationProgress: null } };
+  }
 };
