@@ -1,7 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { DONATION_PROGRESS } from '@/constants/donate';
 
 export interface DonationProgressData {
   currentAmount: number;
@@ -17,16 +16,9 @@ export function readDonationProgress(): DonationProgressData {
   const parsed = JSON.parse(raw);
 
   return {
-    currentAmount:
-      typeof parsed.currentAmount === 'number'
-        ? parsed.currentAmount
-        : DONATION_PROGRESS.currentAmount,
-    goalAmount:
-      typeof parsed.goalAmount === 'number' ? parsed.goalAmount : DONATION_PROGRESS.goalAmount,
-    goalBlogPostUrl:
-      typeof parsed.goalBlogPostUrl === 'string'
-        ? parsed.goalBlogPostUrl
-        : DONATION_PROGRESS.goalBlogPostUrl,
+    currentAmount: typeof parsed.currentAmount === 'number' ? parsed.currentAmount : 0,
+    goalAmount: typeof parsed.goalAmount === 'number' ? parsed.goalAmount : 0,
+    goalBlogPostUrl: typeof parsed.goalBlogPostUrl === 'string' ? parsed.goalBlogPostUrl : '',
   };
 }
 

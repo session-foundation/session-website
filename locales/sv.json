@@ -32,7 +32,7 @@
       "iconButtonClose": "Stäng navigationsmenyn",
       "downloadButton": "Länk till {appName}-nedladdning"
     },
-    "donate": "Donate"
+    "donate": "Donera"
   },
   "footer": {
     "about": "Om",
@@ -71,7 +71,7 @@
   },
   "landing": {
     "hero": {
-      "heading": "Send <glitch>Messages,</glitch> Not Metadata.",
+      "heading": "Skicka <glitch>meddelanden,</glitch> inte metadata.",
       "tag": "Hitta din frihet med {appName}",
       "glitchTextGlitch": "Krypterat"
     },
@@ -83,7 +83,7 @@
       "title": "Fördelar",
       "1": {
         "heading": "Inga telefonnummer",
-        "content": "Keep your identity private with Account IDs. No phone number or email required to sign up."
+        "content": "Håll din identitet privat med konto-ID:n. Inget telefonnummer eller e-post krävs för att registrera dig."
       },
       "2": {
         "heading": "Inga dataintrång",
@@ -95,7 +95,7 @@
       },
       "4": {
         "heading": "Öppen källkod",
-        "content": "Privacy is more than a promise. Anyone can view, audit, and contribute to {appName}'s code."
+        "content": "Integritet är mer än ett löfte. Vem som helst kan se, granska och bidra till koden för {appName}."
       },
       "5": {
         "heading": "Drivet av människor",
@@ -155,15 +155,15 @@
     },
     "faq": {
       "title": "Vanliga frågor",
-      "description": "Find answers to some of the most frequently asked questions about {appName}."
+      "description": "Hitta svar på några av de vanligaste frågorna om {appName}."
     },
     "litepaper": {
       "description": "{appName} är en decentraliserad messenger som stöder fullständigt privata, säkra och anonyma kommunikationer.",
-      "title": "{appName} Litepaper: Send Messages, Not Metadata"
+      "title": "{appName} Litepaper: Skicka meddelanden, inte metadata"
     },
     "whitepaper": {
       "description": "{appName} är en decentraliserad messenger som stöder fullständigt privata, säkra och anonyma kommunikationer.",
-      "title": "{appName} Whitepaper: End-To-End Encrypted Conversations with Minimal Metadata Leakage"
+      "title": "{appName} Whitepaper: End-to-end-krypterade konversationer med minimalt metadata-läckage"
     },
     "community": {
       "title": "{appName} {featureCommunity}",
@@ -201,7 +201,7 @@
       "heading": "Donera med krypto",
       "content": "Du kan skicka {ethSymbol}, {usdcSymbol}, {usdtSymbol} eller {btcSymbol} till följande adresser tillhörande {foundationName}."
     },
-    "heroAppeal": "För åtta år sedan grundades {appName} med uppdraget att återställa din integritet och ge dig kontroll över ditt yttrande och ditt liv – i grunden digital frihet. Men utan din hjälp idag kommer vi inte att kunna fortsätta utveckla {appName} särskilt mycket längre. Om du någon gång har sett ett värde i {appName} eller dess uppdrag, ber jag dig att ge mig en stund av din tid och läsa denna vädjan.<br></br><br></br>{appName} är kontroversiell teknik i en tid då yttrandefrihet inte är självklar, rätten till integritet avskys och sanningen är en lögn. Under årens lopp har organisationerna som skyddar {appName} mött många utmaningar, men nu är själva {appNamePossessive} överlevnad hotad.<br></br><br></br>Hoten mot integriteten är nu större än någonsin tidigare, och {appName} måste utvecklas för att möta framtidens utmaningar. {appNamePossessive} nuvarande förvaltare, {foundationName}, har inte den finansiering som krävs för att föra {appName} vidare. Viktigt arbete, såsom PFS och postkvantkryptografi, pågår fortfarande – och vi har inte tillräckligt med tid kvar.<br></br><br></br>Vårt uppdrag är att återge den frihet, kreativitet och integritet som människor en gång kände när de kommunicerade online. Vi har sått ett frö till en verkligt fri meddelandeapp som undanröjer censorer, övervakare och centraliserade enheter som övervakar dina samtal. Hittills har den idén fungerat. Varje månad använder över {appUserNumber} personer {appName} för att skicka meddelanden, inte metadata.<br></br><br></br>{appName} är en plattform som byggs och ägs av sin community – inte av big tech, private equity eller några andra skuggiga makthavare. Nu vänder sig {appName} till dig.<br></br><br></br>Projektet är på väg mot självförsörjning, men framtiden är skör. Om varje {appName}-användare bidrog med bara en dollar skulle det vara ett stort steg mot att {appName} blir hållbart. Om du någonsin har övervägt att donera är det dags att agera nu.<br></br><br></br>{donateSignerName}",
+    "heroAppeal": "Vi hade hoppats att den här dagen aldrig skulle komma, men {appName} har nu gått in i sina sista 90 dagars drift. Om vi inte lyckas nå vårt finansieringsmål inom denna period kommer {foundationNameWithAcronym} att tvingas lägga ner.<br></br><br></br>Hittills har {foundationAcronym} tagit emot ungefär {donationAmount} i donationer. Detta räcker för att upprätthålla kritisk {appName}-infrastruktur under de kommande 90 dagarna. Vi är oerhört tacksamma för det stöd som {appName} har fått från communityn, men tyvärr räcker detta inte för att behålla heltidsanställda utvecklare. Som ett resultat kommer all betald personal och alla utvecklare att ha sin sista arbetsdag den 9 april 2026. Efter detta datum kommer vissa teammedlemmar att fortsätta främst på volontärbasis för att hjälpa till att underhålla {appName} fram till den 8 juli 2026.<br></br><br></br>Detta är vår sista vädjan till {appName}-communityn: utan ert stöd kommer {foundationAcronym} att upphöra med all verksamhet den 8 juli 2026.<br></br><br></br>Vi förstår att detta kan komma som en chock. Utifrån ser {appName} ut att vara en framgångsrik app i tillväxt - med miljontals nedladdningar, starka betyg i appbutikerna och fortsatt tillväxt, och den har nyligen passerat 1,7 miljoner aktiva användare per månad. Men {appNamePossessive} framgång har bara varit möjlig tack vare de engagerade bidragsgivarna och teamen som outtröttligt arbetar för att förbättra appen varje dag. Det här är högkvalificerade utvecklare och arkitekter av decentraliserade system, och precis som alla andra har de räkningar att betala och familjer att försörja.<br></br><br></br>{appName} har turen att ha bidragsgivare som tror djupt på dess uppdrag och är villiga att acceptera lägre ersättning än de skulle kunna få någon annanstans. Detta hjälper till att minska de totala kostnaderna, men det finns fortfarande en miniminivå av finansiering som krävs för att verksamheten ska fungera. Även med ett litet team uppskattar {foundationAcronym} denna kostnad till ungefär {costPerYear} per år.<br></br><br></br>Även om detta kan verka som en stor summa, återspeglar det verkligheten i att bygga och underhålla säker, decentraliserad infrastruktur. På de flesta marknader har seniora utvecklare ofta löner som överstiger {seniorDevSalaryPerYear} per år, och utöver detta tillkommer juridiska och operativa omkostnader för att driva {foundationAcronym}. Jämfört med sina konkurrenter drivs {appName} extremt effektivt och uppnår sitt uppdrag med en budget som motsvarar den sammanlagda ersättningen till endast två seniora chefer på vissa större meddelandeföretag.<br></br><br></br>Om du redan har donerat vill vi rikta ett varmt tack till dig. Varje bidrag hjälper {appName} närmare sitt finansieringsmål.<br></br><br></br>Vi vill också försäkra dig om att om {foundationAcronym} inte lyckas säkra tillräcklig finansiering för att nå sina mål inom de kommande 90 dagarna, kommer alla donationer som inte kan användas i enlighet med {foundationAcronymPossessive} stadgar att doneras offentligt till {effName}.<br></br><br></br>Tills vidare kommer volontärer att hålla {appName} flytande så länge som möjligt. Om du tror att du kan hjälpa {appName} innan tiden rinner ut, vänligen kontakta <donate-email></donate-email>.",
     "6": {
       "heading": "Donera via {wordSilentDonor}",
       "content": "Individuals may make an anonymous tax deductible gift to the {foundationName} using <silent-donor-link>{wordSilentDonor}</silent-donor-link>.<br></br><br></br>{wordSilentDonor} is a third party which can facilitate donations to the {foundationAcronym} using card, bank transfer, and <crypto-icons>crypto</crypto-icons>"
@@ -214,23 +214,35 @@
         "answer": "Det finns för närvarande tre sätt att stödja den fortsatta utvecklingen av {appName}:<br></br><br></br><bold>{donationProviderName}</bold><br></br><br></br>{donationProviderName} är en tredjepartsplattform som hjälper ideella organisationer att ta emot donationer genom en rad olika betalningsmetoder. Du kan donera till {foundationName} via {donationProviderName} <donate-link>här</donate-link>.<br></br><br></br>Betalningsmetoder som stöds inkluderar:<payment-providers></payment-providers><bold>{wordSilentDonor}</bold><br></br><br></br><silent-donor-info></silent-donor-info><bold>Direkt kryptovaluta</bold><br></br><br></br>Du kan också donera kryptovaluta direkt till {foundationName} genom att skicka medel till plånboksadresserna nedan.<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordBitcoinCashAddress}: {addressBitcoinCash}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>Denna {wordEthereumAddress} tar emot donationer i {ethSymbol}, samt {wordErc20} {wordTokens} (såsom {usdtSymbol} och {usdcSymbol}) över {wordEvmCompatible}-kedjor, som {ethNetworkName}, {arbNetworkName} och {baseNetworkName}.<br></br><br></br><bold>Obs:</bold> Om du överväger att ge en donation på mer än {largeDonationAmount} med någon betalningsmetod, vänligen kontakta oss på <donations-email></donations-email>"
       },
       "2": {
-        "question": "Vad kommer min donation att användas till?",
-        "answer": "Din donation tas emot av <foundation-link>{foundationName}</foundation-link>, en stiftelse baserad i Schweiz som är nuvarande förvaltare av {appName}-appen och projektet. Din donation kommer att användas för att stödja den fortsatta utvecklingen och långsiktiga hållbarheten för {appName}."
+        "question": "Varför är ert donationsmål 1 miljon dollar? ",
+        "answer": "Detta motsvarar ungefär 12 månaders handlingsutrymme, tillräckligt med tid för att slutföra arbetet med {appNameProtocolV2}, lansera {appNamePro} och stödja {wordPro} under en rimlig uppstartsperiod. Detta arbete prioriteras eftersom det behövs för att uppnå ett hållbart ekosystem. På lång sikt är {appName} utformat för att bli självförsörjande genom {wordPro} och andra användningsområden för tokenen, men det krävs mer tid och arbete för att nå dit.<br></br><br></br>Även om detta är mycket pengar för en enskild person är dessa kostnader relativt måttliga för en applikation i {appName}s skala och med sådan påverkan."
       },
       "3": {
-        "question": "Vad är {foundationName}?",
-        "answer": "{foundationName} ({foundationAcronym}) är en schweizisk stiftelse och förvaltare av {appName}-appen och projektet. Du kan läsa mer om stiftelsens roll inom ekosystemet för {appName} <foundation-link>här</foundation-link>."
+        "question": "Vad kommer min donation att användas till?",
+        "answer": "Din donation kommer att tas emot av <foundation-link>{foundationName}</foundation-link>, en schweizisk stiftelse som för närvarande är förvaltare av {appName}-appen och projektet. Din donation kommer att användas för att stödja den fortsatta utvecklingen och långsiktiga hållbarheten för {appName}."
       },
       "4": {
-        "question": "Finns det andra sätt jag kan hjälpa {appName}?",
-        "answer": "Donationer är för närvarande det främsta sättet du kan hjälpa till att stödja {appName}. Om du inte har möjlighet att donera finns det dock flera andra sätt du kan hjälpa till:<ol><li>Dela denna vädjan med vänner och familj som använder {appName} och kan vara intresserade av att stödja vårt uppdrag.</li><li>Hjälp till att översätta {appName} till andra språk via <crowdin-link>{wordCrowdin}</crowdin-link></li><li>Bidra till {appNamePossessive} <github-link>kodbas med öppen källkod</github-link></li></ol>"
+        "question": "Vad händer om ni inte når ert donationsmål?",
+        "answer": "För närvarande har stiftelsen fått in tillräckligt med donationer för att kunna ge absolut minimalt stöd under de kommande 3 månaderna. Detta innebär att {appName} fortsatt kommer att vara tillgänglig för nedladdning i appbutikerna och att kritisk infrastruktur, som servrar för pushnotiser och filer, kommer att förbli online.<br></br><br></br>Om insamlingen blir framgångsrik skulle stiftelsen kunna fortsätta den aktiva utvecklingen av {appName}, inklusive lanseringen av {appNamePro} och {appNameProtocolV2}.<br></br><br></br>Om den misslyckas innebär bristen på finansiering att stiftelsen inte kan stödja {appName} i någon kapacitet och måste läggas ner. Som en följd skulle {appName} tas bort från appbutikerna, och kritisk infrastruktur som {appName}s filserver, pushnotisserver och seednoder skulle gå offline."
       },
       "tax-question": {
         "question": "Kan jag göra en avdragsgill donation?",
         "answer": ""
+      },
+      "5": {
+        "question": "Vad är {foundationName}?",
+        "answer": "{foundationName} ({foundationAcronym}) är en schweizisk stiftelse och förvaltaren av {appName}-appen och projektet. Du kan läsa mer om stiftelsens roll inom {appName}-ekosystemet <foundation-link>här</foundation-link>."
+      },
+      "6": {
+        "question": "Vad händer med {appName} om {foundationName} läggs ner?",
+        "answer": "{appName} är decentraliserat, så länge ett minsta antal noder körs i {appName}-nätverket kommer {appName} tekniskt sett att fortsätta existera, där apparna erbjuder mycket grundläggande funktionalitet och fortsätter att fungera. Men om {foundationAcronym} och tillhörande juridiska enheter behöver läggas ner kommer {wordApple} och {wordGoogle} att ta bort {appName} från {wordApple}- och {platformStoreGoogleShort}-butikerna. Andra centralt drivna tjänster som {appName}s filserver och {appName}s pushnotisserver kommer också att behöva stängas ner, vilket begränsar användarnas möjlighet att skicka och ta emot bilagor samt att få snabba notiser om inkommande meddelanden. Gemenskapsdriven och volontärledd utveckling kan fortsätta, men {appName} är en komplex mjukvara och utan betydande finansiering och investeringar kommer användare att behöva göra sin egen bedömning av säkerheten i {appName}."
+      },
+      "7": {
+        "question": "Finns det andra sätt jag kan hjälpa {appName}?",
+        "answer": "Donationer är för närvarande det främsta sättet du kan hjälpa till att stödja {appName}. Men om du inte har möjlighet att donera finns det flera andra sätt du kan hjälpa till:<ol><li>Dela denna vädjan med vänner och familj som använder {appName} och kan vara intresserade av att stödja vårt uppdrag.</li><li>Hjälp till att översätta {appName} till andra språk via <crowdin-link>{wordCrowdin}</crowdin-link></li><li>Bidra till {appNamePossessive} <github-link>kodbas med öppen källkod</github-link></li></ol>"
       }
     },
-    "appealHeading": "A Personal Appeal From {donateAppealName}",
+    "appealHeading": "Vår sista vädjan:<br></br>{appName} stängs ner om 90 dagar",
     "7": {
       "heading": "Vanliga frågor",
       "content": ""

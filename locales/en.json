@@ -176,10 +176,6 @@
     "donate": {
       "title": "Donate | Support Privacy Technology",
       "description": "The {foundationName} cannot continue without your support. Donate today to help {appName} in its fight for survival."
-    },
-    "pro": {
-      "title": "",
-      "description": ""
     }
   },
   "donate": {
@@ -203,16 +199,12 @@
     },
     "5": {
       "heading": "Donate via Crypto",
-      "content": "You can send {btcSymbol}, {ethSymbol}, {usdcSymbol}, {usdtSymbol}, or {bchSymbol} to the following {foundationName} addresses."
+      "content": "You can send {ethSymbol}, {usdcSymbol}, {usdtSymbol} or {btcSymbol} to the following {foundationName} addresses."
     },
-    "heroAppeal": "Eight years ago, {appName} was founded with a mission to restore your privacy and give you control over your speech and life — in essence, digital freedom. However, without your help today, we won’t be able to continue developing {appName} for much longer. If you’ve ever found value in {appName} or its mission, please give me a moment of your time and read this appeal.<br></br><br></br>{appName} is controversial technology in a time when free speech is not a given, the right to privacy is abhorred, and the truth is a lie. Over the years, the organisations safeguarding {appName} have faced many challenges, but now {appNamePossessive} very survival is at risk.<br></br><br></br>The threats against privacy are now greater than ever before, and {appName} must evolve to face the challenges of the future. {appNamePossessive} current caretaker, the {foundationName}, does not have the funding required to carry {appName} any further. Important work, such as PFS and post-quantum cryptography, is still in progress — and we don’t have enough time left.<br></br><br></br>Our mission is to bring back the freedom, creativity, and privacy that people once felt when communicating online. We’ve planted a seed for a truly free messenger that removes the censors, the surveillers, and the centralized entities that monitor your conversations. So far, that idea has worked. Every month, over {appUserNumber} people use {appName} to send messages, not metadata.<br></br><br></br>{appName} is a platform that is built and owned by its community — not by big tech, private equity, or any other shadowy masters. Now, {appName} is turning to you.<br></br><br></br>The project is on a path to self-sustainability, but the future is fragile. If every {appName} user contributed just one dollar, it would go a long way towards {appName} reaching sustainability. If you've ever considered donating, now is the time to act.<br></br><br></br>{donateSignerName}",
+    "heroAppeal": "We had hoped this day would never come, but {appName} has now entered its final 90 days of operation. If we are unable to reach our funding goal within this period, the {foundationNameWithAcronym} will be forced to shut down.<br></br><br></br>To date, the {foundationAcronym} has received approximately {donationAmount} in donations. This is enough to maintain critical {appName} infrastructure for the next 90 days. We are extremely grateful for the support {appName} has received from the community,  but unfortunately this is not sufficient to retain full-time developers. As a result, all paid staff and developers will have their final working day on April 9, 2026. After this date, some team members will continue on a primarily volunteer basis to help maintain {appName} until July 8, 2026.<br></br><br></br>This is our final appeal to the {appName} community: without your support, the {foundationAcronym} will cease all operations on July 8, 2026.<br></br><br></br>We understand this may come as a shock. From the outside, {appName} appears to be a successful and growing app - with millions of downloads, strong app store ratings, and continued growth, recently surpassing 1.7 million monthly active users. However, {appNamePossessive} success has only been possible because of the dedicated contributors and teams who work tirelessly to improve it every day. These are highly skilled developers and architects of decentralized systems, and like everyone they have bills to pay, and families to feed.<br></br><br></br>{appName} is fortunate to have contributors who believe deeply in its mission and are willing to accept lower compensation than they could earn elsewhere. This helps reduce overall costs, but there is still a minimum level of funding required to operate. Even with a lean team, the {foundationAcronym} estimates this cost to be approximately {costPerYear} per year.<br></br><br></br>While this may seem like a large amount, it reflects the reality of building and maintaining secure, decentralized infrastructure. In most markets Senior developers often command salaries exceeding {seniorDevSalaryPerYear} per year, and on top of this there are legal and operational overheads for running the {foundationAcronym}. Compared to its competitors, {appName} operates extremely efficiently, achieving its mission with a budget comparable to the combined compensation of just two senior executives at some larger messaging companies.<br></br><br></br>If you have already donated, we sincerely thank you. Every contribution helps bring {appName} closer to its funding goal.<br></br><br></br>We also want to assure you that if the {foundationAcronym} is unable to secure funding sufficient enough to meet its goals within the next 90 days, any donations that cannot be used in accordance with the {foundationAcronymPossessive} constitution will be publicly donated to the {effName}.<br></br><br></br>For now, volunteers will keep {appName} afloat for as long as possible. If you believe you can help {appName} before time runs out, please reach out to <donate-email></donate-email>.",
     "6": {
       "heading": "Donate via {wordSilentDonor}",
       "content": "Individuals may make an anonymous tax deductible gift to the {foundationName} using <silent-donor-link>{wordSilentDonor}</silent-donor-link>.<br></br><br></br>{wordSilentDonor} is a third party which can facilitate donations to the {foundationAcronym} using card, bank transfer, and <crypto-icons>crypto</crypto-icons>"
-    },
-    "7": {
-      "heading": "FAQ",
-      "content": ""
     },
     "buttonCard": "Donate Card",
     "buttonCrypto": "Donate Crypto",
@@ -222,172 +214,38 @@
         "answer": "There are currently three ways to support the continued development of {appName}:<br></br><br></br><bold>{donationProviderName}</bold><br></br><br></br>{donationProviderName} is a third-party platform that helps non-profit organizations accept donations through a variety of payment methods. You can donate to the {foundationName} via {donationProviderName} <donate-link>here</donate-link>.<br></br><br></br>Supported payment methods include:<payment-providers></payment-providers><bold>{wordSilentDonor}</bold><br></br><br></br><silent-donor-info></silent-donor-info><bold>Direct Cryptocurrency</bold><br></br><br></br>You can also donate cryptocurrency directly to the {foundationName} by sending funds to the wallet addresses listed below.<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordBitcoinCashAddress}: {addressBitcoinCash}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>This {wordEthereumAddress} accepts donations in {ethSymbol}, as well as {wordErc20} {wordTokens} (such as {usdtSymbol} and {usdcSymbol}) across {wordEvmCompatible} chains, like {ethNetworkName}, {arbNetworkName}, and {baseNetworkName}.<br></br><br></br><bold>Note:</bold> If you are considering providing a donation of more than {largeDonationAmount} using any payment method, please contact us at <donations-email></donations-email>"
       },
       "2": {
+        "question": "Why is your donation goal 1 million dollars? ",
+        "answer": "This is equivalent to around 12 months of runway, enough time to complete work on {appNameProtocolV2}, launch {appNamePro}, and support {wordPro} for a reasonable ramp up period. This work is being prioritised because it is needed to achieve ecosystem sustainability. Long term, {appName} is designed to become self-sustaining through {wordPro} and other token utilities, however, additional time and effort is needed to get to that point.<br></br><br></br>Although this is a lot of money for an individual, for an application at the scale and impact of {appName}, these costs are relatively modest."
+      },
+      "3": {
         "question": "What will my donation be used for?",
         "answer": "Your donation will be received by the <foundation-link>{foundationName}</foundation-link>, a Swiss-based foundation which is the current steward of the {appName} application and project. Your donation will be used to support the ongoing development and sustainability of {appName}."
       },
-      "3": {
-        "question": "What is the {foundationName}?",
-        "answer": "The {foundationName} ({foundationAcronym}) is a Swiss-based foundation and the steward of the {appName} application and project. You can learn more about the foundation’s role within the {appName} ecosystem <foundation-link>here</foundation-link>."
-      },
       "4": {
-        "question": "Are there any other ways I can help {appName}?",
-        "answer": "Donations are the primary way you can help support {appName} currently. However, if you’re unable to donate, there are several other ways you can help:<ol><li>Share this appeal with friends and family who use {appName} and may be interested in supporting our mission.</li><li>Help translate {appName} into other languages via <crowdin-link>{wordCrowdin}</crowdin-link></li><li>Contribute to {appNamePossessive} <github-link>open source codebase</github-link></li></ol>"
+        "question": "What happens if your donation goal isn't hit?",
+        "answer": "Currently, the foundation has received enough donations to provide bare minimum support for the next 3 months. This means that {appName} will remain available for download on the app stores and critical infrastructure, like the push notification and file servers, will remain online.<br></br><br></br>If the fundraising is successful, the foundation would be able to continue active development of {appName}, including launching {appNamePro} and {appNameProtocolV2}.<br></br><br></br>If it is unsuccessful, the lack of funding would mean the foundation is not able to support {appName} in any capacity and will need to be shut down. As a result, {appName} would be removed from the app stores, and critical infrastructure like the {appName} file server, push notification server and seed nodes will go offline."
       },
       "tax-question": {
         "question": "Can I make a tax deductible donation?",
         "answer": ""
-      }
-    },
-    "appealHeading": "A Personal Appeal From {donateAppealName}"
-  },
-  "pro": {
-    "heading": "Privacy that feels <pro-badge></pro-badge>",
-    "tag": "Upgrade to {appNamePro} and unlock the full potential of private communication",
-    "features": {
-      "priceFrom": "From {price}/Month",
-      "headingMobile": "Features",
-      "detailedRoadmap": "Detailed Roadmap",
-      "1": {
-        "heading": "Free",
-        "tag": "Security for Everyone",
-        "1": {
-          "featureName": "Private & Secure Messaging",
-          "featureDescription": "Send end to end encrypted messages to contacts and groups with full privacy."
-        },
-        "2": {
-          "featureName": "No Phone Numbers",
-          "featureDescription": "Create an account without a phone number or real world identity."
-        },
-        "3": {
-          "featureName": "Onion Routing",
-          "featureDescription": "Use Onion Routing to hide your IP address from eavesdroppers."
-        },
-        "4": {
-          "featureName": "Files & Attachments",
-          "featureDescription": "Send end to end encrypted attachments to contacts and groups up to 10mb."
-        }
-      },
-      "2": {
-        "heading": "{wordPro}",
-        "tag": "Advanced Features",
-        "moreName": "Plus Loads More...",
-        "moreDescription": "More Pro features are on the way. Take a look at what’s <bold>Coming Soon <icon></icon></bold>"
-      },
-      "3": {
-        "heading": "Coming Soon",
-        "tag": "Future {wordPro} Features",
-        "tagMobile": "Coming Soon to {wordPro}",
-        "1": {
-          "featureName": "Larger File Attachments",
-          "featureDescription": "Send attachments which exceed the 10mb file size limit. "
-        },
-        "2": {
-          "featureName": "Bigger Groups",
-          "featureDescription": "Increased member limits in groups where you are an admin."
-        },
-        "3": {
-          "featureName": "Message Editing and Formatting",
-          "featureDescription": "Edit your messages and use advanced formatting features."
-        },
-        "4": {
-          "featureName": "Multiple Identities",
-          "featureDescription": "Manage multiple {appName} accounts from a single device."
-        }
-      }
-    },
-    "info": {
-      "heading": "What is {appNamePro}",
-      "content": "{appNamePro} offers premium features and functionality in the {appName} messaging app. {wordPro} includes unique and exclusive cosmetic upgrades and unlocks additional access to {appNamePossessive} decentralized network.<br></br><br></br>With {wordPro}, users pay to offset the increased network usage of certain activities, such as sending long messages or large attachments."
-    },
-    "upgrade": {
-      "heading": "Upgrade to {wordPro} Beta <platform-badge></platform-badge>",
-      "mobile": {
-        "1": {
-          "upgradeName": "On your {platform} Device",
-          "upgradeDescription": "Open {appName} on your {platform} device, go to {appName} Settings, and tap Upgrade {appName}.",
-          "upgradeSubDescription": "{appName} must have been installed via {platformStoreShort}. Billing is not supported {notSupportedInfo}",
-          "upgradeSubDescriptionNotSupportedInfoAndroid": "via {wordFDroid} or {wordAPK} installs.",
-          "upgradeSubDescriptionNotSupportedInfoIos": "when sideloading {wordIPAs}."
-        },
-        "2": {
-          "upgradeName": "On a linked Device",
-          "upgradeDescription": "Open {appName} on a linked {platformA} or {platformB} device, go to {appName} Settings, and tap Upgrade {appName}.",
-          "upgradeSubDescription": "Soon after upgrading all devices sharing that {appName} account will inherit {wordPro}."
-        }
-      },
-      "desktop": {
-        "1": {
-          "upgradeName": "On a linked device",
-          "upgradeDescription": "Unfortunately, {wordPro} access can only be purchased via the {platformStoreGoogle} or {platformStoreApple}. {appName} developers are working on alternative payment options to allow users to purchase {wordPro} access outside of the {platformStoreGoogle} and {platformStoreApple}.<br></br><br></br>For now, to upgrade a {wordDesktop} device to {wordPro}, open {appName} on a linked {platformAndroid} or {platformIos} device, go to {appName} Settings, and tap Upgrade {appName}.",
-          "upgradeSubDescription": "Soon after upgrading, all devices sharing that {appName} account will inherit {wordPro}."
-        }
-      }
-    },
-    "roadmap": {
-      "heading": "Roadmap",
-      "1": {
-        "featureName": "Larger File Attachments",
-        "featureDescription": "{appNamePro} will remove the constraints on file sharing for {wordPro} users, allowing attachments well beyond the standard {standardUserFileUploadLimit} limit. This feature leverages the {appNameRouterPossessive} capabilities for more efficient file transfers across the network, making it practical to share documents, images, and media files without leaving the secure {appName} environment.",
-        "featureSubheading": "Key benefits:",
-        "featureSublist": "<li><bold>Share complete documents and high-quality media:</bold> Send PDFs, presentations, and spreadsheets without compression or splitting. Transfer photos and videos in their original resolution, preserving quality for professional or personal use.</li><li><bold>Secure file exchange:</bold> Keep sensitive documents within {appNamePossessive} encrypted environment instead of relying on less secure third-party file sharing services.</li><li><bold>Streamlined workflow:</bold> Eliminate the need to switch between apps or platforms when collaborating on projects or sharing important files.</li>"
-      },
-      "2": {
-        "featureName": "Bigger Groups",
-        "featureDescription": "Groups with at least one {wordPro} administrator will accommodate up to {proUserMaxGroupSize} members—triple the standard {standardUserMaxGroupSize}-member limit. This expanded capacity transforms how larger communities can coordinate and communicate privately on {appName}.",
-        "featureSubheading": "Key benefits:",
-        "featureSublist": "<li><bold>Organization-ready:</bold> Support entire departments, teams, or small companies within a single secure group chat.</li><li><bold>Community building:</bold> Run larger interest-based or regional groups without hitting member limits or splitting conversations.</li><li><bold>Event coordination:</bold> Manage conferences, workshops, or large-scale projects with all stakeholders in one encrypted space.</li>"
-      },
-      "3": {
-        "featureName": "Message Editing and Formatting",
-        "featureDescription": "{appNamePro} members will gain access to a full suite of powerful messaging features that enhance how messages are composed and refined. These tools bring professional communication capabilities to {appName} while maintaining complete privacy. These features will also roll out on a limited basis for free users, ensuring everyone benefits from {appNamePossessive} evolution.",
-        "featureSubheading": "Key benefits:",
-        "featureSublist": "<li><bold>Markdown formatting:</bold> Style messages with rich text formatting for clearer communication in 1:1 conversations, group chats and communities.</li><li><bold>Message editing:</bold> Correct typos and update sent messages at any point after sending.</li><li><bold>Professional communication:</bold> Create well-structured messages with bold, italics, lists, and code blocks for technical discussions or detailed explanations</li>"
-      },
-      "4": {
-        "featureName": "Multiple Identities",
-        "featureDescription": "A highly requested feature, multi-account support will allow users to manage multiple {appName} identities within a single installation. This powerful feature will let users compartmentalize different aspects of their digital life without juggling multiple devices or app installations. Free users of {appName} will also have access to multi-account support on a more limited basis.",
-        "featureSubheading": "Key benefits:",
-        "featureSublist": "<li><bold>Identity separation:</bold> Maintain distinct personas for work, personal, and anonymous communications without cross-contamination.</li><li><bold>Simplified switching:</bold> Toggle between accounts instantly without logging in and out or managing multiple apps.</li><li><bold>Enhanced operational security:</bold> Reduce the risk of accidentally mixing professional and personal contacts or conversations.</li>"
-      }
-    },
-    "faq": {
-      "heading": "FAQ",
-      "1": {
-        "question": "What is included in {appNamePro}?",
-        "answer": ""
-      },
-      "2": {
-        "question": "How does {appNamePro} affect my privacy?",
-        "answer": ""
-      },
-      "3": {
-        "question": "Is {appName} still free?",
-        "answer": ""
-      },
-      "4": {
-        "question": "What is the difference between {wordsProBeta} and {wordPro}?",
-        "answer": ""
       },
       "5": {
-        "question": "Can I purchase {appNamePro} for my friend?",
-        "answer": ""
+        "question": "What is the {foundationName}?",
+        "answer": "The {foundationName} ({foundationAcronym}) is a Swiss-based foundation and the steward of the {appName} application and project. You can learn more about the foundation’s role within the {appName} ecosystem <foundation-link>here</foundation-link>."
       },
       "6": {
-        "question": "How can I purchase {appNamePro} for my account?",
-        "answer": ""
+        "question": "What happens to {appName} if the {foundationName} shuts down?",
+        "answer": "{appName} is decentralised, so long as a minimum number of nodes run in the {appName} network {appName} will technically continue to exist, with the apps supporting very basic functionality and continuing to operate. However if the {foundationAcronym} and associated legal entities need to be shutdown then {wordApple} and {wordGoogle} will remove {appName} from the {wordApple} and {platformStoreGoogleShort} stores. Other centrally run services like the {appName} file server and {appName} push notification server will also need to be shutdown, limiting the ability for users to send and receive attachments and to receive fast notifications for incoming messages. Community and volunteer development may continue, but {appName} is a complex piece of software and without significant funding and investment, users will need to make their own assessment of the security of {appName}."
       },
       "7": {
-        "question": "Can I refund my purchase?",
-        "answer": ""
-      },
-      "8": {
-        "question": "How are funds from {appNamePro} used?",
-        "answer": ""
-      },
-      "9": {
-        "question": "Will more features be added to {wordPro} in the future?",
-        "answer": ""
+        "question": "Are there any other ways I can help {appName}?",
+        "answer": "Donations are the primary way you can help support {appName} currently. However, if you’re unable to donate, there are several other ways you can help:<ol><li>Share this appeal with friends and family who use {appName} and may be interested in supporting our mission.</li><li>Help translate {appName} into other languages via <crowdin-link>{wordCrowdin}</crowdin-link></li><li>Contribute to {appNamePossessive} <github-link>open source codebase</github-link></li></ol>"
       }
+    },
+    "appealHeading": "Our Final Appeal:<br></br>{appName} is shutting down in 90 days",
+    "7": {
+      "heading": "FAQ",
+      "content": ""
     }
   }
 }

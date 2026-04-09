@@ -327,8 +327,6 @@ function DonationProgressIndicator({
             <span aria-hidden="true">·</span>
             <Link
               href={goalBlogPostUrl}
-              target="_blank"
-              rel="noopener noreferrer"
               className="underline underline-offset-2 transition-colors hover:opacity-70"
             >
               Why this goal?
@@ -434,7 +432,7 @@ export const SilentDonorPaymentDescription = () => (
   </>
 );
 
-function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 | 'tax-question' }) {
+function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 'tax-question' }) {
   const t = useTranslations('donate.faq');
 
   const question = t(`${localeKey}.question`, localeArgs);
@@ -532,6 +530,9 @@ function DonateFAQ() {
           <FAQItem localeKey={2} />
           <FAQItem localeKey={3} />
           <FAQItem localeKey={4} />
+          <FAQItem localeKey={5} />
+          <FAQItem localeKey={6} />
+          <FAQItem localeKey={7} />
         </div>
       </div>
     </div>
@@ -558,17 +559,20 @@ export default function Donate({
             <Image
               priority={true}
               className="rounded-xl"
-              src="/assets/images/chris.jpg"
+              src="/assets/images/session-hero.png"
               alt=""
-              width={4032}
-              height={2268}
+              width={1500}
+              height={1159}
               quality={100}
               layout="responsive"
-              sizes="(max-width: 4032px) 100vw, 500px"
+              sizes="(max-width: 1500px) 100vw, 500px"
             />
           </div>
           <h2 className="pb-5 font-semibold text-3xl md:text-4xl xl:text-5xl">
-            {t('appealHeading', localeArgs)}
+            {t.rich('appealHeading', {
+              ...localeArgs,
+              br: () => <br />,
+            })}
           </h2>
           <p
             className={classNames(
@@ -583,20 +587,18 @@ export default function Donate({
               appUserNumber: new Intl.NumberFormat().format(appUserNumber),
               br: () => <br />,
               italic: (chunks) => <i>{chunks}</i>,
+              'donate-email': () => (
+                <Link className="text-primary-dark" href="mailto:donations@getsession.org">
+                  donations@getsession.org
+                </Link>
+              ),
+              donationAmount: '$65,000',
+              costPerYear: '$1 million',
+              seniorDevSalaryPerYear: '$150,000 USD',
             })}
+            <br />
+            <br />- The Session Technology Foundation & Session Team
           </p>
-          <div className="w-72">
-            <Image
-              priority={true}
-              src="/assets/images/chris-signature.png"
-              alt=""
-              width={453}
-              height={187}
-              quality={100}
-              layout="responsive"
-              sizes="(max-width: 453px) 100vw, 500px"
-            />
-          </div>
           <div className="mt-8 block w-full 2xl:hidden">
             <DonationProgressIndicator donationProgress={donationProgress} />
           </div>
