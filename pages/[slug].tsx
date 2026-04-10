@@ -24,7 +24,7 @@ export default function Page(props: Props): ReactElement {
 
 const extensions = ['php', 'yaml'];
 
-const forbiddenWords = [...extensions, '.env', '%2f', 'credentials', 'docker'];
+const forbiddenWords = [...extensions, '.env', 'credentials', 'docker'];
 
 function shouldBuildSlug(slug: string): boolean {
   const extension = slug.split('.')[-1];
@@ -43,7 +43,9 @@ function shouldBuildSlug(slug: string): boolean {
     }
   }
 
-  for (const w in forbiddenWords) {
+  console.log(forbiddenWords)
+
+  for (const w of forbiddenWords) {
     if (slug.includes(w)) {
       return false;
     }
