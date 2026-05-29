@@ -596,7 +596,8 @@ export default function Donate({
               'youtube-link': (chunks) => (
                 <Link
                   className="text-primary-dark"
-                  href={`https://www.youtube.com/embed/${process.env.NEXT_PUBLIC_DONATE_HERO_YOUTUBE_ID}`}
+                  target="_blank"
+                  href={`https://www.youtube.com/watch?v=${process.env.NEXT_PUBLIC_DONATE_HERO_YOUTUBE_ID}`}
                 >
                   {chunks}
                 </Link>
