@@ -242,7 +242,7 @@
         "answer": "Donations are the primary way you can help support {appName} currently. However, if you’re unable to donate, there are several other ways you can help:<ol><li>Share this appeal with friends and family who use {appName} and may be interested in supporting our mission.</li><li>Help translate {appName} into other languages via <crowdin-link>{wordCrowdin}</crowdin-link></li><li>Contribute to {appNamePossessive} <github-link>open source codebase</github-link></li></ol>"
       }
     },
-    "appealHeading": "Our Final Appeal:<br></br>{appName} is shutting down in 90 days",
+    "appealHeading": "A path forward for {appName}",
     "7": {
       "heading": "FAQ",
       "content": ""
