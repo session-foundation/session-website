@@ -556,17 +556,18 @@ export default function Donate({
       <div className="wrap flex w-screen flex-row flex-wrap pb-10 md:pb-28">
         <HeroContainer className="md:mb-4 lg:mt-16 2xl:mx-0 2xl:mt-16 2xl:ml-auto 2xl:max-w-5xl 2xl:pb-0 2xl:pl-[180px]">
           <div className="mb-8 w-full md:mb-10">
-            <Image
-              priority={true}
-              className="rounded-xl"
-              src="/assets/images/session-hero.png"
-              alt=""
-              width={1500}
-              height={1159}
-              quality={100}
-              layout="responsive"
-              sizes="(max-width: 1500px) 100vw, 500px"
-            />
+            <div
+              className="relative w-full overflow-hidden rounded-xl border border-2 bordder-black"
+              style={{ paddingBottom: '56.25%' }}
+            >
+              <iframe
+                className="absolute inset-0 h-full w-full"
+                src={`https://www.youtube.com/embed/${process.env.NEXT_PUBLIC_DONATE_HERO_YOUTUBE_ID}`}
+                title="Session"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
           </div>
           <h2 className="pb-5 font-semibold text-3xl md:text-4xl xl:text-5xl">
             {t.rich('appealHeading', {
@@ -590,6 +591,14 @@ export default function Donate({
               'donate-email': () => (
                 <Link className="text-primary-dark" href="mailto:donations@getsession.org">
                   donations@getsession.org
+                </Link>
+              ),
+              'youtube-link': (chunks) => (
+                <Link
+                  className="text-primary-dark"
+                  href={`https://www.youtube.com/embed/${process.env.NEXT_PUBLIC_DONATE_HERO_YOUTUBE_ID}`}
+                >
+                  {chunks}
                 </Link>
               ),
               donationAmount: '$65,000',
