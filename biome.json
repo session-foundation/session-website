@@ -1,13 +1,13 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
   "vcs": {
-    "enabled": false,
+    "enabled": true,
     "clientKind": "git",
-    "useIgnoreFile": false
+    "useIgnoreFile": true
   },
   "files": {
-    "ignoreUnknown": false,
-    "includes": ["./**/*.ts", "./**/*.tsx"]
+    "ignoreUnknown": true,
+    "includes": ["**", "!**/lib/app_localization/**", "!**/locales/**", "!contentful/export.json"]
   },
   "formatter": {
     "enabled": true,
@@ -86,6 +86,11 @@
       "source": {
         "organizeImports": "on"
       }
+    }
+  },
+  "css": {
+    "formatter": {
+      "quoteStyle": "single"
     }
   }
 }
