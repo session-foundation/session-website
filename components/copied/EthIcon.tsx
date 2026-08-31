@@ -10,6 +10,8 @@ export const EthIcon = forwardRef<SVGSVGElement, SVGAttributes>((props, ref) => 
     xmlns="http://www.w3.org/2000/svg"
     {...props}
     ref={ref}
+    aria-hidden="true"
+    focusable="false"
   >
     <g fill="none" fillRule="evenodd">
       <circle cx="16" cy="16" r="16" fill="#627EEA" />

@@ -9,6 +9,8 @@ export const BNBIcon = forwardRef<SVGSVGElement, SVGAttributes>((props, ref) => 
     viewBox="0 0 2496 2496"
     {...props}
     ref={ref}
+    aria-hidden="true"
+    focusable="false"
   >
     <path
       d="M1248 0c689.3 0 1248 558.7 1248 1248s-558.7 1248-1248 1248S0 1937.3 0 1248 558.7 0 1248 0z"

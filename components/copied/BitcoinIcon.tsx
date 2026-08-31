@@ -13,6 +13,8 @@ export const BitcoinIcon = forwardRef<SVGSVGElement, SVGAttributes>((props, ref)
     shapeRendering="geometricPrecision"
     textRendering="geometricPrecision"
     viewBox="0 0 4091.27 4091.73"
+    aria-hidden="true"
+    focusable="false"
   >
     <g fillRule="nonzero">
       <path

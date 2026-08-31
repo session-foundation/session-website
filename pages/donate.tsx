@@ -112,6 +112,7 @@ export function DonorBox({
   return (
     <div className="flex flex-col gap-4 sm:min-w-[350px] md:w-[425px] md:min-w-[410px]">
       <div
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: DonorBox web-component embed, static template
         dangerouslySetInnerHTML={{
           __html: `<dbox-widget 
           campaign="${DONORBOX_CAMPAIGN}" 
