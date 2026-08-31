@@ -1,0 +1,12 @@
+.next/
+out/
+build/
+public/rss/
+pnpm-lock.yaml
+
+# git submodule, formatted by its own repo
+lib/app_localization/
+
+# generated: contentful CLI export, crowdin exports
+contentful/export.json
+locales/

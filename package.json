@@ -8,9 +8,10 @@
     "build:staging": "NEXT_PUBLIC_SITE_ENV=development NODE_ENV=production next build",
     "start": "NEXT_PUBLIC_SITE_ENV=production NODE_ENV=production next start --hostname 127.0.0.1",
     "start:staging": "NEXT_PUBLIC_SITE_ENV=development NODE_ENV=production next start --hostname 127.0.0.1",
-    "lint": "biome lint",
-    "lint:fix": "biome lint --write",
-    "format": "biome format --write",
+    "lint": "biome lint && prettier --check .",
+    "lint:fix": "biome lint --write && prettier --write .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "check": "biome check",
     "check:fix": "biome check --write"
   },
@@ -63,6 +64,7 @@
     "contentful-cli": "^1.8.17",
     "cssnano": "^4.1.11",
     "postcss": "^8.2.13",
+    "prettier": "3.7.4",
     "tailwindcss": "^2.2.15",
     "tailwindcss-selection-variant": "^0.1.0",
     "typescript": "5.8.3"
