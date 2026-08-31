@@ -2,12 +2,15 @@ export enum NON_LOCALIZED_STRING {
   appName = 'Session',
   appNamePossessive = "Session's",
   appNamePro = 'Session Pro',
+  appNameProtocolV2 = 'Session Protocol v2',
   wordBeta = 'Beta',
   wordPro = 'Pro',
   wordsProBeta = 'Pro Beta',
   appToken = 'Session Token',
   foundationName = 'Session Technology Foundation',
+  foundationNameWithAcronym = 'Session Technology Foundation (STF)',
   foundationAcronym = 'STF',
+  foundationAcronymPossessive = "STF's",
   swissSupervisory = 'Federal Supervisory Authority for Foundations (ESA)',
   lokinet = 'Lokinet',
   ethNetworkName = 'Ethereum',
@@ -47,6 +50,9 @@ export enum NON_LOCALIZED_STRING {
   largeDonationAmount = '$50,000 dollars',
   wordCrowdin = 'Crowdin',
   wordSilentDonor = 'Silent Donor',
+  effName = 'Electronic Frontier Foundation',
+  wordApple = 'Apple',
+  wordGoogle = 'Google',
 }
 
 export const SILENT_DONOR_LEGAL_DISCLAIMER =

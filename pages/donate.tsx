@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import classNames from 'classnames';
-import type { GetStaticProps, GetStaticPropsContext } from 'next';
+import type { GetServerSideProps, GetServerSidePropsContext } from 'next';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
@@ -32,6 +32,7 @@ import {
 } from '@/constants/localization';
 import METADATA from '@/constants/metadata';
 import { LUCIDE_ICONS_UNICODE } from '@/lib/lucide';
+import type { DonationProgressData } from './api/donation-progress';
 import {
   StyledCollapsibleContent,
   StyledCollapsibleTrigger,
@@ -80,7 +81,15 @@ const DONORBOX_SCRIPT_URL = 'https://donorbox.org/widgets.js';
 const DONORBOX_SCRIPT_ID = 'donorbox-widget-script';
 const DONORBOX_CAMPAIGN = 'session-technology-foundation-donations';
 
-export function DonorBox({ showDonateCrypto }: { showDonateCrypto?: boolean }) {
+export function DonorBox({
+  showDonateCrypto,
+  showGoal,
+  donationProgress,
+}: {
+  showDonateCrypto?: boolean;
+  showGoal?: boolean;
+  donationProgress?: DonationProgressData;
+}) {
   const t = useTranslations('donate');
   useEffect(() => {
     // Check if already loaded by id, src, or registered custom element
@@ -106,7 +115,7 @@ export function DonorBox({ showDonateCrypto }: { showDonateCrypto?: boolean }) {
   }, []);
 
   return (
-    <div className="sm:min-w-[350px] md:min-w-[420px]">
+    <div className="flex flex-col gap-4 sm:min-w-[350px] md:w-[425px] md:min-w-[410px]">
       <div
         dangerouslySetInnerHTML={{
           __html: `<dbox-widget 
@@ -116,10 +125,14 @@ export function DonorBox({ showDonateCrypto }: { showDonateCrypto?: boolean }) {
           enable-auto-scroll="true">
         </dbox-widget>`,
         }}
+        className="overflow-hidden rounded-md border border-2 shadow-sm"
       />
+      {showGoal && donationProgress ? (
+        <DonationProgressIndicator compact={true} donationProgress={donationProgress} />
+      ) : null}
       {showDonateCrypto ? (
         <a href="#crypto">
-          <Button size="medium" shape="semiround" classes="text-xl w-full mt-8 mb-2 py-3">
+          <Button size="medium" shape="semiround" classes="text-xl w-full">
             {t('buttonCrypto')}
           </Button>
         </a>
@@ -265,6 +278,66 @@ function HeroContainer({ children, className }: { children: ReactNode; className
   );
 }
 
+function formatCompactCurrency(amount: number): string {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    notation: 'compact',
+    maximumFractionDigits: 1,
+  }).format(amount);
+}
+
+function formatFullCurrency(amount: number): string {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    maximumFractionDigits: 0,
+  }).format(amount);
+}
+
+function DonationProgressIndicator({
+  compact = true,
+  donationProgress,
+}: {
+  compact?: boolean;
+  donationProgress: DonationProgressData;
+}) {
+  const { currentAmount, goalAmount, goalBlogPostUrl } = donationProgress;
+  const pct = Math.min((currentAmount / goalAmount) * 100, 100);
+  const format = compact ? formatCompactCurrency : formatFullCurrency;
+
+  return (
+    <section className="w-full rounded-md border bg-white p-6 text-gray-dark shadow-sm">
+      <div className="flex flex-col items-start justify-start">
+        <p className="mb-6 font-bold text-xl md:text-lg lg:text-xl">Fundraising Goal</p>
+        <div className="h-5 w-full overflow-hidden rounded-full bg-gray-200 md:h-6">
+          <div
+            className="h-full rounded-full bg-primary transition-all duration-700"
+            style={{ width: `${pct}%` }}
+            role="progressbar"
+            aria-valuenow={currentAmount}
+            aria-valuemin={0}
+            aria-valuemax={goalAmount}
+          />
+        </div>
+        <div className="mt-3 flex w-full items-center justify-between gap-2 text-sm md:text-base">
+          <span className="font-bold">{format(currentAmount)} raised</span>
+          <span className="flex items-center gap-2 font-normal">
+            <span className="font-bold">{format(goalAmount)} goal</span>
+            <span aria-hidden="true">·</span>
+            <Link
+              href={goalBlogPostUrl}
+              className="underline underline-offset-2 transition-colors hover:opacity-70"
+            >
+              Why this goal?
+            </Link>
+          </span>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function FloatingButtons() {
   const [hideFloatingButtons, setHideFloatingButtons] = useState(false);
   const [pastCrypto, setPastCrypto] = useState(false);
@@ -359,7 +432,7 @@ export const SilentDonorPaymentDescription = () => (
   </>
 );
 
-function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 | 'tax-question' }) {
+function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 'tax-question' }) {
   const t = useTranslations('donate.faq');
 
   const question = t(`${localeKey}.question`, localeArgs);
@@ -457,13 +530,20 @@ function DonateFAQ() {
           <FAQItem localeKey={2} />
           <FAQItem localeKey={3} />
           <FAQItem localeKey={4} />
+          <FAQItem localeKey={5} />
+          <FAQItem localeKey={6} />
+          <FAQItem localeKey={7} />
         </div>
       </div>
     </div>
   );
 }
 
-export default function Donate(): ReactElement {
+export default function Donate({
+  donationProgress,
+}: {
+  donationProgress: DonationProgressData;
+}): ReactElement {
   const t = useTranslations('donate');
 
   return (
@@ -475,21 +555,25 @@ export default function Donate(): ReactElement {
     >
       <div className="wrap flex w-screen flex-row flex-wrap pb-10 md:pb-28">
         <HeroContainer className="md:mb-4 lg:mt-16 2xl:mx-0 2xl:mt-16 2xl:ml-auto 2xl:max-w-5xl 2xl:pb-0 2xl:pl-[180px]">
-          <div className="mt-4 mb-8 w-full md:mt-8 md:mb-10">
-            <Image
-              priority={true}
-              className="rounded-xl"
-              src="/assets/images/chris.jpg"
-              alt=""
-              width={4032}
-              height={2268}
-              quality={100}
-              layout="responsive"
-              sizes="(max-width: 4032px) 100vw, 500px"
-            />
+          <div className="mb-8 w-full md:mb-10">
+            <div
+              className="relative w-full overflow-hidden rounded-xl border border-2 bordder-black"
+              style={{ paddingBottom: '56.25%' }}
+            >
+              <iframe
+                className="absolute inset-0 h-full w-full"
+                src={`https://www.youtube.com/embed/${process.env.NEXT_PUBLIC_DONATE_HERO_YOUTUBE_ID}`}
+                title="Session"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
           </div>
           <h2 className="pb-5 font-semibold text-3xl md:text-4xl xl:text-5xl">
-            {t('appealHeading', localeArgs)}
+            {t.rich('appealHeading', {
+              ...localeArgs,
+              br: () => <br />,
+            })}
           </h2>
           <p
             className={classNames(
@@ -504,23 +588,33 @@ export default function Donate(): ReactElement {
               appUserNumber: new Intl.NumberFormat().format(appUserNumber),
               br: () => <br />,
               italic: (chunks) => <i>{chunks}</i>,
+              'donate-email': () => (
+                <Link className="text-primary-dark" href="mailto:donations@getsession.org">
+                  donations@getsession.org
+                </Link>
+              ),
+              'youtube-link': (chunks) => (
+                <Link
+                  className="text-primary-dark"
+                  target="_blank"
+                  href={`https://www.youtube.com/watch?v=${process.env.NEXT_PUBLIC_DONATE_HERO_YOUTUBE_ID}`}
+                >
+                  {chunks}
+                </Link>
+              ),
+              donationAmount: '$65,000',
+              costPerYear: '$1 million',
+              seniorDevSalaryPerYear: '$150,000 USD',
             })}
+            <br />
+            <br />- The Session Technology Foundation & Session Team
           </p>
-          <div className="w-72">
-            <Image
-              priority={true}
-              src="/assets/images/chris-signature.png"
-              alt=""
-              width={453}
-              height={187}
-              quality={100}
-              layout="responsive"
-              sizes="(max-width: 453px) 100vw, 500px"
-            />
+          <div className="mt-8 block w-full 2xl:hidden">
+            <DonationProgressIndicator donationProgress={donationProgress} />
           </div>
         </HeroContainer>
-        <div className="sticky top-10 mt-16 mr-auto hidden pt-10 2xl:block">
-          <DonorBox showDonateCrypto={true} />
+        <div className="sticky top-10 mt-16 mr-auto hidden 2xl:block">
+          <DonorBox showDonateCrypto={true} showGoal={true} donationProgress={donationProgress} />
         </div>
       </div>
       <Section
@@ -597,8 +691,18 @@ export default function Donate(): ReactElement {
   );
 }
 
-export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext) => {
-  return {
-    props: { messages: (await import(`../locales/${context.locale}.json`)).default },
-  };
+export const getServerSideProps: GetServerSideProps = async (
+  context: GetServerSidePropsContext
+) => {
+  const { readDonationProgress } = await import('./api/donation-progress');
+
+  const messages = (await import(`../locales/${context.locale}.json`)).default;
+
+  try {
+    const donationProgress = readDonationProgress();
+    return { props: { messages, donationProgress } };
+  } catch (err) {
+    console.error('[donate] Failed to load donation progress data:', err);
+    return { props: { messages, donationProgress: null } };
+  }
 };

@@ -32,7 +32,7 @@
       "iconButtonClose": "Navigációs menü bezárása",
       "downloadButton": "Hivatkozás a(z) {appName} letöltéséhez"
     },
-    "donate": "Donate"
+    "donate": "Adományozás"
   },
   "footer": {
     "about": "Névjegy",
@@ -71,7 +71,7 @@
   },
   "landing": {
     "hero": {
-      "heading": "Send <glitch>Messages,</glitch> Not Metadata.",
+      "heading": "Küldj <glitch>üzeneteket,</glitch> ne metaadatokat.",
       "tag": "Találd meg a szabadságodat a(z) {appName} segítségével",
       "glitchTextGlitch": "Titkosítva"
     },
@@ -83,7 +83,7 @@
       "title": "Előnyök",
       "1": {
         "heading": "Nincs telefonszám",
-        "content": "Keep your identity private with Account IDs. No phone number or email required to sign up."
+        "content": "Őrizd meg személyazonosságod védelmét az Account ID-kkel. A regisztrációhoz nincs szükség telefonszámra vagy e-mail-címre."
       },
       "2": {
         "heading": "Nincsenek adatszivárgások",
@@ -95,7 +95,7 @@
       },
       "4": {
         "heading": "Nyílt forráskódú",
-        "content": "Privacy is more than a promise. Anyone can view, audit, and contribute to {appName}'s code."
+        "content": "Az adatvédelem több mint ígéret. Bárki megtekintheti, auditálhatja és hozzájárulhat a(z) {appName} kódjához."
       },
       "5": {
         "heading": "Közösségi működtetésű",
@@ -155,15 +155,15 @@
     },
     "faq": {
       "title": "Gyakran Ismételt Kérdések",
-      "description": "Find answers to some of the most frequently asked questions about {appName}."
+      "description": "Találj válaszokat a {appName}-pal kapcsolatos leggyakrabban feltett kérdésekre."
     },
     "litepaper": {
       "description": "A(z) {appName} egy decentralizált üzenetküldő, amely teljesen privát, biztonságos és névtelen kommunikációt tesz lehetővé.",
-      "title": "{appName} Litepaper: Send Messages, Not Metadata"
+      "title": "{appName} Litepaper: Küldj üzeneteket, ne metaadatokat"
     },
     "whitepaper": {
       "description": "A(z) {appName} egy decentralizált üzenetküldő, amely teljesen privát, biztonságos és névtelen kommunikációt tesz lehetővé.",
-      "title": "{appName} Whitepaper: End-To-End Encrypted Conversations with Minimal Metadata Leakage"
+      "title": "{appName} Whitepaper: Végpontok közötti titkosított beszélgetések minimális metaadatszivárgással"
     },
     "community": {
       "title": "{appName} {featureCommunity}",
@@ -201,7 +201,7 @@
       "heading": "Adományozás kriptovalutával",
       "content": "A következő {foundationName} címekre küldhetsz {ethSymbol}, {usdcSymbol}, {usdtSymbol} vagy {btcSymbol} összeget."
     },
-    "heroAppeal": "Nyolc évvel ezelőtt a {appName} azzal a küldetéssel jött létre, hogy helyreállítsa a magánszférádat, és visszaadja neked az irányítást a megszólalásod és az életed felett – vagyis a digitális szabadságot. Ma azonban a segítséged nélkül már nem tudjuk sokáig folytatni a {appName} fejlesztését. Ha valaha értéket láttál a {appName}-ben vagy a küldetésében, kérlek, szánj rám egy pillanatot, és olvasd el ezt a felhívást.<br></br><br></br>A {appName} vitatott technológia egy olyan korban, amikor a szólásszabadság nem magától értetődő, a magánszférához való jogot megvetik, és az igazság hazugsággá válik. Az évek során a {appName}-et védelmező szervezetek számos kihívással szembesültek, de most maga a {appNamePossessive} túlélése is veszélyben van.<br></br><br></br>A magánszférát fenyegető veszélyek ma nagyobbak, mint valaha, és a {appName}-nek fejlődnie kell, hogy megfeleljen a jövő kihívásainak. A {appNamePossessive} jelenlegi gondozója, a {foundationName}, nem rendelkezik a szükséges forrásokkal ahhoz, hogy továbbvigye a {appName}-et. Fontos munkák, mint a PFS és a posztkvantum-kriptográfia, még mindig folyamatban vannak – és már nincs sok időnk.<br></br><br></br>Küldetésünk, hogy visszahozzuk azt a szabadságot, kreativitást és magánszférát, amelyet az emberek egykor az online kommunikáció során éreztek. Elültettük egy valóban szabad üzenetküldő magját, amely megszünteti a cenzorokat, a megfigyelőket és a beszélgetéseidet figyelő központosított szereplőket. Eddig ez az elképzelés működött. Minden hónapban több mint {appUserNumber} ember használja a {appName}-et arra, hogy üzeneteket küldjön, ne metaadatokat.<br></br><br></br>A {appName} egy olyan platform, amelyet a közössége épít és birtokol – nem a big tech, a private equity vagy bármilyen más árnyékos hatalmi szereplő. Most a {appName} hozzád fordul.<br></br><br></br>A projekt az önfenntartás felé halad, de a jövő törékeny. Ha minden {appName}-felhasználó csak egyetlen dollárral járulna hozzá, az nagyban segítené a {appName} fenntarthatóságának elérését. Ha valaha fontolgattad az adományozást, most jött el a cselekvés ideje.<br></br><br></br>{donateSignerName}",
+    "heroAppeal": "Reméltük, hogy ez a nap soha nem jön el, de a {appName} működése most belépett az utolsó 90 napjába. Ha ezen időszak alatt nem érjük el a finanszírozási célunkat, a {foundationNameWithAcronym} kénytelen lesz leállni.<br></br><br></br>A mai napig a {foundationAcronym} körülbelül {donationAmount} összegű adományt kapott. Ez elegendő a kritikus {appName}-infrastruktúra fenntartásához a következő 90 napban. Rendkívül hálásak vagyunk a támogatásért, amelyet a {appName} a közösségtől kapott, de ez sajnos nem elegendő ahhoz, hogy teljes munkaidős fejlesztőket tartsunk meg. Ennek következtében minden fizetett munkatárs és fejlesztő utolsó munkanapja 2026. április 9. lesz. Ezt követően néhány csapattag főként önkéntes alapon folytatja majd a munkát, hogy segítsen fenntartani a {appName}-ot 2026. július 8-ig.<br></br><br></br>Ez az utolsó felhívásunk a {appName} közösségéhez: a támogatásotok nélkül a {foundationAcronym} 2026. július 8-án minden működését beszünteti.<br></br><br></br>Megértjük, hogy ez sokkoló lehet. Kívülről nézve a {appName} sikeres és növekvő alkalmazásnak tűnik – több millió letöltéssel, erős alkalmazásbolti értékelésekkel és folyamatos növekedéssel, nemrég átlépve az 1,7 millió havi aktív felhasználót. A {appNamePossessive} sikere azonban csak azoknak az elkötelezett közreműködőknek és csapatoknak köszönhető, akik fáradhatatlanul dolgoznak a fejlesztésén minden egyes nap. Ők decentralizált rendszerek magasan képzett fejlesztői és architektjei, és mint mindenki másnak, nekik is számlákat kell fizetniük és családot kell eltartaniuk.<br></br><br></br>A {appName} szerencsés, hogy olyan közreműködői vannak, akik mélyen hisznek a küldetésében, és hajlandók alacsonyabb javadalmazást elfogadni annál, mint amit máshol kereshetnének. Ez segít csökkenteni az összköltségeket, de a működéshez így is szükség van egy minimális finanszírozási szintre. Még egy karcsú csapattal is a {foundationAcronym} becslése szerint ez a költség évente körülbelül {costPerYear}.<br></br><br></br>Bár ez nagy összegnek tűnhet, a biztonságos, decentralizált infrastruktúra kiépítésének és fenntartásának valóságát tükrözi. A legtöbb piacon a senior fejlesztők éves fizetése gyakran meghaladja a {seniorDevSalaryPerYear} összeget, és ezen felül jogi és működési általános költségek is felmerülnek a {foundationAcronym} működtetéséhez. Versenytársaihoz képest a {appName} rendkívül hatékonyan működik, küldetését olyan költségvetéssel valósítja meg, amely egyes nagyobb üzenetküldő cégeknél mindössze két felsővezető együttes javadalmazásával összemérhető.<br></br><br></br>Ha már adományoztál, őszintén köszönjük. Minden hozzájárulás közelebb viszi a {appName}-ot a finanszírozási céljához.<br></br><br></br>Azt is szeretnénk biztosítani, hogy ha a {foundationAcronym} a következő 90 napban nem tud elegendő finanszírozást biztosítani céljai eléréséhez, akkor minden olyan adományt, amelyet nem lehet a {foundationAcronymPossessive} alkotmányával összhangban felhasználni, nyilvánosan a {effName} részére adományozunk.<br></br><br></br>Egyelőre az önkéntesek a lehető legtovább életben tartják a {appName}-ot. Ha úgy gondolod, hogy az idő lejárta előtt tudsz segíteni a {appName}-nak, kérjük, lépj kapcsolatba velünk itt: <donate-email></donate-email>.",
     "6": {
       "heading": "Adományozás a következőn keresztül: {wordSilentDonor}",
       "content": "Individuals may make an anonymous tax deductible gift to the {foundationName} using <silent-donor-link>{wordSilentDonor}</silent-donor-link>.<br></br><br></br>{wordSilentDonor} is a third party which can facilitate donations to the {foundationAcronym} using card, bank transfer, and <crypto-icons>crypto</crypto-icons>"
@@ -214,23 +214,35 @@
         "answer": "Jelenleg három módon támogathatod a {appName} folyamatos fejlesztését:<br></br><br></br><bold>{donationProviderName}</bold><br></br><br></br>A {donationProviderName} egy harmadik fél által üzemeltetett platform, amely különféle fizetési módokon keresztül segíti a nonprofit szervezeteket adományok fogadásában. A {foundationName} számára a {donationProviderName} segítségével <donate-link>itt</donate-link> adományozhatsz.<br></br><br></br>A támogatott fizetési módok a következők:<payment-providers></payment-providers><bold>{wordSilentDonor}</bold><br></br><br></br><silent-donor-info></silent-donor-info><bold>Közvetlen kriptovalutás adományozás</bold><br></br><br></br>Kriptovalutát közvetlenül is adományozhatsz a {foundationName} számára az alább felsorolt tárcacímekre küldött összeggel.<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordBitcoinCashAddress}: {addressBitcoinCash}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>Ez a {wordEthereumAddress} fogad {ethSymbol} adományokat, valamint {wordErc20} {wordTokens} tokeneket is (például {usdtSymbol} és {usdcSymbol}) {wordEvmCompatible} láncokon, mint a {ethNetworkName}, {arbNetworkName} és {baseNetworkName}.<br></br><br></br><bold>Megjegyzés:</bold> Ha azt fontolgatod, hogy {largeDonationAmount} összeget meghaladó adományt nyújtasz bármely fizetési móddal, kérjük, lépj kapcsolatba velünk itt: <donations-email></donations-email>"
       },
       "2": {
-        "question": "Mire lesz felhasználva az adományom?",
-        "answer": "Az adományodat a <foundation-link>{foundationName}</foundation-link> fogadja, egy Svájcban működő alapítvány, amely jelenleg a {appName} alkalmazás és projekt gondozója. Az adományodat a {appName} folyamatos fejlesztésének és fenntarthatóságának támogatására használjuk fel."
+        "question": "Miért 1 millió dollár az adományozási célotok? ",
+        "answer": "Ez nagyjából 12 hónapnyi működési tartaléknak felel meg, ami elegendő idő a {appNameProtocolV2} fejlesztésének befejezésére, a {appNamePro} elindítására és a {wordPro} támogatására egy ésszerű felfutási időszak alatt. Ez a munka azért élvez prioritást, mert az ökoszisztéma fenntarthatóságának eléréséhez szükséges. Hosszú távon a {appName} úgy lett megtervezve, hogy önfenntartóvá váljon a {wordPro} és más tokenhasznosságok révén, ehhez azonban még további időre és erőfeszítésre van szükség.<br></br><br></br>Bár ez egy magánszemély számára sok pénz, egy olyan léptékű és hatású alkalmazás esetében, mint a {appName}, ezek a költségek viszonylag szerények."
       },
       "3": {
-        "question": "Mi a {foundationName}?",
-        "answer": "A {foundationName} ({foundationAcronym}) egy Svájcban működő alapítvány, és a {appName} alkalmazás és projekt gondozója. Az alapítvány szerepéről a {appName} ökoszisztémáján belül <foundation-link>itt</foundation-link> tudhatsz meg többet."
+        "question": "Mire lesz felhasználva az adományom?",
+        "answer": "Az adományodat a <foundation-link>{foundationName}</foundation-link> fogadja, amely egy svájci székhelyű alapítvány, és jelenleg a {appName} alkalmazás és projekt gondozója. Az adományodat a {appName} folyamatos fejlesztésének és fenntarthatóságának támogatására használjuk fel."
       },
       "4": {
-        "question": "Van más módja is annak, hogy segítsem a {appName}-et?",
-        "answer": "Jelenleg az adományozás az elsődleges módja annak, hogy támogasd a {appName}-et. Ha azonban nem tudsz adományozni, több más módon is segíthetsz:<ol><li>Oszd meg ezt a felhívást olyan barátaiddal és családtagjaiddal, akik használják a {appName}-et, és érdeklődhetnek küldetésünk támogatása iránt.</li><li>Segíts lefordítani a {appName}-et más nyelvekre a <crowdin-link>{wordCrowdin}</crowdin-link> segítségével</li><li>Járulj hozzá a {appNamePossessive} <github-link>nyílt forráskódú kódbázisához</github-link></li></ol>"
+        "question": "Mi történik, ha nem éritek el az adományozási célt?",
+        "answer": "Jelenleg az alapítvány elegendő adományt kapott ahhoz, hogy a következő 3 hónapban a lehető legminimálisabb támogatást biztosítsa. Ez azt jelenti, hogy a {appName} továbbra is letölthető marad az alkalmazásboltokból, és a kritikus infrastruktúra, például a push értesítési és fájlszerverek, online maradnak.<br></br><br></br>Ha az adománygyűjtés sikeres lesz, az alapítvány képes lesz folytatni a {appName} aktív fejlesztését, beleértve a {appNamePro} és a {appNameProtocolV2} elindítását is.<br></br><br></br>Ha nem lesz sikeres, a finanszírozás hiánya azt jelenti, hogy az alapítvány semmilyen formában nem tudja támogatni a {appName}-ot, és be kell zárnia. Ennek eredményeként a {appName} eltűnik az alkalmazásboltokból, és a kritikus infrastruktúra, például a {appName} fájlszerver, a push értesítési szerver és a seed node-ok leállnak."
       },
       "tax-question": {
         "question": "Lehetséges adólevonásra jogosító adományt adni?",
         "answer": ""
+      },
+      "5": {
+        "question": "Mi az a {foundationName}?",
+        "answer": "A {foundationName} ({foundationAcronym}) egy svájci székhelyű alapítvány és a {appName} alkalmazás és projekt gondozója. Az alapítvány szerepéről a {appName} ökoszisztémájában <foundation-link>itt</foundation-link> tudhatsz meg többet."
+      },
+      "6": {
+        "question": "Mi történik a {appName}-pal, ha a {foundationName} leáll?",
+        "answer": "A {appName} decentralizált, így amíg minimális számú node működik a {appName} hálózatban, a {appName} technikailag továbbra is létezni fog, az alkalmazások pedig nagyon alapvető funkcionalitással tovább működnek. Ha azonban a {foundationAcronym}-ot és a kapcsolódó jogi entitásokat le kell állítani, akkor a {wordApple} és a {wordGoogle} eltávolítja a {appName}-ot a {wordApple} és a {platformStoreGoogleShort} áruházakból. Más központilag működtetett szolgáltatásokat is le kell majd állítani, például a {appName} fájlszerverét és a {appName} push értesítési szerverét, ami korlátozza a felhasználók lehetőségét a mellékletek küldésére és fogadására, valamint a bejövő üzenetek gyors értesítéseinek fogadására. A közösségi és önkéntes fejlesztés folytatódhat, de a {appName} egy összetett szoftver, és jelentős finanszírozás és befektetés nélkül a felhasználóknak saját maguknak kell megítélniük a {appName} biztonságát."
+      },
+      "7": {
+        "question": "Van más módja is annak, hogy segítsek a {appName}-nak?",
+        "answer": "Jelenleg az adományok jelentik a fő módját annak, hogy támogasd a {appName}-ot. Ha azonban nem tudsz adományozni, több más módon is segíthetsz:<ol><li>Oszd meg ezt a felhívást barátaiddal és családtagjaiddal, akik használják a {appName}-ot, és érdekelheti őket küldetésünk támogatása.</li><li>Segíts lefordítani a {appName}-ot más nyelvekre a <crowdin-link>{wordCrowdin}</crowdin-link> segítségével</li><li>Járulj hozzá a {appNamePossessive} <github-link>nyílt forráskódú kódbázisához</github-link></li></ol>"
       }
     },
-    "appealHeading": "A Personal Appeal From {donateAppealName}",
+    "appealHeading": "Utolsó felhívásunk:<br></br>A {appName} 90 napon belül leáll",
     "7": {
       "heading": "GYIK",
       "content": ""

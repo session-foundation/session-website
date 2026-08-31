@@ -201,7 +201,7 @@
       "heading": "通过加密货币捐赠",
       "content": "您可以将 {ethSymbol}、{usdcSymbol}、{usdtSymbol} 或 {btcSymbol} 发送到以下 {foundationName} 地址。"
     },
-    "heroAppeal": "八年前，{appName} 在“恢复您的隐私并让您掌控自己的言论和生活——本质上就是数字自由”这一使命下创立。然而，如果今天没有您的帮助，我们将无法再继续开发 {appName} 太久。如果 {appName} 或其使命曾对您有过价值，请花一点时间读完这份呼吁。<br></br><br></br>在一个言论自由不再是理所当然、隐私权遭人憎恶、真相被颠倒为谎言的时代，{appName} 是一项充满争议的技术。多年来，守护 {appName} 的组织面临了许多挑战，而如今，{appNamePossessive} 的生存本身正处于危险之中。<br></br><br></br>如今，对隐私的威胁比以往任何时候都更大，{appName} 必须进化以应对未来的挑战。{appNamePossessive} 当前的管护机构 {foundationName} 并没有足够的资金来继续推进 {appName}。像 PFS 和后量子密码学这样的重要工作仍在进行中——而我们剩下的时间已经不多了。<br></br><br></br>我们的使命，是找回人们曾经在网上交流时感受到的自由、创造力和隐私。我们已经为一个真正自由的即时通讯工具播下了种子，它将移除审查者、监视者以及那些监控您对话的中心化实体。到目前为止，这一理念已经奏效。每个月，超过 {appUserNumber} 人使用 {appName} 发送的是消息，而不是元数据。<br></br><br></br>{appName} 是一个由其社区构建并拥有的平台——而不是属于大型科技公司、私募资本或任何其他隐藏在幕后的主宰者。现在，{appName} 正向您发出请求。<br></br><br></br>该项目正走在实现自我可持续的道路上，但未来依然脆弱。如果每位 {appName} 用户只贡献 1 美元，这将极大推动 {appName} 实现可持续发展。如果您曾考虑过捐赠，现在就是行动的时候。<br></br><br></br>{donateSignerName}",
+    "heroAppeal": "我们曾希望这一天永远不会到来，但 {appName} 如今已进入最后 90 天的运营期。如果我们无法在此期间达成筹资目标，{foundationNameWithAcronym} 将被迫关闭。<br></br><br></br>截至目前，{foundationAcronym} 已收到约 {donationAmount} 的捐款。这笔资金足以在未来 90 天内维持 {appName} 关键基础设施的运行。我们对社区给予 {appName} 的支持深表感激，但遗憾的是，这还不足以留住全职开发人员。因此，所有受薪员工和开发人员的最后一个工作日将是 2026 年 4 月 9 日。在此日期之后，部分团队成员将主要以志愿者的身份继续协助维护 {appName}，直至 2026 年 7 月 8 日。<br></br><br></br>这是我们向 {appName} 社区发出的最后呼吁：没有你们的支持，{foundationAcronym} 将于 2026 年 7 月 8 日停止所有运营。<br></br><br></br>我们理解这可能会令人震惊。从外部来看，{appName} 似乎是一款成功且不断发展的应用——拥有数百万次下载、优异的应用商店评分，并持续增长，最近月活跃用户已突破 1.7 million。然而，{appNamePossessive} 的成功之所以成为可能，完全是因为那些日复一日不懈努力改进它的贡献者和团队。他们是技术高超的开发者和去中心化系统架构师，而和所有人一样，他们也需要支付账单、养家糊口。<br></br><br></br>{appName} 很幸运拥有一批对其使命深信不疑的贡献者，他们愿意接受低于其他地方可获得报酬的薪资。这有助于降低总体成本，但运营仍然需要达到一个最低资金水平。即使团队已经非常精简，{foundationAcronym} 估计这项成本每年仍约为 {costPerYear}。<br></br><br></br>这看起来也许是一大笔钱，但这反映了构建和维护安全、去中心化基础设施的现实。在大多数市场中，高级开发人员的年薪通常超过 {seniorDevSalaryPerYear}，除此之外，运营 {foundationAcronym} 还存在法律和运营管理方面的额外开支。与竞争对手相比，{appName} 的运营效率极高，以相当于某些大型消息公司仅两位高级管理人员总薪酬的预算来实现其使命。<br></br><br></br>如果您已经捐赠，我们向您致以诚挚感谢。每一笔捐助都能帮助 {appName} 更接近其筹资目标。<br></br><br></br>我们还想向您保证，如果 {foundationAcronym} 在接下来的 90 天内无法获得足以实现其目标的资金，任何无法根据 {foundationAcronymPossessive} 章程使用的捐款都将公开捐赠给 {effName}。<br></br><br></br>目前，志愿者们将尽可能长时间维持 {appName} 的运转。如果您认为自己能在时间耗尽前帮助 {appName}，请联系 <donate-email></donate-email>。",
     "6": {
       "heading": "通过 {wordSilentDonor} 捐赠",
       "content": "Individuals may make an anonymous tax deductible gift to the {foundationName} using <silent-donor-link>{wordSilentDonor}</silent-donor-link>.<br></br><br></br>{wordSilentDonor} is a third party which can facilitate donations to the {foundationAcronym} using card, bank transfer, and <crypto-icons>crypto</crypto-icons>"
@@ -214,23 +214,35 @@
         "answer": "目前有三种方式可以支持 {appName} 的持续开发：<br></br><br></br><bold>{donationProviderName}</bold><br></br><br></br>{donationProviderName} 是一个第三方平台，帮助非营利组织通过多种支付方式接受捐赠。您可以通过 {donationProviderName} <donate-link>在此</donate-link>向 {foundationName} 捐赠。<br></br><br></br>支持的支付方式包括：<payment-providers></payment-providers><bold>{wordSilentDonor}</bold><br></br><br></br><silent-donor-info></silent-donor-info><bold>直接加密货币</bold><br></br><br></br>您也可以通过向下方列出的钱包地址转账，直接向 {foundationName} 捐赠加密货币。<br></br><br></br>{wordBitcoinAddress}：{addressBitcoin}<br></br><br></br>{wordBitcoinCashAddress}：{addressBitcoinCash}<br></br><br></br>{wordEthereumAddress}：{addressEthereum}<br></br><br></br>此 {wordEthereumAddress} 接受 {ethSymbol} 捐赠，以及通过与 {wordEvmCompatible} 链兼容的 {wordErc20} {wordTokens}（例如 {usdtSymbol} 和 {usdcSymbol}）在 {ethNetworkName}、{arbNetworkName} 和 {baseNetworkName} 等链上进行的捐赠。<br></br><br></br><bold>注意：</bold>如果您考虑通过任何支付方式捐赠超过 {largeDonationAmount}，请通过 <donations-email></donations-email> 联系我们"
       },
       "2": {
+        "question": "为什么你们的捐赠目标是 1 million dollars? ",
+        "answer": "这相当于大约 12 个月的运营资金缓冲期，足以完成 {appNameProtocolV2} 的开发、推出 {appNamePro}，并为 {wordPro} 提供一段合理的爬坡支持期。这些工作之所以被优先推进，是因为它们对于实现生态系统的可持续性至关重要。从长期来看，{appName} 的设计目标是通过 {wordPro} 和其他代币用途实现自给自足，但要达到这一点，仍需要额外的时间和投入。<br></br><br></br>虽然对个人来说这是一大笔钱，但对于像 {appName} 这样具有当前规模和影响力的应用而言，这些成本相对并不高。"
+      },
+      "3": {
         "question": "我的捐赠将用于什么用途？",
         "answer": "您的捐赠将由 <foundation-link>{foundationName}</foundation-link> 接收。该基金会位于瑞士，是当前 {appName} 应用和项目的管护机构。您的捐赠将用于支持 {appName} 的持续开发与长期可持续性。"
       },
-      "3": {
-        "question": "什么是 {foundationName}？",
-        "answer": "{foundationName}（{foundationAcronym}）是一家位于瑞士的基金会，也是 {appName} 应用和项目的管护机构。您可以 <foundation-link>在此</foundation-link> 进一步了解该基金会在 {appName} 生态系统中的作用。"
-      },
       "4": {
-        "question": "还有其他方式可以帮助 {appName} 吗？",
-        "answer": "捐赠是您目前支持 {appName} 的主要方式。不过，如果您无法捐赠，仍然还有其他几种方式可以提供帮助：<ol><li>将这份呼吁分享给使用 {appName} 且可能有兴趣支持我们使命的朋友和家人。</li><li>通过 <crowdin-link>{wordCrowdin}</crowdin-link> 帮助将 {appName} 翻译成其他语言</li><li>为 {appNamePossessive} 的 <github-link>开源代码库</github-link> 做出贡献</li></ol>"
+        "question": "如果你们没有达到捐赠目标，会发生什么？",
+        "answer": "目前，基金会已收到足够的捐款，可在未来 3 个月内提供最基本的支持。这意味着 {appName} 仍将可在各大应用商店下载，而推送通知服务器和文件服务器等关键基础设施也将继续在线。<br></br><br></br>如果募资成功，基金会将能够继续积极开发 {appName}，包括推出 {appNamePro} 和 {appNameProtocolV2}。<br></br><br></br>如果募资失败，资金短缺将意味着基金会无法以任何形式继续支持 {appName}，并将不得不关闭。因此，{appName} 将从应用商店下架，而像 {appName} 文件服务器、推送通知服务器和种子节点这样的关键基础设施也将离线。"
       },
       "tax-question": {
         "question": "我可以进行可抵税的捐赠吗？",
         "answer": ""
+      },
+      "5": {
+        "question": "什么是 {foundationName}？",
+        "answer": "{foundationName}（{foundationAcronym}）是一家位于瑞士的基金会，也是 {appName} 应用和项目的管护机构。您可以 <foundation-link>在此</foundation-link> 进一步了解该基金会在 {appName} 生态系统中的作用。"
+      },
+      "6": {
+        "question": "如果 {foundationName} 关闭，{appName} 会怎么样？",
+        "answer": "{appName} 是去中心化的，因此只要 {appName} 网络中仍有最低数量的节点在运行，{appName} 从技术上讲就会继续存在，应用也将支持非常基础的功能并继续运行。然而，如果 {foundationAcronym} 及相关法律实体必须关闭，那么 {wordApple} 和 {wordGoogle} 将会从 {wordApple} 和 {platformStoreGoogleShort} 商店中移除 {appName}。其他由中心化方式运行的服务，如 {appName} 文件服务器和 {appName} 推送通知服务器，也将需要关闭，这会限制用户发送和接收附件，以及快速接收入站消息通知的能力。社区和志愿者开发或许会继续，但 {appName} 是一个复杂的软件系统，若没有大量资金和投入，用户将需要自行评估 {appName} 的安全性。"
+      },
+      "7": {
+        "question": "还有其他方式可以帮助 {appName} 吗？",
+        "answer": "捐赠是您目前支持 {appName} 的主要方式。不过，如果您无法捐赠，仍然还有其他几种方式可以提供帮助：<ol><li>将这份呼吁分享给使用 {appName} 且可能有兴趣支持我们使命的朋友和家人。</li><li>通过 <crowdin-link>{wordCrowdin}</crowdin-link> 帮助将 {appName} 翻译成其他语言</li><li>为 {appNamePossessive} 的 <github-link>开源代码库</github-link> 做出贡献</li></ol>"
       }
     },
-    "appealHeading": "来自 {donateAppealName} 的个人呼吁",
+    "appealHeading": "我们最后的呼吁：<br></br>{appName} 将在 90 天后停止服务",
     "7": {
       "heading": "常见问题",
       "content": ""

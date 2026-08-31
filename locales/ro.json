@@ -32,7 +32,7 @@
       "iconButtonClose": "Închide meniul de navigare",
       "downloadButton": "Link pentru descărcarea aplicației {appName}"
     },
-    "donate": "Donate"
+    "donate": "Donează"
   },
   "footer": {
     "about": "Despre",
@@ -71,7 +71,7 @@
   },
   "landing": {
     "hero": {
-      "heading": "Send <glitch>Messages,</glitch> Not Metadata.",
+      "heading": "Trimite <glitch>mesaje,</glitch> nu metadate.",
       "tag": "Găsește-ți libertatea cu {appName}",
       "glitchTextGlitch": "Criptate"
     },
@@ -83,7 +83,7 @@
       "title": "Beneficii",
       "1": {
         "heading": "Fără numere de telefon",
-        "content": "Keep your identity private with Account IDs. No phone number or email required to sign up."
+        "content": "Păstrează-ți identitatea privată cu ID-urile de cont. Nu este necesar niciun număr de telefon sau e-mail pentru a te înscrie."
       },
       "2": {
         "heading": "Fără breșe de date",
@@ -95,7 +95,7 @@
       },
       "4": {
         "heading": "Open source",
-        "content": "Privacy is more than a promise. Anyone can view, audit, and contribute to {appName}'s code."
+        "content": "Confidențialitatea înseamnă mai mult decât o promisiune. Oricine poate vedea, audita și contribui la codul {appName}."
       },
       "5": {
         "heading": "Putere prin oameni",
@@ -155,15 +155,15 @@
     },
     "faq": {
       "title": "Întrebări frecvente",
-      "description": "Find answers to some of the most frequently asked questions about {appName}."
+      "description": "Găsește răspunsuri la unele dintre cele mai frecvente întrebări despre {appName}."
     },
     "litepaper": {
       "description": "{appName} este un mesager descentralizat care permite comunicații complet private, sigure și anonime.",
-      "title": "{appName} Litepaper: Send Messages, Not Metadata"
+      "title": "Litepaper {appName}: Trimite mesaje, nu metadate"
     },
     "whitepaper": {
       "description": "{appName} este un mesager descentralizat care permite comunicații complet private, sigure și anonime.",
-      "title": "{appName} Whitepaper: End-To-End Encrypted Conversations with Minimal Metadata Leakage"
+      "title": "Whitepaper {appName}: Conversații criptate end-to-end cu scurgeri minime de metadate"
     },
     "community": {
       "title": "{appName} {featureCommunity}",
@@ -201,7 +201,7 @@
       "heading": "Donează prin criptomonede",
       "content": "Poți trimite {ethSymbol}, {usdcSymbol}, {usdtSymbol} sau {btcSymbol} la următoarele adrese ale {foundationName}."
     },
-    "heroAppeal": "Acum opt ani, {appName} a fost fondată cu misiunea de a-ți restabili confidențialitatea și de a-ți oferi control asupra exprimării și vieții tale — în esență, libertate digitală. Totuși, fără ajutorul tău astăzi, nu vom mai putea continua dezvoltarea {appName} pentru mult timp. Dacă ai găsit vreodată valoare în {appName} sau în misiunea sa, te rog acordă-mi un moment din timpul tău și citește acest apel.<br></br><br></br>{appName} este o tehnologie controversată într-o perioadă în care libertatea de exprimare nu este garantată, dreptul la viață privată este detestat, iar adevărul este o minciună. De-a lungul anilor, organizațiile care protejează {appName} s-au confruntat cu multe provocări, dar acum însăși supraviețuirea {appNamePossessive} este în pericol.<br></br><br></br>Amenințările la adresa confidențialității sunt acum mai mari ca niciodată, iar {appName} trebuie să evolueze pentru a face față provocărilor viitorului. Actualul administrator al {appNamePossessive}, {foundationName}, nu are finanțarea necesară pentru a duce {appName} mai departe. Lucrări importante, precum PFS și criptografia post-cuantică, sunt încă în desfășurare — iar timpul care ne-a rămas nu este suficient.<br></br><br></br>Misiunea noastră este să readucem libertatea, creativitatea și confidențialitatea pe care oamenii le simțeau odinioară atunci când comunicau online. Am plantat sămânța unui mesager cu adevărat liber, care elimină cenzorii, supraveghetorii și entitățile centralizate care îți monitorizează conversațiile. Până acum, această idee a funcționat. În fiecare lună, peste {appUserNumber} de persoane folosesc {appName} pentru a trimite mesaje, nu metadate.<br></br><br></br>{appName} este o platformă construită și deținută de comunitatea sa — nu de marile companii tech, fonduri de private equity sau alți stăpâni din umbră. Acum, {appName} apelează la tine.<br></br><br></br>Proiectul este pe drumul către autosustenabilitate, dar viitorul este fragil. Dacă fiecare utilizator {appName} ar contribui cu doar un dolar, acest lucru ar ajuta mult {appName} să ajungă la sustenabilitate. Dacă te-ai gândit vreodată să donezi, acum este momentul să acționezi.<br></br><br></br>{donateSignerName}",
+    "heroAppeal": "Am sperat că ziua aceasta nu va veni niciodată, dar {appName} a intrat acum în ultimele sale 90 de zile de funcționare. Dacă nu reușim să ne atingem obiectivul de finanțare în această perioadă, {foundationNameWithAcronym} va fi nevoită să își închidă activitatea.<br></br><br></br>Până în prezent, {foundationAcronym} a primit aproximativ {donationAmount} în donații. Aceasta este o sumă suficientă pentru a menține infrastructura critică a {appName} în următoarele 90 de zile. Suntem extrem de recunoscători pentru sprijinul pe care {appName} l-a primit din partea comunității, dar, din păcate, acesta nu este suficient pentru a păstra dezvoltatori angajați cu normă întreagă. Ca urmare, toți angajații și dezvoltatorii plătiți își vor avea ultima zi de lucru pe 9 aprilie 2026. După această dată, unii membri ai echipei vor continua în principal pe bază de voluntariat pentru a ajuta la menținerea {appName} până la 8 iulie 2026.<br></br><br></br>Acesta este apelul nostru final către comunitatea {appName}: fără sprijinul vostru, {foundationAcronym} își va înceta complet activitatea pe 8 iulie 2026.<br></br><br></br>Înțelegem că acest lucru poate fi un șoc. Din exterior, {appName} pare a fi o aplicație de succes și în creștere - cu milioane de descărcări, evaluări puternice în magazinele de aplicații și o creștere continuă, depășind recent 1,7 milioane de utilizatori activi lunar. Totuși, succesul {appNamePossessive} a fost posibil doar datorită contributorilor și echipelor dedicate care lucrează neobosit pentru a o îmbunătăți în fiecare zi. Aceștia sunt dezvoltatori cu înaltă calificare și arhitecți ai sistemelor descentralizate și, ca toată lumea, au facturi de plătit și familii de întreținut.<br></br><br></br>{appName} are norocul să aibă contributori care cred profund în misiunea sa și sunt dispuși să accepte o compensație mai mică decât ar putea câștiga în altă parte. Acest lucru ajută la reducerea costurilor totale, dar există totuși un nivel minim de finanțare necesar pentru funcționare. Chiar și cu o echipă restrânsă, {foundationAcronym} estimează acest cost la aproximativ {costPerYear} pe an.<br></br><br></br>Deși aceasta poate părea o sumă mare, ea reflectă realitatea construirii și menținerii unei infrastructuri sigure și descentralizate. Pe majoritatea piețelor, dezvoltatorii seniori au adesea salarii care depășesc {seniorDevSalaryPerYear} pe an, iar peste acestea se adaugă costurile juridice și operaționale necesare pentru funcționarea {foundationAcronym}. Comparativ cu competitorii săi, {appName} funcționează extrem de eficient, îndeplinindu-și misiunea cu un buget comparabil cu remunerația totală combinată a doar doi directori executivi seniori din unele companii de mesagerie mai mari.<br></br><br></br>Dacă ai donat deja, îți mulțumim sincer. Fiecare contribuție ajută {appName} să se apropie de obiectivul său de finanțare.<br></br><br></br>De asemenea, vrem să te asigurăm că, dacă {foundationAcronym} nu reușește să obțină în următoarele 90 de zile o finanțare suficientă pentru a-și atinge obiectivele, orice donații care nu pot fi utilizate în conformitate cu constituția {foundationAcronymPossessive} vor fi donate public către {effName}.<br></br><br></br>Deocamdată, voluntarii vor menține {appName} pe linia de plutire cât mai mult posibil. Dacă crezi că poți ajuta {appName} înainte să expire timpul, te rugăm să contactezi <donate-email></donate-email>.",
     "6": {
       "heading": "Donează prin {wordSilentDonor}",
       "content": "Individuals may make an anonymous tax deductible gift to the {foundationName} using <silent-donor-link>{wordSilentDonor}</silent-donor-link>.<br></br><br></br>{wordSilentDonor} is a third party which can facilitate donations to the {foundationAcronym} using card, bank transfer, and <crypto-icons>crypto</crypto-icons>"
@@ -214,23 +214,35 @@
         "answer": "În prezent, există trei moduri de a sprijini dezvoltarea continuă a {appName}:<br></br><br></br><bold>{donationProviderName}</bold><br></br><br></br>{donationProviderName} este o platformă terță care ajută organizațiile non-profit să accepte donații printr-o varietate de metode de plată. Poți dona către {foundationName} prin {donationProviderName} <donate-link>aici</donate-link>.<br></br><br></br>Metodele de plată acceptate includ:<payment-providers></payment-providers><bold>{wordSilentDonor}</bold><br></br><br></br><silent-donor-info></silent-donor-info><bold>Criptomonedă directă</bold><br></br><br></br>De asemenea, poți dona criptomonede direct către {foundationName}, trimițând fonduri la adresele de portofel enumerate mai jos.<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordBitcoinCashAddress}: {addressBitcoinCash}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>Această {wordEthereumAddress} acceptă donații în {ethSymbol}, precum și {wordTokens} {wordErc20} (cum ar fi {usdtSymbol} și {usdcSymbol}) pe lanțuri {wordEvmCompatible}, precum {ethNetworkName}, {arbNetworkName} și {baseNetworkName}.<br></br><br></br><bold>Notă:</bold> Dacă iei în considerare să faci o donație mai mare de {largeDonationAmount} folosind orice metodă de plată, te rugăm să ne contactezi la <donations-email></donations-email>"
       },
       "2": {
-        "question": "Pentru ce va fi folosită donația mea?",
-        "answer": "Donația ta va fi primită de <foundation-link>{foundationName}</foundation-link>, o fundație cu sediul în Elveția care este actualul administrator al aplicației și proiectului {appName}. Donația ta va fi folosită pentru a sprijini dezvoltarea continuă și sustenabilitatea {appName}."
+        "question": "De ce este obiectivul vostru de donații de 1 milion de dolari ",
+        "answer": "Acest lucru este echivalent cu aproximativ 12 luni de resurse financiare, suficient timp pentru a finaliza lucrul la {appNameProtocolV2}, a lansa {appNamePro} și a susține {wordPro} pentru o perioadă rezonabilă de lansare graduală. Această activitate este prioritizată deoarece este necesară pentru a obține sustenabilitatea ecosistemului. Pe termen lung, {appName} este conceput să devină autosustenabil prin {wordPro} și alte utilități ale tokenului, însă este nevoie de timp și efort suplimentar pentru a ajunge în acel punct.<br></br><br></br>Deși pentru o persoană această sumă este foarte mare, pentru o aplicație de amploarea și impactul {appName}, aceste costuri sunt relativ modeste."
       },
       "3": {
-        "question": "Ce este {foundationName}?",
-        "answer": "{foundationName} ({foundationAcronym}) este o fundație cu sediul în Elveția și administratorul aplicației și proiectului {appName}. Poți afla mai multe despre rolul fundației în ecosistemul {appName} <foundation-link>aici</foundation-link>."
+        "question": "Pentru ce va fi folosită donația mea?",
+        "answer": "Donația ta va fi primită de <foundation-link>{foundationName}</foundation-link>, o fundație cu sediul în Elveția, care este în prezent administratorul aplicației și proiectului {appName}. Donația ta va fi folosită pentru a susține dezvoltarea continuă și sustenabilitatea {appName}."
       },
       "4": {
-        "question": "Există și alte moduri în care pot ajuta {appName}?",
-        "answer": "Donațiile sunt în prezent principalul mod în care poți ajuta {appName}. Totuși, dacă nu poți dona, există mai multe alte moduri în care poți ajuta:<ol><li>Distribuie acest apel prietenilor și familiei care folosesc {appName} și care ar putea fi interesați să ne sprijine misiunea.</li><li>Ajută la traducerea {appName} în alte limbi prin <crowdin-link>{wordCrowdin}</crowdin-link></li><li>Contribuie la <github-link>baza de cod open-source</github-link> a {appNamePossessive}</li></ol>"
+        "question": "Ce se întâmplă dacă obiectivul vostru de donații nu este atins?",
+        "answer": "În prezent, fundația a primit suficiente donații pentru a asigura suportul minim absolut pentru următoarele 3 luni. Acest lucru înseamnă că {appName} va rămâne disponibil pentru descărcare în magazinele de aplicații, iar infrastructura critică, precum serverele de notificări push și de fișiere, va rămâne online.<br></br><br></br>Dacă strângerea de fonduri are succes, fundația ar putea continua dezvoltarea activă a {appName}, inclusiv lansarea {appNamePro} și {appNameProtocolV2}.<br></br><br></br>Dacă nu are succes, lipsa finanțării va însemna că fundația nu va putea susține {appName} în nicio capacitate și va trebui să își închidă activitatea. Ca rezultat, {appName} va fi eliminat din magazinele de aplicații, iar infrastructura critică, precum serverul de fișiere {appName}, serverul de notificări push și nodurile seed, va deveni indisponibilă."
       },
       "tax-question": {
         "question": "Pot face o donație deductibilă fiscal?",
         "answer": ""
+      },
+      "5": {
+        "question": "Ce este {foundationName}?",
+        "answer": "{foundationName} ({foundationAcronym}) este o fundație cu sediul în Elveția și administratorul aplicației și proiectului {appName}. Poți afla mai multe despre rolul fundației în ecosistemul {appName} <foundation-link>aici</foundation-link>."
+      },
+      "6": {
+        "question": "Ce se întâmplă cu {appName} dacă {foundationName} își închide activitatea?",
+        "answer": "{appName} este descentralizat, astfel încât, atâta timp cât un număr minim de noduri funcționează în rețeaua {appName}, {appName} va continua să existe din punct de vedere tehnic, iar aplicațiile vor oferi funcționalități foarte de bază și vor continua să funcționeze. Totuși, dacă {foundationAcronym} și entitățile juridice asociate trebuie să își închidă activitatea, atunci {wordApple} și {wordGoogle} vor elimina {appName} din magazinele {wordApple} și {platformStoreGoogleShort}. Alte servicii operate centralizat, precum serverul de fișiere {appName} și serverul de notificări push {appName}, vor trebui de asemenea închise, limitând capacitatea utilizatorilor de a trimite și primi atașamente și de a primi rapid notificări pentru mesajele primite. Dezvoltarea din partea comunității și a voluntarilor poate continua, dar {appName} este un software complex și, fără finanțare și investiții semnificative, utilizatorii vor trebui să își facă propria evaluare cu privire la securitatea {appName}."
+      },
+      "7": {
+        "question": "Există și alte moduri în care pot ajuta {appName}?",
+        "answer": "Donațiile sunt în prezent principalul mod în care poți ajuta la susținerea {appName}. Totuși, dacă nu poți dona, există câteva alte moduri în care poți ajuta:<ol><li>Distribuie acest apel prietenilor și familiei care folosesc {appName} și ar putea fi interesați să susțină misiunea noastră.</li><li>Ajută la traducerea {appName} în alte limbi prin <crowdin-link>{wordCrowdin}</crowdin-link></li><li>Contribuie la <github-link>baza de cod open-source</github-link> a {appNamePossessive}</li></ol>"
       }
     },
-    "appealHeading": "A Personal Appeal From {donateAppealName}",
+    "appealHeading": "Apelul nostru final:<br></br>{appName} se închide în 90 de zile",
     "7": {
       "heading": "Întrebări frecvente",
       "content": ""

@@ -32,7 +32,7 @@
       "iconButtonClose": "Fechar menu de navegação",
       "downloadButton": "Ligação para a transferência de {appName}"
     },
-    "donate": "Donate"
+    "donate": "Doar"
   },
   "footer": {
     "about": "Sobre",
@@ -71,7 +71,7 @@
   },
   "landing": {
     "hero": {
-      "heading": "Send <glitch>Messages,</glitch> Not Metadata.",
+      "heading": "Envie <glitch>mensagens,</glitch> não metadados.",
       "tag": "Encontre a sua liberdade com o {appName}",
       "glitchTextGlitch": "Encriptadas"
     },
@@ -83,7 +83,7 @@
       "title": "Benefícios",
       "1": {
         "heading": "Sem Números de Telefone",
-        "content": "Keep your identity private with Account IDs. No phone number or email required to sign up."
+        "content": "Mantenha sua identidade privada com IDs de conta. Não é necessário número de telefone nem e-mail para se cadastrar."
       },
       "2": {
         "heading": "Sem Vazamentos de Dados",
@@ -95,7 +95,7 @@
       },
       "4": {
         "heading": "Código Aberto",
-        "content": "Privacy is more than a promise. Anyone can view, audit, and contribute to {appName}'s code."
+        "content": "Privacidade é mais do que uma promessa. Qualquer pessoa pode ver, auditar e contribuir com o código do {appName}."
       },
       "5": {
         "heading": "Pessoas no Controle",
@@ -155,15 +155,15 @@
     },
     "faq": {
       "title": "FAQ (Perguntas Mais Frequentes)",
-      "description": "Find answers to some of the most frequently asked questions about {appName}."
+      "description": "Encontre respostas para algumas das perguntas mais frequentes sobre o {appName}."
     },
     "litepaper": {
       "description": "O {appName} é um mensageiro descentralizado que oferece comunicações completamente privadas, seguras e anónimas.",
-      "title": "{appName} Litepaper: Send Messages, Not Metadata"
+      "title": "Litepaper do {appName}: Envie mensagens, não metadados"
     },
     "whitepaper": {
       "description": "O {appName} é um mensageiro descentralizado que oferece comunicações completamente privadas, seguras e anónimas.",
-      "title": "{appName} Whitepaper: End-To-End Encrypted Conversations with Minimal Metadata Leakage"
+      "title": "Whitepaper do {appName}: Conversas criptografadas de ponta a ponta com vazamento mínimo de metadados"
     },
     "community": {
       "title": "{appName} {featureCommunity}",
@@ -201,7 +201,7 @@
       "heading": "Doe com criptomoedas",
       "content": "Pode enviar {ethSymbol}, {usdcSymbol}, {usdtSymbol} ou {btcSymbol} para os seguintes endereços da {foundationName}."
     },
-    "heroAppeal": "Há oito anos, {appName} foi fundada com a missão de restaurar a sua privacidade e dar-lhe controlo sobre a sua expressão e a sua vida — em essência, liberdade digital. No entanto, sem a sua ajuda hoje, não conseguiremos continuar a desenvolver {appName} por muito mais tempo. Se alguma vez encontrou valor em {appName} ou na sua missão, peço-lhe um momento do seu tempo para ler este apelo.<br></br><br></br>{appName} é uma tecnologia controversa numa época em que a liberdade de expressão não é garantida, o direito à privacidade é odiado e a verdade é uma mentira. Ao longo dos anos, as organizações que protegem {appName} enfrentaram muitos desafios, mas agora a própria sobrevivência de {appNamePossessive} está em risco.<br></br><br></br>As ameaças contra a privacidade são agora maiores do que nunca, e {appName} tem de evoluir para enfrentar os desafios do futuro. A atual entidade responsável por {appNamePossessive}, a {foundationName}, não tem o financiamento necessário para levar {appName} mais longe. Trabalho importante, como PFS e criptografia pós-quântica, continua em curso — e não nos resta tempo suficiente.<br></br><br></br>A nossa missão é trazer de volta a liberdade, a criatividade e a privacidade que as pessoas outrora sentiam ao comunicar online. Plantámos a semente de um mensageiro verdadeiramente livre que elimina censores, vigilantes e entidades centralizadas que monitorizam as suas conversas. Até agora, essa ideia tem funcionado. Todos os meses, mais de {appUserNumber} pessoas usam {appName} para enviar mensagens, não metadados.<br></br><br></br>{appName} é uma plataforma construída e detida pela sua comunidade — não pelas grandes empresas tecnológicas, pelo capital privado ou por quaisquer outros senhores obscuros. Agora, {appName} recorre a si.<br></br><br></br>O projeto está num caminho para a autossustentabilidade, mas o futuro é frágil. Se cada utilizador de {appName} contribuísse com apenas um dólar, isso ajudaria muito {appName} a alcançar a sustentabilidade. Se alguma vez pensou em doar, este é o momento de agir.<br></br><br></br>{donateSignerName}",
+    "heroAppeal": "Esperávamos que este dia nunca chegasse, mas o {appName} entrou agora em seus últimos 90 dias de operação. Se não conseguirmos atingir nossa meta de financiamento dentro desse período, a {foundationNameWithAcronym} será forçada a encerrar suas atividades.<br></br><br></br>Até o momento, a {foundationAcronym} recebeu aproximadamente {donationAmount} em doações. Isso é suficiente para manter a infraestrutura crítica do {appName} pelos próximos 90 dias. Somos extremamente gratos pelo apoio que o {appName} recebeu da comunidade, mas infelizmente isso não é suficiente para manter desenvolvedores em tempo integral. Como resultado, todos os funcionários e desenvolvedores remunerados terão seu último dia de trabalho em 9 de abril de 2026. Após essa data, alguns membros da equipe continuarão principalmente de forma voluntária para ajudar a manter o {appName} até 8 de julho de 2026.<br></br><br></br>Este é nosso apelo final à comunidade do {appName}: sem o seu apoio, a {foundationAcronym} encerrará todas as operações em 8 de julho de 2026.<br></br><br></br>Entendemos que isso pode ser um choque. De fora, o {appName} parece ser um aplicativo bem-sucedido e em crescimento — com milhões de downloads, fortes avaliações nas lojas de aplicativos e crescimento contínuo, tendo recentemente ultrapassado 1,7 milhão de usuários ativos mensais. No entanto, o sucesso de {appNamePossessive} só foi possível graças aos colaboradores e equipes dedicados que trabalham incansavelmente para melhorá-lo todos os dias. São desenvolvedores altamente qualificados e arquitetos de sistemas descentralizados e, como qualquer pessoa, têm contas para pagar e famílias para sustentar.<br></br><br></br>O {appName} tem a sorte de contar com colaboradores que acreditam profundamente em sua missão e estão dispostos a aceitar uma remuneração menor do que poderiam ganhar em outros lugares. Isso ajuda a reduzir os custos gerais, mas ainda há um nível mínimo de financiamento necessário para operar. Mesmo com uma equipe enxuta, a {foundationAcronym} estima esse custo em aproximadamente {costPerYear} por ano.<br></br><br></br>Embora isso possa parecer um valor alto, reflete a realidade de construir e manter uma infraestrutura segura e descentralizada. Na maioria dos mercados, desenvolvedores sêniores frequentemente recebem salários superiores a {seniorDevSalaryPerYear} por ano e, além disso, há custos jurídicos e operacionais para manter a {foundationAcronym}. Em comparação com seus concorrentes, o {appName} opera de forma extremamente eficiente, cumprindo sua missão com um orçamento comparável à remuneração combinada de apenas dois executivos seniores em algumas empresas maiores de mensagens.<br></br><br></br>Se você já doou, agradecemos sinceramente. Toda contribuição ajuda a aproximar o {appName} de sua meta de financiamento.<br></br><br></br>Também queremos assegurar que, se a {foundationAcronym} não conseguir garantir financiamento suficiente para atingir seus objetivos nos próximos 90 dias, quaisquer doações que não possam ser usadas de acordo com a constituição da {foundationAcronymPossessive} serão doadas publicamente à {effName}.<br></br><br></br>Por enquanto, voluntários manterão o {appName} funcionando pelo maior tempo possível. Se você acredita que pode ajudar o {appName} antes que o tempo acabe, entre em contato por <donate-email></donate-email>.",
     "6": {
       "heading": "Doe via {wordSilentDonor}",
       "content": "Individuals may make an anonymous tax deductible gift to the {foundationName} using <silent-donor-link>{wordSilentDonor}</silent-donor-link>.<br></br><br></br>{wordSilentDonor} is a third party which can facilitate donations to the {foundationAcronym} using card, bank transfer, and <crypto-icons>crypto</crypto-icons>"
@@ -214,23 +214,35 @@
         "answer": "Atualmente, há três formas de apoiar o desenvolvimento contínuo de {appName}:<br></br><br></br><bold>{donationProviderName}</bold><br></br><br></br>{donationProviderName} é uma plataforma de terceiros que ajuda organizações sem fins lucrativos a aceitar doações através de vários métodos de pagamento. Pode fazer uma doação à {foundationName} através de {donationProviderName} <donate-link>aqui</donate-link>.<br></br><br></br>Os métodos de pagamento suportados incluem:<payment-providers></payment-providers><bold>{wordSilentDonor}</bold><br></br><br></br><silent-donor-info></silent-donor-info><bold>Criptomoeda direta</bold><br></br><br></br>Também pode doar criptomoedas diretamente à {foundationName}, enviando fundos para os endereços de carteira indicados abaixo.<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordBitcoinCashAddress}: {addressBitcoinCash}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>Este {wordEthereumAddress} aceita doações em {ethSymbol}, bem como {wordTokens} {wordErc20} em cadeias {wordEvmCompatible}, como {ethNetworkName}, {arbNetworkName} e {baseNetworkName} (por exemplo, {usdtSymbol} e {usdcSymbol}).<br></br><br></br><bold>Nota:</bold> Se estiver a considerar fazer uma doação superior a {largeDonationAmount} usando qualquer método de pagamento, contacte-nos em <donations-email></donations-email>"
       },
       "2": {
-        "question": "Para que será usada a minha doação?",
-        "answer": "A sua doação será recebida pela <foundation-link>{foundationName}</foundation-link>, uma fundação sediada na Suíça que é a atual administradora da aplicação e do projeto {appName}. A sua doação será usada para apoiar o desenvolvimento contínuo e a sustentabilidade de {appName}."
+        "question": "Por que sua meta de doações é de 1 milhão de dólares? ",
+        "answer": "Isso equivale a cerca de 12 meses de fôlego financeiro, tempo suficiente para concluir o trabalho no {appNameProtocolV2}, lançar o {appNamePro} e dar suporte ao {wordPro} por um período razoável de adoção inicial. Esse trabalho está sendo priorizado porque é necessário para alcançar a sustentabilidade do ecossistema. No longo prazo, o {appName} foi projetado para se tornar autossustentável por meio do {wordPro} e de outras utilidades do token; no entanto, é necessário tempo e esforço adicionais para chegar a esse ponto.<br></br><br></br>Embora isso seja muito dinheiro para uma pessoa, para um aplicativo da escala e do impacto do {appName}, esses custos são relativamente modestos."
       },
       "3": {
-        "question": "O que é a {foundationName}?",
-        "answer": "A {foundationName} ({foundationAcronym}) é uma fundação sediada na Suíça e a administradora da aplicação e do projeto {appName}. Pode saber mais sobre o papel da fundação no ecossistema de {appName} <foundation-link>aqui</foundation-link>."
+        "question": "Para que minha doação será usada?",
+        "answer": "Sua doação será recebida pela <foundation-link>{foundationName}</foundation-link>, uma fundação sediada na Suíça que é a atual guardiã do aplicativo e do projeto {appName}. Sua doação será usada para apoiar o desenvolvimento contínuo e a sustentabilidade do {appName}."
       },
       "4": {
-        "question": "Existem outras formas de eu ajudar {appName}?",
-        "answer": "Atualmente, as doações são a principal forma de ajudar a apoiar {appName}. No entanto, se não puder doar, existem várias outras formas de ajudar:<ol><li>Partilhe este apelo com amigos e familiares que usam {appName} e possam ter interesse em apoiar a nossa missão.</li><li>Ajude a traduzir {appName} para outros idiomas através de <crowdin-link>{wordCrowdin}</crowdin-link></li><li>Contribua para a <github-link>base de código open source</github-link> de {appNamePossessive}</li></ol>"
+        "question": "O que acontece se a meta de doações não for atingida?",
+        "answer": "Atualmente, a fundação recebeu doações suficientes para fornecer suporte mínimo pelos próximos 3 meses. Isso significa que o {appName} continuará disponível para download nas lojas de aplicativos e que a infraestrutura crítica, como o servidor de notificações push e os servidores de arquivos, permanecerá online.<br></br><br></br>Se a arrecadação for bem-sucedida, a fundação poderá continuar o desenvolvimento ativo do {appName}, incluindo o lançamento do {appNamePro} e do {appNameProtocolV2}.<br></br><br></br>Se não for bem-sucedida, a falta de financiamento significará que a fundação não poderá apoiar o {appName} de forma alguma e precisará encerrar suas atividades. Como resultado, o {appName} será removido das lojas de aplicativos, e a infraestrutura crítica, como o servidor de arquivos do {appName}, o servidor de notificações push e os nós-semente, ficará offline."
       },
       "tax-question": {
         "question": "Posso fazer uma doação dedutível nos impostos?",
         "answer": ""
+      },
+      "5": {
+        "question": "O que é a {foundationName}?",
+        "answer": "A {foundationName} ({foundationAcronym}) é uma fundação sediada na Suíça e a guardiã do aplicativo e do projeto {appName}. Você pode saber mais sobre o papel da fundação dentro do ecossistema do {appName} <foundation-link>aqui</foundation-link>."
+      },
+      "6": {
+        "question": "O que acontece com o {appName} se a {foundationName} encerrar suas atividades?",
+        "answer": "O {appName} é descentralizado, portanto, desde que um número mínimo de nós opere na rede do {appName}, o {appName} tecnicamente continuará existindo, com os aplicativos oferecendo funcionalidades bem básicas e continuando a operar. No entanto, se a {foundationAcronym} e as entidades legais associadas precisarem encerrar suas atividades, a {wordApple} e o {wordGoogle} removerão o {appName} das lojas da {wordApple} e do {platformStoreGoogleShort}. Outros serviços operados centralmente, como o servidor de arquivos do {appName} e o servidor de notificações push do {appName}, também precisarão ser desligados, limitando a capacidade dos usuários de enviar e receber anexos e de receber notificações rápidas de mensagens recebidas. O desenvolvimento pela comunidade e por voluntários pode continuar, mas o {appName} é um software complexo e, sem financiamento e investimento significativos, os usuários precisarão fazer sua própria avaliação sobre a segurança do {appName}."
+      },
+      "7": {
+        "question": "Há outras formas de eu ajudar o {appName}?",
+        "answer": "Atualmente, as doações são a principal forma de ajudar a apoiar o {appName}. No entanto, se você não puder doar, há várias outras maneiras de ajudar:<ol><li>Compartilhe este apelo com amigos e familiares que usam o {appName} e possam ter interesse em apoiar nossa missão.</li><li>Ajude a traduzir o {appName} para outros idiomas via <crowdin-link>{wordCrowdin}</crowdin-link></li><li>Contribua para a <github-link>base de código open source</github-link> do {appNamePossessive}</li></ol>"
       }
     },
-    "appealHeading": "A Personal Appeal From {donateAppealName}",
+    "appealHeading": "Nosso apelo final:<br></br>o {appName} encerrará suas atividades em 90 dias",
     "7": {
       "heading": "FAQ (Perguntas Mais Frequentes)",
       "content": ""

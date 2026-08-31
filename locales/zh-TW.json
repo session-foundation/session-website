@@ -32,7 +32,7 @@
       "iconButtonClose": "關閉導覽選單",
       "downloadButton": "前往 {appName} 下載的連結"
     },
-    "donate": "Donate"
+    "donate": "捐款"
   },
   "footer": {
     "about": "關於",
@@ -71,7 +71,7 @@
   },
   "landing": {
     "hero": {
-      "heading": "Send <glitch>Messages,</glitch> Not Metadata.",
+      "heading": "傳送<glitch>訊息，</glitch>不是中繼資料。",
       "tag": "使用 {appName} 找回你的自由",
       "glitchTextGlitch": "已加密"
     },
@@ -95,7 +95,7 @@
       },
       "4": {
         "heading": "開放原始碼",
-        "content": "Privacy is more than a promise. Anyone can view, audit, and contribute to {appName}'s code."
+        "content": "隱私不只是一句承諾。任何人都可以檢視、稽核並為 {appName} 的程式碼做出貢獻。"
       },
       "5": {
         "heading": "由人驅動",
@@ -155,15 +155,15 @@
     },
     "faq": {
       "title": "常見問題",
-      "description": "Find answers to some of the most frequently asked questions about {appName}."
+      "description": "查找關於 {appName} 的一些最常見問題的答案。"
     },
     "litepaper": {
       "description": "{appName} 是一款去中心化的通訊工具，支援完全私密、安全且匿名的通訊。",
-      "title": "{appName} Litepaper: Send Messages, Not Metadata"
+      "title": "{appName} Litepaper：傳送訊息，而非中繼資料"
     },
     "whitepaper": {
       "description": "{appName} 是一款去中心化的通訊工具，支援完全私密、安全且匿名的通訊。",
-      "title": "{appName} Whitepaper: End-To-End Encrypted Conversations with Minimal Metadata Leakage"
+      "title": "{appName} Whitepaper：端對端加密對話，將中繼資料外洩降至最低"
     },
     "community": {
       "title": "{appName} {featureCommunity}",
@@ -201,7 +201,7 @@
       "heading": "透過加密貨幣捐款",
       "content": "您可以將 {ethSymbol}、{usdcSymbol}、{usdtSymbol} 或 {btcSymbol} 傳送到以下 {foundationName} 地址。"
     },
-    "heroAppeal": "八年前，{appName} 創立的使命，是恢復您的隱私，並讓您重新掌控自己的言論與生活——也就是數位自由。然而，如果今天沒有您的幫助，我們將無法再繼續開發 {appName} 太久。若您曾經認同 {appName} 或其使命的價值，懇請您撥冗片刻，讀完這份呼籲。<br></br><br></br>在這個言論自由不再理所當然、隱私權遭人厭棄、真相被說成謊言的時代，{appName} 是一項充滿爭議的技術。多年來，守護 {appName} 的組織面臨了許多挑戰，但如今，{appNamePossessive} 的生存本身已岌岌可危。<br></br><br></br>如今，對隱私的威脅比以往任何時候都更嚴重，而 {appName} 必須持續演進，才能面對未來的挑戰。{appNamePossessive} 目前的守護者——{foundationName}——並沒有足夠的資金，讓 {appName} 繼續走下去。像 PFS 與後量子密碼學這類重要工作仍在進行中——而我們剩下的時間已經不多了。<br></br><br></br>我們的使命，是找回人們過去在線上交流時所感受到的自由、創造力與隱私。我們已為一個真正自由的通訊軟體播下種子；它將移除審查者、監控者，以及那些監視您對話的中心化實體。到目前為止，這個理念已經奏效。每個月，都有超過 {appUserNumber} 人使用 {appName} 傳送訊息，而非中繼資料。<br></br><br></br>{appName} 是一個由其社群打造並擁有的平台——而不是由大型科技公司、私募股權，或任何其他藏身幕後的主宰者所掌控。現在，{appName} 正向您尋求支持。<br></br><br></br>這個專案正走在自給自足的道路上，但未來依然脆弱。如果每位 {appName} 使用者只貢獻一美元，將能大幅幫助 {appName} 邁向永續。如果您曾考慮捐款，現在就是行動的時候。<br></br><br></br>{donateSignerName}",
+    "heroAppeal": "我們原本希望這一天永遠不會到來，但 {appName} 如今已進入最後 90 天的營運期。若我們無法在此期間內達成募款目標，{foundationNameWithAcronym} 將被迫關閉。<br></br><br></br>截至目前為止，{foundationAcronym} 已收到約 {donationAmount} 的捐款。這筆金額足以在接下來 90 天內維持 {appName} 關鍵基礎設施的運作。我們對社群一直以來給予 {appName} 的支持深表感激，但遺憾的是，這仍不足以留住全職開發人員。因此，所有受薪員工與開發人員的最後工作日將為 2026 年 4 月 9 日。此日期之後，部分團隊成員將主要以志工身分繼續協助維護 {appName}，直到 2026 年 7 月 8 日。<br></br><br></br>這是我們向 {appName} 社群發出的最後呼籲：沒有你們的支持，{foundationAcronym} 將於 2026 年 7 月 8 日全面停止運作。<br></br><br></br>我們理解這個消息可能令人震驚。從外部看來，{appName} 似乎是一款成功且持續成長的應用程式——擁有數百萬次下載、穩健的應用商店評分，以及持續成長的用戶數，最近每月活躍用戶更已超過 1.7 million。然而，{appNamePossessive} 的成功之所以可能，全仰賴那些每天不懈努力改進它的貢獻者與團隊。這些人都是技術高超的開發者與去中心化系統架構師，而他們和所有人一樣，也有帳單要付、家庭要養。<br></br><br></br>{appName} 很幸運擁有一群對其使命深信不疑的貢獻者，並願意接受比其他地方更低的報酬。這有助於降低整體成本，但要維持營運，仍然需要一定程度的最低資金。即使團隊精簡，{foundationAcronym} 仍估計每年成本約為 {costPerYear}。<br></br><br></br>這個數字看起來或許很高，但它反映的是建置與維護安全、去中心化基礎設施的現實成本。在大多數市場中，資深開發者的年薪往往超過 {seniorDevSalaryPerYear}，此外還有營運 {foundationAcronym} 所需承擔的法律與營運管理開銷。與競爭對手相比，{appName} 的營運效率其實非常高；它完成使命所需的預算，大致只相當於某些大型通訊公司兩位高階主管合計的薪酬。<br></br><br></br>如果你已經捐款，我們在此致上最誠摯的感謝。每一筆貢獻，都能幫助 {appName} 更接近募款目標。<br></br><br></br>我們也想向你保證：若 {foundationAcronym} 在接下來 90 天內仍無法取得足以達成目標的資金，任何無法依照 {foundationAcronymPossessive} 章程使用的捐款，都將公開捐贈給 {effName}。<br></br><br></br>目前，志工們仍會盡可能讓 {appName} 持續運作。如果你相信自己能在時間耗盡前幫助 {appName}，請透過 <donate-email></donate-email> 與我們聯繫。",
     "6": {
       "heading": "透過 {wordSilentDonor} 捐款",
       "content": "Individuals may make an anonymous tax deductible gift to the {foundationName} using <silent-donor-link>{wordSilentDonor}</silent-donor-link>.<br></br><br></br>{wordSilentDonor} is a third party which can facilitate donations to the {foundationAcronym} using card, bank transfer, and <crypto-icons>crypto</crypto-icons>"
@@ -214,23 +214,35 @@
         "answer": "目前有三種方式可以支持 {appName} 的持續開發：<br></br><br></br><bold>{donationProviderName}</bold><br></br><br></br>{donationProviderName} 是一個協助非營利組織透過多種付款方式接受捐款的第三方平台。您可以透過 {donationProviderName} <donate-link>在此</donate-link> 向 {foundationName} 捐款。<br></br><br></br>支援的付款方式包括：<payment-providers></payment-providers><bold>{wordSilentDonor}</bold><br></br><br></br><silent-donor-info></silent-donor-info><bold>直接加密貨幣</bold><br></br><br></br>您也可以將資金發送到下列錢包地址，直接向 {foundationName} 捐贈加密貨幣。<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordBitcoinCashAddress}: {addressBitcoinCash}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>此 {wordEthereumAddress} 接受 {ethSymbol} 捐款，也接受跨 {wordEvmCompatible} 鏈（例如 {ethNetworkName}、{arbNetworkName} 和 {baseNetworkName}）的 {wordErc20} {wordTokens}（例如 {usdtSymbol} 和 {usdcSymbol}）。<br></br><br></br><bold>注意：</bold>如果您考慮透過任何付款方式捐贈超過 {largeDonationAmount}，請透過 <donations-email></donations-email> 與我們聯絡"
       },
       "2": {
-        "question": "我的捐款將用於什麼用途？",
-        "answer": "您的捐款將由 <foundation-link>{foundationName}</foundation-link> 接收。該基金會位於瑞士，是目前 {appName} 應用程式和專案的管護機構。您的捐款將用於支持 {appName} 的持續開發與長期永續性。"
+        "question": "你們的捐款目標為什麼是 1 million dollars? ",
+        "answer": "這大約相當於 12 個月的資金緩衝期，足以完成 {appNameProtocolV2} 的相關工作、推出 {appNamePro}，並在合理的導入成長期間內支援 {wordPro}。之所以優先推進這些工作，是因為這對實現生態系的永續發展至關重要。從長遠來看，{appName} 的設計目標是透過 {wordPro} 與其他代幣用途達成自給自足；然而，要走到那一步，仍需要更多時間與投入。<br></br><br></br>雖然對個人而言這是一大筆錢，但對於像 {appName} 這種具備如此規模與影響力的應用程式來說，這些成本其實相對節制。"
       },
       "3": {
-        "question": "什麼是 {foundationName}？",
-        "answer": "{foundationName}（{foundationAcronym}）是一家位於瑞士的基金會，也是 {appName} 應用程式和專案的管護機構。您可以 <foundation-link>在此</foundation-link> 進一步了解該基金會在 {appName} 生態系中的角色。"
+        "question": "我的捐款將會用在哪裡？",
+        "answer": "你的捐款將由 <foundation-link>{foundationName}</foundation-link> 接收。這是一個設立於瑞士的基金會，也是目前 {appName} 應用程式與專案的管理機構。你的捐款將用於支持 {appName} 的持續開發與永續發展。"
       },
       "4": {
-        "question": "還有其他方式可以幫助 {appName} 嗎？",
-        "answer": "捐款是您目前支持 {appName} 的主要方式。不過，如果您無法捐款，仍然還有其他幾種方式可以提供幫助：<ol><li>將這份呼籲分享給使用 {appName} 且可能有興趣支持我們使命的朋友和家人。</li><li>透過 <crowdin-link>{wordCrowdin}</crowdin-link> 幫助將 {appName} 翻譯成其他語言</li><li>為 {appNamePossessive} 的 <github-link>開源程式碼庫</github-link> 做出貢獻</li></ol>"
+        "question": "如果沒有達成捐款目標，會發生什麼事？",
+        "answer": "目前，基金會已收到足以在未來 3 個月內提供最基本支持的捐款。這表示 {appName} 仍會繼續在應用商店上提供下載，而像是推播通知與檔案伺服器等關鍵基礎設施也會持續上線運作。<br></br><br></br>如果募款成功，基金會將能繼續積極開發 {appName}，包括推出 {appNamePro} 與 {appNameProtocolV2}。<br></br><br></br>如果募款失敗，資金短缺將意味著基金會無法再以任何形式支援 {appName}，並且必須關閉。因此，{appName} 將會從應用商店下架，而像是 {appName} 檔案伺服器、推播通知伺服器與種子節點等關鍵基礎設施也將離線。"
       },
       "tax-question": {
         "question": "我可以進行可抵稅的捐款嗎？",
         "answer": ""
+      },
+      "5": {
+        "question": "{foundationName} 是什麼？",
+        "answer": "{foundationName}（{foundationAcronym}）是一個設立於瑞士的基金會，也是 {appName} 應用程式與專案的管理機構。你可以在 <foundation-link>這裡</foundation-link> 進一步了解該基金會在 {appName} 生態系中的角色。"
+      },
+      "6": {
+        "question": "如果 {foundationName} 關閉，{appName} 會怎樣？",
+        "answer": "{appName} 是去中心化的，因此只要 {appName} 網路中仍有最低數量的節點在運行，{appName} 在技術上就會繼續存在，應用程式也仍可支援非常基本的功能並持續運作。然而，若 {foundationAcronym} 及相關法律實體必須關閉，則 {wordApple} 與 {wordGoogle} 將會把 {appName} 從 {wordApple} 與 {platformStoreGoogleShort} 商店移除。其他集中管理的服務，例如 {appName} 檔案伺服器與 {appName} 推播通知伺服器，也同樣必須關閉，這將限制使用者傳送與接收附件的能力，也無法再快速收到新訊息通知。社群與志工開發或許仍會持續，但 {appName} 是一套相當複雜的軟體，若缺乏可觀的資金與投入，使用者將需要自行評估 {appName} 的安全性。"
+      },
+      "7": {
+        "question": "還有其他我可以幫助 {appName} 的方式嗎？",
+        "answer": "目前，捐款是你支持 {appName} 的主要方式。不過，如果你無法捐款，還有其他幾種方式可以幫忙：<ol><li>將這則呼籲分享給使用 {appName}、且可能有興趣支持我們使命的親友。</li><li>透過 <crowdin-link>{wordCrowdin}</crowdin-link> 協助將 {appName} 翻譯成其他語言</li><li>為 {appNamePossessive} 的 <github-link>開源程式碼庫</github-link> 做出貢獻</li></ol>"
       }
     },
-    "appealHeading": "A Personal Appeal From {donateAppealName}",
+    "appealHeading": "我們最後的呼籲：<br></br>{appName} 將在 90 天後停止營運",
     "7": {
       "heading": "常見問題",
       "content": ""

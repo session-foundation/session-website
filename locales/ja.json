@@ -201,7 +201,7 @@
       "heading": "暗号資産で寄付する",
       "content": "以下の{foundationName}のアドレスに{ethSymbol}、{usdcSymbol}、{usdtSymbol}または{btcSymbol}を送金できます。"
     },
-    "heroAppeal": "8年前、{appName}はあなたのプライバシーを取り戻し、発言と生活を自分でコントロールできるようにすること、つまりデジタルの自由を実現することを使命として創設されました。しかし今、皆さまのご支援がなければ、私たちは{appName}の開発をこれ以上長く続けることができません。もし{appName}やその使命に価値を感じたことがあるなら、少しだけお時間をいただき、このお願いをお読みください。<br></br><br></br>{appName}は、言論の自由が当然ではなく、プライバシーの権利が忌み嫌われ、真実が嘘にされる時代において、物議を醸す技術です。これまで長年にわたり、{appName}を守ってきた組織はいくつもの困難に直面してきましたが、今や{appNamePossessive}存続そのものが危機にさらされています。<br></br><br></br>プライバシーへの脅威はかつてないほど大きくなっており、{appName}は将来の課題に立ち向かうために進化しなければなりません。{appNamePossessive}現在の管理団体である{foundationName}には、{appName}をさらに前へ進めるために必要な資金がありません。PFSや耐量子暗号のような重要な作業は今なお進行中ですが、残された時間は十分ではありません。<br></br><br></br>私たちの使命は、かつて人々がオンラインでコミュニケーションするときに感じていた自由、創造性、そしてプライバシーを取り戻すことです。私たちは、検閲者、監視者、そしてあなたの会話を監視する中央集権的な存在を取り除く、真に自由なメッセンジャーの種を蒔いてきました。これまでのところ、その理念は機能しています。毎月、{appUserNumber}人を超える人々が、メタデータではなくメッセージを送るために{appName}を利用しています。<br></br><br></br>{appName}は、そのコミュニティによって構築され、所有されるプラットフォームです。巨大テック企業やプライベートエクイティ、その他の得体の知れない支配者たちのものではありません。そして今、{appName}はあなたに助けを求めています。<br></br><br></br>このプロジェクトは自立可能な運営に向けて進んでいますが、その未来はまだ脆弱です。もし{appName}のユーザー一人ひとりがわずか1ドルを拠出してくれれば、{appName}が持続可能性に到達するための大きな助けになります。寄付を考えたことがあるなら、今こそ行動するときです。<br></br><br></br>{donateSignerName}",
+    "heroAppeal": "こんな日が来ないことを願っていましたが、{appName} はいま、運営継続のための最後の90日間に入りました。この期間内に資金調達目標を達成できなければ、{foundationNameWithAcronym} は閉鎖を余儀なくされます。<br></br><br></br>これまでに、{foundationAcronym} は約 {donationAmount} の寄付を受け取っています。これは、今後90日間にわたり {appName} の重要なインフラを維持するのに十分な金額です。コミュニティから {appName} に寄せられた支援に、私たちは心から感謝しています。しかし残念ながら、これではフルタイムの開発者を維持するには不十分です。その結果、すべての有給スタッフと開発者の最終勤務日は 2026年4月9日 となります。この日以降も、一部のチームメンバーは主にボランティアとして活動を続け、2026年7月8日 まで {appName} の維持を支援します。<br></br><br></br>これは {appName} コミュニティへの最後のお願いです。皆さまの支援がなければ、{foundationAcronym} は 2026年7月8日 にすべての活動を停止します。<br></br><br></br>これは衝撃的なお知らせかもしれません。外から見ると、{appName} は成功し成長しているアプリに見えます。数百万件のダウンロード、優れたアプリストア評価、継続的な成長を遂げており、最近では月間アクティブユーザー数が 170万 を超えました。しかし、{appNamePossessive} の成功は、それを日々改善するためにたゆまず尽力している献身的な貢献者やチームがいてこそ実現してきたものです。彼らは高度な技能を持つ開発者であり、分散型システムの設計者でもあります。そして誰もがそうであるように、支払うべき請求があり、養うべき家族がいます。<br></br><br></br>{appName} には、その使命を深く信じ、他所で得られるよりも低い報酬を受け入れてくれている貢献者がいることは幸運です。これにより全体のコストは抑えられていますが、それでも運営には最低限必要な資金があります。少数精鋭のチームであっても、{foundationAcronym} はこの費用を年間約 {costPerYear} と見積もっています。<br></br><br></br>これは大きな金額に思えるかもしれませんが、安全で分散型のインフラを構築・維持する現実を反映したものです。多くの市場では、シニア開発者の年収はしばしば年間 {seniorDevSalaryPerYear} を超えます。さらに、{foundationAcronym} を運営するには法務および運営上の間接費もかかります。競合他社と比べても、{appName} は非常に効率的に運営されており、一部の大手メッセージング企業におけるシニア幹部 2 名分の報酬総額に匹敵する程度の予算で、その使命を果たしています。<br></br><br></br>すでに寄付してくださった皆さまに、心より感謝いたします。すべてのご寄付が、{appName} を資金調達目標の達成に一歩近づけます。<br></br><br></br>また、{foundationAcronym} が今後90日以内に目標達成に十分な資金を確保できなかった場合、{foundationAcronymPossessive} の憲章に従って使用できない寄付金は、{effName} に公に寄付されることもお約束します。<br></br><br></br>当面は、ボランティアが可能な限り {appName} を支え続けます。時間切れになる前に {appName} を支援できると思われる場合は、<donate-email></donate-email> までご連絡ください。",
     "6": {
       "heading": "{wordSilentDonor}で寄付する",
       "content": "Individuals may make an anonymous tax deductible gift to the {foundationName} using <silent-donor-link>{wordSilentDonor}</silent-donor-link>.<br></br><br></br>{wordSilentDonor} is a third party which can facilitate donations to the {foundationAcronym} using card, bank transfer, and <crypto-icons>crypto</crypto-icons>"
@@ -214,23 +214,35 @@
         "answer": "現在、{appName}の継続的な開発を支援する方法は3つあります。<br></br><br></br><bold>{donationProviderName}</bold><br></br><br></br>{donationProviderName}は、非営利団体がさまざまな支払い方法で寄付を受け取れるよう支援するサードパーティのプラットフォームです。{foundationName}へは、{donationProviderName}を通じて<donate-link>こちら</donate-link>から寄付できます。<br></br><br></br>対応している支払い方法は以下のとおりです：<payment-providers></payment-providers><bold>{wordSilentDonor}</bold><br></br><br></br><silent-donor-info></silent-donor-info><bold>暗号資産の直接寄付</bold><br></br><br></br>以下に記載されたウォレットアドレスに送金することで、{foundationName}に暗号資産を直接寄付することもできます。<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordBitcoinCashAddress}: {addressBitcoinCash}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>この{wordEthereumAddress}では、{ethSymbol}に加え、{ethNetworkName}、{arbNetworkName}、{baseNetworkName}などの{wordEvmCompatible}チェーン上の{wordErc20} {wordTokens}（{usdtSymbol}や{usdcSymbol}など）による寄付も受け付けています。<br></br><br></br><bold>注:</bold> いずれかの支払い方法で{largeDonationAmount}を超える寄付をご検討の場合は、<donations-email></donations-email>までご連絡ください"
       },
       "2": {
+        "question": "寄付目標が1 million dollarsなのはなぜですか ",
+        "answer": "これは約12か月分の運転資金に相当し、{appNameProtocolV2}の作業完了、{appNamePro}のローンチ、そして{wordPro}の妥当な立ち上げ期間の支援に十分な時間です。この作業が優先されているのは、エコシステムの持続可能性を実現するために必要だからです。長期的には、{appName}は{wordPro}やその他のトークンユーティリティを通じて自立運営できるよう設計されていますが、その段階に到達するには、なお追加の時間と努力が必要です。<br></br><br></br>個人にとっては大きな金額かもしれませんが、{appName}の規模と影響力を持つアプリケーションとしては、これらのコストは比較的控えめです。"
+      },
+      "3": {
         "question": "寄付金は何に使われますか？",
         "answer": "皆さまからの寄付は、{appName}アプリケーションおよびプロジェクトの現在の管理団体である、スイス拠点の財団<foundation-link>{foundationName}</foundation-link>が受け取ります。寄付金は、{appName}の継続的な開発と持続可能な運営の支援に充てられます。"
       },
-      "3": {
-        "question": "{foundationName}とは何ですか？",
-        "answer": "{foundationName}（{foundationAcronym}）は、スイスを拠点とする財団であり、{appName}アプリケーションおよびプロジェクトの管理団体です。{appName}エコシステムにおける財団の役割については、<foundation-link>こちら</foundation-link>をご覧ください。"
-      },
       "4": {
-        "question": "{appName}を支援する他の方法はありますか？",
-        "answer": "現在、{appName}を支援する主な方法は寄付です。ただし、寄付が難しい場合でも、ほかにも支援できる方法がいくつかあります。<ol><li>{appName}を使っていて、私たちの使命への支援に関心を持ちそうなご友人やご家族に、このお願いを共有してください。</li><li><crowdin-link>{wordCrowdin}</crowdin-link>を通じて、{appName}の他言語への翻訳に協力してください</li><li>{appNamePossessive}<github-link>オープンソースコードベース</github-link>への貢献</li></ol>"
+        "question": "寄付目標に達しなかった場合はどうなりますか？",
+        "answer": "現在、財団は今後3か月間の最低限の支援を提供できるだけの寄付を受け取っています。これは、{appName}が引き続きアプリストアからダウンロード可能であり、プッシュ通知サーバーやファイルサーバーなどの重要インフラもオンラインのままであることを意味します。<br></br><br></br>資金調達が成功すれば、財団は{appNamePro}や{appNameProtocolV2}のローンチを含め、{appName}の積極的な開発を継続できます。<br></br><br></br>成功しなければ、資金不足により財団は{appName}をいかなる形でも支援できなくなり、閉鎖する必要があります。その結果、{appName}はアプリストアから削除され、{appName}のファイルサーバー、プッシュ通知サーバー、シードノードなどの重要インフラはオフラインになります。"
       },
       "tax-question": {
         "question": "税控除の対象となる寄付はできますか？",
         "answer": ""
+      },
+      "5": {
+        "question": "{foundationName}とは何ですか？",
+        "answer": "{foundationName}（{foundationAcronym}）は、スイスを拠点とする財団であり、{appName}アプリケーションおよびプロジェクトの管理団体です。{appName}エコシステムにおける財団の役割については、<foundation-link>こちら</foundation-link>をご覧ください。"
+      },
+      "6": {
+        "question": "{foundationName}が閉鎖された場合、{appName}はどうなりますか？",
+        "answer": "{appName}は分散型であるため、{appName}ネットワークで最小限の数のノードが稼働している限り、{appName}自体は技術的には存在し続け、アプリもごく基本的な機能をサポートしながら動作を続けます。しかし、{foundationAcronym}および関連する法的主体を閉鎖しなければならない場合、{wordApple}と{wordGoogle}は{wordApple}ストアおよび{platformStoreGoogleShort}から{appName}を削除します。また、{appName}のファイルサーバーや{appName}のプッシュ通知サーバーなど、中央集権的に運営されている他のサービスも停止する必要があり、ユーザーが添付ファイルを送受信したり、受信メッセージの高速な通知を受け取ったりする能力が制限されます。コミュニティやボランティアによる開発は継続する可能性がありますが、{appName}は複雑なソフトウェアであり、大きな資金援助と投資がなければ、{appName}の安全性についてはユーザー自身で判断する必要があります。"
+      },
+      "7": {
+        "question": "{appName}を支援する他の方法はありますか？",
+        "answer": "現在、{appName}を支援する主な方法は寄付です。ただし、寄付が難しい場合でも、ほかにも支援できる方法がいくつかあります。<ol><li>{appName}を使っていて、私たちの使命への支援に関心を持ちそうなご友人やご家族に、このお願いを共有してください。</li><li><crowdin-link>{wordCrowdin}</crowdin-link>を通じて、{appName}の他言語への翻訳に協力してください</li><li>{appNamePossessive}の<github-link>オープンソースコードベース</github-link>に貢献してください</li></ol>"
       }
     },
-    "appealHeading": "{donateAppealName}からの個人的な訴え",
+    "appealHeading": "最後のお願い：<br></br>{appName}は90日後に終了します",
     "7": {
       "heading": "よくある質問",
       "content": ""
