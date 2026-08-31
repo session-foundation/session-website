@@ -176,6 +176,10 @@
     "donate": {
       "title": "捐赠 | 支持隐私技术",
       "description": "没有您的支持，{foundationName} 就无法继续前行。立即捐赠，帮助 {appName} 继续为生存而战。"
+    },
+    "pro": {
+      "title": "{wordPro} | Unlock the Full Potential of {appName}",
+      "description": "Upgrade to {appNamePro} to support the project and unlock premium features for private communication."
     }
   },
   "donate": {
@@ -201,7 +205,7 @@
       "heading": "通过加密货币捐赠",
       "content": "您可以将 {ethSymbol}、{usdcSymbol}、{usdtSymbol} 或 {btcSymbol} 发送到以下 {foundationName} 地址。"
     },
-    "heroAppeal": "我们曾希望这一天永远不会到来，但 {appName} 如今已进入最后 90 天的运营期。如果我们无法在此期间达成筹资目标，{foundationNameWithAcronym} 将被迫关闭。<br></br><br></br>截至目前，{foundationAcronym} 已收到约 {donationAmount} 的捐款。这笔资金足以在未来 90 天内维持 {appName} 关键基础设施的运行。我们对社区给予 {appName} 的支持深表感激，但遗憾的是，这还不足以留住全职开发人员。因此，所有受薪员工和开发人员的最后一个工作日将是 2026 年 4 月 9 日。在此日期之后，部分团队成员将主要以志愿者的身份继续协助维护 {appName}，直至 2026 年 7 月 8 日。<br></br><br></br>这是我们向 {appName} 社区发出的最后呼吁：没有你们的支持，{foundationAcronym} 将于 2026 年 7 月 8 日停止所有运营。<br></br><br></br>我们理解这可能会令人震惊。从外部来看，{appName} 似乎是一款成功且不断发展的应用——拥有数百万次下载、优异的应用商店评分，并持续增长，最近月活跃用户已突破 1.7 million。然而，{appNamePossessive} 的成功之所以成为可能，完全是因为那些日复一日不懈努力改进它的贡献者和团队。他们是技术高超的开发者和去中心化系统架构师，而和所有人一样，他们也需要支付账单、养家糊口。<br></br><br></br>{appName} 很幸运拥有一批对其使命深信不疑的贡献者，他们愿意接受低于其他地方可获得报酬的薪资。这有助于降低总体成本，但运营仍然需要达到一个最低资金水平。即使团队已经非常精简，{foundationAcronym} 估计这项成本每年仍约为 {costPerYear}。<br></br><br></br>这看起来也许是一大笔钱，但这反映了构建和维护安全、去中心化基础设施的现实。在大多数市场中，高级开发人员的年薪通常超过 {seniorDevSalaryPerYear}，除此之外，运营 {foundationAcronym} 还存在法律和运营管理方面的额外开支。与竞争对手相比，{appName} 的运营效率极高，以相当于某些大型消息公司仅两位高级管理人员总薪酬的预算来实现其使命。<br></br><br></br>如果您已经捐赠，我们向您致以诚挚感谢。每一笔捐助都能帮助 {appName} 更接近其筹资目标。<br></br><br></br>我们还想向您保证，如果 {foundationAcronym} 在接下来的 90 天内无法获得足以实现其目标的资金，任何无法根据 {foundationAcronymPossessive} 章程使用的捐款都将公开捐赠给 {effName}。<br></br><br></br>目前，志愿者们将尽可能长时间维持 {appName} 的运转。如果您认为自己能在时间耗尽前帮助 {appName}，请联系 <donate-email></donate-email>。",
+    "heroAppeal": "由于社区给予 {appName} 难以置信且持续不断的支持，我们已经找到了一条前进道路，使 {appName} 能够在 7 月 8 日之后继续发展。一个规模更小的团队将继续开发到 2027 年，重点是增强项目实力，并为其长期未来奠定基础。<br></br><br></br>{appName} 的工作人员希望向那些通过贡献帮助项目持续推进的忠实社区成员表达感谢，无论是直接捐款、持续运行网络中的节点，还是提高大家对我们捐赠活动的认知。<br></br><br></br>尽管关停程序已经取消，{appName} 项目的形态仍在发生相当大的变化。该项目现在将由 Jason Rhinelander 领导，他是 {foundationNameWithAcronym} 的资深首席软件架构师及成员。<br></br><br></br>目前，收到的捐款足以支持关键基础设施、留任 Jason 作为开发者，并且可能再为项目增加一名全职开发者。与此同时，仍有一个小型志愿者团队在为生态系统的其他方面作出贡献。<br></br><br></br>没有你们的支持，{appName} 将不复存在。<br></br><br></br>今后，基金会将以低得多的成本和资源运营。它也将继续探索筹集更多资金的方式，无论是通过外部捐助，还是通过 {appName} Pro 之类的工作。<br></br><br></br>尽管近期存在不确定性，{appName} 仍然是一款成功的应用——拥有数百万次下载、强劲的应用商店评分，并持续增长（最近月活跃用户已超过 170 万）。<br></br><br></br>{appName} 很幸运，拥有一群深信其使命的贡献者，他们愿意接受低于在其他地方可获得报酬的薪资，或以志愿方式投入时间来支持这一生态系统。如果你曾在此次活动中捐款，我们向你致以诚挚的感谢。每一份贡献都在推动 {appName} 前进。虽然基金会现在已经拥有让 {appName} 继续前行所需的资金，但我们仍欢迎额外捐款，这将使基金会能够扩大开发团队，加快推出新的安全、隐私和易用性改进。<br></br><br></br>如果你有兴趣了解更多，请观看<youtube-link>这段</youtube-link>由 Jason、联合创始人 Kee 和 Chris 以及 {foundationAcronym} 主席 Alex 出镜的视频。<br></br><br></br>基金会如今已经为 {appName} 找到了继续前进的道路，但如果获得更多支持，仍然可以实现更多目标。如果你认为自己能够提供帮助，请联系 <donate-email></donate-email>。",
     "6": {
       "heading": "通过 {wordSilentDonor} 捐赠",
       "content": "Individuals may make an anonymous tax deductible gift to the {foundationName} using <silent-donor-link>{wordSilentDonor}</silent-donor-link>.<br></br><br></br>{wordSilentDonor} is a third party which can facilitate donations to the {foundationAcronym} using card, bank transfer, and <crypto-icons>crypto</crypto-icons>"
@@ -213,17 +217,9 @@
         "question": "我如何向 {appName} 捐赠？",
         "answer": "目前有三种方式可以支持 {appName} 的持续开发：<br></br><br></br><bold>{donationProviderName}</bold><br></br><br></br>{donationProviderName} 是一个第三方平台，帮助非营利组织通过多种支付方式接受捐赠。您可以通过 {donationProviderName} <donate-link>在此</donate-link>向 {foundationName} 捐赠。<br></br><br></br>支持的支付方式包括：<payment-providers></payment-providers><bold>{wordSilentDonor}</bold><br></br><br></br><silent-donor-info></silent-donor-info><bold>直接加密货币</bold><br></br><br></br>您也可以通过向下方列出的钱包地址转账，直接向 {foundationName} 捐赠加密货币。<br></br><br></br>{wordBitcoinAddress}：{addressBitcoin}<br></br><br></br>{wordBitcoinCashAddress}：{addressBitcoinCash}<br></br><br></br>{wordEthereumAddress}：{addressEthereum}<br></br><br></br>此 {wordEthereumAddress} 接受 {ethSymbol} 捐赠，以及通过与 {wordEvmCompatible} 链兼容的 {wordErc20} {wordTokens}（例如 {usdtSymbol} 和 {usdcSymbol}）在 {ethNetworkName}、{arbNetworkName} 和 {baseNetworkName} 等链上进行的捐赠。<br></br><br></br><bold>注意：</bold>如果您考虑通过任何支付方式捐赠超过 {largeDonationAmount}，请通过 <donations-email></donations-email> 联系我们"
       },
-      "2": {
-        "question": "为什么你们的捐赠目标是 1 million dollars? ",
-        "answer": "这相当于大约 12 个月的运营资金缓冲期，足以完成 {appNameProtocolV2} 的开发、推出 {appNamePro}，并为 {wordPro} 提供一段合理的爬坡支持期。这些工作之所以被优先推进，是因为它们对于实现生态系统的可持续性至关重要。从长期来看，{appName} 的设计目标是通过 {wordPro} 和其他代币用途实现自给自足，但要达到这一点，仍需要额外的时间和投入。<br></br><br></br>虽然对个人来说这是一大笔钱，但对于像 {appName} 这样具有当前规模和影响力的应用而言，这些成本相对并不高。"
-      },
       "3": {
         "question": "我的捐赠将用于什么用途？",
         "answer": "您的捐赠将由 <foundation-link>{foundationName}</foundation-link> 接收。该基金会位于瑞士，是当前 {appName} 应用和项目的管护机构。您的捐赠将用于支持 {appName} 的持续开发与长期可持续性。"
-      },
-      "4": {
-        "question": "如果你们没有达到捐赠目标，会发生什么？",
-        "answer": "目前，基金会已收到足够的捐款，可在未来 3 个月内提供最基本的支持。这意味着 {appName} 仍将可在各大应用商店下载，而推送通知服务器和文件服务器等关键基础设施也将继续在线。<br></br><br></br>如果募资成功，基金会将能够继续积极开发 {appName}，包括推出 {appNamePro} 和 {appNameProtocolV2}。<br></br><br></br>如果募资失败，资金短缺将意味着基金会无法以任何形式继续支持 {appName}，并将不得不关闭。因此，{appName} 将从应用商店下架，而像 {appName} 文件服务器、推送通知服务器和种子节点这样的关键基础设施也将离线。"
       },
       "tax-question": {
         "question": "我可以进行可抵税的捐赠吗？",
@@ -242,10 +238,151 @@
         "answer": "捐赠是您目前支持 {appName} 的主要方式。不过，如果您无法捐赠，仍然还有其他几种方式可以提供帮助：<ol><li>将这份呼吁分享给使用 {appName} 且可能有兴趣支持我们使命的朋友和家人。</li><li>通过 <crowdin-link>{wordCrowdin}</crowdin-link> 帮助将 {appName} 翻译成其他语言</li><li>为 {appNamePossessive} 的 <github-link>开源代码库</github-link> 做出贡献</li></ol>"
       }
     },
-    "appealHeading": "我们最后的呼吁：<br></br>{appName} 将在 90 天后停止服务",
+    "appealHeading": "{appName} 的前行之路",
     "7": {
       "heading": "常见问题",
       "content": ""
+    }
+  },
+  "pro": {
+    "heading": "Privacy that feels <pro-badge></pro-badge>",
+    "tag": "Upgrade to {appNamePro} and unlock the full potential of private communication",
+    "features": {
+      "1": {
+        "1": {
+          "featureName": "Private & Secure Messaging",
+          "featureDescription": "Send end to end encrypted messages to contacts and groups with full privacy."
+        },
+        "2": {
+          "featureName": "No Phone Numbers",
+          "featureDescription": "Create an account without a phone number or real world identity."
+        },
+        "3": {
+          "featureName": "Onion Routing",
+          "featureDescription": "Use Onion Routing to hide your IP address from eavesdroppers."
+        },
+        "4": {
+          "featureName": "Files & Attachments",
+          "featureDescription": "Send end to end encrypted attachments to contacts and groups up to 10mb."
+        },
+        "heading": "Free",
+        "tag": "Security for Everyone"
+      },
+      "2": {
+        "heading": "{wordPro}",
+        "tag": "Advanced Features",
+        "moreName": "Plus Loads More...",
+        "moreDescription": "More {wordPro} features are on the way. Take a look at what’s <bold>Coming Soon <icon></icon></bold>"
+      },
+      "3": {
+        "1": {
+          "featureName": "Larger File Attachments",
+          "featureDescription": "Send attachments which exceed the 10mb file size limit. "
+        },
+        "2": {
+          "featureName": "Bigger Groups",
+          "featureDescription": "Increased member limits in groups where you are an admin."
+        },
+        "3": {
+          "featureName": "Message Editing and Formatting",
+          "featureDescription": "Edit your messages and use advanced formatting features."
+        },
+        "4": {
+          "featureName": "Multiple Identities",
+          "featureDescription": "Manage multiple {appName} accounts from a single device."
+        },
+        "heading": "Coming Soon",
+        "tag": "Future {wordPro} Features",
+        "tagMobile": "Coming Soon to {wordPro}"
+      },
+      "priceFrom": "From {price}/Month",
+      "headingMobile": "Features",
+      "detailedRoadmap": "Detailed Roadmap"
+    },
+    "info": {
+      "heading": "What is {appNamePro}",
+      "content": "{appNamePro} offers premium features and functionality in the {appName} messaging app. {wordPro} includes unique and exclusive cosmetic upgrades and unlocks additional access to {appNamePossessive} decentralized network.<br></br><br></br>With {wordPro}, users pay to offset the increased network usage of certain activities, such as sending long messages or large attachments."
+    },
+    "upgrade": {
+      "heading": "Upgrade to {wordPro} Beta <platform-badge></platform-badge>",
+      "mobile": {
+        "1": {
+          "upgradeName": "On your {platform} Device",
+          "upgradeDescription": "Open {appName} on your {platform} device, go to {appName} Settings, and tap Upgrade {appName}.",
+          "upgradeSubDescription": "{appName} must have been installed via {platformStoreShort}. Billing is not supported {notSupportedInfo}",
+          "upgradeSubDescriptionNotSupportedInfoAndroid": "via {wordFDroid} or {wordAPK} installs.",
+          "upgradeSubDescriptionNotSupportedInfoIos": "when sideloading {wordIPAs}."
+        },
+        "2": {
+          "upgradeName": "On a linked Device",
+          "upgradeDescription": "Open {appName} on a linked {platformA} or {platformB} device, go to {appName} Settings, and tap Upgrade {appName}.",
+          "upgradeSubDescription": "Soon after upgrading all devices sharing that {appName} account will inherit {wordPro}."
+        }
+      },
+      "desktop": {
+        "1": {
+          "upgradeName": "On a linked device",
+          "upgradeDescription": "Unfortunately, {wordPro} access can only be purchased via the {platformStoreGoogle} or {platformStoreApple}. {appName} developers are working on alternative payment options to allow users to purchase {wordPro} access outside of the {platformStoreGoogle} and {platformStoreApple}.<br></br><br></br>For now, to upgrade a {wordDesktop} device to {wordPro}, open {appName} on a linked {platformAndroid} or {platformIos} device, go to {appName} Settings, and tap Upgrade {appName}.",
+          "upgradeSubDescription": "Soon after upgrading, all devices sharing that {appName} account will inherit {wordPro}."
+        }
+      }
+    },
+    "roadmap": {
+      "1": {
+        "featureName": "Larger File Attachments",
+        "featureDescription": "{appNamePro} will remove the constraints on file sharing for {wordPro} users, allowing attachments well beyond the standard {standardUserFileUploadLimit} limit. This feature leverages the {appNameRouterPossessive} capabilities for more efficient file transfers across the network, making it practical to share documents, images, and media files without leaving the secure {appName} environment.",
+        "featureSubheading": "Key benefits:",
+        "featureSublist": "<li><bold>Share complete documents and high-quality media:</bold> Send PDFs, presentations, and spreadsheets without compression or splitting. Transfer photos and videos in their original resolution, preserving quality for professional or personal use.</li><li><bold>Secure file exchange:</bold> Keep sensitive documents within {appNamePossessive} encrypted environment instead of relying on less secure third-party file sharing services.</li><li><bold>Streamlined workflow:</bold> Eliminate the need to switch between apps or platforms when collaborating on projects or sharing important files.</li>"
+      },
+      "2": {
+        "featureName": "Bigger Groups",
+        "featureDescription": "Groups with at least one {wordPro} administrator will accommodate up to {proUserMaxGroupSize} members—triple the standard {standardUserMaxGroupSize}-member limit. This expanded capacity transforms how larger communities can coordinate and communicate privately on {appName}.",
+        "featureSubheading": "Key benefits:",
+        "featureSublist": "<li><bold>Organization-ready:</bold> Support entire departments, teams, or small companies within a single secure group chat.</li><li><bold>Community building:</bold> Run larger interest-based or regional groups without hitting member limits or splitting conversations.</li><li><bold>Event coordination:</bold> Manage conferences, workshops, or large-scale projects with all stakeholders in one encrypted space.</li>"
+      },
+      "3": {
+        "featureName": "Message Editing and Formatting",
+        "featureDescription": "{appNamePro} members will gain access to a full suite of powerful messaging features that enhance how messages are composed and refined. These tools bring professional communication capabilities to {appName} while maintaining complete privacy. These features will also roll out on a limited basis for free users, ensuring everyone benefits from {appNamePossessive} evolution.",
+        "featureSubheading": "Key benefits:",
+        "featureSublist": "<li><bold>Markdown formatting:</bold> Style messages with rich text formatting for clearer communication in 1:1 conversations, group chats and communities.</li><li><bold>Message editing:</bold> Correct typos and update sent messages at any point after sending.</li><li><bold>Professional communication:</bold> Create well-structured messages with bold, italics, lists, and code blocks for technical discussions or detailed explanations</li>"
+      },
+      "4": {
+        "featureName": "Multiple Identities",
+        "featureDescription": "A highly requested feature, multi-account support will allow users to manage multiple {appName} identities within a single installation. This powerful feature will let users compartmentalize different aspects of their digital life without juggling multiple devices or app installations. Free users of {appName} will also have access to multi-account support on a more limited basis.",
+        "featureSubheading": "Key benefits:",
+        "featureSublist": "<li><bold>Identity separation:</bold> Maintain distinct personas for work, personal, and anonymous communications without cross-contamination.</li><li><bold>Simplified switching:</bold> Toggle between accounts instantly without logging in and out or managing multiple apps.</li><li><bold>Enhanced operational security:</bold> Reduce the risk of accidentally mixing professional and personal contacts or conversations.</li>"
+      },
+      "heading": "Roadmap"
+    },
+    "faq": {
+      "1": {
+        "question": "What is included in {appNamePro}?"
+      },
+      "2": {
+        "question": "How does {appNamePro} affect my privacy?"
+      },
+      "3": {
+        "question": "Is {appName} still free?"
+      },
+      "4": {
+        "question": "What is the difference between {wordsProBeta} and {wordPro}?"
+      },
+      "5": {
+        "question": "Can I purchase {appNamePro} for my friend?"
+      },
+      "6": {
+        "question": "How can I purchase {appNamePro} for my account?"
+      },
+      "7": {
+        "question": "Can I refund my purchase?"
+      },
+      "8": {
+        "question": "How are funds from {appNamePro} used?"
+      },
+      "9": {
+        "question": "Will more features be added to {wordPro} in the future?"
+      },
+      "heading": "FAQ"
     }
   }
 }

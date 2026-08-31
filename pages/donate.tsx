@@ -365,7 +365,7 @@ export const SilentDonorPaymentDescription = () => (
   </>
 );
 
-function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 'tax-question' }) {
+function FAQItem({ localeKey }: { localeKey: 1 | 3 | 5 | 6 |'tax-question' }) {
   const t = useTranslations('donate.faq');
 
   const question = t(`${localeKey}.question`, localeArgs);
@@ -460,9 +460,7 @@ function DonateFAQ() {
         <div className="flex w-full max-w-3xl flex-col gap-3 text-lg">
           <FAQItem localeKey={1} />
           <FAQItem localeKey="tax-question" />
-          <FAQItem localeKey={2} />
           <FAQItem localeKey={3} />
-          <FAQItem localeKey={4} />
           <FAQItem localeKey={5} />
         </div>
       </div>

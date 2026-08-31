@@ -176,6 +176,10 @@
     "donate": {
       "title": "crwdns38884:0crwdne38884:0",
       "description": "crwdns38886:0{foundationName}crwdnd38886:0{appName}crwdne38886:0"
+    },
+    "pro": {
+      "title": "crwdns39197:0{wordPro}crwdnd39197:0{appName}crwdne39197:0",
+      "description": "crwdns39199:0{appNamePro}crwdne39199:0"
     }
   },
   "donate": {
@@ -213,17 +217,9 @@
         "question": "crwdns39092:0{appName}crwdne39092:0",
         "answer": "crwdns39094:0{appName}crwdnd39094:0{donationProviderName}crwdnd39094:0{donationProviderName}crwdnd39094:0{foundationName}crwdnd39094:0{donationProviderName}crwdnd39094:0{wordSilentDonor}crwdnd39094:0{foundationName}crwdnd39094:0{wordBitcoinAddress}crwdnd39094:0{addressBitcoin}crwdnd39094:0{wordBitcoinCashAddress}crwdnd39094:0{addressBitcoinCash}crwdnd39094:0{wordEthereumAddress}crwdnd39094:0{addressEthereum}crwdnd39094:0{wordEthereumAddress}crwdnd39094:0{ethSymbol}crwdnd39094:0{wordErc20}crwdnd39094:0{wordTokens}crwdnd39094:0{usdtSymbol}crwdnd39094:0{usdcSymbol}crwdnd39094:0{wordEvmCompatible}crwdnd39094:0{ethNetworkName}crwdnd39094:0{arbNetworkName}crwdnd39094:0{baseNetworkName}crwdnd39094:0{largeDonationAmount}crwdne39094:0"
       },
-      "2": {
-        "question": "crwdns39096:0crwdne39096:0",
-        "answer": "crwdns39098:0{appNameProtocolV2}crwdnd39098:0{appNamePro}crwdnd39098:0{wordPro}crwdnd39098:0{appName}crwdnd39098:0{wordPro}crwdnd39098:0{appName}crwdne39098:0"
-      },
       "3": {
         "question": "crwdns39100:0crwdne39100:0",
         "answer": "crwdns39102:0{foundationName}crwdnd39102:0{appName}crwdnd39102:0{appName}crwdne39102:0"
-      },
-      "4": {
-        "question": "crwdns39104:0crwdne39104:0",
-        "answer": "crwdns39106:0{appName}crwdnd39106:0{appName}crwdnd39106:0{appNamePro}crwdnd39106:0{appNameProtocolV2}crwdnd39106:0{appName}crwdnd39106:0{appName}crwdnd39106:0{appName}crwdne39106:0"
       },
       "tax-question": {
         "question": "crwdns39124:0crwdne39124:0",
@@ -246,6 +242,147 @@
     "7": {
       "heading": "crwdns39128:0crwdne39128:0",
       "content": "crwdns39130:0crwdne39130:0"
+    }
+  },
+  "pro": {
+    "heading": "crwdns39201:0crwdne39201:0",
+    "tag": "crwdns39203:0{appNamePro}crwdne39203:0",
+    "features": {
+      "1": {
+        "1": {
+          "featureName": "crwdns39205:0crwdne39205:0",
+          "featureDescription": "crwdns39207:0crwdne39207:0"
+        },
+        "2": {
+          "featureName": "crwdns39209:0crwdne39209:0",
+          "featureDescription": "crwdns39211:0crwdne39211:0"
+        },
+        "3": {
+          "featureName": "crwdns39213:0crwdne39213:0",
+          "featureDescription": "crwdns39215:0crwdne39215:0"
+        },
+        "4": {
+          "featureName": "crwdns39217:0crwdne39217:0",
+          "featureDescription": "crwdns39219:0crwdne39219:0"
+        },
+        "heading": "crwdns39221:0crwdne39221:0",
+        "tag": "crwdns39223:0crwdne39223:0"
+      },
+      "2": {
+        "heading": "crwdns39225:0{wordPro}crwdne39225:0",
+        "tag": "crwdns39227:0crwdne39227:0",
+        "moreName": "crwdns39229:0crwdne39229:0",
+        "moreDescription": "crwdns39231:0{wordPro}crwdne39231:0"
+      },
+      "3": {
+        "1": {
+          "featureName": "crwdns39233:0crwdne39233:0",
+          "featureDescription": "crwdns39235:0crwdne39235:0"
+        },
+        "2": {
+          "featureName": "crwdns39237:0crwdne39237:0",
+          "featureDescription": "crwdns39239:0crwdne39239:0"
+        },
+        "3": {
+          "featureName": "crwdns39241:0crwdne39241:0",
+          "featureDescription": "crwdns39243:0crwdne39243:0"
+        },
+        "4": {
+          "featureName": "crwdns39245:0crwdne39245:0",
+          "featureDescription": "crwdns39247:0{appName}crwdne39247:0"
+        },
+        "heading": "crwdns39249:0crwdne39249:0",
+        "tag": "crwdns39251:0{wordPro}crwdne39251:0",
+        "tagMobile": "crwdns39253:0{wordPro}crwdne39253:0"
+      },
+      "priceFrom": "crwdns39255:0{price}crwdne39255:0",
+      "headingMobile": "crwdns39257:0crwdne39257:0",
+      "detailedRoadmap": "crwdns39259:0crwdne39259:0"
+    },
+    "info": {
+      "heading": "crwdns39261:0{appNamePro}crwdne39261:0",
+      "content": "crwdns39263:0{appNamePro}crwdnd39263:0{appName}crwdnd39263:0{wordPro}crwdnd39263:0{appNamePossessive}crwdnd39263:0{wordPro}crwdne39263:0"
+    },
+    "upgrade": {
+      "heading": "crwdns39265:0{wordPro}crwdne39265:0",
+      "mobile": {
+        "1": {
+          "upgradeName": "crwdns39267:0{platform}crwdne39267:0",
+          "upgradeDescription": "crwdns39269:0{appName}crwdnd39269:0{platform}crwdnd39269:0{appName}crwdnd39269:0{appName}crwdne39269:0",
+          "upgradeSubDescription": "crwdns39271:0{appName}crwdnd39271:0{platformStoreShort}crwdnd39271:0{notSupportedInfo}crwdne39271:0",
+          "upgradeSubDescriptionNotSupportedInfoAndroid": "crwdns39273:0{wordFDroid}crwdnd39273:0{wordAPK}crwdne39273:0",
+          "upgradeSubDescriptionNotSupportedInfoIos": "crwdns39275:0{wordIPAs}crwdne39275:0"
+        },
+        "2": {
+          "upgradeName": "crwdns39277:0crwdne39277:0",
+          "upgradeDescription": "crwdns39279:0{appName}crwdnd39279:0{platformA}crwdnd39279:0{platformB}crwdnd39279:0{appName}crwdnd39279:0{appName}crwdne39279:0",
+          "upgradeSubDescription": "crwdns39281:0{appName}crwdnd39281:0{wordPro}crwdne39281:0"
+        }
+      },
+      "desktop": {
+        "1": {
+          "upgradeName": "crwdns39283:0crwdne39283:0",
+          "upgradeDescription": "crwdns39285:0{wordPro}crwdnd39285:0{platformStoreGoogle}crwdnd39285:0{platformStoreApple}crwdnd39285:0{appName}crwdnd39285:0{wordPro}crwdnd39285:0{platformStoreGoogle}crwdnd39285:0{platformStoreApple}crwdnd39285:0{wordDesktop}crwdnd39285:0{wordPro}crwdnd39285:0{appName}crwdnd39285:0{platformAndroid}crwdnd39285:0{platformIos}crwdnd39285:0{appName}crwdnd39285:0{appName}crwdne39285:0",
+          "upgradeSubDescription": "crwdns39287:0{appName}crwdnd39287:0{wordPro}crwdne39287:0"
+        }
+      }
+    },
+    "roadmap": {
+      "1": {
+        "featureName": "crwdns39289:0crwdne39289:0",
+        "featureDescription": "crwdns39291:0{appNamePro}crwdnd39291:0{wordPro}crwdnd39291:0{standardUserFileUploadLimit}crwdnd39291:0{appNameRouterPossessive}crwdnd39291:0{appName}crwdne39291:0",
+        "featureSubheading": "crwdns39293:0crwdne39293:0",
+        "featureSublist": "crwdns39295:0{appNamePossessive}crwdne39295:0"
+      },
+      "2": {
+        "featureName": "crwdns39297:0crwdne39297:0",
+        "featureDescription": "crwdns39299:0{wordPro}crwdnd39299:0{proUserMaxGroupSize}crwdnd39299:0{standardUserMaxGroupSize}crwdnd39299:0{appName}crwdne39299:0",
+        "featureSubheading": "crwdns39301:0crwdne39301:0",
+        "featureSublist": "crwdns39303:0crwdne39303:0"
+      },
+      "3": {
+        "featureName": "crwdns39305:0crwdne39305:0",
+        "featureDescription": "crwdns39307:0{appNamePro}crwdnd39307:0{appName}crwdnd39307:0{appNamePossessive}crwdne39307:0",
+        "featureSubheading": "crwdns39309:0crwdne39309:0",
+        "featureSublist": "crwdns39311:0crwdne39311:0"
+      },
+      "4": {
+        "featureName": "crwdns39313:0crwdne39313:0",
+        "featureDescription": "crwdns39315:0{appName}crwdnd39315:0{appName}crwdne39315:0",
+        "featureSubheading": "crwdns39317:0crwdne39317:0",
+        "featureSublist": "crwdns39319:0crwdne39319:0"
+      },
+      "heading": "crwdns39321:0crwdne39321:0"
+    },
+    "faq": {
+      "1": {
+        "question": "crwdns39323:0{appNamePro}crwdne39323:0"
+      },
+      "2": {
+        "question": "crwdns39325:0{appNamePro}crwdne39325:0"
+      },
+      "3": {
+        "question": "crwdns39327:0{appName}crwdne39327:0"
+      },
+      "4": {
+        "question": "crwdns39329:0{wordsProBeta}crwdnd39329:0{wordPro}crwdne39329:0"
+      },
+      "5": {
+        "question": "crwdns39331:0{appNamePro}crwdne39331:0"
+      },
+      "6": {
+        "question": "crwdns39333:0{appNamePro}crwdne39333:0"
+      },
+      "7": {
+        "question": "crwdns39335:0crwdne39335:0"
+      },
+      "8": {
+        "question": "crwdns39337:0{appNamePro}crwdne39337:0"
+      },
+      "9": {
+        "question": "crwdns39339:0{wordPro}crwdne39339:0"
+      },
+      "heading": "crwdns39341:0crwdne39341:0"
     }
   }
 }

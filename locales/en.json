@@ -176,6 +176,10 @@
     "donate": {
       "title": "Donate | Support Privacy Technology",
       "description": "The {foundationName} cannot continue without your support. Donate today to help {appName} in its fight for survival."
+    },
+    "pro": {
+      "title": "{wordPro} | Unlock the Full Potential of {appName}",
+      "description": "Upgrade to {appNamePro} to support the project and unlock premium features for private communication."
     }
   },
   "donate": {
@@ -213,17 +217,9 @@
         "question": "How can I donate to {appName}?",
         "answer": "There are currently three ways to support the continued development of {appName}:<br></br><br></br><bold>{donationProviderName}</bold><br></br><br></br>{donationProviderName} is a third-party platform that helps non-profit organizations accept donations through a variety of payment methods. You can donate to the {foundationName} via {donationProviderName} <donate-link>here</donate-link>.<br></br><br></br>Supported payment methods include:<payment-providers></payment-providers><bold>{wordSilentDonor}</bold><br></br><br></br><silent-donor-info></silent-donor-info><bold>Direct Cryptocurrency</bold><br></br><br></br>You can also donate cryptocurrency directly to the {foundationName} by sending funds to the wallet addresses listed below.<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordBitcoinCashAddress}: {addressBitcoinCash}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>This {wordEthereumAddress} accepts donations in {ethSymbol}, as well as {wordErc20} {wordTokens} (such as {usdtSymbol} and {usdcSymbol}) across {wordEvmCompatible} chains, like {ethNetworkName}, {arbNetworkName}, and {baseNetworkName}.<br></br><br></br><bold>Note:</bold> If you are considering providing a donation of more than {largeDonationAmount} using any payment method, please contact us at <donations-email></donations-email>"
       },
-      "2": {
-        "question": "Why is your donation goal 1 million dollars? ",
-        "answer": "This is equivalent to around 12 months of runway, enough time to complete work on {appNameProtocolV2}, launch {appNamePro}, and support {wordPro} for a reasonable ramp up period. This work is being prioritised because it is needed to achieve ecosystem sustainability. Long term, {appName} is designed to become self-sustaining through {wordPro} and other token utilities, however, additional time and effort is needed to get to that point.<br></br><br></br>Although this is a lot of money for an individual, for an application at the scale and impact of {appName}, these costs are relatively modest."
-      },
       "3": {
         "question": "What will my donation be used for?",
         "answer": "Your donation will be received by the <foundation-link>{foundationName}</foundation-link>, a Swiss-based foundation which is the current steward of the {appName} application and project. Your donation will be used to support the ongoing development and sustainability of {appName}."
-      },
-      "4": {
-        "question": "What happens if your donation goal isn't hit?",
-        "answer": "Currently, the foundation has received enough donations to provide bare minimum support for the next 3 months. This means that {appName} will remain available for download on the app stores and critical infrastructure, like the push notification and file servers, will remain online.<br></br><br></br>If the fundraising is successful, the foundation would be able to continue active development of {appName}, including launching {appNamePro} and {appNameProtocolV2}.<br></br><br></br>If it is unsuccessful, the lack of funding would mean the foundation is not able to support {appName} in any capacity and will need to be shut down. As a result, {appName} would be removed from the app stores, and critical infrastructure like the {appName} file server, push notification server and seed nodes will go offline."
       },
       "tax-question": {
         "question": "Can I make a tax deductible donation?",
@@ -246,6 +242,147 @@
     "7": {
       "heading": "FAQ",
       "content": ""
+    }
+  },
+  "pro": {
+    "heading": "Privacy that feels <pro-badge></pro-badge>",
+    "tag": "Upgrade to {appNamePro} and unlock the full potential of private communication",
+    "features": {
+      "1": {
+        "1": {
+          "featureName": "Private & Secure Messaging",
+          "featureDescription": "Send end to end encrypted messages to contacts and groups with full privacy."
+        },
+        "2": {
+          "featureName": "No Phone Numbers",
+          "featureDescription": "Create an account without a phone number or real world identity."
+        },
+        "3": {
+          "featureName": "Onion Routing",
+          "featureDescription": "Use Onion Routing to hide your IP address from eavesdroppers."
+        },
+        "4": {
+          "featureName": "Files & Attachments",
+          "featureDescription": "Send end to end encrypted attachments to contacts and groups up to 10mb."
+        },
+        "heading": "Free",
+        "tag": "Security for Everyone"
+      },
+      "2": {
+        "heading": "{wordPro}",
+        "tag": "Advanced Features",
+        "moreName": "Plus Loads More...",
+        "moreDescription": "More {wordPro} features are on the way. Take a look at what’s <bold>Coming Soon <icon></icon></bold>"
+      },
+      "3": {
+        "1": {
+          "featureName": "Larger File Attachments",
+          "featureDescription": "Send attachments which exceed the 10mb file size limit. "
+        },
+        "2": {
+          "featureName": "Bigger Groups",
+          "featureDescription": "Increased member limits in groups where you are an admin."
+        },
+        "3": {
+          "featureName": "Message Editing and Formatting",
+          "featureDescription": "Edit your messages and use advanced formatting features."
+        },
+        "4": {
+          "featureName": "Multiple Identities",
+          "featureDescription": "Manage multiple {appName} accounts from a single device."
+        },
+        "heading": "Coming Soon",
+        "tag": "Future {wordPro} Features",
+        "tagMobile": "Coming Soon to {wordPro}"
+      },
+      "priceFrom": "From {price}/Month",
+      "headingMobile": "Features",
+      "detailedRoadmap": "Detailed Roadmap"
+    },
+    "info": {
+      "heading": "What is {appNamePro}",
+      "content": "{appNamePro} offers premium features and functionality in the {appName} messaging app. {wordPro} includes unique and exclusive cosmetic upgrades and unlocks additional access to {appNamePossessive} decentralized network.<br></br><br></br>With {wordPro}, users pay to offset the increased network usage of certain activities, such as sending long messages or large attachments."
+    },
+    "upgrade": {
+      "heading": "Upgrade to {wordPro} Beta <platform-badge></platform-badge>",
+      "mobile": {
+        "1": {
+          "upgradeName": "On your {platform} Device",
+          "upgradeDescription": "Open {appName} on your {platform} device, go to {appName} Settings, and tap Upgrade {appName}.",
+          "upgradeSubDescription": "{appName} must have been installed via {platformStoreShort}. Billing is not supported {notSupportedInfo}",
+          "upgradeSubDescriptionNotSupportedInfoAndroid": "via {wordFDroid} or {wordAPK} installs.",
+          "upgradeSubDescriptionNotSupportedInfoIos": "when sideloading {wordIPAs}."
+        },
+        "2": {
+          "upgradeName": "On a linked Device",
+          "upgradeDescription": "Open {appName} on a linked {platformA} or {platformB} device, go to {appName} Settings, and tap Upgrade {appName}.",
+          "upgradeSubDescription": "Soon after upgrading all devices sharing that {appName} account will inherit {wordPro}."
+        }
+      },
+      "desktop": {
+        "1": {
+          "upgradeName": "On a linked device",
+          "upgradeDescription": "Unfortunately, {wordPro} access can only be purchased via the {platformStoreGoogle} or {platformStoreApple}. {appName} developers are working on alternative payment options to allow users to purchase {wordPro} access outside of the {platformStoreGoogle} and {platformStoreApple}.<br></br><br></br>For now, to upgrade a {wordDesktop} device to {wordPro}, open {appName} on a linked {platformAndroid} or {platformIos} device, go to {appName} Settings, and tap Upgrade {appName}.",
+          "upgradeSubDescription": "Soon after upgrading, all devices sharing that {appName} account will inherit {wordPro}."
+        }
+      }
+    },
+    "roadmap": {
+      "1": {
+        "featureName": "Larger File Attachments",
+        "featureDescription": "{appNamePro} will remove the constraints on file sharing for {wordPro} users, allowing attachments well beyond the standard {standardUserFileUploadLimit} limit. This feature leverages the {appNameRouterPossessive} capabilities for more efficient file transfers across the network, making it practical to share documents, images, and media files without leaving the secure {appName} environment.",
+        "featureSubheading": "Key benefits:",
+        "featureSublist": "<li><bold>Share complete documents and high-quality media:</bold> Send PDFs, presentations, and spreadsheets without compression or splitting. Transfer photos and videos in their original resolution, preserving quality for professional or personal use.</li><li><bold>Secure file exchange:</bold> Keep sensitive documents within {appNamePossessive} encrypted environment instead of relying on less secure third-party file sharing services.</li><li><bold>Streamlined workflow:</bold> Eliminate the need to switch between apps or platforms when collaborating on projects or sharing important files.</li>"
+      },
+      "2": {
+        "featureName": "Bigger Groups",
+        "featureDescription": "Groups with at least one {wordPro} administrator will accommodate up to {proUserMaxGroupSize} members—triple the standard {standardUserMaxGroupSize}-member limit. This expanded capacity transforms how larger communities can coordinate and communicate privately on {appName}.",
+        "featureSubheading": "Key benefits:",
+        "featureSublist": "<li><bold>Organization-ready:</bold> Support entire departments, teams, or small companies within a single secure group chat.</li><li><bold>Community building:</bold> Run larger interest-based or regional groups without hitting member limits or splitting conversations.</li><li><bold>Event coordination:</bold> Manage conferences, workshops, or large-scale projects with all stakeholders in one encrypted space.</li>"
+      },
+      "3": {
+        "featureName": "Message Editing and Formatting",
+        "featureDescription": "{appNamePro} members will gain access to a full suite of powerful messaging features that enhance how messages are composed and refined. These tools bring professional communication capabilities to {appName} while maintaining complete privacy. These features will also roll out on a limited basis for free users, ensuring everyone benefits from {appNamePossessive} evolution.",
+        "featureSubheading": "Key benefits:",
+        "featureSublist": "<li><bold>Markdown formatting:</bold> Style messages with rich text formatting for clearer communication in 1:1 conversations, group chats and communities.</li><li><bold>Message editing:</bold> Correct typos and update sent messages at any point after sending.</li><li><bold>Professional communication:</bold> Create well-structured messages with bold, italics, lists, and code blocks for technical discussions or detailed explanations</li>"
+      },
+      "4": {
+        "featureName": "Multiple Identities",
+        "featureDescription": "A highly requested feature, multi-account support will allow users to manage multiple {appName} identities within a single installation. This powerful feature will let users compartmentalize different aspects of their digital life without juggling multiple devices or app installations. Free users of {appName} will also have access to multi-account support on a more limited basis.",
+        "featureSubheading": "Key benefits:",
+        "featureSublist": "<li><bold>Identity separation:</bold> Maintain distinct personas for work, personal, and anonymous communications without cross-contamination.</li><li><bold>Simplified switching:</bold> Toggle between accounts instantly without logging in and out or managing multiple apps.</li><li><bold>Enhanced operational security:</bold> Reduce the risk of accidentally mixing professional and personal contacts or conversations.</li>"
+      },
+      "heading": "Roadmap"
+    },
+    "faq": {
+      "1": {
+        "question": "What is included in {appNamePro}?"
+      },
+      "2": {
+        "question": "How does {appNamePro} affect my privacy?"
+      },
+      "3": {
+        "question": "Is {appName} still free?"
+      },
+      "4": {
+        "question": "What is the difference between {wordsProBeta} and {wordPro}?"
+      },
+      "5": {
+        "question": "Can I purchase {appNamePro} for my friend?"
+      },
+      "6": {
+        "question": "How can I purchase {appNamePro} for my account?"
+      },
+      "7": {
+        "question": "Can I refund my purchase?"
+      },
+      "8": {
+        "question": "How are funds from {appNamePro} used?"
+      },
+      "9": {
+        "question": "Will more features be added to {wordPro} in the future?"
+      },
+      "heading": "FAQ"
     }
   }
 }
