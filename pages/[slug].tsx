@@ -43,8 +43,6 @@ function shouldBuildSlug(slug: string): boolean {
     }
   }
 
-  console.log(forbiddenWords)
-
   for (const w of forbiddenWords) {
     if (slug.includes(w)) {
       return false;
@@ -75,7 +73,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
   if (!shouldBuildSlug(slug)) {
     console.log(
       `Slug returned false in the shouldBuildSlug check, not building: Page%c${slug ? ` /${slug}` : ''}`,
-      'color: purple;'
+      'color: purple;',
     );
     return {
       props: { messages },

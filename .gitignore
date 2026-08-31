@@ -42,3 +42,7 @@ yarn-error.log*
 *.tsbuildinfo
 
 tmp
+
+crowdin-faq-answers.csv
+crowdin-new-strings.csv*
+crowdin-new-strings.state.json

@@ -12,7 +12,8 @@
     "lint:fix": "biome lint --write",
     "format": "biome format --write",
     "check": "biome check",
-    "check:fix": "biome check --write"
+    "check:fix": "biome check --write",
+    "crowdin:pull": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/pull-crowdin-locales.ts"
   },
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^15.3.5",

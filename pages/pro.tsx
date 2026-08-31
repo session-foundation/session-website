@@ -376,13 +376,21 @@ font-weight: 400;
 line-height: 120%; /* 24px */
 `;
 
+function getProPriceFrom() {
+  const cheapestPerMonth = proPricing.plans[proPricing.plans.length - 1];
+  const price = cheapestPerMonth.priceNumber / 12;
+  const priceWithDigits = Math.floor(price * 100) / 100;
+
+  return `$${priceWithDigits} ${cheapestPerMonth.currency}`;
+}
+
 function ProPrice() {
   const t = useTranslations('pro.features');
 
-  const price = proPricing.plans[0].price;
+  const priceWithCurrency = getProPriceFrom();
 
   return (
-    <span className="text-gray-lighter text-sm"> {t('priceFrom', { ...localeArgs, price })}</span>
+    <span className="text-gray-lighter text-sm"> {t('priceFrom', { ...localeArgs, price: priceWithCurrency })}</span>
   );
 }
 
@@ -1039,6 +1047,23 @@ function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 }
 
   const id = question.toLocaleLowerCase().replaceAll(' ', '-').replaceAll('?', '');
 
+  const answer = t.rich(`${localeKey}.answer`, {
+    ...localeArgs,
+    price: getProPriceFrom(),
+    br: () => <br />,
+    bold: (chunks: ReactNode) => <strong className="font-bold">{chunks}</strong>,
+    // list-style-type is inherited, so the marker comes from the list element and one `li`
+    // handler serves both <ol> and <ul>
+    ol: (chunks: ReactNode) => <ol className="mt-3 mb-3 ml-7 list-decimal">{chunks}</ol>,
+    ul: (chunks: ReactNode) => <ul className="mt-3 mb-3 ml-7 list-disc">{chunks}</ul>,
+    li: (chunks: ReactNode) => <li>{chunks}</li>,
+    'roadmap-link': (chunks: ReactNode) => (
+      <a href="#roadmap" className="text-primary-dark">
+        {chunks}
+      </a>
+    ),
+  });
+
   return (
     <Collapsible className="transition-all duration-300" id={id}>
       <StyledCollapsibleTrigger className="flex w-full flex-row flex-wrap gap-2 bg-[#E8E8E8] px-2 py-2 text-left font-bold transition-all duration-300">
@@ -1054,7 +1079,7 @@ function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 }
       </StyledCollapsibleTrigger>
       <StyledCollapsibleContent className="rounded-b-xl transition-all duration-300">
         <StyledRoundedPanelButtonGroup className="rounded-b-xl px-6 text-left">
-          Yes this is mock content, yes there will be real content, yes this seems to be working.
+          <p className="whitespace-normal break-words">{answer}</p>
         </StyledRoundedPanelButtonGroup>
       </StyledCollapsibleContent>
     </Collapsible>

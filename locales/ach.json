@@ -80,7 +80,6 @@
       "content": "crwdns38110:0{appName}crwdne38110:0"
     },
     "benefits": {
-      "title": "crwdns38112:0crwdne38112:0",
       "1": {
         "heading": "crwdns38114:0crwdne38114:0",
         "content": "crwdns38116:0crwdne38116:0"
@@ -104,11 +103,10 @@
       "6": {
         "heading": "crwdns38134:0crwdne38134:0",
         "content": "crwdns38136:0crwdne38136:0"
-      }
+      },
+      "title": "crwdns38112:0crwdne38112:0"
     },
     "features": {
-      "title": "crwdns38138:0crwdne38138:0",
-      "heading": "crwdns38140:0crwdne38140:0",
       "1": {
         "heading": "crwdns38142:0crwdne38142:0",
         "content": "crwdns38144:0crwdne38144:0"
@@ -120,7 +118,9 @@
       "3": {
         "heading": "crwdns38150:0crwdne38150:0",
         "content": "crwdns38152:0{featureGroup}crwdnd38152:0{featureCommunity}crwdne38152:0"
-      }
+      },
+      "title": "crwdns38138:0crwdne38138:0",
+      "heading": "crwdns38140:0crwdne38140:0"
     }
   },
   "redirect": {
@@ -183,8 +183,6 @@
     }
   },
   "donate": {
-    "heading": "crwdns38858:0{appName}crwdne38858:0",
-    "heroContent": "crwdns38860:0{appName}crwdnd38860:0{appName}crwdnd38860:0{appName}crwdnd38860:0{appName}crwdne38860:0",
     "1": {
       "heading": "crwdns38862:0crwdne38862:0",
       "content": "crwdns38872:0crwdne38872:0"
@@ -205,11 +203,17 @@
       "heading": "crwdns38870:0crwdne38870:0",
       "content": "crwdns38880:0{ethSymbol}crwdnd38880:0{usdcSymbol}crwdnd38880:0{usdtSymbol}crwdnd38880:0{btcSymbol}crwdnd38880:0{foundationName}crwdne38880:0"
     },
-    "heroAppeal": "crwdns39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{foundationNameWithAcronym}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{foundationAcronym}crwdnd39082:0{appName}crwdne39082:0",
     "6": {
       "heading": "crwdns39084:0{wordSilentDonor}crwdne39084:0",
       "content": "crwdns39086:0{foundationName}crwdnd39086:0{wordSilentDonor}crwdnd39086:0{wordSilentDonor}crwdnd39086:0{foundationAcronym}crwdne39086:0"
     },
+    "7": {
+      "heading": "crwdns39128:0crwdne39128:0",
+      "content": "crwdns39130:0crwdne39130:0"
+    },
+    "heading": "crwdns38858:0{appName}crwdne38858:0",
+    "heroContent": "crwdns38860:0{appName}crwdnd38860:0{appName}crwdnd38860:0{appName}crwdnd38860:0{appName}crwdne38860:0",
+    "heroAppeal": "crwdns39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{foundationNameWithAcronym}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{appName}crwdnd39082:0{foundationAcronym}crwdnd39082:0{appName}crwdne39082:0",
     "buttonCard": "crwdns39088:0crwdne39088:0",
     "buttonCrypto": "crwdns39090:0crwdne39090:0",
     "faq": {
@@ -220,10 +224,6 @@
       "3": {
         "question": "crwdns39100:0crwdne39100:0",
         "answer": "crwdns39102:0{foundationName}crwdnd39102:0{appName}crwdnd39102:0{appName}crwdne39102:0"
-      },
-      "tax-question": {
-        "question": "crwdns39124:0crwdne39124:0",
-        "answer": "crwdns39126:0crwdne39126:0"
       },
       "5": {
         "question": "crwdns39142:0{foundationName}crwdne39142:0",
@@ -236,13 +236,13 @@
       "7": {
         "question": "crwdns39150:0{appName}crwdne39150:0",
         "answer": "crwdns39152:0{appName}crwdnd39152:0{appName}crwdnd39152:0{appName}crwdnd39152:0{wordCrowdin}crwdnd39152:0{appNamePossessive}crwdne39152:0"
+      },
+      "tax-question": {
+        "question": "crwdns39124:0crwdne39124:0",
+        "answer": "crwdns39126:0crwdne39126:0"
       }
     },
-    "appealHeading": "crwdns39108:0{appName}crwdne39108:0",
-    "7": {
-      "heading": "crwdns39128:0crwdne39128:0",
-      "content": "crwdns39130:0crwdne39130:0"
-    }
+    "appealHeading": "crwdns39108:0{appName}crwdne39108:0"
   },
   "pro": {
     "heading": "crwdns39201:0crwdne39201:0",
@@ -356,31 +356,40 @@
     },
     "faq": {
       "1": {
-        "question": "crwdns39323:0{appNamePro}crwdne39323:0"
+        "question": "crwdns39323:0{appNamePro}crwdne39323:0",
+        "answer": "crwdns39343:0{wordsProBeta}crwdnd39343:0{wordPro}crwdnd39343:0{appName}crwdnd39343:0{wordPro}crwdnd39343:0{appName}crwdne39343:0"
       },
       "2": {
-        "question": "crwdns39325:0{appNamePro}crwdne39325:0"
+        "question": "crwdns39325:0{appNamePro}crwdne39325:0",
+        "answer": "crwdns39345:0{appName}crwdnd39345:0{wordPro}crwdnd39345:0{platformStoreAppleShort}crwdnd39345:0{platformStoreGoogleShort}crwdnd39345:0{foundationName}crwdnd39345:0{wordPro}crwdnd39345:0{wordPro}crwdnd39345:0{wordPro}crwdnd39345:0{appName}crwdnd39345:0{wordPro}crwdnd39345:0{wordPro}crwdne39345:0"
       },
       "3": {
-        "question": "crwdns39327:0{appName}crwdne39327:0"
+        "question": "crwdns39327:0{appName}crwdne39327:0",
+        "answer": "crwdns39347:0{standardUserFileUploadLimit}crwdnd39347:0{standardUserMaxGroupSize}crwdnd39347:0{wordPro}crwdne39347:0"
       },
       "4": {
-        "question": "crwdns39329:0{wordsProBeta}crwdnd39329:0{wordPro}crwdne39329:0"
+        "question": "crwdns39329:0{wordsProBeta}crwdnd39329:0{wordPro}crwdne39329:0",
+        "answer": "crwdns39349:0{wordsProBeta}crwdnd39349:0{wordPro}crwdnd39349:0{wordPro}crwdnd39349:0{wordPro}crwdnd39349:0{wordBeta}crwdnd39349:0{wordBeta}crwdne39349:0"
       },
       "5": {
-        "question": "crwdns39331:0{appNamePro}crwdne39331:0"
+        "question": "crwdns39331:0{appNamePro}crwdne39331:0",
+        "answer": "crwdns39351:0{appName}crwdne39351:0"
       },
       "6": {
-        "question": "crwdns39333:0{appNamePro}crwdne39333:0"
+        "question": "crwdns39333:0{appNamePro}crwdne39333:0",
+        "answer": "crwdns39353:0{platformAndroid}crwdnd39353:0{platformIos}crwdnd39353:0{appName}crwdnd39353:0{appName}crwdnd39353:0{price}crwdnd39353:0{platformStoreGoogleShort}crwdnd39353:0{platformStoreAppleShort}crwdnd39353:0{appName}crwdnd39353:0{wordFDroid}crwdnd39353:0{wordAPK}crwdnd39353:0{wordIPAs}crwdnd39353:0{wordPro}crwdnd39353:0{wordDesktop}crwdnd39353:0{platformAndroid}crwdnd39353:0{platformIos}crwdnd39353:0{appName}crwdnd39353:0{wordPro}crwdne39353:0"
       },
       "7": {
-        "question": "crwdns39335:0crwdne39335:0"
+        "question": "crwdns39335:0crwdne39335:0",
+        "answer": "crwdns39355:0{platformStoreGoogleShort}crwdnd39355:0{platformStoreAppleShort}crwdnd39355:0{foundationName}crwdnd39355:0{platformStoreGoogleShort}crwdnd39355:0{wordApple}crwdnd39355:0{wordPro}crwdnd39355:0{wordPro}crwdne39355:0"
       },
       "8": {
-        "question": "crwdns39337:0{appNamePro}crwdne39337:0"
+        "question": "crwdns39337:0{appNamePro}crwdne39337:0",
+        "answer": "crwdns39357:0{wordPro}crwdnd39357:0{foundationName}crwdnd39357:0{appName}crwdnd39357:0{appName}crwdnd39357:0{appName}crwdnd39357:0{wordPro}crwdnd39357:0{wordPro}crwdnd39357:0{wordPro}crwdnd39357:0{appName}crwdne39357:0"
       },
       "9": {
-        "question": "crwdns39339:0{wordPro}crwdne39339:0"
+        "question": "crwdns39339:0{wordPro}crwdne39339:0",
+        "answer": "crwdns39359:0{wordsProBeta}crwdnd39359:0{standardUserFileUploadLimit}crwdnd39359:0{proUserMaxGroupSize}crwdnd39359:0{wordPro}crwdnd39359:0{wordPro}crwdne39359:0"
       },
       "heading": "crwdns39341:0crwdne39341:0"
     }

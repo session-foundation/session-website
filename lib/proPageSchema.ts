@@ -13,6 +13,7 @@ export type PricingPlan = {
   label: string; // e.g. "Monthly", "3 Months", "Annual"
   unitText: 'MONTH' | 'YEAR';
   price: string; // e.g. "2.49"
+  priceNumber: number;
   currency: string; // e.g. "USD"
 };
 
@@ -114,7 +115,14 @@ function resolve(obj: Record<string, any>, path: string): string {
   const t = new LocalizedStringBuilder(rawMessage as any);
   t.withArgs({ ...NON_LOCALIZED_STRING });
   // @ts-expect-error TODO: make method public
-  return t.formatStringWithArgs(rawMessage);
+  const formatted: string = t.formatStringWithArgs(rawMessage);
+
+  // schema.org values are plain text, so the rich-text tags the page renders (<br>, <bold>,
+  // <li>, the link tags) would otherwise ship as literal markup inside the JSON-LD
+  return formatted
+    .replace(/<[^<>]*>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
 function buildOffersSchema(pricing: ProPageSchemaProps['pricing']): SchemaOffer[] {

@@ -80,7 +80,6 @@
       "content": "{appName} es una aplicación de mensajería con cifrado de <span>extremo a extremo</span> que protege tus datos <span>personales</span>. Recupera el control con una app de mensajería diseñada, desarrollada y operada por una comunidad <span>global</span> de expertos en <span>privacidad</span>."
     },
     "benefits": {
-      "title": "Beneficios",
       "1": {
         "heading": "Sin números de teléfono",
         "content": "Protege tu identidad con {featureAccountIds}.<br></br>No es necesario ningún número de teléfono o correo electrónico para registrarte."
@@ -104,11 +103,10 @@
       "6": {
         "heading": "Sin rastreadores",
         "content": "Tus datos nunca se recopilan, nunca se rastrean,<br></br>y nunca se venden a terceros."
-      }
+      },
+      "title": "Beneficios"
     },
     "features": {
-      "title": "Características",
-      "heading": "Disfruta de las funciones que te encantan y de la seguridad que necesitas.",
       "1": {
         "heading": "Habla libremente",
         "content": "Solo tú y la persona con la que hablas pueden ver tus mensajes. Disfruta la sensación de libertad con cifrado de extremo a extremo y mensajes que desaparecen."
@@ -120,7 +118,9 @@
       "3": {
         "heading": "Sigue el ritmo de tu grupo",
         "content": "Ya sea poniéndote al día con amigos cercanos u organizando un gran evento, es fácil con chats seguros de {featureGroup} y {featureCommunity} (100+ miembros)."
-      }
+      },
+      "title": "Características",
+      "heading": "Disfruta de las funciones que te encantan y de la seguridad que necesitas."
     }
   },
   "redirect": {
@@ -183,8 +183,6 @@
     }
   },
   "donate": {
-    "heading": "{appName} necesita tu ayuda",
-    "heroContent": "La mensajería privada es una parte esencial de nuestra vida moderna. La comunicación segura protege a las personas de la tiranía, protege a quienes luchan contra la injusticia y empodera a los defensores de los derechos humanos en todo el mundo.<br></br><br></br> Sin embargo, los poderosos opositores a la privacidad están trabajando activamente para suprimir la tecnología que protege los derechos humanos básicos y la dignidad de las personas. Los políticos de todo el mundo están impulsando leyes que debilitan el cifrado, la tecnología de privacidad es difamada en los medios y los capitalistas de la vigilancia se benefician del caos.<image></image> A pesar de la adversidad, {appName} sigue ofreciendo un espacio seguro, protegido y confiable para que las personas se comuniquen en línea. {appName} es una aplicación de mensajería gratuita, privada y segura. No rastrea a los usuarios ni vende tus datos; simplemente envía mensajes de forma privada. Millones de personas en todo el mundo han recurrido a Session cuando necesitaban un lugar seguro y protegido para conversar.<br></br><br></br> Más que una simple herramienta, {appName} es un símbolo de la importancia de la tecnología de código abierto, transparente y resiliente. Es tecnología como {appName} la que protege nuestros derechos humanos básicos en una era de creciente incertidumbre y autoritarismo.",
     "1": {
       "heading": "Una fuerza para el bien",
       "content": "La tecnología está transformando nuestra sociedad. Actualmente, un pequeño grupo de personas e instituciones poderosas tiene un control desproporcionado sobre internet. En muchos casos, la tecnología se utiliza para silenciar, manipular y reprimir. Ha llegado el momento de hacer frente a estas fuerzas de poder.<image></image>Somos agentes de cambio en un mundo donde la tecnología es una herramienta para acabar con la opresión. Creemos en un futuro en el que la tecnología sea colaborativa, transparente, equitativa y liberadora."
@@ -205,11 +203,17 @@
       "heading": "Donar con criptomonedas",
       "content": "Puedes enviar {ethSymbol}, {usdcSymbol}, {usdtSymbol} o {btcSymbol} a las siguientes direcciones de {foundationName}."
     },
-    "heroAppeal": "Gracias al increíble y continuo apoyo que {appName} ha recibido de la comunidad, hemos asegurado un camino a seguir para continuar desarrollando {appName} más allá del 8 de julio. Un equipo más pequeño continuará el desarrollo hasta 2027, centrado en fortalecer el proyecto y construir una base para su futuro a largo plazo.<br></br><br></br>Quienes trabajan en {appName} quieren expresar su gratitud a los dedicados miembros de la comunidad que han ayudado a mantener el proyecto en marcha con sus contribuciones, ya sea mediante donaciones directas, continuando operando nodos en la red o difundiendo nuestra campaña de donaciones.<br></br><br></br>Aunque se han cancelado los procedimientos de cierre, la forma del proyecto {appName} sigue cambiando considerablemente. El proyecto ahora estará dirigido por Jason Rhinelander, arquitecto jefe de software de larga trayectoria y miembro de la {foundationNameWithAcronym}.<br></br><br></br>Actualmente, las donaciones recibidas son suficientes para mantener la infraestructura crítica, conservar a Jason como desarrollador y posiblemente añadir otro desarrollador a tiempo completo al proyecto. También sigue habiendo un pequeño equipo de voluntarios que contribuye a otros aspectos del ecosistema.<br></br><br></br>Sin tu apoyo, {appName} ya no existiría.<br></br><br></br>De ahora en adelante, la fundación operará con costos y recursos mucho menores. Seguirá investigando formas de obtener financiación adicional, ya sea mediante contribuciones externas o a través de iniciativas como {appName} Pro.<br></br><br></br>A pesar de la reciente incertidumbre, {appName} sigue siendo una aplicación exitosa — con millones de descargas, sólidas valoraciones en las tiendas de aplicaciones y un crecimiento continuo (superando recientemente los 1,7 millones de usuarios activos mensuales).<br></br><br></br>{appName} tiene la fortuna de contar con colaboradores que creen profundamente en su misión y están dispuestos a aceptar una compensación menor de la que podrían ganar en otros lugares o a ofrecer su tiempo como voluntarios para apoyar el ecosistema. Si has donado durante esta campaña, te lo agradecemos sinceramente. Cada contribución ayuda a impulsar {appName}. Aunque la fundación ahora cuenta con la financiación necesaria para que {appName} siga avanzando, las donaciones adicionales son bienvenidas y permitirían a la fundación ampliar el equipo de desarrollo, acelerando la entrega de nuevas mejoras de seguridad, privacidad y usabilidad.<br></br><br></br>Si te interesa saber más, mira <youtube-link>este</youtube-link> video con Jason, los cofundadores Kee y Chris, y Alex, presidente de {foundationAcronym}.<br></br><br></br>La fundación ahora tiene un camino a seguir para {appName}, pero todavía hay mucho más que se puede lograr con apoyo adicional. Si crees que puedes ayudar, por favor ponte en contacto con <donate-email></donate-email>.",
     "6": {
       "heading": "Donar a través de {wordSilentDonor}",
       "content": "Individuals may make an anonymous tax deductible gift to the {foundationName} using <silent-donor-link>{wordSilentDonor}</silent-donor-link>.<br></br><br></br>{wordSilentDonor} is a third party which can facilitate donations to the {foundationAcronym} using card, bank transfer, and <crypto-icons>crypto</crypto-icons>"
     },
+    "7": {
+      "heading": "Preguntas frecuentes",
+      "content": ""
+    },
+    "heading": "{appName} necesita tu ayuda",
+    "heroContent": "La mensajería privada es una parte esencial de nuestra vida moderna. La comunicación segura protege a las personas de la tiranía, protege a quienes luchan contra la injusticia y empodera a los defensores de los derechos humanos en todo el mundo.<br></br><br></br> Sin embargo, los poderosos opositores a la privacidad están trabajando activamente para suprimir la tecnología que protege los derechos humanos básicos y la dignidad de las personas. Los políticos de todo el mundo están impulsando leyes que debilitan el cifrado, la tecnología de privacidad es difamada en los medios y los capitalistas de la vigilancia se benefician del caos.<image></image> A pesar de la adversidad, {appName} sigue ofreciendo un espacio seguro, protegido y confiable para que las personas se comuniquen en línea. {appName} es una aplicación de mensajería gratuita, privada y segura. No rastrea a los usuarios ni vende tus datos; simplemente envía mensajes de forma privada. Millones de personas en todo el mundo han recurrido a Session cuando necesitaban un lugar seguro y protegido para conversar.<br></br><br></br> Más que una simple herramienta, {appName} es un símbolo de la importancia de la tecnología de código abierto, transparente y resiliente. Es tecnología como {appName} la que protege nuestros derechos humanos básicos en una era de creciente incertidumbre y autoritarismo.",
+    "heroAppeal": "Gracias al increíble y continuo apoyo que {appName} ha recibido de la comunidad, hemos asegurado un camino a seguir para continuar desarrollando {appName} más allá del 8 de julio. Un equipo más pequeño continuará el desarrollo hasta 2027, centrado en fortalecer el proyecto y construir una base para su futuro a largo plazo.<br></br><br></br>Quienes trabajan en {appName} quieren expresar su gratitud a los dedicados miembros de la comunidad que han ayudado a mantener el proyecto en marcha con sus contribuciones, ya sea mediante donaciones directas, continuando operando nodos en la red o difundiendo nuestra campaña de donaciones.<br></br><br></br>Aunque se han cancelado los procedimientos de cierre, la forma del proyecto {appName} sigue cambiando considerablemente. El proyecto ahora estará dirigido por Jason Rhinelander, arquitecto jefe de software de larga trayectoria y miembro de la {foundationNameWithAcronym}.<br></br><br></br>Actualmente, las donaciones recibidas son suficientes para mantener la infraestructura crítica, conservar a Jason como desarrollador y posiblemente añadir otro desarrollador a tiempo completo al proyecto. También sigue habiendo un pequeño equipo de voluntarios que contribuye a otros aspectos del ecosistema.<br></br><br></br>Sin tu apoyo, {appName} ya no existiría.<br></br><br></br>De ahora en adelante, la fundación operará con costos y recursos mucho menores. Seguirá investigando formas de obtener financiación adicional, ya sea mediante contribuciones externas o a través de iniciativas como {appName} Pro.<br></br><br></br>A pesar de la reciente incertidumbre, {appName} sigue siendo una aplicación exitosa — con millones de descargas, sólidas valoraciones en las tiendas de aplicaciones y un crecimiento continuo (superando recientemente los 1,7 millones de usuarios activos mensuales).<br></br><br></br>{appName} tiene la fortuna de contar con colaboradores que creen profundamente en su misión y están dispuestos a aceptar una compensación menor de la que podrían ganar en otros lugares o a ofrecer su tiempo como voluntarios para apoyar el ecosistema. Si has donado durante esta campaña, te lo agradecemos sinceramente. Cada contribución ayuda a impulsar {appName}. Aunque la fundación ahora cuenta con la financiación necesaria para que {appName} siga avanzando, las donaciones adicionales son bienvenidas y permitirían a la fundación ampliar el equipo de desarrollo, acelerando la entrega de nuevas mejoras de seguridad, privacidad y usabilidad.<br></br><br></br>Si te interesa saber más, mira <youtube-link>este</youtube-link> video con Jason, los cofundadores Kee y Chris, y Alex, presidente de {foundationAcronym}.<br></br><br></br>La fundación ahora tiene un camino a seguir para {appName}, pero todavía hay mucho más que se puede lograr con apoyo adicional. Si crees que puedes ayudar, por favor ponte en contacto con <donate-email></donate-email>.",
     "buttonCard": "Donar con tarjeta",
     "buttonCrypto": "Donar con criptomonedas",
     "faq": {
@@ -220,10 +224,6 @@
       "3": {
         "question": "¿Para qué se usará mi donación?",
         "answer": "Tu donación será recibida por la <foundation-link>{foundationName}</foundation-link>, una fundación con sede en Suiza que es la actual responsable de la aplicación y el proyecto {appName}. Tu donación se utilizará para apoyar el desarrollo continuo y la sostenibilidad de {appName}."
-      },
-      "tax-question": {
-        "question": "¿Puedo hacer una donación deducible de impuestos?",
-        "answer": ""
       },
       "5": {
         "question": "¿Qué es {foundationName}?",
@@ -236,13 +236,13 @@
       "7": {
         "question": "¿Hay alguna otra forma en que pueda ayudar a {appName}?",
         "answer": "Las donaciones son actualmente la principal forma en que puedes ayudar a apoyar a {appName}. Sin embargo, si no puedes donar, hay varias otras formas en las que puedes ayudar:<ol><li>Comparte este llamamiento con amigos y familiares que usen {appName} y que puedan estar interesados en apoyar nuestra misión.</li><li>Ayuda a traducir {appName} a otros idiomas a través de <crowdin-link>{wordCrowdin}</crowdin-link></li><li>Contribuye a la <github-link>base de código de código abierto</github-link> de {appNamePossessive}</li></ol>"
+      },
+      "tax-question": {
+        "question": "¿Puedo hacer una donación deducible de impuestos?",
+        "answer": ""
       }
     },
-    "appealHeading": "Un camino a seguir para {appName}",
-    "7": {
-      "heading": "Preguntas frecuentes",
-      "content": ""
-    }
+    "appealHeading": "Un camino a seguir para {appName}"
   },
   "pro": {
     "heading": "Privacy that feels <pro-badge></pro-badge>",
@@ -356,31 +356,40 @@
     },
     "faq": {
       "1": {
-        "question": "What is included in {appNamePro}?"
+        "question": "What is included in {appNamePro}?",
+        "answer": "{wordsProBeta} unlocks four features today:<ul><li><bold>Longer Messages</bold>: send up to 10,000 characters in any conversation.</li><li><bold>Unlimited Pins</bold>: pin as many conversations as you like.</li><li><bold>Animated Display Pictures</bold>: set a GIF or animated WebP as your display picture.</li><li><bold>{wordPro} Badge</bold>: an optional badge next to your display name, which you can switch off at any time in {appName} Settings.</li></ul>{wordPro} is attached to your {appName} account, not to one device, so every linked device inherits it. More features are on the way. See the <roadmap-link>Roadmap</roadmap-link> for what’s coming next."
       },
       "2": {
-        "question": "How does {appNamePro} affect my privacy?"
+        "question": "How does {appNamePro} affect my privacy?",
+        "answer": "It doesn’t change how {appName} protects you. Buying {wordPro} requires no email address, phone number, or personal details, and creates no account with us. Your subscription is handled entirely by the {platformStoreAppleShort} or {platformStoreGoogleShort}, so the {foundationName} never receives your name, card, or billing details.<br></br><br></br>When you use a {wordPro} feature, your app attaches a cryptographic proof of entitlement. That proof:<ul><li>is issued to a short-lived <bold>rotating key</bold>, not to your account;</li><li>carries <bold>no identity information</bold>, and cannot be traced back to your purchase;</li><li>is verified by the people you message <bold>on their own device</bold>, with nothing sent to a server.</li></ul>Encryption, onion routing, and metadata handling are <bold>identical for {wordPro} and free users</bold>. Your {wordPro} badge is optional and can be switched off in {appName} Settings, though using a {wordPro} feature still tells the people in that conversation that you have {wordPro}."
       },
       "3": {
-        "question": "Is {appName} still free?"
+        "question": "Is {appName} still free?",
+        "answer": "<bold>Yes, and it always will be.</bold> These stay free, for everyone, with no ads and no data collection:<ul><li>End-to-end encrypted messaging</li><li>Accounts with no phone number</li><li>Onion routing</li><li>Attachments up to {standardUserFileUploadLimit}</li><li>Groups of up to {standardUserMaxGroupSize} members</li></ul>{wordPro} is entirely optional: it adds features on top of the free app, and helps pay for the network those features run on."
       },
       "4": {
-        "question": "What is the difference between {wordsProBeta} and {wordPro}?"
+        "question": "What is the difference between {wordsProBeta} and {wordPro}?",
+        "answer": "{wordsProBeta} is {wordPro} as it exists today: the first set of features, released early so people can use them (and help us find the rough edges) while the rest is built.<br></br><br></br><bold>It is the same subscription.</bold> Features that ship while you are subscribed, including everything on the <roadmap-link>Roadmap</roadmap-link>, are part of your {wordPro} access rather than a separate purchase, and that access carries over as {wordPro} leaves {wordBeta}. The {wordBeta} label will be dropped once the full feature set has landed and settled."
       },
       "5": {
-        "question": "Can I purchase {appNamePro} for my friend?"
+        "question": "Can I purchase {appNamePro} for my friend?",
+        "answer": "<bold>Not at the moment.</bold> A subscription is bought from inside {appName} and is bound to the account that bought it, so it can’t be gifted, transferred, or applied to someone else’s account. For now, a friend needs to upgrade from their own device."
       },
       "6": {
-        "question": "How can I purchase {appNamePro} for my account?"
+        "question": "How can I purchase {appNamePro} for my account?",
+        "answer": "On {platformAndroid} or {platformIos}:<ol><li>Open {appName} and go to <bold>Settings</bold>.</li><li>Tap <bold>Upgrade {appName}</bold>.</li><li>Choose a plan: monthly, 3 months, or annual, from {price} per month. Your store charges the equivalent in your local currency.</li></ol>Payment goes through {platformStoreGoogleShort} or the {platformStoreAppleShort}, so {appName} must have been installed from one of those stores: in-app billing isn’t available on {wordFDroid} or {wordAPK} installs, or on sideloaded {wordIPAs}.<br></br><br></br>{wordPro} can’t be purchased on {wordDesktop} yet. Upgrade on a linked {platformAndroid} or {platformIos} device instead, and shortly after, every device signed in to that {appName} account will have {wordPro}. We’re working on payment options outside the two app stores."
       },
       "7": {
-        "question": "Can I refund my purchase?"
+        "question": "Can I refund my purchase?",
+        "answer": "Refunds are handled by {platformStoreGoogleShort} and the {platformStoreAppleShort} under their own policies, <bold>not by the {foundationName}</bold>: we never receive your payment details, so we can’t process one for you. Request a refund through:<ul><li>{platformStoreGoogleShort}: your order history at play.google.com</li><li>{wordApple}: reportaproblem.apple.com</li></ul>If a refund is granted, {wordPro} access ends once the store notifies us.<br></br><br></br>If you only want to stop future charges, <bold>cancel the subscription in the store</bold> instead: {wordPro} stays active until the end of the period you’ve already paid for."
       },
       "8": {
-        "question": "How are funds from {appNamePro} used?"
+        "question": "How are funds from {appNamePro} used?",
+        "answer": "Revenue from {wordPro} supports both the {foundationName}, the Swiss non-profit foundation that stewards {appName}, and the decentralised network that carries your messages. It funds:<ul><li>ongoing development of {appName};</li><li>the network that routes and stores your messages;</li><li>the infrastructure {appName} depends on, including the file server and push notification server.</li></ul>It also pays for itself: {wordPro} features such as long messages and large attachments use more of that network than ordinary messaging does, and {wordPro} subscriptions offset the cost.<br></br><br></br>Together with donations, {wordPro} is how {appName} stays sustainable <bold>without ads, tracking, or monetising anything about its users</bold>."
       },
       "9": {
-        "question": "Will more features be added to {wordPro} in the future?"
+        "question": "Will more features be added to {wordPro} in the future?",
+        "answer": "<bold>Yes.</bold> {wordsProBeta} is a starting point, not the finished product. Some upcoming features, in no particular order:<ul><li>File attachments well beyond the {standardUserFileUploadLimit} limit</li><li>Groups of up to {proUserMaxGroupSize} members where an admin has {wordPro}</li><li>Message editing and Markdown formatting</li><li>Multiple identities managed from a single device</li></ul>See the <roadmap-link>Roadmap</roadmap-link> for the detail. Features added later are part of {wordPro} access rather than a separate purchase."
       },
       "heading": "FAQ"
     }
