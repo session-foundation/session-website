@@ -205,8 +205,7 @@ function buildFAQSchema(messages: Record<string, any>) {
  *
  * @example
  * // In getStaticProps:
- * const pricing = await fetchProPricing(context.locale);
- * const schemas = generateProPageSchemas({ locale, pricing, messages });
+ * const schemas = generateProPageSchemas({ locale, pricing: proPricing, messages });
  * return { props: { messages, schemas } };
  *
  * // In ProPage component:

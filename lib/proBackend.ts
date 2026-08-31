@@ -16,13 +16,10 @@ export type PricingApiResponse = {
  *   ]
  * }
  */
-export async function fetchProPricing(locale: string): Promise<PricingApiResponse> {
-  return {
+export const proPricing: PricingApiResponse =  {
     plans: [
       { duration: 'P1M', label: 'Monthly', unitText: 'MONTH', price: '4.49', currency: 'USD' },
       { duration: 'P3M', label: '3 Months', unitText: 'MONTH', price: '11.99', currency: 'USD' },
       { duration: 'P1Y', label: 'Annual', unitText: 'YEAR', price: '35.99', currency: 'USD' },
-    ],
-  };
-
+    ]
 }

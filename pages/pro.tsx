@@ -18,12 +18,12 @@ import { NON_LOCALIZED_STRING } from '@/constants/localization';
 import METADATA from '@/constants/metadata';
 import { isCrowdinLocale, setLocaleInUse, tr } from '@/lib/app_localization';
 import { LUCIDE_ICONS_UNICODE, type WithLucideUnicode } from '@/lib/lucide';
-import { fetchProPricing } from '@/lib/proBackend';
 import {
   generateProPageSchemas,
   getProFeatures,
   type PricingApiResponse,
 } from '@/lib/proPageSchema';
+import { proPricing } from '@/lib/proBackend';
 
 function ProLogoPath() {
   return (
@@ -380,7 +380,7 @@ line-height: 120%; /* 24px */
 function ProPrice() {
   const t = useTranslations('pro.features');
 
-  const price = '$2.49';
+  const price = proPricing.plans[0].price;
 
   return (
     <span className="text-gray-lighter text-sm"> {t('priceFrom', { ...localeArgs, price })}</span>
@@ -1126,16 +1126,7 @@ export const getStaticProps: GetStaticProps = async (context: GetStaticPropsCont
   const locale = context.locale ?? 'en';
   const messages = (await import(`../locales/${locale}.json`)).default;
 
-  // Fetch pricing from API — falls back to empty plans on error so the
-  // page still builds successfully even if the pricing API is down.
-  let pricing: PricingApiResponse = { plans: [] };
-  try {
-    pricing = await fetchProPricing(locale);
-  } catch (err) {
-    console.error('[ProPage] Failed to fetch pricing for schema:', err);
-  }
-
-  const schemas = generateProPageSchemas({ locale, messages, pricing });
+  const schemas = generateProPageSchemas({ locale, messages, pricing: proPricing });
 
   return {
     props: { messages, schemas },
