@@ -30,6 +30,19 @@ export function hasLocalID(node: Block | Inline) {
   return id;
 }
 
+export function slugifyHeading(node: any): string {
+  if (!node?.content || !Array.isArray(node.content)) return '';
+  const text = node.content
+    .filter((n: any) => n?.nodeType === 'text' && typeof n?.value === 'string')
+    .map((n: any) => n.value)
+    .join('');
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .trim()
+    .replace(/\s+/g, '-');
+}
+
 const host = new URL(METADATA.HOST_URL).host;
 
 export function parseUrl(urlStr: string) {

@@ -8,7 +8,7 @@ import Link from 'next/link';
 import { Children, cloneElement, type ReactElement } from 'react';
 import SHORTCODES from '@/constants/shortcodes';
 import { renderEmbeddedEntry } from '@/services/render';
-import { hasLocalID, isLocal, parseUrl } from '@/utils/links';
+import { hasLocalID, isLocal, parseUrl, slugifyHeading } from '@/utils/links';
 import { renderShortcode } from '@/utils/shortcodes';
 
 interface Props {
@@ -138,7 +138,7 @@ export default function RichBody(props: Props): ReactElement {
       [BLOCKS.HEADING_1]: (node, children: any) => (
         <h1
           dir={getDirection(children)}
-          id={hasLocalID(node as Inline)}
+          id={hasLocalID(node as Inline) || slugifyHeading(node)}
           className={classNames('mb-5 text-3xl leading-snug', 'lg:text-5xl', headingClasses)}
         >
           {children}
@@ -147,7 +147,7 @@ export default function RichBody(props: Props): ReactElement {
       [BLOCKS.HEADING_2]: (node, children: any) => (
         <h2
           dir={getDirection(children)}
-          id={hasLocalID(node as Inline)}
+          id={hasLocalID(node as Inline) || slugifyHeading(node)}
           className={classNames('mb-5 text-2xl leading-snug', 'lg:text-3xl', headingClasses)}
         >
           {children}
@@ -156,7 +156,7 @@ export default function RichBody(props: Props): ReactElement {
       [BLOCKS.HEADING_3]: (node, children: any) => (
         <h3
           dir={getDirection(children)}
-          id={hasLocalID(node as Inline)}
+          id={hasLocalID(node as Inline) || slugifyHeading(node)}
           className={classNames('mb-2 text-xl leading-snug', 'lg:text-2xl', headingClasses)}
         >
           {children}
@@ -165,7 +165,7 @@ export default function RichBody(props: Props): ReactElement {
       [BLOCKS.HEADING_4]: (node, children: any) => (
         <h4
           dir={getDirection(children)}
-          id={hasLocalID(node as Inline)}
+          id={hasLocalID(node as Inline) || slugifyHeading(node)}
           className={classNames('mb-2 text-md leading-snug', 'lg:text-xl', headingClasses)}
         >
           {children}
