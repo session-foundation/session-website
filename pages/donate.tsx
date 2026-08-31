@@ -32,7 +32,6 @@ import {
 } from '@/constants/localization';
 import METADATA from '@/constants/metadata';
 import { LUCIDE_ICONS_UNICODE } from '@/lib/lucide';
-import type { DonationProgressData } from './api/donation-progress';
 import {
   StyledCollapsibleContent,
   StyledCollapsibleTrigger,
@@ -83,12 +82,8 @@ const DONORBOX_CAMPAIGN = 'session-technology-foundation-donations';
 
 export function DonorBox({
   showDonateCrypto,
-  showGoal,
-  donationProgress,
 }: {
   showDonateCrypto?: boolean;
-  showGoal?: boolean;
-  donationProgress?: DonationProgressData;
 }) {
   const t = useTranslations('donate');
   useEffect(() => {
@@ -127,9 +122,6 @@ export function DonorBox({
         }}
         className="overflow-hidden rounded-md border border-2 shadow-sm"
       />
-      {showGoal && donationProgress ? (
-        <DonationProgressIndicator compact={true} donationProgress={donationProgress} />
-      ) : null}
       {showDonateCrypto ? (
         <a href="#crypto">
           <Button size="medium" shape="semiround" classes="text-xl w-full">
@@ -278,65 +270,6 @@ function HeroContainer({ children, className }: { children: ReactNode; className
   );
 }
 
-function formatCompactCurrency(amount: number): string {
-  return new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    notation: 'compact',
-    maximumFractionDigits: 1,
-  }).format(amount);
-}
-
-function formatFullCurrency(amount: number): string {
-  return new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    maximumFractionDigits: 0,
-  }).format(amount);
-}
-
-function DonationProgressIndicator({
-  compact = true,
-  donationProgress,
-}: {
-  compact?: boolean;
-  donationProgress: DonationProgressData;
-}) {
-  const { currentAmount, goalAmount, goalBlogPostUrl } = donationProgress;
-  const pct = Math.min((currentAmount / goalAmount) * 100, 100);
-  const format = compact ? formatCompactCurrency : formatFullCurrency;
-
-  return (
-    <section className="w-full rounded-md border bg-white p-6 text-gray-dark shadow-sm">
-      <div className="flex flex-col items-start justify-start">
-        <p className="mb-6 font-bold text-xl md:text-lg lg:text-xl">Fundraising Goal</p>
-        <div className="h-5 w-full overflow-hidden rounded-full bg-gray-200 md:h-6">
-          <div
-            className="h-full rounded-full bg-primary transition-all duration-700"
-            style={{ width: `${pct}%` }}
-            role="progressbar"
-            aria-valuenow={currentAmount}
-            aria-valuemin={0}
-            aria-valuemax={goalAmount}
-          />
-        </div>
-        <div className="mt-3 flex w-full items-center justify-between gap-2 text-sm md:text-base">
-          <span className="font-bold">{format(currentAmount)} raised</span>
-          <span className="flex items-center gap-2 font-normal">
-            <span className="font-bold">{format(goalAmount)} goal</span>
-            <span aria-hidden="true">·</span>
-            <Link
-              href={goalBlogPostUrl}
-              className="underline underline-offset-2 transition-colors hover:opacity-70"
-            >
-              Why this goal?
-            </Link>
-          </span>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function FloatingButtons() {
   const [hideFloatingButtons, setHideFloatingButtons] = useState(false);
@@ -531,19 +464,13 @@ function DonateFAQ() {
           <FAQItem localeKey={3} />
           <FAQItem localeKey={4} />
           <FAQItem localeKey={5} />
-          <FAQItem localeKey={6} />
-          <FAQItem localeKey={7} />
         </div>
       </div>
     </div>
   );
 }
 
-export default function Donate({
-  donationProgress,
-}: {
-  donationProgress: DonationProgressData;
-}): ReactElement {
+export default function Donate(): ReactElement {
   const t = useTranslations('donate');
 
   return (
@@ -557,7 +484,7 @@ export default function Donate({
         <HeroContainer className="md:mb-4 lg:mt-16 2xl:mx-0 2xl:mt-16 2xl:ml-auto 2xl:max-w-5xl 2xl:pb-0 2xl:pl-[180px]">
           <div className="mb-8 w-full md:mb-10">
             <div
-              className="relative w-full overflow-hidden rounded-xl border border-2 bordder-black"
+              className="relative w-full overflow-hidden rounded-xl border border-2 border-black"
               style={{ paddingBottom: '56.25%' }}
             >
               <iframe
@@ -609,12 +536,9 @@ export default function Donate({
             <br />
             <br />- The Session Technology Foundation & Session Team
           </p>
-          <div className="mt-8 block w-full 2xl:hidden">
-            <DonationProgressIndicator donationProgress={donationProgress} />
-          </div>
         </HeroContainer>
         <div className="sticky top-10 mt-16 mr-auto hidden 2xl:block">
-          <DonorBox showDonateCrypto={true} showGoal={true} donationProgress={donationProgress} />
+          <DonorBox showDonateCrypto={true}  />
         </div>
       </div>
       <Section
@@ -694,15 +618,8 @@ export default function Donate({
 export const getServerSideProps: GetServerSideProps = async (
   context: GetServerSidePropsContext
 ) => {
-  const { readDonationProgress } = await import('./api/donation-progress');
 
   const messages = (await import(`../locales/${context.locale}.json`)).default;
 
-  try {
-    const donationProgress = readDonationProgress();
-    return { props: { messages, donationProgress } };
-  } catch (err) {
-    console.error('[donate] Failed to load donation progress data:', err);
-    return { props: { messages, donationProgress: null } };
-  }
+  return { props: { messages } };
 };

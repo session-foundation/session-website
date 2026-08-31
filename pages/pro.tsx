@@ -1123,9 +1123,6 @@ export default function ProPage({
 }
 
 export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext) => {
-  if (process.env.ENABLE_PRO_PAGE !== '1') {
-    return { notFound: true };
-  }
   const locale = context.locale ?? 'en';
   const messages = (await import(`../locales/${locale}.json`)).default;
 
