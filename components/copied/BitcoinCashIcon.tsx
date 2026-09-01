@@ -8,6 +8,8 @@ export const BitcoinCashIcon = forwardRef<SVGSVGElement, SVGAttributes>((props, 
     viewBox="0 0 788 788"
     {...props}
     ref={ref}
+    aria-hidden="true"
+    focusable="false"
   >
     <circle cx="394" cy="394" r="394" style={{ fill: '#0ac18e' }} />
     <path

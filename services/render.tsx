@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/suspicious/noExplicitAny: ignored for now */
 import type { Block, Inline } from '@contentful/rich-text-types';
 import classNames from 'classnames';
 import Image from 'next/legacy/image';
@@ -57,6 +58,7 @@ function EmbeddedLink(node: any, isInline = false, textDirection: string): React
   );
 }
 
+// biome-ignore lint/complexity/noExcessiveCognitiveComplexity: ignored for now
 function EmbeddedMedia(node: any, isInline = false, textDirection: string): ReactElement {
   // biome-ignore lint/correctness/useHookAtTopLevel: This feels a bit weird TODO: look into fixing this
   const { isSmall, isMedium } = useScreen();

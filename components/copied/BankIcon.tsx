@@ -10,6 +10,8 @@ export const BankIcon = forwardRef<SVGSVGElement, SVGAttributes>((props, ref) =>
     xmlns="http://www.w3.org/2000/svg"
     {...props}
     ref={ref}
+    aria-hidden="true"
+    focusable="false"
   >
     <path fill="#66757F" d="M3 16h30v18H3z"></path>
     <path fill="#CCD6DD" d="M2 34h32a2 2 0 0 1 2 2H0a2 2 0 0 1 2-2z"></path>

@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/suspicious/noExplicitAny: ignored for now */
 import { NON_LOCALIZED_STRING } from '@/constants/localization';
 import {
   isCrowdinLocale,
@@ -13,6 +14,7 @@ export type PricingPlan = {
   label: string; // e.g. "Monthly", "3 Months", "Annual"
   unitText: 'MONTH' | 'YEAR';
   price: string; // e.g. "2.49"
+  priceNumber: number;
   currency: string; // e.g. "USD"
 };
 
@@ -51,6 +53,7 @@ export type SchemaRoadmapItem = {
 export type ProPageSchemaProps = {
   locale: string;
   pricing: PricingApiResponse;
+
   messages: Record<string, any>;
 };
 
@@ -114,7 +117,14 @@ function resolve(obj: Record<string, any>, path: string): string {
   const t = new LocalizedStringBuilder(rawMessage as any);
   t.withArgs({ ...NON_LOCALIZED_STRING });
   // @ts-expect-error TODO: make method public
-  return t.formatStringWithArgs(rawMessage);
+  const formatted: string = t.formatStringWithArgs(rawMessage);
+
+  // schema.org values are plain text, so the rich-text tags the page renders (<br>, <bold>,
+  // <li>, the link tags) would otherwise ship as literal markup inside the JSON-LD
+  return formatted
+    .replace(/<[^<>]*>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
 function buildOffersSchema(pricing: ProPageSchemaProps['pricing']): SchemaOffer[] {
@@ -143,7 +153,7 @@ function buildSoftwareApplicationSchema(offers: SchemaOffer[], messages: Record<
   };
 }
 
-function buildProFeaturesSchema(messages: Record<string, any>) {
+function buildProFeaturesSchema(_messages: Record<string, any>) {
   // TODO: set locale
   const features = getProFeatures(false);
 
@@ -205,8 +215,7 @@ function buildFAQSchema(messages: Record<string, any>) {
  *
  * @example
  * // In getStaticProps:
- * const pricing = await fetchProPricing(context.locale);
- * const schemas = generateProPageSchemas({ locale, pricing, messages });
+ * const schemas = generateProPageSchemas({ locale, pricing: proPricing, messages });
  * return { props: { messages, schemas } };
  *
  * // In ProPage component:

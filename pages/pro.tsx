@@ -18,18 +18,20 @@ import { NON_LOCALIZED_STRING } from '@/constants/localization';
 import METADATA from '@/constants/metadata';
 import { isCrowdinLocale, setLocaleInUse, tr } from '@/lib/app_localization';
 import { LUCIDE_ICONS_UNICODE, type WithLucideUnicode } from '@/lib/lucide';
-import { fetchProPricing } from '@/lib/proBackend';
-import {
-  generateProPageSchemas,
-  getProFeatures,
-  type PricingApiResponse,
-} from '@/lib/proPageSchema';
+import { proPricing } from '@/lib/proBackend';
+import { generateProPageSchemas, getProFeatures } from '@/lib/proPageSchema';
 
 function ProLogoPath() {
   return (
     <>
       <span className="sr-only">{NON_LOCALIZED_STRING.wordPro}</span>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 53 25">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 53 25"
+        aria-hidden="true"
+        focusable="false"
+      >
         <path
           fill="#000"
           d="M7.216 17.372V8.06h7.268c2.315 0 3.725 1.306 3.725 3.505 0 2.147-1.461 3.453-3.776 3.453h-4.178v2.354h-3.04Zm3.04-4.772h3.646c.828 0 1.28-.194 1.28-1.035 0-.854-.452-1.035-1.28-1.035h-3.647v2.07Zm9.376 4.772V8.06h7.566c2.548 0 3.802.983 3.802 2.858 0 1.28-.711 2.134-1.94 2.51 1.216.064 1.94.736 1.94 1.888v2.056h-3.04V15.82c0-.84-.232-1.086-1.06-1.086h-4.229v2.638h-3.04Zm3.04-5.018H26.5c.84 0 1.435-.155 1.435-.957 0-.815-.595-.957-1.435-.957h-3.83v1.914Zm16.258 5.251c-3.958 0-6.506-1.927-6.506-4.915 0-2.948 2.56-4.863 6.505-4.863 3.958 0 6.519 1.915 6.519 4.863 0 2.988-2.561 4.915-6.519 4.915Zm0-2.56c2.056 0 3.362-.932 3.362-2.355 0-1.396-1.306-2.315-3.363-2.315-2.043 0-3.337.919-3.337 2.315 0 1.423 1.307 2.354 3.337 2.354Z"
@@ -377,13 +379,24 @@ font-weight: 400;
 line-height: 120%; /* 24px */
 `;
 
+function getProPriceFrom() {
+  const cheapestPerMonth = proPricing.plans[proPricing.plans.length - 1];
+  const price = cheapestPerMonth.priceNumber / 12;
+  const priceWithDigits = Math.floor(price * 100) / 100;
+
+  return `$${priceWithDigits} ${cheapestPerMonth.currency}`;
+}
+
 function ProPrice() {
   const t = useTranslations('pro.features');
 
-  const price = '$2.49';
+  const priceWithCurrency = getProPriceFrom();
 
   return (
-    <span className="text-gray-lighter text-sm"> {t('priceFrom', { ...localeArgs, price })}</span>
+    <span className="text-gray-lighter text-sm">
+      {' '}
+      {t('priceFrom', { ...localeArgs, price: priceWithCurrency })}
+    </span>
   );
 }
 
@@ -718,7 +731,12 @@ function UpgradeTabInfoItem({ platform, n }: { platform: UpgradePlatform; n: 1 |
             {readMoreHref ? (
               <>
                 <br />
-                <a className="flex flex-row items-center gap-1 font-bold">
+                <a
+                  className="flex flex-row items-center gap-1 font-bold"
+                  href={readMoreHref}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Read More{' '}
                   <LucideIcon
                     unicode={LUCIDE_ICONS_UNICODE.EXTERNAL_LINK_ICON}
@@ -1033,12 +1051,54 @@ export const StyledCollapsibleContent = styled(CollapsibleContent)`
   }
 `;
 
-function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 }) {
+function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 | 6 | 7 | 8 | 9 }) {
   const t = useTranslations('pro.faq');
 
   const question = t(`${localeKey}.question`, localeArgs);
 
   const id = question.toLocaleLowerCase().replaceAll(' ', '-').replaceAll('?', '');
+
+  const answer = t.rich(`${localeKey}.answer`, {
+    ...localeArgs,
+    price: getProPriceFrom(),
+    br: () => <br />,
+    bold: (chunks: ReactNode) => <strong className="font-bold">{chunks}</strong>,
+    // list-style-type is inherited, so the marker comes from the list element and one `li`
+    // handler serves both <ol> and <ul>
+    ol: (chunks: ReactNode) => <ol className="mt-3 mb-3 ml-7 list-decimal">{chunks}</ol>,
+    ul: (chunks: ReactNode) => <ul className="mt-3 mb-3 ml-7 list-disc">{chunks}</ul>,
+    li: (chunks: ReactNode) => <li>{chunks}</li>,
+    'roadmap-link': (chunks: ReactNode) => (
+      <a href="#roadmap" className="text-primary-dark">
+        {chunks}
+      </a>
+    ),
+    'blog-link': (chunks: ReactNode) => (
+      <a href="/blog" className="text-primary-dark">
+        {chunks}
+      </a>
+    ),
+    'apple-refund-link': (chunks: ReactNode) => (
+      <a
+        href="https://reportaproblem.apple.com"
+        className="text-primary-dark"
+        target="_blank"
+        rel="noreferrer"
+      >
+        {chunks}
+      </a>
+    ),
+    'google-refund-link': (chunks: ReactNode) => (
+      <a href="/refund-android" className="text-primary-dark" target="_blank" rel="noreferrer">
+        {chunks}
+      </a>
+    ),
+    'refund-form-link': (chunks: ReactNode) => (
+      <a href="/pro-support" className="text-primary-dark" target="_blank" rel="noreferrer">
+        {chunks}
+      </a>
+    ),
+  });
 
   return (
     <Collapsible className="transition-all duration-300" id={id}>
@@ -1055,7 +1115,7 @@ function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 }
       </StyledCollapsibleTrigger>
       <StyledCollapsibleContent className="rounded-b-xl transition-all duration-300">
         <StyledRoundedPanelButtonGroup className="rounded-b-xl px-6 text-left">
-          Yes this is mock content, yes there will be real content, yes this seems to be working.
+          <p className="whitespace-normal break-words">{answer}</p>
         </StyledRoundedPanelButtonGroup>
       </StyledCollapsibleContent>
     </Collapsible>
@@ -1075,7 +1135,7 @@ function ProFAQ() {
             <FAQItem localeKey={2} />
             <FAQItem localeKey={3} />
             <FAQItem localeKey={4} />
-            <FAQItem localeKey={5} />
+            {/* <FAQItem localeKey={5} /> */}
             <FAQItem localeKey={6} />
             <FAQItem localeKey={7} />
             <FAQItem localeKey={8} />
@@ -1123,22 +1183,10 @@ export default function ProPage({
 }
 
 export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext) => {
-  if (process.env.ENABLE_PRO_PAGE !== '1') {
-    return { notFound: true };
-  }
   const locale = context.locale ?? 'en';
   const messages = (await import(`../locales/${locale}.json`)).default;
 
-  // Fetch pricing from API — falls back to empty plans on error so the
-  // page still builds successfully even if the pricing API is down.
-  let pricing: PricingApiResponse = { plans: [] };
-  try {
-    pricing = await fetchProPricing(locale);
-  } catch (err) {
-    console.error('[ProPage] Failed to fetch pricing for schema:', err);
-  }
-
-  const schemas = generateProPageSchemas({ locale, messages, pricing });
+  const schemas = generateProPageSchemas({ locale, messages, pricing: proPricing });
 
   return {
     props: { messages, schemas },

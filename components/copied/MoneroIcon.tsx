@@ -10,6 +10,8 @@ export const MoneroIcon = forwardRef<SVGSVGElement, SVGAttributes>((props, ref) 
     xmlns="http://www.w3.org/2000/svg"
     {...props}
     ref={ref}
+    aria-hidden="true"
+    focusable="false"
   >
     <path
       d="M1000 0C447.8 0 0 447.8 0 1000a993.26 993.26 0 0 0 51 315.8h299V474.4l650 650 650-650v841.4h299a999.82 999.82 0 0 0 51-315.8C2000 447.8 1552.2 0 1000 0"

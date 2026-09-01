@@ -10,36 +10,37 @@ export type PricingApiResponse = {
  * Expected API response shape:
  * {
  *   plans: [
- *     { duration: "P1M",  label: "Monthly",  unitText: "MONTH", price: "2.49",  currency: "USD" },
- *     { duration: "P3M",  label: "3 Months", unitText: "MONTH", price: "5.99",  currency: "USD" },
- *     { duration: "P1Y",  label: "Annual",   unitText: "YEAR",  price: "14.99", currency: "USD" }
+ *     { duration: "P1M",  label: "Monthly",  unitText: "MONTH", price: "4.49",  currency: "USD" },
+ *     { duration: "P3M",  label: "3 Months", unitText: "MONTH", price: "11.99",  currency: "USD" },
+ *     { duration: "P1Y",  label: "Annual",   unitText: "YEAR",  price: "35.99", currency: "USD" }
  *   ]
  * }
  */
-export async function fetchProPricing(locale: string): Promise<PricingApiResponse> {
-  return {
-    plans: [
-      { duration: 'P1M', label: 'Monthly', unitText: 'MONTH', price: '2.49', currency: 'USD' },
-      { duration: 'P3M', label: '3 Months', unitText: 'MONTH', price: '5.99', currency: 'USD' },
-      { duration: 'P1Y', label: 'Annual', unitText: 'YEAR', price: '14.99', currency: 'USD' },
-    ],
-  };
-
-  const res = await fetch(`${process.env.PRICING_API_BASE_URL}/pro/pricing?locale=${locale}`, {
-    headers: {
-      'Content-Type': 'application/json',
-      // Add any auth headers your API requires, e.g.:
-      // Authorization: `Bearer ${process.env.PRICING_API_KEY}`,
+export const proPricing: PricingApiResponse = {
+  plans: [
+    {
+      duration: 'P1M',
+      label: 'Monthly',
+      unitText: 'MONTH',
+      price: '4.49',
+      currency: 'USD',
+      priceNumber: 4.49,
     },
-    // Revalidate pricing every hour during ISR if you use it
-    next: { revalidate: 3600 },
-  });
-
-  if (!res.ok) {
-    throw new Error(
-      `Failed to fetch Pro pricing for locale "${locale}": ${res.status} ${res.statusText}`
-    );
-  }
-
-  return res.json() as Promise<PricingApiResponse>;
-}
+    {
+      duration: 'P3M',
+      label: '3 Months',
+      unitText: 'MONTH',
+      price: '11.99',
+      currency: 'USD',
+      priceNumber: 11.99,
+    },
+    {
+      duration: 'P1Y',
+      label: 'Annual',
+      unitText: 'YEAR',
+      price: '35.99',
+      currency: 'USD',
+      priceNumber: 35.99,
+    },
+  ],
+};

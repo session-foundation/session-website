@@ -2,7 +2,14 @@ import { forwardRef } from 'react';
 import type { SVGAttributes } from './types';
 
 export const ArbitrumIcon = forwardRef<SVGSVGElement, SVGAttributes>((props, ref) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2500 2500" {...props} ref={ref}>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 2500 2500"
+    {...props}
+    ref={ref}
+    aria-hidden="true"
+    focusable="false"
+  >
     <path fill="none" d="M0 0h2500v2500H0z" />
     <path
       fill="#213147"

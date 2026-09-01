@@ -7,7 +7,14 @@
   },
   "files": {
     "ignoreUnknown": true,
-    "includes": ["**", "!**/lib/app_localization/**", "!**/locales/**", "!contentful/export.json"]
+    "includes": [
+      "./**/*.ts",
+      "./**/*.tsx",
+      "!**/lib/app_localization/**",
+      "!**/locales/**",
+      "!contentful/export.json",
+      "!**/.next/**"
+    ]
   },
   "formatter": {
     "enabled": true,

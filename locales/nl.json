@@ -80,7 +80,6 @@
       "content": "{appName} is een <span>end-to-end</span> versleutelde messenger die jouw <span>persoonlijke</span> gegevens beschermt. Herpak de controle met een berichtenapp die is ontworpen, gebouwd en beheerd door een <span>wereldwijde</span> community van <span>privacy</span>-experts."
     },
     "benefits": {
-      "title": "Voordelen",
       "1": {
         "heading": "Geen telefoonnummers",
         "content": "Bescherm je identiteit met {featureAccountIds}.<br></br> Je hebt geen telefoonnummer of e-mailadres nodig om je aan te melden."
@@ -104,11 +103,10 @@
       "6": {
         "heading": "Geen trackers",
         "content": "Jouw gegevens worden nooit verzameld, nooit gevolgd en<br></br>nooit verkocht aan derden."
-      }
+      },
+      "title": "Voordelen"
     },
     "features": {
-      "title": "Functies",
-      "heading": "Geniet van de functies die je leuk vindt en de beveiliging die je nodig hebt.",
       "1": {
         "heading": "Spreek vrijuit",
         "content": "Je berichten zijn alleen zichtbaar voor jou en degene met wie je praat. Ervaar echte vrijheid dankzij end-to-end encryptie en verdwijnende berichten."
@@ -120,7 +118,9 @@
       "3": {
         "heading": "Blijf in contact met jouw community",
         "content": "Of je nu bijpraat met goede vrienden of een groot evenement organiseert, met beveiligde {featureGroup}- en {featureCommunity}-chats (100+ leden) doe je dat eenvoudig en veilig."
-      }
+      },
+      "title": "Functies",
+      "heading": "Geniet van de functies die je leuk vindt en de beveiliging die je nodig hebt."
     }
   },
   "redirect": {
@@ -176,11 +176,13 @@
     "donate": {
       "title": "Doneer | Ondersteun privacytechnologie",
       "description": "De {foundationName} kan niet doorgaan zonder jouw steun. Doneer vandaag nog om {appName} te helpen in zijn strijd om te overleven."
+    },
+    "pro": {
+      "title": "{wordPro} | Unlock the Full Potential of {appName}",
+      "description": "Upgrade to {appNamePro} to support the project and unlock premium features for private communication."
     }
   },
   "donate": {
-    "heading": "{appName} heeft je hulp nodig",
-    "heroContent": "Privéberichten zijn een essentieel onderdeel van ons moderne leven. Veilige communicatie beschermt mensen tegen tirannie, beschermt degenen die strijden tegen onrecht en versterkt verdedigers van mensenrechten wereldwijd.<br></br><br></br> Tegenstanders van privacy met veel middelen werken echter actief aan het onderdrukken van de technologie die de fundamentele mensenrechten en waardigheid van mensen beschermt. Politici over de hele wereld dringen aan op wetten die encryptie ondermijnen, privacytechnologie wordt in de media belasterd en surveillancekapitalisten profiteren van de chaos.<image></image> Ondanks deze tegenslagen blijft {appName} een veilige, beveiligde en vertrouwde plek bieden waar mensen online kunnen communiceren. {appName} is een gratis, privé en veilige berichtenapp. De app volgt gebruikers niet en verkoopt je gegevens niet — hij verstuurt alleen berichten, privé. Miljoenen mensen over de hele wereld hebben zich tot Session gewend toen ze een veilige en beveiligde plek nodig hadden om een gesprek te voeren.<br></br><br></br> Meer dan alleen een hulpmiddel is {appName} een symbool van het belang van open-source, transparante en veerkrachtige technologie. Het is technologie zoals {appName} die onze fundamentele mensenrechten beschermt in een tijdperk van toenemende onzekerheid en autoritarisme.",
     "1": {
       "heading": "Een kracht voor het goede",
       "content": "Technologie verandert onze samenleving. Op dit moment heeft een kleine groep machtige individuen en instellingen een onevenredige controle over het internet. In veel gevallen wordt technologie gebruikt om het zwijgen op te leggen, te manipuleren en te onderdrukken. Het is tijd om weerstand te bieden aan deze machtsstructuren.<image></image>Wij zijn aanjagers van verandering in een wereld waarin technologie een middel is om onderdrukking omver te werpen. Wij geloven in een toekomst waarin technologie collaboratief, transparant, rechtvaardig en bevrijdend is."
@@ -201,11 +203,17 @@
       "heading": "Doneer via crypto",
       "content": "Je kunt {ethSymbol}, {usdcSymbol}, {usdtSymbol} of {btcSymbol} sturen naar de volgende adressen van {foundationName}."
     },
-    "heroAppeal": "We hadden gehoopt dat deze dag nooit zou komen, maar {appName} is nu de laatste 90 dagen van zijn bestaan ingegaan. Als we onze financieringsdoelstelling binnen deze periode niet halen, zal de {foundationNameWithAcronym} gedwongen worden de activiteiten te staken.<br></br><br></br>Tot nu toe heeft de {foundationAcronym} ongeveer {donationAmount} aan donaties ontvangen. Dit is genoeg om de kritieke infrastructuur van {appName} de komende 90 dagen te onderhouden. We zijn de gemeenschap enorm dankbaar voor de steun die {appName} heeft ontvangen, maar helaas is dit niet voldoende om fulltime ontwikkelaars in dienst te houden. Als gevolg hiervan hebben alle betaalde medewerkers en ontwikkelaars hun laatste werkdag op 9 april 2026. Na deze datum zullen sommige teamleden voornamelijk als vrijwilliger doorgaan om {appName} te helpen onderhouden tot 8 juli 2026.<br></br><br></br>Dit is onze laatste oproep aan de {appName}-gemeenschap: zonder jouw steun zal de {foundationAcronym} op 8 juli 2026 alle activiteiten staken.<br></br><br></br>We begrijpen dat dit als een schok kan komen. Van buitenaf lijkt {appName} een succesvolle en groeiende app te zijn - met miljoenen downloads, sterke beoordelingen in appstores en aanhoudende groei, en onlangs meer dan 1,7 miljoen maandelijks actieve gebruikers. Het succes van {appNamePossessive} is echter alleen mogelijk geweest dankzij de toegewijde bijdragers en teams die elke dag onvermoeibaar werken om het te verbeteren. Dit zijn hoogopgeleide ontwikkelaars en architecten van gedecentraliseerde systemen, en net als iedereen hebben zij rekeningen te betalen en gezinnen te onderhouden.<br></br><br></br>{appName} heeft het geluk bijdragers te hebben die diep in de missie geloven en bereid zijn een lagere vergoeding te accepteren dan ze elders zouden kunnen verdienen. Dit helpt de totale kosten te verlagen, maar er is nog steeds een minimumniveau aan financiering nodig om te kunnen functioneren. Zelfs met een klein team schat de {foundationAcronym} deze kosten op ongeveer {costPerYear} per jaar.<br></br><br></br>Hoewel dit een groot bedrag lijkt, weerspiegelt het de realiteit van het bouwen en onderhouden van veilige, gedecentraliseerde infrastructuur. In de meeste markten verdienen senior ontwikkelaars vaak salarissen van meer dan {seniorDevSalaryPerYear} per jaar, en daarbovenop zijn er juridische en operationele overheadkosten voor het runnen van de {foundationAcronym}. Vergeleken met zijn concurrenten opereert {appName} uiterst efficiënt en bereikt het zijn missie met een budget dat vergelijkbaar is met de gezamenlijke beloning van slechts twee senior executives bij sommige grotere berichtenbedrijven.<br></br><br></br>Als je al hebt gedoneerd, danken we je oprecht. Elke bijdrage helpt {appName} dichter bij zijn financieringsdoel te brengen.<br></br><br></br>We willen je er ook van verzekeren dat als de {foundationAcronym} er niet in slaagt binnen de komende 90 dagen voldoende financiering veilig te stellen om haar doelen te halen, alle donaties die niet kunnen worden gebruikt in overeenstemming met de statuten van de {foundationAcronymPossessive} publiekelijk zullen worden gedoneerd aan de {effName}.<br></br><br></br>Voor nu zullen vrijwilligers {appName} zo lang mogelijk overeind houden. Als je denkt dat je {appName} kunt helpen voordat de tijd om is, neem dan contact op via <donate-email></donate-email>.",
     "6": {
       "heading": "Doneer via {wordSilentDonor}",
       "content": "Individuals may make an anonymous tax deductible gift to the {foundationName} using <silent-donor-link>{wordSilentDonor}</silent-donor-link>.<br></br><br></br>{wordSilentDonor} is a third party which can facilitate donations to the {foundationAcronym} using card, bank transfer, and <crypto-icons>crypto</crypto-icons>"
     },
+    "7": {
+      "heading": "Veelgestelde vragen",
+      "content": ""
+    },
+    "heading": "{appName} heeft je hulp nodig",
+    "heroContent": "Privéberichten zijn een essentieel onderdeel van ons moderne leven. Veilige communicatie beschermt mensen tegen tirannie, beschermt degenen die strijden tegen onrecht en versterkt verdedigers van mensenrechten wereldwijd.<br></br><br></br> Tegenstanders van privacy met veel middelen werken echter actief aan het onderdrukken van de technologie die de fundamentele mensenrechten en waardigheid van mensen beschermt. Politici over de hele wereld dringen aan op wetten die encryptie ondermijnen, privacytechnologie wordt in de media belasterd en surveillancekapitalisten profiteren van de chaos.<image></image> Ondanks deze tegenslagen blijft {appName} een veilige, beveiligde en vertrouwde plek bieden waar mensen online kunnen communiceren. {appName} is een gratis, privé en veilige berichtenapp. De app volgt gebruikers niet en verkoopt je gegevens niet — hij verstuurt alleen berichten, privé. Miljoenen mensen over de hele wereld hebben zich tot Session gewend toen ze een veilige en beveiligde plek nodig hadden om een gesprek te voeren.<br></br><br></br> Meer dan alleen een hulpmiddel is {appName} een symbool van het belang van open-source, transparante en veerkrachtige technologie. Het is technologie zoals {appName} die onze fundamentele mensenrechten beschermt in een tijdperk van toenemende onzekerheid en autoritarisme.",
+    "heroAppeal": "Dankzij de ongelooflijke en voortdurende steun die {appName} van de community heeft ontvangen, hebben we een weg vooruit veiliggesteld om {appName} ook na 8 juli te blijven ontwikkelen. Een kleiner team zal de ontwikkeling voortzetten tot in 2027, met de focus op het versterken van het project en het leggen van een basis voor de toekomst op lange termijn.<br></br><br></br>Degenen die aan {appName} werken, willen hun dank uitspreken aan de toegewijde leden van de community die hebben geholpen het project draaiende te houden met hun bijdragen, of dat nu directe donaties zijn, het blijven draaien van nodes in het netwerk of het vergroten van de bekendheid van onze donatiecampagne.<br></br><br></br>Hoewel de procedures voor stopzetting zijn geannuleerd, verandert de vorm van het {appName}-project nog steeds aanzienlijk. Het project zal nu worden geleid door Jason Rhinelander, al lange tijd Chief Software Architect en lid van de {foundationNameWithAcronym}.<br></br><br></br>Momenteel zijn de ontvangen donaties voldoende om kritieke infrastructuur te ondersteunen, Jason als ontwikkelaar te behouden en mogelijk nog één andere fulltime ontwikkelaar aan het project toe te voegen. Er is ook nog steeds een klein team van vrijwilligers dat bijdraagt aan andere aspecten van het ecosysteem.<br></br><br></br>Zonder jouw steun zou {appName} niet langer bestaan.<br></br><br></br>In de toekomst zal de stichting opereren met veel lagere kosten en minder middelen. Ze zal manieren blijven onderzoeken om aanvullende financiering te verkrijgen, via externe bijdragen of via inspanningen zoals {appName} Pro.<br></br><br></br>Ondanks de recente onzekerheid blijft {appName} een succesvolle app — met miljoenen downloads, sterke beoordelingen in appstores en aanhoudende groei (onlangs meer dan 1,7 miljoen maandelijks actieve gebruikers).<br></br><br></br>{appName} heeft het geluk bijdragers te hebben die sterk in de missie geloven en bereid zijn een lagere vergoeding te accepteren dan ze elders zouden kunnen verdienen, of hun tijd vrijwillig in te zetten om het ecosysteem te ondersteunen. Als je tijdens deze campagne hebt gedoneerd, danken we je oprecht. Elke bijdrage helpt {appName} vooruit. Hoewel de stichting nu over de nodige financiering beschikt om {appName} vooruit te helpen, zijn extra donaties welkom en zouden die de stichting in staat stellen het ontwikkelingsteam uit te breiden, waardoor de oplevering van nieuwe verbeteringen op het gebied van beveiliging, privacy en gebruiksvriendelijkheid wordt versneld.<br></br><br></br>Als je meer wilt horen, bekijk dan <youtube-link>deze</youtube-link> video met Jason, medeoprichters Kee en Chris, en {foundationAcronym}-voorzitter Alex.<br></br><br></br>De stichting heeft nu een weg vooruit voor {appName}, maar met extra steun kan er nog veel meer worden bereikt. Als je denkt dat je kunt helpen, neem dan contact op met <donate-email></donate-email>.",
     "buttonCard": "Doneer met kaart",
     "buttonCrypto": "Doneer met crypto",
     "faq": {
@@ -213,21 +221,9 @@
         "question": "Hoe kan ik doneren aan {appName}?",
         "answer": "Er zijn momenteel drie manieren om de verdere ontwikkeling van {appName} te ondersteunen:<br></br><br></br><bold>{donationProviderName}</bold><br></br><br></br>{donationProviderName} is een platform van een derde partij dat non-profitorganisaties helpt donaties te accepteren via verschillende betaalmethoden. Je kunt <donate-link>hier</donate-link> aan de {foundationName} doneren via {donationProviderName}.<br></br><br></br>Ondersteunde betaalmethoden zijn onder meer:<payment-providers></payment-providers><bold>{wordSilentDonor}</bold><br></br><br></br><silent-donor-info></silent-donor-info><bold>Directe cryptocurrency</bold><br></br><br></br>Je kunt ook rechtstreeks cryptocurrency doneren aan de {foundationName} door geld te sturen naar de hieronder vermelde walletadressen.<br></br><br></br>{wordBitcoinAddress}: {addressBitcoin}<br></br><br></br>{wordBitcoinCashAddress}: {addressBitcoinCash}<br></br><br></br>{wordEthereumAddress}: {addressEthereum}<br></br><br></br>Dit {wordEthereumAddress} accepteert donaties in {ethSymbol}, evenals {wordErc20} {wordTokens} (zoals {usdtSymbol} en {usdcSymbol}) op {wordEvmCompatible}-chains, zoals {ethNetworkName}, {arbNetworkName} en {baseNetworkName}.<br></br><br></br><bold>Opmerking:</bold> Als je overweegt een donatie van meer dan {largeDonationAmount} te doen via welke betaalmethode dan ook, neem dan contact met ons op via <donations-email></donations-email>"
       },
-      "2": {
-        "question": "Waarom is jullie donatiedoel 1 miljoen dollar ",
-        "answer": "Dit komt overeen met ongeveer 12 maanden aan financiële ruimte, genoeg tijd om het werk aan {appNameProtocolV2} af te ronden, {appNamePro} te lanceren en {wordPro} te ondersteunen gedurende een redelijke opstartperiode. Dit werk krijgt prioriteit omdat het nodig is om duurzaamheid van het ecosysteem te bereiken. Op de lange termijn is {appName} ontworpen om zelfvoorzienend te worden via {wordPro} en andere tokenfunctionaliteiten, maar er is extra tijd en inspanning nodig om dat punt te bereiken.<br></br><br></br>Hoewel dit voor een individu veel geld is, zijn deze kosten voor een applicatie met de schaal en impact van {appName} relatief bescheiden."
-      },
       "3": {
         "question": "Waarvoor wordt mijn donatie gebruikt?",
         "answer": "Je donatie wordt ontvangen door de <foundation-link>{foundationName}</foundation-link>, een in Zwitserland gevestigde stichting die de huidige beheerder is van de {appName}-applicatie en het project. Je donatie wordt gebruikt ter ondersteuning van de voortdurende ontwikkeling en duurzaamheid van {appName}."
-      },
-      "4": {
-        "question": "Wat gebeurt er als jullie donatiedoel niet wordt gehaald?",
-        "answer": "Momenteel heeft de stichting genoeg donaties ontvangen om de komende 3 maanden minimale ondersteuning te bieden. Dit betekent dat {appName} beschikbaar blijft om te downloaden in de appstores en dat kritieke infrastructuur, zoals de pushnotificatieserver en bestandsservers, online blijft.<br></br><br></br>Als de inzamelingsactie succesvol is, kan de stichting de actieve ontwikkeling van {appName} voortzetten, inclusief de lancering van {appNamePro} en {appNameProtocolV2}.<br></br><br></br>Als dat niet lukt, betekent het gebrek aan financiering dat de stichting {appName} op geen enkele manier kan ondersteunen en zal zij moeten worden opgeheven. Als gevolg daarvan wordt {appName} uit de appstores verwijderd en zal kritieke infrastructuur zoals de {appName}-bestandsserver, pushnotificatieserver en seed-nodes offline gaan."
-      },
-      "tax-question": {
-        "question": "Kan ik een fiscaal aftrekbare donatie doen?",
-        "answer": ""
       },
       "5": {
         "question": "Wat is de {foundationName}?",
@@ -240,12 +236,162 @@
       "7": {
         "question": "Zijn er nog andere manieren waarop ik {appName} kan helpen?",
         "answer": "Donaties zijn momenteel de belangrijkste manier waarop je {appName} kunt ondersteunen. Als je echter niet kunt doneren, zijn er verschillende andere manieren waarop je kunt helpen:<ol><li>Deel deze oproep met vrienden en familie die {appName} gebruiken en mogelijk geïnteresseerd zijn om onze missie te steunen.</li><li>Help {appName} naar andere talen te vertalen via <crowdin-link>{wordCrowdin}</crowdin-link></li><li>Draag bij aan de <github-link>open-sourcecodebase</github-link> van {appNamePossessive}</li></ol>"
+      },
+      "tax-question": {
+        "question": "Kan ik een fiscaal aftrekbare donatie doen?",
+        "answer": ""
       }
     },
-    "appealHeading": "Onze laatste oproep:<br></br>{appName} stopt over 90 dagen",
-    "7": {
-      "heading": "Veelgestelde vragen",
-      "content": ""
+    "appealHeading": "Een weg vooruit voor {appName}"
+  },
+  "pro": {
+    "heading": "Privacy that feels <pro-badge></pro-badge>",
+    "tag": "Upgrade to {appNamePro} and unlock the full potential of private communication",
+    "features": {
+      "1": {
+        "1": {
+          "featureName": "Private & Secure Messaging",
+          "featureDescription": "Send end to end encrypted messages to contacts and groups with full privacy."
+        },
+        "2": {
+          "featureName": "No Phone Numbers",
+          "featureDescription": "Create an account without a phone number or real world identity."
+        },
+        "3": {
+          "featureName": "Onion Routing",
+          "featureDescription": "Use Onion Routing to hide your IP address from eavesdroppers."
+        },
+        "4": {
+          "featureName": "Files & Attachments",
+          "featureDescription": "Send end to end encrypted attachments to contacts and groups up to 10mb."
+        },
+        "heading": "Free",
+        "tag": "Security for Everyone"
+      },
+      "2": {
+        "heading": "{wordPro}",
+        "tag": "Advanced Features",
+        "moreName": "Plus Loads More...",
+        "moreDescription": "More {wordPro} features are on the way. Take a look at what’s <bold>Coming Soon <icon></icon></bold>"
+      },
+      "3": {
+        "1": {
+          "featureName": "Larger File Attachments",
+          "featureDescription": "Send attachments which exceed the 10mb file size limit. "
+        },
+        "2": {
+          "featureName": "Bigger Groups",
+          "featureDescription": "Increased member limits in groups where you are an admin."
+        },
+        "3": {
+          "featureName": "Message Editing and Formatting",
+          "featureDescription": "Edit your messages and use advanced formatting features."
+        },
+        "4": {
+          "featureName": "Multiple Identities",
+          "featureDescription": "Manage multiple {appName} accounts from a single device."
+        },
+        "heading": "Coming Soon",
+        "tag": "Future {wordPro} Features",
+        "tagMobile": "Coming Soon to {wordPro}"
+      },
+      "priceFrom": "From {price}/Month",
+      "headingMobile": "Features",
+      "detailedRoadmap": "Detailed Roadmap"
+    },
+    "info": {
+      "heading": "What is {appNamePro}",
+      "content": "{appNamePro} offers premium features and functionality in the {appName} messaging app. {wordPro} includes unique and exclusive cosmetic upgrades and unlocks additional access to {appNamePossessive} decentralized network.<br></br><br></br>With {wordPro}, users pay to offset the increased network usage of certain activities, such as sending long messages or large attachments."
+    },
+    "upgrade": {
+      "heading": "Upgrade to {wordPro} Beta <platform-badge></platform-badge>",
+      "mobile": {
+        "1": {
+          "upgradeName": "On your {platform} Device",
+          "upgradeDescription": "Open {appName} on your {platform} device, go to {appName} Settings, and tap Upgrade {appName}.",
+          "upgradeSubDescription": "{appName} must have been installed via {platformStoreShort}. Billing is not supported {notSupportedInfo}",
+          "upgradeSubDescriptionNotSupportedInfoAndroid": "via {wordFDroid} or {wordAPK} installs.",
+          "upgradeSubDescriptionNotSupportedInfoIos": "when sideloading {wordIPAs}."
+        },
+        "2": {
+          "upgradeName": "On a linked Device",
+          "upgradeDescription": "Open {appName} on a linked {platformA} or {platformB} device, go to {appName} Settings, and tap Upgrade {appName}.",
+          "upgradeSubDescription": "Soon after upgrading all devices sharing that {appName} account will inherit {wordPro}."
+        }
+      },
+      "desktop": {
+        "1": {
+          "upgradeName": "On a linked device",
+          "upgradeDescription": "Unfortunately, {wordPro} access can only be purchased via the {platformStoreGoogle} or {platformStoreApple}. {appName} developers are working on alternative payment options to allow users to purchase {wordPro} access outside of the {platformStoreGoogle} and {platformStoreApple}.<br></br><br></br>For now, to upgrade a {wordDesktop} device to {wordPro}, open {appName} on a linked {platformAndroid} or {platformIos} device, go to {appName} Settings, and tap Upgrade {appName}.",
+          "upgradeSubDescription": "Soon after upgrading, all devices sharing that {appName} account will inherit {wordPro}."
+        }
+      }
+    },
+    "roadmap": {
+      "1": {
+        "featureName": "Larger File Attachments",
+        "featureDescription": "{appNamePro} will remove the constraints on file sharing for {wordPro} users, allowing attachments well beyond the standard {standardUserFileUploadLimit} limit. This feature leverages the {appNameRouterPossessive} capabilities for more efficient file transfers across the network, making it practical to share documents, images, and media files without leaving the secure {appName} environment.",
+        "featureSubheading": "Key benefits:",
+        "featureSublist": "<li><bold>Share complete documents and high-quality media:</bold> Send PDFs, presentations, and spreadsheets without compression or splitting. Transfer photos and videos in their original resolution, preserving quality for professional or personal use.</li><li><bold>Secure file exchange:</bold> Keep sensitive documents within {appNamePossessive} encrypted environment instead of relying on less secure third-party file sharing services.</li><li><bold>Streamlined workflow:</bold> Eliminate the need to switch between apps or platforms when collaborating on projects or sharing important files.</li>"
+      },
+      "2": {
+        "featureName": "Bigger Groups",
+        "featureDescription": "Groups with at least one {wordPro} administrator will accommodate up to {proUserMaxGroupSize} members—triple the standard {standardUserMaxGroupSize}-member limit. This expanded capacity transforms how larger communities can coordinate and communicate privately on {appName}.",
+        "featureSubheading": "Key benefits:",
+        "featureSublist": "<li><bold>Organization-ready:</bold> Support entire departments, teams, or small companies within a single secure group chat.</li><li><bold>Community building:</bold> Run larger interest-based or regional groups without hitting member limits or splitting conversations.</li><li><bold>Event coordination:</bold> Manage conferences, workshops, or large-scale projects with all stakeholders in one encrypted space.</li>"
+      },
+      "3": {
+        "featureName": "Message Editing and Formatting",
+        "featureDescription": "{appNamePro} members will gain access to a full suite of powerful messaging features that enhance how messages are composed and refined. These tools bring professional communication capabilities to {appName} while maintaining complete privacy. These features will also roll out on a limited basis for free users, ensuring everyone benefits from {appNamePossessive} evolution.",
+        "featureSubheading": "Key benefits:",
+        "featureSublist": "<li><bold>Markdown formatting:</bold> Style messages with rich text formatting for clearer communication in 1:1 conversations, group chats and communities.</li><li><bold>Message editing:</bold> Correct typos and update sent messages at any point after sending.</li><li><bold>Professional communication:</bold> Create well-structured messages with bold, italics, lists, and code blocks for technical discussions or detailed explanations</li>"
+      },
+      "4": {
+        "featureName": "Multiple Identities",
+        "featureDescription": "A highly requested feature, multi-account support will allow users to manage multiple {appName} identities within a single installation. This powerful feature will let users compartmentalize different aspects of their digital life without juggling multiple devices or app installations. Free users of {appName} will also have access to multi-account support on a more limited basis.",
+        "featureSubheading": "Key benefits:",
+        "featureSublist": "<li><bold>Identity separation:</bold> Maintain distinct personas for work, personal, and anonymous communications without cross-contamination.</li><li><bold>Simplified switching:</bold> Toggle between accounts instantly without logging in and out or managing multiple apps.</li><li><bold>Enhanced operational security:</bold> Reduce the risk of accidentally mixing professional and personal contacts or conversations.</li>"
+      },
+      "heading": "Roadmap"
+    },
+    "faq": {
+      "1": {
+        "question": "What is included in {appNamePro}?",
+        "answer": "{wordsProBeta} unlocks four features today: <bold>longer messages</bold> up to 10,000 characters, <bold>unlimited pinned conversations</bold>, <bold>animated display pictures</bold> and an optional <bold>{wordPro} Badge</bold> next to your display name to show your support for {appName}. You’ll also get access to new, {wordPro}-exclusive features as soon as they are released (see the <roadmap-link>Roadmap</roadmap-link> for more). By signing up for {wordPro}, you can help fund ongoing software development of {appName} and keep the project sustainable."
+      },
+      "2": {
+        "question": "How does {appNamePro} affect my privacy?",
+        "answer": "<bold>{appNamePro} is designed so that paying for it does not identify you.</bold><br></br><br></br>Until other payment methods are available, you will need to purchase {appNamePro} via the {platformStoreApple} or {platformStoreGoogle}. {wordApple} or {wordGoogle} will need your payment details to process the purchase. These payment details are never shared with {appName}.<br></br><br></br>Your {appNamePro} access is identified by a <bold>{wordPro} key</bold> rather than by your Account ID. The {wordPro} key is derived from your recovery password through a one-way process, so it cannot be used to work out your Account ID, and your Account ID cannot be used to work out your {wordPro} key.<br></br><br></br>When you buy {appNamePro}, your device includes your {wordPro} key in the purchase. {wordApple} or {wordGoogle} passes it on to the {wordPro} backend along with the payment notification, so the backend knows which {wordPro} key the payment belongs to. This means {wordApple} or {wordGoogle} holds a record linking your {wordPro} key to your payment account. They cannot link that record to your Account ID, and neither can {appName}.<br></br><br></br>Messages that use a {wordPro} feature carry a <bold>{appNamePro} Proof</bold>, which is a temporary {wordPro} key together with a signature from the {foundationName}. Your {wordPro} key itself is never included. The temporary key is replaced with a new one at least every 30 days.<br></br><br></br>The {wordPro} backend stores your {wordPro} key and whether your access is currently active. Neither your {wordPro} key nor the temporary keys have any bearing on the security of your account. <bold>Encryption, onion routing, and metadata handling remain identical for {wordPro} and free users.</bold>"
+      },
+      "3": {
+        "question": "Is {appName} still free?",
+        "answer": "<bold>Yes, and it always will be.</bold> End-to-end encrypted messaging, accounts with no phone number, onion routing, attachments up to {standardUserFileUploadLimit}, and groups up to {standardUserMaxGroupSize} members are all free, for everyone. {wordPro} is entirely optional. It adds advanced features on top of the free app and helps fund software development and maintenance at {appName}."
+      },
+      "4": {
+        "question": "What is the difference between {wordsProBeta} and {wordPro}?",
+        "answer": "{wordsProBeta} is the first version of {wordPro}, released early so people can test out new features and provide feedback while additional features are built. New features added later are included in your {wordPro} access at no extra cost. Once {wordBeta} testing concludes and the full feature set is rolled out, {appNamePro} {wordBeta} will simply become {appNamePro}."
+      },
+      "5": {
+        "question": "Can I purchase {appNamePro} for my friend?",
+        "answer": "<bold>Not at the moment.</bold> A subscription is bought from inside {appName} and is bound to the account that bought it, so it can’t be gifted, transferred, or applied to someone else’s account. For now, a friend needs to upgrade from their own device."
+      },
+      "6": {
+        "question": "How can I purchase {appNamePro} for my account?",
+        "answer": "Initially, {appNamePro} can be purchased via the {platformStoreApple} and {platformStoreGoogle}, with additional payment options planned for the future.<br></br><br></br>On an {platformAndroid} or {platformIos} device, open {appName}, go to <bold>Settings</bold>, open <bold>Upgrade {appName}</bold>, and select a {wordPro} plan: monthly, 3 months, or annual (starting from {price}/month, charged in your store's local currency).<br></br><br></br>Once additional payment options for {appNamePro} are made available, it will be possible to sign up for {appNamePro} on {wordDesktop}, {wordFDroid} or {wordAPK} installs, or on sideloaded {wordIPAs}. In the meantime, to access {wordPro} features on these devices, first upgrade on a linked {platformAndroid} or {platformIos} device where {appName} was installed from the {platformStoreApple} or {platformStoreGoogle}. Shortly after, every device linked to that {appName} account will have {wordPro}."
+      },
+      "7": {
+        "question": "Can I refund my purchase?",
+        "answer": "Refunds are handled by the {platformStoreApple} and {platformStoreGoogle} under their own policies. Request a refund through <apple-refund-link>{wordApple}</apple-refund-link> or <google-refund-link>{wordGoogle}</google-refund-link>. If you require a refund on {platformAndroid} more than 48 hours after purchasing {appNamePro}, you can request a refund from the {foundationName} via <refund-form-link>this form</refund-form-link>. If a refund is granted, you will lose your {wordPro} access.<br></br><br></br>If you only want to stop future charges, <bold>cancel your {wordPro} access in the store</bold> instead. Your {wordPro} benefits will stay active until the end of the period you’ve already paid for."
+      },
+      "8": {
+        "question": "How are funds from {appNamePro} used?",
+        "answer": "Payments for {appNamePro}, after the commission taken by {wordApple} and {wordGoogle}, go to the {foundationName}, the Swiss foundation that stewards {appName}, and are used to fund ongoing software development at {appName}. Updates about development progress are shared on the <blog-link>{appName} blog</blog-link>."
+      },
+      "9": {
+        "question": "Will more features be added to {wordPro} in the future?",
+        "answer": "<bold>Yes.</bold> Additional advanced features are planned to be added to the full version of {wordPro}. Some of these features include:<ul><li>File attachments well beyond the {standardUserFileUploadLimit} limit</li><li>Groups of up to {proUserMaxGroupSize} members</li><li>Message editing and Markdown formatting</li><li>Multiple {appName} accounts managed from a single device</li></ul>Upcoming features are announced on the <blog-link>{appName} blog</blog-link>."
+      },
+      "heading": "FAQ"
     }
   }
 }
