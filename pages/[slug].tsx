@@ -43,8 +43,6 @@ function shouldBuildSlug(slug: string): boolean {
     }
   }
 
-  console.log(forbiddenWords)
-
   for (const w of forbiddenWords) {
     if (slug.includes(w)) {
       return false;
