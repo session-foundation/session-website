@@ -1079,7 +1079,7 @@ function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 | 6 | 7 | 8 | 9 }) {
     ),
     'google-refund-link': (chunks: ReactNode) => (
       <a
-        href="https://support.google.com/googleplay/answer/15574897"
+        href="/refund-android"
         className="text-primary-dark"
         target="_blank"
         rel="noreferrer"
@@ -1089,7 +1089,7 @@ function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 | 6 | 7 | 8 | 9 }) {
     ),
     'refund-form-link': (chunks: ReactNode) => (
       <a
-        href="https://sessionapp.zendesk.com/hc/en-us/requests/new?ticket_form_id=51833134611609"
+        href="/pro-support"
         className="text-primary-dark"
         target="_blank"
         rel="noreferrer"
