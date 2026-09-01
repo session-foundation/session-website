@@ -1040,7 +1040,7 @@ export const StyledCollapsibleContent = styled(CollapsibleContent)`
   }
 `;
 
-function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 }) {
+function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 | 6 | 7 | 8 | 9 }) {
   const t = useTranslations('pro.faq');
 
   const question = t(`${localeKey}.question`, localeArgs);
@@ -1059,6 +1059,41 @@ function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 }
     li: (chunks: ReactNode) => <li>{chunks}</li>,
     'roadmap-link': (chunks: ReactNode) => (
       <a href="#roadmap" className="text-primary-dark">
+        {chunks}
+      </a>
+    ),
+    'blog-link': (chunks: ReactNode) => (
+      <a href="/blog" className="text-primary-dark">
+        {chunks}
+      </a>
+    ),
+    'apple-refund-link': (chunks: ReactNode) => (
+      <a
+        href="https://reportaproblem.apple.com"
+        className="text-primary-dark"
+        target="_blank"
+        rel="noreferrer"
+      >
+        {chunks}
+      </a>
+    ),
+    'google-refund-link': (chunks: ReactNode) => (
+      <a
+        href="https://support.google.com/googleplay/answer/15574897"
+        className="text-primary-dark"
+        target="_blank"
+        rel="noreferrer"
+      >
+        {chunks}
+      </a>
+    ),
+    'refund-form-link': (chunks: ReactNode) => (
+      <a
+        href="https://sessionapp.zendesk.com/hc/en-us/requests/new?ticket_form_id=51833134611609"
+        className="text-primary-dark"
+        target="_blank"
+        rel="noreferrer"
+      >
         {chunks}
       </a>
     ),
@@ -1099,7 +1134,7 @@ function ProFAQ() {
             <FAQItem localeKey={2} />
             <FAQItem localeKey={3} />
             <FAQItem localeKey={4} />
-            <FAQItem localeKey={5} />
+            {/* <FAQItem localeKey={5} /> */}
             <FAQItem localeKey={6} />
             <FAQItem localeKey={7} />
             <FAQItem localeKey={8} />
