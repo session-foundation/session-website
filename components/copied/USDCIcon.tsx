@@ -2,7 +2,15 @@ import { forwardRef } from 'react';
 import type { SVGAttributes } from './types';
 
 export const USDCIcon = forwardRef<SVGSVGElement, SVGAttributes>((props, ref) => (
-  <svg viewBox="0 0 2000 2000" fill="none" xmlns="http://www.w3.org/2000/svg" {...props} ref={ref} aria-hidden="true" focusable="false">
+  <svg
+    viewBox="0 0 2000 2000"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+    ref={ref}
+    aria-hidden="true"
+    focusable="false"
+  >
     <path
       d="M1000 2000c554.17 0 1000-445.83 1000-1000S1554.17 0 1000 0 0 445.83 0 1000s445.83 1000 1000 1000z"
       fill="#2775ca"

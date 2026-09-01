@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/suspicious/noExplicitAny: ignored for now */
 import type { Document } from '@contentful/rich-text-types';
 
 export type IFigureImage = {

@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/suspicious/noExplicitAny: ignored for now */
 import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer';
 import { documentToReactComponents, type Options } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, type Document, INLINES, type Inline, MARKS } from '@contentful/rich-text-types';

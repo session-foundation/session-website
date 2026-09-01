@@ -18,17 +18,20 @@ import { NON_LOCALIZED_STRING } from '@/constants/localization';
 import METADATA from '@/constants/metadata';
 import { isCrowdinLocale, setLocaleInUse, tr } from '@/lib/app_localization';
 import { LUCIDE_ICONS_UNICODE, type WithLucideUnicode } from '@/lib/lucide';
-import {
-  generateProPageSchemas,
-  getProFeatures,
-} from '@/lib/proPageSchema';
 import { proPricing } from '@/lib/proBackend';
+import { generateProPageSchemas, getProFeatures } from '@/lib/proPageSchema';
 
 function ProLogoPath() {
   return (
     <>
       <span className="sr-only">{NON_LOCALIZED_STRING.wordPro}</span>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 53 25" aria-hidden="true" focusable="false">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 53 25"
+        aria-hidden="true"
+        focusable="false"
+      >
         <path
           fill="#000"
           d="M7.216 17.372V8.06h7.268c2.315 0 3.725 1.306 3.725 3.505 0 2.147-1.461 3.453-3.776 3.453h-4.178v2.354h-3.04Zm3.04-4.772h3.646c.828 0 1.28-.194 1.28-1.035 0-.854-.452-1.035-1.28-1.035h-3.647v2.07Zm9.376 4.772V8.06h7.566c2.548 0 3.802.983 3.802 2.858 0 1.28-.711 2.134-1.94 2.51 1.216.064 1.94.736 1.94 1.888v2.056h-3.04V15.82c0-.84-.232-1.086-1.06-1.086h-4.229v2.638h-3.04Zm3.04-5.018H26.5c.84 0 1.435-.155 1.435-.957 0-.815-.595-.957-1.435-.957h-3.83v1.914Zm16.258 5.251c-3.958 0-6.506-1.927-6.506-4.915 0-2.948 2.56-4.863 6.505-4.863 3.958 0 6.519 1.915 6.519 4.863 0 2.988-2.561 4.915-6.519 4.915Zm0-2.56c2.056 0 3.362-.932 3.362-2.355 0-1.396-1.306-2.315-3.363-2.315-2.043 0-3.337.919-3.337 2.315 0 1.423 1.307 2.354 3.337 2.354Z"
@@ -390,7 +393,10 @@ function ProPrice() {
   const priceWithCurrency = getProPriceFrom();
 
   return (
-    <span className="text-gray-lighter text-sm"> {t('priceFrom', { ...localeArgs, price: priceWithCurrency })}</span>
+    <span className="text-gray-lighter text-sm">
+      {' '}
+      {t('priceFrom', { ...localeArgs, price: priceWithCurrency })}
+    </span>
   );
 }
 
@@ -725,7 +731,12 @@ function UpgradeTabInfoItem({ platform, n }: { platform: UpgradePlatform; n: 1 |
             {readMoreHref ? (
               <>
                 <br />
-                <a className="flex flex-row items-center gap-1 font-bold" href={readMoreHref} target="_blank" rel="noreferrer">
+                <a
+                  className="flex flex-row items-center gap-1 font-bold"
+                  href={readMoreHref}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Read More{' '}
                   <LucideIcon
                     unicode={LUCIDE_ICONS_UNICODE.EXTERNAL_LINK_ICON}
@@ -1078,22 +1089,12 @@ function FAQItem({ localeKey }: { localeKey: 1 | 2 | 3 | 4 | 6 | 7 | 8 | 9 }) {
       </a>
     ),
     'google-refund-link': (chunks: ReactNode) => (
-      <a
-        href="/refund-android"
-        className="text-primary-dark"
-        target="_blank"
-        rel="noreferrer"
-      >
+      <a href="/refund-android" className="text-primary-dark" target="_blank" rel="noreferrer">
         {chunks}
       </a>
     ),
     'refund-form-link': (chunks: ReactNode) => (
-      <a
-        href="/pro-support"
-        className="text-primary-dark"
-        target="_blank"
-        rel="noreferrer"
-      >
+      <a href="/pro-support" className="text-primary-dark" target="_blank" rel="noreferrer">
         {chunks}
       </a>
     ),

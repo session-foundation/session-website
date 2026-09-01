@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/suspicious/noExplicitAny: ignored for now */
 import type { Block, Inline } from '@contentful/rich-text-types';
 import METADATA from '../constants/metadata';
 

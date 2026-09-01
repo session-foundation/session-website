@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/suspicious/noExplicitAny: ignored for now */
 import { NON_LOCALIZED_STRING } from '@/constants/localization';
 import {
   isCrowdinLocale,
@@ -52,6 +53,7 @@ export type SchemaRoadmapItem = {
 export type ProPageSchemaProps = {
   locale: string;
   pricing: PricingApiResponse;
+
   messages: Record<string, any>;
 };
 
@@ -151,7 +153,7 @@ function buildSoftwareApplicationSchema(offers: SchemaOffer[], messages: Record<
   };
 }
 
-function buildProFeaturesSchema(messages: Record<string, any>) {
+function buildProFeaturesSchema(_messages: Record<string, any>) {
   // TODO: set locale
   const features = getProFeatures(false);
 

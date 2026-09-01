@@ -80,11 +80,7 @@ const DONORBOX_SCRIPT_URL = 'https://donorbox.org/widgets.js';
 const DONORBOX_SCRIPT_ID = 'donorbox-widget-script';
 const DONORBOX_CAMPAIGN = 'session-technology-foundation-donations';
 
-export function DonorBox({
-  showDonateCrypto,
-}: {
-  showDonateCrypto?: boolean;
-}) {
+export function DonorBox({ showDonateCrypto }: { showDonateCrypto?: boolean }) {
   const t = useTranslations('donate');
   useEffect(() => {
     // Check if already loaded by id, src, or registered custom element
@@ -271,7 +267,6 @@ function HeroContainer({ children, className }: { children: ReactNode; className
   );
 }
 
-
 function FloatingButtons() {
   const [hideFloatingButtons, setHideFloatingButtons] = useState(false);
   const [pastCrypto, setPastCrypto] = useState(false);
@@ -366,7 +361,7 @@ export const SilentDonorPaymentDescription = () => (
   </>
 );
 
-function FAQItem({ localeKey }: { localeKey: 1 | 3 | 5 | 6 |'tax-question' }) {
+function FAQItem({ localeKey }: { localeKey: 1 | 3 | 5 | 6 | 'tax-question' }) {
   const t = useTranslations('donate.faq');
 
   const question = t(`${localeKey}.question`, localeArgs);
@@ -537,7 +532,7 @@ export default function Donate(): ReactElement {
           </p>
         </HeroContainer>
         <div className="sticky top-10 mt-16 mr-auto hidden 2xl:block">
-          <DonorBox showDonateCrypto={true}  />
+          <DonorBox showDonateCrypto={true} />
         </div>
       </div>
       <Section
@@ -617,7 +612,6 @@ export default function Donate(): ReactElement {
 export const getServerSideProps: GetServerSideProps = async (
   context: GetServerSidePropsContext
 ) => {
-
   const messages = (await import(`../locales/${context.locale}.json`)).default;
 
   return { props: { messages } };
