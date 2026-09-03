@@ -300,8 +300,8 @@
       "detailedRoadmap": "Detailed Roadmap"
     },
     "info": {
-      "heading": "What is {appNamePro}",
-      "content": "{appNamePro} offers premium features and functionality in the {appName} messaging app. {wordPro} includes unique and exclusive cosmetic upgrades and unlocks additional access to {appNamePossessive} decentralized network.<br></br><br></br>With {wordPro}, users pay to offset the increased network usage of certain activities, such as sending long messages or large attachments."
+      "heading": "What is {appNamePro}?",
+      "content": "{appNamePro} provides premium features for power users. Use {appName} to its full potential with advanced capabilities for your private conversations. By upgrading to {appNamePro}, you'll help fund software development at {appName} and keep the project sustainable."
     },
     "upgrade": {
       "heading": "Upgrade to {wordPro} Beta <platform-badge></platform-badge>",
