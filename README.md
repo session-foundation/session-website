@@ -9,7 +9,7 @@ This project is built with [Contentful](https://www.contentful.com), [Next.js](h
 
 ### System Requirements
 
-- [Node.js 24.4.1](https://nodejs.org/) or later
+- [Node.js 24.22.1](https://nodejs.org/) or later
 
 ### Setup
 
@@ -20,8 +20,8 @@ Follow nvm setup instructions [here](https://github.com/nvm-sh/nvm/blob/master/R
 2. Install Node.js locally
 
 ```
-nvm install 24.4.1
-nvm use 24.4.1
+nvm install 24.22.1
+nvm use 24.22.1
 ```
 
 3. Install `pnpm`
