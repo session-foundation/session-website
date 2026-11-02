@@ -17,6 +17,8 @@ async function fetchLatestVersion(repo: string) {
   const now = Date.now();
   // Only update once per revalidation
   if (now - lastChecked > 1000 * CMS.GITHUB_API_RATE) {
+    // Count failed and unchanged checks too, or every request hits GitHub's rate limit.
+    lastChecked = now;
     const res = await fetch(
       `https://api.github.com/repos/session-foundation/${repo}/releases/latest`
     );
