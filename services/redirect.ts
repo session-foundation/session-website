@@ -8,12 +8,13 @@ export interface IRedirection {
   permanent: boolean;
 }
 
-// NOTE should update periodically
-let fallbackVersion = '1.16.0';
+const LATEST_RELEASE_URL = 'https://github.com/session-foundation/session-desktop/releases/latest';
+// Unknown until GitHub first answers; downloads go to the latest release page until then.
+let fallbackVersion: string | undefined;
 // NOTE begin checking from when server is started
 let lastChecked = Date.now();
 
-async function fetchLatestVersion(repo: string) {
+async function fetchLatestVersion(repo: string): Promise<string | undefined> {
   const now = Date.now();
   // Only update once per revalidation
   if (now - lastChecked > 1000 * CMS.GITHUB_API_RATE) {
@@ -31,7 +32,7 @@ async function fetchLatestVersion(repo: string) {
         `${data.documentation && `| See ${data.documentation}`}`
       );
       console.log(
-        `Redirect Service: Falling back to version ${fallbackVersion}. Last checked on ${new Date(
+        `Redirect Service: Falling back to ${fallbackVersion ? `version ${fallbackVersion}` : 'the latest release page'}. Last checked on ${new Date(
           lastChecked
         ).toUTCString()}.}`
       );
@@ -64,6 +65,13 @@ async function fetchLatestVersion(repo: string) {
 
 async function fetchDynamicRedirects() {
   const desktopVersion = await fetchLatestVersion('session-desktop');
+  if (!desktopVersion) {
+    return ['/linux', '/mac-arm64', '/mac-x64', '/windows'].map((source) => ({
+      source,
+      destination: LATEST_RELEASE_URL,
+      permanent: false,
+    }));
+  }
   const redirects: IRedirection[] = [
     {
       source: '/linux',
